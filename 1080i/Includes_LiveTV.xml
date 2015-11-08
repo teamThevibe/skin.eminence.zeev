@@ -1,0 +1,1508 @@
+<includes>
+	<include name="FullScreenInfoBarLiveTV">
+        <animation effect="slide" time="800" start="0,200" easing="out" tween="back">WindowOpen</animation>
+		<animation effect="slide" time="800" end="0,200" delay="300" easing="in" tween="back">WindowClose</animation>
+		<!-- Main background -->
+		<control type="group">
+			<posy>778</posy>
+			<posx>17</posx>
+			<control type="image" id="1">
+				<width>1885</width>
+				<height>295</height>
+				<texture border="40" colordiffuse="E6FFFFFF">dialogs/default/bg.png</texture>
+			</control>
+			<control type="image">
+				<posy>106</posy>
+				<posx>365</posx>
+				<width>1480</width>
+				<height>2</height>
+				<texture border="0" colordiffuse="B3FFFFFF">new_pvr/osd_line_white.png</texture>
+			</control>
+			<control type="image">
+				<posy>236</posy>
+				<posx>40</posx>
+				<width>1805</width>
+				<height>2</height>
+				<texture border="0" colordiffuse="B3FFFFFF">new_pvr/osd_line_white.png</texture>
+			</control>
+		</control>
+		
+		<!-- Channel logo -->
+        <control type="group" id="1">
+            <posx>0</posx>
+			<animation effect="slide" time="800" start="-400,0" delay="300" easing="out" tween="back">WindowOpen</animation>
+			<animation effect="slide" time="800" end="-400,0" easing="in" tween="back">WindowClose</animation>
+            <control type="image"> <!-- Logo background -->
+				<posx>80</posx>
+				<posy>815</posy>
+				<width>250</width>
+				<height>190</height>
+				<texture>new_pvr/texturebg3.png</texture>
+				<align>center</align>
+				<visible>false</visible>
+            </control>
+			<control type="image" id="1">
+                <posx>100</posx>
+                <posy>815</posy>
+                <width>210</width>
+                <height>190</height>
+				<align>center</align>
+                <texture>$INFO[VideoPlayer.Cover]</texture>
+                <aspectratio>keep</aspectratio>
+            </control>
+        </control>
+		<!-- Top Info (ChannelNr, Name, Date, Time & Back-end info) -->
+        <control type="group" id="1">
+            <control type="label" id="1">
+                <posx>380</posx>
+                <posy>790</posy>
+                <width>350</width>
+                <height>100</height>
+                <align>left</align>
+                <font>font65</font>
+                <textcolor>themecolor</textcolor>
+                <label>$INFO[VideoPlayer.ChannelNumber]</label>
+                <scroll>true</scroll>
+            </control>
+            <control type="label" id="1">
+                <posx>520</posx>
+                <posy>790</posy>
+                <width>950</width>
+                <height>100</height>
+                <align>left</align>
+                <font>font65</font>
+                <textcolor>themecolor</textcolor>
+                <label>$INFO[VideoPlayer.ChannelName]</label>
+                <scroll>true</scroll>
+            </control>
+            
+            <control type="label" id="1">
+                <posx>1620</posx>
+                <posy>808</posy>
+                <width>250</width>
+                <height>30</height>
+                <align>right</align>
+                <font>Font_Bold16</font>
+                <textcolor>themecolor</textcolor>
+                <label>$INFO[System.Date(DDD)]</label>
+            </control>
+            <control type="label" id="1">
+                <posx>1620</posx>
+                <posy>840</posy>
+                <width>250</width>
+                <height>30</height>
+                <align>right</align>
+                <font>Font_Bold16</font>
+                <textcolor>themecolor</textcolor>
+                <label>$INFO[System.Date(dd.mm)]</label>
+            </control>
+			<control type="label" id="1">
+                <posx>1630</posx>
+                <posy>790</posy>
+                <width>240</width>
+                <height>100</height>
+                <align>center</align>
+                <font>font65</font>
+                <textcolor>themecolor</textcolor>
+                <label>$INFO[System.Time(hh:mm xx)]</label>
+            </control>
+            <!-- Active backend info (DVBS\DVBS2\IPTV) -->
+            <control type="group">
+				<visible>false></visible>
+				<control type="label" id="1">
+					<posx>380</posx>
+					<posy>845</posy>
+					<width>1500</width>
+					<height>38</height>
+					<font>font12</font>
+					<align>left</align>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[Window(Home).Property(PVR_SatellitePos)]  $INFO[Window(Home).Property(PVR_SatelliteName)]  DVB-S2  $INFO[Window(Home).Property(PVR_Modulation)]  $INFO[Window(Home).Property(PVR_Transponder)] MHz  $INFO[Window(Home).Property(PVR_Polarization)]  $INFO[Window(Home).Property(PVR_FEC)]  $INFO[Window(Home).Property(PVR_Frequency)]</label>
+					<visible>substring(PVR.ActStreamDevice,DVB-S2 #)</visible>
+				</control>
+				<control type="label" id="1">
+					<posx>380</posx>
+					<posy>845</posy>
+					<width>1500</width>
+					<height>38</height>
+					<font>font12</font>
+					<align>left</align>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[Window(Home).Property(PVR_SatellitePos)]  $INFO[Window(Home).Property(PVR_SatelliteName)]  DVB-S  $INFO[Window(Home).Property(PVR_Modulation)]  $INFO[Window(Home).Property(PVR_Transponder)] MHz  $INFO[Window(Home).Property(PVR_Polarization)]  $INFO[Window(Home).Property(PVR_FEC)]  $INFO[Window(Home).Property(PVR_Frequency)]</label>
+					<visible>substring(PVR.ActStreamDevice,DVB-S #)</visible>
+				</control>
+				<control type="label" id="1">
+					<posx>380</posx>
+					<posy>845</posy>
+					<width>1500</width>
+					<height>38</height>
+					<font>font12</font>
+					<align>left</align>
+					<textcolor>grey2</textcolor>
+					<label>$INFO[Pvr.BackendName] $INFO[Pvr.BackendVersion] - $INFO[System.VideoEncoderInfo]</label>
+					<visible>!substring(PVR.ActStreamDevice,DVB-S2 #) | !substring(PVR.ActStreamDevice,DVB-S #)</visible>
+				</control>
+			</control>
+        </control>
+        
+		<!-- Middle Info (Start\End times, Current\Next EPG, Progress-bar, Recording) -->
+		<control type="group" id="1">
+			<visible>VideoPlayer.HasEpg</visible>
+			<control type="label" id="1">
+                <posx>380</posx>
+                <posy>895</posy>
+                <width>150</width>
+                <height>38</height>
+                <font>font15_bold</font>
+                <align>left</align>
+                <label>$INFO[VideoPlayer.StartTime]</label>
+                <visible>!IsEmpty(VideoPlayer.Title)</visible>
+            </control>
+            <control type="label" id="1">
+                <posx>520</posx>
+                <posy>895</posy>
+                <width>880</width>
+                <height>38</height>
+                <font>font15_bold</font>
+                <align>left</align>
+                <scroll>true</scroll>
+                <label>$INFO[VideoPlayer.Title]</label>
+                <visible>!IsEmpty(VideoPlayer.Title)</visible>
+                <visible>![VideoPlayer.Content(LiveTV) + Player.Recording]</visible>
+            </control>
+            <control type="group"> <!-- Recording logo and labels -->
+                <visible>VideoPlayer.Content(LiveTV) + Player.Recording</visible>
+                <control type="image">
+                    <posx>499</posx>
+                    <posy>896</posy>
+                    <width>40</width>
+                    <height>40</height>
+                    <texture>pvr/PVR-IsRecording.png</texture>
+                    <animation effect="fade" start="100" end="40" time="960" pulse="true" condition="true">conditional</animation>
+                </control>
+                <control type="label" id="1">
+                    <posx>480</posx>
+                    <posy>895</posy>
+                    <width>880</width>
+                    <height>38</height>
+                    <font>font15_bold</font>
+                    <align>left</align>
+                    <scroll>true</scroll>
+                    <label>$INFO[VideoPlayer.Title]</label>
+                    <visible>!IsEmpty(VideoPlayer.Title)</visible>
+                </control>
+            </control>
+            <control type="label" id="1">
+                <posx>1550</posx>
+                <posy>895</posy>
+                <width>250</width>
+                <height>38</height>
+                <font>font15_bold</font>
+                <align>right</align>
+				<label>$INFO[VideoPlayer.TimeRemaining(hh:mm)]</label>
+                <visible>!IsEmpty(VideoPlayer.Title)</visible>
+            </control>
+            <control type="label">
+                <posx>380</posx>
+                <posy>965</posy>
+                <width>150</width>
+                <height>38</height>
+                <font>font15</font>
+                <align>left</align>
+                <textcolor>grey</textcolor>
+                <label>$INFO[VideoPlayer.NextStartTime]</label>
+                <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+            </control>
+            <control type="label" id="1">
+                <posx>520</posx>
+                <posy>965</posy>
+                <width>880</width>
+                <height>38</height>
+                <font>font15</font>
+                <align>left</align>
+                <textcolor>grey</textcolor>
+                <scroll>true</scroll>
+                <label>$INFO[VideoPlayer.NextTitle]</label>
+                <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+            </control>
+            <control type="label" id="1">
+                <posx>1550</posx>
+                <posy>965</posy>
+                <width>250</width>
+                <height>38</height>
+                <font>Font_Reg35</font>
+                <align>right</align>
+                <textcolor>grey</textcolor>
+                <label>$INFO[Window(Home).Property(PVR_NextMinutes)]</label>
+                <visible>!IsEmpty(VideoPlayer.NextTitle)</visible>
+            </control>
+			<control type="progress" id="1">
+                <posx>382</posx>
+                <posy>940</posy>
+                <width>1170</width>
+                <height>14</height>
+                <info>Player.Progress</info>
+				<colordiffuse>88FFFFFF</colordiffuse>
+                <midtexture border="0" colordiffuse="themecolor">new_pvr/texturebg_white.png</midtexture>
+				<texturebg border="3,0,3,0" colordiffuse="themecolor">new_pvr/texturebg_border_white.png</texturebg>
+            </control>
+		</control>
+		
+		<!-- Bottom right Info (Stream status, SNR & Signal, Time-shift) -->
+		<control type="group" id="1">
+			<control type="group">
+				<posx>1330</posx>
+				<posy>1017</posy>
+				<width>250</width>
+				<visible>!substring(PVR.ActStreamStatus,TIMESHIFT) + !Skin.HasSetting(infobar_hidesignalinfo)</visible>
+				<control type="label" id="1">
+					<width>250</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>SNR: $INFO[PVR.ActStreamSNR]</label>
+				</control>
+				<control type="label" id="1">
+					<posx>130</posx>
+					<width>250</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>AGC: $INFO[PVR.ActStreamSignal]</label>
+				</control>
+			</control>
+			<control type="group">
+				<posx>1660</posx>
+                <posy>1017</posy>
+                <visible>substring(PVR.ActStreamStatus,TIMESHIFT)</visible>
+                <control type="label" id="1">
+                    <width>250</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>themecolor</textcolor>
+                    <label>TIMESHIFT</label>
+                </control>
+            </control>
+			<!-- Tuner info -->
+			<control type="group"> 
+                <posx>1460</posx>
+				<posy>1017</posy>
+				<width>300</width>
+				<visible>!Skin.HasSetting(infobar_hidetuners)</visible>
+                <control type="label" id="1">
+                    <posx>200</posx>
+                    <width>150</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>grey2</textcolor>
+                    <label>Tuner:</label>
+                </control>
+                <control type="label" id="1">
+                    <posx>295</posx>
+                    <width>50</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>grey2</textcolor>
+                    <label>A</label>
+                    <visible>!substring(PVR.ActStreamDevice,#1)</visible>
+                </control>
+                <control type="label" id="1">
+                    <posx>295</posx>
+                    <width>50</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>green</textcolor>
+                    <label>A</label>
+                    <visible>substring(PVR.ActStreamDevice,#1)</visible>
+                </control>
+                <control type="label" id="1">
+                    <posx>320</posx>
+                    <width>50</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>grey2</textcolor>
+                    <label>B</label>
+                    <visible>!substring(PVR.ActStreamDevice,#2)</visible>
+                </control>
+                <control type="label" id="1">
+                    <posx>320</posx>
+                    <width>50</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>green</textcolor>
+                    <label>B</label>
+                    <visible>substring(PVR.ActStreamDevice,#2)</visible>
+                </control>
+                <control type="label" id="1">
+                    <posx>345</posx>
+                    <width>50</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>grey2</textcolor>
+                    <label>C</label>
+                    <visible>!substring(PVR.ActStreamDevice,#3)</visible>
+                </control>
+                <control type="label" id="1">
+                    <posx>345</posx>
+                    <width>50</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>green</textcolor>
+                    <label>C</label>
+                    <visible>substring(PVR.ActStreamDevice,#3)</visible>
+                </control>
+                <control type="label" id="1">
+                    <posx>370</posx>
+                    <width>50</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>grey2</textcolor>
+                    <label>D</label>
+                    <visible>!substring(PVR.ActStreamDevice,#4)</visible>
+                </control>
+                <control type="label" id="1">
+                    <posx>370</posx>
+                    <width>50</width>
+                    <height>38</height>
+                    <font>font24_bold</font>
+                    <align>left</align>
+                    <textcolor>green</textcolor>
+                    <label>D</label>
+                    <visible>substring(PVR.ActStreamDevice,#4)</visible>
+                </control>
+            </control>
+		</control>
+		
+		<!-- Media flags -->
+        <control type="group" id="1">
+			<animation effect="slide" time="800" start="360,0" delay="300" easing="out" tween="back">WindowOpen</animation>
+			<animation effect="slide" time="800" end="360,0" easing="in" tween="back">WindowClose</animation>
+            <posx>1550</posx>
+            <posy>900</posy>
+			<control type="image" id="1">
+                <posx>-5</posx>
+                <posy>20</posy>
+                <width>110</width>
+                <height>80</height>
+                <aspectratio align="center">keep</aspectratio>
+                <texture>$INFO[VideoPlayer.VideoAspect,new_pvr/flags/aspectratio/,.png]</texture>
+            </control>
+			
+            <control type="image" id="1">
+                <posx>85</posx>
+                <posy>-20</posy>
+                <width>110</width>
+                <height>80</height>
+                <aspectratio align="center">keep</aspectratio>
+                <texture>$INFO[VideoPlayer.VideoResolution,new_pvr/flags/resolution/,.png]</texture>
+            </control>
+            <control type="image" id="1">
+                <posx>200</posx>
+                <posy>-20</posy>
+                <width>110</width>
+                <height>80</height>
+                <aspectratio align="center">keep</aspectratio>
+                <texture>$INFO[VideoPlayer.VideoCodec,new_pvr/flags/videocodec/,.png]</texture>
+            </control>
+			
+            <control type="image" id="1">
+                <posx>85</posx>
+                <posy>40</posy>
+                <width>110</width>
+                <height>80</height>
+                <aspectratio align="center">keep</aspectratio>
+                <texture>$INFO[VideoPlayer.AudioCodec,new_pvr/flags/audiocodec/,.png]</texture>
+            </control>
+            <control type="image" id="1">
+                <posx>200</posx>
+                <posy>40</posy>
+                <width>110</width>
+                <height>80</height>
+                <aspectratio align="center">keep</aspectratio>
+                <texture>$INFO[VideoPlayer.AudioChannels,new_pvr/flags/audiochannels/,ch.png]</texture>
+            </control>
+        </control>
+        
+		<!-- Encryption -->
+        <control type="group" id="1">
+            <posx>65</posx>
+            <posy>1017</posy>
+			<control type="group">
+				<visible>!Skin.HasSetting(infobar_hidetencrypt)</visible>
+				<control type="label" id="1">
+					<!-- <visible>!SubString(PVR.ActStreamEncryptionName,"0100",Right) | !SubString(PVR.ActStreamEncryptionName,"009F",Right)</visible> -->
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>S</label>
+				</control>
+				<control type="label" id="1">
+					<visible>SubString(PVR.ActStreamEncryptionName,01) | SubString(PVR.ActStreamEncryptionName,9F)</visible>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>S</label>
+				</control>
+				<control type="label" id="1">
+					<!-- <visible>!SubString(PVR.ActStreamEncryptionName,"0500",Right) | !SubString(PVR.ActStreamEncryptionName,"05FF",Right)</visible> -->
+					<left>30</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>V</label>
+				</control>
+				<control type="label" id="1">
+					<visible>SubString(PVR.ActStreamEncryptionName,5)</visible>
+					<left>30</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>V</label>
+				</control>
+				<control type="label" id="1">
+					<!-- <visible>!SubString(Container(11).ListItem.PlotOutline,"0600",Right) | !SubString(Container(11).ListItem.PlotOutline,"06FF",Right)</visible> -->
+					<left>63</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>I</label>
+				</control>
+				<control type="label" id="1">
+					<visible>SubString(PVR.ActStreamEncryptionName,06)</visible>
+					<left>63</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>I</label>
+				</control>
+				<control type="label" id="1">
+					<!-- <visible>!SubString(Container(11).ListItem.PlotOutline,"0900",Right) | !SubString(Container(11).ListItem.PlotOutline,"09FF",Right)</visible> -->
+					<left>85</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>ND</label>
+				</control>
+				<control type="label" id="1">
+					<visible>SubString(PVR.ActStreamEncryptionName,09)</visible>
+					<left>85</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>ND</label>
+				</control>
+				<control type="label" id="1">
+					<!-- <visible>!SubString(Container(11).ListItem.PlotOutline,"0B00",Right) | !SubString(Container(11).ListItem.PlotOutline,"0BFF",Right)</visible> -->
+					<left>135</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>CO</label>
+				</control>
+				<control type="label" id="1">
+					<visible>SubString(PVR.ActStreamEncryptionName,0B)</visible>
+					<left>135</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>CO</label>
+				</control>
+				<control type="label" id="1">
+					<!-- <visible>!SubString(Container(11).ListItem.PlotOutline,"0D00",Right) | !SubString(Container(11).ListItem.PlotOutline,"0DFF",Right)</visible> -->
+					<left>180</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>CW</label>
+				</control>
+				<control type="label" id="1">
+					<visible>SubString(PVR.ActStreamEncryptionName,0D)</visible>
+					<left>180</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>CW</label>
+				</control>
+				<control type="label" id="1">
+					<!-- <visible>!SubString(Container(11).ListItem.PlotOutline,"1700",Right) | !SubString(Container(11).ListItem.PlotOutline,"17FF",Right)</visible> -->
+					<left>230</left>
+					<width>70</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>B</label>
+				</control>
+				<control type="label" id="1">
+					<visible>SubString(PVR.ActStreamEncryptionName,17)</visible>
+					<left>230</left>
+					<width>70</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>B</label>
+				</control>
+				<control type="label" id="1">
+					<!-- <visible>!SubString(Container(11).ListItem.PlotOutline,"1800",Right) | !SubString(Container(11).ListItem.PlotOutline,"18FF",Right)</visible> -->
+					<left>258</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>grey</textcolor>
+					<label>N</label>
+				</control>
+				<control type="label" id="1">
+					<visible>SubString(PVR.ActStreamEncryptionName,18)</visible>
+					<left>258</left>
+					<width>50</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>N</label>
+				</control>
+				<control type="label" id="1">
+					<left>320</left>
+					<width>1000</width>
+					<height>38</height>
+					<font>font24_bold</font>
+					<align>left</align>
+					<textcolor>green</textcolor>
+					<label>$INFO[PVR.ActStreamEncryptionName]</label>
+				</control>
+			</control>
+        </control>
+    </include>
+	
+	
+	<!-- Large channel list OSD (extended) -->
+	<include name="ChannelOSDExtended">
+		<posx>60</posx>
+		<posy>45</posy>
+		<control type="image">
+			<width>1800</width>
+			<height>1000</height>
+			<texture border="40,100,40,100" colordiffuse="F2FFFFFF">dialog_back.png</texture>
+		</control>
+		<control type="label">
+			<posx>100</posx>
+			<posy>30</posy>
+			<width>690</width>
+			<height>30</height>
+			<font>font24</font>
+			<align>left</align>
+			<label>$LOCALIZE[19023] - $INFO[VideoPlayer.ChannelGroup]</label>
+		</control>
+		<control type="label">
+			<posy>30</posy>
+			<posx>1200</posx>
+			<height>30</height>
+			<width>550</width>
+			<font>font24</font>
+			<align>right</align>
+			<label>$INFO[System.Date(DDD)], $INFO[System.Date(dd.mm.yyyy)] • $INFO[System.Time(hh:mm xx)]</label>
+		</control>
+		<control type="image">
+			<posx>60</posx>
+			<posy>33</posy>
+			<width>24</width>
+			<height>24</height>
+			<aspectratio>keep</aspectratio>
+			<texture colordiffuse="white">arrowright.png</texture>
+		</control>
+		<control type="image">
+			<posx>40</posx>
+			<posy>33</posy>
+			<width>24</width>
+			<height>24</height>
+			<aspectratio>keep</aspectratio>
+			<texture flipx="true" colordiffuse="white">arrowright.png</texture>
+		</control>
+		
+		
+		<control type="group">
+			<posx>30</posx>
+			<posy>72</posy>
+			<include>ChannelListLarge</include>
+		</control>
+		<control type="group">
+			<posx>1040</posx>
+			<posy>72</posy>
+			<include>ChannelInfoPanel</include>
+		</control>
+		
+		<control type="image">
+			<posx>1000</posx>
+			<posy>72</posy>
+			<width>3</width>
+			<height>855</height>
+			<texture colordiffuse="65ffffff">new_pvr/separator3.png</texture>
+		</control>
+		<control type="image">
+			<posx>1012</posx>
+			<posy>72</posy>
+			<width>3</width>
+			<height>855</height>
+			<texture flipx="true" colordiffuse="65ffffff">new_pvr/separator3.png</texture>
+		</control>
+		<control type="scrollbar" id="80">
+			<posx>998</posx>
+			<posy>72</posy>
+			<width>15</width>
+			<height>855</height>
+			<texturesliderbackground border="0">-</texturesliderbackground>
+			<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+			<showonepage>false</showonepage>
+			<orientation>vertical</orientation>
+		</control>
+		
+		<control type="label">
+			<posx>40</posx>
+			<posy>905</posy>
+			<height>100</height>
+			<width>900</width>
+			<font>font24_bold</font>
+			<label>Channels: $INFO[Container(11).NumItems]    •    $INFO[Container(11).CurrentPage] / $INFO[Container(11).NumPages]</label>
+			<textcolor>white</textcolor>
+			<align>left</align>
+			<aligny>center</aligny>
+		</control>
+	</include>
+	<!-- Large channels list (right pane) -->
+	<include name="ChannelListLarge">
+		<control type="list" id="11">
+			<width>970</width>
+			<height>855</height>
+			<onleft>PreviousChannelGroup</onleft>
+			<onright>NextChannelGroup</onright>
+			<onup>11</onup>
+			<ondown>11</ondown>
+			<pagecontrol>80</pagecontrol>
+			<scrolltime tween="quadratic">200</scrolltime>
+			<itemlayout height="57" width="970">
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>975</width>
+					<height>57</height>
+					<texture>new_pvr/separator2.png</texture>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>57</height>
+					<align>right</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>white</selectedcolor>
+					<font>Font_Bold19</font>
+					<label>[B]$INFO[ListItem.ChannelNumber][/B]</label>
+				</control>
+				<control type="progress">
+					<posx>70</posx>
+					<posy>22</posy>
+					<width>80</width>
+					<height>14</height>
+					<info>ListItem.Progress</info>
+					<visible>!StringCompare(ListItem.Title,)</visible>
+					<midtexture border="2" colordiffuse="themecolor">new_pvr/texturebg_white.png</midtexture>
+					<texturebg border="3,0,3,0" colordiffuse="themecolor">new_pvr/texturebg_border_white.png</texturebg>
+				</control>
+				<control type="label">
+					<posx>165</posx>
+					<posy>0</posy>
+					<textcolor>themecolor</textcolor>
+					<selectedcolor>white</selectedcolor>
+					<font>Font_Bold19</font>
+					<width>700</width>
+					<height>57</height>
+					<label>[B][COLOR white]$INFO[ListItem.Label][/COLOR][/B] $INFO[ListItem.Title, - ]</label>
+				</control>
+				<control type="image">
+					<animation effect="fade" start="100" end="40" time="1200" pulse="true" condition="true">conditional</animation>
+					<posx>850</posx>
+					<posy>12</posy>
+					<width>35</width>
+					<height>35</height>
+					<texture>new_pvr/PVR-IsRecording.png</texture>
+					<visible>ListItem.IsRecording</visible>
+				</control>
+				<control type="image">
+					<visible>true</visible>
+					<posx>900</posx>
+					<posy>8</posy>
+					<width>60</width>
+					<height>40</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+			</itemlayout>
+			<focusedlayout height="57" width="970">
+				<control type="image">
+					<posx>1</posx>
+					<posy>0</posy>
+					<width>970</width>
+					<height>57</height>
+					<texture border="4">new_pvr/listselect_fo.png</texture>
+					<colordiffuse>themecolor</colordiffuse>
+				</control>
+				<control type="label">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>55</width>
+					<height>57</height>
+					<align>right</align>
+					<textcolor>white</textcolor>
+					<selectedcolor>white</selectedcolor>
+					<font>Font_Bold19</font>
+					<label>[B]$INFO[ListItem.ChannelNumber][/B]</label>
+				</control>
+				<control type="progress">
+					<posx>70</posx>
+					<posy>22</posy>
+					<width>80</width>
+					<height>14</height>
+					<info>ListItem.Progress</info>
+					<visible>!StringCompare(ListItem.Title,)</visible>
+					<midtexture border="2">new_pvr/texturebg_white.png</midtexture>
+					<texturebg border="3,0,3,0">new_pvr/texturebg_border_white.png</texturebg>
+				</control>
+				<control type="label">
+					<posx>165</posx>
+					<posy>0</posy>
+					<textcolor>white</textcolor>
+					<selectedcolor>white</selectedcolor>
+					<font>Font_Bold19</font>
+					<width>700</width>
+					<height>57</height>
+					<label>[B]$INFO[ListItem.Label][/B] $INFO[ListItem.Title, - ]</label>
+				</control>
+				<control type="image">
+					<animation effect="fade" start="100" end="40" time="1200" pulse="true" condition="true">conditional</animation>
+					<posx>850</posx>
+					<posy>12</posy>
+					<width>35</width>
+					<height>35</height>
+					<texture>new_pvr/PVR-IsRecording.png</texture>
+					<visible>ListItem.IsRecording</visible>
+				</control>
+				<control type="image">
+					<visible>true</visible>
+					<posx>900</posx>
+					<posy>8</posy>
+					<width>60</width>
+					<height>40</height>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[ListItem.Icon]</texture>
+				</control>
+			</focusedlayout>
+		</control>
+	</include>
+	<!-- Channel information pane (left pane)  -->
+	<include name="ChannelInfoPanel">
+		<control type="group">
+			<height>890</height>
+			<visible>true</visible>
+			<control type="label">
+			  <posy>20</posy>
+			  <height>40</height>
+			  <width>460</width>
+			  <font>font52_bold</font>
+			  <textcolor>themecolor</textcolor>
+			  <label>$INFO[Container(11).ListItem.Label]</label>
+			</control>
+			<control type="image">
+				<posy>80</posy>
+				<posx>5</posx>
+				<height>100</height>
+				<width>160</width>
+				<texture fallback="new_pvr/tv.png">$INFO[Container(11).ListItem.Icon]</texture>
+				<aspectratio>keep</aspectratio>
+			</control>
+			<control type="group">
+				<posy>100</posy>
+				<posx>230</posx>
+				<height>70</height>
+				<control type="label">
+					<posy>20</posy>
+					<height>50</height>
+					<width>460</width>
+					<font>font28_bold</font>
+					<textcolor>white</textcolor>
+					<label>$INFO[Container(11).ListItem.StartTime]</label>
+				</control>
+				<control type="label">
+					<posy>20</posy>
+					<height>50</height>
+					<posx>355</posx>
+					<width>100</width>
+					<font>font28_bold</font>
+					<textcolor>white</textcolor>
+					<align>right</align>
+					<label>- $INFO[Container(11).ListItem.EndTime]</label>
+				</control>
+				<control type="progress">
+					<width>460</width>
+					<height>16</height>
+					<info>Container(11).ListItem.Progress</info>
+					<midtexture border="2" colordiffuse="themecolor">new_pvr/texturebg_white.png</midtexture>
+					<texturebg border="3,0,3,0" colordiffuse="themecolor">new_pvr/texturebg_border_white.png</texturebg>
+				</control>
+			</control>
+			
+			<control type="label">
+				<posy>200</posy>
+				<height>80</height>
+				<width>720</width>
+				<font>font16</font>
+				<aligny>top</aligny>
+				<textcolor>themecolor</textcolor>
+				<label>$INFO[Container(11).ListItem.Title]</label>
+				<wrapmultiline>true</wrapmultiline>
+			</control>
+			
+			<control type="group">
+				<posy>280</posy>
+				<control type="textbox"> <!-- Plot wide (if no poster) -->
+					<width>700</width>
+					<height>433</height>
+					<font>Font_Reg37</font>
+					<label>$INFO[Container(11).ListItem.Plot]</label>
+					<autoscroll delay="8000" time="2000" repeat="10000">true</autoscroll>
+					<visible>!Control.IsVisible(55)</visible>
+				</control>
+				<control type="textbox"> <!-- Plot short (if poster) -->
+					<width>500</width>
+					<height>433</height>
+					<font>Font_Reg37</font>
+					<label>$INFO[Container(11).ListItem.Plot]</label>
+					<autoscroll delay="8000" time="2000" repeat="10000">true</autoscroll>
+					<visible>Control.IsVisible(55)</visible>
+				</control>
+				<control type="image" id="55"> <!-- Show\Movie poster -->
+					<posx>515</posx>
+					<width>200</width>
+					<height>300</height>
+					<align>center</align>
+					<aligny>top</aligny>
+					<aspectratio>keep</aspectratio>
+					<texture>$INFO[Container(11).ListItem.PlotOutline]</texture>
+					<visible>SubString(Container(11).ListItem.PlotOutline,"http://",Left) | SubString(Container(11).ListItem.PlotOutline,"https://",Left)</visible>
+				</control>
+			</control>
+			
+			<!-- Genre label -->
+			<control type="label"> 
+			  <posy>725</posy>
+			  <height>40</height>
+			  <width>715</width>
+			  <align>left</align>
+			  <font>Font_Bold16</font>
+			  <textcolor>grey</textcolor>
+			  <label>$LOCALIZE[515]: [COLOR themecolor]$INFO[Container(11).ListItem.Genre][/COLOR]</label>
+			</control>
+			<control type="image">
+				<posy>768</posy>
+				<width>715</width>
+				<height>2</height>
+				<texture>new_pvr/osd_back_pvr_line_white.png</texture>
+				<colordiffuse>grey3</colordiffuse>
+			</control>
+			<control type="label">
+			  <posy>778</posy>
+			  <height>30</height>
+			  <width>700</width>
+			  <align>left</align>
+			  <font>Font_Bold16</font>
+			  <textcolor>grey</textcolor>
+			  <label>$LOCALIZE[19031]: [COLOR themecolor]$INFO[Container(11).ListItem.NextTitle][/COLOR]</label>
+			</control>
+			<control type="label">
+			  <visible>!StringCompare(Container(11).ListItem.NextTitle,)</visible>
+			  <posy>815</posy>
+			  <align>left</align>
+			  <height>30</height>
+			  <width>520</width>
+			  <font>Font_Bold19</font>
+			  <textcolor>grey</textcolor>
+			  <scrolltime tween="quadratic">200</scrolltime>
+			  <label>$INFO[Container(11).ListItem.NextStartTime] - $INFO[Container(11).ListItem.NextEndTime]</label>
+			</control>
+		</control>
+	</include>
+
+	
+	<!-- Standard channel list OSD -->
+	<include name="ChannelOSDStandard">
+		<control type="image">
+			<posx>-32</posx>
+			<posy>0</posy>
+			<width>885</width>
+			<height>1080</height>
+			<texture border="40">mediamenu_back.png</texture>
+			<colordiffuse>DDFFFFFF</colordiffuse>
+		</control>
+		<control type="list" id="11">
+			<visible>!Skin.HasSetting(alternatetvosd)</visible>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>821</width>
+			<height>1080</height>
+			<onleft>PreviousChannelGroup</onleft>
+			<onright>NextChannelGroup</onright>
+			<onup>11</onup>
+			<ondown>11</ondown>
+			<viewtype label="535">list</viewtype>
+			<pagecontrol>60</pagecontrol>
+			<scrolltime tween="quadratic" easing="out">200</scrolltime>
+			<itemlayout height="108" width="821">
+				<control type="image">
+					<posx>0</posx>
+					<posy>60</posy>
+					<width>821</width>
+					<height>48</height>
+					<texture border="1">separator2.png</texture>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>85</height>
+					<font>font45caps_title</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.ChannelNumber][/B]</label>
+				</control>
+				<control type="label">
+					<posx>130</posx>
+					<posy>0</posy>
+					<width>530</width>
+					<height>60</height>
+					<font>font30</font>
+					<textcolor>grey2</textcolor>
+					<selectedcolor>selected</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+				</control>
+				<control type="label">
+					<posx>130</posx>
+					<posy>50</posy>
+					<width>530</width>
+					<height>60</height>
+					<font>font15</font>
+					<textcolor>grey3</textcolor>
+					<selectedcolor>grey3</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Title]</label>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>10</posx>
+					<posy>88</posy>
+					<width>100</width>
+					<height>8</height>
+					<colordiffuse>88FFFFFF</colordiffuse>
+					<visible>ListItem.HasEpg</visible>
+					<info>ListItem.Progress</info>
+					<texturebg border="2">osd/texturebg2.png</texturebg>
+				</control>
+				<control type="image">
+					<posx>681</posx>
+					<posy>8</posy>
+					<width>105</width>
+					<height>90</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<animation effect="slide" start="0" end="-20" time="100" tween="sine" easing="in" condition="ListItem.IsRecording">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>828</posx>
+					<posy>45</posy>
+					<width>120</width>
+					<height>30</height>
+					<font>IconSmall</font>
+					<textoffsetx>15</textoffsetx>
+					<textcolor>grey2</textcolor>
+					<align>right</align>
+					<selectedcolor>selected</selectedcolor>
+					<label></label>
+					<visible>ListItem.IsRecording</visible>
+				</control>
+			</itemlayout>
+			<focusedlayout height="108" width="821">
+				<control type="image">
+					<posy>60</posy>
+					<width>821</width>
+					<height>48</height>
+					<texture border="1">separator2.png</texture>
+				</control>
+				<control type="image">
+					<width>821</width>
+					<height>108</height>
+					<texture border="4">listselect_fo.png</texture>
+					<visible>Control.HasFocus(11)</visible>
+					<include>VisibleFadeEffect</include>
+				</control>
+				<control type="label">
+					<posx>60</posx>
+					<posy>0</posy>
+					<width>120</width>
+					<height>85</height>
+					<font>font45caps_title</font>
+					<textcolor>white</textcolor>
+					<selectedcolor>white</selectedcolor>
+					<align>center</align>
+					<aligny>center</aligny>
+					<label>[B]$INFO[ListItem.ChannelNumber][/B]</label>
+				</control>
+				<control type="label">
+					<posx>130</posx>
+					<posy>0</posy>
+					<width>530</width>
+					<height>60</height>
+					<font>font30</font>
+					<selectedcolor>white</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Label]</label>
+					<animation effect="fade" start="100" end="70" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(11)">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>130</posx>
+					<posy>50</posy>
+					<width>530</width>
+					<height>60</height>
+					<font>font15</font>
+					<selectedcolor>white</selectedcolor>
+					<align>left</align>
+					<aligny>center</aligny>
+					<label>$INFO[ListItem.Title]</label>
+					<animation effect="fade" start="100" end="30" time="300" tween="sine" easing="inout" condition="!Control.HasFocus(11)">Conditional</animation>
+				</control>
+				<control type="progress">
+					<description>Progressbar</description>
+					<posx>10</posx>
+					<posy>88</posy>
+					<width>100</width>
+					<height>8</height>
+					<colordiffuse>88FFFFFF</colordiffuse>
+					<visible>ListItem.HasEpg</visible>
+					<info>ListItem.Progress</info>
+					<texturebg border="2">osd/texturebg2.png</texturebg>
+				</control>
+				<control type="image">
+					<posx>681</posx>
+					<posy>8</posy>
+					<width>105</width>
+					<height>90</height>
+					<aspectratio>keep</aspectratio>
+					<texture background="true">$INFO[ListItem.Icon]</texture>
+					<fadetime>IconCrossfadeTime</fadetime>
+					<animation effect="slide" start="0" end="-20" time="100" tween="sine" easing="in" condition="ListItem.IsRecording">Conditional</animation>
+				</control>
+				<control type="label">
+					<posx>828</posx>
+					<posy>45</posy>
+					<width>120</width>
+					<height>30</height>
+					<font>IconSmall</font>
+					<textoffsetx>15</textoffsetx>
+					<align>right</align>
+					<selectedcolor>selected</selectedcolor>
+					<label></label>
+					<visible>ListItem.IsRecording</visible>
+				</control>
+			</focusedlayout>
+		</control>
+		<control type="scrollbar" id="60">
+			<posx>820</posx>
+			<posy>0</posy>
+			<width>14</width>
+			<height>1080</height>
+			<showonepage>false</showonepage>
+			<texturesliderbackground>-</texturesliderbackground>
+			<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+			<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+			<onleft>11</onleft>
+			<onright>NextChannelGroup</onright>
+			<ondown>61</ondown>
+			<onup>61</onup>
+			<orientation>vertical</orientation>
+		</control>
+	</include>
+	
+		<!-- New LiveTV View? -->
+	<include name="LiveTvInfoWall">
+		<control type="group">
+			<posx>50</posx>
+			<posy>40</posy>
+			<visible>Control.IsVisible(11)</visible>
+			<include>ViewAnimation</include>
+			<control type="image">
+				<description>background image</description>
+				<posx>140</posx>
+				<posy>1080</posy>
+				<width>1640</width>
+				<height>964</height>
+				<texture border="40">panel_reflect.png</texture>
+			</control>
+			<control type="image">
+				<description>background image</description>
+				<posx>0</posx>
+				<posy>0</posy>
+				<width>1840</width>
+				<height>1100</height>
+				<texture border="40">listpanel_back.png</texture>
+			</control>
+			<control type="panel" id="11">
+				<posx>30</posx>
+				<posy>30</posy>
+				<width>1800</width>
+				<height>775</height>
+				<onleft>SetFocus(9050)</onleft>
+				<onright>60</onright>
+				<onup>11</onup>
+				<ondown>11</ondown>
+				<pagecontrol>60</pagecontrol>
+				<preloaditems>2</preloaditems>
+				<viewtype label="InfoWall">icons</viewtype>
+				<scrolltime tween="quadratic" easing="out">300</scrolltime>
+				<visible>Skin.HasSetting(livetvInfoWall)</visible>
+				<itemlayout height="155" width="445">
+					<control type="image">
+						<width>440</width>
+						<height>150</height>
+						<aspectratio>strech</aspectratio>
+						<colordiffuse>33ffffff</colordiffuse>
+						<texture border="4" background="true">new_pvr/grey_bg.png</texture>
+						<visible>true</visible>
+					</control>
+					<control type="label">
+                        <posx>14</posx>
+                        <posy>10</posy>
+                        <width>320</width>
+                        <height>58</height>
+                        <font>font13b</font>
+                        <textcolor>grey</textcolor>
+						<selectedcolor>selected</selectedcolor>
+                        <align>left</align>
+                        <label>[B]$INFO[ListItem.ChannelNumber]  $INFO[ListItem.Label][/B]</label>
+					</control>
+					<control type="image">
+						<posx>335</posx>
+						<posy>10</posy>
+						<width>90</width>
+						<height>59</height>
+						<aspectratio align="right">keep</aspectratio>
+						<texture fallback="new_pvr/tv.png">$INFO[ListItem.Icon]</texture>
+						<colordiffuse>BAffffff</colordiffuse>
+					</control>
+					<control type="group">
+						<posx>15</posx>
+						<posy>73</posy>
+						<width>440</width>
+						<height>165</height>
+						<visible>ListItem.HasEpg</visible>
+						<control type="label">
+							<posx>0</posx>
+							<posy>0</posy>
+							<width>400</width>
+							<height>30</height>
+							<font>font12b</font>
+							<textcolor>grey2</textcolor>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<label>$INFO[ListItem.Title]</label>
+						</control>
+						<control type="progress">
+							<posx>0</posx>
+							<posy>35</posy>
+							<width>408</width>
+							<height>6</height>
+							<info>ListItem.Progress</info>
+							<visible>!StringCompare(ListItem.Title,)</visible>
+							<texturebg border="2">new_pvr/texturebg3.png</texturebg>
+						</control>
+						<control type="label">
+							<posx>0</posx>
+							<posy>42</posy>
+							<width>400</width>
+							<height>30</height>
+							<font>font11</font>
+							<align>left</align>
+							<textcolor>grey3</textcolor>
+							<selectedcolor>grey2</selectedcolor>
+							<label>$LOCALIZE[19031]: $INFO[ListItem.NextTitle]</label>
+							<visible>true</visible>
+						</control>
+					</control>
+				</itemlayout>
+				<focusedlayout heigth="155" width="445">
+					<control type="group">
+						<animation type="Focus">
+							<effect type="fade" start="80" end="100" time="200" tween="sine" easing="in" />
+						</animation>
+						<control type="image">
+							<posx>-13</posx>
+							<posy>-8</posy>
+							<width>465</width>
+							<height>167</height>
+							<aspectratio>strech</aspectratio>
+							<texture border="4" background="true">new_pvr/overlay/OverlayDialogBackground.png</texture>
+							<colordiffuse>themecolor</colordiffuse>
+						</control>
+						<control type="image">
+							<width>440</width>
+							<height>150</height>
+							<aspectratio>strech</aspectratio>
+							<colordiffuse>60ffffff</colordiffuse>
+							<texture border="4" background="true">new_pvr/grey_bg.png</texture>
+							<visible>true</visible>
+						</control>
+						<control type="image">
+							<posx>335</posx>
+							<posy>10</posy>
+							<width>90</width>
+							<height>59</height>
+							<aspectratio align="right">keep</aspectratio>
+							<texture background="true" fallback="new_pvr/blank.png">$INFO[ListItem.Icon]</texture>
+							<fadetime>500</fadetime>
+						</control>
+						<control type="label">
+							<posx>14</posx>
+							<posy>10</posy>
+							<width>320</width>
+							<height>58</height>
+							<font>font13b</font>
+							<selectedcolor>selected</selectedcolor>
+							<align>left</align>
+							<label>[B]$INFO[ListItem.ChannelNumber]  $INFO[ListItem.Label][/B]</label>
+						</control>
+						<control type="group">
+							<posx>15</posx>
+							<posy>73</posy>
+							<width>440</width>
+							<height>165</height>
+							<visible>ListItem.HasEpg</visible>
+							<control type="label">
+								<posx>0</posx>
+								<posy>0</posy>
+								<width>400</width>
+								<height>30</height>
+								<font>font12b</font>
+								<selectedcolor>selected</selectedcolor>
+								<align>left</align>
+								<label>$INFO[ListItem.Title]</label>
+							</control>
+							<control type="progress">
+								<posx>0</posx>
+								<posy>35</posy>
+								<width>408</width>
+								<height>6</height>
+								<info>ListItem.Progress</info>
+								<visible>!StringCompare(ListItem.Title,)</visible>
+								<texturebg border="2">new_pvr/texturebg3.png</texturebg>
+							</control>
+							<control type="label">
+								<posx>0</posx>
+								<posy>42</posy>
+								<width>400</width>
+								<height>30</height>
+								<font>font11</font>
+								<align>left</align>
+								<textcolor>grey2</textcolor>
+								<selectedcolor>grey</selectedcolor>
+								<label>$LOCALIZE[19031]: $INFO[ListItem.NextTitle]</label>
+							</control>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="scrollbar" id="60">
+				<posx>1810</posx>
+				<posy>30</posy>
+				<width>14</width>
+				<height>900</height>
+				<onleft>11</onleft>
+				<onleft>11</onleft>
+				<ondown>60</ondown>
+				<onup>60</onup>
+				<showonepage>false</showonepage>
+				<texturesliderbackground>-</texturesliderbackground>
+				<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+				<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+				<animation effect="fade" start="100" end="0" time="500" delay="500" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
+			</control>
+			
+			<!-- Bottom info-panel -->
+			<control type="group">
+				<posx>30</posx>
+				<posy>810</posy>
+				<control type="image">
+					<posx>0</posx>
+					<posy>0</posy>
+					<width>1780</width>
+					<height>250</height>
+					<colordiffuse>60ffffff</colordiffuse>
+					<texture border="5">dialogs/default/inner.png</texture>
+					<visible>true</visible>
+				</control>
+				
+				<!-- Videopreview and logo -->
+				<control type="group">
+					<visible>!Player.HasVideo</visible>
+					<posx>110</posx>
+					<posy>10</posy>
+					<control type="image">
+						<width>200</width>
+						<height>200</height>
+						<aspectratio>keep</aspectratio>
+						<fadetime>400</fadetime>
+						<texture>$INFO[ListItem.Icon]</texture>
+					</control>
+				</control>
+				<control type="group">
+					<visible>Player.HasVideo</visible>
+					<posx>0</posx>
+					<posy>2</posy>
+					<control type="image">
+						<width>445</width>
+						<height>225</height>
+						<aspectratio>strech</aspectratio>
+						<texture border="0">black-back.png</texture>
+					</control>
+					<control type="videowindow">
+						<width>445</width>
+						<height>225</height>
+					</control>
+				</control>
+				
+				<!-- Discription and fanart -->
+				<control type="group">
+					<posx>450</posx>
+					<posy>0</posy>
+					<control type="label">
+						<posy>15</posy>
+						<width>1316</width>
+						<height>30</height>
+						<align>left</align>
+						<font>font14</font>
+						<textcolor>grey2</textcolor>
+						<textoffsetx>15</textoffsetx>
+						<label>[COLOR labelheader]$INFO[ListItem.StartTime]$INFO[ListItem.EndTime, - ,: ][/COLOR]$INFO[ListItem.Title]  |  $INFO[ListItem.Genre,[COLOR labelheader]$LOCALIZE[515]:[/COLOR] ,]</label>
+					</control>
+					<control type="textbox" id="81">
+						<label>$INFO[ListItem.Plot]</label>
+						<posx>15</posx>
+						<posy>50</posy>
+						<width>1286</width>
+						<height>180</height>
+						<font>font14_textbox2</font>
+						<pagecontrol>63</pagecontrol>
+						<include>ShowCaseInfoPanelButtonsValues</include>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(63)</autoscroll>
+						<visible>![SubString(ListItem.PlotOutline,"http://",Left) | SubString(ListItem.PlotOutline,"https://",Left)]</visible>
+					</control>
+					<control type="textbox">
+						<posx>15</posx>
+						<posy>50</posy>
+						<width>1000</width>
+						<height>180</height>
+						<font>font14_textbox2</font>
+						<label>$INFO[ListItem.Plot]</label>
+						<autoscroll time="3000" delay="4000" repeat="5000">Skin.HasSetting(Enable.AutoScroll) + !Control.HasFocus(63)</autoscroll>
+						<visible>SubString(ListItem.PlotOutline,"http://",Left) | SubString(ListItem.PlotOutline,"https://",Left)</visible>
+					</control>
+					<control type="image">
+						<posx>1020</posx>
+						<posy>5</posy>
+						<width>300</width>
+						<height>220</height>
+						<align>center</align>
+						<aspectratio align="right">keep</aspectratio>
+						<texture>$INFO[ListItem.PlotOutline]</texture>
+						<visible>SubString(ListItem.PlotOutline,"http://",Left) | SubString(ListItem.PlotOutline,"https://",Left)</visible>
+					</control>
+					<control type="scrollbar" id="63">
+						<posx>1328</posx>
+						<posy>124</posy>
+						<width>14</width>
+						<height>110</height>
+						<onup>PageUp(81)</onup>
+						<ondown>PageUp(81)</ondown>
+						<onleft>10</onleft>
+						<onright>10</onright>
+						<texturesliderbackground>-</texturesliderbackground>
+						<texturesliderbar colordiffuse="55ffffff" border="1">scrollbar/texturesliderbar2.png</texturesliderbar>
+						<texturesliderbarfocus border="1">scrollbar/texturesliderbar2.png</texturesliderbarfocus>
+						<showonepage>false</showonepage>
+						<orientation>vertical</orientation>
+					</control>
+				</control>
+			</control>
+		</control>
+	</include>
+	
+	<variable name="LiveTvModOptionsClickVar">
+		<value condition="IsEmpty(Skin.String(LiveTV.EpgViewChannels))">Skin.SetString(LiveTV.EpgViewChannels,1)</value>
+		<value condition="StringCompare(Skin.String(LiveTV.EpgViewChannels),1)">Skin.SetString(LiveTV.EpgViewChannels,2)</value>
+		<value condition="StringCompare(Skin.String(LiveTV.EpgViewChannels),2)">Skin.Reset(LiveTV.EpgViewChannels)</value>
+	</variable>
+	<variable name="LiveTvModOptionsLabelVar">
+		<value condition="StringCompare(Skin.String(LiveTV.EpgViewChannels),1)">Icon only</value>
+		<value condition="StringCompare(Skin.String(LiveTV.EpgViewChannels),2)">Name & Icon</value>
+		<value>Name only</value>
+	</variable>
+	
+	<include name="SystemCenterPanel">	
+		<control type="image">
+			<posx>50</posx>
+			<posy>0</posy>
+			<width>1820</width>
+			<height>904</height>
+			<texture border="40">listpanel_back.png</texture>
+		</control>
+	</include>
+</includes>

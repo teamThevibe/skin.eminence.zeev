@@ -1,0 +1,187 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="window" id="3101">
+	<defaultcontrol always="true">9511</defaultcontrol>
+	<allowoverlay>false</allowoverlay>
+	<onload condition="IsEmpty(Window(3101).Property(widget))">SetProperty(widget,movies,3101)</onload>
+	<controls>
+		<!--<control type="image"> <include>Dimensions_Fullscreen</include> <texture fallback="special://skin/extras/border/sunset.png">$VAR[SunsetTimerImage]</texture> <include>Animation.FadeIn</include> <colordiffuse>ffbbbbbb</colordiffuse> </control> -->
+		<include>GlobalBackground</include>
+		<control type="image">
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<texture>special://skin/extras/border/silhouette.png</texture>
+			<colordiffuse>Silhouette</colordiffuse>
+			<include>Animation.FadeIn</include>
+			<include>Animation.FadeOut</include>
+		</control>
+		<control type="grouplist" description="menu" id="9512">
+			<include>Animation.DelayFadeIn</include>
+			<posy>680</posy>
+			<orientation>horizontal</orientation>
+			<align>center</align>
+			<width>1920</width>
+			<itemgap>64</itemgap>
+			<control type="button" id="1">
+				<width>128</width>
+				<height>128</height>
+				<texturenofocus colordiffuse="7F000000">widget/movie.png</texturenofocus>
+				<texturefocus colordiffuse="Highlight-NF">widget/movie.png</texturefocus>
+				<onclick>SetProperty(widget,movies,3101)</onclick>
+				<visible>!stringcompare(Window(3101).Property(widget),movies)</visible>
+			</control>
+			<control type="button" id="2">
+				<width>128</width>
+				<height>128</height>
+				<texturenofocus colordiffuse="3fffffff">widget/movie.png</texturenofocus>
+				<texturefocus colordiffuse="Highlight-NF">widget/movie.png</texturefocus>
+				<onclick>SetProperty(widget,movies,3101)</onclick>
+				<visible>stringcompare(Window(3101).Property(widget),movies)</visible>
+			</control>
+			<control type="button" id="3">
+				<width>128</width>
+				<height>128</height>
+				<texturenofocus colordiffuse="7F000000">widget/tv.png</texturenofocus>
+				<texturefocus colordiffuse="Highlight-NF">widget/tv.png</texturefocus>
+				<onclick>SetProperty(widget,episodes,3101)</onclick>
+				<visible>!stringcompare(Window(3101).Property(widget),episodes)</visible>
+			</control>
+			<control type="button" id="4">
+				<width>128</width>
+				<height>128</height>
+				<texturenofocus colordiffuse="3Fffffff">widget/tv.png</texturenofocus>
+				<texturefocus colordiffuse="Highlight-NF">widget/tv.png</texturefocus>
+				<onclick>SetProperty(widget,episodes,3101)</onclick>
+				<visible>stringcompare(Window(3101).Property(widget),episodes)</visible>
+			</control>
+			<control type="button" id="5">
+				<width>128</width>
+				<height>128</height>
+				<texturenofocus colordiffuse="7F000000">widget/livetv.png</texturenofocus>
+				<texturefocus colordiffuse="Highlight-NF">widget/livetv.png</texturefocus>
+				<onclick>SetProperty(widget,nextaired,3101)</onclick>
+				<visible>!stringcompare(Window(3101).Property(widget),nextaired)</visible>
+			</control>
+			<control type="button" id="6">
+				<width>128</width>
+				<height>128</height>
+				<texturenofocus colordiffuse="3Fffffff">widget/livetv.png</texturenofocus>
+				<texturefocus colordiffuse="Highlight-NF">widget/livetv.png</texturefocus>
+				<onclick>SetProperty(widget,nextaired,3101)</onclick>
+				<visible>stringcompare(Window(3101).Property(widget),nextaired)</visible>
+			</control>
+			<control type="button" id="7">
+				<width>128</width>
+				<height>128</height>
+				<texturenofocus colordiffuse="7F000000">widget/trailer.png</texturenofocus>
+				<texturefocus colordiffuse="Highlight-NF">widget/trailer.png</texturefocus>
+				<onclick>SetProperty(widget,trailers,3101)</onclick>
+				<visible>!stringcompare(Window(3101).Property(widget),trailers)</visible>
+			</control>
+			<control type="button" id="8">
+				<width>128</width>
+				<height>128</height>
+				<texturenofocus colordiffuse="3Fffffff">widget/trailer.png</texturenofocus>
+				<texturefocus colordiffuse="Highlight-NF">widget/trailer.png</texturefocus>
+				<onclick>SetProperty(widget,trailers,3101)</onclick>
+				<visible>stringcompare(Window(3101).Property(widget),trailers)</visible>
+			</control>
+		</control>
+		<control type="group">
+			<posy>240</posy>
+			<include>Animation.SlideOpen.Up</include>
+			<control type="image">
+				<posy>0</posy>
+				<texture colordiffuse="TopBarDark">common/white.png</texture>
+				<height>380</height>
+				<width>1920</width>
+			</control>
+			<control type="wraplist" id="9511">
+				<visible>stringcompare(Window(3101).Property(widget),movies)</visible>
+				<include>WidgetHubListContent</include>
+				<content target="video">
+					<include condition="!Skin.HasSetting(xbmb3c)">$VAR[WidgetHubMoviesContent]</include>
+					<include condition="Skin.HasSetting(xbmb3c)">LatestMoviesWidgetMB3</include>
+				</content>
+			</control>
+			<control type="wraplist" id="9511">
+				<visible>stringcompare(Window(3101).Property(widget),episodes)</visible>
+				<include>WidgetHubListContent</include>
+				<content target="video">
+					<include condition="!Skin.HasSetting(xbmb3c)">$VAR[WidgetHubEpisodesContent]</include>
+					<include condition="Skin.HasSetting(xbmb3c)">LatestEpisodesWidgetMB3</include>
+				</content>
+			</control>
+			<control type="wraplist" id="9511">
+				<visible>stringcompare(Window(3101).Property(widget),nextaired)</visible>
+				<include>WidgetHubListContent</include>
+				<content target="video">
+					<include condition="!Skin.HasSetting(xbmb3c)">$VAR[WidgetHubNextAiredContent]</include>
+					<include condition="Skin.HasSetting(xbmb3c)">RecommendedEpisodesWidgetMB3</include>
+				</content>
+			</control>
+			<control type="wraplist" id="9511">
+				<visible>stringcompare(Window(3101).Property(widget),trailers)</visible>
+				<include>WidgetHubListContent</include>
+				<content target="video">$VAR[WidgetHubTrailersContent]</content>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(Container(9511).ListItem.Label)</visible>
+				<posx>820</posx>
+				<control type="image">
+					<posx>0</posx>
+					<posy>20</posy>
+					<width>820</width>
+					<height>340</height>
+					<texture colordiffuse="TopBarDark" border="100">home/tile-600x340.png</texture>
+				</control>
+				<control type="grouplist">
+					<posx>70</posx>
+					<posy>40</posy>
+					<width>670</width>
+					<orientation>vertical</orientation>
+					<control type="label">
+						<label>$VAR[WidgetHubLabel]</label>
+						<aligny>top</aligny>
+						<align>center</align>
+						<height>35</height>
+					</control>
+					<control type="label">
+						<label>$INFO[Container(9511).ListItem.Label]</label>
+						<aligny>top</aligny>
+						<align>center</align>
+						<font>Font-WidgetInfoTitle</font>
+						<height>70</height>
+						<textcolor>Highlight</textcolor>
+					</control>
+					<control type="textbox">
+						<label>$INFO[Container(9511).ListItem.Plot]$INFO[Container(9511).ListItem.Property(Album_Description)]</label>
+						<aligny>top</aligny>
+						<align>center</align>
+						<height>120</height>
+						<font>Font-ListInfo</font>
+					</control>
+					<control type="label">
+						<label>$INFO[Container(9511).ListItem.Artist,, • ]$INFO[Container(9511).ListItem.TvShowTitle,, • ]$INFO[Container(9511).ListItem.Year]$INFO[Container(9511).ListItem.RatingAndVotes, • ,]</label>
+						<aligny>center</aligny>
+						<align>center</align>
+						<font>Font-ListInfo-Small</font>
+						<height>65</height>
+						<visible>!IsEmpty(Container(9511).ListItem.Year)</visible>
+					</control>
+					<control type="label">
+						<label>$INFO[Container(9511).ListItem.Artist,, • ]$INFO[Container(9511).ListItem.TvShowTitle]$INFO[Container(9511).ListItem.RatingAndVotes, • ,]</label>
+						<aligny>center</aligny>
+						<align>center</align>
+						<font>Font-ListInfo-Small</font>
+						<height>65</height>
+						<visible>IsEmpty(Container(9511).ListItem.Year)</visible>
+					</control>
+				</control>
+			</control>
+		</control>
+		<include>GlobalTopBar</include>
+	</controls>
+</window>

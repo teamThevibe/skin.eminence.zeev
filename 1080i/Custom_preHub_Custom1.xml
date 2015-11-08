@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window type="buttonMenu" id="3259">
+    <defaultcontrol always="true">9500</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <onunload>ClearProperty(librarynode,home)</onunload>
+
+	<zorder>5</zorder>
+    <controls>
+        <include>GlobalLeftHeader</include>
+        
+        <control type="group">      
+            
+			<animation effect="slide" start="1920" end="0" delay="0" time="200">WindowOpen</animation>
+            <animation effect="slide" start="1920" end="0" delay="0" time="200">Visible</animation>
+            <include>DefContextMenuBackground</include>     
+<!--
+            <control type="list" id="9500">
+                    <bottom>950</bottom>
+                    <left>150</left>
+                    <right>150</right>
+                    <height>68</height>
+                    <bottom>33</bottom>
+                    <itemgap>16</itemgap>
+                    <orientation>horizontal</orientation>
+                <include>HubpreCategoriesLayout</include>
+                <content>
+                    <include>QuickNavTvshowsHub</include> 
+                </content>  -->
+
+           <control type="list" id="9500">
+                <posx>984</posx>
+                <posy>listy</posy>
+                <width>widgethubrightw</width>
+                <height>700</height>
+                <include>HubMoveRight</include>
+                <onleft>9501</onleft>                
+                <onup>9500</onup>
+                <ondown>9500</ondown>
+                <orientation>vertical</orientation>
+                <include>HubCategoriesLayout</include>
+                <content>
+                    <include>QuickNavTvshowsHub</include> 
+   </content>
+
+            </control>
+        </control>
+    </controls>
+
+</window>

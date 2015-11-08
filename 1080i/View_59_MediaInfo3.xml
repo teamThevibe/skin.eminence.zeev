@@ -1,0 +1,511 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+  
+  <include name="59ListContent">
+    <onload condition="!Skin.HasSetting(NextAired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+	    <onload condition="!Skin.HasSetting(NextAired)">RunScript(script.tv.show.next.aired,force=True)</onload>
+	<onload condition="Skin.HasSetting(rss.tvnextaired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
+  
+  <control type="group">
+	 	 <control type="label">
+			<posx>9</posx>
+			<width>470</width>
+            <align>right</align>
+			<font>Font-ListInfo-list</font>
+            <label>.$INFO[ListItem.Episode]$INFO[ListItem.TrackNumber]</label>	  
+			<visible>!IntegerGreaterThan(ListItem.Episode,50) + !IntegerGreaterThan(ListItem.TrackNumber,20) + !SubString(ListItem.Episode,S)</visible>
+			<visible>[Container.Content(Episodes) + !IsEmpty(ListItem.Episode) + !IsEmpty(ListItem.TVShowTitle)] | [Container.Content(songs) + !IsEmpty(ListItem.TrackNumber)]</visible>
+
+	 </control>
+	  
+	 <control type="label">
+			<posx>50</posx>
+			<width>400</width>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+            <label> $VAR[VARLabel]</label>	  
+
+	  </control>
+				
+	   </control>
+	 <control type="label">
+			<width>470</width>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+            <label>$INFO[(ListItem.NextDate)]</label>
+        </control>
+				
+				
+				
+<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture flipx="false">wflag.png</texture>
+						<visible>!stringcompare(ListItem.Label,..) + [StringCompare(ListItem.Overlay,overlaywatched.png) | IntegerGreaterThan(ListItem.PercentPlayed,0) | [[Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.Property(UnWatchedEpisodes))]] </visible>
+					</control> 
+					<control type="image">
+						<posx>4</posx>
+						<posy>7</posy>
+						<width>28</width>
+						<height>28</height>
+						<texture colordiffuse="grey">eye.png</texture>
+						<visible>StringCompare(ListItem.Overlay,overlaywatched.png)</visible>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>100</width>
+						<height>20</height>
+						<font>Font-ListInfo-tiny</font>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+						<visible>!StringCompare(ListItem.Overlay,overlaywatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+					</control>		
+
+		
+        <control type="group">
+            <posx>5</posx>
+            <posy>8</posy>
+            <include>WatchedImageList2</include>
+        </control>
+    </include>
+    <include name="View_59_MediaInfo3">
+    
+        <description>List View (id=59)</description>
+        <control type="group">
+            <visible>Control.IsVisible(59)</visible>
+            <include>Animation.ViewChange</include>     
+            <!-- כותרת עמוד -->          
+		<include>DefSideLabel</include>
+              
+			  			<!-- Flags 
+			<include name="flags_movies"><param name="posy">35</param></include>
+			  -->
+			  <control type="image">
+						<posx>400</posx>
+						<posy>35</posy>
+						<width>250</width>
+                        <height>250</height>
+						<texture background="true" >$INFO[ListItem.Art(clearlogo)]</texture>
+						<aspectratio>keep</aspectratio>
+			  </control>
+			  
+            <control type="group">
+                <posx>listx</posx>
+                <posy>listy</posy>
+                <control type="image">
+                    <visible>!Skin.HasSetting(list.highlight)</visible>
+<!--רשימת סרטים-->                      
+					  <posx>970</posx>
+            <posy>0</posy>
+					<width>widgethubrightw</width>
+                    <height>globalh</height>
+                    <texture border="5" colordiffuse="PosterBorder">common/border-inner.png</texture>
+                </control>
+                <control type="group">
+                    <!--תקציר ותמונה--> 
+					<posx>-2</posx>
+                    <width>965</width>
+                    <height>globalh</height>
+                    <control type="group">
+                        <posx>globalpad</posx>
+                        <control type="image">
+                            <width>955</width>
+                            <height>globalh</height>
+                            <texture colordiffuse="PosterBorder" border="5">common/border-inner.png</texture>
+                    </control>
+                     	
+                        <control type="image">
+                            <left>675</left>
+                            <top>globalpad</top>
+                            <width>269</width>
+                            <height>404</height>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$VAR[PosterImage]</texture>
+                            <fadetime>150</fadetime>
+                        </control>
+                        
+                        <control type="image">
+                            <posx>10</posx>
+            <posy>0</posy>
+							<left>287</left>
+                            <top>globalpad</top>
+                            <right>10</right>
+                            <height>404</height>
+                            <aspectratio>scale</aspectratio>
+							<texture background="true">$VAR[FanartImage]</texture>
+                            <fadetime>150</fadetime>
+                        </control>
+                        
+					<!--	<control type="label">
+                         <posx>600</posx>					
+						 <posy>445</posy>
+						<width>915</width>
+                                <height>32</height>
+                                <align>right</align>
+                                <aligny>top</aligny>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$INFO[ListItem.Property(TotalSeasons)] $LOCALIZE[33054], $INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360]</label>
+						<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Property(TotalSeasons))</visible>                          
+						  </control>-->
+						
+                        <control type="grouplist">
+                            <top>424</top>
+                            <left>25</left>
+                            <control type="group">
+                                <height>48</height>
+                                <control type="label">
+                                    <posx>900</posx>
+									<width>620</width>
+                                    <align>right</align>
+                                    <label>$VAR[VARLabel]</label>
+                                    <font>Font-ListHeader</font>
+                                </control>
+								
+						<!--		<control type="label">
+                                    <posx>900</posx>
+									<posy>40</posy>
+									<width>620</width>
+                                    <align>right</align>
+                                    <label>$INFO[ListItem.Genre]</label>
+                                    <font>Font-ListInfo-Small</font>
+                                </control> -->
+
+						<control type="label">
+                        <left>-680</left>
+						<top>50</top>
+						<width>915</width>
+                                <height>32</height>
+                                <align>right</align>
+                                <aligny>top</aligny>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$INFO[ListItem.Property(TotalSeasons)] $LOCALIZE[33054], $INFO[ListItem.Property(TotalEpisodes)] $LOCALIZE[20360]</label>
+						<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Property(TotalSeasons))</visible>                          
+						  </control>
+								
+                            </control>
+                            
+							<control type="label">
+                                <width>915</width>
+                                <height>32</height>
+                                <align>right</align>
+                                <aligny>top</aligny>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$VAR[VARLabel3]</label>                           
+						   </control>
+                           
+						   <control type="textbox">
+                                <width>915</width>
+                                <align>right</align>
+                                <height>100</height>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$VAR[PlotBox]</label>
+                            </control>
+                            
+                        </control>
+                        <control type="grouplist">
+                            <include>Animation.FadeIn</include>
+                            <include>Animation.FadeOut</include>
+                            <right>2</right>
+                            <centertop>456</centertop>
+                            <height>64</height>
+                            <orientation>horizontal</orientation>
+                            <align>left</align>
+                            <itemgap>24</itemgap>
+                            <usecontrolcoords>true</usecontrolcoords>
+                            
+                            <control type="image">
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar1].png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-48</posx>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar2].png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-48</posx>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar3].png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-48</posx>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar4].png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-48</posx>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar5].png</texture>
+                            </control>
+                        
+
+                        
+						<control type="label">
+                            <width>auto</width>
+                            <height>64</height>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Rating]</label>
+                            <font>Flag</font>
+                            <textcolor>PanelFG-NF</textcolor>
+                            
+                        </control>
+                       
+						
+						</control>
+                        
+                        <control type="grouplist">
+                            <include>Animation.FadeIn</include>
+                            <include>Animation.FadeOut</include>
+                            <left>8</left>
+                            <centerbottom>45</centerbottom>
+                            <height>64</height>
+                            <orientation>horizontal</orientation>
+                            <align>left</align>
+                            <itemgap>20</itemgap>
+                            <usecontrolcoords>true</usecontrolcoords>
+                            <control type="image">
+                                <width>55</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/year.png</texture>
+                                <aspectratio align="left">scale</aspectratio>
+                                <visible>!IsEmpty(ListItem.Year)</visible>
+                            </control>
+                            <control type="label">
+                                <width>90</width>
+                                <height>64</height>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <label>$INFO[ListItem.Year]</label>
+                                <font>Flag</font>
+                                <textcolor>PanelFG-NF</textcolor>
+                                <visible>!IsEmpty(ListItem.Year)</visible>
+                            </control>
+                            <control type="image">
+                                <width>55</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/time.png</texture>
+                                <aspectratio align="left">scale</aspectratio>
+                                <visible>!IsEmpty(ListItem.Duration)</visible>
+                            </control>
+                            <control type="label">
+                                <width>500</width>
+                                <height>64</height>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <label>$INFO[Window(Home).Property(SkinHelper.ListItemDuration)]</label>
+                                <font>Flag</font>
+                                <textcolor>PanelFG-NF</textcolor>
+                                <visible>!IsEmpty(ListItem.Duration)</visible>
+                            </control>
+                            <control type="image">
+                                <width>55</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/video.png</texture>
+                                <aspectratio align="left">scale</aspectratio>
+                                <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+                            </control>
+                            <control type="label">
+                                <width>70</width>
+                                <height>64</height>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <label>$INFO[ListItem.VideoResolution]</label>
+                                <font>Flag</font>
+                                <textcolor>PanelFG-NF</textcolor>
+                                <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+                            </control>
+                            <control type="image">
+                                <width>55</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/audio.png</texture>
+                                <aspectratio align="left">scale</aspectratio>
+                                <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                            </control>
+                            <control type="label">
+                                <width>80</width>
+                                <height>64</height>
+                                <align>left</align>
+                                <aligny>center</aligny>
+                                <label>$VAR[LabelAudioChannels]</label>
+                                <font>Flag</font>
+                                <textcolor>PanelFG-NF</textcolor>
+                                <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                            </control>
+                            
+                            
+                        </control>
+                        <control type="image">
+                            <right>16</right>
+                            <centerbottom>40</centerbottom>
+                            <width>64</width>
+                            <height>64</height>
+                            <texture colordiffuse="PanelFG-NF">$VAR[3DDVDFLAG]</texture>
+							<aspectratio align="left">scale</aspectratio>
+                        </control>
+        
+                    </control>
+                </control>
+                <!--רשימת סרטים-->
+				<control type="list" id="59">
+						
+						<posx>970</posx>
+						<posy>-5</posy>                   
+				   <width>480</width>
+                    <height>globalh</height>
+                    <onleft>60</onleft>
+                    <onright>9000</onright>
+                    <onup>59</onup>
+                    <ondown>59</ondown>
+                    <movement>2</movement>
+                    <focusposition>2</focusposition>
+                    <include>DefOnBack</include>
+                    <pagecontrol>60</pagecontrol>
+                    <viewtype label="31242">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+					
+                    <itemlayout width="500" height="69">
+                        
+						
+						
+						<control type="group">                       
+						   <include>59ListContent</include>
+                        </control>
+        
+
+                    </itemlayout>
+
+                    <focusedlayout width="500" height="69">
+                        <control type="group">
+                           
+							<control type="group">
+                                <visible>Control.HasFocus(59)</visible>
+                                <control type="image">
+                                    <width>500</width>
+                                    <height>69</height>
+                                    <texture border="5" colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+								<visible>!Skin.HasSetting(home.colortilehigh)</visible>
+                                </control>
+								<control type="image">
+                                    <width>500</width>
+                                    <height>69</height>
+                                    <texture border="5" colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+								<visible>Skin.HasSetting(home.colortilehigh)</visible>
+                                </control>
+                                <control type="group">
+                                    <visible>Skin.HasSetting(list.highlight)</visible>
+                                    <control type="image">
+                                        <width>455</width>
+                                        <height>69</height>
+                                        <texture border="5" colordiffuse="PosterBorder">common/border-inner.png</texture>
+                                    </control>
+                                    <control type="image">
+                                        <width>8</width>
+                                        <height>69</height>
+                                        <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+                                    </control>
+                                </control>
+
+		<control type="group">
+	 	 <control type="label">
+			<posx>9</posx>
+			<width>470</width>
+            <align>right</align>
+			<font>Font-ListInfo-list</font>
+            <label>.$INFO[ListItem.Episode]$INFO[ListItem.TrackNumber]</label>	  
+			<visible>!IntegerGreaterThan(ListItem.Episode,50) + !IntegerGreaterThan(ListItem.TrackNumber,20) + !SubString(ListItem.Episode,S)</visible>
+			<visible>[Container.Content(Episodes) + !IsEmpty(ListItem.Episode) + !IsEmpty(ListItem.TVShowTitle)] | [Container.Content(songs) + !IsEmpty(ListItem.TrackNumber)]</visible>
+
+	 </control>
+	  
+	 <control type="label">
+			<posx>50</posx>
+			<width>400</width>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+            <label> $VAR[VARLabel]</label>	  
+
+	  </control>
+				
+	   </control>
+                                <control type="group">
+                                    <posx>5</posx>
+                                    <posy>8</posy>
+                                    <include>WatchedImageList2</include>
+                                </control>
+                            </control>
+                            <control type="group">
+                                <visible>!Control.HasFocus(59)</visible>
+                                <include>59ListContent</include>
+                            </control>
+                        
+						<control type="image">
+						<posx>0</posx>
+						<posy>0</posy>
+						<width>60</width>
+						<height>60</height>
+						<texture flipx="false">wflag.png</texture>
+						<visible>!stringcompare(ListItem.Label,..) + [StringCompare(ListItem.Overlay,overlaywatched.png) | IntegerGreaterThan(ListItem.PercentPlayed,0) | [[Container.Content(TVShows) | Container.Content(Seasons)] + !IsEmpty(ListItem.Property(UnWatchedEpisodes))]] </visible>
+					</control> 
+					<control type="image">
+						<posx>4</posx>
+						<posy>7</posy>
+						<width>28</width>
+						<height>28</height>
+						<texture colordiffuse="grey">eye.png</texture>
+						<visible>StringCompare(ListItem.Overlay,overlaywatched.png)</visible>
+					</control>
+					<control type="label">
+						<posx>20</posx>
+						<posy>20</posy>
+						<width>100</width>
+						<height>20</height>
+						<font>Font-ListInfo-tiny</font>
+						<textcolor>white</textcolor>
+						<align>center</align>
+						<aligny>center</aligny>
+						<label>$INFO[ListItem.Property(UnWatchedEpisodes)]</label>
+						<visible>!StringCompare(ListItem.Overlay,overlaywatched.png) + [Container.Content(TVShows) | Container.Content(Seasons)]</visible>
+					</control>		
+	
+						
+						</control>
+                    </focusedlayout>
+  						<control type="label">
+						<posx>20</posx>
+						<posy>20</posy>
+								<width>915</width>
+                                <height>32</height>
+                                <align>right</align>
+                                <aligny>top</aligny>
+                                <font>Font-ListInfo-Small</font>
+                                <label>$INFO[Window(Home).Property(NextAired.NextDate)]</label>
+						  </control>
+                </control>
+                <control type="scrollbar" id="60">
+                    <posx>1455</posx>
+                    <posy>0</posy>
+                    <height>globalh</height>
+                    <include>DefScrollBarMove</include>
+                    <animation effect="fade" start="100" end="25" time="100" condition="!Control.HasFocus(60)">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+                    <animation effect="fade" start="100" end="25" condition="[!IntegerGreaterThan(Container.NumPages,1) + !Control.HasFocus(60)]">Conditional</animation>               
+			   </control>   
+               
+            </control>
+        </control>
+
+    </include>
+
+</includes>

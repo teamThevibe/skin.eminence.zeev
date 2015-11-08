@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window>
+    <defaultcontrol always="true">11</defaultcontrol>
+    
+    <controls>
+    
+        <control type="group">
+            <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
+            <animation effect="slide" start="668" end="0" time="150" tween="quadratic">Visible</animation>
+            <animation effect="slide" start="668" end="0" time="150" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="668" start="0" time="150" tween="quadratic">Hidden</animation>
+            <animation effect="slide" end="668" start="0" time="150" tween="quadratic">WindowClose</animation>
+            <control type="image">
+                <posx>1280</posx>
+                <posy>-1</posy>
+                <width>668</width>
+                <height>1082</height>
+                <colordiffuse>Panel-OSD2</colordiffuse>
+                <texture border="offset">common/white.png</texture>
+                <animation effect="fade" start="100" end="90" condition="Skin.HasSetting(osd.usetheme)">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>1290</posx>
+                <posy>-4</posy>  
+                <width>128</width>
+                <height>128</height>
+                <texture colordiffuse="White">special://skin/extras/icons/livetv.png</texture>
+                <colordiffuse>$VAR[OSDPanelWhite100]</colordiffuse>
+            </control>
+            
+			<!--
+			<control type="button">
+				<description>Close Window button</description>
+                <posx>1500</posx>
+                <posy>-4</posy>  
+                <width>22</width>
+                <height>20</height>
+				<label></label>
+				<onclick>PreviousMenu</onclick>
+				<texturefocus>special://skin/media/overlay/error2.png</texturefocus>
+				<texturenofocus>special://skin/media/overlay/error1.png</texturenofocus>
+			</control>-->
+			
+			<control type="label">
+                <posx>1900</posx>
+                <posy>10</posy>
+                <width>400</width>
+                <align>right</align>
+			    <label>$INFO[VideoPlayer.ChannelGroup]</label>
+                <font>Font-HomeMenu</font>               
+				<textcolor>White</textcolor>
+		   </control>
+            <control type="label">
+                <posx>1900</posx>
+                <posy>43</posy>
+                <width>400</width>
+                <align>right</align>
+                <label>$INFO[Container(11).NumItems,,  $LOCALIZE[19019]]</label>
+				                <font>Font-HomeMenu</font>               
+				<textcolor>White</textcolor>
+            </control>
+<!--רשימת ערוצים OSD-->
+            <control type="list" id="11">
+                <posx>1280</posx>
+                <posy>120</posy>
+                <height>980</height>
+                <width>667</width>
+                <onleft>PreviousChannelGroup</onleft>
+                <onright>NextChannelGroup</onright>
+                <orientation>vertical</orientation>
+                <itemlayout height="120">
+                    <control type="image">
+                        <width>667</width>
+                        <height>109</height>
+                        <texture>common/selected.png</texture>
+                        <aspectratio aligny="top">center</aspectratio>
+                        <animation effect="fade" start="100" end="15" condition="true">Conditional</animation>
+						<visible>ListItem.IsPlaying</visible>
+                        <colordiffuse>White</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>540</posx>
+                        <posy>12</posy>  
+                        <width>85</width>
+                        <height>85</height>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posx>50</posx>
+                        <posy>5</posy>
+                        <width>70</width>
+                        <align>left</align>
+                <font>Font-HomeMenu</font>               
+				<textcolor>White</textcolor>
+                        <label></label>
+                    </control>
+                    <control type="progress">
+                        <posx>50</posx>
+                        <posy>45</posy>
+                        <width>100</width>
+                        <height>19</height>
+                        <reveal>true</reveal>
+                        <texturebg>pvr/progress-back.png</texturebg>
+                        <lefttexture>pvr/progress-leftright.png</lefttexture>
+                        <midtexture>pvr/progress-mid.png</midtexture>
+                        <righttexture>pvr/progress-leftright.png</righttexture>
+                        <info>ListItem.Progress</info>
+                        <colordiffuse>White</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>125</posx>
+                        <posy>5</posy>
+                        <width>400</width>
+                        <align>right</align>
+                <font>Font-HomeMenu</font>               
+				<textcolor>White</textcolor>
+                        <label>$INFO[ListItem.ChannelName]</label>
+                        <selectedcolor>White</selectedcolor>
+                    </control>
+                    <control type="label">
+                        <posx>125</posx>
+                        <posy>40</posy>
+                        <width>400</width>
+                        <align>right</align>
+                <font>Font-HomeMenu</font>               
+				<textcolor>White</textcolor>
+                        <label>$INFO[ListItem.Title]</label>
+                        <selectedcolor>White</selectedcolor>                    </control>
+                </itemlayout>
+                <focusedlayout height="120">
+                    <!--תמונת בחירה-->
+					<control type="image">
+                        <width>667</width>
+                        <height>109</height>
+                        <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+                    </control>
+                    <!--מה מנוגן עכשיו שנבחר-->                   
+				   <control type="image">
+                        <width>667</width>
+                        <height>109</height>
+                        <texture>common/selected.png</texture>
+                        <aspectratio aligny="top">center</aspectratio>
+                        <animation effect="fade" start="100" end="30" condition="true">Conditional</animation>
+                        <visible>ListItem.IsPlaying</visible>
+                        <colordiffuse>$VAR[Highlight6]</colordiffuse>
+                    </control>
+                    <control type="image">
+                        <posx>540</posx>
+                        <posy>12</posy>  
+                        <width>85</width>
+                        <height>85</height>
+                        <texture>$INFO[ListItem.Thumb]</texture>
+                        <aspectratio>keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <posx>50</posx>
+                        <posy>5</posy>
+                        <width>70</width>
+                        <align>left</align>
+                <font>Font-HomeMenu</font>               
+				<textcolor>White</textcolor>
+                        <label></label>
+                        <selectedcolor>Selected</selectedcolor>
+                    </control>
+                    <control type="progress">
+                        <posx>50</posx>
+                        <posy>45</posy>
+                        <width>100</width>
+                        <height>19</height>
+                        <reveal>true</reveal>
+                        <texturebg>pvr/progress-back.png</texturebg>
+                        <lefttexture>pvr/progress-leftright.png</lefttexture>
+                        <midtexture>pvr/progress-mid.png</midtexture>
+                        <righttexture>pvr/progress-leftright.png</righttexture>
+                        <info>ListItem.Progress</info>
+                        <colordiffuse>Selected</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <posx>125</posx>
+                        <posy>5</posy>
+                        <width>400</width>
+                        <align>right</align>
+                <font>Font-HomeMenu</font>               
+				<textcolor>White</textcolor>
+                        <label>$INFO[ListItem.ChannelName]</label>
+                        <selectedcolor>Selected</selectedcolor>
+                    </control>
+                    <control type="label">
+                        <posx>125</posx>
+                        <posy>40</posy>
+                        <width>400</width>
+                        <align>right</align>
+                <font>Font-HomeMenu</font>               
+				<textcolor>White</textcolor>
+                        <label>$INFO[ListItem.Title]</label>
+                        <selectedcolor>Selected</selectedcolor>
+                    </control>
+                </focusedlayout>
+            
+            </control>
+        </control>
+    </controls>
+
+</window>

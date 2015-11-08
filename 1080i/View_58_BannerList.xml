@@ -1,0 +1,327 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+    <constant name="bannerlistplot">838</constant>
+    <include name="View_58_BannerList">
+    
+        <description>Banner List View (id=58)</description>
+        <control type="group">
+            <visible>Control.IsVisible(58)</visible>
+            <include>Animation.ViewChange</include>     
+            <include>DefSideLabel</include> 
+              
+            <control type="group">
+                <posx>listx</posx>
+                <posy>listy</posy>
+                
+                <control type="list" id="58">
+                    <width>globalw</width>
+                    <height>700</height>
+                    <onright>9000</onright>
+                    <onleft>60</onleft>
+                    
+                    <onup>58</onup>
+                    <ondown>58</ondown>
+                    <movement>2</movement>
+                    <focusposition>1</focusposition>
+                    <include>DefOnBack</include>
+                    <pagecontrol>60</pagecontrol>
+                    <viewtype label="31223">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+
+                    <itemlayout width="globalw" height="120">
+              
+                        <control type="group">
+                            <posx>90</posx>
+                            <posy>34</posy>
+                            <include>WatchedImage</include>
+                        </control>
+                        <control type="label">
+                            <right>420</right>
+                            <width>bannerlistplot</width>
+                            <height>120</height>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label2]</label>
+                            <font>Font-ListInfo-Small</font>
+                        </control>
+                        <control type="group">
+                            <posx>26</posx>
+                            <width>bannerlistplot</width>
+                            <posy>globalpad</posy>
+                            
+                            <control type="label">
+                                <width>1370l</width>
+                                <height>44</height>
+                                <align>right</align>
+                                <aligny>top</aligny>
+                                <label>$VAR[VARLabel]</label>
+                                <font>Font-ListHeader</font>
+                            </control>
+                            <control type="label">
+                                <posx>310r</posx>
+                                <align>right</align>
+                                <posy>52</posy>
+                                <width>bannerlistplot</width>
+                                <height>50</height>
+                                <aligny>top</aligny>
+                                <label>$VAR[VARLabel3]</label>
+                                <font>Font-ListInfo-Small</font>
+                            </control>
+                            
+                        </control>
+                    </itemlayout>
+                    
+                    <focusedlayout width="globalw" height="340">
+                        <control type="group">
+                            <visible>Skin.HasSetting(list.highlight)</visible>
+                            <control type="image">
+                                <width>globalw</width>
+                                <height>330</height>
+                                <texture colordiffuse="PosterBorder" border="5">common/border-inner.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                                <visible>Control.HasFocus(58)</visible>
+                            </control>
+                            <control type="image">
+                                <width>8</width>
+                                <height>330</height>
+                                <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+                                <aspectratio>stretch</aspectratio>
+                                <visible>Control.HasFocus(58)</visible>
+                            </control>
+                        </control>
+                        
+                        <control type="image">
+                            <visible>!Skin.HasSetting(list.highlight)</visible>
+                            <width>globalw</width>
+                            <height>330</height>
+                            <texture colordiffuse="$VAR[Highlight6]" border="5">common/white.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                            <visible>Control.HasFocus(58)</visible>
+							<visible>!Skin.HasSetting(home.colortilehigh)</visible>
+                        </control>
+                                                <control type="image">
+                            <visible>!Skin.HasSetting(list.highlight)</visible>
+                            <width>globalw</width>
+                            <height>330</height>
+                            <texture colordiffuse="$VAR[HighlightColor]" border="5">common/white.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                            <visible>Control.HasFocus(58)</visible>
+							<visible>Skin.HasSetting(home.colortilehigh)</visible>
+                        </control>
+                        <control type="image">
+                            <width>1448</width>
+                            <height>330</height>
+                            <texture border="5" colordiffuse="PosterBorder">common/border-inner.png</texture>
+                            <aspectratio>stretch</aspectratio>
+                            <visible>!Control.HasFocus(58)</visible>
+                        </control>
+                        <control type="image">
+                            <right>globalpad</right>
+                            <posy>globalpad</posy>
+                            <width>551</width>
+                            <height>310</height>
+                            <texture>$VAR[FanartImage]</texture>
+                            <aspectratio>scale</aspectratio>
+                        </control>
+                        
+                        
+                        
+                        <control type="group">
+                            <posx>26</posx>
+                            <width>bannerlistplot</width>
+                            <posy>globalpad</posy>
+                            <control type="group">
+                                <posx>42r</posx>
+                                <centerbottom>36</centerbottom>
+                                <include>WatchedImage</include>
+                            </control>
+                            <control type="group">
+                                <posx>175l</posx>
+                                <centertop>26</centertop>
+                                <height>64</height>
+                                
+                                <control type="image">
+                                    <width>64</width>
+                                    <height>64</height>
+                                    <texture colordiffuse="Selected">flags/$VAR[Flagstar5].png</texture>
+                                </control>
+                                <control type="image">
+                                    <posx>-40</posx>
+                                    <width>64</width>
+                                    <height>64</height>
+                                    <texture colordiffuse="Selected">flags/$VAR[Flagstar4].png</texture>
+                                </control>
+                                <control type="image">
+                                    <posx>-80</posx>
+                                    <width>64</width>
+                                    <height>64</height>
+                                    <texture colordiffuse="Selected">flags/$VAR[Flagstar3].png</texture>
+                                </control>
+                                <control type="image">
+                                    <posx>-120</posx>
+                                    <width>64</width>
+                                    <height>64</height>
+                                    <texture colordiffuse="Selected">flags/$VAR[Flagstar2].png</texture>
+                                </control>
+                                <control type="image">
+                                    <posx>-160</posx>
+                                    <width>64</width>
+                                    <height>64</height>
+                                    <texture colordiffuse="Selected">flags/$VAR[Flagstar1].png</texture>
+                                </control>
+                            </control>
+                            <control type="label">
+                                <right>0</right>
+                                <align>right</align>
+                                <height>44</height>
+                                <aligny>top</aligny>
+                                <label>$VAR[VARLabel]</label>
+                                <font>Font-ListHeader</font>
+                                <textcolor>Selected</textcolor>
+                            </control>
+                            <control type="label">
+                                <posy>52</posy>
+                                <width>bannerlistplot</width>
+                                <height>50</height>
+                                <align>right</align>
+                                <aligny>top</aligny>
+                                <label>$VAR[VARLabel3]</label>
+                                <font>Font-ListInfo-Small</font>
+                                <textcolor>Selected</textcolor>
+                            </control>
+                      
+                            <control type="textbox">
+                                <posy>102</posy>
+                                <align>right</align>
+                                <width>bannerlistplot</width>
+                                <height>130</height>
+                                <label>$INFO[ListItem.Plot]</label>
+                                <font>Font-ListInfo-Small</font>
+                                <align>justify</align>
+                                <textcolor>Selected</textcolor>
+                            </control>
+                            <control type="group">
+                                <left>-14</left>
+                                <centerbottom>50</centerbottom>
+                                <height>64</height>
+                                <control type="image">
+                                    <width>48</width>
+                                    <height>64</height>
+                                    <texture colordiffuse="Selected">flags/year.png</texture>
+                                    <aspectratio align="left">scale</aspectratio>
+                                    <visible>!IsEmpty(ListItem.Year)</visible>
+                                </control>
+                                <control type="label">
+                                    <posx>68</posx>
+                                    <width>150</width>
+                                    <height>64</height>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <label>$INFO[ListItem.Year]</label>
+                                    <font>Flag</font>
+                                    <textcolor>Selected</textcolor>
+                                    <visible>!IsEmpty(ListItem.Year)</visible>
+                                </control>
+                            </control>
+                            <control type="group">
+                                <left>150</left>
+                                <centerbottom>50</centerbottom>
+                                <height>64</height>
+                                <control type="image">
+                                    <width>48</width>
+                                    <height>64</height>
+                                    <texture colordiffuse="Selected">flags/time.png</texture>
+                                    <aspectratio align="left">scale</aspectratio>
+                                    <visible>!IsEmpty(ListItem.Duration)</visible>
+                                </control>
+                                <control type="label">
+                                    <posx>68</posx>
+                                    <width>150</width>
+                                    <height>64</height>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <label>$INFO[ListItem.Duration,, $LOCALIZE[31107]]</label>
+                                    <font>Flag</font>
+                                    <textcolor>Selected</textcolor>
+                                    <visible>!IsEmpty(ListItem.Duration)</visible>
+                                </control>
+                                
+                                
+                            </control>
+                            <control type="group">
+                                <left>354</left>
+                                <centerbottom>50</centerbottom>
+                                <height>64</height>
+                                <control type="image">
+                                    <width>48</width>
+                                    <height>64</height>
+                                    <texture colordiffuse="Selected">flags/video.png</texture>
+                                    <aspectratio align="left">scale</aspectratio>
+                                    <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+                                </control>
+                                <control type="label">
+                                    <posx>68</posx>
+                                    <width>150</width>
+                                    <height>64</height>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <label>$INFO[ListItem.VideoResolution]</label>
+                                    <font>Flag</font>
+                                    <textcolor>Selected</textcolor>
+                                    <visible>!IsEmpty(ListItem.VideoCodec)</visible>
+                                </control>
+                            </control>
+                            <control type="group">
+                                <left>508</left>
+                                <centerbottom>50</centerbottom>
+                                <height>64</height>
+                 
+                                <control type="image">
+                                    <width>48</width>
+                                    <height>64</height>
+                                    <texture colordiffuse="Selected">flags/audio.png</texture>
+                                    <aspectratio align="left">scale</aspectratio>
+                                    <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                                </control>
+                                <control type="label">
+                                    <posx>68</posx>
+                                    <width>auto</width>
+                                    <height>64</height>
+                                    <align>left</align>
+                                    <aligny>center</aligny>
+                                    <label>$VAR[LabelAudioChannels]</label>
+                                    <font>Flag</font>
+                                    <textcolor>Selected</textcolor>
+                                    <visible>!IsEmpty(ListItem.AudioCodec)</visible>
+                                </control>
+                                
+                                
+                            </control>
+                            <!--<control type="image">
+                                <right>-4</right>
+                                <centerbottom>50</centerbottom>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="Selected">$VAR[3DDVDFLAG]</texture>
+                            </control>-->
+                            
+                        </control>
+                        
+                    </focusedlayout>
+
+                </control>
+                <control type="scrollbar" id="60">
+                    <posx>-26</posx>
+                    <posy>0</posy>
+                    <height>globalh</height>
+                    <include>DefScrollBarMove</include>
+                    <animation effect="fade" start="100" end="25" time="100" condition="!Control.HasFocus(60)">Conditional</animation>
+                    <animation effect="fade" start="100" end="0" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+                    <animation effect="fade" start="100" end="25" condition="[!IntegerGreaterThan(Container.NumPages,1) + !Control.HasFocus(60)]">Conditional</animation>
+                </control>    
+            </control>
+        </control>
+
+    </include>
+
+</includes>

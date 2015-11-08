@@ -1,0 +1,13 @@
+<views>
+    <view id="View_50_List" value="50" languageid="31343592" type="all"/>
+    <view id="View_51_Poster" value="51" languageid="31152" type="all" />
+    <view id="View_52_Wall_Content" value="500" languageid="31343576" type="all" />
+    <view id="View_53_Wide" value="53" languageid="31343586" type="all" />
+    <view id="View_54_Lovefilm" value="54" languageid="31343574" type="all" />
+    <view id="View_55_Banner" value="55" languageid="31343577" type="all" />
+    <view id="View_56_BigList" value="56" languageid="31343587" type="all" />
+    <view id="View_57_InfoList" value="57" languageid="31343588" type="all" />
+    <view id="View_58_BannerList" value="58" languageid="31343589" type="all" />
+    <view id="View_59_MediaInfo3" value="59" languageid="31343590" type="all" />
+	 <!--   <view id="View_516_Thumbnails" value="516" languageid="31343593" type="all" />-->
+</views>

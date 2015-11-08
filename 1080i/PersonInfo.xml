@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">8</defaultcontrol>
+	<controls>
+		<control type="button" id="8">
+			<description>Close Window button</description>
+			<left>1320</left>
+			<top>15</top>
+			<width>64</width>
+			<height>32</height>
+			<label>-</label>
+			<font>-</font>
+			<onclick>PreviousMenu</onclick>
+			<onleft>PreviousMenu</onleft>
+			<visible allowhiddenfocus="true">false</visible>
+			<onright>SendClick(3002)</onright>
+			<onup>-</onup>
+			<ondown>3010</ondown>
+		</control>
+		<control type="button" id="3002">
+			<description>show movies</description>
+			<left>-</left>
+			<top>-</top>
+			<width>-</width>
+			<height>-</height>
+			<align>center</align>
+			<label>Show Movies</label>
+			<font>Font-ListInfo</font>
+			<onup>-</onup>
+			<visible allowhiddenfocus="true">false</visible>
+		</control>
+		<control type="group">
+			<animation effect="slide" end="horznegpad" start="0" time="200" condition="[ControlGroup(9500).HasFocus() | Window.IsActive(DialogContextMenu.xml)]">Conditional</animation>
+			<posx>horzpad</posx>
+			<posy>70</posy>
+			<control type="group" description="Poster">
+				<posx>listx</posx>
+				<posy>listy</posy>
+				<control type="image">
+					<width>bigposterwborder</width>
+					<height>globalh</height>
+					<texture colordiffuse="PosterBorder" border="5">common/border-inner.png</texture>
+				</control>
+				<control type="image" id="3009">
+					<posx>globalpad</posx>
+					<posy>globalpad</posy>
+					<width>bigposterw</width>
+					<height>bigposterh</height>
+					<fadetime>200</fadetime>
+					<aspectratio aligny="top">scale</aspectratio>
+				</control>
+			</control>
+			<control type="grouplist">
+				<posx>509</posx>
+				<posy>listy</posy>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>vertical</orientation>
+				<control type="label">
+					<width>600</width>
+					<height>32</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Font-Button</font>
+					<label>Name</label>
+				</control>
+				<control type="label" id="3000">
+					<width>600</width>
+					<height>64</height>
+					<align>left</align>
+					<aligny>top</aligny>
+					<font>Font-ListInfo</font>
+					<label>-</label>
+				</control>
+			</control>
+			<control type="grouplist">
+				<posx>509</posx>
+				<posy>330</posy>
+				<usecontrolcoords>true</usecontrolcoords>
+				<orientation>vertical</orientation>
+				<control type="label">
+					<width>448</width>
+					<align>left</align>
+					<aligny>top</aligny>
+					<height>32</height>
+					<font>Font-Button</font>
+					<label>Biography</label>
+				</control>
+				<control type="textbox" id="3001">
+					<width>947</width>
+					<align>justify</align>
+					<aligny>top</aligny>
+					<font>Font-ListInfo</font>
+					<height>530</height>
+					<wrapmultiline>true</wrapmultiline>
+					<label>-</label>
+					<font>Font-ListInfo</font>
+					<pagecontrol>3010</pagecontrol>
+				</control>
+			</control>
+		</control>
+	</controls>
+</window>

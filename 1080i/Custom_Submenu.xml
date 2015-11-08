@@ -1,0 +1,138 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window id="1174" type="dialog">
+    <defaultcontrol always="true">1</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <zorder>0</zorder>
+	<controls>
+
+        <control type="group">
+
+            <control type="group">
+  
+			<control type="group">
+               
+			   <visible allowhiddenfocus="true">Window.IsActive(videoosd) | ControlGroup(9300).HasFocus() | Control.HasFocus(3)</visible>
+                <animation effect="slide" start="-200" end="500" delay="5" time="400" >WindowOpen</animation>
+				<animation effect="slide" start="500" end="-200" delay="0" time="400" >Windowclose</animation>
+
+
+                <include>Animation.SlideUp</include>
+                <include>Animation.FadeOut</include>
+                <bottom>100</bottom>
+                <centerleft>-100</centerleft>
+                <width>800</width>
+                <height>60</height>
+                <control type="image">
+                    <description>background image</description>
+                    <left>-24</left>
+                    <right>-24</right>
+                    <top>-24</top>
+                    <bottom>-24</bottom>
+                    <bordersize>24</bordersize>
+                    <colordiffuse>$VAR[OSDPanel]</colordiffuse>
+                <texture colordiffuse="infobg" border="5">common/OSDtime.png</texture>
+                </control>
+                <control type="grouplist" id="9300">
+                    <include>Animation.FadeIn.Delay</include>
+                    <include>Animation.FadeOut</include>
+                    <top>16</top>
+                    <bottom>16</bottom>
+                    <left>8</left>
+                    <right>8</right>
+                    <onup>3</onup>
+                    <ondown>Window.IsActive(videoosd)</ondown>
+                    <onleft>3</onleft>
+                    <onright>3</onright>
+                    <itemgap>0</itemgap>
+                    <orientation>horizontal</orientation>
+                    <scrolltime>200</scrolltime>
+			  
+       
+			
+            <!-- הפעלה או ביטול של כתוביות-->
+            
+			<control type="togglebutton" id="200">
+
+
+                <width>450</width>
+				<top>850</top>                
+                <height>100%</height>
+				<description>Subs</description>
+                <alttexturefocus>noop</alttexturefocus>
+                <alttexturenofocus>noop</alttexturenofocus>
+				<label>$LOCALIZE[287]</label>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<altlabel>$LOCALIZE[287]</altlabel>
+				<focusedcolor>FFFF0000</focusedcolor>
+                <include>DefOSDControls</include>
+                <include>DefOSDUpDown</include>
+                <onclick>Action(ShowSubtitles)</onclick>
+                <enable>VideoPlayer.HasSubtitles</enable>
+				<usealttexture>!VideoPlayer.SubtitlesEnabled</usealttexture>    
+        	<visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>				
+		    <animation effect="fade" start="0" end="100" time="200">Visible</animation>				 
+		 </control>
+<!-- הצגת שפת כתוביות-->
+		    
+			<control type="label" id="597">
+
+
+				<width min="0" max="400">auto</width>
+                 <top>850</top>                
+                <height>100%</height>
+				<description>Subs</description>
+                <alttexturefocus>noop</alttexturefocus>
+                <alttexturenofocus>noop</alttexturenofocus>
+				<label>[UPPERCASE]$INFO[VideoPlayer.SubtitlesLanguage][/UPPERCASE]</label>
+                <focusedcolor>FFFF0000</focusedcolor>
+				<altlabel>[UPPERCASE]$INFO[VideoPlayer.SubtitlesLanguage][/UPPERCASE]</altlabel>
+				<focusedcolor>FFFF0000</focusedcolor>
+				<include>DefOSDControls</include>
+                <include>DefOSDUpDown</include>
+                <onclick>Action(ShowSubtitles)</onclick>
+				<usealttexture>!VideoPlayer.SubtitlesEnabled</usealttexture>     
+        	<visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
+		    <animation effect="fade" start="0" end="100" time="200">Visible</animation>					  
+		  </control>
+		  
+		  		  	   		<control type="button" id="905">
+                <top>800</top>
+				<description>Subs Download</description>
+				<label>השאיית כתוביות</label>
+                                <height>100%</height>
+
+				<include>DefOSDControls</include>
+				<include>DefOSDUpDown</include>
+				<onclick condition="!Skin.HasSetting(customosd)">SubtitleDelay</onclick>
+				<onclick>close</onclick>
+        	    <visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
+		        <animation effect="fade" start="0" end="100" time="200">Visible</animation>					   
+		   </control>
+		  
+		  			<control type="button" id="1">
+
+				<description>Subs Download</description>
+                <posx>100</posx>
+				        <ondown>Close</ondown>
+
+				<label>הורדה</label>
+                <height>100%</height>
+				<include>DefOSDControls</include>
+				 <include>DefOSDUpDown</include>
+                <onclick>close</onclick>
+				<onclick>ActivateWindow(SubtitleSearch)</onclick>
+        	<visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
+		    <animation effect="fade" start="0" end="100" time="200">Visible</animation>				   
+		   </control>
+		  
+
+		  
+		  </control>
+		  </control>
+
+		  </control>
+		 </control>
+    </controls>
+
+</window>

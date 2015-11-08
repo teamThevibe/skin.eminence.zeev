@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<colors>
+    <!-- Transparent Plus Color Scheme -->
+	<color name="setosd23">5F0000</color>
+
+	    <!-- Home Tile Colors -->
+    <color name="HomeCustom1">bF33b5e5</color>
+    <color name="HomeCustom2">bFb5e533</color>
+    <color name="HomeCustom3">bfe533b5</color>  
+    <color name="HomeCustom4">bfe5b533</color>  
+    <color name="HomeCustom5">bfb533e5</color>
+    <color name="HomeCustom6">bf33e5b5</color>
+    <color name="HomeCustom7">ff666666</color>
+    <color name="HomeCustom8">ff777777</color>
+    
+	
+      <!-- Home Header And Panels -->
+    <color name="MainLabel">FFeaeaea</color>
+    <color name="SubLabel">FFe0e0e0</color>
+    <color name="MainLabel2">FFeaeaea</color>
+    <color name="SubLabel2">FFe0e0e0</color>
+    <color name="OSD-NF">FFFFFFFF</color>
+
+      <!-- Top Bar -->                                                                       
+   <color name="TopBar">9fe03c31</color>
+    <color name="TopBarDark">9f0da1bf</color> 
+    <color name="TopBarDarkIcon">FFb9b9b9</color>
+    <color name="TopBarIcon">FFb9b9b9</color>
+
+        <!-- Highlight Colors -->
+    <color name="Highlight">FF007ba7</color>
+    <color name="PosterHighlight">dF40becf</color>
+
+        <!-- Keyboard -->
+    <color name="Keyboard">dF40becf</color>
+    <color name="Keyboard-BG">ff181818</color>
+    <color name="Keyboard-Keys">105f5f5f</color>
+
+        <!-- Main Colors -->
+    <color name="Background">10c9c9c9</color>
+	<color name="Selected">FFF5FFFA</color>
+    <color name="Selected2">FFF5FFFA</color>
+    <color name="PosterBorder">15e8e8e8</color>
+    <color name="PosterBorder-NF">6f5f5f5f</color>
+	<color name="PosterBorder-NF2">FF5f5f5f</color>
+    <color name="PanelBG">9f777777</color>
+    <color name="PanelBG2">FFe8e8e8</color>
+    <color name="RadioFO">FF000000</color>
+    <color name="PanelFG">FFF5FFFA</color>
+    <color name="PanelFG-NF">FFF5FFFA</color>
+    <color name="Disabled">2FFFFFFF</color>
+
+        <!-- Home Bar -->
+    <color name="HomeBarBG">e2181818</color>
+    <color name="HomeBarFG">FFF5FFFA</color>
+    <color name="HomeBarSide">6f5f5f5f</color>
+    <color name="TileDefault">6f5f5f5f</color>
+    <!-- Extra items -->
+	<color name="sethub">ff181818</color>
+	<color name="setsubs">ff181818</color>
+	<color name="search">ff181818</color>
+	<color name="scrollbar1">FFe03c31</color>
+	<color name="scrollbar2">FFff4d4d</color>
+	<color name="scrollbar3">ff181818</color>
+    <color name="OSD-Zeev">df000000</color>
+    <color name="SUB-Zeev2">10000000</color>
+    <color name="Panel-OSD">ff181818</color>
+    <color name="Highlight-osd">FFFF0000</color>
+	<color name="setosd">5F595959</color>
+	<color name="setosd">5Fb8b8b8</color>
+	<color name="offset">8F2C2C2C</color>
+    <color name="Panel-OSD2">95181818</color>
+    <color name="White">FFffffff</color>
+    <color name="setit">FF303030</color>
+<color name="infobg">ff181818</color>
+	    <color name="TileDefaultFF">Ff5f5f5f</color>
+		    <color name="White0">00ffffff</color>
+
+
+	<!-- Extra items -test -->
+ 
+    <color name="Black100">FFdddddd</color>
+    <color name="Black70">B3dddddd</color>
+    <color name="Black30">4Ddddddd</color>
+    <color name="Black12">1F000000</color>
+    
+    <color name="White100">FF333333</color>
+    <color name="White70">B3333333</color>
+    <color name="White30">4D333333</color>
+    <color name="White12">1F333333</color>
+    
+    <color name="Dark1">ffcccccc</color>
+    <color name="Dark2">b3cccccc</color>
+    <color name="Dark3">4dcccccc</color>
+    <color name="Dark4">1fcccccc</color>
+    <color name="Light1">ff333333</color>
+    <color name="Light2">b3333333</color>
+    <color name="Light3">4d333333</color>
+    <color name="Light4">1f333333</color>
+    
+    <color name="FanartFade">2Fffffff</color>
+    <color name="FloorFade">BF181818</color>
+   
+    <color name="View156">df000000</color>    
+    <color name="View156Genre">ffb1b1b1</color>
+	
+	<color name="Background">10c9c9c9</color>
+    <color name="FanartFade">82181818</color>
+
+    <color name="HomeBarTile">3e555555</color>
+    <color name="HomeWidgetBG">ff181818</color>
+    <color name="DialogBG">ff181818</color>
+    <color name="Highlight2">ffe5b535</color>
+    <color name="HomeMainLabel">FFededed</color>
+    <color name="HomeSubLabel">BFededed</color>
+    <color name="LineLabel">9Fededed</color>
+    <color name="SideArrow">5Fededed</color>
+    <color name="ListLabel">bfededed</color>
+</colors>

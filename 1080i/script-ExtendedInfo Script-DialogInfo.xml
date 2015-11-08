@@ -1,0 +1,315 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window>
+    <defaultcontrol always="true">9000</defaultcontrol>
+    <allowoverlay>no</allowoverlay>
+    <onload>SetProperty(150_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(250_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(350_onback,SetFocus(9000))</onload>
+    <onload>SetProperty(550_onback,SetFocus(9000))</onload>
+    <onload>ClearProperty(content)</onload>
+    <onload>SetProperty(extinfo,2,home)</onload>
+    <onload>Dialog.Close(2003)</onload>
+    <controls>
+        <control type="group">
+		
+				            <animation type="Conditional" reversible="true" condition="Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml)">
+                <effect type="zoom" end="95" start="100" time="200" center="auto" tween="quadratic" easing="in" />
+            </animation>
+			                <animation effect="slide" start="-1920" end="0" delay="0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+                <animation effect="slide" start="0" end="-1920" time="300" tween="quadratic" easing="in">WindowClose</animation>
+                <animation effect="slide" start="-1920" end="0" delay="0" time="300" tween="quadratic" easing="out">Visible</animation>
+                <animation effect="slide" start="0" end="-1920" time="300" tween="quadratic" easing="in">Hidden</animation>
+				                <animation effect="slide" start="1920" end="0" delay="0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+                <animation effect="slide" start="0" end="1920" time="300" tween="quadratic" easing="in">WindowClose</animation>
+                <animation effect="slide" start="1920" end="0" delay="0" time="300" tween="quadratic" easing="out">Visible</animation>
+                <animation effect="slide" start="0" end="1920" time="300" tween="quadratic" easing="in">Hidden</animation>
+            <top>210</top>
+            <height>780</height>
+            <centerleft>50%</centerleft>
+            <width>1920</width>
+            <include>Animation_Info</include>
+            <include>Dialog_Background</include>
+            <control type="group">
+                <top>70</top>
+                <left>side</left>
+                <include name="Object_Poster">
+                    <param name="left" value="0" />
+                    <param name="width" value="posterw" />
+                </include>
+            </control>
+            <control type="group">
+                <top>70</top>
+  <right>500</right>
+                <right>side</right>
+
+                <control type="group">
+
+                </control>
+
+                <!-- INFO -->
+                <control type="grouplist">
+								    <visible>!Control.IsVisible(50) + IsEmpty(Window.Property(content))</visible>
+
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <control type="label">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>36</height>
+						<align>right</align>
+                        <font>Font-InfoBox-Title</font>
+                        <label>$INFO[Window.Property(actor.title)]</label>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>32</height>
+						<align>right</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>[UPPERCASE][COLOR=$VAR[Highlight6]]$INFO[Window.Property(actor.AlsoKnownAs)][/COLOR][/UPPERCASE]</label>
+                    </control>
+                    <control type="textbox">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>350</height>
+                        <font>Font-ListInfo</font>
+                        <align>right</align>
+                        <label>$INFO[Window.Property(actor.Biography)]</label>
+                    </control>
+                    <control type="group">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <top>-10</top>
+                        <control type="grouplist">
+                            <include>Info_DetailsGrouplist</include>
+                            
+
+                            <!-- Place of Birth -->
+
+                        </control>
+                    </control>
+                </control>
+                <control type="grouplist">
+								    <visible>!Control.IsVisible(50) + IsEmpty(Window.Property(content))</visible>
+
+                    <bottom>74</bottom>
+                    <left>-20</left>
+                    <right>-20</right>
+                    <height>128</height>
+                    <itemgap>20</itemgap>
+                    <align>center</align>
+                    <orientation>horizontal</orientation>
+                    <control type="group">
+                        <visible>!IsEmpty(Window.Property(actor.Birthday))</visible>
+                        <width>370</width>
+                        <height>100%</height>
+                        <control type="label">
+                            <top>0</top>
+                            <height>32</height>
+                            <align>center</align>
+                            <font>Font-ListInfo-Small</font>
+                            <label>$ADDON[script.extendedinfo 32012]</label>
+                        </control>
+                        <control type="label">
+                            <top>32</top>
+                            <height>48</height>
+                            <align>center</align>
+                            <textcolor>SubLabel</textcolor>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[Window.Property(actor.Birthday)]</label>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <width>370</width>
+                        <height>100%</height>
+                        <visible>!IsEmpty(Window.Property(actor.DeathDay))</visible>
+                        <control type="label">
+                            <top>0</top>
+                            <height>32</height>
+                            <align>center</align>
+                            <font>Font-ListInfo-Small</font>
+                            <label>$ADDON[script.extendedinfo 32013]</label>
+                        </control>
+                        <control type="label">
+                            <top>32</top>
+                            <height>48</height>
+                            <align>center</align>
+                            <textcolor>SubLabel</textcolor>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[Window.Property(actor.DeathDay)]</label>
+                        </control>
+                    </control>
+                    <control type="group">
+                        <width>370</width>
+                        <height>100%</height>
+                        <visible>!IsEmpty(Window.Property(actor.Age))</visible>
+                        <control type="label">
+                            <top>0</top>
+                            <height>32</height>
+                            <align>center</align>
+                            <font>Font-ListInfo-Small</font>
+                            <label>$ADDON[script.extendedinfo 32020]</label>
+                        </control>
+                        <control type="label">
+                            <top>32</top>
+                            <height>48</height>
+                            <align>center</align>
+                            <textcolor>SubLabel</textcolor>
+                            <font>Font-InfoBox-Title</font>
+                            <label>$INFO[Window.Property(actor.Age)]</label>
+                        </control>
+                    </control>
+                    
+                </control>
+                <!-- BUTTONS -->
+                <control type="grouplist" id="9000">
+				
+                    <left>pad</left>
+                    <width>1384</width>
+                    <bottom>30</bottom>
+                    <height>69</height>
+                    <align>left</align>
+                    <itemgap>pad</itemgap>
+                    <onright>noop</onright>
+                    <orientation>horizontal</orientation>
+                    <onup condition="StringCompare(Control.GetLabel(5),$LOCALIZE[207])">51</onup>
+
+                    <control type="button" id="9999">
+                        <visible allowhiddenfocus="true">false</visible>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <onfocus>Right</onfocus>
+                        <onclick>Right</onclick>
+                        <ondown>Right</ondown>
+                        <onup>Right</onup>
+                        <onleft>Right</onleft>
+                    </control>
+                    
+                    <!-- Movies -->
+                    <control type="button" id="9001">
+                        <width>338.5</width>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <label>סרטים</label>
+                        <onclick>SetProperty(content,150)</onclick>
+                        <onclick>SetFocus(150)</onclick>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <onfocus>ClearProperty(content)</onfocus>
+                        <include>DefInfoButtons</include>
+                        <enable>IntegerGreaterThan(Container(150).NumItems,0)</enable>
+                    </control>
+                    <!-- TvShows -->
+                    <control type="button" id="9002">
+                        <width>338.5</width>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <label>סדרות</label>
+                        <onclick>SetProperty(content,250)</onclick>
+                        <onclick>SetFocus(250)</onclick>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <onfocus>ClearProperty(content)</onfocus>
+                        <include>DefInfoButtons</include>
+                        <enable>IntegerGreaterThan(Container(250).NumItems,0)</enable>
+                    </control>
+                    <!-- YouTube -->
+                    <control type="button" id="9003">
+                        <width>338.5</width>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <label>YouTube</label>
+                        <onclick>SetProperty(content,350)</onclick>
+                        <onclick>SetFocus(350)</onclick>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <onfocus>ClearProperty(content)</onfocus>
+                        <include>DefInfoButtons</include>
+                        <enable>IntegerGreaterThan(Container(350).NumItems,0)</enable>
+                    </control>
+                    <!-- As Crew -->
+                    <control type="button" id="9004">
+                        <width>338.5</width>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <label>היה בצוות</label>
+                        <onclick>SetProperty(content,550)</onclick>
+                        <onclick>SetFocus(550)</onclick>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <onfocus>ClearProperty(content)</onfocus>
+                        <include>DefInfoButtons</include>
+                        <enable>IntegerGreaterThan(Container(550).NumItems,0)</enable>
+                    </control>
+
+                    <control type="button" id="9998">
+                        <visible allowhiddenfocus="true">false</visible>
+                        <onback>SetProperty(extinfo,1,home)</onback>
+                        <onfocus>Left</onfocus>
+                        <onclick>Left</onclick>
+                        <ondown>Left</ondown>
+                        <onup>Left</onup>
+                        <onleft>Left</onleft>
+                    </control>
+                </control>
+
+            </control>
+            <include name="Dialog_ImageList">
+                <param name="id" value="150" />
+                <param name="type" value="list" />
+                <param name="moveid" value="ClearProperty(content)" />
+                <param name="moveid2" value="SetFocus(9000)" />
+                <param name="left" value="20" />
+                <param name="width" value="1384" />
+                <param name="top" value="100" />
+                <param name="pad" value="pad" />
+                <param name="bottom" value="128" />
+                <param name="backpanel" value="false" />
+                <param name="visible" value="StringCompare(Window.Property(content),150)" />
+            </include>
+            <include name="Dialog_ImageList">
+                <param name="id" value="250" />
+                <param name="type" value="list" />
+                <param name="moveid" value="ClearProperty(content)" />
+                <param name="moveid2" value="SetFocus(9000)" />
+                <param name="left" value="20" />
+                <param name="width" value="1384" />
+                <param name="top" value="100" />
+                <param name="pad" value="pad" />
+                <param name="bottom" value="128" />
+                <param name="backpanel" value="false" />
+                <param name="visible" value="StringCompare(Window.Property(content),250)" />
+            </include>
+            <include name="Dialog_ImageList">
+                <param name="id" value="350" />
+                <param name="type" value="list" />
+                <param name="moveid" value="ClearProperty(content)" />
+                <param name="moveid2" value="SetFocus(9000)" />
+                <param name="left" value="20" />
+                <param name="width" value="1384" />
+                <param name="top" value="100" />
+                <param name="pad" value="pad" />
+                <param name="bottom" value="128" />
+                <param name="backpanel" value="false" />
+                <param name="visible" value="StringCompare(Window.Property(content),350)" />
+            </include>
+            <include name="Dialog_ImageList">
+                <param name="id" value="550" />
+                <param name="type" value="list" />
+                <param name="moveid" value="ClearProperty(content)" />
+                <param name="moveid2" value="SetFocus(9000)" />
+                <param name="left" value="20" />
+                <param name="width" value="1384" />
+                <param name="top" value="100" />
+                <param name="pad" value="pad" />
+                <param name="bottom" value="128" />
+                <param name="backpanel" value="false" />
+                <param name="visible" value="StringCompare(Window.Property(content),550)" />
+            </include>
+                  
+            <control type="list" id="450"><visible>false</visible></control>
+            <control type="list" id="650"><visible>false</visible></control>
+            <control type="list" id="750"><visible>false</visible></control>
+        </control>
+    </controls>
+
+</window>

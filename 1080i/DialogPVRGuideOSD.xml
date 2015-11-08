@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<window>
+    <defaultcontrol always="true">11</defaultcontrol>
+    
+    <controls>
+    
+        <control type="group">
+            <visible>!Window.IsActive(DialogPVRGuideInfo.xml)</visible>
+            <animation effect="slide" start="668" end="0" time="150" tween="quadratic">Visible</animation>
+            <animation effect="slide" start="668" end="0" time="150" tween="quadratic">WindowOpen</animation>
+            <animation effect="slide" end="668" start="0" time="150" tween="quadratic">Hidden</animation>
+            <animation effect="slide" end="668" start="0" time="150" tween="quadratic">WindowClose</animation>
+            <control type="image">
+                <posx>1280</posx>
+                <posy>-1</posy>
+                <width>668</width>
+                <height>1082</height>
+                <colordiffuse>Panel-OSD2</colordiffuse>
+                <texture border="offset">common/white.png</texture>
+                <animation effect="fade" start="100" end="90" condition="Skin.HasSetting(osd.usetheme)">Conditional</animation>
+            </control>
+            <control type="image">
+                <posx>1290</posx>
+                <posy>-4</posy>  
+                <width>128</width>
+                <height>128</height>
+                <texture colordiffuse="White">special://skin/extras/icons/livetv.png</texture>
+                <colordiffuse>$VAR[OSDPanelWhite100]</colordiffuse>
+            </control>
+            <control type="image">
+                <posx>1800</posx>
+                <posy>30</posy>
+                <align>right</align>
+                        <width>75</width>
+                        <height>75</height>
+                <aspectratio align="right">keep</aspectratio>
+                <texture>$INFO[Player.Art(thumb)]</texture>
+            </control>
+            <control type="label">
+                <posx>1780</posx>
+                <posy>20</posy>
+                <width>400</width>
+                <align>right</align>
+                <font>Font-HomeMenu</font>
+                <label>$INFO[VideoPlayer.ChannelName]</label>
+            </control>
+            <control type="label">
+                <posx>1780</posx>
+                <posy>50</posy>
+                <width>400</width>
+                <align>right</align>
+                <font>Font-HomeMenu</font>
+                <label>$INFO[Container(11).ListItem.StartDate]</label>
+            </control>
+
+            <control type="fixedlist" id="11">
+                <posx>1280</posx>
+                <posy>100</posy>
+				<width>640</width>
+                <align>right</align>
+                <focusposition>1</focusposition>
+                <movement>6</movement>
+                <orientation>vertical</orientation>
+                <itemlayout height="120" width="667">
+                    <control type="image">
+                        <width>667</width>
+                        <height>109</height>
+                        <texture>common/selected.png</texture>
+                        <aspectratio aligny="top">center</aspectratio>
+                        <animation effect="fade" start="100" end="15" condition="true">Conditional</animation>
+                        <visible>StringCompare(ListItem.Title,VideoPlayer.Title) + StringCompare(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + StringCompare(ListItem.EndTime,VideoPlayer.EndTime)</visible>
+                        <colordiffuse>$VAR[OSDPanelWhite100]</colordiffuse>
+                    </control>
+                    <control type="label">
+                        <left>33</left>
+                        <right>50</right>
+                        <posy>5</posy>
+                        <align>right</align>
+                        <font>SmallBold</font>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
+                    <control type="label">
+                        <posy>40</posy>
+                        <left>40</left>
+                        <right>50</right>
+                        <align>right</align>
+                        <font>Small</font>
+                        <label>$LOCALIZE[313434]$INFO[ListItem.StartTime]</label>
+                    </control>
+                    <control type="image">
+                        <centertop>50</centertop>
+                        <centerright>630</centerright>
+						<width>60</width>
+                        <height>60</height>
+                        <texture>special://skin/extras/icons/timer.png</texture>
+                        <!--<colordiffuse>$VAR[OSDPanelWhite100]</colordiffuse>-->
+                        <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+                        <aspectratio aligny="center" align="center">keep</aspectratio>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="120" width="667">
+                    <control type="image">
+                        <width>667</width>
+                        <height>109</height>
+                        <texture colordiffuse="$VAR[Highlight6]" border="5">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <width>667</width>
+                        <height>109</height>
+                        <texture>common/selected.png</texture>
+                        <aspectratio aligny="top">center</aspectratio>
+                        <animation effect="fade" start="100" end="30" condition="true">Conditional</animation>
+                        <visible>StringCompare(ListItem.Title,VideoPlayer.Title) + StringCompare(ListItem.ChannelNumberLabel,VideoPlayer.ChannelNumberLabel) + StringCompare(ListItem.EndTime,VideoPlayer.EndTime)</visible>
+                    </control>
+                    <control type="image">
+                        <centertop>50</centertop>
+                        <centerright>630</centerright>
+						<width>60</width>
+                        <height>60</height>
+                        <texture>special://skin/extras/icons/timer.png</texture>
+                        <colordiffuse>Selected</colordiffuse>
+                        <visible>ListItem.HasTimer | ListItem.IsRecording</visible>
+                        <aspectratio aligny="center" align="center">keep</aspectratio>
+                    </control>
+                    <control type="label">
+                        <left>33</left>
+                        <right>50</right>
+                        <posy>5</posy>
+                        <align>right</align>
+                        <font>SmallBold</font>
+                        <label>$INFO[ListItem.Title]</label>
+                    </control>
+                    <control type="label">
+                        <posy>40</posy>
+                        <left>40</left>
+                        <right>50</right>
+                        <align>right</align>
+                        <font>Small</font>
+                        <label>$LOCALIZE[313434]$INFO[ListItem.StartTime]</label>
+                    </control>
+                    <control type="progress">
+                        <posx>50</posx>
+                        <posy>45</posy>
+                        <width>100</width>
+                        <height>19</height>
+                        <reveal>true</reveal>
+                        <texturebg>pvr/progress-back.png</texturebg>
+                        <lefttexture>pvr/progress-leftright.png</lefttexture>
+                        <midtexture>pvr/progress-mid.png</midtexture>
+                        <righttexture>pvr/progress-leftright.png</righttexture>
+                        <info>ListItem.Progress</info>
+                        <colordiffuse>Selected</colordiffuse>
+                    </control>
+					
+			   </focusedlayout>
+            
+            </control>
+        </control>
+    </controls>
+
+</window>

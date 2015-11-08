@@ -1,0 +1,1982 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+	<variable name="DefCOLOR2">
+		<value condition="StringCompare(Skin.String(OSDColor),OSDColor)">FFe66a4f</value>
+		<value>FFFF0000</value>
+	</variable>
+	
+	<variable name="clockcolor">
+		<value condition="!IsEmpty(Skin.String(clockheadercolor))">$INFO[Skin.String(clockheadercolor)]</value>
+		<value>White</value>
+	</variable>
+	
+	clockheadercolor
+	<variable name="DefOSDTagline">
+		<value condition="!IsEmpty(VideoPlayer.Tagline)">$INFO[VideoPlayer.Tagline]</value>
+		<value>$INFO[VideoPlayer.Genre]</value>
+	</variable>
+	<variable name="OSDColor">
+		<value condition="!IsEmpty(Skin.String(HighlightColor5))">$INFO[Skin.String(HighlightColor5)]</value>
+		<value>FFFF0000</value>
+	</variable>
+
+	<variable name="Highlight6">
+		<value condition="!IsEmpty(Skin.String(HighlightColor6))">$INFO[Skin.String(HighlightColor6)]</value>
+		<value>PosterHighlight</value>
+	</variable>
+	
+		<variable name="Highlight7">
+		<value condition="!IsEmpty(Skin.String(HighlightColor7))">$INFO[Skin.String(HighlightColor7)]</value>
+		<value>HomeBarBG</value>
+	</variable>
+	
+	<variable name="Highlight8">
+		<value condition="!IsEmpty(Skin.String(HighlightColor8))">$INFO[Skin.String(HighlightColor8)]</value>
+		<value>ac181818</value>
+	</variable>
+	
+		<variable name="Highlight9">
+		<value condition="!IsEmpty(Skin.String(HighlightColor9))">$INFO[Skin.String(HighlightColor9)]</value>
+		<value>LineLabel</value>
+	</variable>
+	
+		<variable name="color_picker_defaults">
+		<value condition="StringCompare(Skin.String(OSDColor),OSDColor)">FFe66a4f</value>
+		<value>FFe66a4f</value>
+	</variable>
+	
+	<variable name="Defs_Iconcolor">
+		<value condition="!IsEmpty(Container(9000).ListItem.Property(Iconcolor))">$INFO[Container(9000).ListItem.Property(Iconcolor)]</value>
+		<value condition="!IsEmpty(Container(211).ListItem.Property(Iconcolor))">$INFO[Container(211).ListItem.Property(Iconcolor)]</value>
+		<value condition="!IsEmpty(Skin.String(Iconcolor))">$INFO[Skin.String(Iconcolor)]</value>
+		<value>$INFO[Skin.String(Iconcolor)]</value>
+	</variable>
+	<variable name="menu_icon_color_nf">
+		<value condition="!IsEmpty(Skin.String(Iconcolor))">$INFO[Skin.String(Iconcolor)]</value>
+		<value>White</value>
+	</variable>
+
+
+	<include name="Defs_OSDButton">
+		<width>230</width>
+		<height>48</height>
+		<textcolor>ListLabel</textcolor>
+		<selectedcolor>$VAR[HighlightColor]</selectedcolor>
+		<focusedcolor>$VAR[HighlightColor]</focusedcolor>
+		<font>Font-OSD</font>
+		<aligny>center</aligny>
+		<align>center</align>
+		<textoffsetx>side</textoffsetx>
+		<texturenofocus>noop</texturenofocus>
+		<texturefocus>noop</texturefocus>
+		<alttexturenofocus>noop</alttexturenofocus>
+		<alttexturefocus>noop</alttexturefocus>
+	</include>
+
+	<include name="Defs_KeyboardButton">
+		<width>120</width>
+		<height>70</height>
+		<textcolor>ListLabel</textcolor>
+		<selectedcolor>Selected</selectedcolor>
+		<focusedcolor>Selected</focusedcolor>
+		<font>Font-ListInfo-Small</font>
+		<aligny>center</aligny>
+		<textoffsetx>side</textoffsetx>
+		<radioposx>275</radioposx>
+		<texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+		<alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
+		<alttexturefocus colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+	</include>
+
+	<include name="Defs_OptionButton">
+		<width>364</width>
+		<height>69</height>
+		<textcolor>ListLabel</textcolor>
+		<selectedcolor>Selected</selectedcolor>
+		<focusedcolor>Selected</focusedcolor>
+		<font>Font-ListInfo-Small</font>
+		<aligny>center</aligny>
+		<textoffsetx>side</textoffsetx>
+		<radioposx>320</radioposx>
+		<texturenofocus colordiffuse="PosterBorder">common/white.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+		<alttexturenofocus colordiffuse="PosterBorder">common/white.png</alttexturenofocus>
+		<alttexturefocus colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+	</include>
+
+	<variable name="Defs_Hub_Widget">
+		<value condition="Window.IsVisible(1101) + !IsEmpty(Skin.String(Widget.1101))">$INFO[Skin.String(Widget.1101)]</value>
+		<value condition="Window.IsVisible(1102) + !IsEmpty(Skin.String(Widget.1102))">$INFO[Skin.String(Widget.1102)]</value>
+		<value condition="Window.IsVisible(1103) + !IsEmpty(Skin.String(Widget.1103))">$INFO[Skin.String(Widget.1103)]</value>
+		<value condition="Window.IsVisible(1104) + !IsEmpty(Skin.String(Widget.1104))">$INFO[Skin.String(Widget.1104)]</value>
+		<value condition="Window.IsVisible(1105) + !IsEmpty(Skin.String(Widget.1105))">$INFO[Skin.String(Widget.1105)]</value>
+		<value condition="Window.IsVisible(1106) + !IsEmpty(Skin.String(Widget.1106))">$INFO[Skin.String(Widget.1106)]</value>
+		<value condition="Window.IsVisible(1107) + !IsEmpty(Skin.String(Widget.1107))">$INFO[Skin.String(Widget.1107)]</value>
+		<value condition="Window.IsVisible(1108) + !IsEmpty(Skin.String(Widget.1108))">$INFO[Skin.String(Widget.1108)]</value>
+		<value condition="Window.IsVisible(1109) + !IsEmpty(Skin.String(Widget.1109))">$INFO[Skin.String(Widget.1109)]</value>
+		<value condition="Window.IsVisible(1102)">special://skin/extras/playlists/RandomEpisodes.xsp</value>
+		<value>special://skin/extras/playlists/RandomMovies.xsp</value>
+	</variable>
+	<variable name="Defs_HomeTileColor">
+		<value condition="!IsEmpty(Container(9000).ListItem.Property(tilecolor))">$INFO[Container(9000).ListItem.Property(tilecolor)]</value>
+		<value condition="!IsEmpty(Container(211).ListItem.Property(tilecolor))">$INFO[Container(211).ListItem.Property(tilecolor)]</value>
+		<value>$VAR[HighlightColor]</value>
+	</variable>
+
+
+
+	<include name="Defs_Shortcuts_SetHub">
+		<control type="button" id="$PARAM[buttonid1]" description="Set HUB">
+			<width>100%</width>
+			<label>הגדר קטגוריה</label>
+			<visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+			<include>Defs_OptionButton</include>
+			<visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
+			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
+		</control>
+		<control type="button" id="$PARAM[buttonid2]" description="Set HUB WIDGET">
+			<width>100%</width>
+			<label>הגדר ישומון קטגוריה</label>
+			<visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+			<visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
+			<include>Defs_OptionButton</include>
+			<onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=widget&amp;skinList=Widget.$PARAM[hubid]&amp;skinLabel=Widget.$PARAM[hubid].Label)</onclick>
+		</control>
+	</include>
+	<variable name="Defs_HomeWidget_Content">
+		<value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">noop</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+		<value condition="!IsEmpty(Container(9000).ListItem.Property(widgetPath))">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
+		<value condition="!IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
+		<value condition="StringCompare(Skin.String(home.fallbackwidget),Weather) + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+		<value condition="!IsEmpty(Skin.String(home.fallbackwidget))">$INFO[Skin.String(home.fallbackwidget)]</value>
+		<value>special://skin/extras/playlists/RandomMovies.xsp</value>
+	</variable>
+
+	<include name="DefContextButton">
+		<radioposx>400</radioposx>
+		<width>450</width>
+		<height>70</height>
+		<font>Tiny</font>
+		<textcolor>Black70</textcolor>
+		<textureradiofocus colordiffuse="Black70">buttons/white.png</textureradiofocus>
+		<textureradionofocus colordiffuse="Black30">buttons/white.png</textureradionofocus>
+		<focusedcolor>Selected</focusedcolor>
+		<alttexturefocus colordiffuse="$VAR[ColorHighlight]" border="16">common/white.png</alttexturefocus>
+		<texturefocus colordiffuse="$VAR[ColorHighlight]" border="16">common/white.png</texturefocus>
+	</include>
+
+	<include name="episode_num_nf">
+		<control type="label">
+			<posx>415</posx>
+			<posy>25</posy>
+			<width>100</width>
+			<height>20</height>
+			<font>font-30</font>
+			<textcolor>grey_b</textcolor>
+			<selectedcolor>grey_b</selectedcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>.$INFO[ListItem.Episode]$INFO[ListItem.TrackNumber]</label>
+			<visible>IntegerGreaterThan(ListItem.Episode,9) | IntegerGreaterThan(ListItem.TrackNumber,9) | SubString(ListItem.Episode,S)</visible>
+			<visible>[Container.Content(Episodes) + !IsEmpty(ListItem.Episode) + !IsEmpty(ListItem.TVShowTitle)] | [Container.Content(songs) + !IsEmpty(ListItem.TrackNumber)]</visible>
+		</control>
+		<control type="label">
+			<posx>415</posx>
+			<posy>25</posy>
+			<width>100</width>
+			<height>20</height>
+			<font>font-30</font>
+			<textcolor>grey_b</textcolor>
+			<selectedcolor>grey_b</selectedcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>.0$INFO[ListItem.Episode]$INFO[ListItem.TrackNumber]</label>
+			<visible>!IntegerGreaterThan(ListItem.Episode,9) + !IntegerGreaterThan(ListItem.TrackNumber,9) + !SubString(ListItem.Episode,S)</visible>
+			<visible>[Container.Content(Episodes) + !IsEmpty(ListItem.Episode) + !IsEmpty(ListItem.TVShowTitle)] | [Container.Content(songs) + !IsEmpty(ListItem.TrackNumber)]</visible>
+		</control>
+	</include>
+	<include name="episode_num_f">
+		<control type="label">
+			<posx>415</posx>
+			<posy>25</posy>
+			<width>100</width>
+			<height>20</height>
+			<font>font-30</font>
+			<textcolor>$VAR[list_color]</textcolor>
+			<selectedcolor>$VAR[list_color]</selectedcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>.$INFO[ListItem.Episode]$INFO[ListItem.TrackNumber]</label>
+			<visible>IntegerGreaterThan(ListItem.Episode,9) | IntegerGreaterThan(ListItem.TrackNumber,9) | SubString(ListItem.Episode,S)</visible>
+			<visible>[Container.Content(Episodes) + !IsEmpty(ListItem.Episode) + !IsEmpty(ListItem.TVShowTitle)] | [Container.Content(songs) + !IsEmpty(ListItem.TrackNumber)]</visible>
+		</control>
+		<control type="label">
+			<posx>415</posx>
+			<posy>25</posy>
+			<width>100</width>
+			<height>20</height>
+			<font>font-30</font>
+			<textcolor>$VAR[list_color]</textcolor>
+			<selectedcolor>$VAR[list_color]</selectedcolor>
+			<align>right</align>
+			<aligny>center</aligny>
+			<label>.0$INFO[ListItem.Episode]$INFO[ListItem.TrackNumber]</label>
+			<visible>!IntegerGreaterThan(ListItem.Episode,9) + !IntegerGreaterThan(ListItem.TrackNumber,9) + !SubString(ListItem.Episode,S)</visible>
+			<visible>[Container.Content(Episodes) + !IsEmpty(ListItem.Episode) + !IsEmpty(ListItem.TVShowTitle)] | [Container.Content(songs) + !IsEmpty(ListItem.TrackNumber)]</visible>
+		</control>
+	</include>
+
+	<include name="flags_movies">
+		<!-- FLAGS -->
+		<control type="grouplist">
+			<posx>0</posx>
+			<posy>$PARAM[posy]</posy><!--812\1028-->
+			<align>left</align>
+			<font>Font-ListInfo-small</font>
+			<textcolor>white</textcolor>
+			<width>1160</width>
+			<height>100</height>
+			<itemgap>110</itemgap>
+			<orientation>horizontal</orientation>
+			<visible>![Container.Content(songs) | Container.Content(Albums) | Container.Content(Artists)]</visible>
+			<animation effect="slide" end="270" tween="linear" easing="out" time="400" condition="ControlGroup(9100).HasFocus">Conditional</animation>
+			<animation effect="slide" end="0,220" time="200" condition="Skin.HasSetting(fanart_plot)">Conditional</animation>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Year)</visible>
+				<animation effect="slide" start="-110,0" end="0,0" delay="0" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="200">Hidden</animation>
+				<include>flag_year2</include>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Rating) + IntegerGreaterThan(ListItem.Rating,0)</visible>
+				<animation effect="slide" start="-110,0" end="0,0" delay="150" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="200">Hidden</animation>
+				<include>flag_rating2</include>
+			</control>	
+			<control type="group">
+				<visible>!IsEmpty(ListItem.Duration) + IntegerGreaterThan(ListItem.Duration,0)</visible>
+				<animation effect="slide" start="-110,0" end="0,0" delay="300" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="200">Hidden</animation>
+				<include>flag_duration2</include>
+			</control>	
+			<control type="group">
+				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+				<animation effect="slide" start="-110,0" end="0,0" delay="450" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="200">Hidden</animation>
+				<include>flag_res2</include>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.VideoAspect)</visible>
+				<animation effect="slide" start="-110,0" end="0,0" delay="600" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="200">Hidden</animation>
+				<include>flag_aspect2</include>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.VideoCodec)</visible>
+				<animation effect="slide" start="-110,0" end="0,0" delay="750" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="200">Hidden</animation>
+				<include>flag_codec2</include>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+				<animation effect="slide" start="-110,0" end="0,0" delay="900" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="200">Hidden</animation>
+				<include>flag_channels2</include>
+			</control>
+			<control type="group">
+				<visible>!IsEmpty(ListItem.AudioCodec)</visible>
+				<animation effect="slide" start="-110,0" end="0,0" delay="1050" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="200">Hidden</animation>
+				<include>flag_audio2</include>
+			</control>
+			<control type="group">
+				<visible>ListItem.IsStereoScopic | SubString(ListItem.FileName,3D.)</visible>
+				<animation effect="slide" start="-110,0" end="0,0" delay="1200" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-110,0" time="200">Hidden</animation>
+				<control type="image">
+					<width>110</width>
+					<height>52</height>
+					<texture>3d-logo.png</texture>	
+				</control>
+			</control>
+			<control type="group">
+				<animation effect="slide" start="-140,0" end="0,0" delay="1200" time="150">Visible</animation>
+				<animation effect="slide" start="0,0" end="-140,0" time="200">Hidden</animation>
+				<visible>!IsEmpty(Window(movieinformation).Property(AudioLanguage)) + !ListItem.IsFolder + Container.Content(Movies) + !substring(ListItem.Path,plugin://)</visible>
+				<include>dubbed_flags</include>
+			</control>	
+		</control>
+	</include>
+
+
+	<include name="flag_res3">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>flags/resolution/$INFO[VideoPlayer.VideoResolution].png</texture>
+		</control>
+	</include>
+
+
+
+	<include name="flag_res">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+		</control>
+		<control type="label">
+			<label>$VAR[hd_or_sd2]</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[VideoPlayer.VideoResolution]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+
+	<include name="flag_aspect3">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>flags/aspectratio/$INFO[VideoPlayer.VideoAspect].png</texture>
+		</control>
+	</include>
+
+	<include name="flag_aspect">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+		</control>
+		<control type="label">
+			<label>21374</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[VideoPlayer.VideoAspect]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+
+	<include name="flag_codec3">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture fallback="flags/videocodec/hdtv.png">flags/videocodec/$INFO[VideoPlayer.VideoCodec].png</texture>
+		</control>
+	</include>
+
+	<include name="flag_codec">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+		</control>
+		<control type="label">
+			<label>21445</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[VideoPlayer.VideoCodec]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+
+
+
+	<include name="flag_rating">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+		</control>
+		<control type="label">
+			<label>563</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[VideoPlayer.Rating]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+
+
+	<include name="flag_audio3">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture fallback="flags/audiocodec/mp3.png">flags/audiocodec/$INFO[VideoPlayer.AudioCodec].png</texture>
+		</control>
+	</include>
+
+
+	<include name="flag_channels3">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture fallback="flags/audiochannels/2ch.png">flags/audiochannels/$INFO[VideoPlayer.AudioChannels].png</texture>
+		</control>
+	</include>
+	<include name="flag_channels">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+		</control>
+		<control type="label">
+			<label>21444</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$VAR[AudioChannels]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+
+	<!-- FLAGS FOR LISTS -->
+	<include name="flag_res2">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>$VAR[hd_or_sd]</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.VideoResolution]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="flag_aspect2">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>21374</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.VideoAspect]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="flag_codec2">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>21445</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.VideoCodec]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+
+	<include name="flag_rating2">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>563</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Rating]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="flag_genre2">
+		<animation effect="fade" end="90" time="0" condition="!Window.IsActive(DialogVideoInfo.xml)">Conditional</animation>
+		<control type="image">						
+			<description>flags image</description>
+			<width>330</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>515</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>330</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Genre]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>330</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="flag_year2">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>345</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Year]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="flag_audio2">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture fallback="audio/mp3.png">audio/$INFO[ListItem.AudioCodec].png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+	</include>
+	<include name="flag_channels2">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>21444</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$VAR[AudioChannels2]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="flag_duration2">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>$LOCALIZE[180]</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[ListItem.Duration]</label>
+			<font>font-20</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+
+	<include name="flag_samplerate">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+		</control>
+		<control type="label">
+			<label>613</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[MusicPlayer.samplerate] kHz</label>
+			<font>font-18</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="flag_bitspersample">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+		</control>
+		<control type="label">
+			<label>bit</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[MusicPlayer.BitsPerSample]</label>
+			<font>font-18</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="flag_bitrate">
+		<control type="image">						
+			<description>flags image</description>
+			<width>140</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>Bitrate</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>140</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[MusicPlayer.bitrate] kbps</label>
+			<font>font-18</font>
+			<textcolor>white</textcolor>
+			<width>140</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="flag_audiochannels">
+		<control type="image">						
+			<description>flags image</description>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+		</control>
+		<control type="label">
+			<label>Channels</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="label">
+			<label>$INFO[MusicPlayer.Channels]</label>
+			<font>font-18</font>
+			<textcolor>white</textcolor>
+			<width>110</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>-5</posy>
+			<align>center</align>
+		</control>
+	</include>
+	<include name="dubbed_flags">
+		<control type="image">						
+			<description>flags image</description>
+			<width>140</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>0</posy>
+			<texture>osd/flag.png</texture>
+			<include>fanart_fade_level</include>
+		</control>
+		<control type="label">
+			<label>21447</label>
+			<font>font-14</font>
+			<textcolor>white</textcolor>
+			<width>140</width>
+			<height>52</height>
+			<posx>0</posx>
+			<posy>25</posy>
+			<align>center</align>
+		</control>
+		<control type="grouplist">
+			<posy>0</posy>
+			<posx>0</posx>
+			<width>140</width>
+			<align>center</align>
+			<itemgap>0</itemgap>
+			<orientation>horizontal</orientation>
+			<control type="image">
+				<visible>SubString(Window(movieinformation).Property(AudioLanguage),heb) | SubString(ListItem.FileName,Heb.Dubbed)</visible>
+				<width>32</width>
+				<height>32</height>
+				<texture>flags/subs/he.png</texture>
+			</control>
+			<control type="image">
+				<visible>SubString(Window(movieinformation).Property(AudioLanguage),eng)</visible>
+				<width>32</width>
+				<height>32</height>
+				<texture>flags/subs/en.png</texture>
+			</control>
+			<control type="image">
+				<visible>SubString(Window(movieinformation).Property(AudioLanguage),fre)</visible>
+				<width>32</width>
+				<height>32</height>
+				<texture>flags/subs/fr.png</texture>
+			</control>
+			<control type="image">
+				<visible>SubString(Window(movieinformation).Property(AudioLanguage),spa)</visible>
+				<width>32</width>
+				<height>32</height>
+				<texture>flags/subs/es.png</texture>
+			</control>
+			<control type="image">
+				<visible>SubString(Window(movieinformation).Property(AudioLanguage),ita)</visible>
+				<width>32</width>
+				<height>32</height>
+				<texture>flags/subs/it.png</texture>
+			</control>
+			<control type="image">
+				<visible>SubString(Window(movieinformation).Property(AudioLanguage),ger)</visible>
+				<width>32</width>
+				<height>32</height>
+				<texture>flags/subs/de.png</texture>
+			</control>
+			<control type="image">
+				<visible>SubString(Window(movieinformation).Property(AudioLanguage),rus)</visible>
+				<width>32</width>
+				<height>32</height>
+				<texture>flags/subs/ru.png</texture>
+			</control>
+			<control type="image">
+				<visible>SubString(Window(movieinformation).Property(AudioLanguage),jpn)</visible>
+				<width>32</width>
+				<height>32</height>
+				<texture>flags/subs/ja.png</texture>
+			</control>
+		</control>
+	</include>
+
+	<include name="Dialog_Top_GroupList">
+		<left>pad</left>
+		<right>pad</right>
+		<top>80</top>
+		<bottom>pad</bottom>
+		<onup>50</onup>
+		<ondown>50</ondown>
+		<onleft>noop</onleft>
+		<onright>noop</onright>
+		<itemgap>10</itemgap>
+		<scrolltime>200</scrolltime>
+		<orientation>horizontal</orientation>
+	</include>
+
+	<include name="Defprehub">
+		<font>Font-ListInfo</font>
+		<textcolor>white</textcolor>
+		<width>313</width>
+		<height>68</height>
+		<onfocus>ClearProperty(content)</onfocus>
+
+	</include>	
+
+	<include name="DefInfoButtons">
+		<font>Font-ListInfo</font>
+		<textcolor>white</textcolor>
+		<width>313</width>
+		<height>68</height>
+		<onfocus>ClearProperty(content)</onfocus>
+		<texturenofocus colordiffuse="PosterBorder" border="5">common/box.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[Highlight6]" border="5">common/box.png</texturefocus>
+		<alttexturenofocus colordiffuse="PosterBorder" border="5">common/box.png</alttexturenofocus>
+		<alttexturefocus colordiffuse="$VAR[Highlight6]" border="5">common/box.png</alttexturefocus>
+	</include>	
+
+	<include name="DefOSDInfoContent">
+		<control type="label">
+			<height>50</height>
+			<right>20</right>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>Font-Button</font>
+			<label>$INFO[VideoPlayer.Title]</label>
+		</control>
+
+		<!-- רשימת פרטים על הקובץ המנוגן -->
+		<control type="label">
+			<height>50</height>
+			<posy>-60</posy>
+			<right>500r</right>
+			<right>16</right>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>Font-ListInfo-Small</font>
+			<label>[UPPERCASE]$INFO[VideoPlayer.AudioCodec,,  •  ]$VAR[AudioChannelsOSD,,  •  ]$INFO[VideoPlayer.VideoResolution,,  •  ]$INFO[VideoPlayer.VideoCodec,,  •  ]$INFO[VideoPlayer.VideoAspect][/UPPERCASE]</label>
+		</control>
+
+		<control type="textbox">
+			<left>0</left>
+			<right>16</right>
+			<align>right</align>
+			<aligny>top</aligny>
+			<font>Font-ListInfo</font>
+			<height>120</height>
+			<label fallback="416">$INFO[VideoPlayer.Plot]</label>
+			<wrapmultiline>true</wrapmultiline>
+		</control>        
+		<control type="label">
+			<left>0</left>
+			<right>16</right>
+			<align>left</align>
+			<font>Font-ListInfo-Small</font>
+			<visible>VideoPlayer.Content(livetv)</visible>
+			<label>[B]$LOCALIZE[209]...  [/B]$INFO[VideoPlayer.NextTitle]$INFO[VideoPlayer.NextStartTime,  ,]</label>
+		</control>
+		<control type="label">
+			<left>0</left>
+			<right>16</right>
+			<align>left</align>
+			<font>Font-ListInfo-Small</font>
+			<label>[B]$INFO[VideoPlayer.Premiered]$INFO[VideoPlayer.Year]$INFO[VideoPlayer.MPAA,  •  ,]$INFO[VideoPlayer.Studio,  •  ,]$INFO[VideoPlayer.Rating,  •  ,][/B]</label>
+			<visible>!VideoPlayer.Content(livetv)</visible>
+		</control>
+	</include>
+	<include name="DefOSDInfoContentMusic">
+		<control type="label">
+			<height>50</height>
+			<left>0</left>
+			<right>550</right>
+			<align>left</align>
+			<aligny>center</aligny>
+			<font>Font-Button</font>
+			<label>$INFO[MusicPlayer.Album]$INFO[MusicPlayer.Year,  (,)]</label>
+		</control>
+
+		<control type="label">
+			<height>50</height>
+			<posy>-60</posy>
+			<left>500r</left>
+			<right>16</right>
+			<align>right</align>
+			<aligny>center</aligny>
+			<font>Font-ListInfo-Small</font>
+			<label>[UPPERCASE]$INFO[VideoPlayer.AudioCodec,,  •  ]$VAR[AudioChannelsOSD][/UPPERCASE]</label>
+		</control>
+
+		<control type="textbox">
+			<left>0</left>
+			<right>16</right>
+			<align>justify</align>
+			<aligny>top</aligny>
+			<font>Font-ListInfo</font>
+			<height>120</height>
+			<label>$VAR[MusicOSDPlot]</label>
+			<wrapmultiline>true</wrapmultiline>
+		</control>        
+		<control type="label">
+			<left>0</left>
+			<right>16</right>
+			<align>left</align>
+			<font>Font-ListInfo-Small</font>
+			<label>[B]$LOCALIZE[209]...  [/B]$INFO[MusicPlayer.offset(1).Title]</label>
+		</control>
+	</include>
+
+	<include name="50Focus">
+		<defaultcontrol always="true">50</defaultcontrol>
+	</include>
+
+	<include name="OSDPauseFocus">
+		<defaultcontrol always="false">14</defaultcontrol>
+	</include>
+	<include name="OSDStopFocus">
+		<defaultcontrol always="true">15</defaultcontrol>
+	</include>
+
+	<include name="DefMenuMouse">
+		<control type="button" description="Mouse Button">
+			<posy>600</posy>
+			<right>-5</right>
+			<width>48</width>
+			<height>48</height>            
+			<texturenofocus flipx="false">common/menu.png</texturenofocus>
+			<texturefocus flipx="false">common/menu.png</texturefocus>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">Hidden</animation>
+			<visible>!ControlGroup(9000).HasFocus()</visible>
+			<visible>!ControlGroup(9500).HasFocus()</visible>
+			<include>DialogVisibility</include>
+			<onclick condition="!Window.IsVisible(DialogVideoInfo.xml)">SetFocus(9000)</onclick>
+			<onclick condition="Window.IsVisible(DialogVideoInfo.xml)">SetFocus(9500)</onclick>
+		</control>
+	</include>
+
+	<include name="DefContextButton">
+		<radioposx>400</radioposx>
+		<width>450</width>
+		<height>70</height>
+		<font>Tiny</font>
+		<textcolor>Black70</textcolor>
+		<textureradiofocus colordiffuse="sethub">buttons/radio-on.png</textureradiofocus>
+		<textureradionofocus colordiffuse="sethub">buttons/radio-off.png</textureradionofocus>
+		<focusedcolor>Selected</focusedcolor>
+		<alttexturefocus colordiffuse="sethub" border="16">common/white.png</alttexturefocus>
+		<texturefocus colordiffuse="sethub" border="16">common/white.png</texturefocus>
+	</include>   
+
+	<include name="DefRightSideArrow">
+		<control type="button" description="Mouse Button">
+			<posy>600</posy>
+			<posx>1760</posx>
+			<width>48</width>
+			<height>48</height>            
+			<texturenofocus flipx="false">common/right-arrow.png</texturenofocus>
+			<texturefocus flipx="false">common/right-arrow.png</texturefocus>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">Hidden</animation>
+			<include>DialogVisibility</include>
+			<onclick condition="SubString(Window(home).Property(librarynode),musicdb)">ActivateWindow(Music,$INFO[Window(home).Property(librarynode)],return)</onclick>
+			<onclick condition="SubString(Window(home).Property(librarynode),videodb)">ActivateWindow(Videos,$INFO[Window(home).Property(librarynode)],return)</onclick>
+			<onclick condition="stringcompare(Window(home).Property(librarynode),PVR-31-10)">ActivateWindowAndFocus(MyPVR,31,0,10,0)</onclick>
+			<onclick condition="stringcompare(Window(home).Property(librarynode),PVR-32-11)">ActivateWindowAndFocus(MyPVR,32,0,11,0)</onclick>
+			<onclick condition="stringcompare(Window(home).Property(librarynode),PVR-33-12)">ActivateWindowAndFocus(MyPVR,33,0,12,0)</onclick>
+			<onclick condition="stringcompare(Window(home).Property(librarynode),PVR-34-13)">ActivateWindowAndFocus(MyPVR,34,0,13,0)</onclick>
+			<onclick condition="stringcompare(Window(home).Property(librarynode),PVR-35-14)">ActivateWindowAndFocus(MyPVR,35,0,14,0)</onclick>
+			<onclick condition="stringcompare(Window(home).Property(librarynode),PVR-36-15)">ActivateWindowAndFocus(MyPVR,36,0,15,0)</onclick>
+		</control>
+	</include>
+
+	<include name="DefLeftSideArrow">
+		<control type="button">
+			<posy>600</posy>
+			<posx>92</posx>
+			<width>48</width>
+			<height>48</height>
+			<onclick>SetProperty(librarynode,$INFO[Container.FolderPath],home)</onclick>
+			<onclick>Back</onclick>
+			<texturenofocus flipx="true">common/right-arrow.png</texturenofocus>
+			<texturefocus flipx="true">common/right-arrow.png</texturefocus>
+			<aspectratio>keep</aspectratio>
+			<animation effect="fade" end="75" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">Hidden</animation>
+			<include>DialogVisibility</include>
+			<visible>!stringcompare(Window(home).Property(previoushub),home)</visible>
+			<visible>Control.IsVisible(59) | Control.IsVisible(50) | Control.IsVisible(500) | Control.IsVisible(53) | Control.IsVisible(55) | Control.IsVisible(56) | Control.IsVisible(57) | Control.IsVisible(58)</visible>
+			<visible>!Window.IsActive(DialogContentSettings.xml)</visible>
+			<visible>!Window.IsActive(movieinformation)</visible>
+			<visible>!Window.IsActive(musicinformation)</visible>
+			<visible>!Window.IsActive(songinformation)</visible>
+			<animation effect="slide" end="horznegpad" start="0" time="200" condition="ControlGroup(9000).HasFocus() | Window.IsActive(DialogContextMenu.xml)">Conditional</animation>
+		</control>
+	</include>
+
+	<include name="DefInformationNavLabel">
+		<control type="label" description="Navigation Label">
+			<posx>11</posx>
+			<posy>695</posy>
+			<width>445</width>
+			<aligny>top</aligny>
+			<align>center</align>
+			<font>Font-DialogInfoNav</font>
+			<label>31160</label>
+			<animation effect="fade" end="33" condition="true">Conditional</animation>
+		</control>
+	</include>
+
+	<include name="DefSettingsHeader">
+		<posx>250</posx>
+		<posy>48</posy>
+		<width>870</width>
+		<align>left</align>
+		<font>Font-DialogHeader</font>
+		<include>Animation.FadeIn</include>
+		<include>Animation.FadeOut</include>
+	</include>
+
+	<include name="DefSettingsCategoryButton">
+		<align>left</align>
+		<focusedcolor>PanelFG</focusedcolor>
+		<height>66</height>
+		<width>385</width>  
+	</include>
+
+	<include name="DefSettingsOKCancelButton">
+			<align>right</align>
+<posx>600</posx>
+		<font>Font-ListInfo-Small</font>
+		<texturenofocus colordiffuse="PosterBorder" border="5">common/border-inner.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[Highlight6]" border="5">common/white.png</texturefocus>
+		<height>66</height>
+		<width>342</width>  
+	</include>
+
+	<include name="DefSettingsOKCancelGroup">
+		<posx>horzpad</posx>
+		<posy>705</posy>
+		<width>globalw</width>
+		<align>center</align>
+		<itemgap>128</itemgap>
+		<onup>10</onup>
+		<orientation>horizontal</orientation>
+	</include>
+
+	<include name="DefSettingsLeftGroupWidth2"><width>1053</width></include>
+	<include name="DefSettingsRightGroupWidth2"><width>385</width></include>
+
+	<include name="DefSettingsLeftGroup2">
+		<posx>233</posx>
+		<posy>120</posy>
+		<include>DefSettingsLeftGroupWidth2</include>
+		<height>620</height>
+		<itemgap>3</itemgap>
+		<orientation>vertical</orientation>
+		<include>Animation.SlideOpen.Right</include>
+	</include>
+
+	<include name="DefSettingsRightGroup2">
+		<posx>1300</posx>
+		<posy>120</posy>
+		<include>DefSettingsRightGroupWidth2</include>
+		<height>700</height>
+		<itemgap>3</itemgap>
+		<pagecontrol>60</pagecontrol>
+		<scrolltime>0</scrolltime>
+		<orientation>vertical</orientation>
+		<include>Animation.SlideOpen.Left</include>
+	</include>
+
+	<include name="DefSettingsLeftGroupWidth"><width>385</width></include>
+	<include name="DefSettingsRightGroupWidth"><width>1053</width></include>
+
+	<include name="DefSettingsLeftGroup">
+		<posx>233</posx>
+		<posy>120</posy>
+		<include>DefSettingsLeftGroupWidth</include>
+		<height>549</height>
+		<itemgap>3</itemgap>
+		<orientation>vertical</orientation>
+		<include>Animation.SlideOpen.Right</include>
+	</include>
+
+	<include name="DefSettingsRightGroup">
+		<posx>628</posx>
+		<posy>120</posy>
+		<include>DefSettingsRightGroupWidth</include>
+		<height>549</height>
+		<itemgap>3</itemgap>
+		<pagecontrol>60</pagecontrol>
+		<scrolltime>0</scrolltime>
+		<orientation>vertical</orientation>
+		<include>Animation.SlideOpen.Left</include>
+	</include>
+
+	<include name="DefSettingsLines">
+		<control type="grouplist">
+			<include>DefSettingsLeftGroup</include>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+		</control>
+		<control type="grouplist">
+			<include>DefSettingsRightGroup</include>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+
+		</control>
+
+	</include>
+
+	<include name="DefSettingsLines2">
+		<control type="grouplist">
+			<include>DefSettingsRightGroup2</include>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+
+		</control>
+		<control type="grouplist">
+			<include>DefSettingsLeftGroup2</include>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth2</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+
+		</control>
+
+	</include>
+
+	<include name="DefSettingsLinesSettings">
+
+		<control type="grouplist">
+			<include>DefSettingsLeftGroup</include>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsLeftGroupWidth</include>
+				<height>480</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+		</control>
+		<control type="grouplist">
+			<include>DefSettingsRightGroup</include>
+			<visible>!Control.IsVisible(6) | !Window.IsVisible(DialogSelect.xml)</visible>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>66</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+
+
+		</control>
+		<control type="grouplist">
+			<include>DefSettingsRightGroup</include>
+			<visible>Control.IsVisible(6) + Window.IsVisible(DialogSelect.xml)</visible>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>135</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>135</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>135</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+			<control type="image">
+				<include>DefSettingsRightGroupWidth</include>
+				<height>135</height>
+				<texture colordiffuse="PosterBorder-NF" border="5">common/border-inner.png</texture>
+			</control>
+
+		</control>
+
+	</include>
+
+	<include name="DefOnBack">
+		<onback>SetProperty(librarynode,$INFO[Container.FolderPath],home)</onback>
+	</include>
+
+	<variable name="DefSettingsOnRight">
+		<value condition="Window.IsVisible(AppearanceSettings)">ReplaceWindow(VideosSettings)</value>
+		<value condition="Window.IsVisible(VideosSettings)">ReplaceWindow(MusicSettings)</value>
+		<value condition="Window.IsVisible(MusicSettings)">ReplaceWindow(PicturesSettings)</value>
+		<value condition="Window.IsVisible(PicturesSettings)">ReplaceWindow(WeatherSettings)</value>
+		<value condition="Window.IsVisible(WeatherSettings)">ReplaceWindow(NetworkSettings)</value>
+		<value condition="Window.IsVisible(NetworkSettings)">ReplaceWindow(SystemSettings)</value>
+		<value condition="Window.IsVisible(SystemSettings)">ReplaceWindow(PvrSettings)</value>
+		<value condition="Window.IsVisible(PvrSettings)">ReplaceWindow(SkinSettings)</value>
+		<value condition="Window.IsVisible(SkinSettings)">ReplaceWindow(AppearanceSettings)</value>
+	</variable>
+
+	<variable name="DefSettingsOnLeft">
+		<value condition="Window.IsVisible(AppearanceSettings)">ReplaceWindow(SkinSettings)</value>
+		<value condition="Window.IsVisible(VideosSettings)">ReplaceWindow(AppearanceSettings)</value>
+		<value condition="Window.IsVisible(MusicSettings)">ReplaceWindow(VideosSettings)</value>
+		<value condition="Window.IsVisible(PicturesSettings)">ReplaceWindow(MusicSettings)</value>
+		<value condition="Window.IsVisible(WeatherSettings)">ReplaceWindow(PicturesSettings)</value>
+		<value condition="Window.IsVisible(NetworkSettings)">ReplaceWindow(WeatherSettings)</value>
+		<value condition="Window.IsVisible(SystemSettings)">ReplaceWindow(NetworkSettings)</value>
+		<value condition="Window.IsVisible(PvrSettings)">ReplaceWindow(SystemSettings)</value>
+		<value condition="Window.IsVisible(SkinSettings)">ReplaceWindow(PvrSettings)</value>
+	</variable>
+
+	<include name="DefScrollBarMove">
+		<onleft condition="!stringcompare(Window(home).Property(previoushub),home)">SetProperty(librarynode,$INFO[Container.FolderPath],home)</onleft>
+		<onleft condition="!stringcompare(Window(home).Property(previoushub),home)">ActivateWindow($INFO[Window(home).Property(previoushub)])</onleft>
+
+		<onright>50</onright>
+	</include>
+	<!-- מיקום כותרת ספריה -->
+	<include name="DefSideLabelCoords">
+		<posx>1542</posx>
+		<!--מיקום מקורי <posy>210</posy> -->
+		<posy>199</posy>
+		<width>690</width>
+		<font>Font-ViewCategory</font>
+		<textcolor>SideLabel</textcolor>
+		<animation effect="rotate" start="0" end="270" condition="true" center="1542,210">Conditional</animation>
+		<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">WindowOpen</animation>
+		<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">Visible</animation>
+		<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">WindowClose</animation>
+		<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">Hidden</animation>
+	</include>
+
+	<include name="DefSidePanel">
+		<control type="image">
+			<posx>438r</posx>
+			<posy>280</posy>
+			<width>440</width>
+			<height>690</height>
+			<colordiffuse>PosterBorder</colordiffuse>
+			<texture border="12" flipx="false">common/border-inner.png</texture>
+		</control>
+	</include>
+	
+		<include name="DefSidePanel2">
+		<control type="image">
+			<posx>438r</posx>
+			<posy>210</posy>
+			<width>440</width>
+			<height>700</height>
+			<colordiffuse>PosterBorder</colordiffuse>
+			<texture border="12" flipx="false">common/border-inner.png</texture>
+		</control>
+	</include>
+
+	<include name="DefSideContextMenu">
+		<control type="group">  
+			<include>Animation.SlideOpen.Left</include>
+			<include>DefSidePanel</include>
+			<control type="grouplist" id="996">
+				<include>DefMyNavBarGroupList</include>
+				<control type="button" id="11001">
+					<description>Trailer</description>
+					<label>20410</label>
+					<onclick>PlayMedia($INFO[ListItem.Trailer])</onclick>
+					<include>DefNavMenuButton</include>
+					<visible>!IsEmpty(ListItem.Trailer)</visible>
+					<ondown>1000</ondown>
+				</control>
+				<control type="button" id="1000">
+					<description>Buttons</description>
+					<include>DefNavMenuButton</include>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="DefTopContextMenu">
+		<control type="group">  
+			<include>DefContextMenuBackground</include>     
+			<include>Animation.SlideOpen.Left</include>
+			<control type="grouplist" id="996">
+				<include>DefContextMenuGroupList</include>
+				<control type="button" id="1000">
+					<description>Buttons</description>
+					<include>DefContextMenuButton</include>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="DefFullScreenNav">
+		<control type="group">
+			<posx>0</posx>
+			<posy>topoffset</posy>
+			<include>DialogVisibility</include>
+			<include>Animation.FadeIn</include>
+			<include>Animation.FadeOut</include>
+			<visible allowhiddenfocus="true">Control.HasFocus(9001)</visible>
+			<control type="group">
+				<posx>listx</posx>
+				<posy>listy</posy>
+				<control type="image">
+
+					<width>globalw</width>
+					<height>globalh</height>
+					<texture colordiffuse="PosterBorder" border="5">common/border-inner.png</texture>
+				</control> 
+				<control type="image">
+					<posx>globalpad</posx>
+					<posy>globalpad</posy>
+					<width>lovefilmw</width>
+					<height>bigposterh</height>
+					<texture colordiffuse="Black">common/white.png</texture>
+				</control>
+				<control type="videowindow">
+					<posx>globalpad</posx>
+					<posy>globalpad</posy>
+					<width>lovefilmw</width>
+					<height>bigposterh</height>
+					<visible>Player.HasVideo</visible>
+				</control>
+				<control type="visualisation">
+					<posx>globalpad</posx>
+					<posy>globalpad</posy>
+					<width>lovefilmw</width>
+					<height>bigposterh</height>
+					<visible>Player.HasAudio</visible>
+				</control>
+			</control>
+		</control>
+	</include>
+
+	<include name="DefDialogInfoSideLabel">
+		<control type="label" description="Info Label">
+			<include>DefSideLabelCoords</include>
+			<label>$INFO[ListItem.Label]</label>
+			<visible>!ControlGroup(9500).HasFocus()</visible>
+		</control>
+	</include>
+
+	<include name="DefSideLabel">
+		<control type="label">
+			<include>DefSideLabelCoords</include>
+			<label>$VAR[NavSideLabel]</label>
+			<visible>!ControlGroup(9000).HasFocus()</visible>
+			<visible>!Window.IsActive(DialogContextMenu.xml)</visible>
+			<visible>!Window.IsActive(DialogSongInfo.xml)</visible>
+			<visible>!Window.IsActive(DialogFileStacking.xml)</visible>
+		</control>
+	</include>
+
+
+
+	<include name="DefMyNavViews">
+		<control type="group">
+			<posy>topoffset</posy>
+			<posx>horzpad</posx>
+			<include>DialogVisibility</include>
+			<visible>!Window.IsVisible(DialogMediaSource.xml)</visible>
+			<visible>!Window.IsVisible(DialogContentSettings.xml)</visible>
+			<animation effect="slide" end="-1920" start="0" delay="0" time="200" condition="Window.IsActive(movieinformation)">Conditional</animation>
+			<animation effect="slide" end="-1920" start="0" delay="0" time="200" condition="Window.IsActive(musicinformation)">Conditional</animation>
+			<animation effect="slide" end="-1920" start="0" delay="0" time="200" condition="Window.IsActive(addoninformation)">Conditional</animation>
+			<animation effect="fade" end="0" start="100" delay="0" time="200" condition="Control.HasFocus(9001)">Conditional</animation>
+			<animation effect="slide" end="horznegpad" start="0" time="200" condition="ControlGroup(9000).HasFocus() | Window.IsActive(DialogContextMenu.xml) | Window.IsActive(DialogSongInfo.xml) | Window.IsActive(DialogFileStacking.xml)">Conditional</animation>
+			<include>Animation.SlideOpen.Left</include>
+			<include>Animation.FadeOut</include>
+			<include>View_50_List</include>
+			<include>View_51_Poster</include>
+			<include>View_52_Wall</include>
+			<include>View_53_Wide</include>
+			<include>View_54_Lovefilm</include>
+			<include>View_55_Banner</include>            
+			<include>View_56_BigList</include>
+			<!--<include>View_55_Wall_Poster</include>
+			<include>View_501_Thumbnails</include>-->
+			<include condition="Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyVideoPlaylist.xml)">View_57_InfoList</include>
+			<include condition="Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyVideoPlaylist.xml)">View_58_BannerList</include>
+			<include condition="Window.IsVisible(MyVideoNav.xml)">View_59_MediaInfo3</include>
+			<include condition="Window.IsVisible(MyVideoNav.xml)">View_709_MediaInfo3En</include>
+
+		</control>
+		<!-- <include>NextAiredRSS</include> -->
+	</include>
+
+	<include name="DefWatchedProgress">
+		<control type="image">
+			<posx>8</posx>
+			<posy>9</posy>
+			<width>48</width>
+			<height>48</height>
+			<texture colordiffuse="PanelFG-NF">$INFO[ListItem.PercentPlayed,common/circle/,.png]</texture>
+			<visible>!ListItem.IsPlaying + !IntegerGreaterThan(ListItem.PercentPlayed,99) + IntegerGreaterThan(ListItem.PercentPlayed,1)</visible>
+		</control>
+	</include>
+
+		<include name="DefMyNavBarGroupList2">
+		<posx>438r</posx>
+		<posy>280</posy>
+		<width>440</width>
+		<height>690</height>
+		<itemgap>10</itemgap>
+		<orientation>vertical</orientation>
+		<onleft>50</onleft>
+		<onback condition="!Window.IsVisible(MyPVR.xml)">50</onback>
+		<onright>50</onright>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+	</include>
+	
+	<include name="DefMyNavBarGroupList">
+		<posx>438r</posx>
+		<posy>280</posy>
+		<width>440</width>
+		<height>690</height>
+		<itemgap>10</itemgap>
+		<orientation>vertical</orientation>
+		<onleft>50</onleft>
+		<onback condition="!Window.IsVisible(MyPVR.xml)">50</onback>
+		<onright>50</onright>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+	</include>
+
+	<include name="DefNavMenuButton">
+		<width>440</width>
+		<height>90</height>
+		<align>right</align>
+		<radioposx>2</radioposx>
+		<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+		<alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+	</include>
+	
+		<include name="DefNavMenuButton2">
+		<width>440</width>
+		<height>90</height>
+		<align>right</align>
+		<radioposx>2</radioposx>
+		<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+		<alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+	</include>
+
+	<include name="DefMyNavBar">
+		<control type="image">
+			<posx>438r</posx>
+			<posy>280</posy>
+			<width>440</width>
+			<height>690</height>
+			<colordiffuse>PosterBorder</colordiffuse>
+			<texture border="12" flipx="false">common/border-inner.png</texture>
+		</control>
+
+		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+		<include>Animation.SlideOpen.Left</include>
+	</include>
+
+	<include name="DefContextMenuBackground">
+		<control type="group">
+			<control type="image">
+				<posy>18</posy>
+				<posx>210</posx>
+				<width>1800</width>
+				<height>164</height>    
+				<texture flipx="true" flipy="true" border="75">$VAR[HeaderTileTexture]</texture>
+				<colordiffuse>sethub</colordiffuse>
+			</control>
+		</control>
+	</include>
+
+	<include name="DefContextMenuGroupList">
+		<posx>250</posx>
+		<posy>29</posy>
+		<width>1670</width>
+		<height>164</height>
+		<itemgap>0</itemgap>
+		<ondown>3</ondown>
+		<orientation>horizontal</orientation>
+	</include>
+
+	<include name="DefContextMenuButton">
+		<width>417</width>
+		<height>142</height>
+		<texturefocus>noop</texturefocus>
+		<textcolor>White</textcolor>
+		<focusedcolor>$VAR[Highlight6]</focusedcolor>
+		<textoffsetx>0</textoffsetx>
+		<font>Font-Button</font>
+		<onfocus>SetProperty(9000Focus,1,home)</onfocus>
+		<onunfocus>ClearProperty(9000Focus,home)</onunfocus>
+		<textureradioonfocus colordiffuse="$VAR[Highlight6]">buttons/radio-on.png</textureradioonfocus>
+		<textureradioonnofocus colordiffuse="White">buttons/radio-on.png</textureradioonnofocus>
+		<textureradioofffocus colordiffuse="$VAR[Highlight6]">buttons/radio-off.png</textureradioofffocus>
+		<textureradiooffnofocus colordiffuse="White">buttons/radio-off.png</textureradiooffnofocus>
+		<textureup colordiffuse="White" flipy="true">buttons/spin-down.png</textureup>
+		<texturedown colordiffuse="White">buttons/spin-down.png</texturedown>
+		<textureupfocus colordiffuse="$VAR[Highlight6]" flipy="true">buttons/spin-down.png</textureupfocus>
+		<texturedownfocus colordiffuse="$VAR[Highlight6]">buttons/spin-down.png</texturedownfocus>
+	</include>
+
+	<include name="DefGlobalSearchListNF">
+		<control type="image">
+			<height>336</height>
+			<width>221</width>
+			<texture colordiffuse="$VAR[Highlight6]" border="5">common/border-inner.png</texture>
+		</control>
+		<control type="image">
+			<posx>11</posx>
+			<posy>11</posy>
+			<height>314</height>
+			<width>199</width>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<aspectratio aligny="top">scale</aspectratio>
+		</control>
+	</include>
+	<include name="DefGlobalSearchList">
+		<width>1434</width>
+		<height>354</height>
+		<orientation>horizontal</orientation>
+		<wraparound>true</wraparound>
+		<scrolltime tween="Quadratic" easing="out">300</scrolltime>
+		<itemlayout width="239" height="354">
+			<include>DefGlobalSearchListNF</include>
+		</itemlayout>
+	</include>
+
+	<include name="DefKeyboardKeys">
+		<width>110</width>
+		<height>75</height>
+		<texturenofocus border="5" colordiffuse="Keyboard-Keys">common/border-inner.png</texturenofocus>
+		<texturefocus border="5" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+		<textoffsetx>0</textoffsetx>
+		<focusedcolor>Selected</focusedcolor>
+		<radioposx>400</radioposx>
+		<radioposy>14</radioposy>
+	</include>
+
+	<include name="DefGlobalSearchListEnd">
+		<control type="image">
+			<posx>11</posx>
+			<posy>11</posy>
+			<height>314</height>
+			<width>199</width>
+			<texture background="true">$INFO[ListItem.Icon]</texture>
+			<aspectratio aligny="top">scale</aspectratio>
+		</control>
+		<control type="label">
+			<posx>230</posx>
+			<posy>14</posy>
+			<width>440</width>
+			<align>left</align>
+			<font>Font-WidgetInfoTitle</font>
+			<label>$INFO[ListItem.Label]</label>
+		</control>
+		<control type="textbox">
+			<posx>230</posx>
+			<posy>80</posy>
+			<width>440</width>
+			<height>195</height>
+			<align>left</align>
+			<font>Font-ListInfo</font>
+			<label>$INFO[ListItem.Property(Plot)]</label>
+		</control>
+		<control type="label">
+			<posx>230</posx>
+			<posy>270</posy>
+			<width>440</width>
+			<align>left</align>
+			<font>Font-ListInfo-Small</font>
+			<label>$INFO[ListItem.Property(Year),,  •  ]$INFO[ListItem.Property(Rating)]</label>
+		</control>
+	</include>
+</includes>

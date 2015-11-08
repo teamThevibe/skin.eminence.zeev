@@ -1,0 +1,373 @@
+<!-- <?xml version="1.0" encoding="UTF-8"?> -->
+<window>
+    <defaultcontrol always="true">401</defaultcontrol>
+    <controls>
+        <include>GlobalOverlay</include>
+
+        <control type="group">
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>1720</width>
+            <bottom>80</bottom>
+            <height>790</height>
+            <include>Dialog_Background</include>
+            <control type="image">
+                <description>background image</description>
+                <top>-8</top>
+                <bottom>-8</bottom>
+                <left>-8</left>
+                <right>-8</right>
+                <texture border="15" colordiffuse="White100">common/rounded-shadow8.png</texture>
+            </control>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="התאם את דף הבית" />
+                <param name="icon" value="special://skin/extras/icons/settings.png" />
+            </include>
+
+
+            <control type="list" id="211">
+                <right>side</right>
+                <left>side</left>
+                <top>80</top>
+                <bottom>side</bottom>
+                <scrolltime>0</scrolltime>
+				<onleft>304</onleft>
+				<onright>9100</onright>
+                <orientation>vertical</orientation>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <itemlayout height="69" width="1256">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="PosterBorder-NF2">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+						<textcolor>White</textcolor>
+                        <label>$INFO[ListItem.Label]</label>
+                        <visible>stringcompare(Window.Property(groupname),powermenu)</visible>
+                    </control>
+                    <control type="label">
+                        <left>90</left>
+                        <right>100</right>
+						<align>right</align>
+                        <top>0</top>
+                        <height>100%</height>
+						<textcolor>White</textcolor>
+                        <label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                    </control>
+
+					<control type="image">
+                        <left>1170</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <align>right</align>
+                        <font>Font-ListInfo</font>
+                        <aspectratio align="left">keep</aspectratio>
+                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                        <texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+						
+                    </control>
+									<control type="image">
+                        <left>1170</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <align>right</align>
+                        <font>Font-ListInfo</font>
+                        <aspectratio align="left">keep</aspectratio>
+						<visible>StringCompare(ListItem.Property(Iconcolor),$LOCALIZE[767])</visible>
+                        <texture colordiffuse="$VAR[Defs_Iconcolor]">$INFO[ListItem.Thumb]</texture>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="69" width="favitemw">
+                    <control type="image">
+                        <width>100%</width>
+                        <height>100%</height>
+                        <texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <label>$INFO[ListItem.Label]</label>
+                        <textcolor>White</textcolor>
+                        <visible>stringcompare(Window.Property(groupname),powermenu)</visible>
+                    </control>
+                    <control type="label">
+                        <left>90</left>
+                        <right>100</right>
+												<align>right</align>
+
+                        <top>0</top>
+                        <height>100%</height>
+                        <label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+                        <textcolor>White</textcolor>
+                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                    </control>
+                    <control type="image">
+                        <left>1170</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <height>100%</height>
+                        <align>right</align>
+                        <font>Font-ListInfo</font>
+                        <aspectratio align="left">keep</aspectratio>
+                        <texture colordiffuse="$VAR[Defs_Iconcolor]">$INFO[ListItem.Icon]</texture>
+                        <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                    </control>
+                </focusedlayout>
+            </control>
+
+            <control type="grouplist" id="9100">
+                <onleft>211</onleft>
+                <onright>9100</onright>
+                <onup>9100</onup>
+                <ondown>9100</ondown>
+                <right>side</right>
+                <top>80</top>
+                <bottom>side</bottom>
+                <width>414</width>
+                <orientation>vertical</orientation>
+                <itemgap>0</itemgap>
+ 					
+                <control type="button" id="401" description="Alt chooser">
+									<label>324324234</label>
+
+                    <width>100%</width>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="307" description="Custom">
+									<label>324324235</label>
+
+                    <width>100%</width>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="305" description="Set Label">
+													<label>324324236</label>
+
+                    <width>100%</width>
+                    <include>Defs_OptionButton</include>
+                </control>
+
+                <control type="button" id="405" description="Set Submenu">
+                    <width>100%</width>
+                    <label>324324237</label>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <include>Defs_OptionButton</include>
+                </control>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1101" />
+                    <param name="buttonid1" value="9301" />
+                    <param name="buttonid2" value="9401" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1102" />
+                    <param name="buttonid1" value="9302" />
+                    <param name="buttonid2" value="9402" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1103" />
+                    <param name="buttonid1" value="9303" />
+                    <param name="buttonid2" value="9403" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1104" />
+                    <param name="buttonid1" value="9304" />
+                    <param name="buttonid2" value="9404" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1105" />
+                    <param name="buttonid1" value="9305" />
+                    <param name="buttonid2" value="9405" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1106" />
+                    <param name="buttonid1" value="9306" />
+                    <param name="buttonid2" value="9406" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1107" />
+                    <param name="buttonid1" value="9307" />
+                    <param name="buttonid2" value="9407" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1108" />
+                    <param name="buttonid1" value="9308" />
+                    <param name="buttonid2" value="9408" />
+                </include>
+
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1109" />
+                    <param name="buttonid1" value="9309" />
+                    <param name="buttonid2" value="9409" />
+                </include>
+                <include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1110" />
+                    <param name="buttonid1" value="9310" />
+                    <param name="buttonid2" value="9410" />
+                </include>
+				<include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1112" />
+                    <param name="buttonid1" value="9312" />
+                    <param name="buttonid2" value="9412" />
+                </include>
+				<include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1113" />
+                    <param name="buttonid1" value="9313" />
+                    <param name="buttonid2" value="9413" />
+                </include>
+				<include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1114" />
+                    <param name="buttonid1" value="9314" />
+                    <param name="buttonid2" value="9414" />
+                </include>
+				<include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1115" />
+                    <param name="buttonid1" value="9315" />
+                    <param name="buttonid2" value="9415" />
+                </include>
+				
+                <control type="button" id="312" description="Widget">
+                    <width>100%</width>
+                    <include>Defs_OptionButton</include>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                </control>
+
+                <control type="button" id="310" description="Background">
+				<label>324324238</label>
+                    <width>100%</width>
+                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+                    <include>Defs_OptionButton</include>
+                </control>
+                <control type="button" id="306" description="Browse for Thumb">
+								<label>324324239</label>
+
+                    <width>100%</width>
+                    <label>31075</label>
+                    <include>Defs_OptionButton</include>
+                    <visible>!stringcompare(Window.Property(groupname),powermenu)</visible>
+                </control>
+
+                <control type="button" id="9701" description="Select Color">
+                    <width>100%</width>
+                    <label>324324240</label>
+                    <onclick>RunScript(script.skin.helper.service,action=colorpicker,shortcutproperty=tilecolor)</onclick>
+                    <include>Defs_OptionButton</include>
+					                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+
+                </control>
+				
+			<control type="button" id="9703" description="Select Color text">
+                    <width>100%</width>
+                    <label>324324248</label>
+                    <onclick>RunScript(script.skin.helper.service,action=colorpicker,shortcutproperty=textcolor)</onclick>
+                    <include>Defs_OptionButton</include>
+                </control>
+				
+				<control type="button" id="995" description="Select Color icon">
+                    <width>100%</width>
+					                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+
+                    <label>324324249</label>
+										<onclick>Skin.SetString(color_picker,Iconcolor)</onclick>
+					<onclick>Skin.SetString(custom_color,$INFO[Container(211).ListItem.Property(Iconcolor)])</onclick>
+                    <onclick>RunScript(script.skin.helper.service,action=colorpicker,shortcutproperty=Iconcolor)</onclick>
+					<onclick>SetProperty(customValue,$INFO[Skin.String(Iconcolor)])</onclick>
+					<onclick>SendClick(404)</onclick>		
+                    <include>Defs_OptionButton</include>
+                </control>
+				
+				<!--		
+                <control type="button" id="301" description="Add">
+                    <width>100%</width>
+                    <include>Defs_OptionButton</include>
+                </control>
+                 <control type="button" id="302" description="Delete">
+                    <width>100%</width>
+                    <include>Defs_OptionButton</include>
+                </control> -->
+                <control type="button" id="308" description="Reset">
+                    <width>100%</width>
+					<label>324324241</label>
+                    <include>Defs_OptionButton</include>
+                </control>
+            </control>
+
+            <control type="label" id="500"><visible>false</visible><font>-</font></control>
+            
+            <control type="grouplist" id="9200">
+                <right>1070</right>
+                <top>97</top>
+                <width>600</width>
+                <align>left</align>
+                <itemgap>4</itemgap>
+                <onright>211</onright>
+				<onleft>304</onleft>
+                <onup>Control.Move(211,-1)</onup>
+                <ondown>Control.Move(211,1)</ondown>
+                <orientation>horizontal</orientation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,0)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,1)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,2)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,3)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,4)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,5)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,6)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,7)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,8)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,9)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,10)">Conditional</animation>
+                <animation effect="slide" end="0,69" condition="IntegerGreaterThan(Container(211).Position,11)">Conditional</animation>
+                <control type="button" id="302" description="Delete">
+                    <width>32</width>
+                    <height>32</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="Disabled">common/delete.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected">common/delete.png</texturefocus>
+                </control>
+								<control type="button" id="301" description="Add">
+                    <width>32</width>
+                    <height>32</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="Disabled">common/add.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected">common/add.png</texturefocus>
+                </control>
+                <control type="button" id="303" description="Up">
+                    <width>32</width>
+                    <height>32</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="Disabled" flipy="true">common/spin-down.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected" flipy="true">common/spin-down.png</texturefocus>
+                </control>
+                <control type="button" id="304" description="Down">
+                    <width>32</width>
+                    <height>32</height>
+                    <font>-</font>
+                    <texturenofocus colordiffuse="Disabled" flipy="false">common/spin-down.png</texturenofocus>
+                    <texturefocus colordiffuse="Selected" flipy="false">common/spin-down.png</texturefocus>
+                </control>
+
+                
+            </control>
+        </control>
+
+        <control type="button" id="404"><visible allowhiddenfocus="true">false</visible></control>
+    </controls>
+</window>

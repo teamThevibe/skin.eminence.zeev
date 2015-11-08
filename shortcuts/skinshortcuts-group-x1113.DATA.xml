@@ -1,0 +1,53 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<shortcuts>
+<!-- kids -->
+	<shortcut>
+		<action>ActivateWindow(10025,"plugin://plugin.video.htpt.kids/?url=&amp;mode=101&amp;name=%D7%A9%D7%99%D7%A8%D7%99%D7%9D+%D7%95%D7%A1%D7%99%D7%A4%D7%95%D7%A8%D7%99%D7%9D+%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.htpt.kids%5Cresources%5Cmedia%5C41.png&amp;desc=&amp;num=1&amp;viewtype=58",return)</action>
+		<label>שירים וסיפורים לילדים</label>
+		<label2>הרחבת וידאו</label2>
+		<defaultID />
+		<icon>special://skin/extras/icons/rocket.png</icon>
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(10025,"plugin://plugin.video.htpt.kids/?url=&amp;mode=102&amp;name=%D7%94%D7%A6%D7%92%D7%95%D7%AA+%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.htpt.kids%5Cresources%5Cmedia%5C42.jpg&amp;desc=&amp;num=1&amp;viewtype=58",return)</action>
+		<label>הצגות לילדים</label>
+		<label2>הרחבת וידאו</label2>
+		<defaultID />
+		<icon>special://skin/extras/icons/rocket.png</icon>
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(10025,"plugin://plugin.video.htpt.kids/?url=&amp;mode=105&amp;name=%D7%A1%D7%A8%D7%98%D7%99%D7%9D+%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.htpt.kids%5Cresources%5Cmedia%5C45.jpg&amp;desc=&amp;num=1&amp;viewtype=50",return)</action>
+		<label>סרטים לילדים</label>
+		<label2>הרחבת וידאו</label2>
+		<defaultID />		
+		<icon>special://skin/extras/icons/rocket.png</icon>
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(10025,"plugin://plugin.video.htpt.kids/?url=&amp;mode=104&amp;name=%D7%A1%D7%93%D7%A8%D7%95%D7%AA+%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.htpt.kids%5Cresources%5Cmedia%5C44.png&amp;desc=&amp;num=1&amp;viewtype=58",return)</action>
+		<label>סדרות לילדים</label>
+		<label2>הרחבת וידאו</label2>
+		<defaultID />
+		<icon>special://skin/extras/icons/rocket.png</icon>
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(10025,"plugin://plugin.video.htpt.kids/?url=&amp;mode=106&amp;name=%D7%9C%D7%A4%D7%A2%D7%95%D7%98%D7%95%D7%AA&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.htpt.kids%5Cresources%5Cmedia%5C46.png&amp;desc=&amp;num=1&amp;viewtype=58",return)</action>
+		<label>לפעוטות</label>
+		<label2>הרחבת וידאו</label2>
+		<defaultID />
+		<icon>special://skin/extras/icons/rocket.png</icon>
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(10025,"plugin://plugin.video.htpt.kids/?url=&amp;mode=107&amp;name=%D7%9C%D7%A7%D7%98%D7%A0%D7%98%D7%A0%D7%99%D7%9D&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.htpt.kids%5Cresources%5Cmedia%5C47.jpg&amp;desc=&amp;num=1&amp;viewtype=58",return)</action>
+		<label>לקטנטנים</label>
+		<label2>הרחבת וידאו</label2>
+		<defaultID />
+		<icon>special://skin/extras/icons/rocket.png</icon>
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(10025,"plugin://plugin.video.htpt.kids/?url=&amp;mode=108&amp;name=%D7%9C%D7%99%D7%9C%D7%93%D7%99%D7%9D+%D7%95%D7%A0%D7%95%D7%A2%D7%A8&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.htpt.kids%5Cresources%5Cmedia%5C48.jpg&amp;desc=&amp;num=1&amp;viewtype=50",return)</action>
+		<label>לילדים ונוער</label>
+		<label2>הרחבת וידאו</label2>		
+		<defaultID />
+		<icon>special://skin/extras/icons/rocket.png</icon>
+	</shortcut>
+</shortcuts>

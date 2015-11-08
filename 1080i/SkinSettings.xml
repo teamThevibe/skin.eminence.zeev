@@ -1,0 +1,1238 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+    <defaultcontrol always="true">3</defaultcontrol>
+    <allowoverlay>yes</allowoverlay>
+    <background>0</background>
+   <!--  <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=12345&amp;group=mainmenu|[moviecategory]|[tvshowcategory]|[musiccategory]|[playlistcategory]|[Vod]|[sport]|[kids]|[favorite]|[CustomHUB])</onunload>-->
+    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|x1110|x1112|x1113|x1114|x1115|[moviecategory]|[tvshowcategory]|[musiccategory]|[playlistcategory]|[Vod]|[sport]|[kids]|[favorite]|[CustomHUB]| powermenu)</onunload>
+        <onload condition="!Skin.String(SkinHelper.RandomFanartDelay)">Skin.SetString(SkinHelper.RandomFanartDelay,30)</onload>
+
+    <controls>
+
+        <include>GlobalBackground</include>
+        <control type="button">
+            <posy>540</posy>
+            <posx>110</posx>
+            <width>48</width>
+            <height>48</height>
+            <visible>!Window.IsVisible(3065) + !Window.IsVisible(3078)</visible>
+            <texturenofocus flipx="true">common/right-arrow.png</texturenofocus>
+            <texturefocus flipx="true">common/right-arrow.png</texturefocus>
+            <aspectratio>keep</aspectratio>
+            <animation effect="fade" end="75" condition="true">Conditional</animation>
+            <animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">WindowOpen</animation>
+            <animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">Visible</animation>
+            <animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">WindowClose</animation>
+            <animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">Hidden</animation>
+            <include>DialogVisibility</include>
+            <visible>!Window.IsVisible(3067)</visible>
+        </control>
+   
+        <control type="group">
+            <posx>horzpad</posx>
+            <posy>topoffset</posy>
+            <visible>!Window.IsVisible(3065) + !Window.IsVisible(3078)</visible>
+            <include>DialogVisibility</include>
+            <visible>!Window.IsVisible(3067)</visible>
+            <include>Animation.SlideOpen.right</include>
+            <control type="label" id="2" description="Info Label">
+                <include>DefSideLabelCoords</include>
+                <label>$LOCALIZE[20077]</label>
+            </control>
+        </control>
+
+        <control type="group">
+            <posy>160</posy>
+            <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
+            <visible>!Window.IsVisible(3067)</visible>
+            <include>DialogVisibility</include>
+            <include>Animation.FadeIn</include>
+            <include>Animation.FadeOut</include>
+            <visible>!Window.IsVisible(3065) + !Window.IsVisible(3078)</visible>
+            <include>DefSettingsLines2</include>
+            <control type="grouplist" id="3">
+                <description>Control Area</description>
+                <onleft>5</onleft>
+                
+                <onup>3</onup>
+                <ondown>3</ondown>
+                <include>DefSettingsRightGroup2</include>
+                <onright>SetProperty(movement,1,settings)</onright>
+                <onright>$VAR[DefSettingsOnLeft]</onright>
+                
+                <control type="togglebutton" id="37" description="HomeTiles">
+                    <label>31208</label>
+                    <align>right</align>
+                    <textcolor>Disabled</textcolor>
+                    <usealttexture>ControlGroup(3).HasFocus(37)</usealttexture>
+                    <altlabel>[COLOR=Selected]$LOCALIZE[31208][/COLOR]</altlabel>
+                    <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+                    <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
+                </control>
+				
+                <control type="togglebutton" id="35" description="Header">
+                    <label>31282</label>
+                    <align>right</align>
+                    <textcolor>Disabled</textcolor>
+                    <usealttexture>ControlGroup(3).HasFocus(35)</usealttexture>
+                    <altlabel>[COLOR=Selected]$LOCALIZE[31282][/COLOR]</altlabel>
+                    <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+                    <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
+                </control>
+                <control type="togglebutton" id="33" description="colofrs">
+                    <label>צבעים</label>
+                    <align>right</align>
+                    <textcolor>Disabled</textcolor>
+                    <usealttexture>ControlGroup(3).HasFocus(33)</usealttexture>
+                    <altlabel>[COLOR=Selected]צבעים[/COLOR]</altlabel>
+                    <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+                    <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
+                </control>
+                
+                
+                <control type="togglebutton" id="38" description="Fanart">
+                    <label>$LOCALIZE[20445]</label>
+                    <align>right</align>
+                    <textcolor>Disabled</textcolor>
+                    <usealttexture>ControlGroup(3).HasFocus(38)</usealttexture>
+                    <altlabel>[COLOR=Selected]$LOCALIZE[20445][/COLOR]</altlabel>
+                    <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+                    <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
+                </control>
+                
+                
+                <control type="togglebutton" id="34" description="OSD">
+                    <label>478</label>
+                    <align>right</align>
+                    <textcolor>Disabled</textcolor>
+                    <usealttexture>ControlGroup(3).HasFocus(34)</usealttexture>
+                    <altlabel>[COLOR=Selected]$LOCALIZE[478][/COLOR]</altlabel>
+                    <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+                    <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
+                </control>
+                
+                
+                
+                
+                <control type="togglebutton" id="36" description="Extras">
+                    <label>31235</label>
+                    <align>right</align>
+                    <textcolor>Disabled</textcolor>
+                    <usealttexture>ControlGroup(3).HasFocus(36)</usealttexture>
+                    <altlabel>[COLOR=Selected]$LOCALIZE[31235][/COLOR]</altlabel>
+                    <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+                    <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
+                </control>
+               <!-- <control type="togglebutton" id="32" description="Carousel">
+                    <label>31202</label>
+                    <align>right</align>
+                    <textcolor>Disabled</textcolor>
+                    <usealttexture>ControlGroup(3).HasFocus(32)</usealttexture>
+                    <altlabel>[COLOR=Selected]$LOCALIZE[31202][/COLOR]</altlabel>
+                    <alttexturefocus border="12" colordiffuse="PosterHighlight">common/white.png</alttexturefocus>
+                    <alttexturenofocus border="12" colordiffuse="PosterHighlight">common/white.png</alttexturenofocus>
+                </control>-->
+                <control type="togglebutton" id="39" description="Advanced">
+                    <label>גיבוי שיחזור</label>
+                    <align>right</align>
+                    <textcolor>Disabled</textcolor>
+                    <usealttexture>ControlGroup(3).HasFocus(39)</usealttexture>
+                    <altlabel>[COLOR=Selected]גיבוי שיחזור[/COLOR]</altlabel>
+                    <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+                    <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
+                </control>
+				
+                <control type="togglebutton" id="40" description="הגדרת תצוגה">
+                    <label>הגדרת תצוגה</label>
+                    <align>right</align>
+					<textcolor>Disabled</textcolor>
+					                    <altlabel>[COLOR=Selected]הגדרת תצוגה[/COLOR]</altlabel>
+
+                    <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
+                    <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
+                    <usealttexture>ControlGroup(3).HasFocus(40)</usealttexture>
+                </control>    
+            </control>
+            <!--
+            <control type="textbox">
+                <include>Animation.FadeIn</include>
+                <include>Animation.FadeOut</include>
+                <posx>400</posx>
+                <width>700</width>
+                <posy>740</posy>
+                <height>100</height>
+                <align>center</align>
+                <font>Font-ListInfo-Small</font>
+                <label>$VAR[SkinSettingsDescription]</label>
+            </control>-->
+
+            <control type="grouplist" id="5">
+                <usecontrolcoords>true</usecontrolcoords>
+                <description>Control Area</description>
+                <include>DefSettingsLeftGroup2</include>
+                <onright>3</onright>
+                <onleft>ClearProperty(movement,settings)</onleft>
+                <onleft>$VAR[DefSettingsOnLeft]</onleft>
+                <onup>5</onup>
+                <ondown>5</ondown>
+               
+                <!-- Home Tiles 
+                <control type="button" id="201" description="Customise Home">
+                    <label>31164</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <onclick>ActivateWindow(3063)</onclick>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control> -->
+				                                        <control type="button" id="201">
+                        <label>31343569</label>
+												                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skinshortcuts,type=manage&amp;group=mainmenu)</onclick>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+									
+									
+									<control type="button" id="202">
+                        <label>$INFO[Skin.String(home.style)]</label>$INFO[Skin.String(home.style)]
+                        <label2>31343570</label2>
+						                    <align>left</align>
+                    <font>Font-ListInfo</font>
+                        <onclick condition="IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
+                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31180])">Skin.SetString(home.style,$LOCALIZE[31181])</onclick>
+                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31181])">Skin.SetString(home.style,$LOCALIZE[31182])</onclick>
+                        <onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31182])">Skin.SetString(home.style,$LOCALIZE[31343581])</onclick>
+						<onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31343581])">Skin.SetString(home.style,$LOCALIZE[31343582])</onclick>
+						<onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31343582])">Skin.SetString(home.style,$LOCALIZE[31343583])</onclick>
+						<onclick condition="StringCompare(Skin.String(home.style),$LOCALIZE[31343583])">Skin.SetString(home.style,$LOCALIZE[31180])</onclick>
+
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+
+					                    <!-- Fallback Widget -->
+                    <control type="button" id="203">
+                        <label>$INFO[Skin.String(home.fallbackwidget.name)]</label>
+                        <label2>31343571</label2>
+						<align>left</align>
+                        <font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skinshortcuts,type=shortcuts&amp;grouping=widget&amp;skinList=home.fallbackwidget&amp;skinLabel=home.fallbackwidget.name)</onclick>
+                        <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+					                    <!-- Widget Info Box -->
+                    <control type="radiobutton" id="204">
+                        <label>31343572</label>
+						<font>Font-ListInfo</font>
+				                    <align>right</align>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+                        <selected>!Skin.HasSetting(home.hidewidgetbox)</selected>
+                        <onclick condition="!Skin.HasSetting(home.hidewidgetbox) + stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
+                        <onclick>Skin.ToggleSetting(home.hidewidgetbox)</onclick>
+                        <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+					                    <!-- Widget Posters -->
+                    <control type="button" id="205">
+                        <label>$INFO[Skin.String(home.widgetposters)]</label>
+                        <label2>31343573</label2>
+						<align>left</align>
+						<font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                         
+					<onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31166])</onclick>
+                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
+                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
+                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onclick>
+                        <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
+                        <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+                    <control type="radiobutton" id="206">
+                        <label>31343568</label>
+						                    <align>right</align>
+                    <font>Font-ListInfo</font>
+						                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+                        <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])</enable>
+                        <selected>Skin.HasSetting(home.showdiscart)</selected>
+                        <onclick>Skin.ToggleSetting(home.showdiscart)</onclick>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>					
+
+										                    <control type="radiobutton" id="213">
+                        <label>דיסק מסתובב</label>
+			                    <align>right</align>
+                    <font>Font-ListInfo</font>
+						                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>     
+                        <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + Skin.HasSetting(home.showdiscart)</enable>                    
+					<selected>Skin.HasSetting(home.DiscArtrotate)</selected>
+                        <onclick>Skin.ToggleSetting(home.DiscArtrotate)</onclick>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+					
+					<control type="radiobutton" id="214">
+                        <label>לוגו סרט</label>
+			                    <align>right</align>
+                    <font>Font-ListInfo</font>
+						                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>     
+					<selected>Skin.HasSetting(home.clearlogo)</selected>
+                        <onclick>Skin.ToggleSetting(home.clearlogo)</onclick>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+					<control type="radiobutton" id="215">
+                     <label>התאם צבע קטגוריה וצבע אריח</label>
+			          <align>right</align>
+                    <font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>     
+					<selected>Skin.HasSetting(home.colortilehigh)</selected>
+                        <onclick>Skin.ToggleSetting(home.colortilehigh)</onclick>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+										<control type="radiobutton" id="216">
+                     <label>התאם צבע קטגוריה ואריח עליון</label>
+			          <align>right</align>
+                    <font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>     
+					<selected>Skin.HasSetting(home.colortilehigh2)</selected>
+                        <onclick>Skin.ToggleSetting(home.colortilehigh2)</onclick>
+
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+					                    <!-- Tile Colors -->
+                  
+                    <control type="radiobutton" id="208">
+						<label>31343579</label>
+						<align>right</align>
+						<font>Font-ListInfo</font>
+						<radiowidth>40</radiowidth>
+						<radioheight>40</radioheight>
+						<radioposx>40</radioposx>                          
+						<onclick>Skin.ToggleSetting(home.tilecolor)</onclick>
+						<onclick>Skin.ToggleSetting(home.tilecolor.nofocus)</onclick>
+						<selected>Skin.HasSetting(home.tilecolor.nofocus)</selected>
+						<visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+										                    <!-- Tile Colors
+                    <control type="radiobutton" id="209">
+                        <label>אפשר אייקונים בצבעים</label>
+					                    <align>right</align>
+                    <font>Font-ListInfo</font>
+						                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                          
+					<onclick>Skin.ToggleSetting(home.Iconcolor)</onclick>
+					<onclick>Skin.ToggleSetting(home.Iconcolor.nofocus)</onclick>
+                    <selected>Skin.HasSetting(home.Iconcolor)</selected>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+-->
+			   
+			                  <!-- Transparent Home Bar -->
+                    <control type="radiobutton" id="211">
+                        <label>31343580</label>
+			                    <align>right</align>
+                    <font>Font-ListInfo</font>
+						                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                         
+					<selected>Skin.HasSetting(home.transparent)</selected>
+                        <onclick>Skin.ToggleSetting(home.transparent)</onclick>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+								                  <!-- Transparent Home Bar -->
+                    <control type="radiobutton" id="212">
+                        <label>ביטול שקיפות אריחים לא מסומנים</label>
+			            <align>right</align>
+                       <font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                         
+					<selected>Skin.HasSetting(home.opacity)</selected>
+                        <onclick>Skin.ToggleSetting(home.opacity)</onclick>
+						                    <onclick>ReloadSkin()</onclick>                         
+
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+			  
+			   <!--
+				    <control type="radiobutton" id="202">
+                        <label>31343567</label>
+						<font>Font-ListInfo</font>
+				                    <align>right</align>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+                        <selected>Skin.HasSetting(home.transparent)</selected>
+                        <onclick>Skin.ToggleSetting(home.transparent)</onclick>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+					                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+
+                    </control>-->
+				
+              <!--  <control type="button" id="202" description="Global Widget">
+                    <label>$VAR[SkinSettings.MixedWidget]</label>                  
+				   <align>left</align>
+                    <font>Font-ListInfo</font>
+                    <onclick>Skin.SetBool(home.usemixedglobalwidget)</onclick>
+                    <onclick>ActivateWindow(3078)</onclick>
+                    <label2>31209</label2>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="206" description="Show Widget Info">
+                    <label>31198</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                                        <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+					<onclick>Skin.ToggleSetting(home.showinfoonwidget)</onclick>
+                    <selected>Skin.HasSetting(home.showinfoonwidget)</selected>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="204" description="Tiles Match Theme">
+                    <label>31206</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+					<onclick>Skin.ToggleSetting(home.monochromemode)</onclick>
+                    <selected>Skin.HasSetting(home.monochromemode)</selected>
+                    <enable>!Skin.HasSetting(home.talltiles)</enable>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="205" description="Highlight Match Tile">
+                    <label>31204</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+					<onclick>Skin.ToggleSetting(home.matchcolor)</onclick>
+                    <selected>Skin.HasSetting(home.matchcolor)</selected>
+                    <enable>!Skin.HasSetting(home.talltiles) + !Skin.HasSetting(home.monochromemode)</enable>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="206" description="Fade Tiles">
+                    <label>31205</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                    
+					<onclick>Skin.ToggleSetting(home.dontfade)</onclick>
+                    <enable>!Skin.HasSetting(home.talltiles) + !Skin.HasSetting(home.monochromemode)</enable>
+                    <selected>Skin.HasSetting(home.dontfade)</selected>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="207" description="Show Power">
+                    <label>31217</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                    
+					<onclick>Skin.ToggleSetting(home.314.enabled)</onclick>
+                    <selected>Skin.HasSetting(home.314.enabled)</selected>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="button" id="208" description="Home Background">
+                    <label>$INFO[Skin.String(home.fanart)]</label>
+					<align>left</align>
+                    <font>Font-ListInfo</font>
+                    <label2>31149</label2>
+                    <onclick>Skin.SetPath(home.fanart)</onclick>
+                    <enable>!Skin.HasSetting(home.usemixedglobalwidget)</enable>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                -->
+                
+                <!-- Carousel Widgets 
+
+                <control type="radiobutton" id="301" description="Enable carousel">
+                    <label>31195</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                       
+					<onclick>Skin.ToggleSetting(home.widgetdown)</onclick>
+                    <selected>!Skin.HasSetting(home.widgetdown)</selected>
+                    <visible>ControlGroup(3).HasFocus(32)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="302" description="Carousel in own window">
+                    <label>31238</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                       
+					<onclick>Skin.ToggleSetting(widget.window)</onclick>
+                    <selected>Skin.HasSetting(widget.window)</selected>
+                    <visible>ControlGroup(3).HasFocus(32)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="303" description="Invert access to widgets">
+                    <label>31237</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>   
+					<onclick>Skin.ToggleSetting(home.invertwidgets)</onclick>
+                    <selected>Skin.HasSetting(home.invertwidgets)</selected>
+                    <visible>ControlGroup(3).HasFocus(32)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="button" id="304" description="Widget Carousel Item">
+                    <label>$LOCALIZE[31222] $NUMBER[1]</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>   
+					<onclick>SetProperty(item,home.501,3065)</onclick>
+                    <onclick>ActivateWindow(3065)</onclick>
+                    <visible>ControlGroup(3).HasFocus(32)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="button" id="305" description="Widget Carousel Item">
+                    <label>$LOCALIZE[31222] $NUMBER[2]</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <onclick>SetProperty(item,home.502,3065)</onclick>
+                    <onclick>ActivateWindow(3065)</onclick>
+                    <visible>ControlGroup(3).HasFocus(32)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="button" id="306" description="Widget Carousel Item">
+                    <label>$LOCALIZE[31222] $NUMBER[3]</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>   
+					<onclick>SetProperty(item,home.503,3065)</onclick>
+                    <onclick>ActivateWindow(3065)</onclick>
+                    <visible>ControlGroup(3).HasFocus(32)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                
+                <control type="button" id="307" description="Widget Carousel Item">
+                    <label>$LOCALIZE[31222] $NUMBER[4]</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>SetProperty(item,home.504,3065)</onclick>
+                    <onclick>ActivateWindow(3065)</onclick>
+                    <visible>ControlGroup(3).HasFocus(32)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>-->
+               
+			   
+				
+                <!-- FANART -->
+                <control type="radiobutton" id="601" description="Show Fanart">
+                    <label>31146</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<selected>!Skin.HasSetting(background.hidefanart)</selected>
+                   <onclick>Skin.ToggleSetting(background.hidefanart)</onclick>
+					<onclick>Skin.ToggleSetting(disable.fanart)</onclick>
+                    <selected>!Skin.HasSetting(disable.fanart)</selected>
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+				
+                <control type="button" id="602" description="Fanart Fade">
+                    <label>$VAR[FanartFadeLabel]</label>
+                    <label2>31185</label2>
+                    $VAR[FanartFadeLabel]
+					<align>left</align>
+                    <font>Font-ListInfo</font>
+                    <onclick condition="!Skin.HasSetting(fanart.showmore)">Skin.SetBool(fanart.showmore)</onclick>
+                    <onclick condition="Skin.HasSetting(fanart.showmore) + !Skin.HasSetting(fanart.showall)">Skin.SetBool(fanart.showall)</onclick>
+                    <onclick condition="Skin.HasSetting(fanart.showall)">Skin.Reset(fanart.showmore)</onclick>
+                    <onclick condition="Skin.HasSetting(fanart.showall)">Skin.Reset(fanart.showall)</onclick>
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                    <enable>!Skin.HasSetting(disable.fanart)</enable>
+                </control>
+                
+                <control type="radiobutton" id="603" description="Fanart Animate">
+                    <label>31230</label>
+                    <align>right</align>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<font>Font-ListInfo</font>
+                    <onclick>Skin.ToggleSetting(Fanart.Animate)</onclick>
+                    <selected>Skin.HasSetting(Fanart.Animate)</selected>
+										<selected>Skin.HasSetting(background.animate)</selected>
+                        <onclick>Skin.ToggleSetting(background.animate)</onclick>
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+		
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+				
+                
+                <control type="radiobutton" id="604" description="Show Video">
+                    <label>הצג וידיאו מתנגן במערכת</label>                   
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.ToggleSetting(disable.bgvideo)</onclick>
+                    <selected>!Skin.HasSetting(disable.bgvideo)</selected>
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+				<control type="radiobutton" id="605" description="Show Video">
+                    <label>הצג וידיאו מתנגן בדף הבית</label>                   
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+                        <selected>Skin.HasSetting(background.showvideo)</selected>
+                        <onclick>Skin.ToggleSetting(background.showvideo)</onclick>
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+				
+                <control type="radiobutton" id="606" description="Time Based Colour Background">
+                    <label>31218</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.ToggleSetting(purplefade)</onclick>
+                    <selected>Skin.HasSetting(purplefade)</selected>
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="button" id="607" description="Background Overlay">
+                    <label>$INFO[Skin.String(global.background)]</label>
+                    <align>left</align>
+                    <font>Font-ListInfo</font>
+                    <label2>31228</label2>
+                    <enable>!Skin.HasSetting(purplefade)</enable>
+                    <onclick condition="IsEmpty(Skin.String(global.background))">SetProperty(showimages,1,home)</onclick>
+                    <onclick condition="IsEmpty(Skin.String(global.background))">Skin.SetFile(global.background,.jpg|.png|.bmp|.gif,special://skin/extras/colours/)</onclick>
+                    <onclick condition="!IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="button" id="608" description="Background Image">
+                    <label>$INFO[Skin.String(global.background2)]</label>
+                    <align>left</align>
+                    <font>Font-ListInfo</font>
+                    <enable>!Skin.HasSetting(disable.fanart)</enable>
+                    <label2>31210</label2>
+                    <onclick condition="IsEmpty(Skin.String(global.background2))">SetProperty(showimages,1,home)</onclick>
+                    <onclick condition="IsEmpty(Skin.String(global.background2))">Skin.SetFile(global.background2,.jpg|.png|.bmp|.gif,special://skin/extras/backgrounds/)</onclick>
+                    <onclick condition="!IsEmpty(Skin.String(global.background2))">Skin.Reset(global.background2)</onclick>
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+
+                <control type="button" id="609" description="Weather Fanart">
+                    <label>הצג וידיאו מתנגן בדף הבית</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.SetPath(weather.fanart)</onclick>
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+					
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+				
+                                
+                <!-- OSD -->
+                <!--<control type="radiobutton" id="701" description="Artist Slideshow">
+                    <label>31139</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <enable>System.HasAddon(script.artistslideshow)</enable>
+                    <animation effect="fade" start="100" end="25" time="150" condition="!Control.IsEnabled(701)">Conditional</animation>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.ToggleSetting(ArtistSlideShow.Enabled)</onclick>
+                    <selected>Skin.HasSetting(ArtistSlideShow.Enabled)</selected>
+                    <visible>ControlGroup(3).HasFocus(34)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>-->
+                
+                <control type="radiobutton" id="702" description="Show Vis Behind">
+                    <label>$LOCALIZE[31140]</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <disabledcolor>PanelFG-NF</disabledcolor>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                     
+				   <onclick>Skin.ToggleSetting(OSDVisualisation.ShowFanart)</onclick>
+                    <selected>Skin.HasSetting(OSDVisualisation.ShowFanart)</selected>
+                    <visible>ControlGroup(3).HasFocus(34)</visible>
+                    <animation effect="fade" start="100" end="25" time="150" condition="!Control.IsEnabled(702)">Conditional</animation>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="703" description="Pvr Icon">
+                    <label>31161</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                                        <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.ToggleSetting(disable.pvricon)</onclick>
+                    <selected>!Skin.HasSetting(disable.pvricon)</selected>
+                    <visible>ControlGroup(3).HasFocus(34)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="704" description="Show Info">
+                    <label>31162</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                                        <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.ToggleSetting(showdetailedosdinfo)</onclick>
+                    <selected>Skin.HasSetting(showdetailedosdinfo)</selected>
+                    <visible>ControlGroup(3).HasFocus(34)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="706" description="Show Info Classic">
+                    <label>31284</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                                        <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.ToggleSetting(osd.useclassicinfo)</onclick>
+                    <selected>!Skin.HasSetting(osd.useclassicinfo)</selected>
+                    <visible>ControlGroup(3).HasFocus(34)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="705" description="Show Clearart">
+                    <label>31216</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                                        <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.ToggleSetting(video.clearartosd)</onclick>
+                    <selected>!Skin.HasSetting(video.clearartosd)</selected>
+                    <visible>ControlGroup(3).HasFocus(34)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <!-- HEADER OPTIONS -->
+                <control type="button" id="801" description="Change Header Default Text">
+                    <label>$INFO[Skin.String(home.headertext)]</label>
+                    <align>left</align>
+                    <font>Font-ListInfo</font>
+                    <label2>31236</label2>
+                    <onclick condition="IsEmpty(Skin.String(home.headertext))">Skin.SetString(home.headertext)</onclick>
+                    <onclick condition="!IsEmpty(Skin.String(home.headertext))">Skin.Reset(home.headertext)</onclick>
+                    <visible>ControlGroup(3).HasFocus(35)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="802" description="Header to Theme Colour">
+                    <label>31240</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                                        <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					                        <onclick>Skin.ToggleSetting(header.colormatch)</onclick>
+                        <selected>Skin.HasSetting(header.colormatch)</selected>
+					<onclick>Skin.ToggleSetting(header.matchhighlight)</onclick>
+                    <selected>Skin.HasSetting(header.matchhighlight)</selected>
+                    <visible>ControlGroup(3).HasFocus(35)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="821" description="Disable Clock">
+                    <label>31286</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                                        <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.ToggleSetting(disable.clockheader)</onclick>
+                    <selected>!Skin.HasSetting(disable.clockheader)</selected>
+                    <visible>ControlGroup(3).HasFocus(35)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="808" description="Disable Weather in Clock">
+                    <label>31177</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <onclick>Skin.ToggleSetting(disable.weatherheader)</onclick>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<selected>!Skin.HasSetting(disable.weatherheader)</selected>
+                    <visible>ControlGroup(3).HasFocus(35)</visible>
+                    <enable>!Skin.HasSetting(disable.clockheader)</enable>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+						   								    <!--שינוי סמל המתנה-->            
+					<control type="button" id="809" description="info">	                            
+                    <label>שינוי סמל המתנה</label>    
+                    <align>right</align>               
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+                    <font>Font-ListInfo</font>
+                    <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
+                    <visible>ControlGroup(3).HasFocus(35)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>   
+                    <onclick>ReloadSkin()</onclick>                         
+			   </control>
+				
+                <!-- ADDONS -->
+                <control type="radiobutton" id="804" description="Tv Tunes">
+                    <label>31144</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+					<onclick>Skin.ToggleSetting(ActivateTvTunes)</onclick>
+                    <selected>Skin.HasSetting(ActivateTvTunes)</selected>
+                    <visible>ControlGroup(3).HasFocus(36)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="805" description="Rss Feed">
+                    <label>13305</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                      
+					<onclick>Skin.ToggleSetting(disable.rss)</onclick>
+                    <selected>!Skin.HasSetting(disable.rss)</selected>
+                    <visible>ControlGroup(3).HasFocus(36)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="806" description="Rss Next Aired">
+                    <label>31188</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                      
+					<onclick>Skin.ToggleSetting(rss.tvnextaired)</onclick>
+                    <selected>Skin.HasSetting(rss.tvnextaired)</selected>
+                    <visible>ControlGroup(3).HasFocus(36)</visible>
+                    <enable>!Skin.HasSetting(disable.rss)</enable>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="807" description="Next Aired Update">
+                    <label>31189</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                      
+					<onclick>Skin.ToggleSetting(NextAired.Update)</onclick>
+                    <selected>Skin.HasSetting(NextAired.Update)</selected>
+                    <visible>ControlGroup(3).HasFocus(36)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="radiobutton" id="811" description="Auto update artwork downloader">
+                    <label>31280</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+					<onclick>Skin.ToggleSetting(UpdateArt.Enabled)</onclick>
+                    <selected>Skin.HasSetting(UpdateArt.Enabled)</selected>
+                    <visible>ControlGroup(3).HasFocus(36)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <control type="button" id="812" description="Startup Video">
+                    <label>31287</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                    
+					<label2>$INFO[Skin.String(StartupPlaylist)]</label2>
+                    <onclick condition="IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist)</onclick>
+                    <onclick condition="!IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
+                    <visible>ControlGroup(3).HasFocus(36)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                
+                <!-- ADVANCED -->
+        
+                <control type="radiobutton" id="803" description="Kiosk mode">
+                    <label>31239</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                    
+					<onclick>Skin.ToggleSetting(kioskmode)</onclick>
+                    <selected>Skin.HasSetting(kioskmode)</selected>
+                    <visible>ControlGroup(3).HasFocus(39)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+                <!--
+                <control type="radiobutton" id="809">
+                    <label>31178</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>                   
+				   <onclick>Skin.ToggleSetting(home.talltiles)</onclick>
+                    <onclick>Skin.Reset(home.dontfade)</onclick>
+                    <onclick>Skin.Reset(home.matchcolor)</onclick>
+                    <selected>Skin.HasSetting(home.talltiles)</selected>
+                    <visible>ControlGroup(3).HasFocus(39)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+                            
+							
+				
+                <control type="button" id="902" description="Skin Reinit">
+                    <label>31137</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <onclick>Skin.ToggleSetting(skin.init)</onclick>
+                    <onclick>ReplaceWindow(startup)</onclick>
+                    <selected>!Skin.HasSetting(skin.init)</selected>
+                    <visible>ControlGroup(3).HasFocus(39)</visible>
+                    <texturefocus border="12" colordiffuse="PosterHighlight">common/white.png</texturefocus>
+                </control>
+				-->
+				
+				                    <!-- RESET -->
+                    <!-- Backup -->
+                    <control type="button" id="804">
+                        <label>31342</label>
+												<align>right</align>
+                        <font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=backup)</onclick>
+                    <visible>ControlGroup(3).HasFocus(39)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                    </control>
+                    <!-- Restore -->
+                    <control type="button" id="805">
+                        <label>שיחזור מגיבוי</label>
+												<align>right</align>
+                        <font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
+                    <visible>ControlGroup(3).HasFocus(39)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>    
+					</control>
+                    <!-- Reset Skin to Defaults -->
+                    <control type="button" id="806">
+                        <label>31137</label>
+						<align>right</align>
+                        <font>Font-ListInfo</font>
+                        <onclick>Skin.ResetSettings</onclick>
+                        <onclick>Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
+                        <onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
+                    <visible>ControlGroup(3).HasFocus(39)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus> 
+					</control>
+					
+												    <!--שינוי תמונות בטלוויזיה ישראללייב        
+					<control type="button" id="807" description="info">	                            
+                    <label>שינוי אייקונים ISRALIVE</label>    
+                    <align>right</align>               
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+                    <font>Font-ListInfo</font>
+                    <onclick>RunScript(special://skin/extras/scripts/UpdateIsraeLiveIcons.py)</onclick>
+                    <visible>ControlGroup(3).HasFocus(39)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>   
+                    <onclick>ReloadSkin()</onclick>                         
+			   </control>-->
+
+			   <!--צבעים -->
+					<control type="button" id="905">
+                        <label>$INFO[Skin.String(HighlightColor)]</label>
+					    <align>left</align>
+                        <label2>324324243</label2>
+						                    <font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>                   
+					</control>
+					
+                    <!-- Second Color -->
+                    <control type="button" id="906">
+                        <label>$INFO[Skin.String(HighlightColor2)]</label>
+						<align>left</align>
+                        <label2>324324244</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor2)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+					
+					                    <!-- אריח דף הבית -->
+                    <control type="button" id="907">
+                        <label>$INFO[Skin.String(HighlightColor3)]</label>
+						<align>left</align>
+                        <label2>324324246</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor3)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+					
+									                    <!-- אריח מערכת  -->
+                    <control type="button" id="908">
+                        <label>$INFO[Skin.String(HighlightColor4)]</label>
+						<align>left</align>
+                        <label2>324324245</label2>
+						 <font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor4)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+				
+				     <!-- צבעי OSD -->
+				                    <control type="button" id="909">
+                        <label>$INFO[Skin.String(HighlightColor5)]</label>
+						<align>left</align>
+                        <label2>324324344</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor5)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+					<!--HighlightColor6-->
+					<control type="button" id="910">
+                        <label>$INFO[Skin.String(HighlightColor6)]</label>
+						<align>left</align>
+                        <label2>הגדר צבע ראשי בסימון</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor6)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+										<!--HighlightColor6-->
+					<control type="button" id="911">
+                        <label>$INFO[Skin.String(HighlightColor7)]</label>
+						<align>left</align>
+                        <label2>הגדר צבע רקע אריחים</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor7)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+					
+															<!--HighlightColor6-->
+					<control type="button" id="912">
+                        <label>$INFO[Skin.String(HighlightColor8)]</label>
+						<align>left</align>
+                        <label2>הגדר צבע רקע שורת הודעות דף הבית</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor8)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+					
+																				<!--HighlightColor6-->
+					<control type="button" id="913">
+                        <label>$INFO[Skin.String(HighlightColor9)]</label>
+						<align>left</align>
+                        <label2>הגדר צבע לשורת RSS בדף הבית </label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor9)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+					
+					clockheader
+					<control type="button" id="914">
+                        <label>$INFO[Skin.String(clockheadercolor)]</label>
+						<align>left</align>
+                        <label2>הגדר צבע כותרת לשעון ומזג האויר</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=clockheadercolor)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+					
+					                 
+					<!-- Reset Colors -->
+					<control type="button" id="915">
+                        <label>324324247</label>
+						<align>right</align>
+						<font>Font-ListInfo</font>
+						<onclick>Skin.Reset(HighlightColor)</onclick>
+                        <onclick>Skin.Reset(HighlightColor2)</onclick>
+                        <onclick>Skin.Reset(HighlightColor3)</onclick>
+                        <onclick>Skin.Reset(HighlightColor4)</onclick>
+						<onclick>Skin.Reset(HighlightColor5)</onclick>
+						<onclick>Skin.Reset(HighlightColor6)</onclick>
+						<onclick>Skin.Reset(HighlightColor7)</onclick>
+						<onclick>Skin.Reset(HighlightColor8)</onclick>
+						<onclick>Skin.Reset(HighlightColor9)</onclick>
+						<onclick>Skin.Reset(clockheadercolor)</onclick>
+						<onclick>Skin.Reset(Iconcolor)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>     
+					</control>
+
+                     <control type="button" id="8901">
+                        <onclick>RunScript(script.skin.helper.service,action=colorthemes)</onclick>
+                        <label>$ADDON[script.skin.helper.service 32085]</label>
+                        <description>Manage Color Themes</description>
+			            <align>right</align>
+                        <font>Font-ListInfo</font>
+					    <visible>ControlGroup(3).HasFocus(40)</visible>
+                    </control>  
+					RunScript(script.skin.helper.service,action=colorthemes)             
+
+					<control type="radiobutton" id="8902">
+                        <radioposx>1350</radioposx>
+                        <width>100%</width>
+                        <label>אפשר / בטל תצוגות (סמן בלבן תצוגה שברצונך לבטל)</label>
+							                    <align>right</align>
+                    <font>Font-ListInfo</font>
+						<onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
+                    <visible>ControlGroup(3).HasFocus(40)</visible>
+                    </control>
+					
+<control type="radiobutton" id="6009">
+    <label>אפשר הגדרת תצוגה</label>
+    <onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick>
+	                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+    <selected>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</selected>
+	                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <visible>ControlGroup(3).HasFocus(40)</visible>
+</control>
+<control type="button" id="6010">
+    <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=movies)</onclick>
+    <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+    <label>תצוגת סרטים: $INFO[Skin.String(SkinHelper.ForcedViews.movies)]</label>
+		                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <visible>ControlGroup(3).HasFocus(40)</visible>
+</control>
+<control type="button" id="6011">
+    <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=tvshows)</onclick>
+    <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+    <label>תצוגת סדרות:  $INFO[Skin.String(SkinHelper.ForcedViews.tvshows)]</label>
+		                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <visible>ControlGroup(3).HasFocus(40)</visible>
+</control>
+<control type="button" id="6012">
+    <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=seasons)</onclick>
+    <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+    <label>תצוגות עונות:  $INFO[Skin.String(SkinHelper.ForcedViews.seasons)]</label>
+		                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <visible>ControlGroup(3).HasFocus(40)</visible>
+</control>
+<control type="button" id="6013">
+    <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=episodes)</onclick>
+    <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+    <label>תצוגת פרקים: $INFO[Skin.String(SkinHelper.ForcedViews.episodes)]</label>
+	                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <visible>ControlGroup(3).HasFocus(40)</visible>
+						</control>
+<control type="button" id="6014">
+    <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=sets)</onclick>
+    <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+    <label>Movie sets: $INFO[Skin.String(SkinHelper.ForcedViews.sets)]</label>
+		                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <visible>ControlGroup(3).HasFocus(40)</visible>
+</control>
+<control type="button" id="6015">
+    <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=setmovies)</onclick>
+    <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
+    <label>Movies inside set: $INFO[Skin.String(SkinHelper.ForcedViews.setmovies)]</label>
+		                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <visible>ControlGroup(3).HasFocus(40)</visible>
+</control>
+						
+	  </control>
+	  
+        	  </control>
+		<include>GlobalTopBar</include>
+    </controls>
+</window>
