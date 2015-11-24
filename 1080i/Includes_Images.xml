@@ -58,7 +58,7 @@
         <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
-        <value>common/black.png</value>
+		<value>common/black.png</value>
     </variable>
 
     <variable name="Image_Indicator">
@@ -237,27 +237,32 @@
     <variable name="Flagstar1">
         <value condition="IntegerGreaterThan(ListItem.Rating,1)">star10</value>
         <value condition="IntegerGreaterThan(ListItem.Rating,0)">star5</value>
-        <value>star0</value>
+		<value condition="IsEmpty(ListItem.Rating)"></value>
+        <value></value>
     </variable>
     <variable name="Flagstar2">
         <value condition="IntegerGreaterThan(ListItem.Rating,3)">star10</value>
         <value condition="IntegerGreaterThan(ListItem.Rating,2)">star5</value>
-        <value>star0</value>
+				<value condition="ListItem.Rating"></value>
+
+        <value></value>
     </variable>
     <variable name="Flagstar3">
         <value condition="IntegerGreaterThan(ListItem.Rating,5)">star10</value>
         <value condition="IntegerGreaterThan(ListItem.Rating,4)">star5</value>
-        <value>star0</value>
+				<value condition="ListItem.Rating"></value>
+
+        <value></value>
     </variable>
     <variable name="Flagstar4">
         <value condition="IntegerGreaterThan(ListItem.Rating,7)">star10</value>
         <value condition="IntegerGreaterThan(ListItem.Rating,6)">star5</value>
-        <value>star0</value>
+        <value></value>
     </variable>
     <variable name="Flagstar5">
         <value condition="IntegerGreaterThan(ListItem.Rating,9)">star10</value>
         <value condition="IntegerGreaterThan(ListItem.Rating,8)">star5</value>
-        <value>star0</value>
+        <value></value>
     </variable>
     
 </includes>

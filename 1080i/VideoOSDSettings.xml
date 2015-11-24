@@ -42,12 +42,7 @@
 
             <control type="button" id="7">
                 <description>Default Button</description>
-                <align>left</align>
-                <texturefocus>noop</texturefocus>
-                <texturenofocus>noop</texturenofocus>
-                <textcolor>TopBarIcon</textcolor>
-                <focusedcolor>Highlight</focusedcolor>
-                <disabledcolor>TopBarDisabled</disabledcolor>
+			<align>left</align>
                 <font>Font-ListInfo</font>
             </control>
 
@@ -55,27 +50,19 @@
                 <description>Default RadioButton</description>
                 <align>left</align>
                 <radioposx>1318</radioposx>
-                <texturefocus>noop</texturefocus>
-                <texturenofocus>noop</texturenofocus>
-                <textcolor>TopBarIcon</textcolor>
-                <focusedcolor>Highlight</focusedcolor>
-                <disabledcolor>TopBarDisabled</disabledcolor>
-                <textureradioonfocus colordiffuse="Highlight">buttons/radio-on.png</textureradioonfocus>
-                <textureradioonnofocus colordiffuse="TopBarIcon">buttons/radio-on.png</textureradioonnofocus>
-                <textureradioofffocus colordiffuse="Highlight">buttons/radio-off.png</textureradioofffocus>
-                <textureradiooffnofocus colordiffuse="TopBarIcon">buttons/radio-off.png</textureradiooffnofocus>
                 <font>Font-ListInfo</font>
             </control>
 
+			        <control type="spincontrolex" id="9">
+            <width>100%</width>
+                <description>Default RadioButton</description>
+                <align>left</align>
+                <radioposx>1318</radioposx>
+                <font>Font-ListInfo</font>       
+				</control>
 
             <control type="sliderex" id="13">
                 <description>Default Slider</description>
-                <align>left</align>
-                <texturefocus>noop</texturefocus>
-                <texturenofocus>noop</texturenofocus>
-                <textcolor>SliderDialog</textcolor>
-                <focusedcolor>Highlight</focusedcolor>
-                <disabledcolor>TopBarDisabled</disabledcolor>
                 <font>Font-ListInfo</font>
             </control>
 

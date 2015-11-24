@@ -6,8 +6,9 @@
     <onload condition="!Skin.HasSetting(NextAired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
 	    <onload condition="!Skin.HasSetting(NextAired)">RunScript(script.tv.show.next.aired,force=True)</onload>
 	<onload condition="Skin.HasSetting(rss.tvnextaired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
-  
+
   <control type="group">
+
 	 	 <control type="label">
 			<posx>9</posx>
 			<width>470</width>
@@ -36,7 +37,7 @@
             <label>$INFO[(ListItem.NextDate)]</label>
         </control>
 				
-				
+
 				
 <control type="image">
 						<posx>0</posx>
@@ -96,6 +97,8 @@
 			  </control>
 			  
             <control type="group">
+			  			<visible>Control.IsVisible(59) + IntegerGreaterThan(Container.NumItems,0)</visible>
+
                 <posx>listx</posx>
                 <posy>listy</posy>
                 <control type="image">
@@ -428,7 +431,8 @@
 			<visible>[Container.Content(Episodes) + !IsEmpty(ListItem.Episode) + !IsEmpty(ListItem.TVShowTitle)] | [Container.Content(songs) + !IsEmpty(ListItem.TrackNumber)]</visible>
 
 	 </control>
-	  
+	 
+
 	 <control type="label">
 			<posx>50</posx>
 			<width>400</width>

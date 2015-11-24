@@ -8,11 +8,54 @@
             <visible>Control.IsVisible(50)</visible>
             <include>Animation.ViewChange</include>     
             <include>DefSideLabel</include> 
+			
+						<control type="image">
+				<description>Fanart</description>
+				<posx>-250</posx>
+				<posy>-100</posy>
+				<width>1980</width>
+				<height>1280</height>
+				<aspectratio scalediffuse="false">scale</aspectratio>
+				<fadetime>300</fadetime>
+				<animation effect="fade" start="100" end="70" time="300" condition="true">Conditional</animation>
+				<texture background="true" fallback="special://skin/extras/backgrounds/loading/loading.jpg">$INFO[ListItem.Art(fanart)]</texture>
+				<visible>!IntegerGreaterThan(Container.NumItems,0)</visible>
+			</control>
+
+			<control type="multiimage">
+				<posy>400</posy>
+				<posx>710</posx>
+				<width>84</width>
+				<height>84</height> 
+				<aspectratio>keep</aspectratio>
+				<imagepath fallback="special://skin/extras/busy_spinners/8.gif">$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</imagepath>
+				<timeperimage>100</timeperimage>
+				<fadetime>0</fadetime>
+				<visible>!Skin.String(SkinHelper.SpinnerTexturePath,None) + !IntegerGreaterThan(Container.NumItems,0)</visible>
+			</control>
+
+						<control type="label">
+				<posy>480</posy>
+				<posx>645</posx>
+				<font>Font-Sublabel</font>
+				<label>Eminence[COLOR=Highlight2]ZEEV[/COLOR]</label>
+				<visible>!IntegerGreaterThan(Container.NumItems,0)</visible>
+
+			</control>
+			
+			<control type="label">
+				<posy>530</posy>
+				<posx>690</posx>
+				<font>Font-Header</font>
+				<label>טוען</label>
+				<visible>!IntegerGreaterThan(Container.NumItems,0)</visible>
+
+			</control>
         </control>
         <control type="group" description="ListView">
             <posx>listpad</posx>
             <posy>listy</posy>
-            <visible>Control.IsVisible(50)</visible>
+            <visible>Control.IsVisible(50) + IntegerGreaterThan(Container.NumItems,0)</visible>
             <include>Animation.ViewChange</include>     
             <control type="scrollbar" id="60">
                 <visible>!Skin.HasSetting(disable.scrollbars)</visible>

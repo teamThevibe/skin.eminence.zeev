@@ -150,14 +150,15 @@
 			<shortcut label="31314" type="Hub 1112" icon="special://skin/extras/icons/tvguide.png">ActivateWindow(1112)</shortcut>
 			<shortcut label="31313" type="Hub 1113" icon="special://skin/extras/icons/rocket.png">ActivateWindow(1113)</shortcut>
 			<shortcut label="5498233" type="Hub 1115" icon="special://skin/extras/icons/trakttv.png">ActivateWindow(1115)</shortcut>
+			<shortcut label="31343612" type="Hub 1116" icon="special://skin/extras/icons/favourites.png">ActivateWindow(1116)</shortcut>
 			<shortcut label="31340" type="Hub 1114" icon="special://skin/extras/icons/songs.png">ActivateWindow(1114)</shortcut>
             <shortcut label="31123" type="Hub 1103" icon="special://skin/extras/icons/addon.png">ActivateWindow(1103)</shortcut>
-            <shortcut label="31123" type="Hub 1104" icon="special://skin/extras/icons/addon.png">ActivateWindow(1104)</shortcut>
-            <shortcut label="31123" type="Hub 1105" icon="special://skin/extras/icons/addon.png">ActivateWindow(1105)</shortcut>
-            <shortcut label="31123" type="Hub 1106" icon="special://skin/extras/icons/addon.png">ActivateWindow(1106)</shortcut>
-            <shortcut label="31123" type="Hub 1107" icon="special://skin/extras/icons/addon.png">ActivateWindow(1107)</shortcut>
-            <shortcut label="31123" type="Hub 1108" icon="special://skin/extras/icons/addon.png">ActivateWindow(1108)</shortcut>
-            <shortcut label="31123" type="Hub 1109" icon="special://skin/extras/icons/addon.png">ActivateWindow(1109)</shortcut>
+            <shortcut label="31343605" type="Hub 1104" icon="special://skin/extras/icons/addon.png">ActivateWindow(1104)</shortcut>
+            <shortcut label="31343606" type="Hub 1105" icon="special://skin/extras/icons/addon.png">ActivateWindow(1105)</shortcut>
+            <shortcut label="31343607" type="Hub 1106" icon="special://skin/extras/icons/addon.png">ActivateWindow(1106)</shortcut>
+            <shortcut label="31343608" type="Hub 1107" icon="special://skin/extras/icons/addon.png">ActivateWindow(1107)</shortcut>
+            <shortcut label="31343609" type="Hub 1108" icon="special://skin/extras/icons/addon.png">ActivateWindow(1108)</shortcut>
+            <shortcut label="31343610" type="Hub 1109" icon="special://skin/extras/icons/addon.png">ActivateWindow(1109)</shortcut>
         </node>
 		
 				<!-- common items -->

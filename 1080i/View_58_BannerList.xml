@@ -6,7 +6,7 @@
     
         <description>Banner List View (id=58)</description>
         <control type="group">
-            <visible>Control.IsVisible(58)</visible>
+            <visible>Control.IsVisible(58) + IntegerGreaterThan(Container.NumItems,0)</visible>
             <include>Animation.ViewChange</include>     
             <include>DefSideLabel</include> 
               

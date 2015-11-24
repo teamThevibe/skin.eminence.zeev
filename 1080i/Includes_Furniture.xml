@@ -328,7 +328,7 @@
             <fadetime>600</fadetime>
             <randomize>true</randomize>
             <timeperimage>5000</timeperimage>
-            <imagepath background="true">special://skin/extras/NEW_BG/Channels/Channels.jpg</imagepath>
+            <imagepath background="true">special://skin/extras/pvr/background.jpg</imagepath>
             <aspectratio>scale</aspectratio>
             <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
             <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
@@ -703,6 +703,44 @@
         </control>
     </include>
 
+	    <!-- BACKGROUND -->
+    <include name="Furniture_Background22">
+			<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0)</visible>
+				<visible>!Window.IsVisible(2003)</visible>
+        <control type="multiimage">
+		<posx>-100</posx>
+		<posy>-100</posy>
+            <width>120%</width>
+            <height>120%</height>
+            <fadetime>600</fadetime>
+            <randomize>true</randomize>
+            <timeperimage>5000</timeperimage>
+            <imagepath background="true">$VAR[Image_Background]</imagepath>
+            <aspectratio>scale</aspectratio>
+            <animation effect="zoom" start="130" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+            <visible>!Player.HasVideo |[Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather) </visible>
+        </control>
+
+    </include>
+	
+	    <include name="Furniture_Background23">
+			<visible>Control.IsVisible(516) + !IntegerGreaterThan(Container.NumItems,0)</visible>
+        <control type="multiimage">
+		<posx>-100</posx>
+		<posy>-100</posy>
+            <width>120%</width>
+            <height>120%</height>
+            <fadetime>600</fadetime>
+            <randomize>true</randomize>
+            <timeperimage>5000</timeperimage>
+            <imagepath background="true">$VAR[Image_Background]</imagepath>
+            <aspectratio>scale</aspectratio>
+            <visible>!Player.HasVideo |[Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather) </visible>
+        </control>
+
+    </include>
+	
     <!-- TOP BAR -->
     <variable name="Furniture_TopBar_Tile_BGCOLOR">
         <value>$VAR[HighlightColor]</value>

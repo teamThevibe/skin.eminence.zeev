@@ -5,7 +5,7 @@
     <include name="View_55_Banner">
     
         <control type="group">
-            <visible>Control.IsVisible(55)</visible>    
+            <visible>Control.IsVisible(55) + IntegerGreaterThan(Container.NumItems,0)</visible>    
             <include>Animation.ViewChange</include>   
             <include>DefSideLabel</include>         
                     

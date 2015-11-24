@@ -2,7 +2,11 @@
 <!-- Foundation -->
 <includes>
     <include name="51ListEpisodeContent">
+	            <visible>Control.IsVisible(51) + IntegerGreaterThan(Container.NumItems,0)</visible>
+
         <control type="group">
+		            <visible>Control.IsVisible(51) + IntegerGreaterThan(Container.NumItems,0)</visible>
+
             <width>bigposterwborder</width>
             <control type="image">
                 <width>bigposterwborder</width>
@@ -260,9 +264,8 @@
         </control>
     </include>
     <include name="View_51_Poster">
-    
         <control type="group">
-            <visible>Control.IsVisible(51)</visible>
+            <visible>Control.IsVisible(51) + IntegerGreaterThan(Container.NumItems,0)</visible>
             <include>Animation.ViewChange</include>
             <include>DefSideLabel</include>
         </control>

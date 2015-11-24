@@ -1527,3 +1527,47 @@ msgstr "חיפוש בקיר"
 msgctxt "#31343601"
 msgid "קיצורים פופולרים"
 msgstr "קיצורים פופולרים"
+
+msgctxt "#31343602"
+msgid "קיצורים פופולרים"
+msgstr "פוסטרים & פאן ארט"
+
+msgctxt "#31343603"
+msgid "קיצורים פופולרים"
+msgstr "שינוי תצוגה"
+
+msgctxt "#31343604"
+msgid "קיצורים פופולרים"
+msgstr "חזרה לדף הבית"
+
+msgctxt "#31343605"
+msgid "Hub"
+msgstr "2 קטגוריה מותאמת אישית"
+
+msgctxt "#31343606"
+msgid "Hub"
+msgstr "3 קטגוריה מותאמת אישית"
+
+msgctxt "#31343607"
+msgid "Hub"
+msgstr "4 קטגוריה מותאמת אישית"
+
+msgctxt "#31343608"
+msgid "Hub"
+msgstr "5 קטגוריה מותאמת אישית"
+
+msgctxt "#31343609"
+msgid "Hub"
+msgstr "6 קטגוריה מותאמת אישית"
+
+msgctxt "#31343610"
+msgid "Hub"
+msgstr "7 קטגוריה מותאמת אישית"
+
+msgctxt "#31343611"
+msgid "Hub"
+msgstr "8 קטגוריה מותאמת אישית"
+
+msgctxt "#31343612"
+msgid "Hub"
+msgstr "מועדפים"

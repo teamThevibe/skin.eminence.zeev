@@ -157,7 +157,7 @@
             <posx>140</posx>
             <posy>15</posy>
             <width>650</width>
-            <align>left</align>
+						<alian>right</alian>
             <font>Font-PVRTitle</font>
             <label>$INFO[ListItem.Label]</label>
         </control>
@@ -165,7 +165,7 @@
             <posx>140</posx>
             <posy>50</posy>
             <width>720</width>
-            <align>left</align>
+						<alian>right</alian>
             <font>Font-ListInfo-Small</font>
             <label>$INFO[ListItem.StartDate]$INFO[ListItem.StartTime,$COMMA  ,]$INFO[ListItem.ChannelName,  $LOCALIZE[31173]  ,]</label>
         </control>
@@ -197,7 +197,7 @@
             <posx>140</posx>
             <posy>50</posy>
             <width>720</width>
-            <align>left</align>
+						<alian>right</alian>
             <font>Font-ListInfo-Small</font>
             <textcolor>Selected</textcolor>
             <label>$INFO[ListItem.StartDate]$INFO[ListItem.StartTime,$COMMA  ,]$INFO[ListItem.ChannelName,  $LOCALIZE[31173]  ,]</label>
@@ -412,12 +412,12 @@
                 <onleft condition="!Window.IsVisible(MyPVRGuide.xml)">50</onleft>
                 <onleft condition="Window.IsVisible(MyPVRGuide.xml)">10</onleft>
                 <include>DefMyNavBarGroupList</include>
-                
+
                 
                 
                 <control type="button" id="9002" description="View">
                     <description>Group</description>
-            <visible allowhiddenfocus="true">false</visible>
+					<label>שינוי תצוגה</label>
                     <onclick condition="Window.IsVisible(TVChannels)">ActivateWindow(TVGuide)</onclick>
                     <onclick condition="Window.IsVisible(TVChannels)">SetFocus(9002)</onclick>
                     <onclick condition="Window.IsVisible(TVGuide)">ActivateWindow(TVRecordings)</onclick>
@@ -428,6 +428,16 @@
                     <onclick condition="Window.IsVisible(TVTimers)">SetFocus(9002)</onclick>
                     <include>DefNavMenuButton</include>
                 </control>
+				
+								                <control type="button" id="9096">
+                    <description>Back to fullscreen</description>
+			       <include>DefNavMenuButton2</include>  
+                    <label>31158</label>
+                    <onclick>fullscreen</onclick>
+									   <align>right</align>
+
+                    <visible>Player.HasMedia</visible>
+                </control>  
                 
                 <control type="button" id="28">
                     <description>Group</description>
@@ -458,16 +468,9 @@
                     <description>Open Home Jumplist</description>
                     <include>DefNavMenuButton</include>
                     <label>31108</label>
-                    <onclick>ActivateWindow(playercontrols)</onclick>
+                    <onclick>ActivateWindow(home)</onclick>
                 </control>
 
-                <control type="button" id="9001">
-                    <description>Fullscreen</description>
-                    <include>DefNavMenuButton</include>
-                    <label>31158</label>
-                    <onclick>Action(fullscreen)</onclick>
-                    <visible>Player.HasMedia</visible>
-                </control>
 
             </control>
         </control>

@@ -21,19 +21,22 @@
             <include>DefMyNavBar</include>  
             <control type="grouplist" id="9000">
                 <include>DefMyNavBarGroupList</include>
-                <control type="button" id="2">
-                    <description>View</description>
-                    <include>DefNavMenuButton</include>
-                </control>
+			   <control type="button" id="564">
+			       <include>DefNavMenuButton2</include>  
+				   <label>תצוגה: $INFO[Container.Viewmode]</label>
+				   <description>View</description>
+				   <align>right</align>
+				   <onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
+				</control>              
 
                 <control type="button" id="3">
                     <description>Sort</description>
-                    <include>DefNavMenuButton</include>
+                    <include>DefNavMenuButton2</include>
                 </control>
 
                 <control type="togglebutton" id="4">
                     <description>Ascending</description>
-                    <include>DefNavMenuButton</include>
+                    <include>DefNavMenuButton2</include>
                     <label>584</label>
                     <altlabel>585</altlabel>
                 </control>

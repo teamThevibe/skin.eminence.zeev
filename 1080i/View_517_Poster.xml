@@ -1,0 +1,330 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Foundation -->
+<includes>
+    
+	
+	<include name="517Content">
+
+	<height>1080</height>
+        <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)</visible>
+        <posy>100</posy>
+        <posx>-190</posx>
+        <width>2300</width>
+        <onup condition="!Skin.HasSetting(global.kioskmode)">9000</onup>
+        <ondown>60</ondown>
+        <onleft>517</onleft>
+        <onright>517</onright>
+        <focusposition>1</focusposition>
+        <preloaditems>0</preloaditems>
+        <pagecontrol>60</pagecontrol>
+        <orientation>horizontal</orientation>
+        <viewtype label="538">list</viewtype>
+        <scrolltime tween="quadratic">400</scrolltime>
+        <itemlayout width="270">
+		
+		
+            <control type="group">
+							<visible>!Window.IsVisible(2003)</visible>
+
+                <animation effect="Conditional" condition="true">
+                    <effect type="zoom" end="60" time="0" center="213,452" />
+                </animation>
+				
+				
+                <control type="image">
+                    <top>640</top>
+                    <width>428</width>
+                    <height>640</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                    <texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
+							     	<animation effect="fade" start="100" end="20" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+                </control>
+				
+				
+                <control type="image">
+                    <centertop>640</centertop>
+                    <width>428</width>
+                    <height>48</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture>diffuse/shadowspot.png</texture>
+							     	<animation effect="fade" start="100" end="20" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+
+                </control>
+               
+                <control type="image">
+                    <width>428</width>
+                    <height>640</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                    <texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>	
+			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+					
+                </control>
+                <control type="group">
+								<visible>!Window.IsVisible(2003)</visible>
+
+                    <visible>!stringcompare(ListItem.Label,..)</visible>
+                    
+                    <control type="image">
+                        <left>379</left>
+                        <centertop>32</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <aspectratio aligny="top">keep</aspectratio>
+                        <texture colordiffuse="$VAR[ColorHighlight]">$VAR[PosterPercentWatchedBacking]</texture>
+                    </control>
+                    <control type="image">
+                        <left>379</left>
+                        <centertop>32</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <aspectratio aligny="top">keep</aspectratio>
+                        <texture>$VAR[PosterPercentWatched]</texture>		
+                    </control>
+                </control>
+                <control type="image">
+                    <left>-24</left>
+                    <top>-24</top>
+                    <width>475</width>
+                    <height>688</height>
+                    <texture border="32">common/shadow-24.png</texture>		
+					<animation effect="fade" start="100" end="20" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+
+                </control>
+            </control>
+        </itemlayout>
+		
+		
+
+        <focusedlayout width="300">
+						<visible>!Window.IsVisible(2003)</visible>
+
+            <control type="group">
+							<visible>!Window.IsVisible(2003)</visible>
+
+                <posy>120</posy>
+                <animation condition="Container(517).OnNext | Container(517).OnPrevious" effect="zoom" start="60" end="100" delay="0" time="350" tween="sine" easing="out" center="213,276">Focus</animation>
+                <animation condition="Container(517).OnNext | Container(517).OnPrevious" effect="zoom" start="100" end="60" delay="0" time="250" tween="sine" easing="out" center="213,276">UnFocus</animation>
+                <control type="image">
+                    <top>640</top>
+                    <width>428</width>
+                    <height>640</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                    <texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
+										<animation effect="fade" start="100" end="25" time="100">Conditional</animation>			
+
+           <!--         <visible>Skin.HasSetting(show.reflections)</visible> -->
+		
+                </control>
+                <control type="image">
+                    <centertop>640</centertop>
+                    <width>428</width>
+                    <height>48</height>
+                    <aspectratio>stretch</aspectratio>
+                    <texture>diffuse/shadowspot.png</texture>
+                </control>
+                <control type="image">
+                    <width>428</width>
+                    <height>640</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+                    <texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
+                </control>
+                <control type="group">
+                    <visible>!stringcompare(ListItem.Label,..)</visible>
+                    
+                  
+                  <control type="image">
+                        <left>379</left>
+                        <centertop>32</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <aspectratio aligny="top">keep</aspectratio>
+                        <texture colordiffuse="$VAR[ColorHighlight]">$VAR[PosterPercentWatchedBacking]</texture>
+                    </control>
+                    <control type="image">
+                        <left>379</left>
+                        <centertop>32</centertop>
+                        <width>32</width>
+                        <height>32</height>
+                        <aspectratio aligny="top">keep</aspectratio>
+                        <texture>$VAR[PosterPercentWatched]</texture>
+                    </control>
+                </control>
+                <control type="image">
+                    <left>-24</left>
+                    <top>-24</top>
+                    <width>475</width>
+                    <height>688</height>
+                    <texture border="32">common/shadow-24.png</texture>
+                </control>
+                
+            </control>
+        </focusedlayout>
+    </include>
+    <include name="517Wrap"><control type="wraplist" id="517"><include>517Content</include></control></include>
+    <include name="517Fixed"><control type="fixedlist" id="517"><include>517Content</include></control></include>
+    <include name="View_517_Poster">
+        <description>List View (id=517)</description>
+        <control type="group">
+            <include>Animation.Common</include>
+            <visible>Control.IsVisible(517)</visible>
+							<visible>!Window.IsVisible(2003)</visible>
+
+            <include condition="!Skin.HasSetting(53poster.nowrap)">517Wrap</include>
+            <include condition="Skin.HasSetting(53poster.nowrap)">517Fixed</include>
+            
+            <control type="group">
+                <animation effect="fade" condition="!Control.HasFocus(60)" time="200" start="100" end="0">Conditional</animation>
+                <include>Furniture_Scrollbar_Horizontal</include>
+            </control>
+            
+						  <control type="image">
+						<posx>180</posx>
+						<posy>810</posy>
+						<width>250</width>
+                        <height>250</height>
+						<texture background="true" >$INFO[ListItem.Art(clearlogo)]</texture>
+						<aspectratio>keep</aspectratio>
+			  </control>
+			
+                            <control type="label">
+											<visible>!Window.IsVisible(2003)</visible>
+
+							<posx>100</posx>
+							<posy>180</posy>
+				<font>Font-DialogHeader</font>
+                    <label>$INFO[ListItem.Label]</label>
+                    <textcolor>white</textcolor>
+                    <height>35</height>
+                    <aligny>top</aligny>
+					<align>center</align>
+												     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+                <animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
+
+					                </control>
+
+					                            <control type="label">
+																<visible>!Window.IsVisible(2003)</visible>
+
+							<posx>100</posx>
+							<posy>220</posy>
+				<font>font13</font>
+                    <label>$INFO[ListItem.Genre]</label>
+                    <textcolor>white</textcolor>
+                    <height>35</height>
+                    <aligny>top</aligny>
+					<align>center</align>
+												     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+                <animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
+
+					                </control>
+         					
+							<!--	<control type="image">
+					<posx>570</posx>
+					<posy>670</posy>
+					<width>1300</width>
+					<height>360</height>
+					<texture colordiffuse="Poster2" border="5">common/border-inner.png</texture>
+				</control> -->
+                       
+					   <control type="grouplist">
+					   				<visible>!Window.IsVisible(2003)</visible>
+
+<posx>185</posx>
+<top>980</top>
+                            <include>Animation.FadeIn</include>
+                            <include>Animation.FadeOut</include>
+                            <right>20</right>
+                            <centertop>810</centertop>
+							<centerleft>810</centerleft>
+                            <height>64</height>
+                            <orientation>horizontal</orientation>
+                            <align>left</align>
+                            <itemgap>24</itemgap>
+                            <usecontrolcoords>true</usecontrolcoords>
+													<control type="label">
+                            <width>auto</width>
+                            <height>64</height>
+                            <align>left</align>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Rating]</label>
+                            <font>Flag</font>
+                            <textcolor>PanelFG-NF</textcolor>
+							</control>
+                            <control type="image">
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar1].png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-48</posx>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar2].png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-48</posx>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar3].png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-48</posx>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar4].png</texture>
+                            </control>
+                            <control type="image">
+                                <posx>-48</posx>
+                                <width>64</width>
+                                <height>64</height>
+                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar5].png</texture>
+                            </control>
+
+						                        </control>
+            <control type="grouplist">
+							<visible>!Window.IsVisible(2003)</visible>
+
+                <left>560</left>
+                <right>SidePad</right>
+                <top>650</top>
+                <orientation>vertical</orientation>
+                <visible>![Container(517).OnNext | Container(517).OnPrevious]</visible>
+                <animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
+		     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+                <control type="label">
+				<font>SmallBold</font>
+                    <label></label>
+                    <textcolor>white</textcolor>
+                    <height>35</height>
+                    <aligny>top</aligny>
+                </control>
+                <control type="label">
+                    <font>Tiny</font>
+                    <label></label>
+                    <textcolor>white</textcolor>
+                    <height>42</height>
+                    <aligny>top</aligny>
+                </control>
+				<control type="textbox">
+                    <font>Tiny</font>
+                    <label>$VAR[PlotBox]</label>
+                    <textcolor>white</textcolor>
+                    <height>290</height>
+					<width>1300</width>
+                    <align>right</align>
+                </control>
+            
+			</control>
+        </control>
+    </include>
+
+</includes>
+ 
+	

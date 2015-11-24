@@ -76,6 +76,7 @@
     <constant name="favdialogw">1720</constant>
 
 
+
     <default type="label">
         <height>66</height>
         <align>left</align>

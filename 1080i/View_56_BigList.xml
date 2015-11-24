@@ -5,7 +5,7 @@
     <include name="View_56_BigList">
     
         <control type="group">
-            <visible>Control.IsVisible(56)</visible>
+            <visible>Control.IsVisible(56) + IntegerGreaterThan(Container.NumItems,0)</visible>
             <include>Animation.ViewChange</include>     
             <include>DefSideLabel</include>       
             <control type="panel" id="56">

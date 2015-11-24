@@ -150,6 +150,7 @@
 				<bottom>-70</bottom>
 				<height>340</height>
 				<width>1920</width>
+				<onup condition="Player.HasMedia">fullscreen</onup>	
 				<onup>SetProperty(FO9001,1,home)</onup>
 				<onup>9001</onup>
 				<ondown condition="IntegerGreaterThan(Container(9002).NumItems,0)">9002</ondown>
@@ -827,7 +828,7 @@
 				<include>Dialog_Background</include>
 				<include name="Dialog_Top_IconHeader">
 					<param name="label" value="$INFO[Container(9000).ListItem.Label,, ]$LOCALIZE[1034]" />
-					<param name="icon" value="$INFO[Container(9000).ListItem.Icon]" />
+					<param align="right" name="icon" value="$INFO[Container(9000).ListItem.Icon]" />
 				</include>
 				<include name="Dialog_Top_Arrows">
 					<param name="id" value="9002" />
@@ -840,12 +841,13 @@
 					<left>pad</left>
 					<right>0</right>
 					<top>80</top>
+					<align>right</align>
 					<bottom>pad</bottom>
 					<onleft>noop</onleft>
 					<onright>noop</onright>
 					<scrolltime>200</scrolltime>
 					<orientation>horizontal</orientation>
-					<itemlayout width="374" height="69">
+					<itemlayout align="center" aligny="center" width="374" height="69">
 						<control type="image">
 							<width>364</width>
 							<height>69</height>
@@ -862,7 +864,7 @@
 							<label>$INFO[ListItem.Label]</label>
 						</control>
 					</itemlayout>
-					<focusedlayout width="374" height="69">
+					<focusedlayout align="center" aligny="center" width="374" height="69">
 						<control type="image">
 							<width>364</width>
 							<height>69</height>
@@ -875,7 +877,6 @@
 							<textcolor>Selected</textcolor>
 							<font>Font-ListInfo-Small</font>
 							<align>center</align>
-
 							<aligny>center</aligny>
 							<label>$INFO[ListItem.Label]</label>
 						</control>
@@ -888,6 +889,136 @@
 		</control>
 	</include>
 
+	 <!-- Player Controls -->
+                <control type="grouplist" id="9005">
+                    <onup condition="IntegerGreaterThan(Container(9001).NumItems,0)">9001</onup>
+                    <ondown>9000</ondown>
+                    <visible allowhiddenfocus="true">ControlGroup(9005).HasFocus()</visible>
+                    <orientation>horizontal</orientation>
+                    <itemgap>8</itemgap>
+                    <bottom>16</bottom>
+                    <left>16</left>
+                    <width>1020</width>
+                    <height>32</height>
+                    <control type="button" id="12">
+                        <description>Skip Back</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
+                        <onclick>PlayerControl(Previous)</onclick>
+                    </control>
+
+                    <control type="button" id="13">
+                        <description>Rewind</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
+                        <onclick>PlayerControl(Rewind)</onclick>
+                    </control>
+
+                    <control type="togglebutton" id="14">
+                        <description>Play/Pause</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <altlabel></altlabel>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel">osd/pause.png</texturenofocus>
+                        <usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+                        <alttexturefocus colordiffuse="$VAR[HighlightColor]">osd/play.png</alttexturefocus>
+                        <alttexturenofocus colordiffuse="LineLabel">osd/play.png</alttexturenofocus>
+                        <onclick>PlayerControl(Play)</onclick>
+                    </control>
+
+                    <control type="button" id="15">
+                        <description>Stop</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
+                        <onclick>PlayerControl(Stop)</onclick>
+                    </control>
+
+                    <control type="button" id="16">
+                        <description>Fast Forward</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
+                        <onclick>PlayerControl(Forward)</onclick>
+                    </control>
+
+                    <control type="button" id="17">
+                        <description>Next</description>
+                        <width>32</width>
+                        <height>32</height>
+                        <label></label>
+                        <font>noop</font>
+                        <texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
+                        <texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
+                        <onclick>PlayerControl(Next)</onclick>
+                    </control>
+                </control>
+                <control type="grouplist">
+                    <visible>ControlGroup(9005).HasFocus()</visible>
+                    <orientation>horizontal</orientation>
+                    <itemgap>8</itemgap>
+                    <bottom>16</bottom>
+                    <left>256</left>
+                    <width>820</width>
+                    <height>32</height>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="580">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]  $INFO[MusicPlayer.Title]</label>
+                        <visible>Player.HasAudio</visible>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="580">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.Director][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + IsEmpty(VideoPlayer.TvShowTitle)</visible>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="580">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.TvShowTitle][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                        <visible>Player.HasVideo + !VideoPlayer.Content(LiveTV) + !IsEmpty(VideoPlayer.TvShowTitle)</visible>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="580">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>   [COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]  $INFO[VideoPlayer.Title]</label>
+                        <visible>Player.HasVideo + VideoPlayer.Content(LiveTV)</visible>
+                    </control>
+                    <control type="label">
+                        <height>100%</height>
+                        <width max="320">auto</width>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <textcolor>LineLabel</textcolor>
+                        <label>  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>
+                    </control>
+                </control>
+	
 	<!-- Home Widget -->
 	<include name="Home_Widget_Control">
 		<control type="wraplist" id="9001">
@@ -934,7 +1065,7 @@
 			<height>300</height>    
 			<aspectratio>keep</aspectratio>
 			<animation type="VisibleChange">
-				<effect type="slide" start="470" end="0" time="500" />
+				<effect type="slide" start="470" end="0" time="500" delay="300" />
 				<effect type="rotate" start="120" end="0" time="1000"  center="auto"/>
 			</animation>
 			<fadetime>300</fadetime>
@@ -942,7 +1073,24 @@
 			<visible>IsEmpty(Container(9000).ListItem.Property(PosterWidget))</visible>
 			<texture background="true">$INFO[Container(9001).ListItem.Art(discart)]</texture>
 		</control>
+				<control type="image">
+			<left>1065</left>
+			<top>side</top>
+			<width>300</width>
+			<height>300</height>    
+			<aspect>keep</aspect>
+			<animation type="VisibleChange">
+				<effect type="slide" start="470" end="0" time="500" delay="300" />
+				<effect type="rotate" start="120" end="0" time="1000"  center="auto"/>
+			</animation>
+			<fadetime>300</fadetime>
+			<visible>!Skin.HasSetting(fanart_Disable_FAKECDART)</visible>
+			<visible>IsEmpty(Container(9001).ListItem.Art(discart))</visible>
+			<visible>IsEmpty(Container(9000).ListItem.Property(PosterWidget))</visible>
+			<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9001).ListItem.Art(poster)]</texture>
+		</control>
 	</include>
+	
 		<include name="Home_Widget_DiscArt2">
 		<control type="image">
 			<left>1065</left>
@@ -950,8 +1098,8 @@
 			<width>300</width>
 			<height>300</height>    
 			<aspectratio>keep</aspectratio>
-			<animation type="VisibleChange">
-				<effect type="slide" start="470" end="0" time="500" />
+			<animation type="VisibleChange" condition="IsEmpty(ListItem.Art(discart))" >
+				<effect type="slide" start="470" end="0" time="200" delay="300"/>
 				<effect type="rotate" center="auto" start="0" end="-10800" time="500000" pulse="true" delay="400"/>
 			</animation>
 			<fadetime>300</fadetime>
@@ -959,19 +1107,29 @@
 			<visible>IsEmpty(Container(9000).ListItem.Property(PosterWidget))</visible>
 			<texture background="true">$INFO[Container(9001).ListItem.Art(discart)]</texture>
 		</control>
+		<control type="image">
+			<left>1065</left>
+			<top>side</top>
+			<width>300</width>
+			<height>300</height>    
+			<aspect>keep</aspect>
+			<animation type="VisibleChange" condition="IsEmpty(ListItem.Art(discart))" >
+				<effect type="slide" start="470" end="0" time="200" delay="300"/>
+				<effect type="rotate" center="auto" start="0" end="-10800" time="500000" pulse="true" delay="400"/>
+			</animation>
+			<fadetime>300</fadetime>
+			<visible>IsEmpty(Container(9001).ListItem.Art(discart))</visible>
+			<visible>IsEmpty(Container(9000).ListItem.Property(PosterWidget))</visible>
+			<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9001).ListItem.Art(poster)]</texture>
+		</control>
 	</include>
 			<include name="Home_Widget_clearlogo">
 		<control type="image">
-					<left>1500</left>
+			<left>1500</left>
 			<top>-220</top>
 			<width>300</width>
 			<height>300</height>    
 			<aspectratio>keep</aspectratio>
-			    <include name="Animation.SlideOpen.Up">
-        <animation effect="slide" start="0,500" end="0" delay="0" time="200">WindowOpen</animation>
-        <animation effect="slide" start="0,500" end="0" delay="0" time="200">Visible</animation>
-    </include>
-
 			<fadetime>300</fadetime>
 			<visible>!IsEmpty(Container(9001).ListItem.Art(discart))</visible>
 			<visible>IsEmpty(Container(9000).ListItem.Property(PosterWidget))</visible>
@@ -1261,7 +1419,7 @@
 						<label>  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>
 					</control>
 				</control>
-					<control type="label">
+					<!--<control type="label">
 										<itemgap>0</itemgap>
 					<bottom>16</bottom>
 					<right>-500</right>
@@ -1273,7 +1431,7 @@
 						<textcolor>white</textcolor>
 						<label>על מנת לחזור לוידיאו לחץ חזרה או Esq</label>
 						<visible>Player.HasVideo</visible>
-					</control>
+					</control>-->
 			</control>
 			<control type="group">
 				<bottom>266</bottom>
@@ -1420,7 +1578,7 @@
 						<label>  •  $INFO[Player.Time] / $INFO[Player.Duration]</label>
 					</control>
 				</control>
-				<control type="label">
+				<!--<control type="label">
 										<itemgap>0</itemgap>
 					<bottom>10</bottom>
 					<right>-500</right>
@@ -1432,7 +1590,7 @@
 						<textcolor>white</textcolor>
 						<label>על מנת לחזור לוידיאו לחץ חזרה או Esq</label>
 						<visible>Player.HasVideo</visible>
-					</control>
+					</control>-->
 			</control>
 			<control type="group">
 				<bottom>266</bottom>
@@ -1575,7 +1733,7 @@
 					</control>
 
 				</control>
-													<control type="label">
+					<!--								<control type="label">
 										<itemgap>0</itemgap>
 					<bottom>20</bottom>
 					<right>-500</right>
@@ -1587,7 +1745,7 @@
 						<textcolor>white</textcolor>
 						<label>על מנת לחזור לוידיאו לחץ חזרה או Esq</label>
 						<visible>Player.HasVideo</visible>
-					</control>
+					</control>-->
 			</control>
 			<control type="group">
 				<bottom>266</bottom>

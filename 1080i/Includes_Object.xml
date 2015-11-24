@@ -79,6 +79,84 @@
                 <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
             </control>
         </control>
+		
+		<include name="Object_HomeWidgetPoster2">
+        <control type="group">
+            <width>220</width>
+            <height>320</height>
+            <visible>!IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <width>220</width>
+                <bottom>0</bottom>
+                <top>0</top>
+                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                <bordersize>10</bordersize>
+                <aspectratio>keep</aspectratio>
+                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
+                <visible>$PARAM[focuseditem]</visible>
+            </control>
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <top>pad</top>
+                <bottom>pad</bottom>
+                <width>200</width>
+                <aspectratio>keep</aspectratio>
+                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
+            </control>
+        </control>
+        <control type="group">
+            <width>220</width>
+            <height>320</height>
+            <visible>!IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) + IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <width>220</width>
+                <bottom>0</bottom>
+                <top>0</top>
+                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                <bordersize>10</bordersize>
+                <aspectratio>keep</aspectratio>
+                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
+                <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+                <visible>$PARAM[focuseditem]</visible>
+            </control>
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <top>pad</top>
+                <bottom>pad</bottom>
+                <width>200</width>
+                <aspectratio>keep</aspectratio>
+                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
+                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+            </control>
+        </control>
+        <control type="group">
+            <width>220</width>
+            <height>320</height>
+            <visible>IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)) + IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster))</visible>
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <width>220</width>
+                <bottom>0</bottom>
+                <top>0</top>
+                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
+                <bordersize>10</bordersize>
+                <aspectratio>keep</aspectratio>
+                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
+                <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+                <visible>$PARAM[focuseditem]</visible>
+            </control>
+            <control type="image">
+                <centerleft>50%</centerleft>
+                <top>pad</top>
+                <bottom>pad</bottom>
+                <width>200</width>
+                <aspectratio>keep</aspectratio>
+                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
+                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
+            </control>
+        </control>
 
     </include>
     <include name="Object_HomeTile">
@@ -515,5 +593,6 @@
             </control>
         </control>
     </include>
-    
+        </include>
+
 </includes>

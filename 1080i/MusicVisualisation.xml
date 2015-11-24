@@ -38,23 +38,6 @@
 			<height>1080</height>
 			<visible>Player.HasAudio + [StringCompare(Visualisation.Name,waveform) | StringCompare(Visualisation.Name,opengl spectrum) | StringCompare(Visualisation.Name,directx spectrum)]</visible>
 		</control>
-		
-
-			<!-- Album 			
-
-				<control type="image">
-					<description>cover image</description>
-					<posx>1500</posx>
-					<posy>850</posy>
-					<width>200</width>
-					<height>200</height>
-					<texture diffuse="albumdiffuse.png">$INFO[MusicPlayer.Cover]</texture>
-					<animation effect="fade" start="100" end="0" time="8000">Hidden</animation>
-					<visible>Player.HasAudio</visible>
-				</control>-->
-				
-				
-
 
 	</controls>
 </window>

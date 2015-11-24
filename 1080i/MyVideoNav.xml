@@ -1,54 +1,86 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="6">
-    <allowoverlay>yes</allowoverlay>
-    <background>0</background>
-    <defaultcontrol always="true">50</defaultcontrol>
-    <views>50,51,500,53,54,55,56,57,58,59,522,794,60,516</views>
-    <onload condition="!Skin.HasSetting(NextAired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
-	<onload condition="Skin.HasSetting(rss.tvnextaired)">RunScript(script.tv.show.next.aired,backend=True)</onload>
-    <onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
-    <onload>RunScript(script.duration,backend=True)</onload>
+	<allowoverlay>yes</allowoverlay>
+	<background>0</background>
+	<defaultcontrol always="true">50</defaultcontrol>
+	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517</views>
+	<onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
+	<onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
+	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
+	<onload>RunScript(script.duration,backend=True)</onload>
 	<controls>
-        
-        <control type="radiobutton" id="19">
-            <description>Filter (hidden)</description>
-            <include>HiddenButton</include>
-        </control>
 
-        <include>GlobalBackground</include>
-        <include>DefLeftSideArrow</include>
-        <include>DefMenuMouse</include>
-        <include>DefMyNavViews</include>
-        <include>DefFullScreenNav</include>
-        <include>GlobalTopBar</include>
-                <include>View_501_Thumbnails</include>
 
-        <control type="group">   
-            <include>DefMyNavBar</include>  
-            <control type="grouplist" id="9000">
-                <visible>!Skin.HasSetting(kioskmode)</visible>
-                <include>DefMyNavBarGroupList</include>
-               
-			   <control type="button" id="564">
-			       <include>DefNavMenuButton2</include>  
-				   <label>תצוגה: $INFO[Container.Viewmode]</label>
-				   <description>View</description>
-				   <align>right</align>
-				   <onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
+
+		<control type="radiobutton" id="19">
+			<description>Filter (hidden)</description>
+			<include>HiddenButton</include>
+		</control>
+
+		<include>GlobalBackground</include>
+		<!--<include>DefLeftSideArrow</include>-->
+		<include>DefMenuMouse</include>
+		<include>DefMyNavViews</include>
+		<include>DefFullScreenNav</include>
+		<include>GlobalTopBar</include>
+		<include>View_501_Thumbnails</include>
+		<include>View_517_Poster</include>
+		<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO</include>
+		<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO2</include>
+				<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO3</include>
+				<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO4</include>
+
+		<control type="group">   
+			<include>DefMyNavBar</include>  
+			<control type="grouplist" id="9000">
+				<visible>!Skin.HasSetting(kioskmode)</visible>
+				<include>DefMyNavBarGroupList</include>
+
+				<control type="button" id="564">
+					<include>DefNavMenuButton2</include>  
+					<label>31343603</label>
+					<description>View</description>
+					<align>right</align>
+					<onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
+					<ondown>9096</ondown>
 				</control>              
 
-				
-				
-			  <!--
+				<control type="button" id="9003">
+					<description>extendedinfo</description>
+					<include>DefNavMenuButton</include>
+					<onclick>SetFocus(8)</onclick>
+					<onclick>ActivateWindow(2003)</onclick>
+					<label>פרטי סרט</label>
+				</control>
+
+				<control type="button" id="9060">
+					<description>Trailer</description>
+					<include>DefNavMenuButton</include>
+					<onclick>PlayMedia("$INFO[ListItem.Trailer]")</onclick>
+					<label>$LOCALIZE[20410]</label>
+				</control>
+
+				<control type="button" id="9096">
+					<description>Back to fullscreen</description>
+					<include>DefNavMenuButton2</include>  
+					<label>31158</label>
+					<onclick>fullscreen</onclick>
+					<align>right</align>
+
+					<visible>Player.HasMedia</visible>
+				</control>  
+
+
+				<!--
                 <control type="button" id="2">
 				   <description>View</description>
                     <include>DefNavMenuButton</include>
 				</control>-->
-                
-                <!-- EXTRA INFO OPTIONS -->
 
-				
+				<!-- EXTRA INFO OPTIONS -->
+
+
 				<!--<control type="button" id="9071" description="artwork downloader">
                      <include>DefNavMenuButton</include>
                      				<align>right</align>
@@ -58,214 +90,193 @@
                      <onclick condition="Container.Content(movies)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=movie, dbid=$INFO[ListItem.DBID])</onclick>
                      <onclick condition="Container.Content(musicvideos)">XBMC.RunScript(script.artwork.downloader, mode=gui, mediatype=musicvideo, dbid=$INFO[ListItem.DBID])</onclick>
                  </control>-->
-				
-				<control type="togglebutton" id="9005">
-			               <include>DefNavMenuButton2</include>  
+
+				<control type="togglebutton" id="9097">
+					<include>DefNavMenuButton2</include>  
 					<onclick>Skin.ToggleSetting(posterview.tvinfo)</onclick>
-                    <visible>Container.Content(tvshows) + Control.IsVisible(51)</visible>
-                    <label>31150</label>
-                    <altlabel>31151</altlabel>
+					<visible>Container.Content(tvshows) + Control.IsVisible(51)</visible>
+					<label>31150</label>
+					<altlabel>31151</altlabel>
 
-                    <usealttexture>Skin.HasSetting(posterview.tvinfo)</usealttexture>
-                    <alttexturefocus>noop</alttexturefocus>
-                    <alttexturenofocus>noop</alttexturenofocus>
-                </control>
-                <control type="togglebutton" id="9006">
-			               <include>DefNavMenuButton2</include>  
-					<onclick>Skin.ToggleSetting(posterview.info)</onclick>
-                    <visible>Container.Content(movies) + Control.IsVisible(51)</visible>
-                    <label>31150</label>
-                    <altlabel>31151</altlabel>
-
-                    <usealttexture>Skin.HasSetting(posterview.info)</usealttexture>
-                    <alttexturefocus>noop</alttexturefocus>
-                    <alttexturenofocus>noop</alttexturenofocus>
-                </control>
-                <control type="togglebutton" id="9007">
-			               <include>DefNavMenuButton2</include>  
-					<onclick>Skin.ToggleSetting(listview.tvinfo)</onclick>
-                    <visible>Container.Content(tvshows) + Control.IsVisible(50)</visible>
-                    <label>31150</label>
-                    <altlabel>31151</altlabel>
-                    <usealttexture>Skin.HasSetting(listview.tvinfo)</usealttexture>
-                    <alttexturefocus>noop</alttexturefocus>
-                    <alttexturenofocus>noop</alttexturenofocus>
-                </control>
-                <control type="togglebutton" id="9008">
-			               <include>DefNavMenuButton2</include>  
-                    <onclick>Skin.ToggleSetting(listview.info)</onclick>
-                    <visible>Container.Content(movies) + Control.IsVisible(50)</visible>
-                    <label>31150</label>
-                    <altlabel>31151</altlabel>
-
-                    <usealttexture>Skin.HasSetting(listview.info)</usealttexture>
-                    <alttexturefocus>noop</alttexturefocus>
-                    <alttexturenofocus>noop</alttexturenofocus>
-                </control>
-                <control type="togglebutton" id="9009">
-			               <include>DefNavMenuButton2</include>  
-					<onclick>Skin.ToggleSetting(wallview.info)</onclick>
-                    <onclick>ReloadSkin()</onclick>
-                    <visible>Control.IsVisible(500)</visible>
-                    <label>31150</label>
-                    <altlabel>31151</altlabel>
-
-                    <usealttexture>Skin.HasSetting(wallview.info)</usealttexture>
-                    <alttexturefocus>noop</alttexturefocus>
-                    <alttexturenofocus>noop</alttexturenofocus>
-                </control>
-                
-                
-                <control type="togglebutton" id="9011">
-			               <include>DefNavMenuButton2</include>  
-                    				<align>right</align>
-					<onclick>Skin.ToggleSetting(posterview.labels)</onclick>
-                    <visible>Control.IsVisible(51)</visible>
-                    <visible>![[Container.Content(artists) | Container.Content(episodes) | [Skin.HasSetting(posterview.tvinfo) + Container.Content(tvshows)] | [Skin.HasSetting(posterview.info) + Container.Content(movies)]] + !stringcompare(ListItem.Label,..)]</visible>
-                    <label>31226</label>
-                    <altlabel>31227</altlabel>
-                    <usealttexture>Skin.HasSetting(posterview.labels)</usealttexture>
-                    <alttexturefocus>noop</alttexturefocus>
-                    <alttexturenofocus>noop</alttexturenofocus>
-                </control>
-                
-                
-      
-                <control type="button" id="3">
-                    <description>Sort</description>
-					<include>DefNavMenuButton2</include>
-                </control>
-                
-                <control type="togglebutton" id="4">
-                    <include>DefNavMenuButton2</include>
+					<usealttexture>Skin.HasSetting(posterview.tvinfo)</usealttexture>
 					<alttexturefocus>noop</alttexturefocus>
-                    <alttexturenofocus>noop</alttexturenofocus>
-                    <label>584</label>
-                    <altlabel>585</altlabel>
-                    <usealttexture>Container.SortDirection(Ascending)</usealttexture>
-                </control>
-                
-                <control type="radiobutton" id="9012">
-                    <include>DefNavMenuButton2</include>
-				<align>right</align>                  
-				  <onclick>Skin.ToggleSetting(list.highlight)</onclick>
-                    <visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59)</visible>
-                    <label>31279</label>
+					<alttexturenofocus>noop</alttexturenofocus>
+				</control>
+				<control type="togglebutton" id="9006">
+					<include>DefNavMenuButton2</include>  
+					<onclick>Skin.ToggleSetting(posterview.info)</onclick>
+					<visible>Container.Content(movies) + Control.IsVisible(51)</visible>
+					<label>31150</label>
+					<altlabel>31151</altlabel>
+
+					<usealttexture>Skin.HasSetting(posterview.info)</usealttexture>
+					<alttexturefocus>noop</alttexturefocus>
+					<alttexturenofocus>noop</alttexturenofocus>
+				</control>
+				<control type="togglebutton" id="9007">
+					<include>DefNavMenuButton2</include>  
+					<onclick>Skin.ToggleSetting(listview.tvinfo)</onclick>
+					<visible>Container.Content(tvshows) + Control.IsVisible(50)</visible>
+					<label>31150</label>
+					<altlabel>31151</altlabel>
+					<usealttexture>Skin.HasSetting(listview.tvinfo)</usealttexture>
+					<alttexturefocus>noop</alttexturefocus>
+					<alttexturenofocus>noop</alttexturenofocus>
+				</control>
+				<control type="togglebutton" id="9008">
+					<include>DefNavMenuButton2</include>  
+					<onclick>Skin.ToggleSetting(listview.info)</onclick>
+					<visible>Container.Content(movies) + Control.IsVisible(50)</visible>
+					<label>31150</label>
+					<altlabel>31151</altlabel>
+
+					<usealttexture>Skin.HasSetting(listview.info)</usealttexture>
+					<alttexturefocus>noop</alttexturefocus>
+					<alttexturenofocus>noop</alttexturenofocus>
+				</control>
+				<control type="togglebutton" id="9009">
+					<include>DefNavMenuButton2</include>  
+					<onclick>Skin.ToggleSetting(wallview.info)</onclick>
+					<onclick>ReloadSkin()</onclick>
+					<visible>Control.IsVisible(500)</visible>
+					<label>31150</label>
+					<altlabel>31151</altlabel>
+
+					<usealttexture>Skin.HasSetting(wallview.info)</usealttexture>
+					<alttexturefocus>noop</alttexturefocus>
+					<alttexturenofocus>noop</alttexturenofocus>
+				</control>
+
+
+				<control type="togglebutton" id="9011">
+					<include>DefNavMenuButton2</include>  
 					<align>right</align>
-					                    <radioposx>20</radioposx>  
+					<onclick>Skin.ToggleSetting(posterview.labels)</onclick>
+					<visible>Control.IsVisible(51)</visible>
+					<visible>![[Container.Content(artists) | Container.Content(episodes) | [Skin.HasSetting(posterview.tvinfo) + Container.Content(tvshows)] | [Skin.HasSetting(posterview.info) + Container.Content(movies)]] + !stringcompare(ListItem.Label,..)]</visible>
+					<label>31226</label>
+					<altlabel>31227</altlabel>
+					<usealttexture>Skin.HasSetting(posterview.labels)</usealttexture>
+					<alttexturefocus>noop</alttexturefocus>
+					<alttexturenofocus>noop</alttexturenofocus>
+					<ondwon>3</ondwon>
+				</control>
 
-                    <selected>Skin.HasSetting(list.highlight)</selected>
 
 
-                </control>
-                
-                <control type="radiobutton" id="14">
-			               <include>DefNavMenuButton2</include>  
+				<control type="button" id="3">
+					<description>Sort</description>
+					<include>DefNavMenuButton2</include>
+				</control>
+
+				<control type="togglebutton" id="4">
+					<include>DefNavMenuButton2</include>
+					<alttexturefocus>noop</alttexturefocus>
+					<alttexturenofocus>noop</alttexturenofocus>
+					<label>584</label>
+					<altlabel>585</altlabel>
+					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
+					<ondwon>9012</ondwon>
+
+				</control>
+
+				<control type="radiobutton" id="9012">
+					<include>DefNavMenuButton2</include>
+					<align>right</align>                  
+					<onclick>Skin.ToggleSetting(list.highlight)</onclick>
+					<visible>Control.IsVisible(50) | Control.IsVisible(57) | Control.IsVisible(58) | Control.IsVisible(59)</visible>
+					<label>31279</label>
+					<align>right</align>
+					<radioposx>20</radioposx>  
+
+					<selected>Skin.HasSetting(list.highlight)</selected>
+					<ondwon>14</ondwon>
+
+
+				</control>
+
+				<control type="radiobutton" id="14">
+					<include>DefNavMenuButton2</include>  
 					<label>20367</label>
-                    <radioposx>20</radioposx>  
+					<radioposx>20</radioposx>  
 
-                    <selected>System.Setting(hidewatched)</selected>
-                    
-                </control>
-                
-                
-                
-                <control type="button" id="21">
-                    <description>Activate Filter</description>
-			               <include>DefNavMenuButton2</include>  
-                    <label>$LOCALIZE[587]$INFO[Window.Property(filter),: ,]</label>
-                    <onclick>SendClick(videolibrary,19)</onclick>
-                    <onclick>SetFocus(50)</onclick>
-                    <visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
-                </control>
+					<selected>System.Setting(hidewatched)</selected>
+					<ondwon>21</ondwon>
 
-                <control type="radiobutton" id="98">
-                    <visible>Container.CanFilterAdvanced</visible>
-				   <description>Filter</description>
-			               <include>DefNavMenuButton2</include>  
-                    <label>587</label>
-                    <onclick>SetFocus(50)</onclick>
-                    <onclick>Filter</onclick>
-					                    <radioposx>20</radioposx>  
+				</control>
 
-                    <selected>Container.Filtered</selected>
-                    
-                </control>
-                
-                <control type="button" id="9002">
-                    <description>Search</description>
-			               <include>DefNavMenuButton2</include>  
-                    <onclick>SetFocus(50)</onclick>
-                    <onclick>RunScript(script.globalsearch)</onclick>
-                    <label>137</label>
-                </control>
-				<!-- פרטי סרט 
-				 <control type="button" id="9003">
-                    <description>extendedinfo</description>
-                    <include>DefNavMenuButton</include>
-                    <onclick>SetFocus(50)</onclick>
-					<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=$INFO[Container(211).ListItem.Label])</onclick>
-                    <label>פרטי סרט</label>
-                </control>!-->
-                <!--
-                <control type="button" id="9060">
-                <description>Trailer</description>
-                <include>DefNavMenuButton</include>
-                <onclick>PlayMedia("$INFO[ListItem.Trailer]")</onclick>
-                <label>$LOCALIZE[20410]</label>
-                </control>!-->
-				
-                <control type="togglebutton" id="20" description="Update library">
-                    <label>653</label>
+
+
+				<control type="button" id="21">
+					<description>Activate Filter</description>
+					<include>DefNavMenuButton2</include>  
+					<label>$LOCALIZE[587]$INFO[Window.Property(filter),: ,]</label>
+					<onclick>SendClick(videolibrary,19)</onclick>
+					<onclick>SetFocus(50)</onclick>
+					<visible>Container.CanFilter + !Container.CanFilterAdvanced</visible>
+				</control>
+
+				<control type="radiobutton" id="98">
+					<visible>Container.CanFilterAdvanced</visible>
+					<description>Filter</description>
+					<include>DefNavMenuButton2</include>  
+					<label>587</label>
+					<onclick>SetFocus(50)</onclick>
+					<onclick>Filter</onclick>
+					<radioposx>20</radioposx>  
+
+					<selected>Container.Filtered</selected>
+
+				</control>
+
+				<control type="button" id="9005">
+					<description>Search</description>
+					<include>DefNavMenuButton2</include>  
+					<onclick>SetFocus(50)</onclick>
+					<onclick>RunScript(script.globalsearch)</onclick>
+					<label>137</label>
+				</control>
+
+				<control type="togglebutton" id="20" description="Update library">
+					<label>653</label>
 					<altlabel>13353</altlabel>
-                    <usealttexture>library.isscanningvideo</usealttexture>
-			               <include>DefNavMenuButton2</include>  
-                </control>
-                
-                <control type="button" id="99">
-                    <description>Open Home Jumplist</description>
-			               <include>DefNavMenuButton2</include>  
-                    <label>31108</label>
-                    <onclick>ActivateWindow(playercontrols)</onclick>
-                </control>
+					<usealttexture>library.isscanningvideo</usealttexture>
+					<include>DefNavMenuButton2</include>  
+				</control>
+
+				<control type="button" id="99">
+					<description>Open Home Jumplist</description>
+					<include>DefNavMenuButton2</include>  
+					<label>31343604</label>
+					<onclick>ActivateWindow(home)</onclick>
+				</control>
 
 
-                <control type="radiobutton" id="11">
-                    <description>Unlock Shares</description>
+				<control type="radiobutton" id="11">
+					<description>Unlock Shares</description>
 					<onclick>xbmc.mastermode</onclick>
-                    <visible>system.haslocks</visible>
-			               <include>DefNavMenuButton2</include>  
-                    <label>20336</label>
-                                        <radioposx>20</radioposx>  
+					<visible>system.haslocks</visible>
+					<include>DefNavMenuButton2</include>  
+					<label>20336</label>
+					<radioposx>20</radioposx>  
 
-                    <selected>system.ismaster</selected>
-                </control>
-                
-    
-				
-                <control type="button" id="9091">
-                    <description>Video Playlist</description>
-			               <include>DefNavMenuButton2</include>  
-                    <label>559</label>
-                    <onclick>ActivateWindow(VideoPlaylist)</onclick>
-                    <visible>IntegerGreaterThan(Playlist.Length(video),1)</visible>
-                </control>
-                
-                
-                <control type="button" id="9001">
-                    <description>Fullscreen</description>
-			               <include>DefNavMenuButton2</include>  
-                    <label>31158</label>
-                    <onclick>Action(fullscreen)</onclick>
-                    <visible>Player.HasMedia</visible>
-                </control>
+					<selected>system.ismaster</selected>
+				</control>
 
-				
-				
-            </control>
-        </control>
-		<include condition="!Skin.HasSetting(NextAired)">NextAiredInfo</include>
 
-    </controls>
+
+				<control type="button" id="9091">
+					<description>Video Playlist</description>
+					<include>DefNavMenuButton2</include>  
+					<label>559</label>
+					<onclick>ActivateWindow(VideoPlaylist)</onclick>
+					<visible>IntegerGreaterThan(Playlist.Length(video),1)</visible>
+				</control>
+
+
+			</control>
+		</control>
+
+	</controls>
 
 </window>

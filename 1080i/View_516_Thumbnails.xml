@@ -2,123 +2,295 @@
 <!-- Foundation -->
 <includes>
 
-   <include name="View_516_Thumbnails">
-    
-        <control type="group">
-                     <include>Animation.Common</include>
+	<include name="View_516_Thumbnails">		
 
-     
+		<control type="group">
+		<include>busy</include>
+			<include>Furniture_Background22</include>
+			<include>Animation_Left</include>            
+		<posy>100</posy>
+
+		<include name="busy">
+		    <control type="image">
+                    <posx>globalpad</posx>
+                    <posy>globalpad</posy>
+                    <height>wallposterh</height>
+                    <width>wallposterw</width>
+                    <texture background="true">special://skin/extras/backgrounds/loading/loading.jpg</texture>
+                    <aspectratio aligny="top">scale</aspectratio>
+                </control>
+			<visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+		</include>
+		
+			<!-- רקע רשימה -->
+			<control type="image">
+			<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0)</visible>
+
+			<animation effect="slide" start="10" end="-1300" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+				<posx>-100</posx>
+				<width>2000</width>
+				<height>340</height>    
+				<top>500</top>
+				<texture background="true" colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
+				<animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
+			</control>
+			<control type="group">
+								<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0)</visible>
+
+				<control type="panel" id="516">
+					<orientation>horizontal</orientation>
+					<centerleft>60%</centerleft>
+					<width>80%</width>
+					<height>height</height>
+					<top>500</top>
+					<onup>9000</onup>
+					<onleft>516</onleft>
+					<onright>516</onright>
+					<align>right</align>
+					<aligny>right</aligny>
+					<right>120</right>
+					<itemgap>100</itemgap>
+					<focusposition>516</focusposition>
+					<preloaditems>2</preloaditems>
+			<animation effect="slide" start="10" end="-1160" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+
+
+					<viewtype label="31343593">list</viewtype>
+					<scrolltime tween="quadratic">400</scrolltime>
+   <itemlayout width="wallposterwlist" height="wallposterhlist" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
             <control type="group">
-                <control type="panel" id="516">
-                    <top>206</top>
-                    <left>-150</left>
-                    <width>1780</width>
-                    <height>660</height>
-                    <onleft condition="!Skin.HasSetting(global.kioskmode)">9000</onleft>
-                    <onright>516</onright>
-                    <onup>516</onup>
-                    <ondown>516</ondown>
-                    <preloaditems>2</preloaditems>
-                    <pagecontrol>60</pagecontrol>
-                    <orientation>vertical</orientation>
-                    <viewtype label="21371">list</viewtype>
-                    <scrolltime tween="quadratic">400</scrolltime>
-                    <itemlayout height="330" width="296">
+               <!-- <control type="image">
+                    <height>wallposterhborder</height>
+                    <width>wallposterwborder</width>
+                    <texture colordiffuse="PosterBorder" border="5">common/border-inner.png</texture>
+                </control>-->
+ 
+            
+                <control type="image">
+                    <posx>globalpad</posx>
+                    <posy>globalpad</posy>
+                    <height>wallposterh</height>
+                    <width>wallposterw</width>
+                    <texture background="true">$VAR[PosterImage]</texture>
+                    <aspectratio aligny="top">scale</aspectratio>
+                </control>
+                <control type="group">
+                    <posx>70r</posx>
+                    <posy>70r</posy>
+                    <include>WatchedImage</include>
+                    <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                </control>
+            </control>
 
-                        <control type="label">
-                            <left>20</left>
-                            <right>20</right>
-                            <bottom>10</bottom>
-                            <height>50</height>
-                            <aligny>center</aligny>
-                            <font>Tiny</font>
-                            <label>$INFO[ListItem.Label]</label>
-                        </control>
-
-                        <control type="image">
-                            <left>20</left>
-                            <top>20</top>
-                            <right>20</right>
-                            <height>256</height>
-                            <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
-                            <texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
-                            <visible>!Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)</visible>
-                        </control>
-                        <control type="image">
-                            <left>20</left>
-                            <top>20</top>
-                            <right>20</right>
-                            <height>256</height>
-                            <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-                            <texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
-                            <visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
-                        </control>
-                        <control type="image">
-                            <centerright>42</centerright>
-                            <centertop>42</centertop>
-                            <width>32</width>
-                            <height>32</height>
-                            <aspectratio aligny="top">keep</aspectratio>
-                            <texture>$VAR[PercentWatched]</texture>
-                            <visible>!stringcompare(ListItem.Label,..)</visible>
-                            <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-                        </control>
-
-                    </itemlayout>
-                    <focusedlayout height="330" width="296">
-
-                        <control type="label">
-                            <left>20</left>
-                            <right>20</right>
-                            <bottom>10</bottom>
-                            <height>50</height>
-                            <aligny>center</aligny>
-                            <font>Tiny</font>
-                            <label>$INFO[ListItem.Label]</label>
-                            <textcolor>Selected</textcolor>
-                        </control>
-                        <control type="image">
-                            <left>20</left>
-                            <top>20</top>
-                            <right>20</right>
-                            <height>256</height>
-                            <aspectratio scalediffuse="false">scale</aspectratio>
-                            <texture diffuse="diffuse/wall.png" colordiffuse="ff181818">common/white.png</texture>
-                        </control>
-                        <control type="image">
-                            <left>20</left>
-                            <top>20</top>
-                            <right>20</right>
-                            <height>256</height>
-                            <aspectratio scalediffuse="false" align="center" aligny="center">keep</aspectratio>
-                            <texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
-                            <visible>!Container.Content(albums) + !Container.Content(artists) + !Container.Content(songs)</visible>
-                        </control>
-                        <control type="image">
-                            <left>20</left>
-                            <top>20</top>
-                            <right>20</right>
-                            <height>256</height>
-                            <aspectratio scalediffuse="false" align="center" aligny="center">scale</aspectratio>
-                            <texture diffuse="diffuse/wall.png" background="true">$VAR[PosterImage]</texture>
-                            <visible>Container.Content(albums) | Container.Content(artists) | Container.Content(songs)</visible>
-                        </control>
-                        <control type="image">
-                            <centerright>42</centerright>
-                            <centertop>42</centertop>
-                            <width>32</width>
-                            <height>32</height>
-                            <aspectratio aligny="top">keep</aspectratio>
-                            <texture>$VAR[PercentWatched]</texture>
-                            <visible>!stringcompare(ListItem.Label,..)</visible>
-                            <visible>stringcompare(ListItem.Overlay,OverlayWatched.png)</visible>
-                        </control>
-                    </focusedlayout>
+        </itemlayout>
+        <itemlayout width="wallposterwlist" height="700" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)]">
+            <control type="group">
+               <control type="image">
+			   <posy>65</posy>
+                    <height>bannerhborder</height>
+                    <width>wallposterwborder</width>
+                    <texture colordiffuse="PosterBorder" border="5">common/border-inner.png</texture>
+                </control>
+ 
+                <control type="image">
+                    <posx>globalpad</posx>
+                    <posy>75</posy>
+                    <height>bannerhepisode</height>
+                    <width>wallposterw</width>
+                    <texture background="true">$VAR[PosterImage]</texture>
+                    <aspectratio aligny="center">scale</aspectratio>
                 </control>
                 
-            
             </control>
-            <include>Furniture_Scrollbar</include>
-        </control>
-    </include>
+        
+        </itemlayout>
+        <itemlayout width="threecollist" height="wallposterhlist" condition="Container.Content(episodes)">
+            <control type="group">
+         <!--       <control type="image">
+                    <height>wallposterhborder</height>
+                    <width>threecolborder</width>
+                    <texture colordiffuse="PosterBorder" border="5">common/border-inner.png</texture>
+                </control>-->
+ 
+                <control type="image">
+                    <posx>globalpad</posx>
+                    <posy>globalpad</posy>
+                    <height>wallposterh</height>
+                    <width>threecol</width>
+                    <texture background="true">$VAR[FanartImage]</texture>
+                    <aspectratio aligny="center">scale</aspectratio>
+                </control>
+        
+                
+                <control type="image">
+                    <posx>globalpad</posx>
+                    <bottom>20</bottom>
+                    <width>threecol</width>
+                    <height>64</height>
+                    <texture colordiffuse="PanelBG">common/white.png</texture>
+                    <aspectratio>scale</aspectratio>
+                    <animation effect="fade" end="66" condition="true">Conditional</animation>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>86</right>
+                    <bottom>20</bottom>
+                    <height>64</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small</font>
+                    <aligny>center</aligny>
+                    <label>$VAR[VARLabel]</label>
+                </control>
+                <control type="group">
+                    <posx>76r</posx>
+                    <posy>76r</posy>
+                    <include>WatchedImage</include>
+                    <animation effect="fade" start="100" end="50" condition="true">Conditional</animation>
+                </control>
+
+            </control>
+
+        </itemlayout>
+        
+        <focusedlayout width="wallposterwlist" height="wallposterhlist" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
+            <control type="group">
+                <control type="image">
+                    <height>wallposterhborder</height>
+                    <width>wallposterwborder</width>
+                    <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+					<visible>!Skin.HasSetting(home.colortilehigh)</visible>
+                </control>
+				<control type="image">
+                    <height>wallposterhborder</height>
+                    <width>wallposterwborder</width>
+                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+					<visible>Skin.HasSetting(home.colortilehigh)</visible>
+                </control>
+     
+ 
+                <control type="image">
+                    <posx>globalpad</posx>
+                    <posy>globalpad</posy>
+                    <height>wallposterh</height>
+                    <width>wallposterw</width>
+                    <texture background="true">$VAR[PosterImage]</texture>
+                    <aspectratio aligny="top">scale</aspectratio>
+                </control>
+                <control type="group">
+                    <posx>70r</posx>
+                    <posy>70r</posy>
+                    <include>WatchedImage</include>
+                </control>
+            </control>
+
+        </focusedlayout>
+        <focusedlayout width="wallposterwlist" height="700" condition="![Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes)]">
+            <control type="group">
+                <control type="image">
+				    <posy>65</posy>
+                    <height>bannerhborder</height>
+                    <width>wallposterwborder</width>
+                        <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+                </control>
+ 
+                <control type="image">
+                    <posx>globalpad</posx>
+                    <posy>75</posy>
+                    <height>bannerhepisode</height>
+                    <width>wallposterw</width>
+                    <texture background="true">$VAR[PosterImage]</texture>
+                    <aspectratio aligny="center">scale</aspectratio>
+                </control>
+            </control>            
+        </focusedlayout>
+        <focusedlayout width="threecollist" height="wallposterhlist" condition="Container.Content(episodes)">
+            <control type="group">
+                <control type="image">
+                    <height>wallposterhborder</height>
+                    <width>threecolborder</width>
+                    <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+                </control>
+ 
+                <control type="image">
+                    <posx>globalpad</posx>
+                    <posy>globalpad</posy>
+                    <height>wallposterh</height>
+                    <width>threecol</width>
+                    <texture background="true">$VAR[FanartImage]</texture>
+                    <aspectratio aligny="center">scale</aspectratio>
+                </control>
+                <control type="image">
+                    <posx>globalpad</posx>
+                    <bottom>20</bottom>
+                    <width>threecol</width>
+                    <height>64</height>
+                    <texture colordiffuse="PanelBG">common/white.png</texture>
+                    <aspectratio>scale</aspectratio>
+                    <animation effect="fade" end="66" condition="true">Conditional</animation>
+                </control>
+                <control type="label">
+                    <left>30</left>
+                    <right>86</right>
+                    <bottom>20</bottom>
+                    <height>64</height>
+                    <align>right</align>
+                    <font>Font-ListInfo-Small</font>
+                    <aligny>center</aligny>
+                    <textcolor>Selected</textcolor>
+                    <label>$VAR[VARLabel]</label>
+                </control>
+                <control type="group">
+                    <posx>76r</posx>
+                    <posy>76r</posy>
+                    <include>WatchedImage</include>
+                </control>
+
+            </control>
+
+        </focusedlayout>
+				
+				            </control>
+
+
+				<control type="image">
+					<posx>-450</posx>
+					<posy>490</posy>
+					<width>900</width>
+					<height>370</height>
+					<animation effect="fade" start="100" end="90" time="200" condition="Skin.HasSetting(home.transparent) + [!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + ![!IsEmpty(Container(9000).ListItem.Property(PosterWidget)) + stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166])] | [stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]]]">Conditional</animation>
+					<texture flipy="true" border="150" colordiffuse="sethub">common/half-tile.png</texture>
+				</control>
+				
+
+
+				
+				<control type="">
+					<posx>-450</posx>
+					<posy>700</posy>
+					<width>900</width>
+					<height>370</height>
+					<include>stars</include>
+				</control>
+
+				<include>Defs_movie</include>
+				<include>stars</include>
+				
+				<control type="image">
+					<posx>-50</posx>
+					<posy>280</posy>
+					<width>300</width>
+					<aspectratio>keep</aspectratio>
+					<height>300</height>    
+					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
+					<include name="Animation.SlideOpen.Up">
+						<animation effect="slide" start="0,500" end="0" delay="0" time="200">WindowOpen</animation>
+						<animation effect="slide" start="0,500" end="0" delay="0" time="200">Visible</animation>
+					</include>
+					<fadetime>300</fadetime>
+				</control>
+			</control>
+			<include>Furniture_Scrollbar</include>
+		</control>
+	</include>
 </includes>

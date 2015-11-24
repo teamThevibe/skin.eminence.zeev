@@ -4,7 +4,7 @@
     <include>50Focus</include>
     <allowoverlay>yes</allowoverlay>
     <background>0</background>
-    <views>50,51,500,53,54,55,56</views>
+    <views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523</views>
     <onunload>ClearProperty(focushub,home)</onunload>
 
     <controls>
@@ -16,7 +16,6 @@
 
         <include>GlobalBackground</include>
         <include>DefLeftSideArrow</include>
-        <include>DefMyNavViews</include>
         <include>DefFullScreenNav</include>
         <include>GlobalTopBar</include>
         
@@ -26,9 +25,20 @@
                 <visible>!Skin.HasSetting(kioskmode)</visible>
                 <include>DefMyNavBarGroupList</include>
 
-                <control type="button" id="2">
-                    <description>View</description>
+			   <control type="button" id="564">
+			       <include>DefNavMenuButton2</include>  
+				   <label>31343603</label>
+				   <description>View</description>
+				   <align>right</align>
+				   <onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
+				</control>               
+				
+				                <control type="button" id="9001">
+                    <description>Fullscreen</description>
                     <include>DefNavMenuButton2</include>
+                    <label>31158</label>
+                    <onclick>Action(fullscreen)</onclick>
+                    <visible>Player.HasMedia</visible>
                 </control>
 
                 <control type="button" id="3">
@@ -119,13 +129,6 @@
                     <visible>IntegerGreaterThan(Playlist.Length(music),1)</visible>
                 </control>
                 
-                <control type="button" id="9001">
-                    <description>Fullscreen</description>
-                    <include>DefNavMenuButton2</include>
-                    <label>31158</label>
-                    <onclick>Action(fullscreen)</onclick>
-                    <visible>Player.HasMedia</visible>
-                </control>
 
             </control>
         </control>

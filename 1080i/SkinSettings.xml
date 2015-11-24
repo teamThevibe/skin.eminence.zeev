@@ -264,6 +264,20 @@
                     <visible>ControlGroup(3).HasFocus(37)</visible>
                     </control>					
 
+												<control type="radiobutton" id="207">
+												                        <label>הצג דיסק מזוייף</label>
+
+	                    <align>right</align>
+                    <font>Font-ListInfo</font>
+						                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>     
+			<onclick>Skin.ToggleSetting(fanart_Disable_FAKECDART)</onclick>
+			<selected>!Skin.HasSetting(fanart_Disable_FAKECDART)</selected>
+			<enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + Skin.HasSetting(home.showdiscart)</enable>                    
+            <visible>ControlGroup(3).HasFocus(37)</visible>
+		</control>
+					
 										                    <control type="radiobutton" id="213">
                         <label>דיסק מסתובב</label>
 			                    <align>right</align>
@@ -276,6 +290,7 @@
                         <onclick>Skin.ToggleSetting(home.DiscArtrotate)</onclick>
                     <visible>ControlGroup(3).HasFocus(37)</visible>
                     </control>
+					
 					
 					
 					<control type="radiobutton" id="214">
@@ -592,7 +607,6 @@
                 <control type="button" id="602" description="Fanart Fade">
                     <label>$VAR[FanartFadeLabel]</label>
                     <label2>31185</label2>
-                    $VAR[FanartFadeLabel]
 					<align>left</align>
                     <font>Font-ListInfo</font>
                     <onclick condition="!Skin.HasSetting(fanart.showmore)">Skin.SetBool(fanart.showmore)</onclick>
@@ -667,7 +681,7 @@
                     <label2>31228</label2>
                     <enable>!Skin.HasSetting(purplefade)</enable>
                     <onclick condition="IsEmpty(Skin.String(global.background))">SetProperty(showimages,1,home)</onclick>
-                    <onclick condition="IsEmpty(Skin.String(global.background))">Skin.SetFile(global.background,.jpg|.png|.bmp|.gif,special://skin/extras/colours/)</onclick>
+                    <onclick condition="IsEmpty(Skin.String(global.background))">Skin.SetFile(global.background,.jpg|.png|.bmp|.gif,special://skin/extras/colors)</onclick>
                     <onclick condition="!IsEmpty(Skin.String(global.background))">Skin.Reset(global.background)</onclick>
                     <visible>ControlGroup(3).HasFocus(38)</visible>
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
@@ -683,19 +697,6 @@
                     <onclick condition="IsEmpty(Skin.String(global.background2))">Skin.SetFile(global.background2,.jpg|.png|.bmp|.gif,special://skin/extras/backgrounds/)</onclick>
                     <onclick condition="!IsEmpty(Skin.String(global.background2))">Skin.Reset(global.background2)</onclick>
                     <visible>ControlGroup(3).HasFocus(38)</visible>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                </control>
-
-                <control type="button" id="609" description="Weather Fanart">
-                    <label>הצג וידיאו מתנגן בדף הבית</label>
-                    <align>right</align>
-                    <font>Font-ListInfo</font>
-                    <radiowidth>40</radiowidth>
-                    <radioheight>40</radioheight>
-                    <radioposx>40</radioposx>  
-					<onclick>Skin.SetPath(weather.fanart)</onclick>
-                    <visible>ControlGroup(3).HasFocus(38)</visible>
-					
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
 				
@@ -794,8 +795,34 @@
                     <visible>ControlGroup(3).HasFocus(35)</visible>
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
+				
+                <control type="radiobutton" id="802" description="Disable Weather in Clock">
+                    <label>הצג כותרת ספירת ספריות</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+					<onclick>Skin.ToggleSetting(header.counter)</onclick>
+                    <selected>Skin.HasSetting(header.counter)</selected>
+                    <visible>ControlGroup(3).HasFocus(35)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+				
+				               <control type="radiobutton" id="803" description="Disable Weather in Clock">
+                    <label>רקע שחור מאחורי שעון וכותרת</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+					<onclick>Skin.ToggleSetting(header.bg2)</onclick>
+                    <selected>Skin.HasSetting(header.bg2)</selected>
+                    <visible>ControlGroup(3).HasFocus(35)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
                 
-                <control type="radiobutton" id="802" description="Header to Theme Colour">
+                <control type="radiobutton" id="804" description="Header to Theme Colour">
                     <label>31240</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -810,8 +837,8 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="radiobutton" id="821" description="Disable Clock">
-                    <label>31286</label>
+                <control type="radiobutton" id="805" description="Disable Clock">
+                    <label>הצג שעון</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
                                         <radiowidth>40</radiowidth>
@@ -823,7 +850,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="radiobutton" id="808" description="Disable Weather in Clock">
+                <control type="radiobutton" id="806" description="Disable Weather in Clock">
                     <label>31177</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -838,13 +865,14 @@
                 </control>
                 
 						   								    <!--שינוי סמל המתנה-->            
-					<control type="button" id="809" description="info">	                            
+					<control type="button" id="807" description="info">	                            
                     <label>שינוי סמל המתנה</label>    
                     <align>right</align>               
                     <radiowidth>40</radiowidth>
                     <radioheight>40</radioheight>
                     <radioposx>40</radioposx>
                     <font>Font-ListInfo</font>
+					<ondwon>801</ondwon>
                     <onclick>RunScript(script.skin.helper.service,action=busytexture)</onclick>
                     <visible>ControlGroup(3).HasFocus(35)</visible>
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>   
@@ -852,7 +880,32 @@
 			   </control>
 				
                 <!-- ADDONS -->
-                <control type="radiobutton" id="804" description="Tv Tunes">
+				
+				                    <control type="radiobutton" id="806">
+                        <label>הצג דיסק בדף פרטי סרט</label>
+						                    <align>right</align>
+                    <font>Font-ListInfo</font>
+						                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+                        <selected>Skin.HasSetting(showdiscart.videoinfo)</selected>
+                        <onclick>Skin.ToggleSetting(showdiscart.videoinfo)</onclick>
+                    <visible>ControlGroup(3).HasFocus(36)</visible>
+                    </control>	
+
+				                    <control type="radiobutton" id="807">
+                        <label>הצג פרטי שידור בקיר סדרות</label>
+						                    <align>right</align>
+                    <font>Font-ListInfo</font>
+						                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+                        <selected>Skin.HasSetting(NextAiredINFOTV)</selected>
+                        <onclick>Skin.ToggleSetting(NextAiredINFOTV)</onclick>
+                    <visible>ControlGroup(3).HasFocus(36)</visible>
+                    </control>								
+
+                <control type="radiobutton" id="808" description="Tv Tunes">
                     <label>31144</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -865,7 +918,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="radiobutton" id="805" description="Rss Feed">
+                <control type="radiobutton" id="809" description="Rss Feed">
                     <label>13305</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -878,7 +931,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="radiobutton" id="806" description="Rss Next Aired">
+                <control type="radiobutton" id="810" description="Rss Next Aired">
                     <label>31188</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -892,7 +945,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="radiobutton" id="807" description="Next Aired Update">
+                <control type="radiobutton" id="811" description="Next Aired Update">
                     <label>31189</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -905,7 +958,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="radiobutton" id="811" description="Auto update artwork downloader">
+                <control type="radiobutton" id="812" description="Auto update artwork downloader">
                     <label>31280</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -918,7 +971,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="button" id="812" description="Startup Video">
+                <control type="button" id="813" description="Startup Video">
                     <label>31287</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -934,7 +987,7 @@
                 
                 <!-- ADVANCED -->
         
-                <control type="radiobutton" id="803" description="Kiosk mode">
+                <control type="radiobutton" id="814" description="Kiosk mode">
                     <label>31239</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -978,7 +1031,7 @@
 				
 				                    <!-- RESET -->
                     <!-- Backup -->
-                    <control type="button" id="804">
+                    <control type="button" id="815">
                         <label>31342</label>
 												<align>right</align>
                         <font>Font-ListInfo</font>
@@ -987,7 +1040,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                     </control>
                     <!-- Restore -->
-                    <control type="button" id="805">
+                    <control type="button" id="816">
                         <label>שיחזור מגיבוי</label>
 												<align>right</align>
                         <font>Font-ListInfo</font>
@@ -996,7 +1049,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>    
 					</control>
                     <!-- Reset Skin to Defaults -->
-                    <control type="button" id="806">
+                    <control type="button" id="817">
                         <label>31137</label>
 						<align>right</align>
                         <font>Font-ListInfo</font>
@@ -1022,7 +1075,39 @@
 			   </control>-->
 
 			   <!--צבעים -->
-					<control type="button" id="905">
+			   					<control type="button" id="903">
+                        <label>$INFO[Skin.String(clockheadercolor)]</label>
+						<align>left</align>
+                        <label2>הגדר צבע שעון ומזג האויר</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=clockheadercolor)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+					
+                    <!-- Second Color -->
+                    <control type="button" id="90094">
+                        <label>$INFO[Skin.String(HighlightColor12)]</label>
+						<align>left</align>
+                        <label2>הגדר צבע כותרות</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor12)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+			   	
+                    <!-- Second Color -->
+                    <control type="button" id="905">
+                        <label>$INFO[Skin.String(HighlightColor2)]</label>
+						<align>left</align>
+                        <label2>הגדר צבע כותרות משניות</label2>
+						<font>Font-ListInfo</font>
+                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor2)</onclick>
+					<visible>ControlGroup(3).HasFocus(33)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
+					</control>
+				
+					<control type="button" id="906">
                         <label>$INFO[Skin.String(HighlightColor)]</label>
 					    <align>left</align>
                         <label2>324324243</label2>
@@ -1031,18 +1116,7 @@
 					<visible>ControlGroup(3).HasFocus(33)</visible>
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>                   
 					</control>
-					
-                    <!-- Second Color -->
-                    <control type="button" id="906">
-                        <label>$INFO[Skin.String(HighlightColor2)]</label>
-						<align>left</align>
-                        <label2>324324244</label2>
-						<font>Font-ListInfo</font>
-                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor2)</onclick>
-					<visible>ControlGroup(3).HasFocus(33)</visible>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
-					</control>
-					
+				
 					                    <!-- אריח דף הבית -->
                     <control type="button" id="907">
                         <label>$INFO[Skin.String(HighlightColor3)]</label>
@@ -1118,16 +1192,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
 					</control>
 					
-					clockheader
-					<control type="button" id="914">
-                        <label>$INFO[Skin.String(clockheadercolor)]</label>
-						<align>left</align>
-                        <label2>הגדר צבע כותרת לשעון ומזג האויר</label2>
-						<font>Font-ListInfo</font>
-                        <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=clockheadercolor)</onclick>
-					<visible>ControlGroup(3).HasFocus(33)</visible>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>            
-					</control>
+				
 					
 					                 
 					<!-- Reset Colors -->
@@ -1145,6 +1210,7 @@
 						<onclick>Skin.Reset(HighlightColor8)</onclick>
 						<onclick>Skin.Reset(HighlightColor9)</onclick>
 						<onclick>Skin.Reset(clockheadercolor)</onclick>
+						<onclick>Skin.Reset(HighlightColor12)</onclick>
 						<onclick>Skin.Reset(Iconcolor)</onclick>
 					<visible>ControlGroup(3).HasFocus(33)</visible>
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>     

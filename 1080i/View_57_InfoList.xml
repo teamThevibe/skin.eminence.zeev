@@ -41,7 +41,7 @@
     
         <description>List View (id=57)</description>
         <control type="group">
-            <visible>Control.IsVisible(57)</visible>
+            <visible>Control.IsVisible(57) + IntegerGreaterThan(Container.NumItems,0)</visible>
             <include>Animation.ViewChange</include>     
             <include>DefSideLabel</include> 
               

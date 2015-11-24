@@ -20,10 +20,13 @@
             <include>DefMyNavBar</include>  
             <control type="grouplist" id="9000">
                 <include>DefMyNavBarGroupList</include>
-                <control type="button" id="2">
-                    <description>View</description>
-                    <include>DefNavMenuButton</include>
-                </control>
+			   <control type="button" id="564">
+			       <include>DefNavMenuButton2</include>  
+				   <label>תצוגה: $INFO[Container.Viewmode]</label>
+				   <description>View</description>
+				   <align>right</align>
+				   <onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
+				</control>              
 
                 <control type="button" id="3">
                     <description>Sort</description>
