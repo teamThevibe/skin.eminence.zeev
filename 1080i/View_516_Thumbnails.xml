@@ -6,7 +6,6 @@
 
 		<control type="group">
 		<include>busy</include>
-			<include>Furniture_Background22</include>
 			<include>Animation_Left</include>            
 		<posy>100</posy>
 
@@ -19,13 +18,13 @@
                     <texture background="true">special://skin/extras/backgrounds/loading/loading.jpg</texture>
                     <aspectratio aligny="top">scale</aspectratio>
                 </control>
-			<visible>IntegerGreaterThan(Container.NumItems,0)</visible>
+			<visible>IntegerGreaterThan(Container.NumItems,0) + !Window.IsActive(mypics.xml)</visible>
 		</include>
 		
 			<!-- רקע רשימה -->
 			<control type="image">
-			<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0)</visible>
-
+			<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0) + !Window.IsActive(mypics.xml)</visible>
+			<animation effect="slide" start="10" end="-1300" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 			<animation effect="slide" start="10" end="-1300" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 				<posx>-100</posx>
 				<width>2000</width>
@@ -35,7 +34,7 @@
 				<animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
 			</control>
 			<control type="group">
-								<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0)</visible>
+								<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0) + !Window.IsActive(mypics.xml)</visible>
 
 				<control type="panel" id="516">
 					<orientation>horizontal</orientation>
@@ -54,7 +53,7 @@
 					<preloaditems>2</preloaditems>
 			<animation effect="slide" start="10" end="-1160" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 			<animation effect="fade" start="100" end="70" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
-
+			<animation effect="slide" start="10" end="-1300" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 
 					<viewtype label="31343593">list</viewtype>
 					<scrolltime tween="quadratic">400</scrolltime>

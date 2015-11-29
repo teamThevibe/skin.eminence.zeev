@@ -1520,7 +1520,7 @@
 	</include>
 
 	<include name="DefSettingsRightGroup2">
-		<posx>1300</posx>
+		<posx>1295</posx>
 		<posy>120</posy>
 		<include>DefSettingsRightGroupWidth2</include>
 		<height>700</height>

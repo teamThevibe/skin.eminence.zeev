@@ -162,7 +162,7 @@
                 <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(Fanart.Animate)">Conditional</animation>
                 <visible>!Player.HasVideo | Skin.HasSetting(disable.bgvideo)</visible>
                 <visible>!Window.IsVisible(home)</visible>
-                <visible>!Skin.HasSetting(disable.fanart)</visible>
+                <visible> !Skin.HasSetting(disable.fanart)</visible>
             </control>
 
             <control type="wraplist" id="9600">
@@ -207,7 +207,7 @@
                 <include>Animation.FadeIn</include>
                 <include>Animation.FadeOut</include>
                 <texture>common/black.png</texture>
-                <visible>!Window.IsVisible(home)</visible>
+                <visible>!Control.IsVisible(516) + !Window.IsVisible(home)</visible>
                 <visible>[Player.HasVideo + !Skin.HasSetting(disable.bgvideo)] | !stringcompare(Control.GetLabel(9238),common/null.png)</visible>
             </control>
             

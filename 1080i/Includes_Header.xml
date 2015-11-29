@@ -144,7 +144,7 @@
         <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
         <value condition="Window.IsVisible(MyMusicPlaylist.xml)">$LOCALIZE[559]</value>
         <value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
-		        <value condition="!IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
+		        <value condition="!IsEmpty(Window(home).Property(Header.Label))"></value>
 
         <value>$LOCALIZE[10000]</value>
     </variable>

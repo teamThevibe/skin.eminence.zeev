@@ -14,8 +14,10 @@
             <include>HiddenButton</include>
         </control>
 
+
         <include>GlobalBackground</include>
         <include>DefLeftSideArrow</include>
+        <include>DefMyNavViews</include>
         <include>DefFullScreenNav</include>
         <include>GlobalTopBar</include>
         

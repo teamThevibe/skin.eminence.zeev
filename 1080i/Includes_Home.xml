@@ -1118,6 +1118,7 @@
 				<effect type="rotate" center="auto" start="0" end="-10800" time="500000" pulse="true" delay="400"/>
 			</animation>
 			<fadetime>300</fadetime>
+						<visible>!Skin.HasSetting(fanart_Disable_FAKECDART)</visible>
 			<visible>IsEmpty(Container(9001).ListItem.Art(discart))</visible>
 			<visible>IsEmpty(Container(9000).ListItem.Property(PosterWidget))</visible>
 			<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9001).ListItem.Art(poster)]</texture>
