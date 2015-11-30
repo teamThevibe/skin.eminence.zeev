@@ -20,14 +20,40 @@
 
 	 </control>
 	  
+	 <!-- omri: replace Title with OriginalTitle if exist, add padding to support Stereoscopic icon (only if needed) -->
+	  <control type="label">
+			<posx>50</posx>
+			<width>400</width>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+			<label> $INFO[ListItem.OriginalTitle]</label>
+			<visible>!IsEmpty(ListItem.OriginalTitle) + !ListItem.IsStereoscopic</visible>
+	  </control>
 	 <control type="label">
 			<posx>50</posx>
 			<width>400</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-            <label> $VAR[VARLabel]</label>	  
-
+			<label> $INFO[ListItem.Title]</label>
+			<visible>IsEmpty(ListItem.OriginalTitle) + !ListItem.IsStereoscopic</visible>
 	  </control>
+	 <control type="label">
+			<posx>110</posx>
+			<width>350</width>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+			<label> $INFO[ListItem.OriginalTitle]</label>
+			<visible>!IsEmpty(ListItem.OriginalTitle) + ListItem.IsStereoscopic</visible>
+	  </control>
+	 <control type="label">
+			<posx>110</posx>
+			<width>350</width>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+			<label> $INFO[ListItem.Title]</label>
+			<visible>IsEmpty(ListItem.OriginalTitle) + ListItem.IsStereoscopic</visible>
+	  </control>
+	  <!-- //omri -->
 				
 	   </control>
 	 <control type="label">
@@ -38,8 +64,7 @@
         </control>
 				
 
-				
-<control type="image">
+				    <control type="image">
 						<posx>0</posx>
 						<posy>0</posy>
 						<width>60</width>
@@ -55,6 +80,16 @@
 						<texture colordiffuse="grey">eye.png</texture>
 						<visible>StringCompare(ListItem.Overlay,overlaywatched.png)</visible>
 					</control>
+					<!-- omri: IsStereoscopic icon -->
+					<control type="image">
+						<posx>45</posx>
+						<posy>2</posy>
+						<height>58</height>
+						<width>58</width>
+						<texture>flags/3D.png</texture>
+						<visible>ListItem.IsStereoscopic</visible>
+					</control>
+					<!-- //omri -->
 					<control type="label">
 						<posx>20</posx>
 						<posy>20</posy>
@@ -157,18 +192,20 @@
 						<visible>Container.Content(TVShows) + !IsEmpty(ListItem.Property(TotalSeasons))</visible>                          
 						  </control>-->
 						
-                        <control type="grouplist">
-                            <top>424</top>
+                        <!-- omri: better item&summary display -->
+						<control type="grouplist">
+                            <top>410</top>
                             <left>25</left>
                             <control type="group">
                                 <height>48</height>
                                 <control type="label">
-                                    <posx>900</posx>
+                                    <posx>915</posx>
 									<width>620</width>
                                     <align>right</align>
-                                    <label>$VAR[VARLabel]</label>
+                                    <label>$INFO[ListItem.Title]</label>
                                     <font>Font-ListHeader</font>
                                 </control>
+						<!-- //omri -->
 								
 						<!--		<control type="label">
                                     <posx>900</posx>
@@ -205,7 +242,9 @@
 						   <control type="textbox">
                                 <width>915</width>
                                 <align>right</align>
-                                <height>100</height>
+                                <!-- omri -->
+								<height>131</height>
+								<!-- //omri -->
                                 <font>Font-ListInfo-Small</font>
                                 <label>$VAR[PlotBox]</label>
                             </control>
@@ -215,7 +254,9 @@
                             <include>Animation.FadeIn</include>
                             <include>Animation.FadeOut</include>
                             <right>2</right>
-                            <centertop>456</centertop>
+                            <!-- omri -->
+							<centertop>446</centertop>
+							<!-- //omri -->
                             <height>64</height>
                             <orientation>horizontal</orientation>
                             <align>left</align>
@@ -268,25 +309,26 @@
 						
 						</control>
                         
-                        <control type="grouplist">
+                        <!-- omri: fix icons -->
+						<control type="grouplist">
                             <include>Animation.FadeIn</include>
                             <include>Animation.FadeOut</include>
                             <left>8</left>
-                            <centerbottom>45</centerbottom>
+                            <centerbottom>35</centerbottom>
                             <height>64</height>
                             <orientation>horizontal</orientation>
                             <align>left</align>
                             <itemgap>20</itemgap>
                             <usecontrolcoords>true</usecontrolcoords>
                             <control type="image">
-                                <width>55</width>
+                                <width>50</width>
                                 <height>64</height>
                                 <texture colordiffuse="PanelFG-NF">flags/year.png</texture>
                                 <aspectratio align="left">scale</aspectratio>
                                 <visible>!IsEmpty(ListItem.Year)</visible>
                             </control>
                             <control type="label">
-                                <width>90</width>
+                                <width>60</width>
                                 <height>64</height>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -296,14 +338,14 @@
                                 <visible>!IsEmpty(ListItem.Year)</visible>
                             </control>
                             <control type="image">
-                                <width>55</width>
+                                <width>50</width>
                                 <height>64</height>
                                 <texture colordiffuse="PanelFG-NF">flags/time.png</texture>
                                 <aspectratio align="left">scale</aspectratio>
                                 <visible>!IsEmpty(ListItem.Duration)</visible>
                             </control>
                             <control type="label">
-                                <width>500</width>
+                                <width>330</width>
                                 <height>64</height>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -312,6 +354,13 @@
                                 <textcolor>PanelFG-NF</textcolor>
                                 <visible>!IsEmpty(ListItem.Duration)</visible>
                             </control>
+							<control type="image">
+								<width>64</width>
+								<height>64</height>
+								<texture colordiffuse="PanelFG-NF">$VAR[3DDVDFLAG]</texture>
+								<aspectratio align="left">scale</aspectratio>
+								<!--<visible>ListItem.IsStereoscopic</visible>-->
+							</control>
                             <control type="image">
                                 <width>55</width>
                                 <height>64</height>
@@ -320,7 +369,7 @@
                                 <visible>!IsEmpty(ListItem.VideoCodec)</visible>
                             </control>
                             <control type="label">
-                                <width>70</width>
+                                <width>60</width>
                                 <height>64</height>
                                 <align>left</align>
                                 <aligny>center</aligny>
@@ -347,8 +396,8 @@
                                 <visible>!IsEmpty(ListItem.AudioCodec)</visible>
                             </control>
                             
-                            
                         </control>
+						<!--
                         <control type="image">
                             <right>16</right>
                             <centerbottom>40</centerbottom>
@@ -357,6 +406,8 @@
                             <texture colordiffuse="PanelFG-NF">$VAR[3DDVDFLAG]</texture>
 							<aspectratio align="left">scale</aspectratio>
                         </control>
+						-->
+						<!-- //omri -->
         
                     </control>
                 </control>
@@ -432,15 +483,40 @@
 
 	 </control>
 	 
-
+	 <!-- omri: originaltitle and padding for 3d icon, selected item -->
 	 <control type="label">
 			<posx>50</posx>
 			<width>400</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-            <label> $VAR[VARLabel]</label>	  
-
+			<label> $INFO[ListItem.OriginalTitle]</label>
+			<visible>!IsEmpty(ListItem.OriginalTitle) + !ListItem.IsStereoscopic</visible>
 	  </control>
+	 <control type="label">
+			<posx>50</posx>
+			<width>400</width>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+			<label> $INFO[ListItem.Title]</label>
+			<visible>IsEmpty(ListItem.OriginalTitle) + !ListItem.IsStereoscopic</visible>
+	  </control>
+	 <control type="label">
+			<posx>110</posx>
+			<width>350</width>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+			<label> $INFO[ListItem.OriginalTitle]</label>
+			<visible>!IsEmpty(ListItem.OriginalTitle) + ListItem.IsStereoscopic</visible>
+	  </control>
+	 <control type="label">
+			<posx>110</posx>
+			<width>350</width>
+            <align>right</align>
+			<font>Font-ListInfo</font>
+			<label> $INFO[ListItem.Title]</label>
+			<visible>IsEmpty(ListItem.OriginalTitle) + ListItem.IsStereoscopic</visible>
+	  </control>
+	 <!-- //omri -->
 				
 	   </control>
                                 <control type="group">
@@ -470,6 +546,16 @@
 						<texture colordiffuse="grey">eye.png</texture>
 						<visible>StringCompare(ListItem.Overlay,overlaywatched.png)</visible>
 					</control>
+					<!-- omri: 3d icon -->
+					<control type="image">
+						<posx>45</posx>
+						<posy>2</posy>
+						<height>58</height>
+						<width>58</width>
+						<texture>flags/3D.png</texture>
+						<visible>ListItem.IsStereoscopic</visible>
+					</control>
+					<!-- //omri -->
 					<control type="label">
 						<posx>20</posx>
 						<posy>20</posy>

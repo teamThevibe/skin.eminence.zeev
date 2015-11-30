@@ -46,13 +46,18 @@
 					<ondown>9096</ondown>
 				</control>              
 
+				<!--
 				<control type="button" id="9003">
 					<description>extendedinfo</description>
 					<include>DefNavMenuButton</include>
 					<onclick>SetFocus(8)</onclick>
 					<onclick>ActivateWindow(2003)</onclick>
+						<onclick condition="System.HasAddon(script.videoextras)">RunScript(script.videoextras,check,"$INFO[ListItem.FilenameAndPath]")</onclick>   
+	<onclick>ClearProperty(content)</onclick>
+	<onclick>ClearProperty(movie.Fanart,home)</onclick>
+	<onclick>RunScript(script.duration,duration=$INFO[ListItem.Duration])</onclick>
 					<label>פרטי סרט</label>
-				</control>
+				</control>-->
 
 				<control type="button" id="9060">
 					<description>Trailer</description>

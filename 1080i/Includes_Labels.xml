@@ -175,8 +175,10 @@
     </variable>
     <variable name="Label_HomeWidget_Info">
         <value condition="[StringCompare(Container(9000).ListItem.Property(widget),Weather) | [IsEmpty(Container(9000).ListItem.Property(widget)) + StringCompare(Skin.String(home.fallbackwidget),Weather)]] + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Window(weather).Property(WeatherProvider)]</value>
-        <value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Container(9001).ListItem.RatingAndVotes,  •  ,]</value>
-        <value condition="!Container(9001).IsUpdating + IsEmpty(Container(9001).ListItem.Year)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle]$INFO[Container(9001).ListItem.RatingAndVotes,  •  ,]</value>
+<!-- omri: change rating to genre in homepage widgets -->
+		<value condition="!Container(9001).IsUpdating + !IsEmpty(Container(9001).ListItem.Year)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle,,  •  ]$INFO[Container(9001).ListItem.Year]$INFO[Container(9001).ListItem.Genre,  •  ,]</value>
+        <value condition="!Container(9001).IsUpdating + IsEmpty(Container(9001).ListItem.Year)">$INFO[Container(9001).ListItem.Artist,,  •  ]$INFO[Container(9001).ListItem.TvShowTitle]$INFO[Container(9001).ListItem.Genre,  •  ,]</value>
+<!-- //omri -->
         <value>$LOCALIZE[31092]</value>
     </variable>
 
@@ -300,13 +302,7 @@
         <value condition="Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)">$LOCALIZE[31207]</value>
         <value condition="Window.IsVisible(MyVideoPlaylist.xml) | Container.Content(Movies)">$INFO[ListItem.Year,,  •  ]$INFO[Window(Home).Property(SkinHelper.ListItemDuration)]  •  $VAR[HDSD]$INFO[ListItem.VideoResolution, ,  •  ]$INFO[ListItem.Rating]</value>
         <value condition="Container.Content(Artists)">$INFO[ListItem.Property(Artist_Genre)]</value>
-        <value></value>
-    </variable>
-	        <value condition="Container.Content(Tvshows)">$INFO[ListItem.Studio]</value>
-        <value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Studio]$INFO[ListItem.Label2,  •  ,]</value>
-		
-		    <variable name="ExtraInfo2">
-	        <value condition="Container.Content(Tvshows)">$INFO[ListItem.Studio]</value>
+        <value condition="Container.Content(Tvshows)">$INFO[ListItem.Studio]</value>
         <value condition="Container.Content(episodes) | Container.Content(seasons)">$INFO[ListItem.Studio]$INFO[ListItem.Label2,  •  ,]</value>
         <value>$INFO[ListItem.Label2]</value>
     </variable>

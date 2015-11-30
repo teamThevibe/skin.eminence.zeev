@@ -293,6 +293,7 @@
 			<property name="hasSubmenu">True</property>
 			<property name="hasSubmenu">True</property>
 			<property name="hasSubmenu">True</property>
+			<property name="hasSubmenu">True</property>
 			<property name="hasSubmenu">False</property>
 			<property name="hasSubmenu">False</property>
 			<property name="hasSubmenu">False</property>
@@ -2571,6 +2572,215 @@
 			<property name="list">plugin://plugin.video.genesis</property>
 			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),x1115)</visible>
 			<property name="group">x1115</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[31171]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">31171</property>
+			<property name="defaultID">31171</property>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<property name="path">ReloadSkin()</property>
+			<property name="list">ReloadSkin()</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[13012]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13012</property>
+			<property name="defaultID">13012</property>
+			<visible>[System.ShowExitButton] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Quit()</onclick>
+			<property name="path">XBMC.Quit()</property>
+			<property name="list">XBMC.Quit()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[13016]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13016</property>
+			<property name="defaultID">13016</property>
+			<visible>[System.CanPowerDown] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Powerdown()</onclick>
+			<property name="path">XBMC.Powerdown()</property>
+			<property name="list">XBMC.Powerdown()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[13011]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13011</property>
+			<property name="defaultID">13011</property>
+			<visible>[System.CanSuspend] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Suspend()</onclick>
+			<property name="path">XBMC.Suspend()</property>
+			<property name="list">XBMC.Suspend()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[13010]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13010</property>
+			<property name="defaultID">13010</property>
+			<visible>[System.CanHibernate] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Hibernate()</onclick>
+			<property name="path">XBMC.Hibernate()</property>
+			<property name="list">XBMC.Hibernate()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>$LOCALIZE[13013]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13013</property>
+			<property name="defaultID">13013</property>
+			<visible>[System.CanReboot] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Reset()</onclick>
+			<property name="path">XBMC.Reset()</property>
+			<property name="list">XBMC.Reset()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
+			<label>$LOCALIZE[20126]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20126</property>
+			<property name="defaultID">20126</property>
+			<visible>[System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>dialog.close(all,true)</onclick>
+			<property name="path">dialog.close(all,true)</property>
+			<property name="list">dialog.close(all,true)</property>
+			<onclick>System.LogOff</onclick>
+			<property name="path">System.LogOff</property>
+			<property name="list">System.LogOff</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUM[8]</property>
+			<label>$LOCALIZE[20046]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20046</property>
+			<property name="defaultID">20046</property>
+			<visible>[System.HasLocks] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>xbmc.mastermode</onclick>
+			<property name="path">xbmc.mastermode</property>
+			<property name="list">xbmc.mastermode</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUM[9]</property>
+			<label>$LOCALIZE[13017]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13017</property>
+			<property name="defaultID">13017</property>
+			<visible>[System.HasShutdown +!System.IsInhibit] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.InhibitIdleShutdown(true)</onclick>
+			<property name="path">XBMC.InhibitIdleShutdown(true)</property>
+			<property name="list">XBMC.InhibitIdleShutdown(true)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="10">
+			<property name="id">$NUM[10]</property>
+			<label>$LOCALIZE[13018]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13018</property>
+			<property name="defaultID">13018</property>
+			<visible>[System.HasShutdown + System.IsInhibit] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.InhibitIdleShutdown(false)</onclick>
+			<property name="path">XBMC.InhibitIdleShutdown(false)</property>
+			<property name="list">XBMC.InhibitIdleShutdown(false)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="11">
+			<property name="id">$NUM[11]</property>
+			<label>$LOCALIZE[20150]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20150</property>
+			<property name="defaultID">20150</property>
+			<visible>[!System.HasAlarm(shutdowntimer)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
+			<property name="path">XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</property>
+			<property name="list">XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="12">
+			<property name="id">$NUM[12]</property>
+			<label>$LOCALIZE[20151]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20151</property>
+			<property name="defaultID">20151</property>
+			<visible>[System.HasAlarm(shutdowntimer)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+			<property name="path">XBMC.CancelAlarm(shutdowntimer)</property>
+			<property name="list">XBMC.CancelAlarm(shutdowntimer)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="13">
+			<property name="id">$NUM[13]</property>
+			<label>$LOCALIZE[5]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">5</property>
+			<property name="defaultID">5</property>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Container(9000).ListItem.Property(submenuVisibility),powermenu)</visible>
+			<property name="group">powermenu</property>
 			<property name="isSubmenu">True</property>
 		</item>
 		<item id="1">
@@ -7403,25 +7613,216 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
-	<include name="skinshortcuts-group-moviecategory" />
-	<include name="skinshortcuts-group-alt-moviecategory" />
-	<include name="skinshortcuts-group-tvshowcategory" />
-	<include name="skinshortcuts-group-alt-tvshowcategory" />
-	<include name="skinshortcuts-group-musiccategory" />
-	<include name="skinshortcuts-group-alt-musiccategory" />
-	<include name="skinshortcuts-group-playlistcategory" />
-	<include name="skinshortcuts-group-alt-playlistcategory" />
-	<include name="skinshortcuts-group-vod" />
-	<include name="skinshortcuts-group-alt-vod" />
-	<include name="skinshortcuts-group-sport" />
-	<include name="skinshortcuts-group-alt-sport" />
-	<include name="skinshortcuts-group-kids" />
-	<include name="skinshortcuts-group-alt-kids" />
-	<include name="skinshortcuts-group-favorite" />
-	<include name="skinshortcuts-group-alt-favorite" />
-	<include name="skinshortcuts-group-customhub" />
-	<include name="skinshortcuts-group-alt-customhub" />
 	<include name="skinshortcuts-group-powermenu">
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[31171]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">31171</property>
+			<property name="defaultID">31171</property>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<property name="path">ReloadSkin()</property>
+			<property name="list">ReloadSkin()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[13012]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13012</property>
+			<property name="defaultID">13012</property>
+			<visible>System.ShowExitButton</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Quit()</onclick>
+			<property name="path">XBMC.Quit()</property>
+			<property name="list">XBMC.Quit()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[13016]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13016</property>
+			<property name="defaultID">13016</property>
+			<visible>System.CanPowerDown</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Powerdown()</onclick>
+			<property name="path">XBMC.Powerdown()</property>
+			<property name="list">XBMC.Powerdown()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[13011]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13011</property>
+			<property name="defaultID">13011</property>
+			<visible>System.CanSuspend</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Suspend()</onclick>
+			<property name="path">XBMC.Suspend()</property>
+			<property name="list">XBMC.Suspend()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[13010]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13010</property>
+			<property name="defaultID">13010</property>
+			<visible>System.CanHibernate</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Hibernate()</onclick>
+			<property name="path">XBMC.Hibernate()</property>
+			<property name="list">XBMC.Hibernate()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>$LOCALIZE[13013]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13013</property>
+			<property name="defaultID">13013</property>
+			<visible>System.CanReboot</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Reset()</onclick>
+			<property name="path">XBMC.Reset()</property>
+			<property name="list">XBMC.Reset()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
+			<label>$LOCALIZE[20126]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20126</property>
+			<property name="defaultID">20126</property>
+			<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>dialog.close(all,true)</onclick>
+			<property name="path">dialog.close(all,true)</property>
+			<property name="list">dialog.close(all,true)</property>
+			<onclick>System.LogOff</onclick>
+			<property name="path">System.LogOff</property>
+			<property name="list">System.LogOff</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUM[8]</property>
+			<label>$LOCALIZE[20046]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20046</property>
+			<property name="defaultID">20046</property>
+			<visible>System.HasLocks</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>xbmc.mastermode</onclick>
+			<property name="path">xbmc.mastermode</property>
+			<property name="list">xbmc.mastermode</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUM[9]</property>
+			<label>$LOCALIZE[13017]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13017</property>
+			<property name="defaultID">13017</property>
+			<visible>System.HasShutdown +!System.IsInhibit</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.InhibitIdleShutdown(true)</onclick>
+			<property name="path">XBMC.InhibitIdleShutdown(true)</property>
+			<property name="list">XBMC.InhibitIdleShutdown(true)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="10">
+			<property name="id">$NUM[10]</property>
+			<label>$LOCALIZE[13018]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13018</property>
+			<property name="defaultID">13018</property>
+			<visible>System.HasShutdown + System.IsInhibit</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.InhibitIdleShutdown(false)</onclick>
+			<property name="path">XBMC.InhibitIdleShutdown(false)</property>
+			<property name="list">XBMC.InhibitIdleShutdown(false)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="11">
+			<property name="id">$NUM[11]</property>
+			<label>$LOCALIZE[20150]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20150</property>
+			<property name="defaultID">20150</property>
+			<visible>!System.HasAlarm(shutdowntimer)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
+			<property name="path">XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</property>
+			<property name="list">XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="12">
+			<property name="id">$NUM[12]</property>
+			<label>$LOCALIZE[20151]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20151</property>
+			<property name="defaultID">20151</property>
+			<visible>System.HasAlarm(shutdowntimer)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+			<property name="path">XBMC.CancelAlarm(shutdowntimer)</property>
+			<property name="list">XBMC.CancelAlarm(shutdowntimer)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="13">
+			<property name="id">$NUM[13]</property>
+			<label>$LOCALIZE[5]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">5</property>
+			<property name="defaultID">5</property>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
 		<item id="1">
 			<property name="id">$NUM[1]</property>
 			<label>$LOCALIZE[31171]</label>
@@ -7842,5 +8243,232 @@
 			<property name="group">powermenu</property>
 			<property name="isSubmenu">True</property>
 		</item>
+		<item id="1">
+			<property name="id">$NUM[1]</property>
+			<label>$LOCALIZE[31171]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">31171</property>
+			<property name="defaultID">31171</property>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>ReloadSkin()</onclick>
+			<property name="path">ReloadSkin()</property>
+			<property name="list">ReloadSkin()</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="2">
+			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[13012]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13012</property>
+			<property name="defaultID">13012</property>
+			<visible>[System.ShowExitButton] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Quit()</onclick>
+			<property name="path">XBMC.Quit()</property>
+			<property name="list">XBMC.Quit()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
+			<label>$LOCALIZE[13016]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13016</property>
+			<property name="defaultID">13016</property>
+			<visible>[System.CanPowerDown] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Powerdown()</onclick>
+			<property name="path">XBMC.Powerdown()</property>
+			<property name="list">XBMC.Powerdown()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
+			<label>$LOCALIZE[13011]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13011</property>
+			<property name="defaultID">13011</property>
+			<visible>[System.CanSuspend] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Suspend()</onclick>
+			<property name="path">XBMC.Suspend()</property>
+			<property name="list">XBMC.Suspend()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
+			<label>$LOCALIZE[13010]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13010</property>
+			<property name="defaultID">13010</property>
+			<visible>[System.CanHibernate] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Hibernate()</onclick>
+			<property name="path">XBMC.Hibernate()</property>
+			<property name="list">XBMC.Hibernate()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
+			<label>$LOCALIZE[13013]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13013</property>
+			<property name="defaultID">13013</property>
+			<visible>[System.CanReboot] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.Reset()</onclick>
+			<property name="path">XBMC.Reset()</property>
+			<property name="list">XBMC.Reset()</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
+			<label>$LOCALIZE[20126]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20126</property>
+			<property name="defaultID">20126</property>
+			<visible>[System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>dialog.close(all,true)</onclick>
+			<property name="path">dialog.close(all,true)</property>
+			<property name="list">dialog.close(all,true)</property>
+			<onclick>System.LogOff</onclick>
+			<property name="path">System.LogOff</property>
+			<property name="list">System.LogOff</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="8">
+			<property name="id">$NUM[8]</property>
+			<label>$LOCALIZE[20046]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20046</property>
+			<property name="defaultID">20046</property>
+			<visible>[System.HasLocks] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>xbmc.mastermode</onclick>
+			<property name="path">xbmc.mastermode</property>
+			<property name="list">xbmc.mastermode</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="9">
+			<property name="id">$NUM[9]</property>
+			<label>$LOCALIZE[13017]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13017</property>
+			<property name="defaultID">13017</property>
+			<visible>[System.HasShutdown +!System.IsInhibit] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.InhibitIdleShutdown(true)</onclick>
+			<property name="path">XBMC.InhibitIdleShutdown(true)</property>
+			<property name="list">XBMC.InhibitIdleShutdown(true)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="10">
+			<property name="id">$NUM[10]</property>
+			<label>$LOCALIZE[13018]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">13018</property>
+			<property name="defaultID">13018</property>
+			<visible>[System.HasShutdown + System.IsInhibit] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.InhibitIdleShutdown(false)</onclick>
+			<property name="path">XBMC.InhibitIdleShutdown(false)</property>
+			<property name="list">XBMC.InhibitIdleShutdown(false)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="11">
+			<property name="id">$NUM[11]</property>
+			<label>$LOCALIZE[20150]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20150</property>
+			<property name="defaultID">20150</property>
+			<visible>[!System.HasAlarm(shutdowntimer)] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
+			<property name="path">XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</property>
+			<property name="list">XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="12">
+			<property name="id">$NUM[12]</property>
+			<label>$LOCALIZE[20151]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">20151</property>
+			<property name="defaultID">20151</property>
+			<visible>[System.HasAlarm(shutdowntimer)] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+			<property name="path">XBMC.CancelAlarm(shutdowntimer)</property>
+			<property name="list">XBMC.CancelAlarm(shutdowntimer)</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
+		<item id="13">
+			<property name="id">$NUM[13]</property>
+			<label>$LOCALIZE[5]</label>
+			<label2>Power Menu Shortcut</label2>
+			<icon>special://skin/extras/icons/power.png</icon>
+			<property name="labelID">5</property>
+			<property name="defaultID">5</property>
+			<onclick condition="Window.IsActive(DialogButtonMenu.xml)">Close</onclick>
+			<onclick>ActivateWindow(Settings)</onclick>
+			<property name="path">ActivateWindow(Settings)</property>
+			<property name="list">Settings</property>
+			<visible>[StringCompare(System.ProfileName,Master user)] + StringCompare(Window(10000).Property(submenuVisibility),powermenu)</visible>
+			<property name="group">powermenu</property>
+			<property name="isSubmenu">True</property>
+		</item>
 	</include>
+	<include name="skinshortcuts-group-moviecategory" />
+	<include name="skinshortcuts-group-alt-moviecategory" />
+	<include name="skinshortcuts-group-tvshowcategory" />
+	<include name="skinshortcuts-group-alt-tvshowcategory" />
+	<include name="skinshortcuts-group-musiccategory" />
+	<include name="skinshortcuts-group-alt-musiccategory" />
+	<include name="skinshortcuts-group-playlistcategory" />
+	<include name="skinshortcuts-group-alt-playlistcategory" />
+	<include name="skinshortcuts-group-vod" />
+	<include name="skinshortcuts-group-alt-vod" />
+	<include name="skinshortcuts-group-sport" />
+	<include name="skinshortcuts-group-alt-sport" />
+	<include name="skinshortcuts-group-kids" />
+	<include name="skinshortcuts-group-alt-kids" />
+	<include name="skinshortcuts-group-favorite" />
+	<include name="skinshortcuts-group-alt-favorite" />
+	<include name="skinshortcuts-group-customhub" />
+	<include name="skinshortcuts-group-alt-customhub" />
 </includes>

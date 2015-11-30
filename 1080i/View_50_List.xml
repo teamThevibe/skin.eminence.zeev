@@ -102,7 +102,7 @@
                                 <width>900</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-                                <label>$VAR[VARLabel]</label>
+                                <label>$INFO[ListItem.Label]</label>
                             </control>
                             <control type="label">
                                 <right>50</right>
@@ -184,7 +184,7 @@
                                     <width>900</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-                                    <label>$VAR[VARLabel]</label>
+                                <label>$INFO[ListItem.Label]</label>
                                     <textcolor>Selected</textcolor>
                                 </control>
                                 <control type="label">
