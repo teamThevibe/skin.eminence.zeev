@@ -26,7 +26,7 @@
 			<width>400</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-			<label> $INFO[ListItem.OriginalTitle]</label>
+			<label>$VAR[VARLabel]</label>
 			<visible>!IsEmpty(ListItem.OriginalTitle) + !ListItem.IsStereoscopic</visible>
 	  </control>
 	 <control type="label">
@@ -34,7 +34,7 @@
 			<width>400</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-			<label> $INFO[ListItem.Title]</label>
+			<label>$VAR[VARLabel]</label>
 			<visible>IsEmpty(ListItem.OriginalTitle) + !ListItem.IsStereoscopic</visible>
 	  </control>
 	 <control type="label">
@@ -42,7 +42,7 @@
 			<width>350</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-			<label> $INFO[ListItem.OriginalTitle]</label>
+			<label>$VAR[VARLabel]</label>
 			<visible>!IsEmpty(ListItem.OriginalTitle) + ListItem.IsStereoscopic</visible>
 	  </control>
 	 <control type="label">
@@ -50,7 +50,7 @@
 			<width>350</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-			<label> $INFO[ListItem.Title]</label>
+			<label>$VAR[VARLabel]</label>
 			<visible>IsEmpty(ListItem.OriginalTitle) + ListItem.IsStereoscopic</visible>
 	  </control>
 	  <!-- //omri -->
@@ -489,7 +489,7 @@
 			<width>400</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-			<label> $INFO[ListItem.OriginalTitle]</label>
+			<label>$VAR[VARLabel]</label>
 			<visible>!IsEmpty(ListItem.OriginalTitle) + !ListItem.IsStereoscopic</visible>
 	  </control>
 	 <control type="label">
@@ -497,7 +497,7 @@
 			<width>400</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-			<label> $INFO[ListItem.Title]</label>
+			<label>$VAR[VARLabel]</label>
 			<visible>IsEmpty(ListItem.OriginalTitle) + !ListItem.IsStereoscopic</visible>
 	  </control>
 	 <control type="label">
@@ -505,7 +505,7 @@
 			<width>350</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-			<label> $INFO[ListItem.OriginalTitle]</label>
+			<label>$VAR[VARLabel]</label>
 			<visible>!IsEmpty(ListItem.OriginalTitle) + ListItem.IsStereoscopic</visible>
 	  </control>
 	 <control type="label">
@@ -513,7 +513,7 @@
 			<width>350</width>
             <align>right</align>
 			<font>Font-ListInfo</font>
-			<label> $INFO[ListItem.Title]</label>
+			<label>$VAR[VARLabel]</label>
 			<visible>IsEmpty(ListItem.OriginalTitle) + ListItem.IsStereoscopic</visible>
 	  </control>
 	 <!-- //omri -->

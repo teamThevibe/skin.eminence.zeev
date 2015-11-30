@@ -22,6 +22,24 @@
 		</item>
 		<item id="2">
 			<property name="id">$NUM[2]</property>
+			<label>$LOCALIZE[10001]</label>
+			<label2>תוכנות</label2>
+			<icon>special://skin/extras/icons/addons.png</icon>
+			<thumb />
+			<property name="labelID">programs</property>
+			<property name="defaultID">programs</property>
+			<property name="translatedPath">ActivateWindow(Programs,Addons,return)</property>
+			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogFavourites) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
+			<onclick>ActivateWindow(Programs,Addons,return)</onclick>
+			<property name="path">ActivateWindow(Programs,Addons,return)</property>
+			<property name="list">Addons</property>
+			<visible>StringCompare(System.ProfileName,Master user)</visible>
+			<property name="submenuVisibility">programs</property>
+			<property name="group">mainmenu</property>
+			<property name="hasSubmenu">False</property>
+		</item>
+		<item id="3">
+			<property name="id">$NUM[3]</property>
 			<label>$LOCALIZE[10002]</label>
 			<label2 />
 			<icon>special://skin/extras/icons/pictures.png</icon>
@@ -38,8 +56,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="3">
-			<property name="id">$NUM[3]</property>
+		<item id="4">
+			<property name="id">$NUM[4]</property>
 			<label>$LOCALIZE[20342]</label>
 			<label2>Hub 1101</label2>
 			<icon>special://skin/extras/icons/film.png</icon>
@@ -59,8 +77,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="4">
-			<property name="id">$NUM[4]</property>
+		<item id="5">
+			<property name="id">$NUM[5]</property>
 			<label>$LOCALIZE[10005]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/songs.png</icon>
@@ -76,8 +94,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="5">
-			<property name="id">$NUM[5]</property>
+		<item id="6">
+			<property name="id">$NUM[6]</property>
 			<label>$LOCALIZE[20343]</label>
 			<label2>Hub 1102</label2>
 			<icon>special://skin/extras/icons/tv.png</icon>
@@ -96,8 +114,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="6">
-			<property name="id">$NUM[6]</property>
+		<item id="7">
+			<property name="id">$NUM[7]</property>
 			<label>$LOCALIZE[2]</label>
 			<label2>Hub 1114</label2>
 			<icon>special://skin/extras/icons/songs.png</icon>
@@ -116,8 +134,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="7">
-			<property name="id">$NUM[7]</property>
+		<item id="8">
+			<property name="id">$NUM[8]</property>
 			<label>$LOCALIZE[31343584]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/livetv.png</icon>
@@ -136,8 +154,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="8">
-			<property name="id">$NUM[8]</property>
+		<item id="9">
+			<property name="id">$NUM[9]</property>
 			<label>ילדים</label>
 			<label2>Hub 1113</label2>
 			<icon>special://skin/extras/icons/rocket.png</icon>
@@ -156,8 +174,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="9">
-			<property name="id">$NUM[9]</property>
+		<item id="10">
+			<property name="id">$NUM[10]</property>
 			<label>$LOCALIZE[31314]</label>
 			<label2>Hub 1112</label2>
 			<icon>special://skin/extras/icons/tvguide.png</icon>
@@ -176,8 +194,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="10">
-			<property name="id">$NUM[10]</property>
+		<item id="11">
+			<property name="id">$NUM[11]</property>
 			<label>$LOCALIZE[1037]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/video-addons.png</icon>
@@ -199,8 +217,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="11">
-			<property name="id">$NUM[11]</property>
+		<item id="12">
+			<property name="id">$NUM[12]</property>
 			<label>חיפוש</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/search.png</icon>
@@ -219,8 +237,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="12">
-			<property name="id">$NUM[12]</property>
+		<item id="13">
+			<property name="id">$NUM[13]</property>
 			<label>$LOCALIZE[8]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/sun.png</icon>
@@ -240,8 +258,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">False</property>
 		</item>
-		<item id="13">
-			<property name="id">$NUM[13]</property>
+		<item id="14">
+			<property name="id">$NUM[14]</property>
 			<label>$LOCALIZE[10004]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/settings.png</icon>
@@ -260,8 +278,8 @@
 			<property name="group">mainmenu</property>
 			<property name="hasSubmenu">True</property>
 		</item>
-		<item id="14">
-			<property name="id">$NUM[14]</property>
+		<item id="15">
+			<property name="id">$NUM[15]</property>
 			<label>$LOCALIZE[33060]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/power.png</icon>
@@ -3087,6 +3105,8 @@
 			<property name="isSubmenu">True</property>
 		</item>
 	</include>
+	<include name="skinshortcuts-group-programs" />
+	<include name="skinshortcuts-group-alt-programs" />
 	<include name="skinshortcuts-group-pictures">
 		<item id="1">
 			<property name="id">$NUM[1]</property>
