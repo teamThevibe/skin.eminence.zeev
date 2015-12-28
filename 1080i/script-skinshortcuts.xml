@@ -243,6 +243,11 @@
                     <param name="buttonid1" value="9315" />
                     <param name="buttonid2" value="9415" />
                 </include>
+								<include name="Defs_Shortcuts_SetHub">
+                    <param name="hubid" value="1116" />
+                    <param name="buttonid1" value="9316" />
+                    <param name="buttonid2" value="9416" />
+                </include>
 				
                 <control type="button" id="312" description="Widget">
                     <width>100%</width>
@@ -253,9 +258,10 @@
                 <control type="button" id="310" description="Background">
 				<label>324324238</label>
                     <width>100%</width>
-                    <visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
                     <include>Defs_OptionButton</include>
                 </control>
+				
+				
                 <control type="button" id="306" description="Browse for Thumb">
 								<label>324324239</label>
 

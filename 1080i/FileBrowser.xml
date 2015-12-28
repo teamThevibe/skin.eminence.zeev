@@ -12,8 +12,8 @@
 							                <animation effect="fade" start="100" end="100" time="300" condition="!Control.HasFocus(60)">Conditional</animation>
 
                         </control>
-        <include>GlobalTopBar</include>
-
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
         <control type="group">
             <visible>!Window.IsActive(DialogNetworkSetup.xml)</visible>
             <visible>!Window.IsActive(LockSettings.xml)</visible>

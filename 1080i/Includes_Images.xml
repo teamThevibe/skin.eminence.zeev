@@ -10,6 +10,18 @@
         <value condition="!IsEmpty(ListItem.Art(tvshow.poster))">$INFO[ListItem.Art(tvshow.poster)]</value>
         <value>$INFO[ListItem.Icon]</value>
     </variable>
+	
+	<!-- Ajout Variable -->
+    <variable name="ClearLogoTop">
+        <value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
+        <value condition="!IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Art(clearlogo)) + Skin.HasSetting(furniture.showhublogo)">$INFO[Container(9500).ListItem.Art(clearlogo)]</value>
+        <value condition="!IsEmpty(Container(9500).ListItem.Art(tvshow.clearlogo)) + Skin.HasSetting(furniture.showhublogo)">$INFO[Container(9500).ListItem.Art(tvshow.clearlogo)]</value>
+        <value condition="!IsEmpty(Container(9001).ListItem.Art(clearlogo))">$INFO[Container(9001).ListItem.Art(clearlogo)]</value>
+        <value condition="!IsEmpty(Container(9001).ListItem.Art(tvshow.clearlogo))">$INFO[Container(9001).ListItem.Art(tvshow.clearlogo)]</value>
+        <value condition="substring(Container.FolderPath,video.youtube)">logos/Youtube_logo.png</value>
+        <value condition="substring(Container.FolderPath,video.dailymotion)">logos/Dailymotion_logo.png</value>
+    </variable>
 
     <variable name="Image_Thumb">
         <value condition="Container.Content(episodes) | Window.IsVisible(MyPics.xml)">$INFO[ListItem.Art(thumb)]</value>
@@ -17,6 +29,14 @@
         <value>$INFO[ListItem.Icon]</value>
     </variable>
 
+	<variable neme="bgzeev"> 
+			<value condition="StringCompare(Container(9500).ListItem.Property(Background),weather) + !IsEmpty(Window(Weather).Property(Current.FanartCode))">special://skin/backgrounds/weather/$INFO[Window(Weather).Property(Current.FanartCode)]/weather-$INFO[Window(Weather).Property(Current.FanartCode)].jpg</value>
+		<value condition="!IsEmpty(Container(9500).ListItem.Property(Background))">$INFO[Container(9500).ListItem.Property(Background)]</value>		
+		<value condition="StringCompare(Container(9500).ListItem.Property(Background),weather) + !IsEmpty(Window(Weather).Property(Current.FanartCode))">special://skin/backgrounds/weather/$INFO[Window(Weather).Property(Current.FanartCode)]/weather-$INFO[Window(Weather).Property(Current.FanartCode)].jpg</value>
+		<value condition="IsEmpty(Container(9500).ListItem.Property(Background))">special://skin/backgrounds/videos.jpg</value> 
+		<value>$INFO[Container(9501).ListItem.Property(Background)]</value>
+	</variable>
+	
     <variable name="Image_PVRThumb">
         <value condition="!IsEmpty(Window(Home).Property(SkinHelper.PVR.FanArt))">$INFO[Window(Home).Property(SkinHelper.PVR.FanArt)]</value>
         <value>special://skin/extras/backgrounds/home.jpg</value>
@@ -36,9 +56,9 @@
 
 
     <variable name="Image_RSS_Icon">
-        <value condition="Player.HasMedia + Player.Paused">common/pause.png</value>
-        <value condition="Player.HasMedia + !Player.Paused">common/play.png</value>
-        <value condition="!Player.HasMedia + Window.IsVisible(SettingsCategory.xml)">common/rss.png</value>
+        <value condition="Player.HasMedia + Player.Paused + !ControlGroup(9005).HasFocus()">common/pause.png</value>
+        <value condition="Player.HasMedia + !Player.Paused + !ControlGroup(9005).HasFocus()" >common/play.png</value>
+        <value condition="!Player.HasMedia + Window.IsVisible(SettingsCategory.xml) + !ControlGroup(9005).HasFocus()">common/rss.png</value>
     </variable>
 
     <variable name="Image_Background">
@@ -55,11 +75,18 @@
         <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
         <value condition="Skin.HasSetting(background.hidefanart) + IsEmpty(Skin.String(background.fallback))">common/black.png</value>
         <value condition="Skin.HasSetting(background.hidefanart) + !IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
-        <value condition="!IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
+        <value condition="!IsEmpty(Container(9501).ListItem.Art(Background)) + !IsEmpty(Container(9500).ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[Container(9500).ListItem.Art(fanart)]</value>
+		<value condition="!IsEmpty(Container(9501).ListItem.Property(Background))">$INFO[Container(9501).ListItem.Property(Background)]</value>
         <value condition="!IsEmpty(ListItem.Art(fanart)) + !Skin.HasSetting(global.fanart)">$INFO[ListItem.Art(fanart)]</value>
         <value condition="!IsEmpty(Skin.String(background.fallback))">$INFO[Skin.String(background.fallback)]</value>
-		<value>common/black.png</value>
+		<value>$INFO[Container(9500).ListItem.Art(fanart)]</value>
     </variable>
+
+<variable neme="image_hub">
+		<value condition="!IsEmpty(Container(9501).ListItem.Property(Background))">$INFO[Container(9501).ListItem.Property(Background)]</value>
+				<value>$INFO[Container(9500).ListItem.Art(fanart)]</value>
+
+</variable>	
 
     <variable name="Image_Indicator">
         <value condition="ListItem.IsPlaying">indicator/play.png</value>

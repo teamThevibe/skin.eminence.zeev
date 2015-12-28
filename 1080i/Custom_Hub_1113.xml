@@ -6,7 +6,13 @@
     <onunload>SetProperty(HubReturn,1113,home)</onunload>
     <allowoverlay>false</allowoverlay>
     <controls>
-        <include name="Window_Kids">
+						         <include condition="!Skin.HasSetting(skin.2) + !Skin.HasSetting(skin.3)" name="Window_Kids">
+            <param name="categories" value="skinshortcuts-group-x1113" />
+        </include>
+		<include condition="Skin.HasSetting(skin.2) + !Skin.HasSetting(skin.3)" name="Window_Kids2">
+            <param name="categories" value="skinshortcuts-group-x1113" />
+        </include>
+			<include condition="Skin.HasSetting(skin.3)" name="Window_Kids3">
             <param name="categories" value="skinshortcuts-group-x1113" />
         </include>
     </controls>

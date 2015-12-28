@@ -696,8 +696,9 @@
                 <effect type="fade" start="0" end="100" time="200"/>
             </animation>
             <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
-            <include>GlobalTopBar</include>
-        </control>
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+			</control>
         
 							<!-- Volume Bar 
 					<control type="group">

@@ -1,6 +1,193 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <includes>
+ <!-- Poster -->
+    <include name="Object_Poster">
+        <param name="label" default="$LOCALIZE[31098]" />
+        <definition>
+            <control type="group">
+                <left>$PARAM[left]</left>
+                <width>$PARAM[width]</width>
+                <height>height</height>
+                <include name="Object_Line">
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="image">
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+<!-- Modification Aspectratio -->                    
+                    <aspectratio>stretch</aspectratio>
+                    <fadetime>200</fadetime>
+                    <texture background="true">$VAR[Image_Poster]</texture>
+                    <visible>IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))</visible>
+                </control>
+                <control type="image">
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+<!-- Modification Aspectratio -->                    
+                    <aspectratio>stretch</aspectratio>
+                    <fadetime>200</fadetime>
+                    <texture background="true">$VAR[Image_Poster]</texture>
+                    <visible>![IsEmpty(ListItem.Art(tvshow.poster)) + IsEmpty(ListItem.Art(poster))]</visible>
+                </control>               
+                
+            </control>
+        </definition>
+    </include>
+	
+    <include name="Object_ExtraInfo2">
+        <param name="label" default="19033" />
+        <param name="left" default="860" />
+        <definition>
+            <control type="group">
+                <left>$PARAM[left]</left>
+                <width>1020</width>
+                <height>height</height>
+                <include name="Object_Line">
+                    <param name="width" value="1020" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <control type="image">
+                        <left>0</left>
+                        <width>270</width>
+                        <height>405</height>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$VAR[Image_Poster]</texture>
+                    </control>
+                    <control type="image">
+                        <top>-415</top>
+                        <right>0</right>
+                        <width>720</width>
+                        <height>405</height>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$VAR[Image_Thumb]</texture>
+                    </control>
+                    <include>Object_ExtraInfo_Content</include>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+    <include name="Object_ExtraInfo_Content">
+        <control type="label">
+            <top>pad</top>
+            <left>pad</left>
+            <right>pad</right>
+            <height>36</height>
+			<align>right</align>
+            <font>Font-InfoBox-Title</font>
+            <label>$INFO[ListItem.Label]</label>
+        </control>
+        <control type="label">
+            <left>pad</left>
+            <right>pad</right>
+            <height>24</height>
+						<align>right</align>
+            <textcolor>$VAR[HighlightColor2]</textcolor>
+            <font>Font-ListInfo-Small-Bold</font>
+            <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+        </control>
+        <control type="textbox">
+            <left>pad</left>
+            <right>pad</right>
+            <height>120</height>
+            <font>Font-ListInfo</font>
+            <align>right</align>
+            <label>$VAR[Label_Plot]</label>
+            <visible>!IsEmpty(ListItem.Genre)</visible>
+        </control>
+        <control type="textbox">
+            <left>pad</left>
+            <right>pad</right>
+            <height>154</height>
+            <font>Font-ListInfo</font>
+            <align>right</align>
+            <label>$VAR[Label_Plot]</label>
+            <visible>IsEmpty(ListItem.Genre)</visible>
+        </control>
+        <control type="label">
+            <left>pad</left>
+            <right>pad</right>
+            <height>20</height>
+            <align>left</align>
+            <font>Font-ListInfo-Small-Bold</font>
+            <label>$VAR[Label_ExtraInfo_Icons]</label>
+        </control>
+        <!-- <control type="image">
+            <top>-48</top>
+            <left>5</left>
+            <width>64</width>
+            <height>64</height>
+            <aspectratio>keep</aspectratio>
+            <texture>indicator/3D.png</texture>
+            <visible>ListItem.IsStereoscopic</visible>
+        </control> -->
+    </include>
+
+    <!-- Thumb Info -->
+    <include name="Object_ExtraInfo">
+        <param name="label" default="19033" />
+        <param name="left" default="1140" />
+        <definition>
+            <control type="group">
+                <left>$PARAM[left]</left>
+                <width>740</width>
+                <height>height</height>
+                <include name="Object_Line">
+                    <param name="width" value="740" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
+                <control type="image">
+                    <width>100%</width>
+                    <height>100%</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>pad</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <control type="image">
+                        <width>100%</width>
+                        <height>405</height>
+                        <aspectratio>scale</aspectratio>
+                        <fadetime>200</fadetime>
+                        <texture background="true">$VAR[Image_Thumb]</texture>
+                    </control>
+                    <include>Object_ExtraInfo_Content</include>
+                </control>
+            </control>
+        </definition>
+    </include>
 
     <include name="View_50_List">
         <description>List View (id=50)</description>

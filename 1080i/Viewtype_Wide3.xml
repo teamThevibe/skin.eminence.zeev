@@ -1,0 +1,206 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+
+			<!-- BIG WIDE LOGO -->
+    <include name="Viewtype_BigWideLogo">
+        <control type="group">
+            <visible>Control.IsVisible(530)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>side</right>
+            <top>200</top>
+            <height>height</height>
+												<animation effect="slide" start="10" end="-1000" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="10" end="-1000" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_BigWideLogo">
+                <param name="id" value="530" />
+                <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
+            </include>
+            <!-- <control type="scrollbar" id="60">
+                <onup>50</onup>
+                <top>682</top>
+                <orientation>horizontal</orientation>
+                <width>1880</width>
+                <height>8</height>
+                <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="50">Conditional</animation>
+            </control> -->
+        </control>
+    </include>
+
+<!-- Add Include -->       
+    <include name="View_BigWideLogo">
+        <control type="group">
+            <control type="wraplist" id="$PARAM[id]">
+                <top>0</top>
+                <left>-88</left>
+                <width>2736</width>
+                <height>height</height>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[id]</onright>
+                <ondown>60</ondown>
+                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                <pagecontrol>60</pagecontrol>
+                <focusposition>5</focusposition>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <viewtype label="$LOCALIZE[31532]">bigwide</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="690" width="88">
+                    <control type="group">
+                        <left>0</left>
+                        <right>pad</right>
+                        
+                        <control type="image">
+                            <left>0</left>
+                            <right>0</right>
+                            <top>0</top>
+                            <bottom>0</bottom>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+
+                        <control type="label">
+                            <left>0</left>
+                            <top>620</top>
+                            <height>75</height>
+                            <width>570</width>
+                            <align>center</align>
+                            <animation effect="rotate" end="90" start="0" condition="true" center="20,640">Conditional</animation>
+                            <align>right</align>
+							<label>$INFO[ListItem.Label]</label>
+                            <visible>IsEmpty(ListItem.Art(clearlogo))</visible>
+                            <visible>IsEmpty(ListItem.Art(tvshow.clearlogo))</visible>
+                        </control>
+                        
+                        <control type="image">
+                            <left>0</left>
+                            <top>630</top>
+                            <bottom>0</bottom>
+                            <width>570</width>
+                            <align>center</align>
+                            <aligny>center</aligny>
+                            <aspectratio>keep</aspectratio>
+                            <animation effect="rotate" end="90" start="0" condition="true" center="20,640">Conditional</animation>
+                            <texture>$VAR[ClearLogoTop]</texture>
+                        </control>
+                        
+                        <control type="image">
+                            <centerleft>50%</centerleft>
+                            <top>side</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="image">
+                            <centerleft>50%</centerleft>
+                            <top>side</top>
+                            <height>32</height>
+                            <width>32</width>                         
+                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="690" width="1186">
+                    <include>View_BigWide_Fanart</include>
+                    <include>View_BigWide_InfoLogo</include>
+                </focusedlayout>
+            </control>
+        </control>
+        
+    </include>    
+
+<!-- Add Include -->    
+    <include name="View_BigWide_InfoLogo">
+        <control type="group">
+            <left>pad</left>
+            <right>side</right>
+            <bottom>15</bottom>
+            <height>122</height>
+			
+            <control type="image">
+                <width>100%</width>
+<!-- Modification Height -->                  
+                <height>210</height>
+                <bottom>-5</bottom>
+<!-- Modification Texture -->                  
+                <texture flipy="true" colordiffuse="ff181818">common/gradient.png</texture>
+<!-- Ajout Visible -->            
+            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>                
+            </control>
+            <control type="group">
+<!-- Ajout Visible -->            
+            <visible>!Skin.HasSetting(hide.moviesplots) + ! Skin.HasSetting(hide.tvshowsplots)</visible>            
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <textcolor>HomeSubLabel</textcolor>
+					<align>right</align>
+                    <label>$INFO[ListItem.Label]</label>
+
+                </control>
+                <control type="image">
+                    <top>-70</top>
+                    <height>110</height>
+                    <aspectratio>keep</aspectratio>
+                    <texture>$VAR[ClearLogoTop]</texture>
+                </control>
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>left</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_Label3,,  •  ]$INFO[ListItem.Rating]</label>
+                    <visible>!Container.Content(seasons)</visible>
+		<visible>!Skin.HasSetting(disable.rating)</visible>                    
+                </control>           
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>left</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_Label3]</label>
+                    <visible>!Container.Content(seasons)</visible>
+                    <visible>Skin.HasSetting(disable.rating)</visible>  
+                </control>
+                <control type="label">
+                    <left>side</left>
+                    <right>side</right>
+                    <top>10</top>
+                    <height>32</height>
+                    <align>left</align>
+                    <font>Font-ListInfo-Small-Bold</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    <visible>Container.Content(seasons)</visible>
+                 </control>
+                <control type="textbox">
+                    <left>side</left>
+                    <right>side</right>
+                    <bottom>5</bottom>
+                    <height>68</height>
+					<align>right</align>
+                    <font>Font-ListInfo-Small</font>
+                    <textcolor>HomeSubLabel</textcolor>
+                    <label>$VAR[Label_Plot]</label>
+                </control>
+            </control>
+        </control>
+    </include>
+	</includes>

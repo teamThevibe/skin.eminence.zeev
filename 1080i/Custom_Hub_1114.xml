@@ -6,8 +6,14 @@
 	<onunload>SetProperty(HubReturn,1114,home)</onunload>
 	<allowoverlay>false</allowoverlay>
 	<controls>
-		<include name="Window_Music">
-			<param name="categories" value="skinshortcuts-group-x1114" />
-		</include>
+								         <include condition="!Skin.HasSetting(skin.2) + !Skin.HasSetting(skin.3)" name="Window_Music">
+            <param name="categories" value="skinshortcuts-group-x1114" />
+        </include>
+		<include condition="Skin.HasSetting(skin.2) + !Skin.HasSetting(skin.3)" name="Window_Music2">
+            <param name="categories" value="skinshortcuts-group-x1114" />
+        </include>
+			<include condition="Skin.HasSetting(skin.3)" name="Window_Music3">
+            <param name="categories" value="skinshortcuts-group-x1114" />
+        </include>
 	</controls>
 </window>

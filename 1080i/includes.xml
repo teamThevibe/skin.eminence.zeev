@@ -20,7 +20,7 @@
 	<include file="Includes_Dialog.xml" />
 	<include file="Includes_Window.xml" />
 	<include file="Includes_Colors.xml" />
-	<include file="Includes_Object.xml" />
+    <include file="Includes_Object.xml" />
 	<include file="Includes_LiveTV.xml" />
 	<include file="script-skinshortcuts-includes.xml"/>
 
@@ -39,6 +39,14 @@
 	<include file="View_59_MediaInfo3.xml" />
 	<include file="View_PVR.xml" />
 	<include file="View_517_Poster.xml" />
+	<include file="View_519_EM.xml" />
+	<include file="Viewtype_Icon.xml" />
+	<include file="Viewtype_BigWide.xml" />
+	<include file="Viewtype_List.xml" />
+		<include file="Viewtype_Wide2.xml" />
+		<include file="Viewtype_Wide3.xml" />
+		<include file="Viewtype_Wide4.xml" />
+		<include file="Viewtype_Wide5.xml" />
 
 	<!-- VARS -->
 	<variable name="HighlightColor">

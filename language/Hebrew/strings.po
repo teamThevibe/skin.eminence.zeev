@@ -1571,3 +1571,219 @@ msgstr "8 קטגוריה מותאמת אישית"
 msgctxt "#31343612"
 msgid "Hub"
 msgstr "מועדפים"
+
+msgctxt "#31343613"
+msgid "Hub"
+msgstr "קיר ופרטים"
+
+msgctxt "#31343614"
+msgid "Hub"
+msgstr "קיר 2"
+
+msgctxt "#31343615"
+msgid "Hub"
+msgstr "קיר 3"
+
+msgctxt "#31343616"
+msgid "Hub"
+msgstr "רשימה ופוסטר"
+
+msgctxt "#31343617"
+msgid "Hub"
+msgstr "רשימה 2"
+
+msgctxt "#31343618"
+msgid "Hub"
+msgstr "פרטי מדיה 2"
+
+msgctxt "#31343619"
+msgid "Hub"
+msgstr "פרטי מדיה 3"
+
+msgctxt "#31343620"
+msgid "Hub"
+msgstr "פרטי מדיה 4"
+
+msgctxt "#31343621"
+msgid "Hub"
+msgstr "רשימת פאנארט"
+
+msgctxt "#31343622"
+msgid "Hub"
+msgstr "רשימת איקון"
+
+msgctxt "#31343623"
+msgid "Hub"
+msgstr "רשימה ופרטים"
+
+msgctxt "#31343623"
+msgid "Hub"
+msgstr "רשימה ופרטים"
+
+msgctxt "#31343624"
+msgid "Hub"
+msgstr "פאנארט"
+
+msgctxt "#31343625"
+msgid "Hub"
+msgstr "רשימת באנר"
+
+msgctxt "#31343626"
+msgid "Hub"
+msgstr "גלריה"
+
+msgctxt "#31343627"
+msgid "Hub"
+msgstr "גלריה לוגו"
+
+msgctxt "#31343628"
+msgid "Hub"
+msgstr "צבעים"
+
+msgctxt "#31343629"
+msgid "Hub"
+msgstr "גיבוי שיחזור"
+
+msgctxt "#31343630"
+msgid "Hub"
+msgstr "גיבוי שיחזור"
+
+msgctxt "#31343631"
+msgid "Hub"
+msgstr "שקיפות ישומון"
+
+msgctxt "#31343632"
+msgid "Hub"
+msgstr "הצג דיסק מזוייף"
+
+msgctxt "#31343633"
+msgid "Hub"
+msgstr "דיסק מסתובב"
+
+msgctxt "#31343634"
+msgid "Hub"
+msgstr "לוגו סרט"
+
+msgctxt "#31343635"
+msgid "Hub"
+msgstr "התאם צבע קטגוריה וצבע אריח"
+
+msgctxt "#31343636"
+msgid "Hub"
+msgstr "התאם צבע קטגוריה ואריח עליון"
+
+msgctxt "#31343637"
+msgid "Hub"
+msgstr "הגדר קטגוריה בסיגנון 16:9"
+
+msgctxt "#31343638"
+msgid "Hub"
+msgstr "הגדר קטגוריה בסיגנון רשימה"
+
+msgctxt "#31343639"
+msgid "Hub"
+msgstr "ביטול שקיפות אריחים לא מסומנים"
+
+msgctxt "#31343640"
+msgid "Hub"
+msgstr "הצג וידיאו מתנגן במערכת"
+
+msgctxt "#31343641"
+msgid "Hub"
+msgstr "הצג וידיאו מתנגן בדף הבית"
+
+msgctxt "#31343642"
+msgid "Hub"
+msgstr "החשך פאנארט"
+
+msgctxt "#31343643"
+msgid "Hub"
+msgstr "כותרת מלאה"
+
+msgctxt "#31343644"
+msgid "Hub"
+msgstr "הצג כותרת ספירת ספריות"
+
+msgctxt "#31343645"
+msgid "Hub"
+msgstr "רקע שחור מאחורי שעון וכותרת"
+
+msgctxt "#31343646"
+msgid "Hub"
+msgstr "הצג שעון"
+
+msgctxt "#31343647"
+msgid "Hub"
+msgstr "שינוי סמל המתנה"
+
+msgctxt "#31343648"
+msgid "Hub"
+msgstr "הצג דיסק בדף פרטי סרט"
+
+msgctxt "#31343649"
+msgid "Hub"
+msgstr "הצג פרטי שידור בקיר סדרות"
+
+msgctxt "#31343650"
+msgid "Hub"
+msgstr "שיחזור מגיבוי"
+
+msgctxt "#31343651"
+msgid "Hub"
+msgstr "הגדר צבע שעון ומזג האויר"
+
+msgctxt "#31343652"
+msgid "Hub"
+msgstr "הגדר צבע כותרות"
+
+msgctxt "#31343653"
+msgid "Hub"
+msgstr "הגדר צבע כותרות משניות"
+
+msgctxt "#31343654"
+msgid "Hub"
+msgstr "הגדר צבע ראשי בסימון"
+
+msgctxt "#31343655"
+msgid "Hub"
+msgstr "הגדר צבע רקע אריחים"
+
+msgctxt "#31343656"
+msgid "Hub"
+msgstr "הגדר צבע רקע שורת הודעות דף הבית"
+
+msgctxt "#31343657"
+msgid "Hub"
+msgstr "הגדר צבע לשורת RSS בדף הבית"
+
+msgctxt "#31343658"
+msgid "Hub"
+msgstr "אפשר / בטל תצוגות (סמן בלבן תצוגה שברצונך לבטל)"
+
+msgctxt "#31343659"
+msgid "Hub"
+msgstr "אפשר הגדרת תצוגה"
+
+msgctxt "#31343660"
+msgid "Hub"
+msgstr "תצוגת סרטים:"
+
+msgctxt "#31343661"
+msgid "Hub"
+msgstr "תצוגת סדרות:"
+
+msgctxt "#31343662"
+msgid "Hub"
+msgstr "תצוגות עונות:"
+
+msgctxt "#31343663"
+msgid "Hub"
+msgstr "תצוגות עונות:"
+
+msgctxt "#31343664"
+msgid "Hub"
+msgstr "ערוך קטגוריה"
+
+msgctxt "#31343665"
+msgid "Hub"
+msgstr "הגדר ישומון קטגוריה"

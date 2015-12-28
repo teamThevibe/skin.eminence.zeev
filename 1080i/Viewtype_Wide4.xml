@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>  
+
+  <!-- WIDE -->
+    <include name="Viewtype_Wide22">
+        <control type="group">
+            <visible>Control.IsVisible(531)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>side</right>
+            <top>200</top>
+            <height>height</height>
+															<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_Wide">
+                <param name="id" value="531" />
+                <param name="condition" value="Container.Content(tvshows) | Container.Content(movies)" />
+            </include>
+            <include>Object_Arrows_Vertical</include>
+        </control>
+    </include>
+    <include name="View_Wide">
+        <control type="group">
+            <control type="panel" id="$PARAM[id]">
+                <width>1890</width>
+                <height>700</height>
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                <onleft condition="!StringCompare(Window(home).Property(HubReturn),Home)">ActivateWindow($INFO[Window(home).Property(HubReturn)])</onleft>
+                <pagecontrol>60</pagecontrol>
+                <preloaditems>2</preloaditems>
+                <orientation>vertical</orientation>
+                <viewtype label="539">wide</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="140" width="630">
+                    <control type="group">
+                        <left>0</left>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$VAR[Image_Banner]</texture>
+                        </control>
+                        <control type="image">
+                            <right>15</right>
+                            <top>15</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture>$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="140" width="630">
+                    <control type="group">
+                        <left>0</left>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+                     <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+					<visible>Skin.HasSetting(home.colortilehigh)</visible>    
+					</control>
+		        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+					<visible>!Skin.HasSetting(home.colortilehigh)</visible>
+					</control>
+                        <control type="image">
+                            <left>pad</left>
+                            <right>pad</right>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <aspectratio>scale</aspectratio>
+                            <texture background="true">$VAR[Image_Banner]</texture>
+                        </control>
+                        <control type="image">
+                            <right>15</right>
+                            <top>15</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture>$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+	</includes>  

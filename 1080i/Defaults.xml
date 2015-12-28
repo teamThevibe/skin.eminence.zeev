@@ -75,7 +75,23 @@
     <constant name="favitemw">1256</constant>
     <constant name="favdialogw">1720</constant>
 
-
+    <constant name="pad3">10</constant>
+    <constant name="side3">20</constant>
+    <constant name="top3">280</constant>
+    <constant name="height3">690</constant>
+    <constant name="posterh3">690</constant>
+    <constant name="thumbh3">251</constant>
+    <constant name="posterw3">467</constant>
+    <constant name="posterlistw3">487</constant>
+    <constant name="infox3">477</constant>
+    <constant name="posterx3">1413</constant>
+<!-- Modification Constant -->  
+    <constant name="toppanel3">182</constant>
+    <constant name="listw3">1403</constant>
+    <constant name="listsqw3">1180</constant>
+    <constant name="sidearrowtop3">625</constant>
+    <constant name="favitemw3">1256</constant>
+    <constant name="favdialogw3">1720</constant>
 
     <default type="label">
         <height>66</height>

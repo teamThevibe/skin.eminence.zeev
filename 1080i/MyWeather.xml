@@ -9,8 +9,8 @@
     <controls>
 
         <include>GlobalBackground</include>
-        <include>GlobalTopBar</include>
-    
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>    
         <control type="group">
             <posy>topoffset</posy>
             <posx>horzpad</posx>

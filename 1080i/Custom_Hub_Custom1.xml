@@ -8,8 +8,9 @@
     <onunload>ClearProperty(librarynode,home)</onunload>
     <controls>
         <include>GlobalBackground</include>
-        <include>GlobalTopBar</include>
-        <include></include>
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+			<include></include>
    
         <control type="group">
             <posx>horzpad</posx>

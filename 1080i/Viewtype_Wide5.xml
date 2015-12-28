@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>  
+
+ <!-- BIG WIDE -->
+    <include name="Viewtype_BigWide">
+        <control type="group">
+            <visible>Control.IsVisible(533)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_BigWide">
+                <param name="id" value="533" />
+                <!--<param name="condition" value="Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />-->
+            </include>
+            <!-- <control type="scrollbar" id="60">
+                <onup>50</onup>
+                <top>682</top>
+                <orientation>horizontal</orientation>
+                <width>1880</width>
+                <height>8</height>
+                <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="50">Conditional</animation>
+            </control> -->
+        </control>
+    </include>
+ 
+ <include name="View_BigWide">
+        <control type="group">
+            <control type="wraplist" id="$PARAM[id]">
+                <top>0</top>
+                <left>-88</left>
+                <width>2736</width>
+                <height>height</height>
+                <onleft>$PARAM[id]</onleft>
+                <onright>$PARAM[id]</onright>
+                <ondown>60</ondown>
+                <onup condition="!Skin.HasSetting(KioskMode)">9000</onup>
+                <pagecontrol>60</pagecontrol>
+                <focusposition>5</focusposition>
+                <preloaditems>2</preloaditems>
+                <orientation>horizontal</orientation>
+                <viewtype label="540">bigwide</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="690" width="88">
+                    <control type="group">
+                        <left>0</left>
+                        <right>pad</right>
+                        
+                        <control type="image">
+                            <left>0</left>
+                            <right>0</right>
+                            <top>0</top>
+                            <bottom>0</bottom>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+
+                        <control type="label">
+                            <left>0</left>
+                            <top>620</top>
+                            <height>75</height>
+                            <width>570</width>
+                            <animation effect="rotate" end="90" start="0" condition="true" center="20,640">Conditional</animation>
+                            <label>$INFO[ListItem.Label]</label>
+                            <align>left</align>
+                        </control>
+<!-- Ajout Control -->                        
+                        <control type="image">
+                            <centerleft>50%</centerleft>
+                            <top>side</top>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="image">
+                            <centerleft>50%</centerleft>
+                            <top>side</top>
+                            <height>32</height>
+                            <width>32</width>
+<!-- Modification Texture -->                            
+                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="690" width="1186">
+                    <include>View_BigWide_Fanart</include>
+                    <include>View_BigWide_Info</include>
+                </focusedlayout>
+            </control>
+        </control>
+        
+    </include>
+	</includes>  

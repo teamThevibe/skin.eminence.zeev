@@ -2,8 +2,9 @@
     <defaultcontrol always="true">10</defaultcontrol>
     <controls>
         <include>GlobalBackground</include>
-        <include>GlobalTopBar</include>
-        <control type="group">
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+			<control type="group">
             <posx>horzpad</posx>
             <posy>topoffset</posy>
             <include>Animation.SlideOpen.Left</include>

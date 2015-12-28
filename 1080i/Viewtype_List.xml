@@ -1,0 +1,1043 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<includes>
+
+
+    <!-- LIST -->
+    <include name="Viewtype_List">
+        <control type="group">
+            <visible>Control.IsVisible(525)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Poster">
+                <param name="left" value="posterx" />
+                <param name="width" value="posterw" />
+            </include>
+            <include name="View_List">
+                <param name="viewlabel" value="535" />
+                <param name="posx" value="0" />
+                <param name="width" value="listw" />
+                <param name="id" value="525" />
+                <param name="condition" value="true" />
+            </include>
+            <control type="group">
+                <width>listw</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
+    <include name="Viewtype_SquareList">
+        <control type="group">
+            <visible>Control.IsVisible(525)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>side</left>
+            <right>side</right>
+            <top>top</top>
+            <height>height</height>
+            <include name="Object_Poster">
+                <param name="left" value="1190" />
+                <param name="width" value="690" />
+            </include>
+            <include name="View_List">
+                <param name="viewlabel" value="535" />
+                <param name="posx" value="0" />
+                <param name="width" value="1180" />
+                <param name="id" value="50" />
+                <param name="condition" value="true" />
+            </include>
+            <control type="group">
+                <width>1180</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+    
+    <!-- INFO LIST -->
+    <include name="Viewtype_InfoList">
+        <control type="group">
+            <visible>Control.IsVisible(508)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-200</left>
+            <right>side3</right>
+            <top>220</top>
+            <height>height</height>
+									<animation effect="slide" start="10" end="-220" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="10" end="-220" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <include name="Object_Line">
+                <param name="width" value="listw3" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+									    <control type="image">
+			   <posx>1413</posx>
+                            <posy>5</posy>
+                            <width>460</width>
+                            <height>680</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                            <aspectratio>scale</aspectratio>
+                        </control>
+               <control type="image">
+			   <posx>1420</posx>
+                            <posy>globalpad</posy>
+                            <width>446</width>
+                            <height>670</height>
+                            <texture background="true">$VAR[PosterImage]</texture>
+                            <aspectratio>scale</aspectratio>
+                        </control>
+
+            <include name="View_InfoList">
+                <param name="id" value="508" />
+                <param name="width" value="listw3" />
+                <param name="name" value="3119" />
+                <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
+            </include>
+        </control>
+    </include>
+    <include name="Viewtype_InfoList2">
+        <control type="group">
+            <visible>Control.IsVisible(509)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>side3</right>
+            <top>200</top>
+            <height>height</height>
+									<animation effect="slide" start="0" end="-220" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="0" end="-220" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_InfoList">
+                <param name="id" value="509" />
+                <param name="width" value="1880" />
+<!-- Modification Param -->                
+                <param name="name" value="31646" />
+                <param name="condition" value="Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
+            </include>
+        </control>
+    </include>
+    <include name="View_InfoList">
+        <control type="group">
+            <control type="group">
+                <top>0</top>
+                <left>0</left>
+                <width>$PARAM[width]</width>
+                <height>335</height>
+                <control type="image">
+                    <left>0</left>
+                    <right>0</right>
+                    <top>0</top>
+                    <bottom>0</bottom>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <control type="image">
+                    <left>pad</left>
+                    <width>560</width>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <fadetime>200</fadetime>
+                    <aspectratio>scale</aspectratio>
+                    <texture>$VAR[Image_Thumb]</texture>
+                </control>
+<!-- Ajout Control -->                
+         
+                <control type="image">
+                    <left>580</left>
+                    <top>20</top>
+                    <height>32</height>
+                    <width>32</width>
+                    <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                </control>
+                <control type="image">
+                    <left>580</left>
+                    <top>20</top>
+                    <height>32</height>
+                    <width>32</width>
+<!-- Modification Texture -->                            
+                    <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                    <visible>!IsEmpty(ListItem.Overlay)</visible>
+                </control>
+                <control type="grouplist">
+                    <usecontrolcoords>true</usecontrolcoords>
+                    <itemgap>pad</itemgap>
+                    <orientation>vertical</orientation>
+                    <left>580</left>
+                    <right>pad</right>
+                    <top>pad</top>
+                    <bottom>pad</bottom>
+                    <control type="label">
+                        <top>pad</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>36</height>
+												<align>right</align>
+
+                        <font>Font-InfoBox-Title</font>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                    <control type="label">
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>24</height>
+                        <textcolor>$VAR[HighlightColor2]</textcolor>
+												<align>right</align>
+
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
+                    </control>
+                    <control type="textbox">
+                        <top>7</top>
+						<align>right</align>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>154</height>
+                        <font>Font-ListInfo</font>
+                        <align>left</align>
+                        <label>$VAR[Label_Plot]</label>
+                    </control>
+                    <control type="label">
+                        <top>13</top>
+                        <left>pad</left>
+                        <right>pad</right>
+                        <height>20</height>
+                        <align>left</align>
+                        <font>Font-ListInfo-Small-Bold</font>
+                        <label>$VAR[Label_ExtraInfo_Icons]</label>
+                    </control>
+                </control>
+            </control>
+            <control type="image">
+                <left>0</left>
+                <width>$PARAM[width]</width>
+                <top>345</top>
+                <height>345</height>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
+            </control>
+            <control type="fixedlist" id="$PARAM[id]">
+                <top>345</top>
+                <left>0</left>
+                <width>$PARAM[width]</width>
+                <height>345</height>
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <onleft>60</onleft>
+                <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                <pagecontrol>60</pagecontrol>
+                <focusposition>2</focusposition>
+                <movement>2</movement>
+                <preloaditems>2</preloaditems>
+                <orientation>vetical</orientation>
+                <viewtype label="$PARAM[name]">list</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="69" width="$PARAM[width]">
+                    <include>View_List_Itemlayout</include>
+                </itemlayout>
+
+                <focusedlayout height="69" width="$PARAM[width]">
+                    <include>View_List_Focusedlayout</include>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+
+    <!-- MEDIA INFO -->
+    <include name="Viewtype_MediaInfo">
+        <control type="group">
+            <visible>Control.IsVisible(510)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>side</right>
+            <top>200</top>
+            <height>height</height>
+																					<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <include name="View_List">
+                <param name="viewlabel" value="31645" />
+                <param name="posx" value="0" />
+                <param name="width" value="1130" />
+                <param name="id" value="510" />
+                <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
+            </include>
+            <include>Object_ExtraInfo</include>
+            <control type="group">
+                <width>1130</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
+    <!-- MEDIA INFO 2 -->
+    <include name="Viewtype_MediaInfo2">
+        <control type="group">
+            <visible>Control.IsVisible(511)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>side</right>
+            <top>200</top>
+            <height>height</height>
+																					<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <include name="View_List">
+                <param name="viewlabel" value="31143" />
+                <param name="posx" value="0" />
+                <param name="width" value="850" />
+                <param name="id" value="511" />
+                <param name="label3" value="true" />
+                <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
+            </include>
+            <include>Object_ExtraInfo2</include>
+            <control type="group">
+                <left>0</left>
+                <width>850</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
+    <!-- MEDIA INFO 3 -->
+    <include name="Viewtype_MediaInfo3">
+        <control type="group">
+            <visible>Control.IsVisible(512) </visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>side</right>
+            <top>200</top>
+            <height>height</height>
+																					<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <include name="View_List">
+                <param name="viewlabel" value="31148" />
+                <param name="posx" value="0" />
+                <param name="width" value="653" />
+                <param name="id" value="512" />
+                <param name="label3" value="false" />
+                <param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
+            </include>
+            <include name="Object_Poster">
+                <param name="left" value="1413" />
+                <param name="width" value="posterw" />
+            </include>
+            <include name="Object_ExtraInfo">
+                <param name="left" value="663" />
+            </include>
+            <control type="group">
+                <left>0</left>
+                <width>653</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
+    <!-- FANART LIST -->
+    <include name="Viewtype_FanartList">
+        <control type="group">
+            <visible>Control.IsVisible(513) </visible>
+			                            <visible>Container.Content(movies) | Container.Content(episodes) | Container.Content(songs) | Container.Content(seasons) | Container.Content(tvshows)</visible>
+
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>side</right>
+            <top>200</top>
+            <height>height</height>
+            <control type="group">
+                <right>-10</right>
+                <width>1221</width>
+                <include>View_BigWide_Fanart</include>
+                <include>View_BigWide_Info</include>
+            </control>
+																					<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <control type="group">
+                <right>0</right>
+                <width>1211</width>
+                <include name="Object_Line">
+                    <param name="width" value="1211" />
+                    <param name="label" value="19033" />
+                </include>
+            </control>
+            <include name="View_List">
+                <param name="viewlabel" value="31164" />
+                <param name="posx" value="0" />
+                <param name="width" value="659" />
+                <param name="id" value="513" />
+                <param name="label3" value="false" />
+                <!--<param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />-->
+            </include>
+            <control type="group">
+                <width>659</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+
+    <!-- PANEL LIST -->
+    <include name="Viewtype_PanelList">
+        <control type="group">
+            <visible>Control.IsVisible(514) </visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>side</right>
+            <top>200</top>
+            <height>height</height>
+																					<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_BigList">
+                <param name="id" value="514" />
+                <param name="width" value="630" />
+                <param name="condition" value="!Container.Content(genres) + !Container.Content(songs) + !Container.Content(files)" />
+                <param name="name" value="31137" />
+            </include>
+            <include>Object_Scrollbar</include>
+            <include>Object_Arrows_Vertical</include>
+        </control>
+    </include>
+
+    <!-- BIG LIST -->
+    <include name="Viewtype_BigList">
+        <control type="group">
+            <visible>Control.IsVisible(d)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>0</right>
+            <top>200</top>
+            <height>height</height>
+            <include name="Object_Line">
+                <param name="width" value="1880" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_BigList">
+                <param name="id" value="515" />
+                <param name="width" value="1890" />
+                <param name="condition" value="!Container.Content(genres)" />
+                <param name="name" value="537" />
+            </include>
+            <include>Object_Scrollbar</include>
+            <include>Object_Arrows_Vertical</include>
+        </control>
+    </include>
+
+    <!-- BIG LIST INFO -->
+    <include name="Viewtype_BigListInfo">
+        <control type="group">
+		
+            <visible>Control.IsVisible(515)</visible>
+            <include>Animation_FadeIn</include>
+            <include>Animation_FadeOut</include>
+            <left>-195</left>
+            <right>0</right>
+            <top>200</top>
+            <height>height</height>
+																					<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+						<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+            <include name="Object_Line">
+                <param name="width" value="1130" />
+                <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+            </include>
+            <include name="View_BigList">
+                <param name="id" value="515" />
+                <param name="width" value="1140" />
+                <param name="condition" value="Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(albums)" />
+                <param name="name" value="31142" />
+            </include>
+            <include>Object_ExtraInfo</include>
+            <include>Object_Scrollbar</include>
+            <control type="group">
+                <width>1140</width>
+                <include>Object_Arrows_Vertical</include>
+            </control>
+        </control>
+    </include>
+    <include name="View_BigList">
+        <control type="group">
+            <control type="panel" id="$PARAM[id]">
+                <width>1890</width>
+                <height>700</height>
+                <onup>$PARAM[id]</onup>
+                <ondown>$PARAM[id]</ondown>
+                <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                <onleft>60</onleft>
+                <pagecontrol>60</pagecontrol>
+                <preloaditems>2</preloaditems>
+                <orientation>vertical</orientation>
+                <viewtype label="$PARAM[name]">biglist</viewtype>
+                <scrolltime tween="quadratic">400</scrolltime>
+                <visible>$PARAM[condition]</visible>
+                <itemlayout height="140" width="$PARAM[width]">
+                    <control type="group">
+                        <left>0</left>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+                        <control type="image">
+                            <width>100%</width>
+                            <height>100%</height>
+                            <texture colordiffuse="PosterBorder">common/white.png</texture>
+                        </control>
+                        <control type="image">
+                            <left>side</left>
+                            <width>110</width>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                        </control>
+<!-- Ajout Control -->                          
+                        <control type="image">
+                            <right>30</right>
+                            <centertop>65</centertop>
+                            <height>32</height>
+                            <width>32</width>                            
+                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>                        
+                        <control type="image">
+                            <right>30</right>
+                            <centertop>65</centertop>
+                            <height>32</height>
+                            <width>32</width>
+<!-- Modification Texture -->                            
+                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <height>100%</height>
+                            <aligny>center</aligny>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!IntegerGreaterThan(ListItem.Rating,0) + IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <top>28</top>
+                            <height>30</height>
+							<align>right</align>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <bottom>32</bottom>
+                            <height>30</height>
+                            <font>Font-ListInfo</font>
+														<align>right</align>
+
+<!-- Modification Label -->                            
+                            <label>$INFO[ListItem.Rating]$VAR[Label_Label3,  •  ,]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>
+<!-- Ajout Visible -->                            
+                            <visible>!Skin.HasSetting(disable.rating)</visible>
+                        </control>
+<!-- Ajout Control -->                        
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <bottom>32</bottom>
+                            <height>30</height>
+                            <font>Font-ListInfo</font>
+														<align>right</align>
+
+                            <label>$VAR[Label_Label3]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>
+                            <visible>Skin.HasSetting(disable.rating)</visible>
+                        </control>
+                    </control>
+                </itemlayout>
+
+                <focusedlayout height="140" width="$PARAM[width]">
+                    <control type="group">
+                        <left>0</left>
+                        <right>pad</right>
+                        <bottom>pad</bottom>
+             <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+					<visible>Skin.HasSetting(home.colortilehigh)</visible>    
+					</control>
+		        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+					<visible>!Skin.HasSetting(home.colortilehigh)</visible>
+					</control>
+                        <control type="image">
+                            <left>side</left>
+                            <width>110</width>
+                            <top>pad</top>
+                            <bottom>pad</bottom>
+                            <aspectratio>keep</aspectratio>
+                            <texture background="true">$INFO[ListItem.Icon]</texture>
+                        </control>
+<!-- Ajout Control -->                          
+                        <control type="image">
+                            <right>30</right>
+                            <centertop>65</centertop>
+                            <height>32</height>
+                            <width>32</width>                            
+                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="image">
+                            <right>30</right>
+                            <centertop>65</centertop>
+                            <height>32</height>
+                            <width>32</width>
+<!-- Modification Texture -->                            
+                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <height>100%</height>
+                            <aligny>center</aligny>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>!IntegerGreaterThan(ListItem.Rating,0) + IsEmpty(ListItem.Label2)</visible>
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <top>28</top>
+                            <height>30</height>
+                            <textcolor>Selected</textcolor>
+														<align>right</align>
+
+                            <label>$INFO[ListItem.Label]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>                            
+                        </control>
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <bottom>32</bottom>
+                            <height>30</height>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo</font>
+														<align>right</align>
+
+<!-- Modification Label -->                            
+                            <label>$INFO[ListItem.Rating]$VAR[Label_Label3,  •  ,]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>
+<!-- Ajout Visible -->                            
+                            <visible>!Skin.HasSetting(disable.rating)</visible>                            
+                        </control>
+<!-- Ajout Control -->                        
+                        <control type="label">
+                            <left>160</left>
+                            <right>80</right>
+                            <bottom>32</bottom>
+                            <height>30</height>
+                            <textcolor>Selected</textcolor>
+                            <font>Font-ListInfo</font>
+														<align>right</align>
+
+                            <label>$VAR[Label_Label3]</label>
+                            <visible>IntegerGreaterThan(ListItem.Rating,0) | !IsEmpty(ListItem.Label2)</visible>                          
+                            <visible>Skin.HasSetting(disable.rating)</visible>
+                        </control>
+                    </control>
+                </focusedlayout>
+            </control>
+        </control>
+    </include>
+    
+    <!-- LIST INCLUDE -->
+    <include name="View_List_Itemlayout">
+        <control type="label">
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+            <font>Font-ListInfo</font>
+            <label>$INFO[ListItem.Year]</label>
+            <visible>Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <left>30</left>
+            <right>130</right>
+            <top>0</top>
+            <height>100%</height>
+			            <align>right</align>
+
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+			<align>right</align>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+           <left>170</left>
+<!-- Modification Right -->            
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>left</align>
+            <font>Font-ListInfo</font>
+            <label>$VAR[Label_Label3]</label>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+<!-- Ajout Control -->        
+        <control type="image">
+            <left>20</left>
+
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+        <control type="image">
+<!-- Modification Right -->          
+            <left>20</left>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+<!-- Modification Texture -->                            
+            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+<!-- Ajout Control -->          
+        <control type="image">
+            <left>20</left>
+
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>Container.Content(seasons) | Container.Content(sets)</visible>
+        </control>
+        <control type="image">
+            <left>20</left>
+
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+<!-- Modification Texture -->                            
+            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>Container.Content(seasons) | Container.Content(sets)</visible>
+        </control>
+        <control type="label">
+            <left>70</left>
+<!-- Modification Right -->          
+            <right>95</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>left</align>
+            <font>Font-ListInfo</font>
+            <label fallback="0.0">$INFO[ListItem.Rating]</label>
+<!-- Ajout Visible -->            
+            <visible>!Skin.HasSetting(disable.rating)</visible>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+        <control type="label">
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+            <font>Font-ListInfo</font>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>IsEmpty(ListItem.Overlay)</visible>
+        </control>
+    </include>
+    <include name="View_List_Focusedlayout">
+        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+					<visible>Skin.HasSetting(home.colortilehigh)</visible>    
+					</control>
+		        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+					<visible>!Skin.HasSetting(home.colortilehigh)</visible>
+					</control>
+        <control type="label">
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+            <font>Font-ListInfo</font>
+            <label>$INFO[ListItem.Year]</label>
+            <visible>Container.Content(movies)</visible>
+        </control>
+       <control type="label">
+            <left>30</left>
+            <right>130</right>
+            <top>0</top>
+            <height>100%</height>
+			            <align>right</align>
+
+            <label>$INFO[ListItem.Label]</label>
+            <visible>Container.Content(movies)</visible>
+        </control>
+		        <control type="label">
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+			<align>right</align>
+            <label>$INFO[ListItem.Label]</label>
+            <visible>!Container.Content(movies)</visible>
+        </control>
+        <control type="label">
+            <textcolor>Selected</textcolor>
+            <left>170</left>
+<!-- Modification Right -->            
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>left</align>
+            <font>Font-ListInfo</font>
+            <label>$VAR[Label_Label3]</label>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+<!-- Ajout Control -->        
+        <control type="image">          
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+        <control type="image">
+<!-- Modification Right -->          
+            <left>20</left>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+<!-- Modification Texture -->                            
+            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+<!-- Ajout Control -->          
+        <control type="image">
+            <left>20</left>
+
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>Container.Content(seasons) | Container.Content(sets)</visible>
+        </control>
+        <control type="image">
+            <left>20</left>
+
+            <right>30</right>
+            <centertop>50%</centertop>
+            <height>32</height>
+            <width>32</width>
+<!-- Modification Texture -->                            
+            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>Container.Content(seasons) | Container.Content(sets)</visible>
+        </control>
+        <control type="label">
+            <textcolor>Selected</textcolor>
+            <left>70</left>
+<!-- Modification Right -->          
+            <right>95</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>left</align>
+            <font>Font-ListInfo</font>
+            <label fallback="0.0">$INFO[ListItem.Rating]</label>
+<!-- Ajout Visible -->            
+            <visible>!Skin.HasSetting(disable.rating)</visible>            
+            <visible>!IsEmpty(ListItem.Overlay)</visible>
+            <visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
+        </control>
+        <control type="label">
+            <textcolor>Selected</textcolor>
+            <left>30</left>
+            <right>30</right>
+            <top>0</top>
+            <height>100%</height>
+            <align>right</align>
+            <font>Font-ListInfo</font>
+            <label>$INFO[ListItem.Label2]</label>
+            <visible>IsEmpty(ListItem.Overlay)</visible>
+        </control>
+    </include>
+    <include name="View_List">
+        <param name="label3" default="true" />
+        <definition>
+            <control type="group">
+                <left>$PARAM[posx]</left>
+                <width>$PARAM[width]</width>
+                <include name="Object_Line">
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
+                </include>
+                <control type="image">
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+                    <texture colordiffuse="PosterBorder">common/white.png</texture>
+                </control>
+                <include>Object_Scrollbar</include>
+                <control type="panel" id="$PARAM[id]">
+                    <top>0</top>
+                    <left>0</left>
+                    <width>$PARAM[width]</width>
+                    <height>height</height>
+                    <onup>$PARAM[id]</onup>
+                    <ondown>$PARAM[id]</ondown>
+                    <onleft>60</onleft>
+                    <onright condition="!Skin.HasSetting(KioskMode)">9000</onright>
+                    <pagecontrol>60</pagecontrol>
+                    <orientation>vertical</orientation>
+                    <viewtype label="$PARAM[viewlabel]">list</viewtype>
+                    <scrolltime tween="quadratic">400</scrolltime>
+                    <visible>$PARAM[condition]</visible>
+                    <itemlayout height="69" width="$PARAM[width]" condition="$PARAM[label3]">
+                     <include>View_List_Itemlayout</include>   
+                    </itemlayout>
+                    <focusedlayout height="69" width="$PARAM[width]" condition="$PARAM[label3]">
+                     <include>View_List_Focusedlayout</include>   
+                    </focusedlayout>
+                    <itemlayout height="69" width="$PARAM[width]" condition="!$PARAM[label3]">
+                        <control type="label">
+                            <left>80</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+							                            <align>right</align>
+
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+<!-- Ajout Control -->                           
+                        <control type="image">
+                            <centerleft>40</centerleft>
+                            <centertop>50%</centertop>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="image">
+                            <centerleft>40</centerleft>
+                            <centertop>50%</centertop>
+                            <height>32</height>
+                            <width>32</width>
+<!-- Modification Texture -->                            
+                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="label">
+                            <left>60</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <align>left</align>
+                            <font>Font-ListInfo</font>
+                            <label>$INFO[ListItem.Label2]</label>
+<!-- Ajout Visible -->                            
+                            <visible>!Skin.HasSetting(disable.rating)</visible>
+                        </control>
+                    </itemlayout>
+                    <focusedlayout height="69" width="$PARAM[width]" condition="!$PARAM[label3]">
+                        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+					<visible>Skin.HasSetting(home.colortilehigh)</visible>    
+					</control>
+		        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+					<visible>!Skin.HasSetting(home.colortilehigh)</visible>
+					</control>
+                        <control type="label">
+                            <left>80</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+							                            <align>right</align>
+
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label]</label>
+                        </control>
+<!-- Ajout Control -->                        
+                        <control type="image">
+                            <centerleft>40</centerleft>
+                            <centertop>50%</centertop>
+                            <height>32</height>
+                            <width>32</width>
+                            <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="image">
+                            <centerleft>40</centerleft>
+                            <centertop>50%</centertop>
+                            <height>32</height>
+                            <width>32</width>
+<!-- Modification Texture -->                            
+                            <texture colordiffuse="Indicator">$VAR[Image_Indicator]</texture>
+                            <visible>!IsEmpty(ListItem.Overlay)</visible>
+                        </control>
+                        <control type="label">
+						<posx>60</posx>
+                            <left>30</left>
+                            <right>30</right>
+                            <top>0</top>
+                            <height>100%</height>
+                            <align>left</align>
+                            <font>Font-ListInfo</font>
+                            <textcolor>Selected</textcolor>
+                            <label>$INFO[ListItem.Label2]</label>
+<!-- Ajout Visible -->                            
+                            <visible>!Skin.HasSetting(disable.rating)</visible>                            
+                        </control>
+                    </focusedlayout>
+                </control>
+            </control>
+        </definition>
+    </include>
+
+
+</includes>

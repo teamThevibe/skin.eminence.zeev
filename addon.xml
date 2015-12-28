@@ -1,21 +1,22 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.eminence.zeev"
-    version="1.5.9"
+    version="2.0.0"
     name="Eminence Zeev"
     provider-name="jurialmunkey">
   <requires>
     <import addon="xbmc.gui" version="5.3.0"/>
+	    <import addon="script.skin.helper.service" version="1.0.0"/>
+  	<import addon="script.skinshortcuts" version="0.6.5"/>
+<!--
     <import addon="service.skin.widgets" version="0.0.29"/>
     <import addon="service.library.data.provider" version="0.0.7"/>
     <import addon="script.favourites" version="6.0.1"/>
     <import addon="script.globalsearch" version="3.0.4"/>
     <import addon="script.eminencefunctions" version="0.0.1"/>
-    <import addon="script.skin.helper.service" version="1.0.0"/>
     <import addon="script.extendedinfo" version="3.1.1"/>
     <import addon="script.tv.show.next.aired" version="60.0.14"/>
-  	<import addon="script.skinshortcuts" version="0.6.5"/>
-	<import addon="script.artwork.downloader" version="12.0.29"/>
+	<import addon="script.artwork.downloader" version="12.0.29"/>-->
   </requires>
   <extension
   point="xbmc.gui.skin"

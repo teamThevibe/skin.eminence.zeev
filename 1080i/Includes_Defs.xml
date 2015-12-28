@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+
 <include name="NextAiredINFO">
 		<!-- NextAired  -->
 
@@ -375,15 +376,14 @@
 	<include name="Defs_Shortcuts_SetHub">
 		<control type="button" id="$PARAM[buttonid1]" description="Set HUB">
 			<width>100%</width>
-			<label>ערוך קטגוריה</label>
-			<visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
+			<label>31343664</label>
 			<include>Defs_OptionButton</include>
 			<visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
 			<onclick>RunScript(script.skinshortcuts,type=manage&amp;group=x$PARAM[hubid])</onclick>
 		</control>
 		<control type="button" id="$PARAM[buttonid2]" description="Set HUB WIDGET">
 			<width>100%</width>
-			<label>הגדר ישומון קטגוריה</label>
+			<label>31343665</label>
 			<visible>stringcompare(Window.Property(groupname),mainmenu)</visible>
 			<visible>stringcompare(Container(211).ListItem.Label2,Hub $PARAM[hubid]) | stringcompare(Container(211).ListItem.Property(Path),ActivateWindow($PARAM[hubid]))</visible>
 			<include>Defs_OptionButton</include>
@@ -2029,9 +2029,47 @@
 			<include>View_54_Lovefilm</include>
 			<include>View_55_Banner</include>            
 			<include>View_56_BigList</include>
-			<!-- אמנימנס2 -->
 
+      <!--      <include>Animation_Common</include>
+            <include>Viewtype_List</include>
+            <include>Viewtype_BigIcon</include>
+            <include>Viewtype_Icon</include>
+            <include>Viewtype_IconExtra</include>
+            <include>Viewtype_BigWide</include>
+           
+            <include>Viewtype_BigWideLogo</include>
+            <include>Viewtype_Gallery</include>
+            <include>Viewtype_FanartList</include>
+            <include>Viewtype_InfoList</include>
+            <include>Viewtype_InfoList2</include>
+            <include>Viewtype_MediaInfo</include>
+            <include>Viewtype_MediaInfo2</include>
+            <include>Viewtype_MediaInfo3</include>
+            <include>Viewtype_Wide</include>
+            <include>Viewtype_Fanart</include>
+            <include>Viewtype_BigList</include>
+            <include>Viewtype_BigListInfo</include>
             <include>Viewtype_PanelList</include>
+            <include>Viewtype_Thumbs</include>-->
+            <include>Viewtype_BigIcon</include>
+            <include>Viewtype_IconExtra</include>
+            <include>Viewtype_Icon</include>
+<include>Viewtype_Thumbs</include>
+						            <include>Viewtype_InfoList</include>
+            <include>Viewtype_InfoList2</include>
+            <include>Viewtype_MediaInfo</include>
+            <include>Viewtype_MediaInfo2</include>
+            <include>Viewtype_MediaInfo3</include>
+            <include>Viewtype_FanartList</include>
+            <include>Viewtype_PanelList</include>
+            <include>Viewtype_BigListInfo</include>
+            <include>Viewtype_Fanart</include>
+            <include>Viewtype_Gallery2</include>
+            <include>Viewtype_BigWideLogo</include>
+            <include>Viewtype_Wide22</include>
+            <include>Viewtype_BigWide</include>
+
+			<!-- אמנימנס2 -->
 			<!--<include>View_55_Wall_Poster</include>-->
 			<include>View_516_Thumbnails</include>
 			<include condition="Window.IsVisible(MyVideoNav.xml) | Window.IsVisible(MyVideoPlaylist.xml)">View_57_InfoList</include>

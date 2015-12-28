@@ -6,8 +6,9 @@
     <views>10,11,12,13</views>
     <controls>
         <include>GlobalBackground</include>
-        <include>GlobalTopBar</include>
-        <include>PVRSideMenu</include>
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+			<include>PVRSideMenu</include>
         
         <control type="group">
             <posy>topoffset</posy>

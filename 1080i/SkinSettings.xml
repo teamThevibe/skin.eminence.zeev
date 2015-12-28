@@ -4,7 +4,7 @@
     <allowoverlay>yes</allowoverlay>
     <background>0</background>
    <!--  <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=12345&amp;group=mainmenu|[moviecategory]|[tvshowcategory]|[musiccategory]|[playlistcategory]|[Vod]|[sport]|[kids]|[favorite]|[CustomHUB])</onunload>-->
-    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|x1110|x1112|x1113|x1114|x1115|[moviecategory]|[tvshowcategory]|[musiccategory]|[playlistcategory]|[Vod]|[sport]|[kids]|[favorite]|[CustomHUB]| powermenu)</onunload>
+    <onunload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|x1110|x1112|x1113|x1114|x1115||x1116|[moviecategory]|[tvshowcategory]|[musiccategory]|[playlistcategory]|[Vod]|[sport]|[kids]|[favorite]|[CustomHUB]| powermenu)</onunload>
         <onload condition="!Skin.String(SkinHelper.RandomFanartDelay)">Skin.SetString(SkinHelper.RandomFanartDelay,30)</onload>
 
     <controls>
@@ -80,11 +80,11 @@
                     <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
                 </control>
                 <control type="togglebutton" id="33" description="colofrs">
-                    <label>צבעים</label>
+                    <label>$LOCALIZE[31343628]</label>
                     <align>right</align>
                     <textcolor>Disabled</textcolor>
                     <usealttexture>ControlGroup(3).HasFocus(33)</usealttexture>
-                    <altlabel>[COLOR=Selected]צבעים[/COLOR]</altlabel>
+                    <altlabel>[COLOR=Selected]$LOCALIZE[31343628][/COLOR]</altlabel>
                     <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
                     <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
                 </control>
@@ -133,20 +133,20 @@
                     <alttexturenofocus border="12" colordiffuse="PosterHighlight">common/white.png</alttexturenofocus>
                 </control>-->
                 <control type="togglebutton" id="39" description="Advanced">
-                    <label>גיבוי שיחזור</label>
+                    <label>$LOCALIZE[31343629]</label>
                     <align>right</align>
                     <textcolor>Disabled</textcolor>
                     <usealttexture>ControlGroup(3).HasFocus(39)</usealttexture>
-                    <altlabel>[COLOR=Selected]גיבוי שיחזור[/COLOR]</altlabel>
+                    <altlabel>[COLOR=Selected]$LOCALIZE[31343629][/COLOR]</altlabel>
                     <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
                     <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
                 </control>
 				
                 <control type="togglebutton" id="40" description="הגדרת תצוגה">
-                    <label>הגדרת תצוגה</label>
+                    <label>$LOCALIZE[31343630]</label>
                     <align>right</align>
 					<textcolor>Disabled</textcolor>
-					                    <altlabel>[COLOR=Selected]הגדרת תצוגה[/COLOR]</altlabel>
+					                    <altlabel>[COLOR=Selected]$LOCALIZE[31343630][/COLOR]</altlabel>
 
                     <alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
                     <alttexturenofocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturenofocus>
@@ -234,8 +234,22 @@
                         <visible>ControlGroup(3).HasFocus(37)</visible>
                     </control>
 					
+							                    <!-- Widget Info Box -->
+                    <control type="radiobutton" id="205">
+                        <label>31343631</label>
+						<font>Font-ListInfo</font>
+				                    <align>right</align>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>  
+                        <selected>Skin.HasSetting(home.transparent2)</selected>
+                        <onclick>Skin.ToggleSetting(home.transparent2)</onclick>
+                        <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+					
 					                    <!-- Widget Posters -->
-                    <control type="button" id="205">
+                    <control type="button" id="206">
                         <label>$INFO[Skin.String(home.widgetposters)]</label>
                         <label2>31343573</label2>
 						<align>left</align>
@@ -243,7 +257,7 @@
                     <radiowidth>40</radiowidth>
                     <radioheight>40</radioheight>
                     <radioposx>40</radioposx>                         
-					<onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31166])</onclick>
+					<onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
                         <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
                         <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31155]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onclick>
                         <onclick condition="!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31166]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + !Skin.HasSetting(home.hidewidgetbox)">Skin.SetString(home.widgetposters,$LOCALIZE[31153])</onclick>
@@ -251,21 +265,21 @@
                         <visible>ControlGroup(3).HasFocus(37)</visible>
                     </control>
 					
-                    <control type="radiobutton" id="206">
+                    <control type="radiobutton" id="207">
                         <label>31343568</label>
 						                    <align>right</align>
                     <font>Font-ListInfo</font>
 						                    <radiowidth>40</radiowidth>
                     <radioheight>40</radioheight>
                     <radioposx>40</radioposx>  
-                        <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154])</enable>
+                        <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153])</enable>
                         <selected>Skin.HasSetting(home.showdiscart)</selected>
                         <onclick>Skin.ToggleSetting(home.showdiscart)</onclick>
                     <visible>ControlGroup(3).HasFocus(37)</visible>
                     </control>					
 
-												<control type="radiobutton" id="207">
-												                        <label>הצג דיסק מזוייף</label>
+												<control type="radiobutton" id="208">
+												                        <label>31343632</label>
 
 	                    <align>right</align>
                     <font>Font-ListInfo</font>
@@ -274,27 +288,29 @@
                     <radioposx>40</radioposx>     
 			<onclick>Skin.ToggleSetting(fanart_Disable_FAKECDART)</onclick>
 			<selected>!Skin.HasSetting(fanart_Disable_FAKECDART)</selected>
-			<enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + Skin.HasSetting(home.showdiscart)</enable>                    
+			<enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + Skin.HasSetting(home.showdiscart)</enable>                    
             <visible>ControlGroup(3).HasFocus(37)</visible>
 		</control>
+		
+		
 					
 										                    <control type="radiobutton" id="213">
-                        <label>דיסק מסתובב</label>
+                        <label>31343633</label>
 			                    <align>right</align>
                     <font>Font-ListInfo</font>
 						                    <radiowidth>40</radiowidth>
                     <radioheight>40</radioheight>
                     <radioposx>40</radioposx>     
-                        <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + !stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31154]) + Skin.HasSetting(home.showdiscart)</enable>                    
+                        <enable>!stringcompare(Skin.String(home.widgetposters),$LOCALIZE[31153]) + Skin.HasSetting(home.showdiscart)</enable>                    
 					<selected>Skin.HasSetting(home.DiscArtrotate)</selected>
                         <onclick>Skin.ToggleSetting(home.DiscArtrotate)</onclick>
                     <visible>ControlGroup(3).HasFocus(37)</visible>
                     </control>
 					
+<!-- 214 -->
 					
-					
-					<control type="radiobutton" id="214">
-                        <label>לוגו סרט</label>
+					<control type="radiobutton" id="215">
+                        <label>31343634</label>
 			                    <align>right</align>
                     <font>Font-ListInfo</font>
 						                    <radiowidth>40</radiowidth>
@@ -305,8 +321,8 @@
                     <visible>ControlGroup(3).HasFocus(37)</visible>
                     </control>
 					
-					<control type="radiobutton" id="215">
-                     <label>התאם צבע קטגוריה וצבע אריח</label>
+					<control type="radiobutton" id="216">
+                     <label>31343635</label>
 			          <align>right</align>
                     <font>Font-ListInfo</font>
 					<radiowidth>40</radiowidth>
@@ -317,8 +333,8 @@
                     <visible>ControlGroup(3).HasFocus(37)</visible>
                     </control>
 					
-										<control type="radiobutton" id="216">
-                     <label>התאם צבע קטגוריה ואריח עליון</label>
+										<control type="radiobutton" id="217">
+                     <label>31343636</label>
 			          <align>right</align>
                     <font>Font-ListInfo</font>
 					<radiowidth>40</radiowidth>
@@ -330,9 +346,37 @@
                     <visible>ControlGroup(3).HasFocus(37)</visible>
                     </control>
 					
+															<control type="radiobutton" id="218">
+                     <label>31343637</label>
+			          <align>right</align>
+                    <font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>     
+					<selected>Skin.HasSetting(skin.2)</selected>
+                        <onclick>Skin.ToggleSetting(skin.2)</onclick>
+<enable>!Skin.HasSetting(skin.3)</enable>
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+					
+																	<control type="radiobutton" id="219">
+                     <label>31343638</label>
+			          <align>right</align>
+                    <font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>     
+					<selected>Skin.HasSetting(skin.3)</selected>
+                        <onclick>Skin.ToggleSetting(skin.3)</onclick>
+<enable>!Skin.HasSetting(skin.2)</enable>
+
+                    <visible>ControlGroup(3).HasFocus(37)</visible>
+                    </control>
+
+					
 					                    <!-- Tile Colors -->
                   
-                    <control type="radiobutton" id="208">
+                    <control type="radiobutton" id="220">
 						<label>31343579</label>
 						<align>right</align>
 						<font>Font-ListInfo</font>
@@ -361,7 +405,7 @@
 -->
 			   
 			                  <!-- Transparent Home Bar -->
-                    <control type="radiobutton" id="211">
+                    <control type="radiobutton" id="221">
                         <label>31343580</label>
 			                    <align>right</align>
                     <font>Font-ListInfo</font>
@@ -374,8 +418,8 @@
                     </control>
 					
 								                  <!-- Transparent Home Bar -->
-                    <control type="radiobutton" id="212">
-                        <label>ביטול שקיפות אריחים לא מסומנים</label>
+                    <control type="radiobutton" id="222">
+                        <label>31343639</label>
 			            <align>right</align>
                        <font>Font-ListInfo</font>
 					<radiowidth>40</radiowidth>
@@ -636,7 +680,7 @@
 				
                 
                 <control type="radiobutton" id="604" description="Show Video">
-                    <label>הצג וידיאו מתנגן במערכת</label>                   
+                    <label>31343640</label>                   
                     <align>right</align>
                     <font>Font-ListInfo</font>
                     <radiowidth>40</radiowidth>
@@ -649,7 +693,7 @@
                 </control>
                 
 				<control type="radiobutton" id="605" description="Show Video">
-                    <label>הצג וידיאו מתנגן בדף הבית</label>                   
+                    <label>31343641</label>                   
                     <align>right</align>
                     <font>Font-ListInfo</font>
                     <radiowidth>40</radiowidth>
@@ -673,8 +717,21 @@
                     <visible>ControlGroup(3).HasFocus(38)</visible>
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
+				
+																												<control type="radiobutton" id="607">
+                     <label>31343642</label>
+			          <align>right</align>
+                    <font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>     
+					<selected>Skin.HasSetting(Fanart.black)</selected>
+                        <onclick>Skin.ToggleSetting(Fanart.black)</onclick>
+
+                    <visible>ControlGroup(3).HasFocus(38)</visible>
+                    </control>
                 
-                <control type="button" id="607" description="Background Overlay">
+                <control type="button" id="608" description="Background Overlay">
                     <label>$INFO[Skin.String(global.background)]</label>
                     <align>left</align>
                     <font>Font-ListInfo</font>
@@ -687,7 +744,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="button" id="608" description="Background Image">
+                <control type="button" id="609" description="Background Image">
                     <label>$INFO[Skin.String(global.background2)]</label>
                     <align>left</align>
                     <font>Font-ListInfo</font>
@@ -796,8 +853,23 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
 				
-                <control type="radiobutton" id="802" description="Disable Weather in Clock">
-                    <label>הצג כותרת ספירת ספריות</label>
+				          <control type="radiobutton" id="802" description="Disable Weather in Clock">
+                    <label>31343643</label>
+                    <align>right</align>
+                    <font>Font-ListInfo</font>
+                    <radiowidth>40</radiowidth>
+                    <radioheight>40</radioheight>
+                    <radioposx>40</radioposx>
+					<onclick>Notification(כדי לראות את השינוי חזור למסך הבית,כותרת מלאה,image])</onclick>
+					<onclick>Skin.ToggleSetting(header.Emtopbar)</onclick>
+                    <selected>Skin.HasSetting(header.Emtopbar)</selected>
+                    <visible>ControlGroup(3).HasFocus(35)</visible>
+                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+                </control>
+				
+				
+                <control type="radiobutton" id="803" description="Disable Weather in Clock">
+                    <label>31343644</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
                     <radiowidth>40</radiowidth>
@@ -805,12 +877,13 @@
                     <radioposx>40</radioposx>
 					<onclick>Skin.ToggleSetting(header.counter)</onclick>
                     <selected>Skin.HasSetting(header.counter)</selected>
+
                     <visible>ControlGroup(3).HasFocus(35)</visible>
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
 				
-				               <control type="radiobutton" id="803" description="Disable Weather in Clock">
-                    <label>רקע שחור מאחורי שעון וכותרת</label>
+				               <control type="radiobutton" id="804" description="Disable Weather in Clock">
+                    <label>31343645</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
                     <radiowidth>40</radiowidth>
@@ -822,7 +895,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="radiobutton" id="804" description="Header to Theme Colour">
+                <control type="radiobutton" id="805" description="Header to Theme Colour">
                     <label>31240</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -837,8 +910,8 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="radiobutton" id="805" description="Disable Clock">
-                    <label>הצג שעון</label>
+                <control type="radiobutton" id="806" description="Disable Clock">
+                    <label>31343646</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
                                         <radiowidth>40</radiowidth>
@@ -850,7 +923,7 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
                 </control>
                 
-                <control type="radiobutton" id="806" description="Disable Weather in Clock">
+                <control type="radiobutton" id="807" description="Disable Weather in Clock">
                     <label>31177</label>
                     <align>right</align>
                     <font>Font-ListInfo</font>
@@ -865,8 +938,8 @@
                 </control>
                 
 						   								    <!--שינוי סמל המתנה-->            
-					<control type="button" id="807" description="info">	                            
-                    <label>שינוי סמל המתנה</label>    
+					<control type="button" id="808" description="info">	                            
+                    <label>31343647</label>    
                     <align>right</align>               
                     <radiowidth>40</radiowidth>
                     <radioheight>40</radioheight>
@@ -882,7 +955,7 @@
                 <!-- ADDONS -->
 				
 				                    <control type="radiobutton" id="806">
-                        <label>הצג דיסק בדף פרטי סרט</label>
+                        <label>31343648</label>
 						                    <align>right</align>
                     <font>Font-ListInfo</font>
 						                    <radiowidth>40</radiowidth>
@@ -894,7 +967,7 @@
                     </control>	
 
 				                    <control type="radiobutton" id="807">
-                        <label>הצג פרטי שידור בקיר סדרות</label>
+                        <label>31343649</label>
 						                    <align>right</align>
                     <font>Font-ListInfo</font>
 						                    <radiowidth>40</radiowidth>
@@ -972,13 +1045,13 @@
                 </control>
                 
                 <control type="button" id="813" description="Startup Video">
-                    <label>31287</label>
-                    <align>right</align>
+                    <label>$INFO[Skin.String(StartupPlaylist)]</label>
+                    <align>left</align>
                     <font>Font-ListInfo</font>
                     <radiowidth>40</radiowidth>
                     <radioheight>40</radioheight>
                     <radioposx>40</radioposx>                    
-					<label2>$INFO[Skin.String(StartupPlaylist)]</label2>
+					<label2>31287</label2>
                     <onclick condition="IsEmpty(Skin.String(StartupPlaylist))">Skin.SetFile(StartupPlaylist)</onclick>
                     <onclick condition="!IsEmpty(Skin.String(StartupPlaylist))">Skin.Reset(StartupPlaylist)</onclick>
                     <visible>ControlGroup(3).HasFocus(36)</visible>
@@ -1041,7 +1114,7 @@
                     </control>
                     <!-- Restore -->
                     <control type="button" id="816">
-                        <label>שיחזור מגיבוי</label>
+                        <label>31343650</label>
 												<align>right</align>
                         <font>Font-ListInfo</font>
                         <onclick>RunScript(script.skin.helper.service,action=restore)</onclick>
@@ -1078,7 +1151,7 @@
 			   					<control type="button" id="903">
                         <label>$INFO[Skin.String(clockheadercolor)]</label>
 						<align>left</align>
-                        <label2>הגדר צבע שעון ומזג האויר</label2>
+                        <label2>31343651</label2>
 						<font>Font-ListInfo</font>
                         <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=clockheadercolor)</onclick>
 					<visible>ControlGroup(3).HasFocus(33)</visible>
@@ -1089,7 +1162,7 @@
                     <control type="button" id="90094">
                         <label>$INFO[Skin.String(HighlightColor12)]</label>
 						<align>left</align>
-                        <label2>הגדר צבע כותרות</label2>
+                        <label2>31343652</label2>
 						<font>Font-ListInfo</font>
                         <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor12)</onclick>
 					<visible>ControlGroup(3).HasFocus(33)</visible>
@@ -1100,7 +1173,7 @@
                     <control type="button" id="905">
                         <label>$INFO[Skin.String(HighlightColor2)]</label>
 						<align>left</align>
-                        <label2>הגדר צבע כותרות משניות</label2>
+                        <label2>31343653</label2>
 						<font>Font-ListInfo</font>
                         <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor2)</onclick>
 					<visible>ControlGroup(3).HasFocus(33)</visible>
@@ -1153,7 +1226,7 @@
 					<control type="button" id="910">
                         <label>$INFO[Skin.String(HighlightColor6)]</label>
 						<align>left</align>
-                        <label2>הגדר צבע ראשי בסימון</label2>
+                        <label2>31343654</label2>
 						<font>Font-ListInfo</font>
                         <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor6)</onclick>
 					<visible>ControlGroup(3).HasFocus(33)</visible>
@@ -1163,7 +1236,7 @@
 					<control type="button" id="911">
                         <label>$INFO[Skin.String(HighlightColor7)]</label>
 						<align>left</align>
-                        <label2>הגדר צבע רקע אריחים</label2>
+                        <label2>31343655</label2>
 						<font>Font-ListInfo</font>
                         <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor7)</onclick>
 					<visible>ControlGroup(3).HasFocus(33)</visible>
@@ -1174,7 +1247,7 @@
 					<control type="button" id="912">
                         <label>$INFO[Skin.String(HighlightColor8)]</label>
 						<align>left</align>
-                        <label2>הגדר צבע רקע שורת הודעות דף הבית</label2>
+                        <label2>31343656</label2>
 						<font>Font-ListInfo</font>
                         <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor8)</onclick>
 					<visible>ControlGroup(3).HasFocus(33)</visible>
@@ -1185,7 +1258,7 @@
 					<control type="button" id="913">
                         <label>$INFO[Skin.String(HighlightColor9)]</label>
 						<align>left</align>
-                        <label2>הגדר צבע לשורת RSS בדף הבית </label2>
+                        <label2>31343657</label2>
 						<font>Font-ListInfo</font>
                         <onclick>RunScript(script.skin.helper.service,action=colorpicker,skinstring=HighlightColor9)</onclick>
 					<visible>ControlGroup(3).HasFocus(33)</visible>
@@ -1229,7 +1302,7 @@
 					<control type="radiobutton" id="8902">
                         <radioposx>1350</radioposx>
                         <width>100%</width>
-                        <label>אפשר / בטל תצוגות (סמן בלבן תצוגה שברצונך לבטל)</label>
+                        <label>31343658</label>
 							                    <align>right</align>
                     <font>Font-ListInfo</font>
 						<onclick>RunScript(script.skin.helper.service,action=enableviews)</onclick>
@@ -1237,7 +1310,7 @@
                     </control>
 					
 <control type="radiobutton" id="6009">
-    <label>אפשר הגדרת תצוגה</label>
+    <label>31343659</label>
     <onclick>Skin.ToggleSetting(SkinHelper.ForcedViews.Enabled)</onclick>
 	                    <radiowidth>40</radiowidth>
                     <radioheight>40</radioheight>
@@ -1250,7 +1323,7 @@
 <control type="button" id="6010">
     <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=movies)</onclick>
     <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
-    <label>תצוגת סרטים: $INFO[Skin.String(SkinHelper.ForcedViews.movies)]</label>
+    <label>$LOCALIZE[31343660] $INFO[Skin.String(SkinHelper.ForcedViews.movies)]</label>
 		                    <align>right</align>
                     <font>Font-ListInfo</font>
                     <visible>ControlGroup(3).HasFocus(40)</visible>
@@ -1258,7 +1331,7 @@
 <control type="button" id="6011">
     <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=tvshows)</onclick>
     <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
-    <label>תצוגת סדרות:  $INFO[Skin.String(SkinHelper.ForcedViews.tvshows)]</label>
+    <label>$LOCALIZE[31343661]  $INFO[Skin.String(SkinHelper.ForcedViews.tvshows)]</label>
 		                    <align>right</align>
                     <font>Font-ListInfo</font>
                     <visible>ControlGroup(3).HasFocus(40)</visible>
@@ -1266,7 +1339,7 @@
 <control type="button" id="6012">
     <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=seasons)</onclick>
     <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
-    <label>תצוגות עונות:  $INFO[Skin.String(SkinHelper.ForcedViews.seasons)]</label>
+    <label>$LOCALIZE[31343662]  $INFO[Skin.String(SkinHelper.ForcedViews.seasons)]</label>
 		                    <align>right</align>
                     <font>Font-ListInfo</font>
                     <visible>ControlGroup(3).HasFocus(40)</visible>
@@ -1274,7 +1347,7 @@
 <control type="button" id="6013">
     <onclick>RunScript(script.skin.helper.service,action=setforcedview,contenttype=episodes)</onclick>
     <enable>Skin.HasSetting(SkinHelper.ForcedViews.Enabled)</enable>
-    <label>תצוגת פרקים: $INFO[Skin.String(SkinHelper.ForcedViews.episodes)]</label>
+    <label>$LOCALIZE[31343663] $INFO[Skin.String(SkinHelper.ForcedViews.episodes)]</label>
 	                    <align>right</align>
                     <font>Font-ListInfo</font>
                     <visible>ControlGroup(3).HasFocus(40)</visible>
@@ -1299,6 +1372,7 @@
 	  </control>
 	  
         	  </control>
-		<include>GlobalTopBar</include>
-    </controls>
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+			</controls>
 </window>

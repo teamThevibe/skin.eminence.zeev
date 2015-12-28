@@ -79,84 +79,6 @@
                 <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
             </control>
         </control>
-		
-		<include name="Object_HomeWidgetPoster2">
-        <control type="group">
-            <width>220</width>
-            <height>320</height>
-            <visible>!IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
-            <control type="image">
-                <centerleft>50%</centerleft>
-                <width>220</width>
-                <bottom>0</bottom>
-                <top>0</top>
-                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
-                <bordersize>10</bordersize>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
-                <visible>$PARAM[focuseditem]</visible>
-            </control>
-            <control type="image">
-                <centerleft>50%</centerleft>
-                <top>pad</top>
-                <bottom>pad</bottom>
-                <width>200</width>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)]</texture>
-            </control>
-        </control>
-        <control type="group">
-            <width>220</width>
-            <height>320</height>
-            <visible>!IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster)) + IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster))</visible>
-            <control type="image">
-                <centerleft>50%</centerleft>
-                <width>220</width>
-                <bottom>0</bottom>
-                <top>0</top>
-                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
-                <bordersize>10</bordersize>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
-                <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
-                <visible>$PARAM[focuseditem]</visible>
-            </control>
-            <control type="image">
-                <centerleft>50%</centerleft>
-                <top>pad</top>
-                <bottom>pad</bottom>
-                <width>200</width>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Art(poster)]</texture>
-                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
-            </control>
-        </control>
-        <control type="group">
-            <width>220</width>
-            <height>320</height>
-            <visible>IsEmpty(Container(9001).ListItem($PARAM[id]).Art(tvshow.poster)) + IsEmpty(Container(9001).ListItem($PARAM[id]).Art(poster))</visible>
-            <control type="image">
-                <centerleft>50%</centerleft>
-                <width>220</width>
-                <bottom>0</bottom>
-                <top>0</top>
-                <bordertexture colordiffuse="$VAR[HighlightColor]">common/white.png</bordertexture>
-                <bordersize>10</bordersize>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
-                <visible>[Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
-                <visible>$PARAM[focuseditem]</visible>
-            </control>
-            <control type="image">
-                <centerleft>50%</centerleft>
-                <top>pad</top>
-                <bottom>pad</bottom>
-                <width>200</width>
-                <aspectratio>keep</aspectratio>
-                <texture fallback="DefaultWidgetVideo.png">$INFO[Container(9001).ListItem($PARAM[id]).Icon]</texture>
-                <visible>!$PARAM[focuseditem] | ![Control.HasFocus(9001) | Control.HasFocus(9101)]</visible>
-            </control>
-        </control>
 
     </include>
     <include name="Object_HomeTile">
@@ -171,7 +93,7 @@
             <visible>Skin.HasSetting(home.tilecolor.nofocus) + Skin.HasSetting(home.tilecolor)</visible>
         </control>
     </include>
-    <include name="Object_Arrows_Vertical">
+   <!-- <include name="Object_Arrows_Vertical">
         <control type="group">
             <visible>![Window.IsVisible(DialogPVRRecordingInfo.xml) | Window.IsVisible(DialogPVRGuideInfo.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogAlbumInfo.xml) | Window.IsVisible(DialogVideoInfo.xml) | Window.IsVisible(DialogAddonInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)]</visible>
             <include>Animation_FadeIn</include>
@@ -193,7 +115,7 @@
                 <visible>Container.HasNext</visible>
             </control>
         </control>
-    </include>
+    </include>-->
     <include name="Object_BasicViewList">
         <!-- View by -->
         <control type="button" id="2">
@@ -232,7 +154,16 @@
                     <height>200</height>
                     <width>200</width>
                     <aspectratio>keep</aspectratio>
+                    <texture>$INFO[Skin.String(weather.icons.path),,/]$INFO[Window(weather).Property($PARAM[day].FanartCode),,.png]</texture>
+                    <visible>!IsEmpty(Skin.String(weather.icons.path))</visible>
+                </control>
+                <control type="image">
+                    <centertop>50%</centertop>
+                    <height>200</height>
+                    <width>200</width>
+                    <aspectratio>keep</aspectratio>
                     <texture>$INFO[Window(weather).Property($PARAM[day].OutlookIcon)]</texture>
+                    <visible>IsEmpty(Skin.String(weather.icons.path))</visible>
                 </control>
                 <control type="label">
                     <font>Font-ListInfo-Small</font>
@@ -276,9 +207,13 @@
         <param name="label" default="$LOCALIZE[31098]" />
         <definition>
             <control type="group">
-                <left>1400</left>
+                <left>$PARAM[left]</left>
                 <width>$PARAM[width]</width>
                 <height>height</height>
+                <include name="Object_Line">
+                    <param name="width" value="$PARAM[width]" />
+                    <param name="label" value="$PARAM[label]" />
+                </include>
                 <control type="image">
                     <width>100%</width>
                     <height>100%</height>
@@ -402,6 +337,8 @@
             <left>pad</left>
             <right>pad</right>
             <height>36</height>
+						<align>right</align>
+
             <font>Font-InfoBox-Title</font>
             <label>$INFO[ListItem.Label]</label>
         </control>
@@ -409,6 +346,8 @@
             <left>pad</left>
             <right>pad</right>
             <height>24</height>
+						<align>right</align>
+
             <textcolor>$VAR[HighlightColor2]</textcolor>
             <font>Font-ListInfo-Small-Bold</font>
             <label>$INFO[ListItem.Genre,[UPPERCASE],[/UPPERCASE]]</label>
@@ -419,7 +358,7 @@
             <right>pad</right>
             <height>120</height>
             <font>Font-ListInfo</font>
-            <align>left</align>
+            <align>right</align>
             <label>$VAR[Label_Plot]</label>
             <visible>!IsEmpty(ListItem.Genre)</visible>
         </control>
@@ -428,7 +367,7 @@
             <right>pad</right>
             <height>154</height>
             <font>Font-ListInfo</font>
-            <align>left</align>
+            <align>right</align>
             <label>$VAR[Label_Plot]</label>
             <visible>IsEmpty(ListItem.Genre)</visible>
         </control>
@@ -436,7 +375,7 @@
             <left>pad</left>
             <right>pad</right>
             <height>20</height>
-            <align>right</align>
+            <align>left</align>
             <font>Font-ListInfo-Small-Bold</font>
             <label>$VAR[Label_ExtraInfo_Icons]</label>
         </control>
@@ -451,7 +390,7 @@
         </control> -->
     </include>
 
-    <!-- Line -->
+    <!-- Line 
     <include name="Object_Line">
         <control type="grouplist">
             <visible>!Skin.HasSetting(furniture.hidesortinfo)</visible>
@@ -475,7 +414,7 @@
                 <texture colordiffuse="PosterBorder">common/white.png</texture>
             </control>
         </control>
-    </include>
+    </include>-->
 
     <include name="Object_NextAired_List">
         <control type="group">
@@ -551,11 +490,18 @@
                         <left>0</left>
                         <right>0</right>
                         <bottom>pad</bottom>
-                        <control type="image">
-                            <width>100%</width>
-                            <height>100%</height>
-                            <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-                        </control>
+                 <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
+					<visible>Skin.HasSetting(home.colortilehigh)</visible>    
+					</control>
+		        <control type="image">
+            <width>100%</width>
+            <height>100%</height>
+                    <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+					<visible>!Skin.HasSetting(home.colortilehigh)</visible>
+					</control>
                         <control type="image">
                             <left>pad</left>
                             <right>pad</right>
@@ -593,6 +539,5 @@
             </control>
         </control>
     </include>
-        </include>
-
+    
 </includes>

@@ -10,6 +10,23 @@
     <view id="View_56_BigList" value="56" languageid="31343587" type="all" />
     <view id="View_57_InfoList" value="57" languageid="31343588" type="movies,setmovies,tvshows,musicvideos,seasons,sets,episodes" />
     <view id="View_58_BannerList" value="58" languageid="31343589" type="movies,setmovies,tvshows,musicvideos,seasons,sets,episodes" />
-	    <view id="View_51_Poster" value="51" languageid="31152" type="all" />
+	<!--    <view id="View_51_Poster" value="51" languageid="31152" type="all" />-->
+	    <view id="View_BigIcon" value="518" languageid="31152" type="all" />
+<view id="Viewtype_IconExtra" value="519" languageid="31343613" type="all" />
+<view id="Viewtype_Icon" value="520" languageid="31343614" type="all" />
+<view id="Viewtype_Thumbs" value="521" languageid="31343615" type="all" />
+<view id="Viewtype_InfoList" value="508" languageid="31343616" type="all" />
+<view id="Viewtype_InfoList2" value="509" languageid="31343617" type="all" />
+<view id="Viewtype_MediaInfo" value="510" languageid="31343618" type="all" />
+<view id="Viewtype_MediaInfo2" value="511" languageid="31343619" type="all" />
+<view id="Viewtype_MediaInfo3" value="512" languageid="31343620" type="all" />
+<view id="Viewtype_FanartList" value="513" languageid="31343621" type="all" />
+<view id="Viewtype_PanelList" value="514" languageid="31343622" type="all" />
+<view id="Viewtype_BigListInfo" value="515" languageid="31343623" type="all" />
+<view id="Viewtype_Fanart" value="525" languageid="31343624" type="all" />
+<view id="Viewtype_Wide22" value="531" languageid="31343625" type="all" />
+<view id="Viewtype_Gallery2" value="528" languageid="31343626" type="all" />
+<view id="Viewtype_BigWideLogo" value="530" languageid="31343627" type="all" />
+
 
 </views>

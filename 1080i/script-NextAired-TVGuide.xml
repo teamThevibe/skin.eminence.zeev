@@ -4,6 +4,7 @@
     <controls>
         <include>GlobalBackground</include>
         <include>NextAiredWindow</include>
-        <include>GlobalTopBar</include>
-    </controls>
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+			</controls>
 </window>

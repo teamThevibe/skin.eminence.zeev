@@ -16,8 +16,8 @@
         
         <include>DefFullScreenNav</include>
 
-        <include>GlobalTopBar</include>
-        
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>        
         
         
         <control type="group">   

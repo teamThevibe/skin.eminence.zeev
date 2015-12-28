@@ -3,7 +3,7 @@
     <!-- home -->
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">9000</defaultcontrol>
-    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|x1110|x1112|x1113|x1114|x1115|powermenu | [moviecategory]|[tvshowcategory]|[musiccategory]|[playlistcategory]|[Vod]|[sport]|[kids]|[favorite]|[CustomHUB]| powermenu)</onload>
+    <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|x1110|x1112|x1113|x1114|x1115||x1116|powermenu | [moviecategory]|[tvshowcategory]|[musiccategory]|[playlistcategory]|[Vod]|[sport]|[kids]|[favorite]|[CustomHUB]| powermenu)</onload>
     <onload>ClearProperty(Header.Label,home)</onload>
     <onload>ClearProperty(Header.Icon,home)</onload>
     <onload>ClearProperty(HighlightColor,home)</onload>
@@ -21,12 +21,12 @@
 
         <include>Furniture_Background</include>
         <include>Home_Widget_Control</include>
-     <!--<include>Furniture_TopBar</include>-->
+     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
 
 		        <control type="group">
             <include condition="Window.Previous(fullscreenvideo) + !Player.ShowInfo + !Player.Paused">Animation.FadeIn</include>
             <animation effect="slide" start="0" end="0,-200" time="200" condition="Control.HasFocus(9600)">Conditional</animation>
-            <include>GlobalTopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
         </control>
 		
         <control type="list" id="9988">           
@@ -54,7 +54,7 @@
             <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_TextOnly_Animate</include>
             <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Icons_Animate</include>
             
-            <include condition="!Skin.HasSetting(home.hidewidgetbox)">Home_Widget</include>
+            <include condition="!Skin.HasSetting(home.hidewidgetbox)">Home_Widget2</include>
             
             <control type="group">
                 <animation effect="slide" tween="quadratic" easing="out" time="150" start="0,266" end="0">WindowOpen</animation>

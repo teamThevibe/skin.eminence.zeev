@@ -4,7 +4,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<background>0</background>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517</views>
+	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517,519,520,523,524,518,521,508,509,510,511,512,513,514,515,525,531,528,530,533</views>
 	<onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
@@ -18,14 +18,17 @@
 			<include>HiddenButton</include>
 		</control>
 
-		<include>GlobalBackground</include>
+        <include>Furniture_Background</include>
 		<!--<include>DefLeftSideArrow</include>-->
-		<include>DefMenuMouse</include>
+		<!--<include>DefMenuMouse</include>-->
 		<include>DefMyNavViews</include>
 		<include>DefFullScreenNav</include>
-		<include>GlobalTopBar</include>
+		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
 		<include>View_501_Thumbnails</include>
 		<include>View_517_Poster</include>
+	
+
 		<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO</include>
 		<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO2</include>
 				<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO3</include>
@@ -173,6 +176,7 @@
 					<description>Sort</description>
 					<include>DefNavMenuButton2</include>
 				</control>
+				
 
 				<control type="togglebutton" id="4">
 					<include>DefNavMenuButton2</include>
@@ -184,6 +188,7 @@
 					<ondwon>9012</ondwon>
 
 				</control>
+				
 
 				<control type="radiobutton" id="9012">
 					<include>DefNavMenuButton2</include>
@@ -193,12 +198,13 @@
 					<label>31279</label>
 					<align>right</align>
 					<radioposx>20</radioposx>  
-
 					<selected>Skin.HasSetting(list.highlight)</selected>
 					<ondwon>14</ondwon>
 
 
 				</control>
+				
+				
 
 				<control type="radiobutton" id="14">
 					<include>DefNavMenuButton2</include>  
@@ -234,11 +240,9 @@
 
 				</control>
 
-				<control type="button" id="9005">
+				<control type="button" id="8">
 					<description>Search</description>
 					<include>DefNavMenuButton2</include>  
-					<onclick>SetFocus(50)</onclick>
-					<onclick>RunScript(script.globalsearch)</onclick>
 					<label>137</label>
 				</control>
 
