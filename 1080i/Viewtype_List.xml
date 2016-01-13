@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+<visible>!Window.IsActive(MyMusicNav)</visible>
 
     <!-- LIST -->
     <include name="Viewtype_List">
@@ -89,7 +90,7 @@
                             <texture background="true">$VAR[PosterImage]</texture>
                             <aspectratio>scale</aspectratio>
                         </control>
-
+<visible>!Window.IsActive(MyMusicNav)</visible><!--test-->
             <include name="View_InfoList">
                 <param name="id" value="508" />
                 <param name="width" value="listw3" />
@@ -107,6 +108,8 @@
             <right>side3</right>
             <top>200</top>
             <height>height</height>
+			<visible>!Window.IsActive(MyMusicNav)</visible><!--test-->
+
 									<animation effect="slide" start="0" end="-220" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 						<animation effect="slide" start="0" end="-220" time="250" condition="Window.IsVisible(106)">Conditional</animation>
             <include name="Object_Line">
@@ -277,6 +280,7 @@
 
     <!-- MEDIA INFO 2 -->
     <include name="Viewtype_MediaInfo2">
+	
         <control type="group">
             <visible>Control.IsVisible(511)</visible>
             <include>Animation_FadeIn</include>
@@ -306,6 +310,7 @@
 
     <!-- MEDIA INFO 3 -->
     <include name="Viewtype_MediaInfo3">
+	
         <control type="group">
             <visible>Control.IsVisible(512) </visible>
             <include>Animation_FadeIn</include>
@@ -366,6 +371,7 @@
                     <param name="width" value="1211" />
                     <param name="label" value="19033" />
                 </include>
+				
             </control>
             <include name="View_List">
                 <param name="viewlabel" value="31164" />
@@ -378,6 +384,7 @@
             <control type="group">
                 <width>659</width>
                 <include>Object_Arrows_Vertical</include>
+				
             </control>
         </control>
     </include>
@@ -412,7 +419,7 @@
     <!-- BIG LIST -->
     <include name="Viewtype_BigList">
         <control type="group">
-            <visible>Control.IsVisible(d)</visible>
+            <visible>Control.IsVisible(515)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
             <left>-195</left>
@@ -437,7 +444,6 @@
     <!-- BIG LIST INFO -->
     <include name="Viewtype_BigListInfo">
         <control type="group">
-		
             <visible>Control.IsVisible(515)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
@@ -445,7 +451,7 @@
             <right>0</right>
             <top>200</top>
             <height>height</height>
-																					<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+			<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
 						<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
             <include name="Object_Line">
                 <param name="width" value="1130" />
@@ -454,7 +460,7 @@
             <include name="View_BigList">
                 <param name="id" value="515" />
                 <param name="width" value="1140" />
-                <param name="condition" value="Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows) | Container.Content(artists) | Container.Content(albums)" />
+                <param name="condition" value="Container.Content(movies) | Container.Content(episodes) | Container.Content(seasons) | Container.Content(sets) | Container.Content(tvshows)" />
                 <param name="name" value="31142" />
             </include>
             <include>Object_ExtraInfo</include>
@@ -468,6 +474,8 @@
     <include name="View_BigList">
         <control type="group">
             <control type="panel" id="$PARAM[id]">
+			<visible>!Window.IsActive(MyMusicNav)</visible><!-- test -->
+
                 <width>1890</width>
                 <height>700</height>
                 <onup>$PARAM[id]</onup>
@@ -506,6 +514,7 @@
                             <width>32</width>                            
                             <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
+							
                         </control>                        
                         <control type="image">
                             <right>30</right>
@@ -663,6 +672,8 @@
     
     <!-- LIST INCLUDE -->
     <include name="View_List_Itemlayout">
+	<visible>!Window.IsActive(MyMusicNav)</visible>
+	<visible>Container.Content(seasons) | Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)</visible>
         <control type="label">
             <left>30</left>
             <right>30</right>
@@ -777,6 +788,7 @@
         </control>
     </include>
     <include name="View_List_Focusedlayout">
+	<visible>!Window.IsActive(MyMusicNav)</visible>
         <control type="image">
             <width>100%</width>
             <height>100%</height>
@@ -920,6 +932,7 @@
                 </control>
                 <include>Object_Scrollbar</include>
                 <control type="panel" id="$PARAM[id]">
+				<visible>!Window.IsActive(MyMusicNav)</visible>
                     <top>0</top>
                     <left>0</left>
                     <width>$PARAM[width]</width>

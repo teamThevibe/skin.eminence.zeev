@@ -1646,7 +1646,7 @@ msgstr "גיבוי שיחזור"
 
 msgctxt "#31343630"
 msgid "Hub"
-msgstr "גיבוי שיחזור"
+msgstr "הגדרות תצוגה"
 
 msgctxt "#31343631"
 msgid "Hub"
@@ -1787,3 +1787,43 @@ msgstr "ערוך קטגוריה"
 msgctxt "#31343665"
 msgid "Hub"
 msgstr "הגדר ישומון קטגוריה"
+
+
+msgctxt "#31343666"
+msgid "Hub"
+msgstr "הרחבות בשימוש הסקין"
+
+msgctxt "#31343667"
+msgid "Hub"
+msgstr "מותקן"
+
+msgctxt "#31343668"
+msgid "Hub"
+msgstr "לא מותקן"
+
+msgctxt "#31343669"
+msgid "Hub"
+msgstr "תפריט מאונך"
+
+msgctxt "#31343670"
+msgid "Hub"
+msgstr "התאם צבע עכבר לצבע אריח"
+
+msgctxt "#31343671"
+msgid "Hub"
+msgstr "שנה צבע עכבר"
+
+msgctxt "#31343672"
+msgid "מחק "
+msgstr "מחק"
+
+msgctxt "#31343673"
+msgid "התאם את דף הבית"
+msgstr "התאם את דף הבית"
+
+msgctxt "#31343675"
+msgid "בית"
+msgstr "בית"
+
+
+

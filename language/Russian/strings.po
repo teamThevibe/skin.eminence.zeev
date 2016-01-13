@@ -1,0 +1,1818 @@
+# Kodi Media Center language file
+# Addon Name: Eminence
+# Addon id: skin.eminence
+# Addon Provider: jurialmunkey
+msgid ""
+msgstr ""
+"Project-Id-Version: XBMC Skins\n"
+"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
+"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"PO-Revision-Date: 2015-04-23 12:28+0200\n"
+"Last-Translator: Kodi Translation Team\n"
+"Language-Team: Russian (http://www.transifex.com/projects/p/xbmc-skins/language/ru/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ru\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Generator: Poedit 1.7.5\n"
+
+msgctxt "#31101"
+msgid "Information"
+msgstr "Информация"
+
+msgctxt "#31102"
+msgid "Youtube"
+msgstr "Youtube"
+
+msgctxt "#31103"
+msgid "Vimeo"
+msgstr "Vimeo"
+
+msgctxt "#31104"
+msgid "Live TV"
+msgstr "ТВ онлайн"
+
+msgctxt "#31105"
+msgid "TV Guide"
+msgstr "ТВ-гид"
+
+msgctxt "#31106"
+msgid "Fullscreen"
+msgstr "Полный экран"
+
+msgctxt "#31107"
+msgid "min"
+msgstr "мин"
+
+msgctxt "#31108"
+msgid "Quick Nav"
+msgstr "Упрощенная навигация"
+
+msgctxt "#31109"
+msgid "Recently Added"
+msgstr "Недавно добавленные"
+
+msgctxt "#31110"
+msgid "In Progress"
+msgstr "Текущие"
+
+msgctxt "#31111"
+msgid "Type"
+msgstr "Тип"
+
+msgctxt "#31112"
+msgid "Spotlight"
+msgstr "Сцена"
+
+msgctxt "#31113"
+msgid "items"
+msgstr "объектов"
+
+msgctxt "#31114"
+msgid "Channels"
+msgstr "Каналы"
+
+msgctxt "#31115"
+msgid "Finishes at"
+msgstr "Заканчивается в"
+
+msgctxt "#31116"
+msgid "Close"
+msgstr "Закрыть"
+
+msgctxt "#31118"
+msgid "Playing"
+msgstr "Воспроизводится"
+
+msgctxt "#31119"
+msgid "Info"
+msgstr "Информация"
+
+msgctxt "#31120"
+msgid "Auto-Login"
+msgstr "Автоматический вход"
+
+msgctxt "#31121"
+msgid "Used Memory"
+msgstr Использовано памяти"
+
+msgctxt "#31122"
+msgid "No info available..."
+msgstr "Нет данных...‬"
+
+
+msgctxt "#31124"
+msgid "Airing"
+msgstr "В эфире"
+
+msgctxt "#31125"
+msgid "End Time"
+msgstr "Время окончания"
+
+msgctxt "#31126"
+msgid "Channel Group"
+msgstr "Группа каналов"
+
+msgctxt "#31127"
+msgid "Recording"
+msgstr "Запись"
+
+msgctxt "#31128"
+msgid "Scheduled"
+msgstr "Запланировано"
+
+msgctxt "#31129"
+msgid "Not Scheduled"
+msgstr "Не запланировано"
+
+msgctxt "#31130"
+msgid "Shutdown Timer"
+msgstr "Таймер выключения"
+
+msgctxt "#31131"
+msgid "Master Mode: On"
+msgstr "Мастер мод : Вкл"
+
+msgctxt "#31132"
+msgid "Master Mode: Off"
+msgstr "Мастер мод : Выкл"
+
+msgctxt "#31133"
+msgid "Cancel Timer"
+msgstr "Отменить таймер"
+
+msgctxt "#31134"
+msgid "Mute"
+msgstr "Без звука"
+
+msgctxt "#31135"
+msgid "Artwork"
+msgstr "Картинки"
+
+msgctxt "#31136"
+msgid "Changes"
+msgstr "Изменения"
+
+msgctxt "#31137"
+msgid "Re-initialise skin - WARNING: Resets skin to defaults"
+msgstr "Сбросить настройки скина - осторожно вернутся первоначальные настройки"
+
+msgctxt "#31138"
+msgid "Set weather fanart"
+msgstr "Выбрать фанарт погоды"
+
+msgctxt "#31139"
+msgid "Категории на выбор"
+msgstr "Категории на выбор"
+
+msgctxt "#31140"
+msgid "Show visualisation behind slideshow"
+msgstr "Показать презентацию"
+
+msgctxt "#31141"
+msgid "Movies Widget"
+msgstr "Виджет фильмы"
+
+msgctxt "#31142"
+msgid "Tv Shows Widget"
+msgstr "Виджет сериалы"
+
+msgctxt "#31143"
+msgid "Disc Menu"
+msgstr "Меню диска"
+
+msgctxt "#31144"
+msgid "Enable TV Tunes"
+msgstr "Включить TV Tunes"
+
+msgctxt "#31145"
+msgid "Show now playing video in background"
+msgstr "Отображать воспроизводящееся видео в фоне"
+
+msgctxt "#31146"
+msgid "Show fanart"
+msgstr "Показать фанарт"
+
+msgctxt "#31147"
+msgid "Views"
+msgstr "Режим просмотра"
+
+msgctxt "#31149"
+msgid "Set home background"
+msgstr "Выбрать фон главного экрана"
+
+msgctxt "#31150"
+msgid "Show info"
+msgstr "Показать сведения"
+
+msgctxt "#31151"
+msgid "Hide info"
+msgstr "Скрыть информацию"
+
+msgctxt "#31152"
+msgid "Posters"
+
+
+
+
+
+msgctxt "#31156"
+msgid "All Movies"
+msgstr "Все фильмы"
+
+msgctxt "#31157"
+msgid "All TV Shows"
+msgstr "Все ТВ шоу"
+
+msgctxt "#31158"
+msgid "Fullscreen"
+msgstr "Полный экран"
+
+msgctxt "#31159"
+msgid "Recently Played"
+msgstr "Недавно проиграно"
+
+msgctxt "#31160"
+msgid "Press down for options..."
+msgstr "Нажми Наверх для опций..."
+
+msgctxt "#31161"
+msgid "Show PVR channel icon in header"
+msgstr "Показать значек канала в название"
+
+msgctxt "#31162"
+msgid "Show extended details when pressing info"
+msgstr "Показать данные при нажатие на info"
+
+msgctxt "#31163"
+msgid "Custom"
+msgstr "Выбрать"
+
+msgctxt "#31164"
+msgid "Customise"
+msgstr "Настроить"
+
+msgctxt "#31165"
+msgid "Edit icon"
+msgstr "Редактировать значок"
+
+
+msgctxt "#31167"
+msgid "Pages"
+msgstr "Страницы"
+
+msgctxt "#31168"
+msgid "Home"
+msgstr "Главный экран"
+
+msgctxt "#31169"
+msgid "Add item"
+msgstr "Добавить элемент"
+
+msgctxt "#31170"
+msgid "Now playing"
+msgstr "Сейчас играет"
+
+msgctxt "#31171"
+msgid "the items on your home menu"
+msgstr "Пункты меню на главной"
+
+msgctxt "#31172"
+msgid "Edit"
+msgstr "Изменить"
+
+msgctxt "#31173"
+msgid "on"
+msgstr "вкл"
+
+msgctxt "#31174"
+msgid "Cinema Experience"
+msgstr "Cinema Experience"
+
+msgctxt "#31175"
+msgid "Television"
+msgstr "ТВ"
+
+msgctxt "#31176"
+msgid "Media Center"
+msgstr "Медиа сентер"
+
+msgctxt "#31177"
+msgid "Show weather with clock"
+msgstr "Показать погоду вместе с часами"
+
+msgctxt "#31178"
+msgid "Use taller tiles"
+msgstr "Используйте более высокую плитку"
+
+msgctxt "#31179"
+msgid "Movies Hub"
+msgstr "Movies Hub"
+
+msgctxt "#31180"
+msgid "Default"
+msgstr "По умолчанию"
+
+msgctxt "#31181"
+msgid "Text in tiles"
+msgstr "Текст в плитке"
+
+msgctxt "#31182"
+msgid "Text only"
+msgstr "Текст"
+
+msgctxt "#31183"
+msgid "Mix of in-progress tv-shows and random movies"
+msgstr "Случайное сочетание ТВ шоу и фильмов в процессе"
+
+msgctxt "#31184"
+msgid "Quick nav mode"
+msgstr "Быстрая навигация"
+
+msgctxt "#31185"
+msgid "Fanart fade amount"
+msgstr "Качество исчезания фанарта"
+
+msgctxt "#31186"
+msgid "Custom Item"
+msgstr "Пользовательский элемент"
+
+msgctxt "#31187"
+msgid "Next Aired"
+msgstr "Следующая серия"
+
+msgctxt "#31188"
+msgid "Show next aired in RSS feed"
+msgstr "Показать данные следующей передачи в ленте RSS"
+
+msgctxt "#31189"
+msgid "Update next aired data on startup"
+msgstr "Уточнять даты премьеры новых серий при запуске"
+
+msgctxt "#31190"
+msgid "Login"
+msgstr "Вход"
+
+msgctxt "#31191"
+msgid "User login"
+msgstr "Логин пользователя"
+
+msgctxt "#31192"
+msgid "Select a profile"
+msgstr "Выбрать пользователя"
+
+msgctxt "#31193"
+msgid "Trailers"
+msgstr "Трейлеры"
+
+msgctxt "#31194"
+msgid "Loading..."
+msgstr "Загрузка..."
+
+msgctxt "#31195"
+msgid "Enable widget carousel access on down"
+msgstr "Разрешить достут виджету карусель при нажатие вниз"
+
+msgctxt "#31196"
+msgid "Channel Options"
+msgstr "Настройки канала"
+
+msgctxt "#31197"
+msgid "General Options"
+msgstr "Общие параметры"
+
+msgctxt "#31198"
+msgid "Show widget info panel"
+msgstr "Показать панель инфо о виджете"
+
+msgctxt "#31199"
+msgid "Skip hubs and go straight to library"
+msgstr "Пропустить информацию и перейти в библиотеку"
+
+msgctxt "#31200"
+msgid "Manual search..."
+msgstr "Ручной поиск..."
+
+msgctxt "#31201"
+msgid "Set Colour"
+msgstr "Выбрать цвет"
+
+msgctxt "#31202"
+msgid "Widget Carousel"
+msgstr "Виджет карусель"
+
+msgctxt "#31203"
+msgid "Reset global background path to default"
+msgstr "Сбросить путь к директории фонов по умолчанию"
+
+msgctxt "#31204"
+msgid "Match highlight to tile color"
+msgstr "Подогнать цвет названия к цвету плитки"
+
+msgctxt "#31205"
+msgid "Don't fade unfocused tiles"
+msgstr "Предотвратить светорегуляцию плитки"
+
+msgctxt "#31206"
+msgid "Use theme colour for focused tiles"
+msgstr "Использовать цвет плитки из фона"
+
+msgctxt "#31207"
+msgid "Movie Set"
+msgstr "Киноциклы"
+
+msgctxt "#31208"
+msgid "Home Screen"
+msgstr "Домашняя страница"
+
+msgctxt "#31209"
+msgid "Set global background widget"
+msgstr "Выбрать виджет фона"
+
+msgctxt "#31210"
+msgid "Set background image"
+msgstr "Выбрать изображение фона"
+
+msgctxt "#31211"
+msgid "Move item"
+msgstr "Переместить объект"
+
+msgctxt "#31212"
+msgid "Swap with another tile"
+msgstr "Поменять с другой плиткой"
+
+msgctxt "#31213"
+msgid "Click on a tile to see the available customisation options. Either select a preset tile option or modify an existing tile's name, colour, icon, path and background widget. You can also swap the position of tiles."
+msgstr "Нажмите на плитку чтобы увидеть какие варианты персонализации доступны. Вы можете изменить имя виджета, цвет, значек, путь и фон существующих плиток. Вы также можете изменить расположение плитки."
+
+msgctxt "#31214"
+msgid "Customise your home menu tiles"
+msgstr "Пользовательская настройка плиток меню"
+
+msgctxt "#31215"
+msgid "Choose a tile to swap with this one"
+msgstr "Выбрать плитку на замену с этой"
+
+msgctxt "#31216"
+msgid "Show clearart/logo with osd"
+msgstr "Показать лого/значек в всплывающем меню"
+
+msgctxt "#31217"
+msgid "Show power button"
+msgstr "Показать кнопку выключения"
+
+msgctxt "#31218"
+msgid "Change background colour based on time of day"
+msgstr "Изменить цвет фона в зависимости от времени суток"
+
+msgctxt "#31219"
+msgid "Insert item"
+msgstr "Вставить элемент"
+
+msgctxt "#31220"
+msgid "Experimental"
+msgstr "Экспериментальный"
+
+msgctxt "#31221"
+msgid "EPG Timeline"
+msgstr "Программа передач"
+
+msgctxt "#31222"
+msgid " •   Customise widget item"
+msgstr "Пользовательская настройка виджета"
+
+msgctxt "#31223"
+msgid "Banner List"
+msgstr "Список баннеров"
+
+msgctxt "#31224"
+msgid "Forecast"
+msgstr "Прогноз"
+
+msgctxt "#31225"
+msgid "Info List"
+msgstr "Информационный список"
+
+msgctxt "#31226"
+msgid "Show title"
+msgstr "Показать название"
+
+msgctxt "#31227"
+msgid "Hide title"
+msgstr "Скрыть название"
+
+msgctxt "#31228"
+msgid "Set background overlay"
+msgstr "Настроить наложения на фон"
+
+msgctxt "#31229"
+msgid "Background image (click to reset)"
+msgstr "Изображение фона (нажать для сброса)"
+
+msgctxt "#31230"
+msgid "Animate fanart"
+msgstr "Оживить фанарт"
+
+msgctxt "#31231"
+msgid "Edit Playlist"
+msgstr "Редактировать плейлист"
+
+msgctxt "#31232"
+msgid "Rule"
+msgstr "Правило"
+
+msgctxt "#31233"
+msgid "Enter rule..."
+msgstr "Внести правило..."
+
+msgctxt "#31234"
+msgid "Advanced"
+msgstr "Расширенный"
+
+msgctxt "#31235"
+msgid "Extras"
+msgstr "Дополнительно"
+
+msgctxt "#31236"
+msgid "Header text"
+msgstr "Название текста"
+
+msgctxt "#31237"
+msgid "Invert widget access"
+msgstr "Вернуть разрешение виджету"
+
+msgctxt "#31238"
+msgid "Open carousel in own window"
+msgstr "Открыть карусель в своём окне"
+
+msgctxt "#31239"
+msgid "Kiosk mode"
+msgstr "Мод Киоск"
+
+msgctxt "#31240"
+msgid "Use theme colour for header"
+msgstr "Использовать цвет фона для названия"
+
+msgctxt "#31241"
+msgid "3D Mode"
+msgstr "3Д режим"
+
+msgctxt "#31242"
+msgid "Media Info"
+msgstr "Инфо о медиа"
+
+msgctxt "#31243"
+msgid "Most"
+msgstr "Сильно"
+
+msgctxt "#31244"
+msgid "Moderate"
+msgstr "Умеренно"
+
+msgctxt "#31245"
+msgid "Least"
+msgstr "Слабо"
+
+msgctxt "#31246"
+msgid "No description available"
+msgstr "Нет описания"
+
+msgctxt "#31247"
+msgid "Customise home screen tiles. From here you can create new tiles, modify existing tiles, insert tiles, delete tiles, swap tiles and set individual background widgets. To set individual background widgets you must first disable the Global Widget. To set colours for individual tiles you must first disable the Use Theme Colour For Focused Tiles option."
+msgstr "Личная настройка плиткок на главном экране. Отсюда Вы можете создать новые плитки, изменить существующие плитки, добавить плитки, удалить плитки, заменить и установить личные фоны для виджетов."
+
+msgctxt "#31248"
+msgid "Sets the background widget for the home screen that can be accessed by pressing up. Disabling this option allows individual widgets to be set for tiles in the customisation screen."
+msgstr "Настройте виджет на главном экране, доступ к нему будет разрешен нажав клавишу Наверх. Отключение этого параметра позволяет лично настроить виджеты для плиток на главном экране"
+
+msgctxt "#31249"
+msgid "Show the information panel for background widgets."
+msgstr "Показать панель инфо для виджета фона"
+
+msgctxt "#31250"
+msgid "Focused tiles on home screen match the theme's highlight colour. Unfocused tiles are set to grey. This overrides individual tile colour settings."
+msgstr "Цвет выбора плитки совпадает с цветом темы. Не выбранные плитки не затемнеют. Этот выбор является предпочтительным от окраски отдельных плиток"
+
+msgctxt "#31251"
+msgid "Match the colour of the focused tile's text underline to the colour of the tile."
+msgstr "Подогнать цвет текста нижней полосы выбранной плитки в цвет всех плиткок"
+
+msgctxt "#31252"
+msgid "Sets the path to the background slideshow that is shown when the focused tile does not have a background widget set."
+msgstr "Установить путь к каталогу фонов, когда у плитки не выбран фон"
+
+msgctxt "#31253"
+msgid "Enables an additional widget carousel that is accessed by pressing down. Once open, pressing up will cycle through the widgets."
+msgstr "Включить дополнительный виджет карусели"
+
+msgctxt "#31254"
+msgid "Open the widget carousel in its own window rather than above the home screen tiles."
+msgstr "Откройте виджет карусели в своем собственном окне,а не над плиткой на главном экране"
+
+msgctxt "#31255"
+msgid "Invert access to widgets so that up opens the carousel and down accesses the background widget."
+msgstr "Сделать доступ к приложениям так чтоб нажатие Наверх откроет карусель, а нажатие Вниз даст доступ к виджетам на фоне"
+
+msgctxt "#31256"
+msgid "Show fanart in the background of library views."
+msgstr "Показать фанарт на фоне во время просмотра библиотеки"
+
+msgctxt "#31257"
+msgid "Sets how much the background fanart is faded. There are three settings: Most, Moderate and Least."
+msgstr "Установить затемнение фанарта. Возможны 3 уровня: Сильно, Слабо, Умеренно.‬"
+
+msgctxt "#31258"
+msgid "Animate background fanart with a Ken Burns type effect."
+msgstr "Оживить фанарт фон с эффектом Ken Burns"
+
+msgctxt "#31259"
+msgid "Set the backgroud image that is displayed when no fanart is available. Click once to clear the current path and again to select a new path."
+msgstr "Задаёт фон который будет отображаться при недоступном фанарте. Нажмите один раз чтобы очистить путь и нажмите снова чтобы определить новый путь"
+
+msgctxt "#31260"
+msgid "Changes the background colour based upon the time of day. This overrides the background image setting. The images for the background colour overlay can be modified in skin.eminence/extras/sunset - the number of the image matches the hour it is displayed at in 24 hour time."
+msgstr "Изменить цвет фона в зависимости от времени суток. Это действие отменяет установку фонового изображения. Цвет слоя фона может быть изменён в skin.eminence/extras/sunset представляет собой время суток, в котором отображается изображение."
+
+msgctxt "#31261"
+msgid "Sets the image used as a background overlay. Click once to clear the current path and again to select a new path."
+msgstr "Установите изображение в качестве наложения на фоне. Нажмите один раз, чтобы удалить текущий путь нажмите кнопку еще раз, чтобы задать новый путь"
+
+msgctxt "#31262"
+msgid "Sets the path to weather fanart used in the weather screen."
+msgstr "Задать путь фанарт экранна Погоды"
+
+msgctxt "#31263"
+msgid "Select the widget shown in the movies hub. Can choose spotlight, in progress or smart playlist."
+msgstr "Выберите виджет который будет отображаться в центре раздела фильмы. Вы можете выбрать из рекомендуемые, в прогрессе и смарт-плейлист."
+
+msgctxt "#31264"
+msgid "Set the smart playlist used in the movie hub widget. Smart playlists can be created by going to the movies hub and scrolling down in the right pane to the playlists option."
+msgstr "Установите смарт-плейлист который используется в виджете фильмы. Вы можете создать списки воспроизведения войдя в апплет фильмов и прокрутите вниз до возможностей."
+
+msgctxt "#31265"
+msgid "Sets a custom item to be shown in the right pane of the hub underneath recently added."
+msgstr "Установка пользовательских элементов отображаемых в правой панели в апплете фильмов, под недавно добавленные."
+
+msgctxt "#31266"
+msgid "Select the widget shown in the tv shows hub. Can choose spotlight, in progress or smart playlist."
+msgstr "Выберите виджет который будет отображаться в апплете ТВ шоу. Вы можете выбрать из рекомендуемые, в прогрессе и смарт-плейлист."
+
+msgctxt "#31267"
+msgid "Set the smart playlist used in the tv show hub widget. Smart playlists can be created by going to the tv show hub and scrolling down in the right pane to the playlists option."
+msgstr "Установите смарт плейлист который используется в апплете ТВ шоу.  Вы можете создать списки воспроизведения войдя в апплет фильмов и прокрутите вниз до возможностей."
+
+msgctxt "#31268"
+msgid "Use the Artist Slideshow addon to show a slideshow of artist images as the music visualisation."
+msgstr ""
+
+msgctxt "#31269"
+msgid "Shows the extend info panel on pressing info with fullscreen video or music."
+msgstr "На полном экране во время видео или музыки отображать информацию при нажатии на Info"
+
+msgctxt "#31270"
+msgid "Show clearart or clearlogo in the bottom right of screen whenever the seekbar displays on fullscreen video."
+msgstr "Показать clearart или clearlogo в правом нижнем углу экрана всякий раз когда панель видео отображается на весь экран"
+
+msgctxt "#31271"
+msgid "Modify the default 'Media Center' text shown in the header."
+msgstr "Изменить текст "Медиа Центр " который отображает название."
+
+msgctxt "#31272"
+msgid "Matches the colour of the header tile to the theme's highlight colour."
+msgstr "Подобрать цвет заголовка плитки на цвет фона"
+
+msgctxt "#31273"
+msgid "Prevents the side view menu from being accessed in library views."
+msgstr "Запретить доступ к боковому меню при просмотре библиотеки"
+
+msgctxt "#31274"
+msgid "Enables the TV Tunes addon in library views. Plays the tv theme song when viewing the seasons or episodes of a tv show."
+msgstr "Разрешить дополнению Песни просмотр библиотеки ТВ шоу. Воспроизведение песни во время просмотра сезона или эпизода ТВ шоу."
+
+msgctxt "#31275"
+msgid "Show the RSS feed at the bottom of the screen"
+msgstr "Показать полосу новостей в нижней части экрана"
+
+msgctxt "#31276"
+msgid "Show next aired information for tv shows at the bottom of the screen. Also shows an RSS feed of upcoming tv show airdates in the tv show hub. In the Next Aired addon configuration enable the 'Show All Tv Shows for homescreen' option for best effect."
+msgstr "Показать информацию о телешоу в нижней части экрана. Показывает также  следующие ТВ-шоу ТВ программы апплета. На основании личных настроек апплета."
+
+msgctxt "#31277"
+msgid "Resets the skin back to default settings. WARNING: this will wipe all your skin settings. All custom tiles and widgets will be reset to defaults."
+msgstr "Сброс оболочки по умолчанию. Будьте осторожны! Это сотрет все сделанные Вами настройки."
+
+msgctxt "#31278"
+msgid "PVR Manager"
+msgstr "Менеджер PVR"
+
+msgctxt "#31279"
+msgid "Alt style"
+msgstr "Альтернативный стиль"
+
+msgctxt "#31280"
+msgid "Automatically start artwork downloader after library update"
+msgstr "Автоматически загружать artwork после обновления библиотеки."
+
+msgctxt "#31281"
+msgid "Hubs"
+msgstr "Содержимое"
+
+msgctxt "#31282"
+msgid "Header"
+msgstr "Заголовок"
+
+msgctxt "#31283"
+msgid "Set Path"
+msgstr "Указать путь"
+
+msgctxt "#31284"
+msgid "Show extended info at bottom of screen"
+msgstr "Показать информацию в нижней части экрана"
+
+msgctxt "#31285"
+msgid "Premiere Date"
+msgstr "Год выпуска"
+
+msgctxt "#31286"
+msgid "Disable clock"
+msgstr "Отменить часы"
+
+msgctxt "#31287"
+msgid "Set startup video"
+msgstr "Задать видео при старте"
+
+msgctxt "#31288"
+msgid "Moshiko iCones"
+msgstr "Менять значек"
+
+msgctxt "#31289"
+msgid "KodiSrael"
+msgstr "‏Abeksis Mode"
+
+msgctxt "#31290"
+msgid "Moshiko change background"
+msgstr "Поменять фоновое изображение"
+
+msgctxt "#31291"
+msgid "Favorites"
+msgstr "Избранные"
+
+msgctxt "#31292"
+msgid "Remove"
+msgstr "Установка мода Abeksis"
+
+msgctxt "#31293"
+msgid "Custom - is an option which removes some tiles according to users who request it, the tiles are, YouTube, photos, files. It also adds the possibility of this is the recent films added."
+msgstr "Custom - это вариант который удаляет некоторые плитки по просьбе пользователей. Плитка YouTube, изображения, файлы. А так же эта опция добавляет фильмы которые добавились автоматически. Плитки будут окрашены в прекрасные цвета создающие особый внешний вид, и еще другие вещи. - Пожалуйста читайте "об оболочке и согласие на установку.""
+
+msgctxt "#31294"
+msgid "Favorites"
+msgstr "Этот параметр добавляет плитку избранное - Это изменение было добавлено по просьбе пользователей, с целью удобства и легкого доступа в Избранное."
+
+msgctxt "#31295"
+msgid "Moshiko change icon info"
+msgstr "Эта опция заменяет значки по умолчанию. Значки тщательно собраны Moshiko, спасибо ему за идею."
+
+msgctxt "#31296"
+msgid "Moshiko change background info"
+msgstr "Эта опция заменяет фоновое изображение для каждой плитки. Фоновые изображения были собраны Moshiko, спасибо ему за идею."
+
+msgctxt "#31297"
+msgid "Thanks"
+msgstr "Об оболочке"
+
+msgctxt "#31300"
+msgid "Thanks"
+msgstr "Обеспечивает полную информацию о оболочке, в том числе соглашения чтобы установить мод созданный Abeksis"
+
+msgctxt "#31298"
+msgid "No Color"
+msgstr "Отключить цвета плитки"
+
+msgctxt "#31299"
+msgid "No Color"
+msgstr "Эта опция отключает цвета плитки"
+
+msgctxt "#31301"
+msgid "No Movies No Sdarot"
+msgstr "Показать инфо полосу о количестве медиа на главном экране"
+
+msgctxt "#31302"
+msgid "No Movies No Sdarot Moves Soung"
+msgstr "Эта опция отменяет строку ниже заголовка, которая отображает количество ТВ-каналов, песен, эпизодов, фильмов."
+
+msgctxt "#31303"
+msgid "Disable Title"
+msgstr "Отменить заголовок"
+
+msgctxt "#31304"
+msgid "Background"
+msgstr "Фон изображения"
+
+msgctxt "#31305"
+msgid "Change background image"
+msgstr "Изменить фон изображения"
+
+msgctxt "#31306"
+msgid "Enable Single Image"
+msgstr "Разрешить одно фоновое изображение для плитки"
+
+msgctxt "#31307"
+msgid "Last episodes"
+msgstr "Последние эпизоды"
+
+msgctxt "#31308"
+msgid "Enable Poster Image"
+msgstr "Показать постер на главном экране"
+
+msgctxt "#31309"
+msgid "Enable discart Image"
+msgstr "Показать СД на главном экране"
+
+msgctxt "#31310"
+msgid "Enable Logo Movies"
+msgstr "Показать лого фильма"
+
+msgctxt "#31311"
+msgid "Enable Clearart Movies"
+msgstr "Показать Clearart"
+
+msgctxt "#31312"
+msgid "Sport"
+msgstr "Спорт"
+
+msgctxt "#31313"
+msgid "kids"
+msgstr "Для детей"
+
+msgctxt "#31314"
+msgid "vod"
+msgstr "Vod"
+
+msgctxt "#31316"
+msgid "get graphic"
+msgstr "Получить графику"
+
+msgctxt "#31317"
+msgid "get extra info"
+msgstr "Подробная информация"
+
+msgctxt "#31318"
+msgid "get extra info"
+msgstr "Подробная информация"
+
+msgctxt "#31319"
+msgid "get extra info"
+msgstr "Мод Zeev"
+
+msgctxt "#31320"
+msgid "get extra info"
+msgstr "Установка мода Zeev"
+
+msgctxt "#31321"
+msgid "zeev style"
+msgstr "Стиль Zeev"
+
+msgctxt "#31334"
+msgid "Favorites"
+msgstr "Избранные"
+
+msgctxt "#31335"
+msgid "Favorites"
+msgstr "Категория избранные"
+
+msgctxt "#31336"
+msgid "Favorites"
+msgstr "Обшие избранные"
+
+msgctxt "#31337"
+msgid "Favorites"
+msgstr "ТВ(каналы)"
+
+msgctxt "#31338"
+msgid "Favorites"
+msgstr "Категория на выбор"
+
+msgctxt "#31339"
+msgid "Favorites"
+msgstr "Изменить заголовок"
+
+msgctxt "#5498233"
+msgid "channel"
+msgstr "Каналы"
+
+msgctxt "#31340"
+msgid "music"
+msgstr "Музыка"
+
+msgctxt "#31341"
+msgid "Music Widget"
+msgstr "Виджет музыка"
+
+msgctxt "#31342"
+msgid "back-up"
+msgstr "Резервное копирование оболочки"
+
+msgctxt "#31343"
+msgid "back-up"
+msgstr "Восстановление оболочки из резервного копии"
+
+msgctxt "#31344"
+msgid "Eminence Zeev MOD"
+msgstr "Eminence Zeev MOD (перевод Viko Farber)"
+
+msgctxt "#31345"
+msgid "Eminence Zeev"
+msgstr "Eminence Zeev (перевод Viko Farber)"
+
+msgctxt "#313434"
+msgid "Eminence Zeev"
+msgstr "Начало в"
+
+msgctxt "#313436"
+msgid "Eminence Zeev"
+msgstr "Заканчивается в"
+
+msgctxt "#313437"
+msgid "Eminence Zeev"
+msgstr "Подробная информация"
+
+msgctxt "#3134378"
+msgid "Next episode"
+msgstr "Следующая серия"
+
+msgctxt "#3134379"
+msgid "Latest Episode"
+msgstr "Последняя серия"
+
+msgctxt "#3134380"
+msgid "in"
+msgstr "в -"
+
+msgctxt "#3134381"
+msgid "Eminence Zeev MOD"
+msgstr "Маленькие плитки - Eminence Zeev MOD"
+
+msgctxt "#3134385"
+msgid "Eminence Zeev MOD"
+msgstr "Применить персональные настройки - изменить фон, поменять значки, изменить и добавить папки и категории, добавить подкатегории и большие плитки."
+
+msgctxt "#3134384"
+msgid "Eminence Zeev MOD"
+msgstr "[B]Eminence Zeev MOD -[/B]"
+
+msgctxt "#3134386"
+msgid "Eminence Zeev MOD"
+msgstr "Задержка субтитров"
+
+msgctxt "#31343568"
+msgid "disk"
+msgstr "Виджет диск"
+
+msgctxt "#31343569"
+msgid "Customise home menu"
+msgstr "Настроить домашний экран"
+
+msgctxt "#31343570"
+msgid "Тип плитки"
+msgstr "Тип плитки"
+
+msgctxt "#31343571"
+msgid "Fallback widget"
+msgstr "Виджет"
+
+msgctxt "#31343572"
+msgid "Show widget information"
+msgstr "Показать информацию о виджете"
+
+msgctxt "#31343573"
+msgid "Show widget posters"
+msgstr "Показать виджет постер"
+
+msgctxt "#31155"
+msgid "Never"
+msgstr "Никогда"
+
+msgctxt "#31166"
+msgid "Individually set in customisation dialog"
+msgstr "Скрытый"
+
+msgctxt "#31153"
+msgid "Always"
+msgstr "Всегда"
+
+msgctxt "#31154"
+msgid "On Up"
+msgstr "При загрузке"
+
+msgctxt "#31343574"
+msgid "Lovefilm"
+msgstr "Фанарт"
+
+msgctxt "#31343575"
+msgid "Items"
+msgstr "Предметы"
+
+msgctxt "#31343576"
+msgid "Wall"
+msgstr "Стена"
+
+msgctxt "#31343577"
+msgid "Banner"
+msgstr "Баннер"
+
+msgctxt "#31021"
+msgid "Show fanart"
+msgstr "Показать фанарт"
+
+msgctxt "#31343578"
+msgid "Enable individual tile colors in home customisation"
+msgstr "Показать пользовательский цвет плитки"
+
+msgctxt "#31343579"
+msgid "Show tile colour on unfocused tiles"
+msgstr "Показать цвет плиток на не выбранных плитках"
+
+msgctxt "#31343580"
+msgid "Transparent home bar"
+msgstr "Прозрачность плиток"
+
+
+msgctxt "#31343581"
+msgid "Большие плитки"
+msgstr "Большие плитки"
+
+
+msgctxt "#31052"
+msgid "Rated"
+msgstr "Рейтинг"
+
+msgctxt "#31054"
+msgid "Random movies"
+msgstr "Случайные фильмы"
+
+msgctxt "#31055"
+msgid "Random episodes"
+msgstr "Случайные серии"
+
+msgctxt "#31056"
+msgid "Random albums"
+msgstr "Случайные альбомы"
+
+msgctxt "#31066"
+msgid "Cinema Exp."
+msgstr "Cinema Exp."
+
+msgctxt "#31071"
+msgid "Finishes at"
+msgstr "Заканчивается в -"
+
+msgctxt "#31072"
+msgid "Playing"
+msgstr "Играет"
+
+
+msgctxt "#31076"
+msgid "Weather Fanart"
+msgstr "Фанарт Погода"
+
+msgctxt "#31077"
+msgid "Trending Movies"
+msgstr "Актуальные Фильмы"
+
+msgctxt "#31078"
+msgid "In Cinemas"
+msgstr "В кинотеатрах"
+
+msgctxt "#31079"
+msgid "Upcoming Films"
+msgstr "Скоро"
+
+msgctxt "#31080"
+msgid "Popular Movies"
+msgstr "Популярные фильмы"
+
+msgctxt "#31081"
+msgid "Top Rated Movies"
+msgstr "Фильмы с лучшим рейтингом"
+
+msgctxt "#31082"
+msgid "Popular Shows"
+msgstr "Популярные ТВ шоу"
+
+msgctxt "#31083"
+msgid "Top Rated Shows"
+msgstr "ТВ шоу с лучшим рейтингом"
+
+msgctxt "#31084"
+msgid "On Air Shows"
+msgstr "Транслируемое в настоящее время"
+
+msgctxt "#31085"
+msgid "Airing Today"
+msgstr "Транслируемое сегодня"
+
+msgctxt "#31091"
+msgid "Trending Shows"
+msgstr "Актуальные передачи"
+
+msgctxt "#31100"
+msgid "Recently Added"
+msgstr "Недавно добавленные"
+
+
+msgctxt "#31095"
+msgid "Spotlight"
+msgstr "Spotlight"
+
+msgctxt "#31031"
+msgid "Recent movies"
+msgstr "Последние фильмы"
+
+msgctxt "#31032"
+msgid "Recommended movies"
+msgstr "Рекомендуемые фильмы"
+
+msgctxt "#31034"
+msgid "Enable Artist Slideshow"
+msgstr "Включить Artist Slideshow"
+
+msgctxt "#31035"
+msgid "Recent episodes"
+msgstr "Последние эпизоды"
+
+msgctxt "#31036"
+msgid "Recommended episodes"
+msgstr "Рекомендуемые эпизоды"
+
+msgctxt "#31038"
+msgid "Recent albums"
+msgstr "Последние альбомы"
+
+msgctxt "#31039"
+msgid "Recommended albums"
+msgstr "Рекомендуемые альбомы"
+
+msgctxt "#31093"
+msgid "Movie Hub"
+msgstr "Категория фильмы"
+
+msgctxt "#31094"
+msgid "TV Hub"
+msgstr "Категория сериалы"
+
+msgctxt "#31123"
+msgid "Hub"
+msgstr "Пользовательская категория"
+
+msgctxt "#32000"
+msgid "Add"
+msgstr "Добавить"
+
+msgctxt "#32001"
+msgid "Delete"
+msgstr "Стереть"
+
+msgctxt "#32002"
+msgid "Move Up"
+msgstr "Выше"
+
+msgctxt "#32003"
+msgid "Move Down"
+msgstr "Ниже"
+
+msgctxt "#32004"
+msgid "Video Playlist"
+msgstr "Плейлист видео"
+
+msgctxt "#32005"
+msgid "Music Playlist"
+msgstr "Плейлист музыка"
+
+msgctxt "#32006"
+msgid "Favourite"
+msgstr "Избранные"
+
+msgctxt "#32007"
+msgid "Add-On"
+msgstr "Дополнения"
+
+msgctxt "#32008"
+msgid "Mixed Playlist"
+msgstr "Смешанный плейлист"
+
+msgctxt "#32009"
+msgid "Program"
+msgstr "Программы"
+
+msgctxt "#32010"
+msgid "Video Add-On"
+msgstr "Видео дополнения"
+
+msgctxt "#32011"
+msgid "Music Add-On"
+msgstr "Музыка дополнения"
+
+msgctxt "#32012"
+msgid "Picture Add-On"
+msgstr "Фото дополнения"
+
+msgctxt "#32013"
+msgid "<None>"
+msgstr "<Без>"
+
+msgctxt "#32014"
+msgid "Videos"
+msgstr "Видео"
+
+msgctxt "#32015"
+msgid "Movies"
+msgstr "Фильмы"
+
+msgctxt "#32016"
+msgid "TV Shows"
+msgstr "Сериалы"
+
+msgctxt "#32017"
+msgid "Live TV"
+msgstr "ТВ в прямом эфире"
+
+msgctxt "#32018"
+msgid "Music Videos"
+msgstr "Клипы"
+
+msgctxt "#32019"
+msgid "Music"
+msgstr "Музыка"
+
+msgctxt "#32020"
+msgid "Pictures"
+msgstr "Фото"
+
+msgctxt "#32021"
+msgid "Programs"
+msgstr "Программы"
+
+msgctxt "#32022"
+msgid "Live TV"
+msgstr "ТВ в прямом эфире"
+
+msgctxt "#32023"
+msgid "Timers"
+msgstr "Таймер"
+
+msgctxt "#32030"
+msgid "Video Library"
+msgstr "Видеотека"
+
+msgctxt "#32031"
+msgid "Music Library"
+msgstr "Библиотека музыка"
+
+msgctxt "#32032"
+msgid "Play DVD"
+msgstr "Играть ДВД"
+
+msgctxt "#32033"
+msgid "Eject tray"
+msgstr "Извлечь лоток"
+
+msgctxt "#32040"
+msgid "Play"
+msgstr "Плейлист"
+
+msgctxt "#32041"
+msgid "Action"
+msgstr "Боевик"
+
+msgctxt "#32044"
+msgid "Select widget"
+msgstr "Выбрать виджет"
+
+msgctxt "#32050"
+msgid "Default"
+msgstr "По умолчанию"
+
+msgctxt "#32051"
+msgid "Single image"
+msgstr "Одно изображение"
+
+msgctxt "#32052"
+msgid "Multi-image"
+msgstr "Пару изображений"
+
+msgctxt "#32053"
+msgid "None"
+msgstr "Без"
+
+msgctxt "#32054"
+msgid "Kodi Command"
+msgstr "Команда Kodi"
+
+msgctxt "#32057"
+msgid "Kodi Commands"
+msgstr "Команды Kodi"
+
+msgctxt "#32061"
+msgid "Display"
+msgstr "Дисплей"
+
+msgctxt "#32062"
+msgid "Play"
+msgstr "Играть"
+
+msgctxt "#32066"
+msgid "Last TV channel"
+msgstr "Последний телеканал"
+
+msgctxt "#32067"
+msgid "Last radio channel"
+msgstr "Последний радиоканал"
+
+msgctxt "#32068"
+msgid "Last channel"
+msgstr "Последний канал"
+
+msgctxt "#32069"
+msgid "Video Source"
+msgstr "Видео источник"
+
+msgctxt "#32070"
+msgid "UPnP"
+msgstr "UPnP"
+
+msgctxt "#32073"
+msgid "Music Source"
+msgstr "Музыка источник"
+
+msgctxt "#32074"
+msgid "Library Sources"
+msgstr "Библиотека источник"
+
+msgctxt "#32075"
+msgid "Sources"
+msgstr "Источник"
+
+msgctxt "#32076"
+msgid "TV Channel"
+msgstr "Телеканал"
+
+msgctxt "#32077"
+msgid "Radio Channel"
+msgstr "Радиоканал"
+
+msgctxt "#32079"
+msgid "Files view"
+msgstr "Просмотр файлов"
+
+msgctxt "#32087"
+msgid "Radio"
+msgstr "Радио"
+
+msgctxt "#32088"
+msgid "Channels"
+msgstr "Каналы"
+
+msgctxt "#32089"
+msgid "Picture Source"
+msgstr "Фото источник"
+
+msgctxt "#32096"
+msgid "Browse..."
+msgstr "Смотреть..."
+
+msgctxt "#324324234"
+msgid "Choose shortcut"
+msgstr "Выбрать ярлык"
+
+msgctxt "#324324235"
+msgid "Choose action"
+msgstr "Выберите действие"
+
+msgctxt "#324324236"
+msgid "set label"
+msgstr "Задать название"
+
+msgctxt "#324324237"
+msgid "set label"
+msgstr "Задать подкатегории"
+
+msgctxt "#324324238"
+msgid "set label"
+msgstr "Задать фон"
+
+msgctxt "#324324239"
+msgid "set label"
+msgstr "Задать значек"
+
+msgctxt "#324324240"
+msgid "set label"
+msgstr "Задать цвет плитки"
+
+msgctxt "#324324241"
+msgid "set label"
+msgstr "Сбросить ярлыки"
+
+msgctxt "#324324242"
+msgid "Reset colors to defaults"
+msgstr "Сбросить настройки цвета системы"
+
+msgctxt "#324324243"
+msgid "Choose primary highlight color"
+msgstr "Установить цвет плиток домашнего экрана по умолчанию"
+
+msgctxt "#324324244"
+msgid "Choose secondary highlight color"
+msgstr "Установить цвет заголовка и центра сообщений"
+
+
+msgctxt "#324324246"
+msgid "Choose secondary highlight color"
+msgstr "Изменить цвет верхней плитки - Система"
+
+msgctxt "#324324245"
+msgid "Choose secondary highlight color"
+msgstr "Изменить цвет верхней плитки - Главная"
+
+msgctxt "#324324247"
+msgid "Reset colors to defaults"
+msgstr "Сброс настроек цвета"
+
+msgctxt "#324324248"
+msgid "Reset colors to defaults"
+msgstr "Изменить цвет заголовка"
+
+msgctxt "#324324249"
+msgid "Reset colors to defaults"
+msgstr "Изменить цвет значка"
+
+
+msgctxt "#324324344"
+msgid "Reset colors to defaults"
+msgstr "Изменить цвет кнопок OSD"
+
+msgctxt "#31343582"
+msgid "Плитки LG"
+msgstr "Плитки LG"
+
+msgctxt "#31343583"
+msgid "Без плиток"
+msgstr "Без плиток"
+
+msgctxt "#31343584"
+msgid "ТВ"
+msgstr "ТВ"
+
+msgctxt "#31343586"
+msgid "wide"
+msgstr "Широкий"
+
+msgctxt "#31343587"
+msgid "wide"
+msgstr "Большой список"
+
+msgctxt "#31343588"
+msgid "wide"
+msgstr "Список и информация"
+
+msgctxt "#31343589"
+msgid "wide"
+msgstr "Список баннер"
+
+msgctxt "#31343590"
+msgid "wide"
+msgstr "Данные медиа"
+
+msgctxt "#31343591"
+msgid "wide"
+msgstr "Данные медиа 2"
+
+msgctxt "#31343592"
+msgid "wide"
+msgstr "Список"
+
+msgctxt "#31343593"
+msgid "wide"
+msgstr "Стена 2"
+
+msgctxt "#31343594"
+msgid "wide"
+msgstr "Стена фильмов"
+
+msgctxt "#31343595"
+msgid "wide"
+msgstr "Стена 3Д"
+
+msgctxt "#31343596"
+msgid "wide"
+msgstr "Фильмы Genesis"
+
+msgctxt "#31343597"
+msgid "wide"
+msgstr "Фильмы Pulsar"
+
+msgctxt "#31343598"
+msgid "wide"
+msgstr "Фильмы Salts"
+
+msgctxt "#31343599"
+msgid "wide"
+msgstr "Поиск Genesis"
+
+msgctxt "#31343600"
+msgid "wide"
+msgstr "Поиск на стене"
+
+msgctxt "#31343601"
+msgid "Популярные пути"
+msgstr "Популярные пути"
+
+msgctxt "#31343602"
+msgid "Популярные пути"
+msgstr "постеры & фанарт"
+
+msgctxt "#31343603"
+msgid "Популярные пути"
+msgstr "изменение отображаемого"
+
+msgctxt "#31343604"
+msgid "Популярные пути"
+msgstr "вернуться на главный экран"
+
+msgctxt "#31343605"
+msgid "Hub"
+msgstr "Пользовательская категория 2"
+
+msgctxt "#31343606"
+msgid "Hub"
+msgstr "Пользовательская категория 3"
+
+msgctxt "#31343607"
+msgid "Hub"
+msgstr "Пользовательская категория 4"
+
+msgctxt "#31343608"
+msgid "Hub"
+msgstr "Пользовательская категория 5"
+
+msgctxt "#31343609"
+msgid "Hub"
+msgstr "Пользовательская категория 6"
+
+msgctxt "#31343610"
+msgid "Hub"
+msgstr "Пользовательская категория 7"
+
+msgctxt "#31343611"
+msgid "Hub"
+msgstr "Пользовательская категория 8"
+
+msgctxt "#31343612"
+msgid "Hub"
+msgstr "Избранное"
+
+msgctxt "#31343613"
+msgid "Hub"
+msgstr "Стена подробнее"
+
+msgctxt "#31343614"
+msgid "Hub"
+msgstr "Стена 2"
+
+msgctxt "#31343615"
+msgid "Hub"
+msgstr "Стена 3"
+
+msgctxt "#31343616"
+msgid "Hub"
+msgstr "Список и постер"
+
+msgctxt "#31343617"
+msgid "Hub"
+msgstr "Список 2"
+
+msgctxt "#31343618"
+msgid "Hub"
+msgstr "Информация о медиа 2"
+
+msgctxt "#31343619"
+msgid "Hub"
+msgstr "Информация о медиа 3"
+
+msgctxt "#31343620"
+msgid "Hub"
+msgstr "Информация о медиа 4"
+
+msgctxt "#31343621"
+msgid "Hub"
+msgstr "Список фанарт"
+
+msgctxt "#31343622"
+msgid "Hub"
+msgstr "Список иконок"
+
+msgctxt "#31343623"
+msgid "Hub"
+msgstr "Список и информация"
+
+msgctxt "#31343623"
+msgid "Hub"
+msgstr "Список и информация"
+
+msgctxt "#31343624"
+msgid "Hub"
+msgstr "Фанарт"
+
+msgctxt "#31343625"
+msgid "Hub"
+msgstr "Список баннер"
+
+msgctxt "#31343626"
+msgid "Hub"
+msgstr "Галлерея"
+
+msgctxt "#31343627"
+msgid "Hub"
+msgstr "Галлерея и лого"
+
+msgctxt "#31343628"
+msgid "Hub"
+msgstr "Цвета"
+
+msgctxt "#31343629"
+msgid "Hub"
+msgstr "Резервное копирование и восстановление"
+
+msgctxt "#31343630"
+msgid "Hub"
+msgstr "Резервное копирование и восстановление"
+
+msgctxt "#31343631"
+msgid "Hub"
+msgstr "Прозрачность виджета"
+
+msgctxt "#31343632"
+msgid "Hub"
+msgstr "Показать поддельный диск"
+
+msgctxt "#31343633"
+msgid "Hub"
+msgstr "Вращающийся диск"
+
+msgctxt "#31343634"
+msgid "Hub"
+msgstr "Лого фильма"
+
+msgctxt "#31343635"
+msgid "Hub"
+msgstr "Отрегулируйте цвет категории и цвет плитки"
+
+msgctxt "#31343636"
+msgid "Hub"
+msgstr "Отрегулируйте цвет категории и цвет верхней плитки"
+
+msgctxt "#31343637"
+msgid "Hub"
+msgstr "הגדר Задать категорию в стиле 16:9"
+
+msgctxt "#31343638"
+msgid "Hub"
+msgstr "Установите категорию в стиле списка"
+
+msgctxt "#31343639"
+msgid "Hub"
+msgstr "Отмена прозрачности не выбранных плиток"
+
+msgctxt "#31343640"
+msgid "Hub"
+msgstr "Показать видео играющее в системе"
+
+msgctxt "#31343641"
+msgid "Hub"
+msgstr "Просмотр видео на главной странице"
+
+msgctxt "#31343642"
+msgid "Hub"
+msgstr "Затемнить фанарт"
+
+msgctxt "#31343643"
+msgid "Hub"
+msgstr "Полное название"
+
+msgctxt "#31343644"
+msgid "Hub"
+msgstr "Показать название граф библиотеки"
+
+msgctxt "#31343645"
+msgid "Hub"
+msgstr "Черный фон за часами и названием"
+
+msgctxt "#31343646"
+msgid "Hub"
+msgstr "Показать часы"
+
+msgctxt "#31343647"
+msgid "Hub"
+msgstr "Измененить значек ожидания"
+
+msgctxt "#31343648"
+msgid "Hub"
+msgstr "Показать диск на странице о фильме"
+
+msgctxt "#31343649"
+msgid "Hub"
+msgstr "Показать информацию на стене о серии"
+
+msgctxt "#31343650"
+msgid "Hub"
+msgstr "Восстановить из резервной копии"
+
+msgctxt "#31343651"
+msgid "Hub"
+msgstr "Установить цвет часов и погоды"
+
+msgctxt "#31343652"
+msgid "Hub"
+msgstr "Установить цвет названия"
+
+msgctxt "#31343653"
+msgid "Hub"
+msgstr "Установить цвет вторичного названия"
+
+msgctxt "#31343654"
+msgid "Hub"
+msgstr "Установить основной цвет маркировки"
+
+msgctxt "#31343655"
+msgid "Hub"
+msgstr "Установить цвет фона плитки"
+
+msgctxt "#31343656"
+msgid "Hub"
+msgstr "Установить цвета фона сообщений на главной"
+
+msgctxt "#31343657"
+msgid "Hub"
+msgstr "Установить цвет панели RSS на главной"
+
+msgctxt "#31343658"
+msgid "Hub"
+msgstr "включить / отключить просмотры (отметьте белым чтобы отменить)"
+
+msgctxt "#31343659"
+msgid "Hub"
+msgstr "Разрешить настройку отображаемого"
+
+msgctxt "#31343660"
+msgid "Hub"
+msgstr "Вид фильмов:"
+
+msgctxt "#31343661"
+msgid "Hub"
+msgstr "Вид сериалов:"
+
+msgctxt "#31343662"
+msgid "Hub"
+msgstr "Вид сезонов:"
+
+msgctxt "#31343663"
+msgid "Hub"
+msgstr "Вид сезонов:"
+
+msgctxt "#31343664"
+msgid "Hub"
+msgstr "Редактировать категорию"
+
+msgctxt "#31343665"
+msgid "Hub"
+msgstr "Настроить виджет категория"
+
+
+msgctxt "#31343666"
+msgid "Hub"
+msgstr "Дополнения используемые скином"
+
+msgctxt "#31343667"
+msgid "Hub"
+msgstr "Установленно"
+
+msgctxt "#31343668"
+msgid "Hub"
+msgstr "Не установленно"
+
+msgctxt "#31343669"
+msgid "Hub"
+msgstr "Вертикальное меню"
+
+msgctxt "#31343673"
+msgid "התאם את דף הבית"
+msgstr "Настроить домашний экран"
+
+msgctxt "#31343675"
+msgid "בית"
+msgstr "Меню"
+
+msgctxt "#31343672"
+msgid "מחק "
+msgstr "Стереть"

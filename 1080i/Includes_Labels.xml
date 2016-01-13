@@ -1,5 +1,45 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+    <variable name="StatusSkinShortcuts">
+        <value condition="System.HasAddon(script.skinshortcuts)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(script.skinshortcuts)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+	
+	    <variable name="StatusExtendedInfo">
+        <value condition="System.HasAddon(script.extendedinfo)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(script.extendedinfo)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+	    <variable name="StatusSkinHelperService">
+        <value condition="System.HasAddon(script.skin.helper.service)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(script.skin.helper.service)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+    <variable name="StatusGlobalSearch">
+        <value condition="System.HasAddon(script.globalsearch)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(script.globalsearch)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+	    <variable name="StatusArtworkDownloader">
+        <value condition="System.HasAddon(script.artwork.downloader)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(script.artwork.downloader)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+	    <variable name="StatusTVShowNextAired">
+        <value condition="System.HasAddon(script.tv.show.next.aired)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(script.tv.show.next.aired)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+	
+		    <variable name="StatusScriptFavourites">
+        <value condition="System.HasAddon(script.favourites)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(script.favourites)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+	
+		    <variable name="StatusServiceLibraryDataProvider">
+        <value condition="System.HasAddon(service.library.data.provider)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(service.library.data.provider)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+			    <variable name="StatusServiceEMupdater">
+        <value condition="System.HasAddon(service.EMupdater)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(service.EMupdater)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+	
 	<variable name="main_color">
 		<value condition="!IsEmpty(Skin.String(main_color))">$INFO[Skin.String(main_color)]</value>
 		<value>FFE66A4F</value>

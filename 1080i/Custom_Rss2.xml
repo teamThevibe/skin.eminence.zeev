@@ -2,7 +2,10 @@
 <!-- Foundation -->
 <window type="dialog" id="1197">
 	<visible>system.getbool(lookandfeel.enablerssfeeds) + !Window.IsVisible(slideshow) + !Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
+				<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
+
 	<controls>
+	
 	    <control type="rss">
             <posx>48</posx>
             <posy>1032</posy>
@@ -23,6 +26,7 @@
         <control type="group">
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
+			<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
             <visible>Window.IsVisible(weather) | Window.IsVisible(home)</visible>
             <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
             <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>

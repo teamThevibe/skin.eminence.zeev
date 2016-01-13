@@ -20,7 +20,8 @@
     <controls>
 
         <include>Furniture_Background</include>
-        <include>Home_Widget_Control</include>
+        <include condition="!Skin.HasSetting(Home.MenuVertical)">Home_Widget_Control</include>
+		        <include condition="Skin.HasSetting(Home.MenuVertical)">Home_Widget_Control2</include>
      <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
 
 		        <control type="group">
@@ -57,12 +58,13 @@
             <include condition="!Skin.HasSetting(home.hidewidgetbox)">Home_Widget2</include>
             
             <control type="group">
-                <animation effect="slide" tween="quadratic" easing="out" time="150" start="0,266" end="0">WindowOpen</animation>
-                <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>
-                <include>Home_Menu</include>
-                <include>Home_NowPlaying</include>
-				<include>Home_NowPlaying2</include>
-				<include>Home_NowPlaying3</include>
+                <animation condition="!Skin.HasSetting(Home.MenuVertical)" effect="slide" tween="quadratic" easing="out" time="150" start="0,266" end="0">WindowOpen</animation>
+                <animation condition="!Skin.HasSetting(Home.MenuVertical)" effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>
+                <include condition="!Skin.HasSetting(Home.MenuVertical)">Home_Menu</include>
+				<include condition="Skin.HasSetting(Home.MenuVertical)">Home_Menu2</include>
+                <include condition="!Skin.HasSetting(Home.MenuVertical)">Home_NowPlaying</include>
+				<include condition="!Skin.HasSetting(Home.MenuVertical)">Home_NowPlaying2</include>
+				<include condition="!Skin.HasSetting(Home.MenuVertical)">Home_NowPlaying3</include>
             </control>
         </control>
 

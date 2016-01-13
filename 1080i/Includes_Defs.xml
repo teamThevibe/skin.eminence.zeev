@@ -240,6 +240,11 @@
 						</control>
 
 	</include>
+			<variable name="Highlight15"><!--עכבר-->
+		<value condition="!IsEmpty(Skin.String(HighlightColor15))">$INFO[Skin.String(HighlightColor15)]</value>
+				<value condition="Skin.HasSetting(Pointer.color)">$VAR[HighlightColor]</value>
+		<value>Highlight</value>
+	</variable>
 	
 		<variable name="Highlight12">
 		<value condition="!IsEmpty(Skin.String(HighlightColor12))">$INFO[Skin.String(HighlightColor12)]</value>

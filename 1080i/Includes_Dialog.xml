@@ -23,6 +23,14 @@
                 <animation effect="fade" end="90" condition="true">Conditional</animation>
 				</control>
 	</include>
+	
+		<include name="Dialog_Background3">
+		<control type="image">
+               <width>1920</width>
+                <height>764</height>
+                <texture border="5" colordiffuse="Keyboard-BG">common/white.png</texture>
+				</control>
+	</include>
 
 		<include name="Dialog_Background2">
 		<control type="image">
@@ -122,8 +130,7 @@
 		<right>0</right>
 		<bottom>0</bottom>
 		<height>280</height>
-		<include>Dialog_Background</include>
-		<include>Animation_Bottom</include>
+		<include>Dialog_Background3</include>
 
 		<!-- Heading -->
 		<control type="label" id="1">

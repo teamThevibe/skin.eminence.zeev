@@ -78,7 +78,13 @@
             <filename>Roboto-Bold.ttf</filename>
             <size>32</size>
         </font>
-        <font>
+             <font>
+            
+            <name>Font-Sublabel2</name>
+            <filename>Roboto-Bold.ttf</filename>
+            <size>23</size>
+        </font>
+		<font>
             
             <name>Font-ViewCategory</name>
             <filename>Roboto-Black.ttf</filename>
@@ -97,8 +103,16 @@
             <filename>Roboto-Black.ttf</filename>
             <size>75</size>
         </font>
+            
+			        <font>
+            
+            <name>Font-Header2</name>
+            <filename>Roboto-Black.ttf</filename>
+            <size>35</size>
+        </font>
         <font>
             
+			
             <name>Font-ListHeader</name>
             <filename>Roboto-Black.ttf</filename>
             <size>38</size>

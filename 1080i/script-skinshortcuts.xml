@@ -21,7 +21,7 @@
                 <texture border="15" colordiffuse="White100">common/rounded-shadow8.png</texture>
             </control>
             <include name="Dialog_Top_IconHeader">
-                <param name="label" value="התאם את דף הבית" />
+                <param name="label" right="200" value="$LOCALIZE[31343673]" />
                 <param name="icon" value="special://skin/extras/icons/settings.png" />
             </include>
 

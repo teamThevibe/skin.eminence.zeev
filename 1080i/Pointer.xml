@@ -1,42 +1,50 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
-<window id="105">
-    <allowoverlay>yes</allowoverlay>
+<window>
+	<defaultcontrol>-</defaultcontrol>
+	<coordinates>
+		<posx>0</posx>
+		<posy>0</posy>
+	</coordinates>
+	<controls>
+		<control type="image" id="1">
+			<description>Pointer Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+            <texture colordiffuse="$VAR[Highlight15]">cursor/click3.png</texture>
+			<visible>!Skin.HasSetting(TouchScreenMode)</visible>
 
-    <controls>
+		</control>
+		<control type="image" id="2">
+			<description>Pointer Focus Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+            <texture colordiffuse="$VAR[Highlight15]">cursor/click3.png</texture>
+			<visible>!Skin.HasSetting(TouchScreenMode)</visible>						
 
-        <control type="image" id="1">
-            <description>Pointer</description>
-            <width>32</width>
-            <height>32</height>
-            <texture>cursor/click.png</texture>
-            <colordiffuse>bf999999</colordiffuse>
-        </control>
+		</control>
+		<control type="image" id="3">
+			<description>Pointer Drag Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+            <texture colordiffuse="$VAR[Highlight15]">cursor/click2.png</texture>
+			<visible>!Skin.HasSetting(TouchScreenMode)</visible>					
 
-        <control type="image" id="2">
-            <description>Pointer Focus</description>
-            <width>32</width>
-            <height>32</height>
-            <texture>cursor/click.png</texture>
-            <colordiffuse>bf999999</colordiffuse>
-        </control>
-
-        <control type="image" id="3">
-            <description>Pointer Drag</description>
-            <width>32</width>
-            <height>32</height>
-            <texture>cursor/click.png</texture>
-            <colordiffuse>bf999999</colordiffuse>
-        </control>
-
-        <control type="image" id="4">
-            <description>pointer_click</description>
-            <width>32</width>
-            <height>32</height>
-            <texture>cursor/click.png</texture>
-            <colordiffuse>bf999999</colordiffuse>
-        </control>
-
-    </controls>
-
+		</control>
+		<control type="image" id="4">
+			<description>Pointer Click Image</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>32</width>
+			<height>32</height>
+            <texture colordiffuse="$VAR[Highlight15]">cursor/click2.png</texture>
+			<visible>!Skin.HasSetting(TouchScreenMode)</visible>						
+		</control>
+		
+	</controls>
 </window>
