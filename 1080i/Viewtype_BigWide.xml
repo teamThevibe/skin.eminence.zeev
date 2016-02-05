@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-   <!-- BIG WIDE -->
-   <!-- BIG WIDE -->
+<!--
     <include name="Viewtype_BigWide">
         <control type="group">
             <visible>Control.IsVisible(521)</visible>
@@ -19,14 +18,14 @@
                 <param name="id" value="521" />
                 <param name="condition" value="Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
-            <!-- <control type="scrollbar" id="60">
+             <control type="scrollbar" id="60">
                 <onup>50</onup>
                 <top>682</top>
                 <orientation>horizontal</orientation>
                 <width>1880</width>
                 <height>8</height>
                 <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="50">Conditional</animation>
-            </control> -->
+            </control> 
         </control>
     </include>
     <include name="Viewtype_Gallery">
@@ -46,14 +45,14 @@
                 <param name="id" value="522" />
                 <param name="condition" value="Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
-            <!-- <control type="scrollbar" id="60">
+           <control type="scrollbar" id="60">
                 <onup>50</onup>
                 <top>682</top>
                 <orientation>horizontal</orientation>
                 <width>1880</width>
                 <height>8</height>
                 <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="50">Conditional</animation>
-            </control> -->
+            </control> 
         </control>
     </include>
     <include name="View_BigWide_Fanart">
@@ -162,7 +161,7 @@
                 <orientation>horizontal</orientation>
                 <viewtype label="31163">bigwide</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <visible>$PARAM[condition]</visible>
+                <visible>Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)</visible>
                 <itemlayout height="690" width="1186">
                     <control type="group">
                         <top>0</top>
@@ -283,7 +282,7 @@
                 <orientation>horizontal</orientation>
                 <viewtype label="540">bigwide</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
-                <visible>$PARAM[condition]</visible>
+                <visible>Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)</visible>
                 <itemlayout height="690" width="88">
                     <control type="group">
                         <left>0</left>
@@ -324,5 +323,5 @@
             </control>
         </control>
         
-    </include>
+    </include>-->
 </includes>

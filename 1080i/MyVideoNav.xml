@@ -4,7 +4,7 @@
 	<allowoverlay>yes</allowoverlay>
 	<background>0</background>
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517,519,520,523,524,518,521,508,509,510,511,512,513,514,515,525,531,528,530,533</views>
+	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517,519,520,524,518,521,508,509,510,511,512,513,514,515,525,531,528,530,533,532</views>
 	<onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload>RunScript(script.tv.show.next.aired,backend=True)</onload>
 	<onload condition="Skin.HasSetting(ActivateTvTunes) + System.HasAddon(script.tvtunes)">XBMC.RunScript(script.tvtunes,backend=True)</onload>
@@ -17,7 +17,6 @@
 			<description>Filter (hidden)</description>
 			<include>HiddenButton</include>
 		</control>
-
         <include>Furniture_Background</include>
 		<!--<include>DefLeftSideArrow</include>-->
 		<!--<include>DefMenuMouse</include>-->
@@ -27,14 +26,25 @@
             <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
 		<include>View_501_Thumbnails</include>
 		<include>View_517_Poster</include>
-	
+         <include>ClearLogo</include>
 
+<include>DefMenuMouse</include>
 		<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO</include>
 		<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO2</include>
 				<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO3</include>
 				<include condition="Skin.HasSetting(NextAiredINFOTV)">NextAiredINFO4</include>
+		
 
-		<control type="group">   
+		<control type="group">  
+										<control type="button" id="9101">
+		<right>0</right>
+			<width>430</width>
+			<top>top</top>
+			<height>height</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				</control>		
+		
 			<include>DefMyNavBar</include>  
 			<control type="grouplist" id="9000">
 				<visible>!Skin.HasSetting(kioskmode)</visible>
@@ -46,7 +56,6 @@
 					<description>View</description>
 					<align>right</align>
 					<onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
-					<ondown>9096</ondown>
 				</control>              
 
 				<!--
@@ -167,7 +176,6 @@
 					<usealttexture>Skin.HasSetting(posterview.labels)</usealttexture>
 					<alttexturefocus>noop</alttexturefocus>
 					<alttexturenofocus>noop</alttexturenofocus>
-					<ondwon>3</ondwon>
 				</control>
 
 
@@ -185,7 +193,6 @@
 					<label>584</label>
 					<altlabel>585</altlabel>
 					<usealttexture>Container.SortDirection(Ascending)</usealttexture>
-					<ondwon>9012</ondwon>
 
 				</control>
 				
@@ -199,7 +206,6 @@
 					<align>right</align>
 					<radioposx>20</radioposx>  
 					<selected>Skin.HasSetting(list.highlight)</selected>
-					<ondwon>14</ondwon>
 
 
 				</control>
@@ -212,7 +218,6 @@
 					<radioposx>20</radioposx>  
 
 					<selected>System.Setting(hidewatched)</selected>
-					<ondwon>21</ondwon>
 
 				</control>
 

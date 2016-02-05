@@ -4,7 +4,7 @@
     <include>50Focus</include>
     <allowoverlay>yes</allowoverlay>
     <background>0</background>
-	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517,519,520,523,524,518,521,508,509,510,511,512,513,514,515,525,531,528,530,533</views>
+	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517,519,520,524,518,521,508,509,510,511,512,513,514,515,525,531,528,530,533,532</views>
     <onunload>ClearProperty(focushub,home)</onunload>
 
     <controls>
@@ -13,6 +13,7 @@
             <description>Filter (hidden)</description>
             <include>HiddenButton</include>
         </control>
+<include>DefMenuMouse</include>
 
 
         <include>GlobalBackground</include>
@@ -26,6 +27,7 @@
             <control type="grouplist" id="9000">
                 <visible>!Skin.HasSetting(kioskmode)</visible>
                 <include>DefMyNavBarGroupList</include>
+        <include>ClearLogoMusic</include>
 
 			   <control type="button" id="564">
 			       <include>DefNavMenuButton2</include>  

@@ -17,7 +17,7 @@
             </include>
             <include name="View_BigWide">
                 <param name="id" value="533" />
-                <!--<param name="condition" value="Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />-->
+                <param name="condition" value="Container.Content(sets) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />
             </include>
             <!-- <control type="scrollbar" id="60">
                 <onup>50</onup>

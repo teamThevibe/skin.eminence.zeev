@@ -12,7 +12,7 @@
             <right>side</right>
             <top>200</top>
             <height>height</height>
-												<animation effect="slide" start="10" end="-1000" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+												<animation effect="slide" start="10" end="-1000" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 						<animation effect="slide" start="10" end="-1000" time="250" condition="Window.IsVisible(106)">Conditional</animation>
             <include name="Object_Line">
                 <param name="width" value="1880" />
