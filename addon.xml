@@ -5,7 +5,11 @@
     name="Eminence Zeev"
     provider-name="jurialmunkey">
   <requires>
+<<<<<<< HEAD
   <import addon="xbmc.gui" version="5.9.0"/>
+=======
+  <import addon="xbmc.gui" version="5.10.0"/>
+>>>>>>> 9c4db79b8ce2800194c50179eae7b0fd5c63a6d0
   <import addon="script.skin.helper.service" version="1.0.32"/>
   <import addon="script.skinshortcuts" version="1.0.2"/>
   <import addon="script.extendedinfo" version="3.1.2"/>
