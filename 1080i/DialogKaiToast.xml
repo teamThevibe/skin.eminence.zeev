@@ -155,7 +155,7 @@
 						        <control type="group">
 				            <visible>Window.IsActive(home) + Skin.HasSetting(Home.MenuVertical) | Window.IsActive(weather)</visible>
 
-            <bottom>270</bottom>
+            <bottom>290</bottom>
             <!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
             <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
             <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
