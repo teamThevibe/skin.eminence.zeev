@@ -2420,3 +2420,16 @@ msgstr "Meta search"
 msgctxt "#43792"
 msgid "Meta TV-Shows"
 msgstr "Meta TV-Shows"
+
+msgctxt "#43793"
+msgid "Log file Vibe server uploader"
+msgstr "Log file Vibe server uploader"
+
+msgctxt "#43794"
+msgid "Log ID"
+msgstr "Log ID"
+
+
+msgctxt "#43795"
+msgid "Log file Vibe server uploader With this option you will be able to upload your Log file automatically to Vibe Server and get an ID number. this option may be used in case you are facing with some errors and like to share it with others - so they will be able to help you - to find your Log file after it uploaded visit The-Vibe.co.il"
+msgstr "Log file Vibe server uploader With this option you will be able to upload your Log file automatically to Vibe Server and get an ID number. this option may be used in case you are facing with some errors and like to share it with others - so they will be able to help you - to find your Log file after it uploaded visit The-Vibe.co.il"

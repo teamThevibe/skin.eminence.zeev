@@ -11,7 +11,7 @@
     <onload>ClearProperty(FO9001)</onload>
     <onload>ClearProperty(extinfo,home)</onload>
     <onload>SetProperty(HubReturn,Home)</onload>
-		<onload>RunScript(special://skin/extras/scripts/installaddonssettings.py)</onload>
+	<onload>RunScript(special://skin/extras/scripts/startup.py)</onload>
    <!-- <onload condition="IsEmpty(Skin.String(HomeStyle))">Skin.SetString(HomeStyle, beveled)</onload> -->
     <onload condition="!IsEmpty(Skin.String(home.headericon))">SetProperty(Header.Icon,$INFO[Skin.String(home.headericon)])</onload>
     <onload condition="!IsEmpty(Skin.String(home.headertext))">SetProperty(Header.Label,$INFO[Skin.String(home.headertext)])</onload>
