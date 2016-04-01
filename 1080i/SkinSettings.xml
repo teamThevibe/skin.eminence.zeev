@@ -2239,7 +2239,7 @@
 					<onclick condition="System.HasAddon(plugin.program.autocompletion)">Addon.OpenSettings(plugin.program.autocompletion)</onclick>
 					<onclick condition="!System.HasAddon(plugin.program.autocompletion)">RunPlugin(plugin://plugin.program.autocompletion)</onclick>
 				</control>
-				
+				<!--
 				<control type="button" id="6027">
 					<width>100%</width>
 
@@ -2251,7 +2251,7 @@
 					<onclick condition="System.HasAddon(service.EMupdater)">Addon.OpenSettings(service.EMupdater)</onclick>
 					<onclick condition="!System.HasAddon(service.EMupdater)">RunPlugin(plugin://service.EMupdater)</onclick>
 				</control>
-				
+				-->
 			</control>
 						<control type="multiimage">
 						<top>-150</top>
