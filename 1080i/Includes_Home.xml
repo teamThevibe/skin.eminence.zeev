@@ -1282,7 +1282,7 @@
 						<top>16</top>
 						<width>196</width>
 						<height>170</height>
-						<texture colordiffuse="$VAR[Defs_HomeTileColor]" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="Selected" diffuse="common/tile.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">center</aspectratio>
 
 					</control>
@@ -1499,7 +1499,7 @@
 						<top>16</top>
 						<width>196</width>
 						<height>170</height>
-						<texture colordiffuse="$VAR[Defs_HomeTileColor]" diffuse="common/tile_rounded.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="Selected" diffuse="common/tile_rounded.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">center</aspectratio>
 					</control>
 					<control type="image">
@@ -1712,7 +1712,7 @@
 						<top>16</top>
 						<width>196</width>
 						<height>170</height>
-						<texture colordiffuse="$VAR[Defs_HomeTileColor]" diffuse="common/tile_squared.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="Selected" diffuse="common/tile_squared.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">center</aspectratio>
 					</control>
 					<control type="image">
@@ -1926,7 +1926,7 @@
 						<top>16</top>
 						<width>196</width>
 						<height>170</height>
-						<texture colordiffuse="$VAR[Defs_HomeTileColor]" diffuse="common/tile_circle.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
+						<texture colordiffuse="Selected" diffuse="common/tile_circle.png" aligny="center" align="center">$INFO[ListItem.Icon]</texture>
 						<aspectratio scalediffuse="false">center</aspectratio>
 					</control>
 					<control type="image">
