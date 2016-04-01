@@ -177,7 +177,7 @@ msgstr "Включить TV Tunes"
 
 msgctxt "#31145"
 msgid "Show now playing video in background"
-msgstr "Отображать воспроизводящееся видео в фоне"
+msgstr "Отображать воспроизводящееся видео на фоне"
 
 msgctxt "#31146"
 msgid "Show fanart"
@@ -226,7 +226,7 @@ msgstr "Нажми Наверх для опций..."
 
 msgctxt "#31161"
 msgid "Show PVR channel icon in header"
-msgstr "Показать значек канала в название"
+msgstr "Показать логотип канала в название"
 
 msgctxt "#31162"
 msgid "Show extended details when pressing info"
@@ -282,7 +282,7 @@ msgstr "ТВ"
 
 msgctxt "#31176"
 msgid "Media Center"
-msgstr "Медиа сентер"
+msgstr "Медиацентр"
 
 msgctxt "#31177"
 msgid "Show weather with clock"
@@ -294,7 +294,7 @@ msgstr "Используйте более высокую плитку"
 
 msgctxt "#31179"
 msgid "Movies Hub"
-msgstr "Movies Hub"
+msgstr "Координатор фильмов"
 
 msgctxt "#31180"
 msgid "Default"
@@ -662,7 +662,7 @@ msgstr "Показать clearart или clearlogo в правом нижнем 
 
 msgctxt "#31271"
 msgid "Modify the default 'Media Center' text shown in the header."
-msgstr "Изменить текст "Медиа Центр " который отображает название."
+msgstr "Изменить текст "Медиа Центр" который отображает название."
 
 msgctxt "#31272"
 msgid "Matches the colour of the header tile to the theme's highlight colour."
@@ -726,7 +726,7 @@ msgstr "Отменить часы"
 
 msgctxt "#31287"
 msgid "Set startup video"
-msgstr "Задать видео при старте"
+msgstr "Задать видео при запуске"
 
 msgctxt "#31288"
 msgid "Moshiko iCones"
@@ -742,7 +742,7 @@ msgstr "Поменять фоновое изображение"
 
 msgctxt "#31291"
 msgid "Favorites"
-msgstr "Избранные"
+msgstr "Избранное"
 
 msgctxt "#31292"
 msgid "Remove"
@@ -862,15 +862,15 @@ msgstr "Стиль Zeev"
 
 msgctxt "#31334"
 msgid "Favorites"
-msgstr "Избранные"
+msgstr "Избранное"
 
 msgctxt "#31335"
 msgid "Favorites"
-msgstr "Категория избранные"
+msgstr "Категория избранное"
 
 msgctxt "#31336"
 msgid "Favorites"
-msgstr "Обшие избранные"
+msgstr "Обшие избранное"
 
 msgctxt "#31337"
 msgid "Favorites"
@@ -897,12 +897,12 @@ msgid "Music Widget"
 msgstr "Виджет музыка"
 
 msgctxt "#31342"
-msgid "back-up"
+msgid "Skin Backup"
 msgstr "Резервное копирование оболочки"
 
 msgctxt "#31343"
 msgid "back-up"
-msgstr "Восстановление оболочки из резервного копии"
+msgstr "Восстановление оболочки из резервной копии"
 
 msgctxt "#31344"
 msgid "Eminence Zeev MOD"
@@ -1178,7 +1178,7 @@ msgstr "Плейлист музыка"
 
 msgctxt "#32006"
 msgid "Favourite"
-msgstr "Избранные"
+msgstr "Избранное"
 
 msgctxt "#32007"
 msgid "Add-On"
@@ -1393,8 +1393,8 @@ msgid "Set Icon"
 msgstr "Задать значек"
 
 msgctxt "#324324240"
-msgid "Change title color"
-msgstr "Задать цвет плитки"
+msgid "Change tile color"
+msgstr "Изменить цвет плитки"
 
 msgctxt "#324324241"
 msgid "Reset shortcut"
@@ -1412,9 +1412,8 @@ msgctxt "#324324244"
 msgid "Choose headline and notifications center color"
 msgstr "Установить цвет заголовка и центра сообщений"
 
-
 msgctxt "#324324246"
-msgid "Choose main tile - system""
+msgid "Choose main tile - system"
 msgstr "Изменить цвет верхней плитки - Система"
 
 msgctxt "#324324245"
@@ -1516,15 +1515,15 @@ msgstr "Популярные пути"
 
 msgctxt "#31343602"
 msgid "Posters & fanart"
-msgstr "постеры & фанарт"
+msgstr "Постеры & фанарт"
 
 msgctxt "#31343603"
 msgid "Change Display"
-msgstr "изменение отображаемого"
+msgstr "Изменение отображаемого"
 
 msgctxt "#31343604"
 msgid "Back to Homepage"
-msgstr "вернуться на главный экран"
+msgstr "Вернуться на главный экран"
 
 msgctxt "#31343605"
 msgid "Personal Hub 2"
@@ -1632,7 +1631,7 @@ msgstr "Резервное копирование и восстановлени�
 
 msgctxt "#31343630"
 msgid "Display config"
-msgstr "Резервное копирование и восстановление"
+msgstr "Настройки отображения"
 
 msgctxt "#31343631"
 msgid "Widget Transparency"
@@ -1660,7 +1659,7 @@ msgstr "Отрегулируйте цвет категории и цвет ве�
 
 msgctxt "#31343637"
 msgid "Set Hub style to 16:9"
-msgstr "הגדר Задать категорию в стиле 16:9"
+msgstr "Задать категорию в стиле 16:9"
 
 msgctxt "#31343638"
 msgid "Set Category with list style"
@@ -1763,7 +1762,7 @@ msgid "TVShows Seasons display mode:"
 msgstr "Вид сезонов:"
 
 msgctxt "#31343663"
-msgid "TVShows Seasons:"
+msgid "TVShows episodes display mode:"
 msgstr "Вид сезонов:"
 
 msgctxt "#31343664"
@@ -1833,7 +1832,7 @@ msgstr "Заблокировать меню через:"
 
 msgctxt "#31343681"
 msgid "Choose Fanart For Locked Items"
-msgstr "Выбрать фон для заблокированных меню"
+msgstr "Выбрать фон для заблокированного меню"
 
 msgctxt "#31343682"
 msgid "Incorrect password"
@@ -2091,7 +2090,7 @@ msgstr "Резервное копирование ярлыков на домаш
 
 msgctxt "#31343743"
 msgid "Backup colors"
-msgstr "Резервного копирования цветов системы"
+msgstr "Резервное копирование цветов системы"
 
 msgctxt "#31343744"
 msgid "Skin add-ons requires"
@@ -2100,3 +2099,349 @@ msgstr "Дополнения которые используются в обол
 msgctxt "#31343745"
 msgid "Loading"
 msgstr "Загрузка"
+
+msgctxt "#31343746"
+msgid "Weather icons"
+msgstr "Погодные иконки"
+
+msgctxt "#31343747"
+msgid "Weather Fanart"
+msgstr "Фон погоды"
+
+msgctxt "#31343748"
+msgid "Animated Movie fanart image  - if available"
+msgstr "Фанарт анимационный фильм - если есть"
+
+msgctxt "#31343749"
+msgid "Animated Movie poster image - if available"
+msgstr "Анимационный фильм постер - если есть"
+
+msgctxt "#31343750"
+msgid "Rotating Fanarts Delay (seconds)"
+msgstr "Время перехода между фанартом домашнего экрана (в секундах)"
+
+msgctxt "#31343751"
+msgid "Kodi version:"
+msgstr "Версия Коди"
+
+msgctxt "#31343755"
+msgid "Eminence style"
+msgstr "Стиль Eminence"
+
+msgctxt "#31343753"
+msgid "Eminence style 2"
+msgstr "Стиль Eminence 2"
+
+msgctxt "#31343754"
+msgid "Eminence list"
+msgstr "Eminence список "
+
+msgctxt "#31343756"
+msgid "Eminence style"
+msgstr "Стиль Eminence"
+
+msgctxt "#31343757"
+msgid "category style"
+msgstr "Форма категории"
+
+msgctxt "#31343758"
+msgid "Special settings to adjust the colors of the system"
+msgstr "Специальные настройки для настройки системных цветов"
+
+msgctxt "#32098"
+msgid "Set system colors"
+msgstr "Задать системные цвета"
+
+msgctxt "#32099"
+msgid "Adjust style, categories, home screen shortcuts and categories"
+msgstr "Настройка стиля ярлыков главного экрана и категории"
+
+msgctxt "#32100"
+msgid "Adjust home screen Widget"
+msgstr "Настройки виджета на главном экране"
+
+msgctxt "#32101"
+msgid "Set password for Home menu tiles"
+msgstr "Установить пароль плиткам на главном экране"
+
+msgctxt "#32102"
+msgid "Special settings to adjust the Top bar line"
+msgstr "Специальные настройки верхней линии, название и часы"
+
+msgctxt "#32103"
+msgid "Hide widget of list category type"
+msgstr "Скрыть виджет в стиле списка категорий"
+
+msgctxt "#32104"
+msgid "Special settings to adjust Fanarts"
+msgstr "Специальные настройки для установки фанарта на разных экранах"
+
+msgctxt "#32105"
+msgid "Play videos in background and Home screen"
+msgstr "Воспроизведение видео в фоновом режиме и домашнем экране"
+
+msgctxt "#32106"
+msgid "Set Fanart backgroud opacity"
+msgstr "Установить прозрачность фона фанарт"
+
+msgctxt "#32107"
+msgid "Set Fanart backgroud opacity"
+msgstr "Установить прозрачность фона системы"
+
+msgctxt "#32108"
+msgid "Set Home screen Fanart backgroud opacity"
+msgstr "Установить прозрачность фона главного экрана"
+
+msgctxt "#32111"
+msgid "Set time to auto close the Music OSD panel (in seconds)"
+msgstr "Установить время закрытия всплывающего меню при воспроизведение музыки (в секундах)"
+
+msgctxt "#32113"
+msgid "Set time to auto close the Video OSD panel (in seconds)"
+msgstr "Установить время закрытия всплывающего меню при воспроизведение видео (в секундах)"
+
+msgctxt "#31516"
+msgid "Movies Fanart"
+msgstr "Слайд-шоу - Фильмы"
+
+msgctxt "#31517"
+msgid "TV-Shows Fanart"
+msgstr "Слайд-шоу - Сериалы"
+
+msgctxt "#31518"
+msgid "Music Fanart"
+msgstr "Слайд-шоу - Музыка"
+
+msgctxt "#31519"
+msgid "Movies Fanart wall"
+msgstr "Слайд-шоу - Стена фильмов"
+
+msgctxt "#31520"
+msgid "Movies Fanart wall BW"
+msgstr "Слайд-шоу - Стена фильмов черно-белое"
+
+msgctxt "#31521"
+msgid "Movies Fanart poster wall"
+msgstr "Слайд-шоу - Стена фильмов постеры"
+
+msgctxt "#31522"
+msgid "Movies Fanart poster wall BW"
+msgstr "Слайд-шоу - Стена фильмов постеры черно-белое"
+
+msgctxt "#31523"
+msgid "Music Fanart wall"
+msgstr "Слайд-шоу - Стена музыки"
+
+msgctxt "#31524"
+msgid "Music Fanart wall BW"
+msgstr "Слайд-шоу - Стена музыки черно-белое"
+
+msgctxt "#31525"
+msgid "TV-Shows Fanart wall"
+msgstr "Слайд-шоу - Стена сериалов"
+
+msgctxt "#31526"
+msgid "TV-Shows Fanart wall BW"
+msgstr "Слайд-шоу - Стена сериалов черно-белое"
+
+msgctxt "#31527"
+msgid "TV-Shows Fanart poster wall"
+msgstr "Слайд-шоу - Стена сериалов постеры"
+
+msgctxt "#31528"
+msgid "TV-Shows Fanart poster wall BW"
+msgstr "Слайд-шоу - Стена сериалов постеры черно-белое"
+
+msgctxt "#31529"
+msgid "Set icon in categories list (for list category only)"
+msgstr "Установить значок пометки в категории (предназначен только для списка категорий)"
+
+msgctxt "#31530"
+msgid "Thanks"
+msgstr "Благодарю"
+
+msgctxt "#31531"
+msgid "Set your Kodi based on The Vibe2 setup!.[CR]Get full skin shortcuts menus icons background and etc - all set and ready!.[CR]This option will download a new setup of skin menus colors and settings without any option to recover your .current setup. It is fully recommended to run a skin backup before apply this option in case you like to restore to your current settings."
+msgstr "Применяя тему Vibe 2 - Получите полную оболочку, предустановленную и настроенную, плитки и иконки на рабочем столе, меню и т.д. - все установлено и отрегулировано. Эта опция загрузит файл резервной копии с сервера и обновит систему. [CR] Это обновление перезапишет и заменит структуру меню и настройки цвета без возможности последующего восстановления текущих настроек. [CR] Рекомендуется сделать резервную копию прежде чем делать это, если Вы хотите чтобы вернуться к своим текущим настройкам."
+
+msgctxt "#31532"
+msgid "Theme - by ID number"
+msgstr "Тема - по номеру ID"
+
+msgctxt "#31533"
+msgid "Exodus Movies"
+msgstr "Фильмы Exodus"
+
+msgctxt "#31534"
+msgid "SALTS Movies"
+msgstr "Фильмы Salts"
+
+msgctxt "#31535"
+msgid "Quasar Movies"
+msgstr "Фильмы Quasar"
+
+msgctxt "#43753"
+msgid "TVShows Wall"
+msgstr "Стена сериалов"
+
+msgctxt "#43754"
+msgid "Sdartot TV IL"
+msgstr "Израильские сериалы"
+
+msgctxt "#43755"
+msgid "Exodus TVShows"
+msgstr "Сериалы Exodus"
+
+msgctxt "#43756"
+msgid "SALTS TVShows"
+msgstr "Сериалы Salts"
+
+msgctxt "#43757"
+msgid "Quasar TVShows"
+msgstr "Сериалы Quasar"
+
+msgctxt "#43758"
+msgid "Kmedia TVShows"
+msgstr "Сериалы Kmedia"
+
+##Music##
+
+msgctxt "#43759"
+msgid "Music Zone"
+msgstr "Уголок музыки"
+
+msgctxt "#43760"
+msgid "99FM Radio"
+msgstr "Радио 99FM"
+
+msgctxt "#43761"
+msgid "100FM Radio"
+msgstr "Радио 100FM"
+
+msgctxt "#43762"
+msgid "Kmusic"
+msgstr "Kmusic"
+
+msgctxt "#43763"
+msgid "House Mix"
+msgstr "House Mix"
+
+msgctxt "#43764"
+msgid "Worldwide Radio"
+msgstr "Радиостанции мира"
+
+##VOD##
+
+msgctxt "#43765"
+msgid "Sdarot TV"
+msgstr "Sdarot TV"
+
+msgctxt "#43766"
+msgid "Keshet VOD"
+msgstr "Кешет VOD"
+
+msgctxt "#43767"
+msgid "Reshet VOD"
+msgstr "Решет VOD"
+
+msgctxt "#43768"
+msgid "Nana10 VOD"
+msgstr "10 канал VOD"
+
+msgctxt "#43769"
+msgid "Channel 1 VOD"
+msgstr "1 канал VOD"
+
+msgctxt "#43770"
+msgid "Channel 20 VOD"
+msgstr "20 канал VOD"
+
+msgctxt "#43771"
+msgid "Israeli Stand Up"
+msgstr "Израильский Стендап"
+
+msgctxt "#43772"
+msgid "Doco Tube"
+msgstr "Доко Tube"
+
+##Kids##
+
+msgctxt "#43773"
+msgid "Israeli Kids"
+msgstr "Для детей на иврите"
+
+msgctxt "#43774"
+msgid "Yeladudes"
+msgstr "Еладудес"
+
+msgctxt "#43775"
+msgid "Kids Zone"
+msgstr "Уголок для детей"
+
+msgctxt "#43776"
+msgid "Luli"
+msgstr "Лули"
+
+msgctxt "#43777"
+msgid "Hop!"
+msgstr "Хоп!"
+
+msgctxt "#43778"
+msgid "Kids SoungS&Stories"
+msgstr "Песни и сказки для детей"
+
+msgctxt "#43779"
+msgid "Kids Theatre"
+msgstr "Спектакли для детей"
+
+msgctxt "#43780"
+msgid "Kids TVShows"
+msgstr "Сериалы для детей"
+
+msgctxt "#43781"
+msgid "Kids Movies"
+msgstr "Фильмы для детей"
+
+msgctxt "#43782"
+msgid "Toddlers"
+msgstr "Малыши"
+
+msgctxt "#43783"
+msgid "Tiny"
+msgstr "Младенцы"
+
+msgctxt "#43784"
+msgid "Children and Youth"
+msgstr "Дети и подростки"
+
+msgctxt "#43785"
+msgid "Music wall"
+msgstr "Стена музыки"
+
+msgctxt "#43786"
+msgid "Music add-ons"
+msgstr "Аддонс музыка"
+
+msgctxt "#43787"
+msgid "Search"
+msgstr "Поиск"
+
+msgctxt "#43788"
+msgid "Restore Kodi from backup on cloud (based on ID number)This option will restore your kodi settings colors menu structures etc based on backup that exist in the cloud server (based on the unique ID number you choose). PAY ATTENTION! This option will erase your current kodi settings and rebuild it according the backup file you choose (ID number). This option is not reversible and therefore it is fully recommended to run a backup in advanced."
+msgstr "Восстановление Коди из удаленного резервного копирования на основе идентификатора. Восстановятся настройки цвета оболочки, структуры меню и фон на основе резервной копии хранящейся на удаленном сервере. Обратите внимание! Это удалит все ваши настройки Коди и Вы получите новую структуру на основе резервную копии! Это действие является необратимым, и поэтому рекомендуется сделать резервную копию перед этим действием!"
+
+msgctxt "#43789"
+msgid "This will apply new icons and backgrounds to your skin menus.[CR]after this dialog click ok to confirm the changes and then go back to the home window to apply them.[CR]click OK to confirm."
+msgstr "Эта кнопка применит фоновые обои, иконки в меню оболочки.[CR]Меню и категории которые были по умолчанию с оболочкой не затронутся, но Вы можете выбрать изображения и иконки для них вручную.[CR]Нажмите кнопку OK чтобы применить изменения, а затем вернитесь к домашнему экрану чтобы изменения вступили в силу."
+
+msgctxt "#43790"
+msgid "Meta movies"
+msgstr "Фильмы Meta"
+
+msgctxt "#43791"
+msgid "Meta search"
+msgstr "Поиск Meta"
+
+msgctxt "#43792"
+msgid "Meta TV-Shows"
+msgstr "Сериалы Meta"
