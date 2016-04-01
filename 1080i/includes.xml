@@ -30,7 +30,7 @@
 	<include file="View_60_Wall.xml" />
 <!--	<include file="View_50_List.xml" /> -->
 	<include file="View_51_Poster.xml" />
-	<include file="View_52_Wall.xml" />
+<!--	<include file="View_52_Wall.xml" />-->
 	<include file="View_53_Wide.xml" />
 	<include file="View_54_Lovefilm.xml" />
 	<include file="View_55_Banner.xml" />

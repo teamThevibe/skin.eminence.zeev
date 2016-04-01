@@ -8,7 +8,7 @@
 	<view id="View_BigIcon" value="518" languageid="31152" type="all" />
 	<view id="Viewtype_IconExtra" value="519" languageid="31343613" type="movies,tvshows,episodes,sets,seasons,setmovies" />
 	<view id="Viewtype_Icon" value="520" languageid="31343614" type="movies,tvshows,episodes,sets,seasons,setmovies" />
-	<view id="Viewtype_Thumbs" value="521" languageid="31343615" type="all" />
+	<view id="Viewtype_Thumbs" value="500" languageid="31343615" type="all" />
 	<view id="Viewtype_InfoList" value="508" languageid="31343616" type="movies,tvshows,episodes,sets,seasons,setmovies" />
 	<view id="Viewtype_InfoList2" value="509" languageid="31343617" type="movies,tvshows,episodes,sets,seasons,setmovies" />
 	<view id="Viewtype_MediaInfo" value="510" languageid="31343618" type="movies,tvshows,episodes,sets,seasons,setmovies" />

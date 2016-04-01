@@ -57,7 +57,7 @@
 			<animation effect="fade" start="100" end="70" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 			<animation effect="slide" start="10" end="-1300" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 
-					<viewtype label="31343593">list</viewtype>
+					<viewtype label="31343602">list</viewtype>
 					<scrolltime tween="quadratic">400</scrolltime>
 					
    <itemlayout width="wallposterwlist" height="wallposterhlist" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">

@@ -57,7 +57,7 @@
                 <preloaditems>2</preloaditems>
                 <orientation>horizontal</orientation>
 <!-- Modification Viewtype -->                
-                <viewtype label="31643">bigicons</viewtype>
+                <viewtype label="31152">bigicons</viewtype>
                 <scrolltime tween="quadratic">400</scrolltime>
                 <visible>$PARAM[condition]</visible>
                 <itemlayout height="670" width="475" condition="!Container.Content(artists) + !Container.Content(albums) + !Container.Content(episodes)">
@@ -646,7 +646,7 @@
                     <pagecontrol>60</pagecontrol>
                     <preloaditems>2</preloaditems>
                     <orientation>vertical</orientation>
-                    <viewtype label="$PARAM[name]">icons</viewtype>
+                 <!--   <viewtype label="31343613">icons</viewtype> -->
                     <scrolltime tween="quadratic">400</scrolltime>
                     <visible>$PARAM[condition]</visible>
                     <itemlayout height="341" width="236" condition="!$PARAM[infovisible]">
@@ -906,7 +906,7 @@
     <include name="Viewtype_Thumbs">
 
         <control type="group">
-            <visible>Control.IsVisible(521)</visible>
+            <visible>Control.IsVisible(500)</visible>
             <include>Animation_FadeIn</include>
             <include>Animation_FadeOut</include>
 
@@ -922,7 +922,7 @@
             </include>-->
 
             <include name="View_Thumbs">
-                <param name="id" value="521" />
+                <param name="id" value="500" />
                 <param name="width" value="1890" />
                 <param name="condition" value="!Container.Content(genres)" />
                 <param name="name" value="21371" />
