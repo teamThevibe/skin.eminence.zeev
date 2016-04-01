@@ -129,7 +129,7 @@ def _pbhook(numblocks, blocksize, filesize, url, dp):
 
 def wizard(name,url):
     dp = xbmcgui.DialogProgress()
-    dp.create("Eminenece Zeev - גיבוי מעטפת","מוריד ",'', 'אנא המתן')
+    dp.create("ערכת נושא - The vibe team","מוריד ",'', 'אנא המתן')
     lib = os.path.join(path, name)
     try:
        os.remove(lib)
@@ -160,7 +160,7 @@ def dowork():
         xbmc.log("Extracting...")
         xbmc.executebuiltin("XBMC.RunScript(script.skin.helper.service,action=restore,silent=special://skin/extras/back-up/" + NAME + ")")
     else:
-        dialog.ok("שגיאה בשחזור מעטפת", 'אירעה שגיאה בעת שחזור המעטפת, אנא בדוק את החיבור לאינטרנט או נסה במעוד מאוחר יותר')
+        dialog.ok("שגיאה בשיחזור ערכת נושא", 'אירעה שגיאה בעת שחזור המעטפת, אנא בדוק את החיבור לאינטרנט או נסה במעוד מאוחר יותר')
     xbmc.log("Done...")
 
 def GetUserBackup():
@@ -173,7 +173,7 @@ def GetUserBackup():
         xbmc.log("Extracting...")
         xbmc.executebuiltin("XBMC.RunScript(script.skin.helper.service,action=restore,silent=special://skin/extras/back-up/" + CUSTOM_NAME + ")")
     else:
-        dialog.ok("שגיאה בשחזור מעטפת", 'אירעה שגיאה בעת פעולת השחזור, אנא בדוק את ה ID  שהכנסת , וודא כי הועלו קבצים')
+        dialog.ok("שגיאה בשיחזור ערכת נושא", 'אירעה שגיאה בעת פעולת השחזור, אנא בדוק את ה ID  שהכנסת , וודא כי הועלו קבצים')
     xbmc.log("Done...")
 
 def validateZip(zipName):
@@ -197,7 +197,7 @@ ADDON_DB = xbmc.translatePath(os.path.join(USERDATA,'Database',getAddonDbName())
 def GetMetaSettings(name,url):
         path = xbmc.translatePath(os.path.join('special://home','addons','packages'))
         dp = xbmcgui.DialogProgress() 
-        dp.create("הפעלה ראשונה:","מתקין הגדרת נגנים עבור הרחבת חיפוש META ",'','רץ בפתיחה ראשונה בלבד') 
+        dp.create("Eminence zeev - הפעלה ראשונה","מתקין הגדרת נגנים עבור הרחבת חיפוש META ",'','רץ בפתיחה ראשונה בלבד') 
         lib = os.path.join(path,name + '.zip')
         try: os.remove(lib)
         except: pass
@@ -211,7 +211,7 @@ def GetMetaSettings(name,url):
 def GetQuasarSettings(name,url):
         path = xbmc.translatePath(os.path.join('special://home','addons','packages'))
         dp = xbmcgui.DialogProgress() 
-        dp.create("הפעלה ראשונה:","מתקין הגדרת נגנים עבור הרחבת  Quasar ",'','רץ בפתיחה ראשונה בלבד') 
+        dp.create("Eminence zeev - הפעלה ראשונה","מתקין הגדרת נגנים עבור הרחבת  Quasar ",'','רץ בפתיחה ראשונה בלבד') 
         lib = os.path.join(path,name + '.zip')
         try: os.remove(lib)
         except: pass
@@ -225,7 +225,7 @@ def GetQuasarSettings(name,url):
 def GetSaltsSettings(name,url):
         path = xbmc.translatePath(os.path.join('special://home','addons','packages'))
         dp = xbmcgui.DialogProgress() 
-        dp.create("הפעלה ראשונה:","מתקין הגדרת נגנים עבור הרחבת  Salts ",'','רץ בפתיחה ראשונה בלבד') 
+        dp.create("Eminence zeev - הפעלה ראשונה","מתקין הגדרת נגנים עבור הרחבת  Salts ",'','רץ בפתיחה ראשונה בלבד') 
         lib = os.path.join(path,name + '.zip')
         try: os.remove(lib)
         except: pass
