@@ -2611,7 +2611,7 @@
 				<include>Dialog_Top</include>
 				<include>Dialog_Background</include>
 				<include name="Dialog_Top_IconHeader">
-					<param name="label" value="  $INFO[Container(9000).ListItem.Label,, ]$LOCALIZE[1034]" />
+					<param name="label" value="     $INFO[Container(9000).ListItem.Label,, ]   " />
 					<param align="right" name="icon" value="$INFO[Container(9000).ListItem.Icon]" />
 				</include>
 				<include name="Dialog_Top_Arrows">
