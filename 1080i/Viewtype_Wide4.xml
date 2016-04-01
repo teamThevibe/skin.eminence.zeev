@@ -12,10 +12,10 @@
             <height>height</height>
 															<animation effect="slide" start="10" end="-210" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 						<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
-            <include name="Object_Line">
+        <!--    <include name="Object_Line">
                 <param name="width" value="1880" />
                 <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
-            </include>
+            </include>-->
             <include name="View_Wide">
                 <param name="id" value="531" />
                 <param name="condition" value="Container.Content(tvshows) | Container.Content(movies)" />

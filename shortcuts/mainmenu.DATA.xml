@@ -1,96 +1,124 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
-    <shortcut>
-        <label>3</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>videos</defaultID>
-        <icon>special://skin/extras/icons/video-addons.png</icon>
-        <action>ActivateWindow(Videos,VideoLibrary)</action>
-    </shortcut>
-    <shortcut>
-        <label>20342</label>
-        <label2>Hub 1101</label2>
-        <defaultID>x1101</defaultID>
-					<property name="tilecolor">ff35bce5</property>
-			<property name="tilecolor.name">ff35bce5</property>
-        <icon>special://skin/extras/icons/film.png</icon>
-        <action>ActivateWindow(1101)</action>
-    </shortcut>
-    <shortcut>
-        <label>20343</label>
-        <label2>Hub 1102</label2>
-        <defaultID>x1102</defaultID>
-        <icon>special://skin/extras/icons/tv.png</icon>
-        <action>ActivateWindow(1102)</action>
-    </shortcut>
-    <shortcut>
-        <label>2</label>
-        <label2>Hub 1114</label2>
-        <defaultID>x1114</defaultID>
-        <icon>special://skin/extras/icons/songs.png</icon>
-        <action>ActivateWindow(1114)</action>
-    </shortcut>
-    <shortcut>
-        <label>31343584</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>livetv</defaultID>
-        <icon>special://skin/extras/icons/livetv.png</icon>
-        <action>ActivateWindow(MyPVR)</action>
-    </shortcut>
-    <shortcut>
-        <label>31313</label>
-        <label2>Hub 1113</label2>
-        <defaultID>x1113</defaultID>
-        <icon>special://skin/extras/icons/rocket.png</icon>
-        <action>ActivateWindow(1113)</action>
-    </shortcut>
-    <shortcut>
-        <label>31314</label>
-        <label2>Hub 1112</label2>
-        <defaultID>x1112</defaultID>
-        <icon>special://skin/extras/icons/tvguide.png</icon>
-        <action>ActivateWindow(1112)</action>
-    </shortcut>
-	    <shortcut>
-        <label>חיפוש</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>חיפוש</defaultID>
-        <icon>special://skin/extras/icons/search.png</icon>
-        <action>RunScript(script.globalsearch)</action>
-    </shortcut>
-    <shortcut>
-        <label>8</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>weather</defaultID>
-        <icon>special://skin/extras/icons/weather.png</icon>
-        <action>ActivateWindow(Weather)</action>
-    </shortcut>
-	    <shortcut>
-        <label>1036</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>1036</defaultID>
-        <icon>special://skin/extras/icons/favourites.png</icon>
-        <action>ActivateWindow(Favourites)</action>
-    </shortcut>
-		    <shortcut>
-        <label>1037</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>1036</defaultID>
-        <icon>special://skin/extras/icons/video-addons.png</icon>
-        <action>ActivateWindow(Videos,Addons,return)</action>
-    </shortcut>
-    <shortcut>
-        <label>10004</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>settings</defaultID>
-        <icon>special://skin/extras/icons/settings.png</icon>
-        <action>ActivateWindow(Settings)</action>
-    </shortcut>
-    <shortcut>
-        <label>33060</label>
-        <label2>Common Shortcut</label2>
-        <defaultID>power</defaultID>
-        <icon>special://skin/extras/icons/power.png</icon>
-        <action>ActivateWindow(shutdownmenu)</action>
-    </shortcut>
+	<shortcut>
+		<label>20342</label>
+		<label2>Hub 1101</label2>
+		<defaultID>x1101</defaultID>
+		<icon />
+		<thumb>special://skin/extras/icons/adir_icons/Old-Video-cam-icon2.png</thumb>
+		<action>ActivateWindow(1101)</action>
+	</shortcut>
+	<shortcut>
+		<label>20343</label>
+		<label2>Hub 1102</label2>
+		<defaultID>x1102</defaultID>
+		<icon />
+		<thumb>special://skin/extras/icons/adir_icons/tv-icon 2.png</thumb>
+		<action>ActivateWindow(1102)</action>
+	</shortcut>
+	<shortcut>
+		<label>2</label>
+		<label2>Hub 1114</label2>
+		<defaultID>x1114</defaultID>
+		<icon />
+		<thumb>special://skin/extras/icons/adir_icons/mp3player-icon2.png</thumb>
+		<action>ActivateWindow(1114)</action>
+	</shortcut>
+	<shortcut>
+		<label>31343584</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>livetv</defaultID>
+		<icon />
+
+		<thumb>special://skin/extras/icons/adir_icons/imac-icon2.png</thumb>
+		<action>ActivateWindow(MyPVR)</action>
+	</shortcut>
+	<shortcut>
+		<label>31314</label>
+		<label2>Hub 1112</label2>
+		<defaultID>x1112</defaultID>
+		<icon />
+
+		<thumb>special://skin/extras/icons/adir_icons/vhs-icon 2.png</thumb>
+		<action>ActivateWindow(1112)</action>
+	</shortcut>
+	<shortcut>
+		<label>31313</label>
+		<label2>Hub 1113</label2>
+		<defaultID>x1113</defaultID>
+		<icon />
+
+		<thumb>special://skin/extras/icons/adir_icons/ch2.png</thumb>
+		<action>ActivateWindow(1113)</action>
+	</shortcut>
+	<shortcut>
+		<label>1037</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>1037</defaultID>
+		<icon />
+
+		<thumb>special://skin/extras/icons/adir_icons/film-icon 2.png</thumb>
+		<action>ActivateWindow(Videos,Addons,return)</action>
+	</shortcut>
+	<!--<shortcut>
+		<label>YouTube</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>plugin.video.youtube</defaultID>
+		<icon />
+		<thumb>special://skin/extras/icons/adir_icons/y 2.png</thumb>
+		<action>ActivateWindow(10025,"plugin://plugin.video.youtube",return)</action>
+	</shortcut> -->
+	<shortcut>
+		<label>8</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>weather</defaultID>
+		<icon />
+
+		<thumb>special://skin/extras/icons/adir_icons/sun2.png</thumb>
+		<action>ActivateWindow(Weather)</action>
+	</shortcut>
+	<shortcut>
+		<label>1036</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>programs</defaultID>
+		<icon />
+
+		<thumb>special://skin/extras/icons/adir_icons/f2.png</thumb>
+		<action>ActivateWindow(Favourites)</action>
+	</shortcut>
+	<shortcut>
+		<label>10001</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>10001</defaultID>
+		<icon />
+
+		<thumb>special://skin/extras/icons/adir_icons/tohnot.png</thumb>
+		<action>ActivateWindow(Programs,Addons,return)</action>
+	</shortcut>	
+	<shortcut>
+		<label>43787</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>43787</defaultID>
+		<icon />
+
+		<thumb>special://skin/extras/icons/adir_icons/sh.png</thumb>
+		<action>RunScript(script.globalsearch)</action>
+	</shortcut>
+	<shortcut>
+		<label>10004</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>settings</defaultID>
+		<icon />
+
+		<thumb>special://skin/extras/icons/adir_icons/st.png</thumb>
+		<action>ActivateWindow(Settings)</action>
+	</shortcut>
+	<shortcut>
+		<label>33060</label>
+		<label2>Common Shortcut</label2>
+		<defaultID>power</defaultID>
+		<icon />
+		<thumb>special://skin/extras/icons/adir_icons/on off.png</thumb>
+		<action>ActivateWindow(shutdownmenu)</action>
+	</shortcut>
 </shortcuts>

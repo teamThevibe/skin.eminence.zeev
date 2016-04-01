@@ -126,8 +126,8 @@
         <textcolor>PanelFG-NF</textcolor>
         <focusedcolor>Selected2</focusedcolor>
         <disabledcolor>Disabled</disabledcolor>
-        <texturefocus colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-        <texturenofocus>noop</texturenofocus>
+        <texturefocus colordiffuse="$VAR[Highlight6]" >common/white.png</texturefocus>
+        <texturenofocus>-</texturenofocus>
         <pulseonselect>false</pulseonselect>
     </default>
 	
@@ -149,7 +149,7 @@
         <focusedcolor>Selected2</focusedcolor>
         <disabledcolor>Disabled</disabledcolor>
         <texturefocus colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-        <texturenofocus>noop</texturenofocus>
+        <texturenofocus>-</texturenofocus>
         <pulseonselect>false</pulseonselect>
     </default>
 
@@ -161,9 +161,25 @@
         <focusedcolor>Selected2</focusedcolor>
         <disabledcolor>Disabled</disabledcolor>
         <texturefocus colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-        <texturenofocus colordiffuse="PanelFG-NF">noop</texturenofocus>
+        <texturenofocus colordiffuse="PanelFG-NF">-</texturenofocus>
         <alttexturefocus colordiffuse="$VAR[Highlight6]" border="5">common/white.png</alttexturefocus>
-        <alttexturenofocus colordiffuse="PanelFG-NF">noop</alttexturenofocus>
+        <alttexturenofocus colordiffuse="PanelFG-NF">-</alttexturenofocus>
+        <align>center</align>
+        <aligny>center</aligny>
+        <pulseonselect>false</pulseonselect>
+    </default>
+	
+	    <default type="togglebutton2">
+        <height>66</height>
+        <textoffsetx>25</textoffsetx>
+        <font>Font-Button</font>
+        <textcolor>PanelFG-NF</textcolor>
+        <focusedcolor>Selected2</focusedcolor>
+        <disabledcolor>Disabled</disabledcolor>
+        <texturefocus colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+        <texturenofocus colordiffuse="PanelFG-NF">-</texturenofocus>
+        <alttexturefocus colordiffuse="$VAR[Highlight6]" border="5">common/white.png</alttexturefocus>
+        <alttexturenofocus colordiffuse="PanelFG-NF">-</alttexturenofocus>
         <align>center</align>
         <aligny>center</aligny>
         <pulseonselect>false</pulseonselect>
@@ -178,7 +194,7 @@
         <focusedcolor>Selected2</focusedcolor>
         <disabledcolor>Disabled</disabledcolor>
         <texturefocus colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-        <texturenofocus colordiffuse="PanelFG-NF">noop</texturenofocus>
+        <texturenofocus colordiffuse="PanelFG-NF">-</texturenofocus>
         <radiowidth>48</radiowidth>
         <radioheight>48</radioheight>
         <textureradioonfocus colordiffuse="RadioFO">buttons/radio-on.png</textureradioonfocus>
@@ -194,7 +210,7 @@
         <height>66</height>
         <font>Font-Button</font>
         <texturefocus colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-        <texturenofocus colordiffuse="PanelFG-NF">noop</texturenofocus>
+        <texturenofocus colordiffuse="PanelFG-NF">-</texturenofocus>
         <spinwidth>48</spinwidth>
         <spinheight>48</spinheight>
         <textureup colordiffuse="PanelFG-NF" flipy="true">buttons/spin-down.png</textureup>
@@ -215,7 +231,7 @@
     <default type="sliderex">
         <height>66</height>
         <texturefocus colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-        <texturenofocus colordiffuse="PanelFG-NF">noop</texturenofocus>
+        <texturenofocus colordiffuse="PanelFG-NF">-</texturenofocus>
         <sliderwidth>230</sliderwidth>
         <sliderheight>23</sliderheight>
         <texturesliderbar>other_textures/OSD/slider_bg_2.png</texturesliderbar>
@@ -234,14 +250,14 @@
         <lefttexture colordiffuse="$VAR[Highlight6]">osd/progress-end.png</lefttexture>
         <midtexture colordiffuse="$VAR[Highlight6]">osd/progress-end.png</midtexture>
         <righttexture>osd/progress-end.png</righttexture>
-        <overlaytexture>noop</overlaytexture>
+        <overlaytexture>-</overlaytexture>
     </default>
 
     <default type="slider">
         <width>360</width>
         <height>23</height>
-        <texturefocus>noop</texturefocus>
-        <texturenofocus>noop</texturenofocus>
+        <texturefocus>-</texturefocus>
+        <texturenofocus>-</texturenofocus>
         <texturesliderbar>other_textures/OSD/slider_bg_2.png</texturesliderbar>
         <textureslidernib border="5" colordiffuse="TopBarIcon">other_textures/OSD/SliderNibNF.png</textureslidernib>
         <textureslidernibfocus border="5" colordiffuse="Highlight">other_textures/OSD/SliderNibFO.png</textureslidernibfocus>
@@ -252,8 +268,8 @@
         <texturesliderbackground colordiffuse="$VAR[Highlight6]">common/white.png</texturesliderbackground>
         <texturesliderbar colordiffuse="PanelFG-NF">common/white.png</texturesliderbar>
         <texturesliderbarfocus colordiffuse="PanelFG-NF">common/white.png</texturesliderbarfocus>
-        <textureslidernib>noop</textureslidernib>
-        <textureslidernibfocus>noop</textureslidernibfocus>
+        <textureslidernib>-</textureslidernib>
+        <textureslidernibfocus>-</textureslidernibfocus>
         <showonepage>true</showonepage>
         <orientation>vertical</orientation>
         
@@ -262,7 +278,7 @@
     <default type="textbox">
         <font>Font-Button</font>
         <textcolor>PanelFG-NF</textcolor>
-        <shadowcolor>noop</shadowcolor>
+        <shadowcolor>-</shadowcolor>
         <pagecontrol>61</pagecontrol>
         <autoscroll delay="6000" time="3000" repeat="10000"/>
     </default>

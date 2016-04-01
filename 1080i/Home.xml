@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
     <!-- home -->
-    <backgroundcolor>Background</backgroundcolor>
+    <backgroundcolor>black</backgroundcolor>
     <defaultcontrol always="true">9000</defaultcontrol>
     <onload>RunScript(script.skinshortcuts,type=buildxml&amp;mainmenuID=9000&amp;group=mainmenu|x1101|x1102|x1103|x1104|x1105|x1106|x1107|x1108|x1109|x1110|x1112|x1113|x1114|x1115||x1116|powermenu | [moviecategory]|[tvshowcategory]|[musiccategory]|[playlistcategory]|[Vod]|[sport]|[kids]|[favorite]|[CustomHUB]| powermenu)</onload>
     <onload>ClearProperty(Header.Label,home)</onload>
@@ -11,17 +11,22 @@
     <onload>ClearProperty(FO9001)</onload>
     <onload>ClearProperty(extinfo,home)</onload>
     <onload>SetProperty(HubReturn,Home)</onload>
-    <onload condition="IsEmpty(Skin.String(home.style))">Skin.SetString(home.style,$LOCALIZE[31180])</onload>
+		<onload>RunScript(special://skin/extras/scripts/installaddonssettings.py)</onload>
+   <!-- <onload condition="IsEmpty(Skin.String(HomeStyle))">Skin.SetString(HomeStyle, beveled)</onload> -->
     <onload condition="!IsEmpty(Skin.String(home.headericon))">SetProperty(Header.Icon,$INFO[Skin.String(home.headericon)])</onload>
     <onload condition="!IsEmpty(Skin.String(home.headertext))">SetProperty(Header.Label,$INFO[Skin.String(home.headertext)])</onload>
+<!--	<onload condition="IsEmpty(Skin.String(home.widgetposters)"> Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onload> -->
     <onunload>SetProperty(Header.Label,$INFO[Container(9000).ListItem.Label],home)</onunload>
     <onunload>SetProperty(Header.Icon,$INFO[Container(9000).ListItem.Icon],home)</onunload>
     <onunload condition="!IsEmpty(Container(9000).ListItem.Property(TileColor))">SetProperty(HighlightColor,$INFO[Container(9000).ListItem.Property(TileColor)],home)</onunload>
+	<onload condition="Window.Previous(startup)">Skin.Reset(mypassword)</onload>
+	<onload condition="!Window.Previous(startup)">AlarmClock(parental,Skin.Reset(mypassword),$VAR[password_time],Silent)</onload>
     <controls>
 
         <include>Furniture_Background</include>
-        <include condition="!Skin.HasSetting(Home.MenuVertical)">Home_Widget_Control</include>
-		        <include condition="Skin.HasSetting(Home.MenuVertical)">Home_Widget_Control2</include>
+		
+        <include condition="!Skin.String(HomeStyle, HomeMenuVertical)">Home_Widget_Control</include>
+		        <include condition="Skin.String(HomeStyle, HomeMenuVertical)">Home_Widget_Control2</include>
      <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
 
 		        <control type="group">
@@ -50,21 +55,20 @@
         </control>
         
         <include condition="Skin.HasSetting(home.hidewidgetbox)">Home_Widget_Hidden</include>
-
         <control type="group">
-            <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_TextOnly_Animate</include>
-            <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Icons_Animate</include>
-            
+		<include condition="Skin.String(HomeStyle, bigtile)">Home_Dialogs_big_Animate3</include>
+            <include condition="Skin.String(HomeStyle, TextOnly)">Home_TextOnly_Animate</include>
+            <include condition="!Skin.String(HomeStyle, TextOnly) + !Skin.String(HomeStyle, HomeMenuVerticaliconlist) + !Skin.String(HomeStyle, HomeMenuVertical) + !Skin.String(HomeStyle, bigtile)">Home_Icons_Animate</include>
             <include condition="!Skin.HasSetting(home.hidewidgetbox)">Home_Widget2</include>
-            
+            <!--Skin.String(HomeStyle, HomeMenuVerticaliconlist)-->
             <control type="group">
-                <animation condition="!Skin.HasSetting(Home.MenuVertical)" effect="slide" tween="quadratic" easing="out" time="150" start="0,266" end="0">WindowOpen</animation>
-                <animation condition="!Skin.HasSetting(Home.MenuVertical)" effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>
-                <include condition="!Skin.HasSetting(Home.MenuVertical)">Home_Menu</include>
-				<include condition="Skin.HasSetting(Home.MenuVertical)">Home_Menu2</include>
-                <include condition="!Skin.HasSetting(Home.MenuVertical)">Home_NowPlaying</include>
-				<include condition="!Skin.HasSetting(Home.MenuVertical)">Home_NowPlaying2</include>
-				<include condition="!Skin.HasSetting(Home.MenuVertical)">Home_NowPlaying3</include>
+                <animation condition="!Skin.String(HomeStyle, HomeMenuVertical) + !Skin.String(HomeStyle, HomeMenuVerticaliconlist)" effect="slide" tween="quadratic" easing="out" time="150" start="0,266" end="0">WindowOpen</animation>
+                <animation condition="!Skin.String(HomeStyle, HomeMenuVertical) + !Skin.String(HomeStyle, HomeMenuVerticaliconlist)" effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0">WindowClose</animation>
+                <include condition="!Skin.String(HomeStyle, HomeMenuVertical) + !Skin.String(HomeStyle, HomeMenuVerticaliconlist)">Home_Menu</include>
+				<include condition="Skin.String(HomeStyle, HomeMenuVertical) | Skin.String(HomeStyle, HomeMenuVerticaliconlist)">Home_Menu2</include>
+                <include condition="!Skin.String(HomeStyle, HomeMenuVertical) + !Skin.String(HomeStyle, HomeMenuVerticaliconlist)">Home_NowPlaying</include>
+				<include condition="!Skin.String(HomeStyle, HomeMenuVertical) + !Skin.String(HomeStyle, HomeMenuVerticaliconlist)">Home_NowPlaying2</include>
+				<include condition="!Skin.String(HomeStyle, HomeMenuVertical) + !Skin.String(HomeStyle, HomeMenuVerticaliconlist)">Home_NowPlaying3</include>
             </control>
         </control>
 

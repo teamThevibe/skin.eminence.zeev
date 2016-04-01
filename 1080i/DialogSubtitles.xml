@@ -1,6 +1,6 @@
 <window type="dialog">
     <zorder>5</zorder>
-    <defaultcontrol always="true">120</defaultcontrol>
+    <defaultcontrol always="true">100</defaultcontrol>
     <controls>
         <control type="group">
             <posy>-8</posy>
@@ -178,7 +178,7 @@
                         <height>66</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label,,  •  ]$INFO[ListItem.Label2]</label>
-                        <textcolor>Highlight</textcolor>
+                        <textcolor>$VAR[Highlight6]</textcolor>
                         <font>Font-ListInfo</font>
                     </control>
          
@@ -203,8 +203,8 @@
                 <ondown>150</ondown>
                 <onleft>120</onleft>
                 <align>left</align>
-                <focusedcolor>Highlight</focusedcolor>
-                <texturefocus>noop</texturefocus>
+                <focusedcolor>$VAR[Highlight6]</focusedcolor>
+                <texturefocus>-</texturefocus>
             </control>
             
 			<!-- מסגרת מקור כתוביות -->
@@ -238,8 +238,10 @@
                         <height>66</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>Disabled</textcolor>
-                        <selectedcolor>TopBarIcon</selectedcolor>
+                        <textcolor>TopBarIcon</textcolor>
+                        <selectedcolor>$VAR[OSDColor]</selectedcolor>
+						                <focusedcolor>$VAR[OSDColor]</focusedcolor>
+
                     </control>
 
                 </itemlayout>
@@ -251,8 +253,8 @@
                         <height>66</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>Highlight</textcolor>
-                        <selectedcolor>Highlight</selectedcolor>
+                        <textcolor>$VAR[Highlight6]</textcolor>
+                        <selectedcolor>$VAR[OSDColor]</selectedcolor>
                         <visible>Control.HasFocus(150)</visible>
                     </control>
                     <control type="label">
@@ -261,8 +263,8 @@
                         <height>66</height>
                         <aligny>center</aligny>
                         <label>$INFO[ListItem.Label]</label>
-                        <textcolor>Highlight</textcolor>
-                        <selectedcolor>Highlight</selectedcolor>
+                        <textcolor>$VAR[Highlight6]</textcolor>
+                        <selectedcolor>$VAR[OSDColor]</selectedcolor>
                         <visible>!Control.HasFocus(150)</visible>
                     </control>
                </focusedlayout>

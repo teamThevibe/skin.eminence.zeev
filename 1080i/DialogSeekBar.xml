@@ -5,10 +5,9 @@
     <allowoverlay>yes</allowoverlay>
     <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
 					                        <visible>!Window.IsVisible(DialogKeyboard.xml)</visible>
-
     <zorder>2</zorder>
     <controls>
-    
+    <!-- Window.IsVisible(script-cu-lrclyrics-main.xml)] -->
         <control type="image">
             <include>Dimensions_Fullscreen</include>
             <include>Animation.FadeIn</include>
@@ -19,7 +18,7 @@
         </control>
         <control type="group">
             <animation effect="fade" start="0" end="100" time="250">VisibleChange</animation>
-            <visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Window.IsActive(musicosd) | Player.ShowInfo | Window.IsActive(DialogPVRGuideInfo.xml) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsActive(VideoOSDSettings.xml) | Window.IsActive(VideoOSDBookmarks.xml) | Window.IsActive(DialogKaiToast.xml)]</visible>
+            <visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogPVRGuideInfo.xml) | Window.IsActive(DialogFullScreenInfo.xml) | Window.IsActive(VideoOSDSettings.xml) | Window.IsActive(VideoOSDBookmarks.xml) | Window.IsActive(DialogKaiToast.xml)]</visible>
             <include>GlobalVignette</include>
         </control>
 
@@ -29,7 +28,8 @@
             <posy>280</posy>
             <visible>Skin.HasSetting(osd.useclassicinfo)</visible>
             <animation effect="slide" start="0" end="0,-40" time="200" condition="Window.IsActive(videoosd) | Window.IsActive(musicosd)">Conditional</animation>
-            <visible>Window.IsVisible(visualisation) + [[[Window.IsVisible(musicosd) | Player.ShowInfo] + Skin.HasSetting(Vis.ExtraInfo)] | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>
+            <visible>Window.IsVisible(visualisation) + [[Window.IsVisible(musicosd) | Player.ShowInfo] + Skin.HasSetting(Vis.ExtraInfo)]</visible>
+			
             <include>Animation.FadeIn.Up</include>
             <include>Animation.FadeOut</include>
             <control type="image">
@@ -69,16 +69,7 @@
             </control>
             
             
-            <control type="textbox">
-                <posx>634</posx>
-                <posy>90</posy>
-                <width>749</width>
-                <height>500</height>
-                <align>justify</align>
-                <font>Font-ListInfo</font>
-                <label>$VAR[MusicOSDPlot]</label>
-                <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
-            </control>
+
             
             <control type="label">
                 <posx>634</posx>
@@ -360,15 +351,16 @@
             </control>
         </control>
 
-        <control type="group">
+        <control type="group" id="545">
 		   <visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
         <!--  <animation effect="slide" end="0,-280" time="200" condition="!Window.IsVisible(DialogSlider.xml)">Conditional</animation> -->
 		   <animation effect="fade" start="0" end="100" time="200">Visible</animation>
             <animation effect="fade" start="100" end="0" time="200">Hidden</animation>
             <posy>1080</posy>
+			            <animation effect="slide" start="0" end="0,80" time="200" condition="Window.IsVisible(script-cu-lrclyrics-main.xml)">Conditional</animation>
             <animation effect="slide" start="0" end="0,-80" time="200" condition="Window.IsActive(videoosd) | Window.IsActive(musicosd)">Conditional</animation>
 			<animation effect="slide" end="0,-280" time="200" condition="!Skin.HasSetting(osd.useclassicinfo) + !IsEmpty(Window(seekbar).Property(fullscreeninfo)) + [Window.IsActive(videoosd) | Window.IsActive(DialogFullScreenInfo.xml)]">Conditional</animation>
-            <animation effect="slide" end="0,-280" time="200" condition="!Window.IsVisible(DialogSlider.xml) + !Skin.HasSetting(osd.useclassicinfo) + Window.IsVisible(visualisation) + [[Window.IsVisible(musicosd) + Skin.HasSetting(Vis.ExtraInfo)] | Window.IsVisible(script-cu-lrclyrics-main.xml)]">Conditional</animation>
+            <animation effect="slide" end="0,-280" time="200" condition="!Window.IsVisible(DialogSlider.xml) + !Skin.HasSetting(osd.useclassicinfo) + Window.IsVisible(visualisation) + [[Window.IsVisible(musicosd) + Skin.HasSetting(Vis.ExtraInfo)]">Conditional</animation>
 			<control type="image">
                 <width>1920</width>
                 <height>364</height>    
@@ -377,22 +369,10 @@
                 <animation effect="fade" end="90" condition="true">Conditional</animation>
             </control>
 
-						<!-- Album -->			
 
-				<control type="image">
-					<description>cover image</description>
-					<posx>1700</posx>
-					<posy>-220</posy>
-					<width>200</width>
-					<height>200</height>
-					<texture fallback="special://skin/extras\music\album/default-albumart.png">$INFO[MusicPlayer.Cover]</texture>
-                <animation effect="fade" end="90" condition="true">Conditional</animation>
-								            <visible>Player.HasAudio</visible>
-
-				</control>
 				
 				<control type="group">
-												            <visible>Player.HasAudio</visible>
+												            <visible>!Player.HasAudio</visible>
 
 				<posx>1680</posx>
 				<posy>-300</posy>
@@ -433,7 +413,7 @@
 					<font>Font-ListInfo-list</font>
 				</control>
 
-				<control type="image">
+				<!--<control type="image">
 					<description>Rating image</description>
 					<posx>1325</posx>
 					<posy>110</posy>
@@ -441,7 +421,7 @@
 					<height>38</height>
 					<texture>rating0.png</texture>
 					<aspectratio align="right">keep</aspectratio>
-				</control>
+				</control>-->
 								</control>
 			
 				<!--new-OSD-->
@@ -490,6 +470,8 @@
 					
 			<!--new-OSD-->
 			            <control type="image">
+																		            <visible>!Player.HasAudio</visible>
+
                 <width>800</width>
                 <height>60</height>    
                 <posx>0</posx>
@@ -498,8 +480,12 @@
                 <animation effect="fade" end="90" condition="true">Conditional</animation>
             </control>
 						
+	
+						
 			<!-- new osd TIME -->
 			<control type="image">
+															            <visible>!Player.HasAudio</visible>
+
                     <posx>50</posx>
 				    <posy>-75</posy>
                     <width>48</width>
@@ -510,6 +496,8 @@
                 </control>
 
 				<control type="label">
+																            <visible>!Player.HasAudio</visible>
+
                 <width>320</width>
                 <font>Font-Sublabel</font>
                 <posx>100</posx>
@@ -520,6 +508,8 @@
 				
 				
 				<control type="label">
+																            <visible>!Player.HasAudio</visible>
+
 				<description>Seek Time Label</description>
 				<posx>407</posx>
 				<posy>-61</posy>
@@ -534,6 +524,8 @@
 		</control> 
 				
 						<control type="image">
+																						            <visible>!Player.HasAudio</visible>
+
                     <posx>520</posx>
 				    <posy>-75</posy>
                     <width>48</width>
@@ -543,6 +535,8 @@
                     <texture>kaitoast/arrow.png</texture>
                 </control>
             <control type="label">
+																			            <visible>!Player.HasAudio</visible>
+
                 <width>350</width>
                 <font>Font-Sublabel</font>
                 <posx>570</posx>
@@ -613,8 +607,8 @@
             <control type="group" description="InfoBottomMusic">
                 <visible>!Skin.HasSetting(osd.useclassicinfo)</visible>
                 <include>Animation.DelayFadeIn</include>
-                <visible>Window.IsVisible(visualisation) + [[[Window.IsVisible(musicosd) | Player.ShowInfo] + Skin.HasSetting(Vis.ExtraInfo)] | Window.IsVisible(script-cu-lrclyrics-main.xml)]</visible>
-                <control type="image">
+                <visible>Window.IsVisible(visualisation) + [[Window.IsVisible(musicosd) | Player.ShowInfo] + Skin.HasSetting(Vis.ExtraInfo)]</visible>
+               <!-- <control type="image">
                     <top>16</top>
                     <left>16</left>
                     <height>248</height>
@@ -630,7 +624,7 @@
                     <top>16</top>
                     <left>287</left>
                     <include>DefOSDInfoContentMusic</include>
-                </control>
+                </control>-->
             </control>
             <control type="slider" id="401">
                 <description>Slider Bar</description>

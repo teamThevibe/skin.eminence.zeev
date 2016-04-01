@@ -14,10 +14,10 @@
             <height>height</height>
 												<animation effect="slide" start="10" end="-1000" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 						<animation effect="slide" start="10" end="-1000" time="250" condition="Window.IsVisible(106)">Conditional</animation>
-            <include name="Object_Line">
+        <!--    <include name="Object_Line">
                 <param name="width" value="1880" />
                 <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
-            </include>
+            </include>-->
             <include name="View_BigWideLogo">
                 <param name="id" value="530" />
                 <param name="condition" value="Container.Content(sets) | Container.Content(tvshows) | Container.Content(movies)" />
@@ -89,7 +89,7 @@
                             <animation effect="rotate" end="90" start="0" condition="true" center="20,640">Conditional</animation>
                             <texture>$VAR[ClearLogoTop]</texture>
                         </control>
-                        
+                        <!--
                         <control type="image">
                             <centerleft>50%</centerleft>
                             <top>side</top>
@@ -97,7 +97,7 @@
                             <width>32</width>
                             <texture colordiffuse="IndicatorBack">$VAR[Image_Indicator_Back]</texture>
                             <visible>!IsEmpty(ListItem.Overlay)</visible>
-                        </control>
+                        </control>-->
                         <control type="image">
                             <centerleft>50%</centerleft>
                             <top>side</top>

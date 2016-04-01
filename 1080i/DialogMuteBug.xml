@@ -5,6 +5,6 @@
     <allowoverlay>yes</allowoverlay>
     <zorder>10</zorder>
     <controls>
-        <include>GlobalLeftHeader</include>
+        <include condition="Control.Hasfocus(9001)">GlobalLeftHeader</include>
     </controls>
 </window>

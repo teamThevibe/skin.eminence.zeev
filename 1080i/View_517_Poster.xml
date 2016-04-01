@@ -4,7 +4,7 @@
     
 	
 	<include name="517Content">
-
+		
 	<height>1080</height>
         <visible>Container.Content(musicvideos) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(sets) | Container.Content(seasons)</visible>
         <posy>100</posy>
@@ -24,6 +24,7 @@
 		
 		
             <control type="group">
+			
 							<visible>!Window.IsVisible(2003)</visible>
 
                 <animation effect="Conditional" condition="true">
@@ -38,8 +39,8 @@
                     <fadetime>100</fadetime>
                     <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                     <texture flipy="true" diffuse="diffuse/listposter-ref.png" background="true">$VAR[PosterImage]</texture>
-							     	<animation effect="fade" start="100" end="20" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
-			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+							     	<animation effect="fade" start="100" end="20" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>			
+			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 						<animation effect="slide" start="10" end="-2700" time="250" condition="Window.IsVisible(106)">Conditional</animation>
                 </control>
 				
@@ -50,8 +51,8 @@
                     <height>48</height>
                     <aspectratio>stretch</aspectratio>
                     <texture>diffuse/shadowspot.png</texture>
-							     	<animation effect="fade" start="100" end="20" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
-			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+							     	<animation effect="fade" start="100" end="20" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>			
+			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 									<animation effect="slide" start="10" end="-2700" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 
 
@@ -63,12 +64,13 @@
                     <fadetime>100</fadetime>
                     <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                     <texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>	
-			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 									<animation effect="slide" start="10" end="-2700" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 
 					
                 </control>
                 <control type="group">
+				
 								<visible>!Window.IsVisible(2003)</visible>
 
                     <visible>!stringcompare(ListItem.Label,..)</visible>
@@ -96,8 +98,8 @@
                     <width>475</width>
                     <height>688</height>
                     <texture border="32">common/shadow-24.png</texture>		
-					<animation effect="fade" start="100" end="20" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
-			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+					<animation effect="fade" start="100" end="20" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>			
+			<animation effect="slide" start="10" end="-2700" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 						<animation effect="slide" start="10" end="-2700" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 
                 </control>
@@ -110,6 +112,8 @@
 						<visible>!Window.IsVisible(2003)</visible>
 
             <control type="group">
+	
+          
 							<visible>!Window.IsVisible(2003)</visible>
 
                 <posy>120</posy>
@@ -141,6 +145,16 @@
                     <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
                     <texture diffuse="diffuse/listposter.png" background="true">$VAR[PosterImage]</texture>
                 </control>
+				             <control type="image">
+                    <width>428</width>
+                    <height>640</height>
+                    <fadetime>100</fadetime>
+                    <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
+				                            <texture background="true">special://masterprofile/Thumbnails/animatedgifs/$INFO[Listitem.IMDBNumber]_poster_0_original.gif</texture>
+							<visible>!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster) + !Skin.HasSetting(showanimate.poster)</visible>
+							</control>
+				
+
                 <control type="group">
                     <visible>!stringcompare(ListItem.Label,..)</visible>
                     
@@ -173,9 +187,20 @@
             </control>
         </focusedlayout>
     </include>
+	
     <include name="517Wrap"><control type="wraplist" id="517"><include>517Content</include></control></include>
     <include name="517Fixed"><control type="fixedlist" id="517"><include>517Content</include></control></include>
-    <include name="View_517_Poster">
+    
+	<include name="View_517_Poster">
+			<control type="scrollbar" id="60">
+                <onup>50</onup>
+                <top>682</top>
+                <orientation>horizontal</orientation>
+                <width>1990</width>
+                <height>8</height>
+                <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+				<visible>Control.IsVisible(517)</visible>
+            </control>
         <description>List View (id=517)</description>
         <control type="group">
             <include>Animation.Common</include>
@@ -210,7 +235,7 @@
                     <height>35</height>
                     <aligny>top</aligny>
 					<align>center</align>
-												     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+												     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>			
                 <animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
 		     	<animation effect="fade" start="100" end="0" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 
@@ -227,7 +252,7 @@
                     <height>35</height>
                     <aligny>top</aligny>
 					<align>center</align>
-												     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+												     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>			
                 <animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
 		     	<animation effect="fade" start="100" end="0" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 
@@ -305,7 +330,7 @@
                 <orientation>vertical</orientation>
                 <visible>![Container(517).OnNext | Container(517).OnPrevious]</visible>
                 <animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
-		     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+		     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 		     	<animation effect="fade" start="100" end="0" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 				
                 <control type="label">
@@ -333,6 +358,7 @@
             
 			</control>
         </control>
+
     </include>
 
 </includes>

@@ -1,157 +1,127 @@
-<?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="utf-8"?>
 <window>
-    <allowoverlay>no</allowoverlay>
-    <zorder>10</zorder>
-    <controls>
-        <control type="group">
-            <posx>251</posx>
-            <posy>280</posy>
-            <visible>Skin.HasSetting(osd.useclassicinfo)</visible>
-            <!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
-            <control type="list" id="110">
-                <posx>634</posx>
-                <posy>65</posy>
-                <width>749</width>
-                <height>450</height>
-                <onleft>111</onleft>
-                <onright>111</onright>
-                <onup>110</onup>
-                <ondown>110</ondown>
-                <pagecontrol>111</pagecontrol>
-                <scrolltime>200</scrolltime>
-                <itemlayout height="50">
-                    <control type="label">
-                        <width>749</width>
-                        <selectedcolor>Highlight</selectedcolor>
-                        <info>ListItem.Label</info>
-                        <textcolor>PanelFG</textcolor>
-                        <font>Font-ListInfo</font>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="50">
-                    <control type="label">
-                        <width>749</width>
-                        <textcolor>Highlight</textcolor>
-                        <selectedcolor>Highlight</selectedcolor>
-                        <info>ListItem.Label</info>
-                        <font>Font-ListInfo</font>
-                    </control>
-                </focusedlayout>
-            </control>
-            <!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
-            <control type="list" id="120">
-                <posx>634</posx>
-                <posy>90</posy>
-                <width>749</width>
-                <height>450</height>
-                <onleft>111</onleft>
-                <onright>111</onright>
-                <onup>110</onup>
-                <ondown>110</ondown>
-                <pagecontrol>111</pagecontrol>
-                <scrolltime>200</scrolltime>
-                <itemlayout height="50">
-                    <control type="label">
-                        <width>749</width>
-                        <selectedcolor>Highlight</selectedcolor>
-                        <info>ListItem.Label</info>
-                        <textcolor>PanelFG</textcolor>
-                        <font>Font-ListInfo</font>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="50">
-                    <control type="label">
-                        <width>749</width>
-                        <textcolor>Highlight</textcolor>
-                        <selectedcolor>Highlight</selectedcolor>
-                        <info>ListItem.Label</info>
-                        <font>Font-ListInfo</font>
-                    </control>
-                </focusedlayout>
-            </control>
-            
-            <control type="label" id="200">
-                <description>Scraper label</description>
-                <visible>false</visible>
-            </control>
-        </control>
-        <control type="group">
-            <animation effect="slide" start="0" end="0,-80" time="200" condition="Window.IsActive(videoosd) | Window.IsActive(musicosd)">Conditional</animation>
-            <top>876</top>
-            <left>287</left>
-            <visible>!Skin.HasSetting(osd.useclassicinfo)</visible>
-            <!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
-            <control type="list" id="110">
-                <left>0</left>
-                <right>16</right>
-                <height>120</height>
-                <onleft>111</onleft>
-                <onright>111</onright>
-                <onup>110</onup>
-                <ondown>110</ondown>
-                <pagecontrol>111</pagecontrol>
-                <scrolltime>200</scrolltime>
-                <itemlayout height="40">
-                    <control type="label">
-                        <aligny>top</aligny>
-                        <width>1617</width>
-                        <height>40</height>
-                        <selectedcolor>Highlight</selectedcolor>
-                        <info>ListItem.Label</info>
-                        <font>Font-ListInfo</font>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="40">
-                    <control type="label">
-                        <width>1617</width>
-                        <aligny>top</aligny>
-                        <height>40</height>
-                        <textcolor>Highlight</textcolor>
-                        <selectedcolor>Highlight</selectedcolor>
-                        <info>ListItem.Label</info>
-                        <font>Font-ListInfo</font>
-                    </control>
-                </focusedlayout>
-            </control>
-            <!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
-            <control type="list" id="120">
-                <left>0</left>
-                <right>16</right>
-                <height>120</height>
-                <onleft>111</onleft>
-                <onright>111</onright>
-                <onup>110</onup>
-                <ondown>110</ondown>
-                <pagecontrol>111</pagecontrol>
-                <scrolltime>200</scrolltime>
-                <itemlayout height="40">
-                    <control type="label">
-                        <width>1617</width>
-                        <aligny>top</aligny>
-                        <height>40</height>
-                        <selectedcolor>Highlight</selectedcolor>
-                        <info>ListItem.Label</info>
-                        <font>Font-ListInfo</font>
-                    </control>
-                </itemlayout>
-                <focusedlayout height="40">
-                    <control type="label">
-                        <width>1617</width>
-                        <aligny>top</aligny>
-                        <height>40</height>
-                        <textcolor>Highlight</textcolor>
-                        <selectedcolor>Highlight</selectedcolor>
-                        <info>ListItem.Label</info>
-                        <font>Font-ListInfo</font>
-                    </control>
-                </focusedlayout>
-            </control>
-            
-            <control type="label" id="200">
-                <description>Scraper label</description>
-                <visible>false</visible>
-            </control>
-        </control>
-    
-    </controls>
+	<defaultcontrol always="false">101</defaultcontrol>
+	<animation effect="fade" start="0" end="100" time="300">WindowOpen</animation>
+	<animation effect="fade" start="100" end="0" time="300">WindowClose</animation>
+	<controls>
+		<control type="group">
+			<!-- ** Required ** Do not change <id> or <type> (Smooth scrolling list for lyrics) -->
+			<control type="list" id="110">
+				<posx>400</posx>
+				<posy>700</posy>
+				<width>1920</width>
+				<height>300</height>
+				<onleft condition="!Window.IsVisible(MusicOSD.xml)">ActivateWindow(MusicOSD.xml)</onleft>
+				<onright condition="!Window.IsVisible(MusicOSD.xml)">ActivateWindow(MusicOSD.xml)</onright>
+				<onup>110</onup>
+				<ondown>110</ondown>
+				<align>center</align>
+				<itemlayout height="50">
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>1900</width>
+						<height>50</height>
+						<aligny>center</aligny>
+						<align>center</align>
+						<font>font-30</font>
+						<label>[B]$INFO[ListItem.Label][/B]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" start="100" end="108" time="100" center="960,25"/>
+							<effect type="zoom" start="100" end="92" time="50" delay="100" center="960,25"/>
+							<effect type="fade" start="10" end="100" time="100"/>
+						</animation>
+				<control type="image">
+						<top>5</top>
+						<posx>210</posx>
+						<width>1600</width>
+						<height>40</height>
+						<texture border="1">music/listselect_fo.png</texture>
+					</control>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>1900</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<font>font-35</font>
+							<textcolor>$VAR[HighlightColor2]</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<label fallback="- -">[B]$INFO[ListItem.Label][/B]</label>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<!-- ** Required ** Do not change <id> or <type> (Song Chooser if it gets it wrong) -->
+			<control type="list" id="120">
+				<posx>0</posx>
+				<posy>195</posy>
+				<width>1920</width>
+				<height>350</height>
+				<onleft condition="!Window.IsVisible(MusicOSD.xml)">ActivateWindow(MusicOSD.xml)</onleft>
+				<onright condition="!Window.IsVisible(MusicOSD.xml)">ActivateWindow(MusicOSD.xml)</onright>
+				<onup>120</onup>
+				<ondown>120</ondown>
+				<pagecontrol>121</pagecontrol>
+				<itemlayout height="50">
+					<control type="label">
+						<posx>10</posx>
+						<posy>0</posy>
+						<width>1900</width>
+						<height>50</height>
+						<aligny>center</aligny>
+						<align>center</align>
+						<font>font-30</font>
+						<label>$INFO[ListItem.Label]</label>
+					</control>
+				</itemlayout>
+				<focusedlayout height="50">
+					<control type="group">
+						<animation type="Focus" reversible="false">
+							<effect type="zoom" start="100" end="108" time="100" center="960,25"/>
+							<effect type="zoom" start="100" end="92.592592592593" time="50" delay="100" center="960,25"/>
+							<effect type="fade" start="10" end="100" time="100"/>
+						</animation>
+						<control type="label">
+							<posx>10</posx>
+							<posy>0</posy>
+							<width>1900</width>
+							<height>50</height>
+							<aligny>center</aligny>
+							<align>center</align>
+							<font>font-35</font>
+							<textcolor>$VAR[HighlightColor2]</textcolor>
+							<shadowcolor>black</shadowcolor>
+							<label>$INFO[ListItem.Label]</label>
+						</control>
+					</control>
+				</focusedlayout>
+			</control>
+			<control type="spincontrol" id="111">
+				<visible>false</visible>
+				<description>Next page button</description>
+			</control>
+			<control type="spincontrol" id="121">
+				<visible>false</visible>
+				<description>Next page button</description>
+			</control>
+			<control type="label" id="200">
+				<description>Scraper Label</description>
+				<visible>False</visible>
+			</control>
+		</control>
+
+		<!-- MUSIC OSD -->
+<!-- 		<control type="group">
+			<posx>0</posx>
+			<posy>0</posy>
+			<visible>Player.HasAudio</visible>
+			<include>MusicOSD</include>
+		</control> -->
+	</controls>
 </window>

@@ -5,42 +5,42 @@
 		<label2>Movie Hub Shortcut</label2>
 		<defaultID>20342</defaultID>
         <action>ActivateWindow(Videos,MovieTitles,return)</action>
-        <icon>special://skin/extras/icons/film.png</icon>
+        <icon>special://skin/extras/icons/infinity.png</icon>
     </shortcut>
     <shortcut>
-        <label>$LOCALIZE[31343595]</label>
-		<label2>Movie Hub Shortcut</label2>
-		<defaultID />
-        <action>ActivateWindow(10025,"plugin://plugin.video.sbs3d/?action=all&amp;title=&amp;filename=Play.mkv&amp;url=&amp;thumbnail=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cplugin.video.sbs3d%5Cresources%5Cimages%5Call_movies.png&amp;extra=",return)</action>
-		<icon>special://skin/extras/icons/ICONS/3dMovies2.png</icon>
+        <label>31533</label>
+		<label2>הרחבת וידאו</label2>
+		<defaultID>31533</defaultID>
+        <action>ActivateWindow(VideoLibrary,"plugin://plugin.video.exodus/?action=movies&amp;url=popular",return)</action>
+		<icon>special://skin/extras/icons/ICONS/exodus_icon.png</icon>
     </shortcut>
     <shortcut>
-        <label>$LOCALIZE[31343596]</label>
-		<label2>Movie Hub Shortcut</label2>
-		<defaultID />
-        <action>ActivateWindow(10025,"plugin://plugin.video.genesis/?action=movies&amp;url=popular",return)</action>
-		<icon>special://skin/extras/icons/ICONS/GENESIS.png</icon>
-    </shortcut>
-    <shortcut>
-        <label>$LOCALIZE[31343597]</label>
-		<label2>Movie Hub Shortcut</label2>
-	    <defaultID>plugin.video.pulsar</defaultID>
-        <action>ActivateWindow(10025,"plugin://plugin.video.pulsar",return)</action>
-		<icon>special://skin/extras/icons/ICONS/pulsar_90.png</icon>
-    </shortcut>
-    <shortcut>
-        <label>$LOCALIZE[31343598]</label>
-		<label2>Movie Hub Shortcut</label2>
-		<defaultID />
+        <label>31534</label>
+		<label2>הרחבת וידאו</label2>
+		<defaultID>31534</defaultID>
         <action>ActivateWindow(10025,"plugin://plugin.video.salts/?section=Movies&amp;mode=popular",return)</action>
 		<icon>special://skin/extras/icons/ICONS/SALTS3.png</icon>
     </shortcut>
     <shortcut>
-        <label>$LOCALIZE[31343599]</label>
+        <label>31535</label>
 		<label2>Movie Hub Shortcut</label2>
-		<defaultID />
-        <action>ActivateWindow(10025,"plugin://plugin.video.genesis/?action=movieSearch",return)</action>
-		<icon>special://skin/extras/icons/search.png</icon>
+		<defaultID>31535</defaultID>
+        <action>ActivateWindow(10025,"plugin://plugin.video.quasar/movies/popular",return)</action>
+		<icon>special://skin/extras/icons/ICONS/QUSAR.png</icon>
+    </shortcut>
+	    <shortcut>
+        <label>43790</label>
+		<label2>Movie Hub Shortcut</label2>
+		<defaultID>43790</defaultID>
+        <action>ActivateWindow(VideoLibrary,"plugin://plugin.video.meta/movies/most_popular/1",return)</action>
+		<icon>special://skin/extras/icons/ICONS/META.png</icon>
+    </shortcut>
+		    <shortcut>
+        <label>43791</label>
+		<label2>Movie Hub Shortcut</label2>
+		<defaultID>43791</defaultID>
+        <action>RunPlugin("plugin://plugin.video.meta/movies/search")</action>
+		<icon>special://skin/extras/icons/ICONS/METAs.png</icon>
     </shortcut>
 	<shortcut>
         <label>$LOCALIZE[31343600]</label>
@@ -48,12 +48,6 @@
 		<defaultID>20342</defaultID>
         <action>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</action>
 		<icon>special://skin/extras/icons/search.png</icon>
-    </shortcut>
-  <shortcut>
-        <label2>Movie Hub Shortcut</label2>
-        <label>20342</label>
-        <action>ActivateWindow(Videos,MovieTitles,return)</action>
-        <icon>special://skin/extras/icons/film.png</icon>
     </shortcut>
     <shortcut>
         <label>31100</label>

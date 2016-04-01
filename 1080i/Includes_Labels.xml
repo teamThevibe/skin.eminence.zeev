@@ -1,5 +1,39 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
+
+<variable name="version">
+    <value condition="SubString(System.BuildVersion,17.,left)">Krypton</value>
+    <value condition="SubString(System.BuildVersion,16.,left)"> Jarvis</value>
+    <value condition="SubString(System.BuildVersion,15.,left)">Isengard</value>
+    <value condition="SubString(System.BuildVersion,14.,left)">Helix</value>
+    <value condition="SubString(System.BuildVersion,13.,left)">Gotham</value>
+    <value condition="SubString(System.BuildVersion,12.,left)">Frodo</value>
+    <value condition="SubString(System.BuildVersion,11.,left)">Eden</value>
+    <value condition="SubString(System.BuildVersion,10.,left)">Dharma</value>
+    <value condition="SubString(System.BuildVersion,9.,left)">Camlot</value>
+    <value condition="SubString(System.BuildVersion,8.,left)">Babylon</value>
+</variable>
+
+    <variable name="Label_SkinSetting_HomeStyle">
+        <value condition="IsEmpty(Skin.String(HomeStyle))">$LOCALIZE[31343693]</value>
+        <value>$INFO[Skin.String(HomeStyle.label)]</value>
+    </variable>
+	
+	    <variable name="Label_SkinSetting_categories">
+        <value condition="IsEmpty(Skin.String(HomeStyle))">$LOCALIZE[31343693]</value>
+        <value>$INFO[Skin.String(categories.label)]</value>
+    </variable>
+	
+		   <variable name="Statusautocompletion">
+        <value condition="System.HasAddon(plugin.program.autocompletion)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(plugin.program.autocompletion)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+
+	   <variable name="Statusimageresourceselect">
+        <value condition="System.HasAddon(script.image.resource.select)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(script.image.resource.select)])</value>
+        <value>$LOCALIZE[31343668]</value>
+    </variable>
+
     <variable name="StatusSkinShortcuts">
         <value condition="System.HasAddon(script.skinshortcuts)">$LOCALIZE[31343667] ($INFO[System.AddonVersion(script.skinshortcuts)])</value>
         <value>$LOCALIZE[31343668]</value>

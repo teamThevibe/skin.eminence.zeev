@@ -9,25 +9,11 @@
         <include>GlobalBackground</include>
         
 
-        <control type="button">
-            <posy>540</posy>
-            <posx>110</posx>
-            <width>48</width>
-            <height>48</height>
-            <texturenofocus flipx="true">common/right-arrow.png</texturenofocus>
-            <texturefocus flipx="true">common/right-arrow.png</texturefocus>
-            <aspectratio>keep</aspectratio>
-            <animation effect="fade" end="75" condition="true">Conditional</animation>
-            <animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">WindowOpen</animation>
-            <animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">Visible</animation>
-            <animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">WindowClose</animation>
-            <animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">Hidden</animation>
-            <include>DialogVisibility</include>
-        </control>
+
         <control type="group">
             <posx>horzpad</posx>
             <posy>topoffset</posy>
-            <include>Animation.SlideOpen.Left</include>
+			<include>Animation.SlideOpen.Right</include>
             <include>DialogVisibility</include>
             <control type="label" id="2" description="Info Label">
                 <include>DefSideLabelCoords</include>
@@ -35,7 +21,7 @@
             </control>
         </control>
         <control type="group">
-            <posy>160</posy>
+            <posy>200</posy>
             
 
             <include>DialogVisibility</include>
@@ -49,26 +35,24 @@
             <control type="grouplist" id="3">
                 <description>Control Area</description>
                 <include>DefSettingsLeftGroup</include>
-                <onright>5</onright>
-                <onleft>SetProperty(movement,1,settings)</onleft>
-                <onleft>$VAR[DefSettingsOnLeft]</onleft>
-                <onup>3</onup>
-                <ondown>3</ondown>
+                <onright>3</onright>
+                <onleft>5</onleft>
+                <onup>5</onup>
+                <ondown>5</ondown>
             </control>
 
             <control type="grouplist" id="5">
                 <description>Control Area</description>
                 <include>DefSettingsRightGroup</include>
-                <onright>ClearProperty(movement,settings)</onright>
-                <onright>$VAR[DefSettingsOnRight]</onright>
-                <onleft>3</onleft>
+                <onright>3</onright>
+                <onleft>5</onleft>
                 <onup>21</onup>
                 <ondown>noop</ondown>
                 
             </control>
             
             <control type="button" id="21">
-                <posx>662</posx>
+                <posx>870</posx>
                 <posy>51</posy>
                 <width>1020</width>
                 <height>66</height>
@@ -78,7 +62,7 @@
                 <ondown>5</ondown>
                 <texturefocus>noop</texturefocus>
                 <focusedcolor>$VAR[Highlight6]</focusedcolor>
-                <include>Animation.SlideOpen.Left</include>
+			<include>Animation.SlideOpen.Right</include>
             </control>
             
             <control type="button" id="20">
@@ -115,36 +99,58 @@
 
         <control type="togglebutton" id="10">
             <description>Default Category Button</description>
-            <align>left</align>
-            <textcolor>Disabled</textcolor>
+					<align>right</align>
+					<font>Font-ListInfo</font>
+					<textcolor>Disabled</textcolor>
             <width>385</width>
+			            <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+
         </control>
         
         <control type="button" id="7">
             <description>Default Button</description>
-            <align>left</align>
+  			<align>left</align>
+			<textwidth>900</textwidth>
+			<textoffsetx>30</textoffsetx>
             <font>Font-ListInfo</font>
+			            <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+			<width>970</width>
+
         </control>
 
         <control type="radiobutton" id="8">
             <description>Default RadioButton</description>
-            <align>left</align>
+					<align>right</align>
+					<font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<radioposx>40</radioposx>  
+            <align>right</align>
             <font>Font-ListInfo</font>
+			            <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+
         </control>
 
         <control type="spincontrolex" id="9">
             <description>Default spincontrolex</description>
-            <align>left</align>
-            <reverse>yes</reverse>
+    					<align>left</align>
+					<font>Font-ListInfo</font>
             <font>Font-ListInfo</font>
+            <reverse>yes</reverse>
+			            <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+
         </control>
-        
+        <!--
         <control type="sliderex" id="13">
             <description>Default spincontrolex</description>
-            <align>left</align>
+          					<align>left</align>
+					<font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<radioposx>40</radioposx>     
             <font>Font-ListInfo</font>
             <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-        </control>
+        </control>-->
     </controls>
 
 </window>

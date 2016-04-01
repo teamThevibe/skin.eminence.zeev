@@ -300,6 +300,14 @@
                     <include>Defs_OptionButton</include>
                 </control>
 				
+<!-- Ajout Control -->   
+		<control type="button" id="993" description="Password Protection">
+			<width>100%</width>
+			<include>Defs_OptionButton</include>			
+			<label>$LOCALIZE[31690] - $VAR[passcode]</label>
+			<visible>StringCompare(Window.Property(groupname), mainmenu)</visible>
+                </control>        
+				
 				<!--		
                 <control type="button" id="301" description="Add">
                     <width>100%</width>

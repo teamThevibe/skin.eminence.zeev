@@ -2,9 +2,8 @@
 <!-- Foundation -->
 <window id="502">
     <include>50Focus</include>
-    <allowoverlay>yes</allowoverlay>
     <background>0</background>
-	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517,519,520,524,518,521,508,509,510,511,512,513,514,515,525,531,528,530,533,532</views>
+	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517,519,520,524,518,521,508,509,510,511,512,513,514,515,525,531,528,530,533,532,534,535</views>
     <onunload>ClearProperty(focushub,home)</onunload>
 
     <controls>
@@ -13,22 +12,38 @@
             <description>Filter (hidden)</description>
             <include>HiddenButton</include>
         </control>
-<include>DefMenuMouse</include>
-
-
+        <include>ClearLogoMusic</include>
         <include>GlobalBackground</include>
         <include>DefLeftSideArrow</include>
         <include>DefMyNavViews</include>
         <include>DefFullScreenNav</include>
+		
 		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>        
+            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>    
+<include>DefMenuMouse</include>
+			<include>muiscART</include>
+
         <control type="group">   
+										<control type="button" id="9101">
+		<right>0</right>
+			<width>430</width>
+			<top>top</top>
+			<height>height</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				</control>										
+								<control type="button" id="9101">
+		<right>0</right>
+			<width>430</width>
+			<top>top</top>
+			<height>height</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				</control>		
             <include>DefMyNavBar</include>  
             <control type="grouplist" id="9000">
                 <visible>!Skin.HasSetting(kioskmode)</visible>
                 <include>DefMyNavBarGroupList</include>
-        <include>ClearLogoMusic</include>
-
 			   <control type="button" id="564">
 			       <include>DefNavMenuButton2</include>  
 				   <label>31343603</label>
@@ -36,7 +51,7 @@
 				   <align>right</align>
 				   <onclick>RunScript(script.skin.helper.service,action=setview)</onclick>
 				</control>               
-				
+				<!--
 				                <control type="button" id="9001">
                     <description>Fullscreen</description>
                     <include>DefNavMenuButton2</include>
@@ -44,7 +59,7 @@
                     <onclick>Action(fullscreen)</onclick>
                     <visible>Player.HasMedia</visible>
                 </control>
-
+-->
                 <control type="button" id="3">
                     <description>Sort</description>
                     <include>DefNavMenuButton2</include>
@@ -115,7 +130,7 @@
                     <visible>!Container.Content(musicvideos)</visible>
                 </control>
                 
-                <control type="radiobutton" id="9023">
+                <control type="radiobutton" id="17">
                     <description>PartyMode</description>
                     <include>DefNavMenuButton2</include>
                     <onclick>PlayerControl(Partymode(video))</onclick>
@@ -125,7 +140,7 @@
                 </control>
                 
                 
-                <control type="button" id="9091">
+                <control type="button" id="18">
                     <description>Music Playlist</description>
                     <include>DefNavMenuButton2</include>
                     <label>559</label>

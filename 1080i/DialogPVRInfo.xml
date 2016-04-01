@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window>
+	<defaultcontrol always="true">7</defaultcontrol>
+	<coordinates>
+		<system>1</system>
+		<left>399</left>
+		<top>165</top>
+	</coordinates>
+	<include>dialogeffect</include>
+	<controls>
+	  <control type="group">
+
+                <center>0</center>
+                <centerleft>700</centerleft>
+                <width>320</width>
+                <height>210</height>
+                <control type="image">
+
+                    <description>background image</description>
+					<posy>35</posy>
+                    <width>100%</width>
+                    <height>65%</height>
+                    <texture colordiffuse="infobg">common/white.png</texture>
+                </control>
+
+ 			<control type="grouplist" id="9001">
+						<onup>9001</onup>
+						<ondown>9001</ondown>
+                    <scrolltime>200</scrolltime>
+<posy>-40</posy>
+						<control type="button" id="10">
+							<description>Ok Button</description>
+                        <width>100%</width>
+                        <height>69</height>
+						<label>-</label>
+							<height>60</height>
+							<font>-</font>
+							<enable>no</enable>
+							                        <include>DefInfoButtons2</include>
+
+						</control>
+
+						<control type="button" id="6">
+							<description>Record</description>
+                        <width>100%</width>
+                        <height>69</height>
+						<label>-</label>
+							                        <include>DefInfoButtons2</include>
+
+						</control>
+						<control type="button" id="8">
+							<description>Play recording</description>
+                        <width>100%</width>
+                        <height>69</height>
+						<label>19687</label>
+							                        <include>DefInfoButtons2</include>
+
+						</control>
+						<control type="button" id="7">
+							<description>OK</description>
+	                        <width>100%</width>
+                        <height>69</height>
+							<label>186</label>
+							                        <include>DefInfoButtons2</include>
+
+						</control>
+                </control>
+	                </control>
+
+
+
+	</controls>
+</window>

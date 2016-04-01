@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="Window_favorite">
-		<include>Furniture_Background_favorite</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -46,7 +46,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras\icons\NEW_BG/favorites/favobg.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/favorite.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -54,7 +54,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras\icons\NEW_BG/favorites/favobg.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/favorite.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -69,7 +69,7 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
@@ -86,6 +86,8 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -165,10 +167,10 @@
 	</include>
 
 	<include name="Window_favorite2">
-		<include>Furniture_Background_favorite</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -210,7 +212,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras\icons\NEW_BG/favorites/favobg.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -218,7 +220,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras\icons\NEW_BG/favorites/favobg.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -233,12 +235,11 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
 
 				</control>
@@ -250,6 +251,8 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -327,198 +330,243 @@
 		</control>
 
 	</include>
-	
-		<include name="Window_favorite3">
-		<include>Furniture_Background_favorite</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
-												<control type="image">
-																	<height>500</height>
-<right>300</right>
-								<width>1320</width>
-								<top>510</top>
-								<texture colordiffuse="Poster2">common/floor.png</texture>
-							</control>
+
+	<include name="Window_favorite3">
+		<include>Furniture_Background</include>
+		<animation effect="slide" start="0,-200" end="0,-50" condition="!Skin.HasSetting(disable.rss)">Conditional</animation>
+		<animation effect="slide" start="0,-200" end="0,-500" condition="Skin.HasFocus(9501)">Conditional</animation>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
-			<include>Animation.SlideOpen.Right</include>
+			<include>Animation.FadeIn.Up</include>
+			<bottom>0</bottom>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-80</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,100" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<bottom>-150</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight7]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="group">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-266</bottom>
+				<height>64</height>
+				<animation effect="slide" end="0,-400" condition="true">Conditional</animation>
+				<animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+				<animation effect="fade" start="100" end="0" time="500">Conditional</animation>
+				<control type="image">
+					<bottom>-3</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+				<control type="image">
+					<bottom>-10</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,35" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+			<include>Animation.FadeIn.Up</include>
+			<control type="label">
+				<left>780</left>
+				<right>200</right>
+				<bottom>600</bottom>
+				<height>150</height>
+				<width>700</width>
+				<align>right</align>
+				<label>$VAR[Label_Hub_WidgetLabel]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
+			<control type="textbox">
+				<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<left>780</left>
+				<right>200</right>
+				<bottom>400</bottom>
+				<height>250</height>
+				<width>700</width>
+				<align>right</align>
+				<autoscroll>true</autoscroll>
+				<font>Font-ListInfo-Small</font>
+				<label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+			</control>
+			<control type="image">
+				<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<left>1558</left>
+				<top>220</top>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>--</aspectratio>
+				<animation effect="slide" start="0,100" end="0" time="500" delay="400">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="0" end="-10800" time="500000" loop="true" reversible="false" pulse="true" delay="400" condition="True">Conditional</animation>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9500).ListItem.Art(discart)]</texture>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
 			<control type="group">
 				<top>top</top>
 				<left>side</left>
 				<right>side</right>
 				<height>height</height>
 				<control type="group">
-					<left>350</left>
-					<top>-120</top>
+					<left>1500</left>
+					<top>-10</top>
 					<width>1210</width>
-					<height>65%</height>
+					<height>100%</height>
+					<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+	
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="PosterBorder">common/white.png</texture>
-						<visible>!Control.HasFocus(9500)</visible>
+						<top>95</top>
+						<posx>2</posx>
+						<width>31%</width>
+						<height>79%</height>
+						<texture background="true">$INFO[Container(9500).ListItem.Art(poster)]</texture>
+						<visible>!Skin.HasSetting(disable.bgct)</visible>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+						<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>						
 					</control>
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-						<visible>Control.HasFocus(9500)</visible>
+						<top>350</top>
+						<left>-535</left>
+						<width>400</width>
+						<height>400</height>
+						<texture background="true" >$INFO[Container(9500).ListItem.Art(clearlogo)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+												<visible>!Skin.HasSetting(disable.bgct)</visible>
+																<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+
 					</control>
 					<control type="wraplist" id="9500">
 						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
+						<right>500</right>
+						<top>100</top>
 						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-						<orientation>vertical</orientation>
-
+						<onleft>9500</onleft>
+						<onright>9500</onright>
+						<ondown>9501</ondown>
+						<orientation>horizontal</orientation>
 						<autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
-						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras\icons\NEW_BG/favorites/favobg.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<itemlayout width="900" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</itemlayout>
-						<focusedlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras\icons\NEW_BG/favorites/favobg.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<focusedlayout width="450" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</focusedlayout>
-						<content target="image">videodb://musicvideos/</content>
-												<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
+						<content target="video"></content>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
-										<control type="multiimage">
-						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
-						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
-
-						<imagepath background="true">$VAR[Image_Background]</imagepath>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-					</control>
-	
 				</control>
-	<control type="group" description="hub side">
-					<right>100</right>
-					<top>360</top>
-					<width>1500</width>
+				<control type="group" description="hub side">
+					<left>50</left>
+					<right>0</right>
+					<align>center</align>
+					<bottom>-300</bottom>
+					<height>330</height>
+					<width>1920</width>
 					<height>100%</height>
 					<control type="panel" id="9501">  
-						<onleft>9500</onleft>
-						<onup>9501</onup>
+						<animation effect="slide" start="0,0" end="0,200" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="50" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<onleft>9501</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+
+						<onup>9500</onup>
 						<ondown>9501</ondown>
 						<height>400</height>
-						<onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
 						<pagecontrol>60</pagecontrol>
 						<preloaditems>2</preloaditems>
-						<orientation>vertical</orientation>
+						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-															<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/white.png</texture>
-							</control>
-													<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-														<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
-							</control>
-							
+						<itemlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<align>right</align>
-								<font>Font-ListInfo</font>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
 								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="label">
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
 							</control>
 						</itemlayout>
-						<focusedlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-								<visible>!Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-								<visible>Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
-							</control>
+						<focusedlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<font>Font-ListInfo</font>
-
-								<textcolor>Selected</textcolor>
-								<align>right</align>
-								<label>$INFO[ListItem.Label]</label>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="slide" start="0" end="0,-6" time="100" reversible="false">Focus</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>20</top>
+								<centerleft>80</centerleft>
+								<width>20%</width>
+								<height>20%</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>80</top>
+								<width>170</width>
+								<height>6</height>
+								<texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+								<aspectratio>scale</aspectratio>
 							</control>
 						</focusedlayout>
 						<content>
@@ -528,14 +576,13 @@
 				</control>
 			</control>
 		</control>
-
 	</include>
 
 	<include name="Window_Channel">
-		<include>Furniture_Background_Channel</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -600,7 +647,7 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
@@ -617,6 +664,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -696,10 +744,10 @@
 	</include>
 
 	<include name="Window_Channel2">
-		<include>Furniture_Background_Channel</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -741,7 +789,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/pvr/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -749,7 +797,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/pvr/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -764,12 +812,11 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
 
 				</control>
@@ -781,6 +828,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -858,198 +906,242 @@
 		</control>
 
 	</include>
-	
-		<include name="Window_Channel3">
-		<include>Furniture_Background_Channel</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
-												<control type="image">
-																	<height>500</height>
-<right>300</right>
-								<width>1320</width>
-								<top>510</top>
-								<texture colordiffuse="Poster2">common/floor.png</texture>
-							</control>
+
+	<include name="Window_Channel3">
+		<include>Furniture_Background</include>
+		<animation effect="slide" start="0,-200" end="0,-50" condition="!Skin.HasSetting(disable.rss)">Conditional</animation>
+		<animation effect="slide" start="0,-200" end="0,-500" condition="Skin.HasFocus(9501)">Conditional</animation>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
-			<include>Animation.SlideOpen.Right</include>
+			<include>Animation.FadeIn.Up</include>
+			<bottom>0</bottom>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-80</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,100" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<bottom>-150</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight7]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="group">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-266</bottom>
+				<height>64</height>
+				<animation effect="slide" end="0,-400" condition="true">Conditional</animation>
+				<animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+				<animation effect="fade" start="100" end="0" time="500">Conditional</animation>
+				<control type="image">
+					<bottom>-3</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+				<control type="image">
+					<bottom>-10</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,35" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+			<include>Animation.FadeIn.Up</include>
+			<control type="label">
+				<left>780</left>
+				<right>200</right>
+				<bottom>600</bottom>
+				<height>150</height>
+				<width>700</width>
+				<align>right</align>
+				<label>$VAR[Label_Hub_WidgetLabel]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
+			<control type="textbox">
+				<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<left>780</left>
+				<right>200</right>
+				<bottom>400</bottom>
+				<height>250</height>
+				<width>700</width>
+				<align>right</align>
+				<autoscroll>true</autoscroll>
+				<font>Font-ListInfo-Small</font>
+				<label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+			</control>
+			<control type="image">
+				<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<left>1558</left>
+				<top>220</top>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>--</aspectratio>
+				<animation effect="slide" start="0,100" end="0" time="500" delay="400">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="0" end="-10800" time="500000" loop="true" reversible="false" pulse="true" delay="400" condition="True">Conditional</animation>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9500).ListItem.Art(discart)]</texture>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
 			<control type="group">
 				<top>top</top>
 				<left>side</left>
 				<right>side</right>
 				<height>height</height>
 				<control type="group">
-					<left>350</left>
-					<top>-120</top>
+					<left>1500</left>
+					<top>-10</top>
 					<width>1210</width>
-					<height>65%</height>
+					<height>100%</height>
+					<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+	
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="PosterBorder">common/white.png</texture>
-						<visible>!Control.HasFocus(9500)</visible>
+						<top>95</top>
+						<posx>2</posx>
+						<width>31%</width>
+						<height>79%</height>
+						<texture background="true">$INFO[Container(9500).ListItem.Art(poster)]</texture>
+						<visible>!Skin.HasSetting(disable.bgct)</visible>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+						<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>						
 					</control>
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-						<visible>Control.HasFocus(9500)</visible>
+						<top>350</top>
+						<left>-535</left>
+						<width>400</width>
+						<height>400</height>
+						<texture background="true" >$INFO[Container(9500).ListItem.Art(clearlogo)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+												<visible>!Skin.HasSetting(disable.bgct)</visible>
+																<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+
 					</control>
 					<control type="wraplist" id="9500">
 						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
+						<right>500</right>
+						<top>100</top>
 						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-						<orientation>vertical</orientation>
-
+						<onleft>9500</onleft>
+						<onright>9500</onright>
+						<ondown>9501</ondown>
+						<orientation>horizontal</orientation>
 						<autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
-						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/pvr/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<itemlayout width="900" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</itemlayout>
-						<focusedlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/pvr/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<focusedlayout width="450" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</focusedlayout>
-						<content target="image">videodb://musicvideos/</content>
-												<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
+						<content target="video"></content>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
-										<control type="multiimage">
-						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
-						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
-
-						<imagepath background="true">$VAR[Image_Background]</imagepath>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-					</control>
-	
 				</control>
-	<control type="group" description="hub side">
-					<right>100</right>
-					<top>360</top>
-					<width>1500</width>
+				<control type="group" description="hub side">
+					<left>50</left>
+					<right>0</right>
+					<align>center</align>
+					<bottom>-300</bottom>
+					<height>330</height>
+					<width>1920</width>
 					<height>100%</height>
 					<control type="panel" id="9501">  
-						<onleft>9500</onleft>
-						<onup>9501</onup>
+						<animation effect="slide" start="0,0" end="0,200" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="50" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<onleft>9501</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+						<onup>9500</onup>
 						<ondown>9501</ondown>
 						<height>400</height>
-						<onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
 						<pagecontrol>60</pagecontrol>
 						<preloaditems>2</preloaditems>
-						<orientation>vertical</orientation>
+						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-															<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/white.png</texture>
-							</control>
-													<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-														<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
-							</control>
-							
+						<itemlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<align>right</align>
-								<font>Font-ListInfo</font>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
 								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="label">
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
 							</control>
 						</itemlayout>
-						<focusedlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-								<visible>!Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-								<visible>Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
-							</control>
+						<focusedlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<font>Font-ListInfo</font>
-
-								<textcolor>Selected</textcolor>
-								<align>right</align>
-								<label>$INFO[ListItem.Label]</label>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="slide" start="0" end="0,-6" time="100" reversible="false">Focus</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>20</top>
+								<centerleft>80</centerleft>
+								<width>20%</width>
+								<height>20%</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>80</top>
+								<width>170</width>
+								<height>6</height>
+								<texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+								<aspectratio>scale</aspectratio>
 							</control>
 						</focusedlayout>
 						<content>
@@ -1059,14 +1151,13 @@
 				</control>
 			</control>
 		</control>
-
 	</include>
 
 	<include name="Window_Music">
-		<include>Furniture_Background_Music</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -1108,7 +1199,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/music/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/music.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -1116,7 +1207,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/music/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/music.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -1131,7 +1222,7 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
@@ -1148,6 +1239,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -1227,10 +1319,10 @@
 	</include>
 
 	<include name="Window_Music2">
-		<include>Furniture_Background_Music</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -1272,7 +1364,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/music/background.jpg">$INFO[Container(9500).ListItem.Property(Background)]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -1280,7 +1372,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/music/background.jpg">$INFO[Container(9500).ListItem.Property(Background)]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -1295,12 +1387,11 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
 
 				</control>
@@ -1314,6 +1405,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -1391,198 +1483,242 @@
 		</control>
 
 	</include>
-	
+
 	<include name="Window_Music3">
-		<include>Furniture_Background_Music</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
-												<control type="image">
-																	<height>500</height>
-<right>300</right>
-								<width>1320</width>
-								<top>510</top>
-								<texture colordiffuse="Poster2">common/floor.png</texture>
-							</control>
+		<include>Furniture_Background</include>
+		<animation effect="slide" start="0,-200" end="0,-50" condition="!Skin.HasSetting(disable.rss)">Conditional</animation>
+		<animation effect="slide" start="0,-200" end="0,-500" condition="Skin.HasFocus(9501)">Conditional</animation>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
-			<include>Animation.SlideOpen.Right</include>
+			<include>Animation.FadeIn.Up</include>
+			<bottom>0</bottom>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-80</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,100" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<bottom>-150</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight7]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="group">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-266</bottom>
+				<height>64</height>
+				<animation effect="slide" end="0,-400" condition="true">Conditional</animation>
+				<animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+				<animation effect="fade" start="100" end="0" time="500">Conditional</animation>
+				<control type="image">
+					<bottom>-3</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+				<control type="image">
+					<bottom>-10</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,35" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+			<include>Animation.FadeIn.Up</include>
+			<control type="label">
+				<left>780</left>
+				<right>200</right>
+				<bottom>600</bottom>
+				<height>150</height>
+				<width>700</width>
+				<align>right</align>
+				<label>$VAR[Label_Hub_WidgetLabel]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
+			<control type="textbox">
+				<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<left>780</left>
+				<right>200</right>
+				<bottom>400</bottom>
+				<height>250</height>
+				<width>700</width>
+				<align>right</align>
+				<autoscroll>true</autoscroll>
+				<font>Font-ListInfo-Small</font>
+				<label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+			</control>
+			<control type="image">
+				<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<left>1558</left>
+				<top>220</top>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>--</aspectratio>
+				<animation effect="slide" start="0,100" end="0" time="500" delay="400">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="0" end="-10800" time="500000" loop="true" reversible="false" pulse="true" delay="400" condition="True">Conditional</animation>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9500).ListItem.Art(discart)]</texture>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
 			<control type="group">
 				<top>top</top>
 				<left>side</left>
 				<right>side</right>
 				<height>height</height>
 				<control type="group">
-					<left>350</left>
-					<top>-120</top>
+					<left>1500</left>
+					<top>-10</top>
 					<width>1210</width>
-					<height>65%</height>
+					<height>100%</height>
+					<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+	
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="PosterBorder">common/white.png</texture>
-						<visible>!Control.HasFocus(9500)</visible>
+						<top>95</top>
+						<posx>2</posx>
+						<width>31%</width>
+						<height>79%</height>
+						<texture background="true">$INFO[Container(9500).ListItem.Art(poster)]</texture>
+						<visible>!Skin.HasSetting(disable.bgct)</visible>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+						<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>						
 					</control>
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-						<visible>Control.HasFocus(9500)</visible>
+						<top>350</top>
+						<left>-535</left>
+						<width>400</width>
+						<height>400</height>
+						<texture background="true" >$INFO[Container(9500).ListItem.Art(clearlogo)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+												<visible>!Skin.HasSetting(disable.bgct)</visible>
+																<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+
 					</control>
 					<control type="wraplist" id="9500">
 						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
+						<right>500</right>
+						<top>100</top>
 						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-						<orientation>vertical</orientation>
-
+						<onleft>9500</onleft>
+						<onright>9500</onright>
+						<ondown>9501</ondown>
+						<orientation>horizontal</orientation>
 						<autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
-						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/music/background.jpg">$INFO[Container(9500).ListItem.Property(Background)]</texture>
-							</control>
+						<itemlayout width="900" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</itemlayout>
-						<focusedlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/music/background.jpg">$INFO[Container(9500).ListItem.Property(Background)]</texture>
-							</control>
+						<focusedlayout width="450" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</focusedlayout>
-						<content target="image">videodb://musicvideos/</content>
-												<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
+						<content target="video"></content>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
-										<control type="multiimage">
-						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
-						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
-
-						<imagepath background="true">$VAR[Image_Background]</imagepath>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-					</control>
-	
 				</control>
-	<control type="group" description="hub side">
-					<right>100</right>
-					<top>360</top>
-					<width>1500</width>
+				<control type="group" description="hub side">
+					<left>50</left>
+					<right>0</right>
+					<align>center</align>
+					<bottom>-300</bottom>
+					<height>330</height>
+					<width>1920</width>
 					<height>100%</height>
 					<control type="panel" id="9501">  
-						<onleft>9500</onleft>
-						<onup>9501</onup>
+						<animation effect="slide" start="0,0" end="0,200" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="50" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<onleft>9501</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+						<onup>9500</onup>
 						<ondown>9501</ondown>
 						<height>400</height>
-						<onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
 						<pagecontrol>60</pagecontrol>
 						<preloaditems>2</preloaditems>
-						<orientation>vertical</orientation>
+						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-															<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/white.png</texture>
-							</control>
-													<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-														<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
-							</control>
-							
+						<itemlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<align>right</align>
-								<font>Font-ListInfo</font>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
 								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="label">
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
 							</control>
 						</itemlayout>
-						<focusedlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-								<visible>!Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-								<visible>Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
-							</control>
+						<focusedlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<font>Font-ListInfo</font>
-
-								<textcolor>Selected</textcolor>
-								<align>right</align>
-								<label>$INFO[ListItem.Label]</label>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="slide" start="0" end="0,-6" time="100" reversible="false">Focus</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>20</top>
+								<centerleft>80</centerleft>
+								<width>20%</width>
+								<height>20%</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>80</top>
+								<width>170</width>
+								<height>6</height>
+								<texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+								<aspectratio>scale</aspectratio>
 							</control>
 						</focusedlayout>
 						<content>
@@ -1592,14 +1728,13 @@
 				</control>
 			</control>
 		</control>
-
 	</include>
 
 	<include name="Window_Kids">
-		<include>Furniture_Background_Kids</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -1641,7 +1776,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/kids/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -1649,7 +1784,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/kids/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -1664,7 +1799,7 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
@@ -1681,6 +1816,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -1760,10 +1896,10 @@
 	</include>
 
 	<include name="Window_Kids2">
-		<include>Furniture_Background_Kids</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -1805,7 +1941,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/kids/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -1813,7 +1949,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/kids/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -1828,12 +1964,11 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
 
 				</control>
@@ -1845,6 +1980,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -1922,198 +2058,242 @@
 		</control>
 
 	</include>
-	
-		<include name="Window_Kids3">
-		<include>Furniture_Background_Kids</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
-												<control type="image">
-																	<height>500</height>
-<right>300</right>
-								<width>1320</width>
-								<top>510</top>
-								<texture colordiffuse="Poster2">common/floor.png</texture>
-							</control>
+
+	<include name="Window_Kids3">
+		<include>Furniture_Background</include>
+		<animation effect="slide" start="0,-200" end="0,-50" condition="!Skin.HasSetting(disable.rss)">Conditional</animation>
+		<animation effect="slide" start="0,-200" end="0,-500" condition="Skin.HasFocus(9501)">Conditional</animation>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
-			<include>Animation.SlideOpen.Right</include>
+			<include>Animation.FadeIn.Up</include>
+			<bottom>0</bottom>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-80</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,100" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<bottom>-150</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight7]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="group">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-266</bottom>
+				<height>64</height>
+				<animation effect="slide" end="0,-400" condition="true">Conditional</animation>
+				<animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+				<animation effect="fade" start="100" end="0" time="500">Conditional</animation>
+				<control type="image">
+					<bottom>-3</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+				<control type="image">
+					<bottom>-10</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,35" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+			<include>Animation.FadeIn.Up</include>
+			<control type="label">
+				<left>780</left>
+				<right>200</right>
+				<bottom>600</bottom>
+				<height>150</height>
+				<width>700</width>
+				<align>right</align>
+				<label>$VAR[Label_Hub_WidgetLabel]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
+			<control type="textbox">
+				<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<left>780</left>
+				<right>200</right>
+				<bottom>400</bottom>
+				<height>250</height>
+				<width>700</width>
+				<align>right</align>
+				<autoscroll>true</autoscroll>
+				<font>Font-ListInfo-Small</font>
+				<label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+			</control>
+			<control type="image">
+				<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<left>1558</left>
+				<top>220</top>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>--</aspectratio>
+				<animation effect="slide" start="0,100" end="0" time="500" delay="400">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="0" end="-10800" time="500000" loop="true" reversible="false" pulse="true" delay="400" condition="True">Conditional</animation>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9500).ListItem.Art(discart)]</texture>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
 			<control type="group">
 				<top>top</top>
 				<left>side</left>
 				<right>side</right>
 				<height>height</height>
 				<control type="group">
-					<left>350</left>
-					<top>-120</top>
+					<left>1500</left>
+					<top>-10</top>
 					<width>1210</width>
-					<height>65%</height>
+					<height>100%</height>
+					<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+	
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="PosterBorder">common/white.png</texture>
-						<visible>!Control.HasFocus(9500)</visible>
+						<top>95</top>
+						<posx>2</posx>
+						<width>31%</width>
+						<height>79%</height>
+						<texture background="true">$INFO[Container(9500).ListItem.Art(poster)]</texture>
+						<visible>!Skin.HasSetting(disable.bgct)</visible>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+						<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>						
 					</control>
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-						<visible>Control.HasFocus(9500)</visible>
+						<top>350</top>
+						<left>-535</left>
+						<width>400</width>
+						<height>400</height>
+						<texture background="true" >$INFO[Container(9500).ListItem.Art(clearlogo)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+												<visible>!Skin.HasSetting(disable.bgct)</visible>
+																<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+
 					</control>
 					<control type="wraplist" id="9500">
 						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
+						<right>500</right>
+						<top>100</top>
 						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-						<orientation>vertical</orientation>
-
+						<onleft>9500</onleft>
+						<onright>9500</onright>
+						<ondown>9501</ondown>
+						<orientation>horizontal</orientation>
 						<autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
-						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/kids/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<itemlayout width="900" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</itemlayout>
-						<focusedlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/kids/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<focusedlayout width="450" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</focusedlayout>
-						<content target="image">videodb://musicvideos/</content>
-												<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
+						<content target="video"></content>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
-										<control type="multiimage">
-						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
-						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-																		            <timeperimage>3000</timeperimage>
-
-						<imagepath background="true">$VAR[Image_Background]</imagepath>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-					</control>
-	
 				</control>
-	<control type="group" description="hub side">
-					<right>100</right>
-					<top>360</top>
-					<width>1500</width>
+				<control type="group" description="hub side">
+					<left>50</left>
+					<right>0</right>
+					<align>center</align>
+					<bottom>-300</bottom>
+					<height>330</height>
+					<width>1920</width>
 					<height>100%</height>
 					<control type="panel" id="9501">  
-						<onleft>9500</onleft>
-						<onup>9501</onup>
+						<animation effect="slide" start="0,0" end="0,200" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="50" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<onleft>9501</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+						<onup>9500</onup>
 						<ondown>9501</ondown>
 						<height>400</height>
-						<onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
 						<pagecontrol>60</pagecontrol>
 						<preloaditems>2</preloaditems>
-						<orientation>vertical</orientation>
+						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-															<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/white.png</texture>
-							</control>
-													<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-														<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
-							</control>
-							
+						<itemlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<align>right</align>
-								<font>Font-ListInfo</font>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
 								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="label">
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
 							</control>
 						</itemlayout>
-						<focusedlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-								<visible>!Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-								<visible>Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
-							</control>
+						<focusedlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<font>Font-ListInfo</font>
-
-								<textcolor>Selected</textcolor>
-								<align>right</align>
-								<label>$INFO[ListItem.Label]</label>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="slide" start="0" end="0,-6" time="100" reversible="false">Focus</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>20</top>
+								<centerleft>80</centerleft>
+								<width>20%</width>
+								<height>20%</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>80</top>
+								<width>170</width>
+								<height>6</height>
+								<texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+								<aspectratio>scale</aspectratio>
 							</control>
 						</focusedlayout>
 						<content>
@@ -2123,14 +2303,13 @@
 				</control>
 			</control>
 		</control>
-
 	</include>
 
 	<include name="Window_Vod">
-		<include>Furniture_Background_Vod</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -2172,7 +2351,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/VOD/VOD1.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/VOD.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -2180,7 +2359,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/VOD/VOD1.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/VOD.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -2195,7 +2374,7 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-												            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
@@ -2212,6 +2391,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -2291,10 +2471,10 @@
 	</include>
 
 	<include name="Window_Vod2">
-		<include>Furniture_Background_Vod</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include>Furniture_Background</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -2336,7 +2516,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/VOD/VOD1.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -2344,7 +2524,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/VOD/VOD1.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -2359,12 +2539,11 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-												            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
 
 				</control>
@@ -2376,6 +2555,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -2454,197 +2634,241 @@
 
 	</include>
 
-		<include name="Window_Vod3">
-		<include>Furniture_Background_Vod</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
-												<control type="image">
-																	<height>500</height>
-<right>300</right>
-								<width>1320</width>
-								<top>510</top>
-								<texture colordiffuse="Poster2">common/floor.png</texture>
-							</control>
+	<include name="Window_Vod3">
+			<include>Furniture_Background</include>
+		<animation effect="slide" start="0,-200" end="0,-50" condition="!Skin.HasSetting(disable.rss)">Conditional</animation>
+		<animation effect="slide" start="0,-200" end="0,-500" condition="Skin.HasFocus(9501)">Conditional</animation>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
-			<include>Animation.SlideOpen.Right</include>
+			<include>Animation.FadeIn.Up</include>
+			<bottom>0</bottom>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-80</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,100" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<bottom>-150</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight7]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="group">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-266</bottom>
+				<height>64</height>
+				<animation effect="slide" end="0,-400" condition="true">Conditional</animation>
+				<animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+				<animation effect="fade" start="100" end="0" time="500">Conditional</animation>
+				<control type="image">
+					<bottom>-3</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+				<control type="image">
+					<bottom>-10</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,35" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+			<include>Animation.FadeIn.Up</include>
+			<control type="label">
+				<left>780</left>
+				<right>200</right>
+				<bottom>600</bottom>
+				<height>150</height>
+				<width>700</width>
+				<align>right</align>
+				<label>$VAR[Label_Hub_WidgetLabel]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
+			<control type="textbox">
+				<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<left>780</left>
+				<right>200</right>
+				<bottom>400</bottom>
+				<height>250</height>
+				<width>700</width>
+				<align>right</align>
+				<autoscroll>true</autoscroll>
+				<font>Font-ListInfo-Small</font>
+				<label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+			</control>
+			<control type="image">
+				<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<left>1558</left>
+				<top>220</top>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>--</aspectratio>
+				<animation effect="slide" start="0,100" end="0" time="500" delay="400">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="0" end="-10800" time="500000" loop="true" reversible="false" pulse="true" delay="400" condition="True">Conditional</animation>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9500).ListItem.Art(discart)]</texture>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
 			<control type="group">
 				<top>top</top>
 				<left>side</left>
 				<right>side</right>
 				<height>height</height>
 				<control type="group">
-					<left>350</left>
-					<top>-120</top>
+					<left>1500</left>
+					<top>-10</top>
 					<width>1210</width>
-					<height>65%</height>
+					<height>100%</height>
+					<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+	
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="PosterBorder">common/white.png</texture>
-						<visible>!Control.HasFocus(9500)</visible>
+						<top>95</top>
+						<posx>2</posx>
+						<width>31%</width>
+						<height>79%</height>
+						<texture background="true">$INFO[Container(9500).ListItem.Art(poster)]</texture>
+						<visible>!Skin.HasSetting(disable.bgct)</visible>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+						<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>						
 					</control>
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-						<visible>Control.HasFocus(9500)</visible>
+						<top>350</top>
+						<left>-535</left>
+						<width>400</width>
+						<height>400</height>
+						<texture background="true" >$INFO[Container(9500).ListItem.Art(clearlogo)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+												<visible>!Skin.HasSetting(disable.bgct)</visible>
+																<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+
 					</control>
 					<control type="wraplist" id="9500">
 						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
+						<right>500</right>
+						<top>100</top>
 						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-						<orientation>vertical</orientation>
-
+						<onleft>9500</onleft>
+						<onright>9500</onright>
+						<ondown>9501</ondown>
+						<orientation>horizontal</orientation>
 						<autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
-						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/VOD/VOD1.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<itemlayout width="900" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</itemlayout>
-						<focusedlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/VOD/VOD1.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<focusedlayout width="450" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</focusedlayout>
-						<content target="image">videodb://musicvideos/</content>
-												<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
+						<content target="video"></content>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
-										<control type="multiimage">
-						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
-						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-												            <timeperimage>3000</timeperimage>
-
-						<imagepath background="true">$VAR[Image_Background]</imagepath>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-					</control>
-	
 				</control>
-	<control type="group" description="hub side">
-					<right>100</right>
-					<top>360</top>
-					<width>1500</width>
+				<control type="group" description="hub side">
+					<left>50</left>
+					<right>0</right>
+					<align>center</align>
+					<bottom>-300</bottom>
+					<height>330</height>
+					<width>1920</width>
 					<height>100%</height>
 					<control type="panel" id="9501">  
-						<onleft>9500</onleft>
-						<onup>9501</onup>
+						<animation effect="slide" start="0,0" end="0,200" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="50" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<onleft>9501</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+						<onup>9500</onup>
 						<ondown>9501</ondown>
 						<height>400</height>
-						<onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
 						<pagecontrol>60</pagecontrol>
 						<preloaditems>2</preloaditems>
-						<orientation>vertical</orientation>
+						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-															<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/white.png</texture>
-							</control>
-													<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-														<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
-							</control>
-							
+						<itemlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<align>right</align>
-								<font>Font-ListInfo</font>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
 								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="label">
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
 							</control>
 						</itemlayout>
-						<focusedlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-								<visible>!Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-								<visible>Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
-							</control>
+						<focusedlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<font>Font-ListInfo</font>
-
-								<textcolor>Selected</textcolor>
-								<align>right</align>
-								<label>$INFO[ListItem.Label]</label>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="slide" start="0" end="0,-6" time="100" reversible="false">Focus</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>20</top>
+								<centerleft>80</centerleft>
+								<width>20%</width>
+								<height>20%</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>80</top>
+								<width>170</width>
+								<height>6</height>
+								<texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+								<aspectratio>scale</aspectratio>
 							</control>
 						</focusedlayout>
 						<content>
@@ -2654,14 +2878,13 @@
 				</control>
 			</control>
 		</control>
-
 	</include>
-	
+
 	<include name="Window_Sport">
 		<include>Furniture_Background_Sport</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -2704,7 +2927,7 @@
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
 								<texture fallback="special://skin/extras/sport/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-																						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+								<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 
 							</control>
 						</itemlayout>
@@ -2714,7 +2937,7 @@
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
 								<texture fallback="special://skin/extras/sport/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-														<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+								<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 
 							</control>
 						</focusedlayout>
@@ -2729,7 +2952,7 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-												            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
@@ -2747,6 +2970,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -2827,9 +3051,9 @@
 
 	<include name="Window_Sport2">
 		<include>Furniture_Background_Sport</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -2871,7 +3095,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/sport/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</itemlayout>
 						<focusedlayout width="1190" height="670">
@@ -2879,7 +3103,7 @@
 								<width>100%</width>
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/sport/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
+								<texture fallback="special://skin/extras/backgrounds/kids.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
 							</control>
 						</focusedlayout>
 						<content target="image">videodb://musicvideos/</content>
@@ -2894,12 +3118,11 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-												            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
 
 				</control>
@@ -2911,6 +3134,7 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -2990,196 +3214,241 @@
 	</include>
 
 	<include name="Window_Sport3">
-		<include>Furniture_Background_Sport</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
-												<control type="image">
-																	<height>500</height>
-<right>300</right>
-								<width>1320</width>
-								<top>510</top>
-								<texture colordiffuse="Poster2">common/floor.png</texture>
-							</control>
+			<include>Furniture_Background</include>
+		<animation effect="slide" start="0,-200" end="0,-50" condition="!Skin.HasSetting(disable.rss)">Conditional</animation>
+		<animation effect="slide" start="0,-200" end="0,-500" condition="Skin.HasFocus(9501)">Conditional</animation>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
-			<include>Animation.SlideOpen.Right</include>
+			<include>Animation.FadeIn.Up</include>
+			<bottom>0</bottom>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-80</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,100" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<bottom>-150</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight7]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="group">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-266</bottom>
+				<height>64</height>
+				<animation effect="slide" end="0,-400" condition="true">Conditional</animation>
+				<animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+				<animation effect="fade" start="100" end="0" time="500">Conditional</animation>
+				<control type="image">
+					<bottom>-3</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+				<control type="image">
+					<bottom>-10</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,35" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+			<include>Animation.FadeIn.Up</include>
+			<control type="label">
+				<left>780</left>
+				<right>200</right>
+				<bottom>600</bottom>
+				<height>150</height>
+				<width>700</width>
+				<align>right</align>
+				<label>$VAR[Label_Hub_WidgetLabel]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
+			<control type="textbox">
+				<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<left>780</left>
+				<right>200</right>
+				<bottom>400</bottom>
+				<height>250</height>
+				<width>700</width>
+				<align>right</align>
+				<autoscroll>true</autoscroll>
+				<font>Font-ListInfo-Small</font>
+				<label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+			</control>
+			<control type="image">
+				<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<left>1558</left>
+				<top>220</top>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>--</aspectratio>
+				<animation effect="slide" start="0,100" end="0" time="500" delay="400">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="0" end="-10800" time="500000" loop="true" reversible="false" pulse="true" delay="400" condition="True">Conditional</animation>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9500).ListItem.Art(discart)]</texture>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
 			<control type="group">
 				<top>top</top>
 				<left>side</left>
 				<right>side</right>
 				<height>height</height>
 				<control type="group">
-					<left>350</left>
-					<top>-120</top>
+					<left>1500</left>
+					<top>-10</top>
 					<width>1210</width>
-					<height>65%</height>
+					<height>100%</height>
+					<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+	
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="PosterBorder">common/white.png</texture>
-						<visible>!Control.HasFocus(9500)</visible>
+						<top>95</top>
+						<posx>2</posx>
+						<width>31%</width>
+						<height>79%</height>
+						<texture background="true">$INFO[Container(9500).ListItem.Art(poster)]</texture>
+						<visible>!Skin.HasSetting(disable.bgct)</visible>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+						<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>						
 					</control>
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-						<visible>Control.HasFocus(9500)</visible>
+						<top>350</top>
+						<left>-535</left>
+						<width>400</width>
+						<height>400</height>
+						<texture background="true" >$INFO[Container(9500).ListItem.Art(clearlogo)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+												<visible>!Skin.HasSetting(disable.bgct)</visible>
+																<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+
 					</control>
 					<control type="wraplist" id="9500">
 						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
+						<right>500</right>
+						<top>100</top>
 						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-						<orientation>vertical</orientation>
-
+						<onleft>9500</onleft>
+						<onright>9500</onright>
+						<ondown>9501</ondown>
+						<orientation>horizontal</orientation>
 						<autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
-						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/sport/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<itemlayout width="900" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</itemlayout>
-						<focusedlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture fallback="special://skin/extras/sport/background.jpg">$INFO[Container(9501).ListItem.Thumb]</texture>
-							</control>
+						<focusedlayout width="450" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</focusedlayout>
-						<content target="image">videodb://musicvideos/</content>
-												<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
+						<content target="video"></content>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
-										<control type="multiimage">
-						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
-						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-												            <timeperimage>3000</timeperimage>
-
-						<imagepath background="true">$VAR[Image_Background]</imagepath>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-					</control>
-	
 				</control>
-	<control type="group" description="hub side">
-					<right>100</right>
-					<top>360</top>
-					<width>1500</width>
+				<control type="group" description="hub side">
+					<left>50</left>
+					<right>0</right>
+					<align>center</align>
+					<bottom>-300</bottom>
+					<height>330</height>
+					<width>1920</width>
 					<height>100%</height>
 					<control type="panel" id="9501">  
-						<onleft>9500</onleft>
-						<onup>9501</onup>
+						<animation effect="slide" start="0,0" end="0,200" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="50" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<onleft>9501</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+
+						<onup>9500</onup>
 						<ondown>9501</ondown>
 						<height>400</height>
-						<onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
 						<pagecontrol>60</pagecontrol>
 						<preloaditems>2</preloaditems>
-						<orientation>vertical</orientation>
+						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-															<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/white.png</texture>
-							</control>
-													<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-														<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
-							</control>
-							
+						<itemlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<align>right</align>
-								<font>Font-ListInfo</font>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
 								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="label">
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
 							</control>
 						</itemlayout>
-						<focusedlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-								<visible>!Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-								<visible>Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
-							</control>
+						<focusedlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<font>Font-ListInfo</font>
-
-								<textcolor>Selected</textcolor>
-								<align>right</align>
-								<label>$INFO[ListItem.Label]</label>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="slide" start="0" end="0,-6" time="100" reversible="false">Focus</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>20</top>
+								<centerleft>80</centerleft>
+								<width>20%</width>
+								<height>20%</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>80</top>
+								<width>170</width>
+								<height>6</height>
+								<texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+								<aspectratio>scale</aspectratio>
 							</control>
 						</focusedlayout>
 						<content>
@@ -3189,7 +3458,6 @@
 				</control>
 			</control>
 		</control>
-
 	</include>
 
 	<!-- OSD Controls -->
@@ -3310,7 +3578,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]" flipx="true">osd/next.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
 			<onclick>PlayerControl(Previous)</onclick>
 		</control>
@@ -3321,7 +3589,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]" flipx="true">osd/ff.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
 			<onclick>PlayerControl(Rewind)</onclick>
 		</control>
@@ -3333,10 +3601,10 @@
 			<label/>
 			<altlabel/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]">osd/pause.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel">osd/pause.png</texturenofocus>
 			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-			<alttexturefocus colordiffuse="$VAR[HighlightColor]">osd/play.png</alttexturefocus>
+			<alttexturefocus colordiffuse="$VAR[OSDColor]">osd/play.png</alttexturefocus>
 			<alttexturenofocus colordiffuse="LineLabel">osd/play.png</alttexturenofocus>
 			<onclick>PlayerControl(Play)</onclick>
 		</control>
@@ -3347,7 +3615,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]">osd/stop.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
 			<onclick>PlayerControl(Stop)</onclick>
 		</control>
@@ -3358,7 +3626,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]">osd/ff.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
 			<onclick>PlayerControl(Forward)</onclick>
 		</control>
@@ -3369,7 +3637,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]">osd/next.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
 			<onclick>PlayerControl(Next)</onclick>
 		</control>
@@ -3476,247 +3744,251 @@
 			</control>
 		</control>
 	</include>
-	
+
 	<!-- HUBS -->
 	<include name="Window_Hub3">
 		<include>Furniture_Background</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
-											<control type="image">
-																	<height>500</height>
-<right>300</right>
-								<width>1320</width>
-								<top>510</top>
-								<texture colordiffuse="Poster2">common/floor.png</texture>
-							</control>
+		<animation effect="slide" start="0,-200" end="0,-50" condition="!Skin.HasSetting(disable.rss)">Conditional</animation>
+		<animation effect="slide" start="0,-200" end="0,-500" condition="Skin.HasFocus(9501)">Conditional</animation>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
 		<control type="group">
-			<include>Animation.SlideOpen.Right</include>
+			<include>Animation.FadeIn.Up</include>
+			<bottom>0</bottom>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-80</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="image">
+				<animation effect="slide" start="0,0" end="0,100" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<bottom>-150</bottom>
+				<height>202</height>
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight7]">common/white.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+			</control>
+			<control type="group">
+				<animation effect="slide" start="0,0" end="0,20" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+				<animation effect="slide" start="0,0" end="0,200" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="fade" start="100" end="0" time="200" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<bottom>-266</bottom>
+				<height>64</height>
+				<animation effect="slide" end="0,-400" condition="true">Conditional</animation>
+				<animation effect="slide" start="-1200" end="0" time="250">VisibleChange</animation>
+				<animation effect="fade" start="100" end="0" time="500">Conditional</animation>
+				<control type="image">
+					<bottom>-3</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+				<control type="image">
+					<bottom>-10</bottom>
+					<width>1920</width>
+					<height>5</height>  
+					<texture colordiffuse="$VAR[Highlight8]">common/white.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				</control>
+			</control>
+		</control>
+		<control type="group">
+			<animation effect="slide" start="0,0" end="0,35" condition="Skin.HasSetting(disable.rss)">Conditional</animation>
+			<include>Animation.FadeIn.Up</include>
+			<control type="label">
+				<left>780</left>
+				<right>200</right>
+				<bottom>600</bottom>
+				<height>150</height>
+				<width>700</width>
+				<align>right</align>
+				<label>$VAR[Label_Hub_WidgetLabel]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
+			<control type="textbox">
+				<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<left>780</left>
+				<right>200</right>
+				<bottom>400</bottom>
+				<height>250</height>
+				<width>700</width>
+				<align>right</align>
+				<autoscroll>true</autoscroll>
+				<font>Font-ListInfo-Small</font>
+				<label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+			</control>
+			<control type="image">
+				<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<left>1558</left>
+				<top>220</top>
+				<width>300</width>
+				<height>300</height>
+				<aspectratio>--</aspectratio>
+				<animation effect="slide" start="0,100" end="0" time="500" delay="400">WindowOpen</animation>
+				<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+				<animation effect="rotate" center="auto" start="0" end="-10800" time="500000" loop="true" reversible="false" pulse="true" delay="400" condition="True">Conditional</animation>
+				<aspectratio>scale</aspectratio>
+				<texture background="true" diffuse="home2/cdart-mask.png">$INFO[Container(9500).ListItem.Art(discart)]</texture>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+										<visible>!Skin.HasSetting(disable.bgct)</visible>
+
+			</control>
 			<control type="group">
 				<top>top</top>
 				<left>side</left>
 				<right>side</right>
 				<height>height</height>
 				<control type="group">
-					<left>350</left>
-					<top>-120</top>
+					<left>1500</left>
+					<top>-10</top>
 					<width>1210</width>
-					<height>65%</height>
+					<height>100%</height>
+					<animation effect="slide" start="0,0" end="0,90" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
+						<top>88</top>
+						<posx>-5</posx>
+						<width>32%</width>
+						<height>81%</height>
 						<texture colordiffuse="PosterBorder">common/white.png</texture>
-						<visible>!Control.HasFocus(9500)</visible>
+						<visible>!Skin.HasSetting(disable.bgct)</visible>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
 					<control type="image">
-						<width>100%</width>
-						<height>100%</height>
-						<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-						<visible>Control.HasFocus(9500)</visible>
+						<top>95</top>
+						<posx>2</posx>
+						<width>31%</width>
+						<height>79%</height>
+						<texture background="true">$INFO[Container(9500).ListItem.Art(poster)]</texture>
+						<visible>!Skin.HasSetting(disable.bgct)</visible>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+						<fadetime>300</fadetime>
+				<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>						
+					</control>
+					<control type="image">
+						<top>350</top>
+						<left>-535</left>
+						<width>400</width>
+						<height>400</height>
+						<texture background="true" >$INFO[Container(9500).ListItem.Art(clearlogo)]</texture>
+						<aspectratio>keep</aspectratio>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+												<visible>!Skin.HasSetting(disable.bgct)</visible>
+																<include>Animation_FadeOut</include>
+				<include>Animation_FadeIn</include>
+
 					</control>
 					<control type="wraplist" id="9500">
 						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
+						<right>500</right>
+						<top>100</top>
 						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-						<orientation>vertical</orientation>
-
+						<onleft>9500</onleft>
+						<onright>9500</onright>
+						<ondown>9501</ondown>
+						<orientation>horizontal</orientation>
 						<autoscroll time="7000">!Control.HasFocus(9500)</autoscroll>
-						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
-							</control>
+						<itemlayout width="900" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</itemlayout>
-						<focusedlayout width="1190" height="670">
-							<control type="image">
-								<width>100%</width>
-								<height>100%</height>
-								<aspectratio>scale</aspectratio>
-								<texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
-							</control>
+						<focusedlayout width="450" height="670" condition="Skin.HasSetting(disable.bgct)">
 						</focusedlayout>
-						<content limit="10" target="video">$VAR[Defs_Hub_Widget]</content>
-												<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
-					</control>
-										<control type="multiimage">
-						<left>pad</left>
-						<right>pad</right>
-						<top>pad</top>
-						<bottom>pad</bottom>
-						<pagecontrol>60</pagecontrol>
-						<preloaditems>2</preloaditems>
-						<onleft>9501</onleft>
-						<onright>9501</onright>
-												            <timeperimage>3000</timeperimage>
-
-						<imagepath background="true">$VAR[Image_Background]</imagepath>
-						<aspectratio>scale</aspectratio>
-						<fadetime>400</fadetime>
-						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-					</control>
-					<control type="group">
-						<left>pad</left>
-						<right>pad</right>
-						<bottom>pad</bottom>
-						<height>122</height>
-						<control type="image">
-							<width>100%</width>
-							<height>240</height>
-							<bottom>0</bottom>
-							<texture flipy="true" colordiffuse="bfffffff">common/gradient.png</texture>
-													<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
-						</control>
-						<control type="group">
-							<control type="label">
-								<left>side</left>
-								<right>side</right>
-								<top>10</top>
-								<height>32</height>
-								<align>right</align>
-
-								<label>$VAR[Label_Hub_WidgetLabel]</label>
-																					<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
-							</control>
-							<control type="label">
-								<left>side</left>
-								<right>side</right>
-								<top>10</top>
-								<height>32</height>
-								<align>left</align>
-								<font>Font-ListInfo-Small-Bold</font>
-								<label>$VAR[Label_Hub_WidgetLabel2]</label>
-																					<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-
-							</control>
-						</control>
-						<control type="textbox">
-							<left>side</left>
-							<right>side</right>
-							<bottom>14</bottom>
-							<height>64</height>
-							<align>right</align>
-							<font>Font-ListInfo-Small</font>
-							<label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
-																				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
-						</control>
+						<content target="video">$VAR[Defs_Hub_Widget]</content>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
 				</control>
-				
-		<control type="group" description="hub side">
-					<right>100</right>
-					<top>360</top>
-					<width>1500</width>
+				<control type="group" description="hub side">
+					<left>50</left>
+					<right>0</right>
+					<align>center</align>
+					<bottom>-300</bottom>
+					<height>330</height>
+					<width>1920</width>
 					<height>100%</height>
 					<control type="panel" id="9501">  
-						<onleft>9500</onleft>
-						<onup>9501</onup>
+						<animation effect="slide" start="0,0" end="0,200" time="220" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<animation effect="fade" start="100" end="0" time="50" condition="Control.HasFocus(9500)" Conditional="true">Conditional</animation>
+						<onleft>9501</onleft>
+												<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+						<onup>9500</onup>
 						<ondown>9501</ondown>
 						<height>400</height>
-						<onright condition="!StringCompare(Window(home).Property(HubReturn),Home) + !IsEmpty(Window(home).Property(NodeReturn))">ActivateWindow($INFO[Window(home).Property(NodeReturn)],$INFO[Window(home).Property(HubReturn)],return)</onright>
 						<pagecontrol>60</pagecontrol>
 						<preloaditems>2</preloaditems>
-						<orientation>vertical</orientation>
+						<orientation>horizontal</orientation>
 						<scrolltime tween="quadratic">400</scrolltime>
-						<itemlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-										<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture border="30" colordiffuse="PosterBorder">common/border-inner-highlight.png</texture>
-							</control>
-															<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/white.png</texture>
-							</control>
-													<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-														<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="PosterBorder">common/floor.png</texture>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
-							</control>
-							
+						<itemlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<align>right</align>
-								<font>Font-ListInfo</font>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
 								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="label">
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="fade" start="50" end="50" condition="true">Conditional</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
 							</control>
 						</itemlayout>
-						<focusedlayout width="660" height="100">
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
-								<visible>!Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<width>100%</width>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<texture colordiffuse="$VAR[HighlightColor]">common/white.png</texture>
-								<visible>Skin.HasSetting(home.colortilehigh)</visible>
-							</control>
-							<control type="image">
-								<right>550</right>
-								<top>0</top>
-								<bottom>pad</bottom>
-								<width>90</width>
-								<aspectratio>keep</aspectratio>
-								<texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
-							</control>
+						<focusedlayout aligny="center" align="center" width="230" height="266">
 							<control type="label">
-								<left>30</left>
-								<right>40</right>
-								<top>13</top>
-								<bottom>pad</bottom>
-								<font>Font-ListInfo</font>
-
-								<textcolor>Selected</textcolor>
-								<align>right</align>
-								<label>$INFO[ListItem.Label]</label>
+								<top>16</top>
+								<height>78</height>
+								<width>180</width>
+								<align>center</align>
+								<aligny>center</aligny>
+								<font>Font-HomeMenu</font>
+								<textcolor>HomeBarFG</textcolor>
+								<label>[COLOR=$INFO[ListItem.Property(textcolor)]]$INFO[ListItem.Label][/COLOR]</label>
+								<animation effect="slide" start="0" end="0,-6" time="100" reversible="false">Focus</animation>
+								<visible>Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>20</top>
+								<centerleft>80</centerleft>
+								<width>20%</width>
+								<height>20%</height>
+								<aspectratio>keep</aspectratio>
+								<texture colordiffuse="white">$INFO[ListItem.Icon]</texture>
+								<visible>!Skin.HasSetting(ct.icon.v3)</visible>
+							</control>
+							<control type="image">
+								<top>80</top>
+								<width>170</width>
+								<height>6</height>
+								<texture colordiffuse="$VAR[Defs_HomeTileColor]">common/white.png</texture>
+								<aspectratio>scale</aspectratio>
 							</control>
 						</focusedlayout>
 						<content>
@@ -3726,15 +3998,14 @@
 				</control>
 			</control>
 		</control>
-
 	</include>
 	<!-- HUBS -->
 	<include name="Window_Hub2">
 		<include>Furniture_Background</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
-			<include>Furniture_RSS</include>
-
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include>Furniture_RSS</include>
+		
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
 			<control type="group">
@@ -3789,10 +4060,10 @@
 							</control>
 						</focusedlayout>
 						<content limit="10" target="video">$VAR[Defs_Hub_Widget]</content>
-												<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+						<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 
 					</control>
-										<control type="multiimage">
+					<control type="multiimage">
 						<left>pad</left>
 						<right>pad</right>
 						<top>pad</top>
@@ -3801,7 +4072,7 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-						            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
@@ -3818,7 +4089,7 @@
 							<height>240</height>
 							<bottom>0</bottom>
 							<texture flipy="true" colordiffuse="bfffffff">common/gradient.png</texture>
-													<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+							<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 
 						</control>
 						<control type="group">
@@ -3830,7 +4101,7 @@
 								<align>right</align>
 
 								<label>$VAR[Label_Hub_WidgetLabel]</label>
-																					<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+								<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 
 							</control>
 							<control type="label">
@@ -3841,7 +4112,7 @@
 								<align>left</align>
 								<font>Font-ListInfo-Small-Bold</font>
 								<label>$VAR[Label_Hub_WidgetLabel2]</label>
-																					<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+								<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 
 							</control>
 						</control>
@@ -3853,10 +4124,11 @@
 							<align>right</align>
 							<font>Font-ListInfo-Small</font>
 							<label fallback="31092">$INFO[Container(9500).ListItem.Plot]$INFO[Container(9500).ListItem.Property(Album_Description)]$INFO[Container(9500).ListItem.Property(Artist_Description)]$INFO[Container(9500).ListItem.Property(Addon.Description)]</label>
-																				<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+							<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 						</control>
 					</control>
 				</control>
+				
 				<control type="group" description="hub side">
 					<right>0</right>
 					<top>0</top>
@@ -3865,6 +4137,8 @@
 
 					<control type="panel" id="9501">  
 						<onleft>9500</onleft>
+						<onright>9006</onright>
+						<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
 						<height>700</height>
@@ -3946,9 +4220,10 @@
 	<!-- HUBS -->
 	<include name="Window_Hub">
 		<include>Furniture_Background</include>
-		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
-            <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
 		<include>Furniture_RSS</include>
+			<include>ClearLogo</include>
 
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>
@@ -3994,7 +4269,7 @@
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
-																						<fadetime>400</fadetime>
+								<fadetime>400</fadetime>
 
 							</control>
 						</itemlayout>
@@ -4004,7 +4279,7 @@
 								<height>100%</height>
 								<aspectratio>scale</aspectratio>
 								<texture background="true" fallback="special://skin/extras/backgrounds/home.jpg">$VAR[Image_Thumb]</texture>
-														<fadetime>400</fadetime>
+								<fadetime>400</fadetime>
 
 							</control>
 						</focusedlayout>
@@ -4020,14 +4295,14 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-												            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[Image_Background]</imagepath>
 						<aspectratio>scale</aspectratio>
 						<fadetime>400</fadetime>
 						<visible>!IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 					</control>
-										<control type="multiimage">
+					<control type="multiimage">
 						<left>pad</left>
 						<right>pad</right>
 						<top>pad</top>
@@ -4036,7 +4311,7 @@
 						<preloaditems>2</preloaditems>
 						<onleft>9501</onleft>
 						<onright>9501</onright>
-												            <timeperimage>3000</timeperimage>
+						<timeperimage>3000</timeperimage>
 
 						<imagepath background="true">$VAR[image_hub]</imagepath>
 						<aspectratio>scale</aspectratio>
@@ -4053,7 +4328,7 @@
 							<height>240</height>
 							<bottom>0</bottom>
 							<texture flipy="true" colordiffuse="bfffffff">common/gradient.png</texture>
-													<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
+							<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 
 						</control>
 						<control type="group">
@@ -4067,7 +4342,7 @@
 								<label>$VAR[Label_Hub_WidgetLabel]</label>
 								<visible>IsEmpty(Container(9501).ListItem.Property(Background))</visible>
 							</control>
-	
+
 							<control type="label">
 								<left>side</left>
 								<right>side</right>
@@ -4100,6 +4375,7 @@
 					<height>100%</height>
 
 					<control type="panel" id="9501">  
+											<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
 						<onleft>9500</onleft>
 						<onup>9501</onup>
 						<ondown>9501</ondown>
@@ -4300,7 +4576,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/next.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]" flipx="true">osd/next.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
 			<onclick>PlayerControl(Previous)</onclick>
 		</control>
@@ -4311,7 +4587,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]" flipx="true">osd/ff.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]" flipx="true">osd/ff.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
 			<onclick>PlayerControl(Rewind)</onclick>
 		</control>
@@ -4323,10 +4599,10 @@
 			<label/>
 			<altlabel/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]">osd/pause.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]">osd/pause.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel">osd/pause.png</texturenofocus>
 			<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
-			<alttexturefocus colordiffuse="$VAR[HighlightColor]">osd/play.png</alttexturefocus>
+			<alttexturefocus colordiffuse="$VAR[OSDColor]">osd/play.png</alttexturefocus>
 			<alttexturenofocus colordiffuse="LineLabel">osd/play.png</alttexturenofocus>
 			<onclick>PlayerControl(Play)</onclick>
 		</control>
@@ -4337,7 +4613,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]">osd/stop.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]">osd/stop.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
 			<onclick>PlayerControl(Stop)</onclick>
 		</control>
@@ -4348,7 +4624,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]">osd/ff.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]">osd/ff.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
 			<onclick>PlayerControl(Forward)</onclick>
 		</control>
@@ -4359,7 +4635,7 @@
 			<height>48</height>
 			<label/>
 			<font>noop</font>
-			<texturefocus colordiffuse="$VAR[HighlightColor]">osd/next.png</texturefocus>
+			<texturefocus colordiffuse="$VAR[OSDColor]">osd/next.png</texturefocus>
 			<texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
 			<onclick>PlayerControl(Next)</onclick>
 		</control>

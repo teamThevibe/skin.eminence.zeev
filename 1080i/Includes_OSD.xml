@@ -21,7 +21,8 @@
         <font>Font-ListInfo-Small</font>
         <focusedcolor>Highlight</focusedcolor>
     </include>
-   <!-- 
+   <!-- <visible>!Window.IsVisible(script-cu-lrclyrics-main.xml)</visible>
+
     <include name="DefOSDUpDown">
         <onup condition="!VideoPlayer.IsFullscreen">Close</onup>
         <onup condition="IsEmpty(Window(seekbar).Property(fullscreeninfo)) + VideoPlayer.IsFullscreen">SetProperty(fullscreeninfo,1,seekbar)</onup>
@@ -276,13 +277,12 @@
                         <alttexturenofocus>noop</alttexturenofocus>
 						<focusedcolor>$VAR[OSDColor]</focusedcolor>
             <description>Playlist</description>
-
             <label>$LOCALIZE[287]</label>
             <onclick>ActivateWindow(SubtitleSearch)</onclick>
             <onup>9301</onup>
             <include>DefOSDControls</include>
 			            <include>DefOSDUpDownsub</include>
-
+        
 		<visible>!Player.HasAudio + !Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
 
         </control>
@@ -325,13 +325,32 @@
                 <effect type="fade" start="0" end="100" time="200" />
             </animation>
 
+	
+				<control type="button" id="9101">
+                <width>200</width>
+                <height>60</height>    
+                <posx>520</posx>
+				<posy>1010</posy>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>	
+				</control>	
+	
+							<!--			<control type="button" id="9101">
+		<right>0</right>
+			<width>430</width>
+			<top>top</top>
+			<height>height</height>
+                    <texture colordiffuse="infobg">common/white.png</texture>
 
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				</control>		-->
             <control type="group">
 
-				<visible allowhiddenfocus="true">ControlGroup(9300).HasFocus() | Control.HasFocus(3)  </visible>
+				<visible allowhiddenfocus="false">ControlGroup(9300).HasFocus() | Control.HasFocus(3) | Control.HasFocus(9101)</visible>
 					<visible>![Window.IsVisible(SliderDialog) | Window.IsVisible(subtitlesearch) | Window.IsVisible(OSDVideoSettings) | Window.IsVisible(OSDAudioSettings) | Window.IsVisible(VideoBookmarks)]</visible>
                 <bottom>64</bottom>
-                <centerleft>640</centerleft>
+                <centerleft>630</centerleft>
                 <width>320</width>
                 <height>210</height>
                 <control type="image">
@@ -342,8 +361,8 @@
                     <bordertexture border="24">common/24-shadow.png</bordertexture>
                     <texture colordiffuse="infobg">common/white.png</texture>
 					        	<visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
-
                 </control>
+
                 <control type="grouplist" id="9300">
                     <left>0</left>
                     <right>0</right>
@@ -359,14 +378,11 @@
 		  		<visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
 
 							<control type="button" id="9304">
-							                        <alttexturefocus>noop</alttexturefocus>
-                        <alttexturenofocus>noop</alttexturenofocus>
-						<focusedcolor>$VAR[OSDColor]</focusedcolor>
 				<description>Subs Download</description>
 				<label>$LOCALIZE[3134386]</label>
                         <width>100%</width>
                         <height>69</height>
-				<include>DefOSDControls</include>
+				<include>DefInfoButtons2</include>
 				<onclick condition="!Skin.HasSetting(customosd)">SubtitleDelay</onclick>
 		   </control>                   
                     
@@ -380,23 +396,17 @@
 					
 					                
 								   <control type="button" id="9302" description="Download">
-								                           <alttexturefocus>noop</alttexturefocus>
-                        <alttexturenofocus>noop</alttexturenofocus>
-						<focusedcolor>$VAR[OSDColor]</focusedcolor>
                         <width>100%</width>
                         <height>69</height>
-                        <include>DefOSDControls</include>
+                        <include>DefInfoButtons2</include>
 						<label>33003</label>
                         <onclick>ActivateWindow(SubtitleSearch)</onclick>
                     </control>
 				
 									<control type="togglebutton" id="9301" description="Enable Subs">
-									                        <alttexturefocus>noop</alttexturefocus>
-                        <alttexturenofocus>noop</alttexturenofocus>
-						<focusedcolor>$VAR[OSDColor]</focusedcolor>
                         <width>100%</width>
                         <height>69</height>
-                        <include>DefOSDControls</include>
+                        <include>DefInfoButtons2</include>
                         <label>$INFO[VideoPlayer.SubtitlesLanguage,[UPPERCASE],[/UPPERCASE]]  $LOCALIZE[305]   </label>
                         <altlabel>13106</altlabel>
                         <onclick>NextSubtitle</onclick>
@@ -447,7 +457,7 @@
 		    <animation effect="fade" start="0" end="100" time="200">Visible</animation>				   
 		   </control>
        
-			<!-- השאיית כתוביות
+			<!- השאיית כתוביות
 			<control type="button" id="905">
                 <description>Subs delay</description>
                 <label></label>
@@ -463,7 +473,7 @@
         	<visible>VideoPlayer.HasSubtitles + VideoPlayer.SubtitlesEnabled + !Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
 		    <animation effect="fade" start="0" end="100" time="200">Visible</animation>		
             </control>			
-            <!-- הפעלה או ביטול של כתוביות 
+            <!- הפעלה או ביטול של כתוביות 
             
 			<control type="togglebutton" id="200">
                 <posy>-41</posy>
@@ -484,8 +494,8 @@
 				<usealttexture>!VideoPlayer.SubtitlesEnabled</usealttexture>     
         	<visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
 		    <animation effect="fade" start="0" end="100" time="200">Visible</animation>				 
-		 </control>
-<!-- הצגת שפת כתוביות
+		 </control> -->
+           <!-- הצגת שפת כתוביות
 		    
 			<control type="label" id="597">
                 <posy>-43</posy>
@@ -527,7 +537,7 @@
                 <include>DefOSDUpDown</include>
         	<visible>!Window.IsVisible(DialogSlider.xml) + !Window.IsVisible(DialogPVRChannelsOSD.xml) + !Window.IsVisible(DialogPVRGuideOSD.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Window.IsActive(musicosd) | Window.IsActive(videoosd) | Player.ShowInfo | Window.IsActive(DialogFullScreenInfo.xml)]</visible>
 		    <animation effect="fade" start="0" end="100" time="200">Visible</animation>			
-			</control>-->
+			</control> -->
 			
 			        <control type="button" id="1">
             <description>Audio Settings</description>

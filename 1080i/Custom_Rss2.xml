@@ -1,63 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window type="dialog" id="1197">
-	<visible>system.getbool(lookandfeel.enablerssfeeds) + !Window.IsVisible(slideshow) + !Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
-				<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
+	<visible>system.getbool(lookandfeel.enablerssfeeds) +  !Window.IsVisible(slideshow) + !Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
+	<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>
+	    <onunload>ClearProperty(FO9001)</onunload>
 
 	<controls>
-	
-	    <control type="rss">
-            <posx>48</posx>
-            <posy>1032</posy>
-            <width>1870</width>
-            <font>Font-RSS</font>
-            <textcolor>$VAR[Highlight9]</textcolor>
-            <headlinecolor>$VAR[Highlight9]</headlinecolor>
-            <titlecolor>$VAR[Highlight9]</titlecolor>
-            <visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
-            <visible>stringcompare(Skin.String(home.style),$LOCALIZE[31181])</visible>
-			
-            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
-            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
-            <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2)">Conditional</animation>
-            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
-        </control>
-        <control type="group">
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
-			<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
-            <visible>Window.IsVisible(weather) | Window.IsVisible(home)</visible>
-            <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
-            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-            <visible>!Player.HasMedia</visible>
-            <visible>stringcompare(Skin.String(home.style),$LOCALIZE[31180])</visible>
-            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
-            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
-            <animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2)">Conditional</animation>
-            <animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1)">Conditional</animation>
-            <animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>
-            <control type="image">
-                <posx>16</posx>
-                <posy>314r</posy>
-                <width>32</width>
-                <height>32</height>
-                <texture colordiffuse="$VAR[Highlight9]">common/rss.png</texture>
-            </control>
-            <control type="rss">
-                <posx>48</posx>
-                <posy>314r</posy>
-                <width>1040</width>
-                <height>32</height>
-                <aligny>center</aligny>
-                <font>Font-RSS</font>
-                <textcolor>$VAR[Highlight9]</textcolor>
-                <headlinecolor>$VAR[Highlight9]</headlinecolor>
-                <titlecolor>$VAR[Highlight9]</titlecolor>
-            </control>
-        </control>
 
-        
-	    
+		<control type="rss">
+			<posx>48</posx>
+			<posy>1032</posy>
+			<width>1870</width>
+			<font>Font-RSS</font>
+			<textcolor>$VAR[Highlight9]</textcolor>
+			<headlinecolor>$VAR[Highlight9]</headlinecolor>
+			<titlecolor>$VAR[Highlight9]</titlecolor>
+			<visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
+			<visible>Skin.String(HomeStyle, TileinText)</visible>
+			<animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+			<animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+			<animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001)) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+		</control>
+		<control type="group">
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut</include>
+			<visible>!Skin.String(HomeStyle, TileinText)</visible>
+			<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>
+			<visible>Window.IsVisible(weather) | Window.IsVisible(home)</visible>
+			<visible>!Window.IsActive(DialogKaiToast.xml)</visible>
+			<visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+			<visible>!Skin.String(HomeStyle, HomeMenuVerticaliconlist)</visible>
+			<visible>!Player.HasMedia</visible>
+
+			<animation effect="slide" start="0,0" end="0,-48" condition="Skin.String(HomeStyle, bigtile)">Conditional</animation>
+			<animation effect="slide" end="0,80" condition="Skin.String(HomeStyle, notile)">Conditional</animation>
+			<animation effect="slide" end="0,160" condition="Skin.String(HomeStyle, TextOnly)">Conditional</animation>
+			<animation effect="slide" end="0,-165" condition="Skin.String(HomeStyle, HomeMenuVerticaliconlist)">Conditional</animation>
+			<animation effect="slide" end="0,-50" condition="Skin.String(HomeStyle, LGVIEW)">Conditional</animation>
+			<animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+			<animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+						<animation effect="slide" tween="quadratic" easing="in" time="150" end="0,330" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2) + !Skin.String(HomeStyle, bigtile)  + Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,330" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1) + !Skin.String(HomeStyle, bigtile) + Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" tween="quadratic" easing="in" time="150" end="0,266" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2) + !Skin.String(HomeStyle, bigtile)  + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,266" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1) + !Skin.String(HomeStyle, bigtile) + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,330" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1) + Skin.String(HomeStyle, bigtile)  + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" tween="quadratic" easing="in" time="150" end="0,330" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2) + Skin.String(HomeStyle, bigtile)  + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" tween="quadratic" easing="in" time="150" end="0,330" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2) + Skin.String(HomeStyle, LGVIEW)  + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,330" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1) + Skin.String(HomeStyle, LGVIEW)  + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" tween="quadratic" easing="in" time="150" end="0,-80" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2) + Skin.String(HomeStyle, notile)  + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,-80" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1) + Skin.String(HomeStyle, notile)  + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" tween="quadratic" easing="in" time="150" end="0,-160" start="0" reversible="false" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),2) + Skin.String(HomeStyle, TextOnly)  + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<animation effect="slide" start="0" end="0,-160" time="500" tween="back" reversible="false" easing="out" condition="!IsEmpty(Window(home).Property(FO9001)) + stringcompare(Window(home).Property(FO9001),1) + Skin.String(HomeStyle, TextOnly)  + !Skin.String(HomeStyle, LGVIEW) + !Window.IsVisible(DialogFavourites.xml) + !Window.IsVisible(DialogButtonMenu.xml) + !Window.IsVisible(Custom_Password.xml)">Conditional</animation>
+			<!--<animation effect="slide" end="0" start="0,266" time="150" reversible="false" condition="IsEmpty(Window(home).Property(FO9001))">Conditional</animation>-->
+			
+			<control type="image">
+				<left>0</left>
+				<posy>750</posy>
+				<width>1100</width>
+				<height>64</height>  
+
+				<texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="$VAR[Highlight8]">common/header.png</texture>
+				<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+				<visible>!Skin.String(HomeStyle, beveled)</visible>
+				<visible>!Skin.String(HomeStyle, LGVIEW)</visible>
+				<visible>!Skin.String(HomeStyle, bigtile)</visible>
+
+			</control>
+			<control type="image">
+				<posx>16</posx>
+				<posy>314r</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="$VAR[Highlight9]">common/rss.png</texture>
+				<animation effect="slide" end="0,-10" condition="Skin.String(HomeStyle, bigtile) | Skin.String(HomeStyle, LGVIEW)">Conditional</animation>
+
+			</control>
+			<control type="rss">
+				<posx>48</posx>
+				<posy>314r</posy>
+				<width>1040</width>
+				<height>32</height>
+				<aligny>center</aligny>
+				<font>Font-RSS</font>
+				<textcolor>$VAR[Highlight9]</textcolor>
+				<headlinecolor>$VAR[Highlight9]</headlinecolor>
+				<titlecolor>$VAR[Highlight9]</titlecolor>
+				<animation effect="slide" end="0,-15" condition="Skin.String(HomeStyle, bigtile) | Skin.String(HomeStyle, LGVIEW)">Conditional</animation>
+
+			</control>
+
+		</control>
+
+
+
 	</controls>
 </window>

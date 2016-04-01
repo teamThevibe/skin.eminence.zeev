@@ -5,6 +5,17 @@
     <allowoverlay>yes</allowoverlay>
 
     <controls>
+	        		<control type="image">
+			<posy>210</posy>
+			<posx>-10</posx>
+			<width>1940</width>
+			<height>750</height>
+			<texture colordiffuse="infobg" border="5">common/white.png</texture>
+			<animation effect="fade" end="90" condition="true">Conditional</animation>
+			<bordertexture colordiffuse="PosterBorder" border="5">common/border-inner.png</bordertexture>
+			<bordersize>1</bordersize>
+		</control>
+	
         <control type="group">
             <posx>horzpad</posx>
             <posy>topoffset</posy>
@@ -25,7 +36,7 @@
             <!-- LEFT LIST -->
             <control type="grouplist" id="9100">
                 <include>DefSettingsLeftGroup</include>
-                <onright>12</onright>
+				<onleft>12</onleft>
                 <ondown>9101</ondown>
                 <control type="button" id="11">
                     <label>1024</label>
@@ -45,10 +56,11 @@
             <control type="group">
                 <include>DefSettingsRightGroup</include>
                 <control type="edit" id="12">
+				
                     <description>Content Picker label</description>
                     <include>DefSettingsRightGroupWidth</include>
-                    <align>right</align>
-                    <onleft>9100</onleft>
+                    <align>left</align>
+                <onright>9100</onright>
                     <ondown>10</ondown>
                     <font>Font-ListInfo</font>
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
@@ -56,9 +68,8 @@
             
                 <control type="label">
                     <description>Content Picker label</description>
-                    <posx>30</posx>
-                    <width>1000</width>
-                    <align>left</align>
+                    <right>30</right>
+                    <align>right</align>
                     <font>Font-ListInfo</font>
                     <label>1022</label>
                 </control>
@@ -69,14 +80,14 @@
                 <posy>189</posy>
                 <height>483</height>
                 <onup>12</onup>
-                <onleft>9100</onleft>
+                <onright>9100</onright>
                 <ondown>9101</ondown>
+				
                 <include>DefSettingsRightGroup</include>
                 <itemlayout height="69" width="1200">
 
                     <control type="label">
-                        <posx>30</posx>
-                        <include>DefSettingsRightGroupWidth</include>
+                        <posx>-30</posx>
                         <width>500</width>
                         <height>66</height>
                         <aligny>center</aligny>
@@ -97,14 +108,14 @@
                     </control>
 
                     <control type="label">
-                        <posx>30</posx>
+                        <posx>-30</posx>
                         <include>DefSettingsRightGroupWidth</include>
                         <width>500</width>
                         <height>66</height>
-                        <aligny>center</aligny>
+                    <align>right</align>
                         <label>$INFO[ListItem.Label]$INFO[ListItem.Label2,  •  ,]</label>
-                        <textcolor>Highlight</textcolor>
-                        <selectedcolor>Highlight</selectedcolor>
+                        <textcolor>white</textcolor>
+                        <selectedcolor>white</selectedcolor>
                         <font>Font-ListInfo</font>
                     </control>
 

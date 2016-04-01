@@ -3,51 +3,58 @@
 <!-- vod -->
 	<shortcut>
 		<action>ActivateWindow(10025,"plugin://plugin.video.sdarot.tv",return)</action>
-		<label>סדרות TV</label>
+		<label>$LOCALIZE[43765]</label>
 		<label2>הרחבת וידאו</label2>
 		<defaultID>plugin.video.sdarot.tv</defaultID>
 		<icon>special://skin/extras/icons/ICONS/sdarot-tv v.3.png</icon>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10025,"plugin://plugin.video.MakoTV",return)</action>
-		<label>ערוץ 2 - קשת</label>
+		<action>ActivateWindow(10025,"plugin://plugin.video.MakoTV/?url=http%3A%2F%2Fwww.mako.co.il%2Fmako-vod-index&amp;mode=0&amp;name=%D7%AA%D7%9B%D7%A0%D7%99%D7%95%D7%AA+MakoTV&amp;iconimage=http://img.mako.co.il/2010/08/11/mako%20vod%20c.jpg",return)</action>
+		<label>$LOCALIZE[43766]</label>
 		<label2>הרחבת וידאו</label2>
 		<defaultID>plugin.video.MakoTV</defaultID>
-		<icon>special://skin/extras/icons/ICONS/keshet2.png</icon>
+		<icon>special://skin/extras/icons/ICONS/2.png</icon>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10025,"plugin://plugin.video.reshet.video",return)</action>
-		<label>ערוץ 2 - רשת</label>
+		<action>ActivateWindow(10025,"plugin://plugin.video.reshet.video/?category=14830",return)</action>
+		<label>$LOCALIZE[43767]</label>
 		<label2>הרחבת וידאו</label2>
 		<defaultID>plugin.video.reshet.video</defaultID>
-		<icon>special://skin/extras/icons/ReshetTV.png</icon>
+		<icon>special://skin/extras/icons/ICONS/channel22.png</icon>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10025,"plugin://plugin.video.ilten",return)</action>
-		<label>ערוץ 10</label>
+		<action>ActivateWindow(10025,"plugin://plugin.video.ilten/?category=1945",return)</action>
+		<label>$LOCALIZE[43768]</label>
 		<label2>הרחבת וידאו</label2>
 		<defaultID>plugin.video.ilten</defaultID>
 		<icon>special://skin/extras/icons/ICONS/10b.png</icon>
 	</shortcut>
 	<shortcut>
 		<action>ActivateWindow(10025,"plugin://plugin.video.IBA",return)</action>
-		<label>ערוץ 1</label>
+		<label>$LOCALIZE[43769]</label>
 		<label2>הרחבת וידאו</label2>
 		<defaultID>plugin.video.IBA</defaultID>
 		<icon>special://skin/extras/icons/ICONS/1.png</icon>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10025,"plugin://plugin.video.wallaNew.video",return)</action>
-		<label>וואלה - Yes</label>
+		<action>ActivateWindow(10025,"plugin://plugin.video.iltwenty",return)</action>
+		<label>$LOCALIZE[43770]</label>
 		<label2>הרחבת וידאו</label2>
-		<defaultID>plugin.video.wallaNew.video</defaultID>
-		<icon>special://skin/extras/icons/ICONS/YesLogo.png</icon>
+		<defaultID />
+		<icon>special://skin/extras/icons/ICONS/20b.png</icon>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10025,"plugin://plugin.video.hotVOD.video",return)</action>
-		<label>Hot - הוט</label>
+		<action>ActivateWindow(10025,"plugin://plugin.video.kodisraelstandup",return)</action>
+		<label>$LOCALIZE[43771]</label>
 		<label2>הרחבת וידאו</label2>
-		<defaultID>plugin.video.hotVOD.video</defaultID>
-		<icon>special://skin/extras/icons/ICONS/HOT.png</icon>
+		<defaultID />
+		<icon>special://skin/extras/icons/ICONS/s-up.png</icon>
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(10025,"plugin://plugin.video.featherence.docu",return)</action>
+		<label>$LOCALIZE[43772]</label>
+		<label2>הרחבת וידאו</label2>
+		<defaultID />
+		<icon>special://skin/extras/icons/ICONS/documentary.png</icon>
 	</shortcut>
 </shortcuts>

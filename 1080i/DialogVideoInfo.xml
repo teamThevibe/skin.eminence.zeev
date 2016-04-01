@@ -53,12 +53,12 @@
 					<aspectratio>keep</aspectratio>
 					<height>300</height>    
 					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-					<animation type="WindowOpen">
-						<effect type="slide" start="0" end="35" time="500" delay="1000" />
-						<effect type="rotate" start="120" end="0" time="1000"  center="auto"/>
-					</animation>
+			<animation effect="slide" start="-100" end="0" time="500" delay="400">WindowOpen</animation>
+			<animation effect="rotate" center="auto" start="0" end="-10800" time="500000" loop="true" reversible="false" pulse="true" delay="400" condition="True">Conditional</animation>
 					<fadetime>300</fadetime>
 												<visible>!IsEmpty(ListItem.Art(discart))</visible>
+			<include>Animation_FadeOut</include>
+			<include>Animation_FadeIn</include>
 
 				</control>
 				
@@ -66,16 +66,15 @@
 				<control type="image">
 					<left>1470</left>
 					<top>400</top>
-			<width>300ן</width>
+			<width>300</width>
 			<height>300</height>    
 			<texture background="true" diffuse="home2/cdart-mask.png">$INFO[ListItem.Art(poster)]</texture>
-					<animation type="windowopen">
-						<effect type="slide" start="0" end="60" time="500" delay="1000" />
-						<effect type="rotate" start="120" end="0" time="1000"  center="auto"/>
-					</animation>
+			<animation effect="slide" start="-100" end="0" time="500" delay="400">WindowOpen</animation>
+			<animation effect="rotate" center="auto" start="0" end="-10800" time="500000" loop="true" reversible="false" pulse="true" delay="400" condition="True">Conditional</animation>
 					<fadetime>300</fadetime>
 								<visible>IsEmpty(ListItem.Art(discart))</visible>
-
+			<include>Animation_FadeOut</include>
+			<include>Animation_FadeIn</include>
 				</control>
 								</control>
 

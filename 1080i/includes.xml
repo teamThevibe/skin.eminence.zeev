@@ -22,12 +22,13 @@
 	<include file="Includes_Colors.xml" />
     <include file="Includes_Object.xml" />
 	<include file="Includes_LiveTV.xml" />
+		<include file="Includes_PVR.xml" />
 	<include file="script-skinshortcuts-includes.xml"/>
 
 	<include file="	View_523_Poster.xml" />
 	<include file="View_516_Thumbnails.xml" />
 	<include file="View_60_Wall.xml" />
-	<include file="View_50_List.xml" />
+<!--	<include file="View_50_List.xml" /> -->
 	<include file="View_51_Poster.xml" />
 	<include file="View_52_Wall.xml" />
 	<include file="View_53_Wide.xml" />
@@ -41,21 +42,22 @@
 	<include file="View_517_Poster.xml" />
 	<include file="View_519_EM.xml" />
 	<include file="Viewtype_Icon.xml" />
-	<include file="Viewtype_BigWide.xml" />
 	<include file="Viewtype_List.xml" />
 		<include file="Viewtype_Wide2.xml" />
 		<include file="Viewtype_Wide3.xml" />
 		<include file="Viewtype_Wide4.xml" />
-		<include file="Viewtype_Wide5.xml" />
+		<include file="View_534_ShowCase.xml" />
+		<include file="View_535_ShowCase.xml" />
 
-	<!-- VARS -->
+
+		<!-- VARS -->
 	<variable name="HighlightColor">
-		<value condition="!IsEmpty(Window(home).Property(HighlightColor))">$INFO[Window(home).Property(HighlightColor)]</value>
-		<value condition="!IsEmpty(Skin.String(HighlightColor))">$INFO[Skin.String(HighlightColor)]</value>
+		<value condition="!IsEmpty(Window(home).Property(HighlightColor)) + !StringCompare(Skin.String(HighlightColor),None)">$INFO[Window(home).Property(HighlightColor)]</value>
+		<value condition="!IsEmpty(Skin.String(HighlightColor)) + !StringCompare(Skin.String(HighlightColor),None)">$INFO[Skin.String(HighlightColor)]</value>
 		<value>Highlight</value>
 	</variable>
 	<variable name="HighlightColor2">
-		<value condition="!IsEmpty(Skin.String(HighlightColor2))">$INFO[Skin.String(HighlightColor2)]</value>
+		<value condition="!IsEmpty(Skin.String(HighlightColor2)) + !StringCompare(Skin.String(HighlightColor2),None)">$INFO[Skin.String(HighlightColor2)]</value>
 		<value>Highlight2</value>
 	</variable>
 
@@ -64,8 +66,8 @@
 		<posy>-20</posy>
 		<width>1</width>
 		<height>1</height>
-		<texturenofocus>noop</texturenofocus>
-		<texturefocus>noop</texturefocus>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
 	</include>
 
 	<include name="Dimensions_Fullscreen">

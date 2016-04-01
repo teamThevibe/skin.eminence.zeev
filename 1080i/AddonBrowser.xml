@@ -2,8 +2,7 @@
 <!-- Foundation -->
 <window id="20">
 	<defaultcontrol always="true">50</defaultcontrol>
-	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517,519,520,524,518,521,508,509,510,511,512,513,514,515,525,531,528,530,533,532</views>
-	<allowoverlay>yes</allowoverlay>
+	<views>50,51,500,53,54,55,56,57,58,59,522,794,60,516,523,517,519,520,524,518,521,508,509,510,511,512,513,514,515,525,531,528,530,533,532,534,535</views>
 	<background>0</background>
 
 	<controls>
@@ -11,6 +10,7 @@
 		<include>GlobalBackground</include>
 
 		<include>DefMyNavViews</include>
+<include>DefMenuMouse</include>
 
 		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
             <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
@@ -18,7 +18,16 @@
 
 		<control type="group">   
 			<include>DefMyNavBar</include>    
+													<control type="button" id="9101">
+		<right>0</right>
+			<width>430</width>
+			<top>top</top>
+			<height>height</height>
+				<texturenofocus>-</texturenofocus>
+				<texturefocus>-</texturefocus>
+				</control>		
 			<control type="grouplist" id="9000">
+
 				<include>DefMyNavBarGroupList</include>
 				<control type="button" id="564">
 					<include>DefNavMenuButton2</include>  
@@ -46,12 +55,7 @@
 					<include>DefNavMenuButton2</include>
 				</control>
 
-				<control type="togglebutton" id="4">
-					<description>Ascending/Descending</description>
-					<label>584</label>
-					<altlabel>585</altlabel>
-					<include>DefNavMenuButton2</include>
-				</control>
+	
 
 				<control type="button" id="5">
 					<description>Enable auto-updates</description>
@@ -66,8 +70,6 @@
 					<align>right</align>
 					<label>25000</label>
 					<radioposx>10</radioposx>
-					<alttexturefocus>noop</alttexturefocus>
-					<alttexturenofocus>noop</alttexturenofocus>
 					<include>DefNavMenuButton2</include>
 				</control>
 				

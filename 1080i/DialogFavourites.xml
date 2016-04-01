@@ -1,125 +1,43 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
-<window type="dialog" id="134">
+<window>
     <defaultcontrol always="true">450</defaultcontrol>
-    <allowoverlay>yes</allowoverlay>
+		    <onunload>ClearProperty(FO9001)</onunload>
+
     <controls>
-
+        <include>GlobalOverlay</include>
         <control type="group">
-        <include>Furniture_Background_favorite</include>
-           
-		   <include>Animation.FadeIn</include>
-            <include>Animation.FadeOut</include>
-            <animation effect="fade" start="100" end="0" time="400" condition="Window.IsVisible(SliderDialog) | Window.IsVisible(FileBrowser)">Conditional</animation>
-
-            <control type="group">
-                <animation effect="slide" end="horznegpad" start="0" time="200" condition="ControlGroup(9000).HasFocus() | Window.IsActive(DialogContextMenu.xml)">Conditional</animation>
-                <posx>horzpad</posx>
-                <posy>topoffset</posy>
-                <include>DefSideLabel</include>
-                <control type="panel" id="450">
-                    <posx>listx</posx>
-                    <posy>0</posy>
-                    <width>1458</width>
-                    <height>980</height>
-                    <onleft>60</onleft>
-                    <onright>450</onright>
-                    <onup>450</onup>
-                    <ondown>450</ondown>
-                    <pagecontrol>60</pagecontrol>
-                    <viewtype label="539">list</viewtype>
-                    <scrolltime tween="quadratic">400</scrolltime>
-                    <orientation>vertical</orientation>
-
-                    <itemlayout width="threecollist" height="fivelinelist">
-
-                    <control type="image">
-                        <width>threecolborder</width>
-                        <height>fivelineborder</height>
-                        <texture colordiffuse="infobg" border="5">common/border-inner.png</texture>
-                    </control>
-                    <control type="image">
-                        <posx>globalpad</posx>
-                        <posy>globalpad</posy>  
-                        <width>fiveline</width>
-                        <height>fiveline</height>
-                        <texture background="true">$VAR[SquareImage]</texture>
-                        <aspectratio>scale</aspectratio>
-                    </control>
-                    <control type="label">
-                        <right>30</right>
-                        <posy>15</posy>
-                        <width>310</width>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <textcolor>PanelFG</textcolor>
-                        <label>$VAR[VARLabel]</label>
-                        <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
-                    </control>
-                    <control type="label">
-                        <right>30</right>
-                        <posy>48</posy>
-                        <width>310</width>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <textcolor>PanelFG</textcolor>
-                        <font>Font-ListInfo-Small</font>
-                        <label>$INFO[ListItem.Label2]</label>
-                    </control>
-
-                </itemlayout>
-
-                <focusedlayout width="threecollist" height="fivelinelist">
-
-                    <control type="image">
-                        <width>threecolborder</width>
-                        <height>fivelineborder</height>
-                        <texture colordiffuse="$VAR[Highlight6]" border="5">common/white.png</texture>
-
-                    </control>
-                    <control type="image">
-                        <posx>globalpad</posx>
-                        <posy>globalpad</posy>  
-                        <width>fiveline</width>
-                        <height>fiveline</height>
-                        <texture background="true">$VAR[SquareImage]</texture>
-                        <aspectratio>scale</aspectratio>
-                    </control>
-                    <control type="label">
-                        <right>30</right>
-                        <posy>15</posy>
-                        <width>310</width>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <textcolor>Selected</textcolor>
-                        <label>$VAR[VARLabel]</label>
-                        <animation effect="slide" end="0,18" condition="IsEmpty(ListItem.Label2)">Conditional</animation>
-                    </control>
-                    <control type="label">
-                        <right>30</right>
-                        <posy>48</posy>
-                        <width>310</width>
-                        <align>right</align>
-                        <aligny>center</aligny>
-                        <textcolor>Selected</textcolor>
-                        <font>Font-ListInfo-Small</font>
-                        <label>$INFO[ListItem.Label2]</label>
-                    </control>
-
-                </focusedlayout>
-
-                </control>
-                <control type="scrollbar" id="60">
-                    <posx>-8</posx>
-                    <posy>listy</posy>
-                    <height>globalh</height>
-                    <onright>450</onright>
-                    <animation effect="fade" start="100" end="0" time="400" condition="!Control.HasFocus(60) + !Container.Scrolling">Conditional</animation>
-                </control>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <centerleft>50%</centerleft>
+            <width>1600</width>
+            <bottom>350</bottom>
+            <height>514</height>
+            <include>Dialog_Background</include>
+            <include name="Dialog_Top_IconHeader">
+                <param name="label" value="$LOCALIZE[1036]" />
+                <param name="icon" value="special://skin/extras/icons/favourites.png" />
+            </include>
+            <control type="image">
+                <left>side</left>
+                <bottom>side</bottom>
+                <width>414</width>
+                <height>414</height>
+                <texture colordiffuse="PosterBorder">common/white.png</texture>
             </control>
+            <control type="image">
+                <left>side</left>
+                <bottom>side</bottom>
+                <width>414</width>
+                <height>414</height>
+                <aspectratio>keep</aspectratio>
+                <texture background="true" fallback="DefaultAddon.png">$INFO[Container(450).ListItem.Icon]</texture>
+            </control>
+            <include name="Dialog_FavouriteList">
+                <param name="id" value="450" />
+                <param name="moveid" value="noop" />
+            </include>
 
         </control>
-        
     </controls>
 
 </window>

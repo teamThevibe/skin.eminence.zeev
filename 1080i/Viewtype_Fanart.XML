@@ -10,10 +10,10 @@
             <right>side</right>
             <top>top</top>
             <height>height</height>
-            <include name="Object_Line">
+       <!--     <include name="Object_Line">
                 <param name="width" value="1880" />
                 <param name="label" value="$INFO[Control.GetLabel(3),, ]$INFO[Control.GetLabel(4),[COLOR=PosterBorder]-[/COLOR] , ]" />
-            </include>
+            </include>-->
             <include name="View_Fanart">
                 <param name="id" value="520" />
                 <param name="condition" value="Window.IsVisible(MyPics.xml) | Container.Content(episodes) | Container.Content(tvshows) | Container.Content(movies)" />

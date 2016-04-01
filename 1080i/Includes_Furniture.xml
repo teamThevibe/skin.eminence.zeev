@@ -1,1241 +1,1380 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-    <!-- OVERLAY -->
-    <include name="Furniture_OverlayInfo">
+	<!-- OVERLAY -->
+	<include name="Furniture_OverlayInfo">
 
-        <control type="button" id="9601">
-            <width>1</width>
-            <height>1</height>
-            <visible allowhiddenfocus="true">false</visible>
-            <onback>50</onback>
-            <onup>50</onup>
-            <ondown>50</ondown>
-            <onleft>50</onleft>
-            <onright>50</onright>
-        </control>
+		<control type="button" id="9601">
+			<width>1</width>
+			<height>1</height>
+			<visible allowhiddenfocus="true">false</visible>
+			<onback>50</onback>
+			<onup>50</onup>
+			<ondown>50</ondown>
+			<onleft>50</onleft>
+			<onright>50</onright>
+		</control>
 
-        <control type="group">
-            <visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
-            <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
-            <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
-            <visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
-            <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
-            <include>Animation_FadeIn</include>
-            <control type="image" description="Background">
-                <width>100%</width>
-                <height>100%</height>
-                <texture colordiffuse="Background">common/white.png</texture>
-                <animation effect="fade" start="100" end="95" condition="true">Conditional</animation>
-            </control>
-        </control>
+		<control type="group">
+			<visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
+			<visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
+			<visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+			<visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+			<visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
+			<include>Animation_FadeIn</include>
+			<control type="image" description="Background">
+				<width>100%</width>
+				<height>100%</height>
+				<texture colordiffuse="Background">common/white.png</texture>
+				<animation effect="fade" start="100" end="95" condition="true">Conditional</animation>
+			</control>
+		</control>
 
-        <control type="group">
-            <left>side</left>
-            <right>side</right>
-            <top>210</top>
-            <height>690</height>
-            <visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
-            <visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
-            <visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
-            <visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
-            <visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
-            <include>Animation_SlideIn</include>
+		<control type="group">
+			<left>side</left>
+			<right>side</right>
+			<top>210</top>
+			<height>690</height>
+			<visible>[System.IdleTime(4) + Skin.HasSetting(furniture.overlayinfo)] | Control.HasFocus(9601)</visible>
+			<visible>![Window.IsVisible(script-skinshortcuts.xml) | Window.IsVisible(DialogSongInfo.xml) | Window.IsVisible(DialogPictureInfo.xml) | Window.IsVisible(FileBrowser.xml) | Window.IsVisible(DialogProgress.xml) | Window.IsVisible(DialogYesNo.xml) | Window.IsVisible(DialogOK.xml) | Window.IsVisible(DialogSelect.xml) | Window.IsVisible(DialogContextMenu.xml) | Window.IsVisible(DialogButtonMenu.xml) | ControlGroup(9000).HasFocus()]</visible>
+			<visible>!Window.IsVisible(DialogVideoInfo.xml)</visible>
+			<visible>!Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) + !Window.IsVisible(script-globalsearch-main.xml) + !Window.IsVisible(script-globalsearch-infodialog.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml)</visible>
+			<visible>[!IsEmpty(Window(home).Property(Set.Movies.ExtendedPlot)) + [Container.Content(Sets) | substring(ListItem.Path,videodb://movies/sets,left)]] | !IsEmpty(ListItem.Plot)</visible>
+			<include>Animation_SlideIn</include>
 
-            <control type="label">
-                <description>header label</description>
-                <left>60</left>
-                <right>60</right>
-                <font>Font-Header</font>
-                <height>45</height>
-                <label>$VAR[Label_OverlayTitle]</label>
-            </control>
+			<control type="label">
+				<description>header label</description>
+				<left>60</left>
+				<right>60</right>
+				<font>Font-Header</font>
+				<height>45</height>
+				<label>$VAR[Label_OverlayTitle]</label>
+			</control>
 
-            <control type="textbox">
-                <description>textarea</description>
-                <left>60</left>
-                <right>60</right>
-                <top>90</top>
-                <bottom>0</bottom>
-                <align>left</align>
-                <font>Font-ListInfo-Big</font>
-                <label>$VAR[Label_OverlayPlot]</label>
-            </control>
-        </control>
-    </include>
+			<control type="textbox">
+				<description>textarea</description>
+				<left>60</left>
+				<right>60</right>
+				<top>90</top>
+				<bottom>0</bottom>
+				<align>left</align>
+				<font>Font-ListInfo-Big</font>
+				<label>$VAR[Label_OverlayPlot]</label>
+			</control>
+		</control>
+	</include>
 
-    <!-- RSS -->
-    <include name="Furniture_RSS">
-        <control type="group">
-            <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
-            <visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
-            <animation effect="slide" start="0,64" end="0" time="125">VisibleChange</animation>
-            <control type="image">
-                <posx>16</posx>
-                <posy>48r</posy>
-                <width>32</width>
-                <height>32</height>
-                <texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
-                <visible>Player.HasMedia | [!Player.HasMedia + [system.getbool(lookandfeel.enablerssfeeds) | Window.IsVisible(SettingsCategory.xml)] + [Window.IsVisible(weather) | Window.IsVisible(home)]]</visible>
-            </control>
-            <control type="label">
-                <bottom>16</bottom>
-                <left>48</left>
-                <right>side</right>
-                <height>32</height>
-                <font>Font-ListInfo-Small-Bold</font>
-                <textcolor>LineLabel</textcolor>
-                <label>$VAR[Label_RSS,   ,]</label>
-                <visible>Player.HasMedia</visible>
-            </control>
-        </control>
-        <control type="grouplist">
-            <visible>Skin.HasSetting(furniture.showflags)</visible>
-            <include>Animation_FadeIn</include>
-            <include>Animation_FadeOut</include>
-            <bottom>42</bottom>
-            <left>side</left>
-            <right>side</right>
-            <align>right</align>
-            <height>64</height>
-            <orientation>horizontal</orientation>
-            <itemgap>side</itemgap>
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <aspectratio>keep</aspectratio>
-                <texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[ListItem.VideoResolution,indicator/resolution/,.png]</texture>
-                <visible>!IsEmpty(ListItem.VideoResolution)</visible>
-            </control>
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <aspectratio>keep</aspectratio>
-                <visible>!IsEmpty(ListItem.AudioChannels)</visible>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
-            </control>
-            <!-- <control type="image">
+	<!-- RSS -->
+	<include name="Furniture_RSS">
+		<control type="group">
+			<visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
+			<visible>!Window.IsVisible(DialogExtendedProgressBar.xml)</visible>
+			<animation effect="slide" start="0,64" end="0" time="125">VisibleChange</animation>
+			<control type="image">
+				<posx>16</posx>
+				<posy>48r</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="LineLabel">$VAR[Image_RSS_Icon]</texture>
+				<visible>Player.HasMedia | [!Player.HasMedia + [system.getbool(lookandfeel.enablerssfeeds) | Window.IsVisible(SettingsCategory.xml)] + [Window.IsVisible(weather) | Window.IsVisible(home)]]</visible>
+			</control>
+			<control type="label">
+				<bottom>16</bottom>
+				<left>48</left>
+				<right>side</right>
+				<height>32</height>
+				<font>Font-ListInfo-Small-Bold</font>
+				<textcolor>LineLabel</textcolor>
+				<label>$VAR[Label_RSS,   ,]</label>
+				<visible>Player.HasMedia</visible>
+			</control>
+		</control>
+		<control type="grouplist">
+			<visible>Skin.HasSetting(furniture.showflags)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut</include>
+			<bottom>42</bottom>
+			<left>side</left>
+			<right>side</right>
+			<align>right</align>
+			<height>64</height>
+			<orientation>horizontal</orientation>
+			<itemgap>side</itemgap>
+			<control type="image">
+				<width>64</width>
+				<height>64</height>
+				<aspectratio>keep</aspectratio>
+				<texture colordiffuse="LineLabel" fallback="indicator/resolution/480.png">$INFO[ListItem.VideoResolution,indicator/resolution/,.png]</texture>
+				<visible>!IsEmpty(ListItem.VideoResolution)</visible>
+			</control>
+			<control type="image">
+				<width>64</width>
+				<height>64</height>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(ListItem.AudioChannels)</visible>
+				<texture colordiffuse="LineLabel" fallback="indicator/fallback.png">$INFO[ListItem.AudioChannels,indicator/channels/,.png]</texture>
+			</control>
+			<!-- <control type="image">
                 <width>95</width>
                 <height>64</height>
                 <aspectratio>keep</aspectratio>
                 <visible>!IsEmpty(ListItem.MPAA)</visible>
                 <texture colordiffuse="LineLabel" fallback="indicator/mpaa/NR.png">$INFO[ListItem.MPAA,indicator/mpaa/,.png]</texture>
             </control> -->
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <aspectratio>keep</aspectratio>
-                <visible>!IsEmpty(ListItem.Top250)</visible>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
-            </control>
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/bluray.png</texture>
-                <visible>[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]</visible>
-            </control>
-            <control type="image">
-                <width>95</width>
-                <height>64</height>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/hddvd.png</texture>
-                <visible>substring(ListItem.FilenameAndPath,hddvd)</visible>
-            </control>
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/dvd.png</texture>
-                <visible>substring(ListItem.FilenameAndPath,dvd) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
-            </control>
-            <control type="image">
-                <width>64</width>
-                <height>64</height>
-                <aspectratio>keep</aspectratio>
-                <visible>ListItem.IsStereoscopic</visible>
-                <texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
-            </control>
-        </control>
-        
-    </include>
-	
-		 <!-- BACKGROUND -->
-    <include name="Furniture_Background_favorite">
-        <control type="videowindow">
-            <visible>Skin.HasSetting(background.showvideo)</visible>
-            <visible>Player.HasVideo</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <width>100%</width>
-            <height>100%</height>
-        </control>
-        <control type="multiimage">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>600</fadetime>
-            <randomize>true</randomize>
-            <timeperimage>5000</timeperimage>
-									            <imagepath background="true" fallback="special://skin/extras/music/background.jpg">$VAR[Image_Background]</imagepath>
+			<control type="image">
+				<width>64</width>
+				<height>64</height>
+				<aspectratio>keep</aspectratio>
+				<visible>!IsEmpty(ListItem.Top250)</visible>
+				<texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/imdb.png</texture>
+			</control>
+			<control type="image">
+				<width>64</width>
+				<height>64</height>
+				<texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/bluray.png</texture>
+				<visible>[substring(ListItem.FilenameAndPath,bluray) | substring(ListItem.FilenameAndPath,bdrip) | substring(ListItem.FilenameAndPath,bd25) | substring(ListItem.FilenameAndPath,bd50)]</visible>
+			</control>
+			<control type="image">
+				<width>95</width>
+				<height>64</height>
+				<texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/hddvd.png</texture>
+				<visible>substring(ListItem.FilenameAndPath,hddvd)</visible>
+			</control>
+			<control type="image">
+				<width>64</width>
+				<height>64</height>
+				<texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/dvd.png</texture>
+				<visible>substring(ListItem.FilenameAndPath,dvd) + !substring(ListItem.FilenameAndPath,hddvd)</visible>
+			</control>
+			<control type="image">
+				<width>64</width>
+				<height>64</height>
+				<aspectratio>keep</aspectratio>
+				<visible>ListItem.IsStereoscopic</visible>
+				<texture colordiffuse="LineLabel" fallback="indicator/fallback.png">indicator/3D.png</texture>
+			</control>
+		</control>
 
-            <aspectratio>scale</aspectratio>
-            <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
-        </control>
-        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
-        </control>
-		        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade2">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
+	</include>
+
+	<!-- BACKGROUND -->
+	<include name="Furniture_Background_favorite">
+		<control type="videowindow">
+			<visible>Skin.HasSetting(background.showvideo)</visible>
+			<visible>Player.HasVideo</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<width>100%</width>
+			<height>100%</height>
+		</control>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true" fallback="special://skin/extras/backgrounds/favorite.jpg">$VAR[Image_Background]</imagepath>
+
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade2">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
 			<visible>Skin.HasSetting(Fanart.black)</visible>
 			<visible>!Control.IsVisible(516)</visible>
-        </control>
-        <control type="image">
-            <bottom>0</bottom>
-            <width>100%</width>
-            <height>512</height>
-            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>0</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
+		</control>
+		<control type="image">
+			<bottom>0</bottom>
+			<width>100%</width>
+			<height>512</height>
+			<texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>0</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>64</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
 
-        <control type="image" description="Transition Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture background="true" colordiffuse="Background">common/white.png</texture>
-            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
-            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
-        </control>
-        <control type="image" description="Background Overlay">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>1000</fadetime>
-            <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
-            <visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
-            <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
-            <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
-            <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
-        </control>
-    </include>
+		<control type="image" description="Transition Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture background="true" colordiffuse="Background">common/white.png</texture>
+			<animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+			<animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+		</control>
+		<control type="image" description="Background Overlay">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>1000</fadetime>
+			<texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
+			<visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
+			<animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
+		</control>
+	</include>
 
-		 <!-- BACKGROUND -->
-    <include name="Furniture_Background_Music">
-        <control type="videowindow">
-            <visible>Skin.HasSetting(background.showvideo)</visible>
-            <visible>Player.HasVideo</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <width>100%</width>
-            <height>100%</height>
-        </control>
-        <control type="multiimage">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>600</fadetime>
-            <randomize>true</randomize>
-            <timeperimage>5000</timeperimage>
-						            <imagepath background="true" fallback="special://skin/extras/music/background.jpg">$VAR[Image_Background]</imagepath>
-            <aspectratio>scale</aspectratio>
-            <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
-        </control>
-        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
-        </control>
-		        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade2">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
+	<!-- BACKGROUND -->
+	<include name="Furniture_Background_Music">
+		<control type="videowindow">
+			<visible>Skin.HasSetting(background.showvideo)</visible>
+			<visible>Player.HasVideo</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<width>100%</width>
+			<height>100%</height>
+		</control>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true" fallback="special://skin/extras/backgrounds/music.jpg">$VAR[Image_Background]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade2">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
 			<visible>Skin.HasSetting(Fanart.black)</visible>
 			<visible>!Control.IsVisible(516)</visible>
-        </control>
-        <control type="image">
-            <bottom>0</bottom>
-            <width>100%</width>
-            <height>512</height>
-            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>0</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
+		</control>
+		<control type="image">
+			<bottom>0</bottom>
+			<width>100%</width>
+			<height>512</height>
+			<texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>0</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>64</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
 
-        <control type="image" description="Transition Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture background="true" colordiffuse="Background">common/white.png</texture>
-            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
-            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
-        </control>
-        <control type="image" description="Background Overlay">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>1000</fadetime>
-            <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
-            <visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
-            <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
-            <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
-            <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
-        </control>
-    </include>
-	
-			 <!-- BACKGROUND -->
-    <include name="Furniture_Background_Channel">
-        <control type="videowindow">
-            <visible>Skin.HasSetting(background.showvideo)</visible>
-            <visible>Player.HasVideo</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <width>100%</width>
-            <height>100%</height>
-        </control>
-        <control type="multiimage">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>600</fadetime>
-            <randomize>true</randomize>
-            <timeperimage>5000</timeperimage>
-			            <imagepath background="true" fallback="special://skin/extras/pvr/background.jpg">$VAR[Image_Background]</imagepath>
-            <aspectratio>scale</aspectratio>
-            <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
-        </control>
-        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
-        </control>
-		        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade2">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		<control type="image" description="Transition Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture background="true" colordiffuse="Background">common/white.png</texture>
+			<animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+			<animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+		</control>
+		<control type="image" description="Background Overlay">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>1000</fadetime>
+			<texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
+			<visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
+			<animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
+		</control>
+	</include>
+
+	<!-- BACKGROUND -->
+	<include name="Furniture_Background_Channel">
+		<control type="videowindow">
+			<visible>Skin.HasSetting(background.showvideo)</visible>
+			<visible>Player.HasVideo</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<width>100%</width>
+			<height>100%</height>
+		</control>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true" fallback="special://skin/extras/pvr/background.jpg">$VAR[Image_Background]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade2">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
 			<visible>Skin.HasSetting(Fanart.black)</visible>
 			<visible>!Control.IsVisible(516)</visible>
-        </control>
-        <control type="image">
-            <bottom>0</bottom>
-            <width>100%</width>
-            <height>512</height>
-            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>0</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
+		</control>
+		<control type="image">
+			<bottom>0</bottom>
+			<width>100%</width>
+			<height>512</height>
+			<texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>0</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>64</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
 
-        <control type="image" description="Transition Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture background="true" colordiffuse="Background">common/white.png</texture>
-            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
-            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
-        </control>
-        <control type="image" description="Background Overlay">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>1000</fadetime>
-            <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
-            <visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
-            <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
-            <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
-            <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
-        </control>
-    </include>
-	
-		 <!-- BACKGROUND -->
-    <include name="Furniture_Background_Kids">
-        <control type="videowindow">
-            <visible>Skin.HasSetting(background.showvideo)</visible>
-            <visible>Player.HasVideo</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <width>100%</width>
-            <height>100%</height>
-        </control>
-        <control type="multiimage">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>600</fadetime>
-            <randomize>true</randomize>
-            <timeperimage>5000</timeperimage>
-            <imagepath background="true" fallback="special://skin/extras/kids/background.jpg">$VAR[Image_Background]</imagepath>
-            <aspectratio>scale</aspectratio>
-            <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
-        </control>
-        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
-        </control>
-		        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade2">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		<control type="image" description="Transition Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture background="true" colordiffuse="Background">common/white.png</texture>
+			<animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+			<animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+		</control>
+		<control type="image" description="Background Overlay">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>1000</fadetime>
+			<texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
+			<visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
+			<animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
+		</control>
+	</include>
+
+	<!-- BACKGROUND -->
+	<include name="Furniture_Background_Kids">
+		<control type="videowindow">
+			<visible>Skin.HasSetting(background.showvideo)</visible>
+			<visible>Player.HasVideo</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<width>100%</width>
+			<height>100%</height>
+		</control>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true" fallback="special://skin/extras/backgrounds/kids.jpg">$VAR[Image_Background]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade2">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
 			<visible>Skin.HasSetting(Fanart.black)</visible>
 			<visible>!Control.IsVisible(516)</visible>
-        </control>
-        <control type="image">
-            <bottom>0</bottom>
-            <width>100%</width>
-            <height>512</height>
-            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>0</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
+		</control>
+		<control type="image">
+			<bottom>0</bottom>
+			<width>100%</width>
+			<height>512</height>
+			<texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>0</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>64</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
 
-        <control type="image" description="Transition Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture background="true" colordiffuse="Background">common/white.png</texture>
-            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
-            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
-        </control>
-        <control type="image" description="Background Overlay">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>1000</fadetime>
-            <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
-            <visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
-            <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
-            <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
-            <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
-        </control>
-    </include>
-	
-		 <!-- BACKGROUND -->
-    <include name="Furniture_Background_Vod">
-        <control type="videowindow">
-            <visible>Skin.HasSetting(background.showvideo)</visible>
-            <visible>Player.HasVideo</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <width>100%</width>
-            <height>100%</height>
-        </control>
-        <control type="multiimage">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>600</fadetime>
-            <randomize>true</randomize>
-            <timeperimage>5000</timeperimage>
-            <imagepath background="true" fallback="special://skin/extras/VOD/VOD1.jpg">$VAR[Image_Background]</imagepath>
-            <aspectratio>scale</aspectratio>
-            <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
-        </control>
-        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
-        </control>
-		        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade2">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		<control type="image" description="Transition Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture background="true" colordiffuse="Background">common/white.png</texture>
+			<animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+			<animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+		</control>
+		<control type="image" description="Background Overlay">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>1000</fadetime>
+			<texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
+			<visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
+			<animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
+		</control>
+	</include>
+
+	<!-- BACKGROUND -->
+	<include name="Furniture_Background_Vod">
+		<control type="videowindow">
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(disable.bgvideo) + !Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>
+			<width>100%</width>
+			<height>100%</height>
+		</control>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true" fallback="special://skin/extras/backgrounds/VOD.jpg">$VAR[Image_Background]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(disable.showvideo)] | Window.IsVisible(weather)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade2">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
 			<visible>Skin.HasSetting(Fanart.black)</visible>
 			<visible>!Control.IsVisible(516)</visible>
-        </control>
-        <control type="image">
-            <bottom>0</bottom>
-            <width>100%</width>
-            <height>512</height>
-            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>0</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
+		</control>
+		<control type="image">
+			<bottom>0</bottom>
+			<width>100%</width>
+			<height>512</height>
+			<texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>0</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>64</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
 
-        <control type="image" description="Transition Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture background="true" colordiffuse="Background">common/white.png</texture>
-            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
-            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
-        </control>
-        <control type="image" description="Background Overlay">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>1000</fadetime>
-            <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
-            <visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
-            <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
-            <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
-            <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
-        </control>
-    </include>
-	
-	 <!-- BACKGROUND -->
-    <include name="Furniture_Background_Sport">
-        <control type="videowindow">
-            <visible>Skin.HasSetting(background.showvideo)</visible>
-            <visible>Player.HasVideo</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <width>100%</width>
-            <height>100%</height>
-        </control>
-        <control type="multiimage">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>600</fadetime>
-            <randomize>true</randomize>
-            <timeperimage>5000</timeperimage>
-            <imagepath background="true" fallback="special://skin/extras/sport/background.jpg">$VAR[Image_Background]</imagepath>
-            <aspectratio>scale</aspectratio>
-            <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
-        </control>
-		
-        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
-        </control>
-		        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade2">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		<control type="image" description="Transition Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture background="true" colordiffuse="Background">common/white.png</texture>
+			<animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+			<animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+		</control>
+		<control type="image" description="Background Overlay">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>1000</fadetime>
+			<texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
+			<visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
+			<animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
+		</control>
+	</include>
+
+	<!-- BACKGROUND -->
+	<include name="Furniture_Background_Sport">
+		<control type="videowindow">
+			<visible>Skin.HasSetting(background.showvideo)</visible>
+			<visible>Player.HasVideo</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<width>100%</width>
+			<height>100%</height>
+		</control>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true" fallback="special://skin/extras/sport/background.jpg">$VAR[Image_Background]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
+		</control>
+
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="FanartFade2">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<visible>!Skin.HasSetting(global.backpanelmode)</visible>
 			<visible>Skin.HasSetting(Fanart.black)</visible>
 			<visible>!Control.IsVisible(516)</visible>
-        </control>
-        <control type="image">
-            <bottom>0</bottom>
-            <width>100%</width>
-            <height>512</height>
-            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>0</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
+		</control>
+		<control type="image">
+			<bottom>0</bottom>
+			<width>100%</width>
+			<height>512</height>
+			<texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>0</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>64</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+		</control>
 
-        <control type="image" description="Transition Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture background="true" colordiffuse="Background">common/white.png</texture>
-            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
-            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
-        </control>
-        <control type="image" description="Background Overlay">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>1000</fadetime>
-            <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
-            <visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
-            <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
-            <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
-            <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
-        </control>
-    </include>
-	
-    <!-- BACKGROUND -->
-    <include name="Furniture_Background">
-        <control type="videowindow">
-            <visible>Skin.HasSetting(background.showvideo)</visible>
-            <visible>Player.HasVideo</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <width>100%</width>
-            <height>100%</height>
-        </control>
+		<control type="image" description="Transition Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture background="true" colordiffuse="Background">common/white.png</texture>
+			<animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+			<animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+		</control>
+		<control type="image" description="Background Overlay">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>1000</fadetime>
+			<texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
+			<visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
+			<animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
+
+		</control>
+	</include>
+
+	<!-- BACKGROUND -->
+	<include name="Furniture_Background">
+		<control type="videowindow">
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(disable.bgvideo) + !Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>
+			<width>100%</width>
+			<height>100%</height>
+		</control>
+		<control type="videowindow">
+			<visible>!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(background.showvideo) + Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>
+			<width>100%</width>
+			<height>100%</height>
+		</control>
 		<!-- $INFO[Container(9501).ListItem.Property(Background)] -->
-        <control type="multiimage">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>600</fadetime>
-            <randomize>true</randomize>
-            <timeperimage>5000</timeperimage>
-            <imagepath background="true">$VAR[Image_Background]</imagepath>
-            <aspectratio>scale</aspectratio>
-            <animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background))</visible>
-        </control>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true">$VAR[Image_Background]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(disable.bgvideo) + !Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true">$VAR[Image_Background]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo) + Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<timeperimage>3000</timeperimage>
 
-        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
-        </control>
-		        <control type="image" description="Fanart Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture colordiffuse="FanartFade2">common/white.png</texture>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-            <visible>!Skin.HasSetting(global.backpanelmode)</visible>
-			<visible>Skin.HasSetting(Fanart.black)</visible>
-			<visible>!Control.IsVisible(516)</visible>
-        </control>
-        <control type="image">
-            <bottom>0</bottom>
-            <width>100%</width>
-            <height>512</height>
-            <texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>0</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
-        <control type="group">
-            <top>210</top>
-            <bottom>64</bottom>
-            <width>100%</width>
-            <visible>Skin.HasSetting(global.backpanelmode)</visible>
-            <visible>!Skin.HasSetting(furniture.showflags)</visible>
-            <include>Dialog_Background</include>
-            <visible>!Window.IsVisible(home)</visible>
-            <visible>!Window.IsVisible(weather)</visible>
-        </control>
+			<imagepath background="true">$INFO[Container(9002).ListItem.Property(Background)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<fadetime>600</fadetime>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
+			<visible>Control.HasFocus(9002) + Container(9002).ListItem.Property(Background)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control> 
 
-        <control type="image" description="Transition Fade">
-            <width>100%</width>
-            <height>100%</height>
-            <texture background="true" colordiffuse="Background">common/white.png</texture>
-            <animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
-            <animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
-        </control>
-        <control type="image" description="Background Overlay">
-            <width>100%</width>
-            <height>100%</height>
-            <fadetime>1000</fadetime>
-            <texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
-            <visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
-            <animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
-            <animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
-            <visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
-        </control>
-    </include>
+		<control type="multiimage">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<timeperimage>3000</timeperimage>
 
-	    <!-- BACKGROUND -->
-    <include name="Furniture_Background22">
-			<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0)</visible>
-				<visible>!Window.IsVisible(2003)</visible>
-        <control type="multiimage">
-		<posx>-100</posx>
-		<posy>-100</posy>
-            <width>120%</width>
-            <height>120%</height>
-            <fadetime>600</fadetime>
-            <randomize>true</randomize>
-            <timeperimage>5000</timeperimage>
-            <imagepath background="true">$VAR[Image_Background]</imagepath>
-            <aspectratio>scale</aspectratio>
-            <animation effect="zoom" start="130" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-            <visible>!Player.HasVideo + !Window.IsActive(mypics.xml) |[Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather) </visible>
-        </control>
+			<imagepath background="true">$INFO[Container(9005).ListItem.Property(Background)]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<fadetime>600</fadetime>
+			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
+			<visible>Control.HasFocus(9005) + Container(9005).ListItem.Property(Background)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control> 
+		<control type="image">
+			<bottom>0</bottom>
+			<width>100%</width>
+			<height>512</height>
+			<texture colordiffuse="7f000000" flipy="true">common/gradient.png</texture>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>0</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
+		<control type="group">
+			<top>210</top>
+			<bottom>64</bottom>
+			<width>100%</width>
+			<visible>Skin.HasSetting(global.backpanelmode)</visible>
+			<visible>!Skin.HasSetting(furniture.showflags)</visible>
+			<include>Dialog_Background</include>
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
 
-    </include>
-	
-	    <include name="Furniture_Background23">
-			<visible>Control.IsVisible(516) + !IntegerGreaterThan(Container.NumItems,0)</visible>
-        <control type="multiimage">
-		<posx>-100</posx>
-		<posy>-100</posy>
-            <width>120%</width>
-            <height>120%</height>
-            <fadetime>600</fadetime>
-            <randomize>true</randomize>
-            <timeperimage>5000</timeperimage>
-            <imagepath background="true">$VAR[Image_Background]</imagepath>
-            <aspectratio>scale</aspectratio>
-            <visible>!Player.HasVideo |[Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather) </visible>
-        </control>
+		<control type="image" description="Transition Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture background="true" colordiffuse="Background">common/white.png</texture>
+			<animation effect="fade" start="0" end="100" time="400">WindowClose</animation>
+			<animation effect="fade" end="0" start="100" time="400">WindowOpen</animation>
+		</control>
+		<control type="image" description="Background Overlay">
+			<width>100%</width>
+			<height>100%</height>
+			<fadetime>1000</fadetime>
+			<texture colordiffuse="4f777777">$INFO[Skin.String(global.background)]</texture>
+			<visible>!IsEmpty(Skin.String(global.background)) + !Skin.HasSetting(global.backpanelmode)</visible>
+			<animation effect="fade" end="100" start="0" time="250" condition="Window.Previous(home) | Window.Previous(visualisation) | Window.Previous(fullscreenvideo)">WindowOpen</animation>
+			<animation effect="fade" end="0" start="100" time="250" condition="Window.Next(home)">WindowClose</animation>
+			<visible>!Window.IsVisible(home) + !Window.IsVisible(visualisation)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
 
-    </include> 
-	
-    <!-- TOP BAR -->
-	
-    <variable name="Furniture_TopBar_Tile_BGCOLOR">
-        <value>$VAR[HighlightColor]</value>
-        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">$VAR[HighlightColor]</value>
-        <value>PosterBorder</value>
-    </variable>
-    <variable name="Furniture_TopBar_MainLabel_Color">
-        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeMainLabel</value>
-        <value>MainLabel</value>
-    </variable>
-    <variable name="Furniture_TopBar_SubLabel_Color">
-        <value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeSubLabel</value>
-        <value>SubLabel</value>
-    </variable>
-    <variable name="Furniture_TopBar_Header_MainLabel">
-        <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
-        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">$LOCALIZE[31145]</value>
-        <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31149]</value>
-        <value condition="Window.IsVisible(filemanager)">$LOCALIZE[7]</value>
-        <value condition="Window.IsVisible(MyWeather.xml)">$LOCALIZE[8]</value>
-        <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
-        <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(10)">$LOCALIZE[19032]</value>
-        <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(11)">$LOCALIZE[19030]</value>
-        <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(12)">$LOCALIZE[19031]</value>
-        <value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(13)">$LOCALIZE[19029]</value>
-        <value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
-        <value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
-        <value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[19017]</value>
-        <value condition="stringcompare(Container.FolderPath,videodb://tvshows/titles/)">$LOCALIZE[20343]</value>
-        <value condition="stringcompare(Container.FolderPath,videodb://movies/titles/)">$LOCALIZE[20342]</value>
-        <value condition="Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle) + substring(Container.FolderPath,videodb://tvshows/titles/)">[CAPITALIZE]$INFO[ListItem.TvShowTitle][/CAPITALIZE]</value>
-        <value condition="!IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
-        <value condition="Window.IsVisible(home) + IsEmpty(Skin.String(home.mainheadertext))">$LOCALIZE[31158]</value>
-        <value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(home.mainheadertext))">$INFO[Skin.String(home.mainheadertext)]</value>
-        <value condition="Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value>
-        <value condition="Window.IsVisible(settings)">$LOCALIZE[5]</value>
-        <value condition="Window.IsVisible(EventLog.xml)">$LOCALIZE[14111]</value>
-        <value>$LOCALIZE[15100]</value>
-    </variable>
-    <variable name="Furniture_Counter_Movies">
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.UnWatched)][/COLOR] $LOCALIZE[20342]</value>
-    </variable>
-    <variable name="Furniture_Counter_Episodes">
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + IntegerGreaterThan(Window(home).Property(Movies.Count),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0) + IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.UnWatched)][/COLOR] $LOCALIZE[20360]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0) + IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.UnWatched)][/COLOR] $LOCALIZE[20360]</value>
-    </variable>
-    <variable name="Furniture_Counter_Songs">
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + [IntegerGreaterThan(Window(home).Property(Episodes.Count),0) | IntegerGreaterThan(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + [IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) | IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) + !IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
-    </variable>
-    <variable name="Furniture_Counter_Channels">
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + [IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) | IntegerGreaterThan(Window(home).Property(Episodes.Count),0) | IntegerGreaterThan(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
-        <value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + !IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + [IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) | IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) | IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
-        <value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + !IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) + !IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
-    </variable>
-    <variable name="Furniture_TopBar_Header_SubLabel">
-        <value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.Total)][/COLOR] $LOCALIZE[31084]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.TodayTotal)][/COLOR] $LOCALIZE[31085]</value>
-        <value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
-        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalItems)][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(CurrentPage)][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalPages)][/COLOR] $LOCALIZE[31067]</value>
-        <value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
-        <value condition="!IsEmpty(Skin.String(home.subheadertext))">$INFO[Skin.String(home.subheadertext)]</value>
-    </variable>
-    <variable name="Furniture_TopBar_Tile_Text">
-        <value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[503]</value>
-        <value condition="Window.IsVisible(DialogMuteBug.xml)">$LOCALIZE[31013]</value>
-        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31070]</value>
-        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]">$VAR[Label_PlayerStatus]</value>
-        <value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
-        <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
-        <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">$LOCALIZE[5]</value>
-        <value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
-        <value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
-        <value condition="Window.IsVisible(MyMusicPlaylist.xml)">$LOCALIZE[559]</value>
-        <value condition="!IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
-        <value>$LOCALIZE[10000]</value>
-    </variable>
-    <variable name="Furniture_TopBar_Tile_Icon">
-        <value condition="Window.IsVisible(DialogMuteBug.xml)">special://skin/extras/icons/mute.png</value>
-        <value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">special://skin/extras/icons/infobubble.png</value>
-        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasAudio">special://skin/extras/icons/songs.png</value>
-        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(movies)">special://skin/extras/icons/film.png</value>
-        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(episodes)">special://skin/extras/icons/tv.png</value>
-        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(livetv)">special://skin/extras/icons/livetv.png</value>
-        <value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo">special://skin/extras/icons/video-addons.png</value>
-        <value condition="Window.IsVisible(weather)">special://skin/extras/icons/sun.png</value>
-        <value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">special://skin/extras/icons/settings.png</value>
-        <value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">special://skin/extras/icons/settings.png</value>
-        <value condition="Window.IsVisible(AddonBrowser.xml)">special://skin/extras/icons/addons.png</value>
-        <value condition="Window.IsVisible(MyMusicPlaylist.xml)">special://skin/extras/icons/playlist.png</value>
-        <value condition="Window.IsVisible(FileManager.xml)">special://skin/extras/icons/database.png</value>
-        <value condition="!IsEmpty(Window(home).Property(Header.Icon)) + substring(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
-        <value>special://skin/extras/icons/home.png</value>
-    </variable>
-    <include name="Furniture_TopBar_Tile">
-        <control type="image">
-            <posy>18</posy>
-            <posx>-88</posx>
-            <width>300</width>
-            <height>164</height>    
-            <texture align="left" border="75">$VAR[HeaderTileTexture]</texture>
-            <colordiffuse>$VAR[HeaderColorBG2]</colordiffuse>
-				  <visible>!Skin.HasSetting(home.colortilehigh2)</visible>
 
-        </control>
-		
-		
-				        <control type="image">
-            <posy>18</posy>
-            <posx>-88</posx>
-            <width>300</width>
-            <height>164</height>    
-            <texture align="left" border="75">$VAR[HeaderTileTexture]</texture>
-            <colordiffuse>$VAR[HeaderColorBG3]</colordiffuse>
-	  <visible>Skin.HasSetting(home.colortilehigh2)</visible>
-        </control>
-		
-		        <control type="image">
-            <posy>18</posy>
-            <posx>-88</posx>
-            <width>300</width>
-            <height>164</height>    
-            <texture align="left" border="75">$VAR[HeaderTileTexture]</texture>
-            <colordiffuse>$VAR[HeaderColorBG]</colordiffuse>
+		<control type="multiimage">
+			<visible>Window.IsActive(home) + Player.HasAudio + !Skin.HasSetting(Homemusic.ShowFanart2)</visible>
+			<aspectratio>scale</aspectratio>
+			<include condition="!Skin.HasSetting(Homemusic.ShowFanart2)">Dimensions_Fullscreen</include>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<imagepath background="true">$INFO[Player.Art(fanart)]</imagepath>
+			<animation effect="fade" start="100" end="100" time="0" condition="Skin.HasSetting(Homemusic.ShowFanart)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="!Skin.HasSetting(Disable.AnimateMusicFanart)">Conditional</animation>
+			<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="!Skin.HasSetting(Disable.AnimateMusicFanart)">Conditional</animation>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
+		<control type="visualisation">
+			<visible>Window.IsActive(home) + Player.HasAudio + !Skin.HasSetting(Homemusic.ShowFanart)</visible>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
+
+
+		<control type="multiimage">
+			<visible>!Window.IsActive(home) + Player.HasAudio + !Skin.HasSetting(Homemusic.ShowFanart3)</visible>
+			<aspectratio>scale</aspectratio>
+			<include condition="!Skin.HasSetting(Homemusic.ShowFanart2)">Dimensions_Fullscreen</include>
+			<timeperimage>10000</timeperimage>
+			<randomize>true</randomize>
+			<loop>yes</loop>
+			<imagepath background="true">$INFO[Player.Art(fanart)]</imagepath>
+			<animation effect="fade" start="100" end="100" time="0" condition="Skin.HasSetting(Homemusic.ShowFanart)">Conditional</animation>
+			<animation effect="zoom" start="110" end="130" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="!Skin.HasSetting(Disable.AnimateMusicFanart)">Conditional</animation>
+			<animation effect="slide" start="-30,-30" end="30,30" time="6000" tween="sine" easing="inout" pulse="true" condition="!Skin.HasSetting(Disable.AnimateMusicFanart)">Conditional</animation>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
+		<control type="visualisation">
+			<visible>!Window.IsActive(home) + Player.HasAudio + !Skin.HasSetting(Homemusic.ShowFanart4)</visible>
+			<visible>!Window.IsVisible(weather)</visible>
+			<texture colordiffuse="FanartFade3">common/white.png</texture>
+			<include>Animation_FadeIn</include>
+			<include>Animation_FadeOut_Delay</include>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="black">common/white.png</texture>
+			<visible>!Window.IsVisible(home)</visible>
+			<include>home_fade_level2</include>
+		</control>
+		<control type="image" description="Fanart Fade">
+			<width>100%</width>
+			<height>100%</height>
+			<texture colordiffuse="black">common/white.png</texture>
+			<visible>Window.IsVisible(home)</visible>
+			<include>home_fade_level</include>
+		</control>
+	</include>
+
+
+	<!-- BACKGROUND -->
+	<include name="Furniture_Background22">
+		<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0)</visible>
+		<visible>!Window.IsVisible(2003)</visible>
+		<control type="multiimage">
+			<posx>-100</posx>
+			<posy>-100</posy>
+			<width>120%</width>
+			<height>120%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true">$VAR[Image_Background]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<animation effect="zoom" start="130" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
+			<visible>!Player.HasVideo + !Window.IsActive(mypics.xml) |[Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather) </visible>
+		</control>
+
+	</include>
+
+	<include name="Furniture_Background23">
+		<visible>Control.IsVisible(516) + !IntegerGreaterThan(Container.NumItems,0)</visible>
+		<control type="multiimage">
+			<posx>-100</posx>
+			<posy>-100</posy>
+			<width>120%</width>
+			<height>120%</height>
+			<fadetime>600</fadetime>
+			<randomize>true</randomize>
+			<timeperimage>5000</timeperimage>
+			<imagepath background="true">$VAR[Image_Background]</imagepath>
+			<aspectratio>scale</aspectratio>
+			<visible>!Player.HasVideo |[Player.HasVideo + !Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather) </visible>
+		</control>
+
+	</include> 
+
+	<!-- TOP BAR -->
+
+	<variable name="Furniture_TopBar_Tile_BGCOLOR">
+		<value>$VAR[HighlightColor]</value>
+		<value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">$VAR[HighlightColor]</value>
+		<value>PosterBorder</value>
+	</variable>
+	<variable name="Furniture_TopBar_MainLabel_Color">
+		<value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeMainLabel</value>
+		<value>MainLabel</value>
+	</variable>
+	<variable name="Furniture_TopBar_SubLabel_Color">
+		<value condition="Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation) | Window.IsVisible(weather) | Skin.HasSetting(global.backpanelmode)">HomeSubLabel</value>
+		<value>SubLabel</value>
+	</variable>
+	<variable name="Furniture_TopBar_Header_MainLabel">
+		<value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[20186]...</value>
+		<value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">$LOCALIZE[31145]</value>
+		<value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31149]</value>
+		<value condition="Window.IsVisible(filemanager)">$LOCALIZE[7]</value>
+		<value condition="Window.IsVisible(MyWeather.xml)">$LOCALIZE[8]</value>
+		<value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[10029]</value>
+		<value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(10)">$LOCALIZE[19032]</value>
+		<value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(11)">$LOCALIZE[19030]</value>
+		<value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(12)">$LOCALIZE[19031]</value>
+		<value condition="Window.IsVisible(MyPVRGuide.xml) + Control.IsVisible(13)">$LOCALIZE[19029]</value>
+		<value condition="Window.IsVisible(MyPVRTimers.xml)">$LOCALIZE[19040]</value>
+		<value condition="Window.IsVisible(MyPVRSearch.xml)">$LOCALIZE[137]</value>
+		<value condition="Window.IsVisible(MyPVRRecordings.xml)">$LOCALIZE[19017]</value>
+		<value condition="stringcompare(Container.FolderPath,videodb://tvshows/titles/)">$LOCALIZE[20343]</value>
+		<value condition="stringcompare(Container.FolderPath,videodb://movies/titles/)">$LOCALIZE[20342]</value>
+		<value condition="Container.Content(episodes) + !IsEmpty(ListItem.TvShowTitle) + substring(Container.FolderPath,videodb://tvshows/titles/)">[CAPITALIZE]$INFO[ListItem.TvShowTitle][/CAPITALIZE]</value>
+		<value condition="!IsEmpty(Container.FolderName)">[CAPITALIZE]$INFO[Container.FolderName][/CAPITALIZE]</value>
+		<value condition="Window.IsVisible(home) + !IsEmpty(Skin.String(Header.Label))">$LOCALIZE[15100]</value>
+		<value condition="Window.IsVisible(home) + IsEmpty(Window(home).Property(Header.Label))">$LOCALIZE[10000]</value>
+		<value condition="Window.IsVisible(home) + !IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
+		<value condition="Window.IsActive(systeminfo) | Window.IsActive(profiles) | Window.IsVisible(SettingsCategory.xml) | Window.IsActive(addonbrowser) | Window.IsVisible(SkinSettings.xml)">$VAR[Label_SettingsHeader]</value>
+		<value condition="Window.IsVisible(settings)">$LOCALIZE[5]</value>
+		<value condition="Window.IsVisible(EventLog.xml)">$LOCALIZE[14111]</value>
+		<value>$INFO[Window(home).Property(Header.Label)]</value>
+	</variable>
+	<variable name="Furniture_Counter_Movies">
+		<value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.Count)][/COLOR] $LOCALIZE[20342]</value>
+		<value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Movies.UnWatched)][/COLOR] $LOCALIZE[20342]</value>
+	</variable>
+	<variable name="Furniture_Counter_Episodes">
+		<value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + IntegerGreaterThan(Window(home).Property(Movies.Count),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
+		<value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.Count)][/COLOR] $LOCALIZE[20360]</value>
+		<value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0) + IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0)">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.UnWatched)][/COLOR] $LOCALIZE[20360]</value>
+		<value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0) + IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Episodes.UnWatched)][/COLOR] $LOCALIZE[20360]</value>
+	</variable>
+	<variable name="Furniture_Counter_Songs">
+		<value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + [IntegerGreaterThan(Window(home).Property(Episodes.Count),0) | IntegerGreaterThan(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+		<value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+		<value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + [IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) | IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+		<value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) + !IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(Music.SongsCount)][/COLOR] $LOCALIZE[134]</value>
+	</variable>
+	<variable name="Furniture_Counter_Channels">
+		<value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + [IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) | IntegerGreaterThan(Window(home).Property(Episodes.Count),0) | IntegerGreaterThan(Window(home).Property(Movies.Count),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+		<value condition="!Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + !IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.Count),0) + !IntegerGreaterThan(Window(home).Property(Movies.Count),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+		<value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + [IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) | IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) | IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)]">  •  [COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+		<value condition="Skin.HasSetting(header.mainheadercount) + IntegerGreaterThan(Pvr.BackendChannels,0) + !IntegerGreaterThan(Window(home).Property(Music.SongsCount),0) + !IntegerGreaterThan(Window(home).Property(Episodes.UnWatched),0) + !IntegerGreaterThan(Window(home).Property(Movies.UnWatched),0)">[COLOR=$VAR[HighlightColor2]]$INFO[Pvr.BackendChannels][/COLOR] $LOCALIZE[19019]</value>
+	</variable>
+	<variable name="Furniture_TopBar_Header_SubLabel">
+		<value condition="Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.Total)][/COLOR] $LOCALIZE[31084]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window(home).Property(NextAired.TodayTotal)][/COLOR] $LOCALIZE[31085]</value>
+		<value condition="Window.IsVisible(LoginScreen.xml)">$LOCALIZE[20115]</value>
+		<value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml)">[COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalItems)][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(CurrentPage)][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Window.Property(TotalPages)][/COLOR] $LOCALIZE[31067]</value>
+		<value condition="!IsEmpty(Container.NumItems)">[COLOR=$VAR[HighlightColor2]]$INFO[Container.NumItems][/COLOR] $LOCALIZE[31001]  •  [COLOR=$VAR[HighlightColor2]]$INFO[Container.CurrentPage][/COLOR] $LOCALIZE[20163] [COLOR=$VAR[HighlightColor2]]$INFO[Container.NumPages][/COLOR] $LOCALIZE[31067]</value>
+		<value condition="!IsEmpty(Skin.String(home.subheadertext))">$INFO[Skin.String(home.subheadertext)]</value>
+	</variable>
+	<variable name="Furniture_TopBar_Tile_Text">
+		<value condition="Window.IsVisible(DialogBusy.xml)">$LOCALIZE[503]</value>
+		<value condition="Window.IsVisible(DialogMuteBug.xml)">$LOCALIZE[31134]</value>
+		<value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">$LOCALIZE[31070]</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]">$VAR[Label_PlayerStatus]</value>
+		<value condition="Window.IsVisible(FileManager.xml)">$LOCALIZE[744]</value>
+		<value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">$LOCALIZE[5]</value>
+		<value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">$LOCALIZE[5]</value>
+		<value condition="Window.IsVisible(weather)">$LOCALIZE[8]</value>
+		<value condition="Window.IsVisible(AddonBrowser.xml)">$LOCALIZE[24001]</value>
+		<value condition="Window.IsVisible(MyMusicPlaylist.xml)">$LOCALIZE[559]</value>
+		<value condition="!Window.IsVisible(home) + !IsEmpty(Window(home).Property(Header.Label))">$INFO[Window(home).Property(Header.Label)]</value>
+		<value>$LOCALIZE[10000]</value>
+	</variable>
+	<variable name="Furniture_TopBar_Tile_Icon">
+		<value condition="Window.IsVisible(DialogMuteBug.xml)">special://skin/extras/icons/mute.png</value>
+		<value condition="Window.IsVisible(script-ExtendedInfo Script-VideoList.xml) | Window.IsVisible(script-NextAired-TVGuide.xml) | Window.IsVisible(script-NextAired-TVGuide2.xml)">special://skin/extras/icons/infobubble.png</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasAudio">special://skin/extras/icons/songs.png</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(movies)">special://skin/extras/icons/film.png</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(episodes)">special://skin/extras/icons/tv.png</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo + VideoPlayer.Content(livetv)">special://skin/extras/icons/livetv.png</value>
+		<value condition="[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)] + Player.HasVideo">special://skin/extras/icons/video-addons.png</value>
+		<value condition="Window.IsVisible(weather)">special://skin/extras/icons/sun.png</value>
+		<value condition="Window.IsVisible(SettingsCategory.xml) | Window.IsVisible(settings) | Window.IsVisible(SkinSettings.xml)">special://skin/extras/icons/settings.png</value>
+		<value condition="Window.IsVisible(EventLog.xml) | Window.IsVisible(systeminfo)">special://skin/extras/icons/settings.png</value>
+		<value condition="Window.IsVisible(AddonBrowser.xml)">special://skin/extras/icons/addons.png</value>
+		<value condition="Window.IsVisible(MyMusicPlaylist.xml)">special://skin/extras/icons/playlist.png</value>
+		<value condition="Window.IsVisible(FileManager.xml)">special://skin/extras/icons/database.png</value>
+		<value condition="!IsEmpty(Window(home).Property(Header.Icon)) + substring(Window(home).Property(Header.Icon),special://skin/extras/icons/)">$INFO[Window(home).Property(Header.Icon)]</value>
+		<value>special://skin/extras/icons/home.png</value>
+	</variable>
+	<include name="Furniture_TopBar_Tile">
+		<control type="image">
+			<posy>18</posy>
+			<posx>-88</posx>
+			<width>300</width>
+			<height>164</height>    
+			<texture align="left" border="75">$VAR[HeaderTileTexture]</texture>
+			<colordiffuse>$VAR[HeaderColorBG2]</colordiffuse>
+			<visible>!Skin.HasSetting(home.colortilehigh2)</visible>
+			<visible>!Control.HasFocus(9002)</visible>
+
+		</control>
+
+
+		<control type="image">
+			<posy>18</posy>
+			<posx>-88</posx>
+			<width>300</width>
+			<height>164</height>    
+			<texture align="left" border="75">$VAR[HeaderTileTexture]</texture>
+			<colordiffuse>$VAR[HeaderColorBG3]</colordiffuse>
+			<visible>Skin.HasSetting(home.colortilehigh2)</visible>
+			<visible>!Control.HasFocus(9002)</visible>
+
+		</control>
+
+		<control type="image">
+			<posy>18</posy>
+			<posx>-88</posx>
+			<width>300</width>
+			<height>164</height>    
+			<texture align="left" border="75">$VAR[HeaderTileTexture]</texture>
+			<colordiffuse>$VAR[HeaderColorBG]</colordiffuse>
 			<visible>!Skin.HasSetting(header.HighlightColor4) | !Skin.HasSetting(header.HighlightColor3)</visible>
 			<visible>!Skin.HasSetting(home.colortilehigh2)</visible>
-        </control>
-    </include>
-    <include name="Furniture_TopBar_Tile_Content">
-        
-        <control type="image">
-            <posy>10</posy>
-            <posx>30</posx>
-            <width>128</width>
-            <height>128</height>    
-            <texture>$VAR[Furniture_TopBar_Tile_Icon]</texture>
-            <aspectratio>keep</aspectratio>
-            <colordiffuse>HomeBarFG</colordiffuse>
-            <visible>!Container.Scrolling</visible>
-            <visible>!Window.IsVisible(DialogBusy.xml)</visible>
-            <animation type="Visible">
-                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="2000" />
-                <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" delay="2000" />
-            </animation>
-            <animation type="Hidden">
-                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
-                <effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out"/>
-            </animation>
-        </control>
-        <control type="group">
-            <visible>Container.Scrolling</visible>
-            <visible>!Window.IsVisible(DialogBusy.xml)</visible>
-            <animation type="Visible">
-                <effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
-                <effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" />
-            </animation>
-            <animation type="Hidden">
-                <effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" delay="2000" />
-                <effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out" delay="2000" />
-            </animation>
-            <control type="label">
-                <posy>25</posy>
-                <posx>30</posx>
-                <width>128</width>
-                <height>100</height>
-                <aligny>top</aligny>
-                <align>center</align>
-                <font>Font-Header</font>
-                <label>$INFO[ListItem.SortLetter]</label>
-                <textcolor>HomeBarFG</textcolor>
-            </control>
-        </control>
-        <control type="label">
-            <posx>0</posx>
-            <posy>115</posy>
-            <width>184</width>
-            <aligny>top</aligny>
-            <font>Font-Sublabel</font>
-            <align>center</align>
-            <textcolor>HomeBarFG</textcolor>
-            <label>$VAR[Furniture_TopBar_Tile_Text]</label>
-        </control>
-    </include>
-    <include name="Furniture_TopBar_Header">
-        <!-- Nothing Playing -->
-        <control type="group">
-            <visible>![VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
-            <visible>!Skin.HasSetting(disable.mainheader)</visible>
-            <control type="label">
-                <posx>245</posx>
-                <posy>25</posy>
-                <width>1200</width>
-                <height>100</height>
-                <font>Font-Header</font>
-                <label>$VAR[Furniture_TopBar_Header_MainLabel]</label>
-                <aligny>top</aligny>
-                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
-            </control>
-            <control type="label">
-                <posx>245</posx>
-                <posy>115</posy>
-                <width>1050</width>
-                <font>Font-Sublabel</font>
-                <aligny>top</aligny>
-                <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                <label>$VAR[Furniture_TopBar_Header_SubLabel]</label>
-            </control>
-			       <control type="label">
-                <posx>245</posx>
-                <posy>115</posy>
-                <width>1050</width>
-                <font>Font-Sublabel</font>
-                <aligny>top</aligny>
-                <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                <label>$VAR[counter]</label>
-				<visible>Window.IsVisible(home) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | Window.IsVisible(1110) | Window.IsVisible(1111) | Window.IsVisible(1112) | Window.IsVisible(1113) | Window.IsVisible(1114) | Window.IsVisible(1115)</visible>
-            </control>
-        
+			<visible>!Control.HasFocus(9002)</visible>
+
 		</control>
-        <!-- Something Playing -->
-        <control type="group">
-            <visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
-            <control type="label">
-                <posx>245</posx>
-                <posy>25</posy>
-                <width>1200</width>
-                <height>100</height>
-                <font>Font-Header</font>
-                <label>$INFO[Player.Title]</label>
-                <aligny>top</aligny>
-                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
-            </control>
-            <control type="grouplist">
-                <posx>245</posx>
-                <posy>115</posy>
-                <width>1050</width>
-                <orientation>horizontal</orientation>
-                <itemgap>0</itemgap>
-                <visible>!IsEmpty(Player.Duration) + Player.HasVideo</visible>
-                <control type="label">
-                    <width max="400">auto</width>
-                    <font>Font-Sublabel</font>
-                    <aligny>top</aligny>
-                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$VAR[Label_HeaderDirector][/COLOR]</label>
-                    <visible>!VideoPlayer.Content(livetv)</visible>
-                </control>
-                <control type="label">
-                    <width max="730">auto</width>
-                    <font>Font-Sublabel</font>
-                    <aligny>top</aligny>
-                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]</label>
-                    <visible>VideoPlayer.Content(livetv)</visible>
-                </control>
-                <control type="label">
-                    <width>auto</width>
-                    <font>Font-Sublabel</font>
-                    <align>left</align>
-                    <aligny>top</aligny>
-                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>$INFO[Player.FinishTime,  $LOCALIZE[31071] ,]</label>
-                </control>
-                <control type="label">
-                    <width>330</width>
-                    <font>Font-Sublabel</font>
-                    <align>right</align>
-                    <aligny>top</aligny>
-                    <visible>!VideoPlayer.Content(livetv)</visible>
-                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>$INFO[Player.Time(hh:mm:ss),  •  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
-                </control>
-            </control>
-            <control type="grouplist">
-                <posx>245</posx>
-                <posy>115</posy>
-                <width>1050</width>
-                <orientation>horizontal</orientation>
-                <itemgap>0</itemgap>
-                <visible>!IsEmpty(Player.Duration) + !Player.HasVideo</visible>
-                <control type="label">
-                    <width max="830">auto</width>
-                    <font>Font-Sublabel</font>
-                    <aligny>top</aligny>
-                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]</label>
-                </control>
-                <control type="label">
-                    <width>320</width>
-                    <font>Font-Sublabel</font>
-                    <align>left</align>
-                    <aligny>top</aligny>
-                    <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                    <label>$INFO[Player.Time(hh:mm:ss),  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
-                </control>
-            </control>
-        </control>
-    </include>
-    <include name="Furniture_TopBar_Clock">
-        <control type="group">
-            <posx>400r</posx>
-            <visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
-            <visible>!Skin.HasSetting(disable.clockheader)</visible>
-            <animation effect="slide" start="0" end="92" condition="Skin.HasSetting(disable.weatherheader)">Conditional</animation>
-            <control type="image">
-                <posx>284</posx>
-                <posy>28</posy>
-                <width>100</width>
-                <height>100</height>
-                <fadetime>350</fadetime>
-                <aspectratio aligny="center" align="center">keep</aspectratio>
-                <texture colordiffuse="$VAR[Furniture_TopBar_MainLabel_Color]">$INFO[Weather.FanartCode,weather-icons/,.png]</texture>
-                <visible>!Skin.HasSetting(disable.weatherheader)</visible>
-            </control>
-            <control type="label">
-                <posx>268</posx>
-                <posy>115</posy>
-                <width>128</width>
-                <height>100</height>
-                <aligny>top</aligny>
-                <font>Font-Sublabel</font>
-                <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                <align>center</align>
-                <aligny>top</aligny>
-                <label>$INFO[Weather.Temperature]</label>
-                <visible>!Skin.HasSetting(disable.weatherheader)</visible>
-            </control>
-            <control type="label">
-                <posx>270</posx>
-                <posy>25</posy>
-                <width>300</width>
-                <height>100</height>
-                <font>Font-Header</font>
-                <align>right</align>
-                <aligny>top</aligny>
-                <label>$INFO[System.Time(hh:mm)]</label>
-                <textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
-                <animation effect="slide" start="0" end="-58" condition="!IsEmpty(System.Time(xx))">Conditional</animation>
-            </control>
-            <control type="label">
-                <posx>270</posx>
-                <posy>71</posy>
-                <width>100</width>
-                <height>100</height>
-                <aligny>top</aligny>
-                <font>Font-Sublabel</font>
-                <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                <align>right</align>
-                <label>$INFO[System.Time(xx)]</label>
-                <visible>!IsEmpty(System.Time(xx))</visible>
-            </control>
-            <control type="label">
-                <posx>270</posx>
-                <posy>115</posy>
-                <width>500</width>
-                <height>100</height>
-                <aligny>top</aligny>
-                <font>Font-Sublabel</font>
-                <textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
-                <align>right</align>
-                <label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(dd MMM yyyy)]</label>
-            </control>
-        </control>   
-    </include>
-	
-    <include name="Furniture_TopBar">
-        <!-- <include>GlobalInfoOverlay</include> -->
-        <control type="group">
-            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
-            <animation type="Visible">
-                <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
-                <effect type="fade" start="0" end="100" time="200" />
-            </animation>
-            <animation type="Hidden">
-                <effect type="fade" end="0" start="100" time="200" />
-            </animation>
-            <control type="image">
-                <width>100%</width>
-                <height>512</height>
-                <texture colordiffuse="7f000000">common/gradient.png</texture>
-                <visible>Skin.HasSetting(global.backpanelmode) | Window.IsVisible(weather) | Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
-            </control>
-            <control type="group">
-                <include>Furniture_TopBar_Header</include>
-            </control>
-            <include>Furniture_TopBar_Clock</include>
-        </control>
-				
-        <control type="group">
-            <visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Window.IsActive(DialogMuteBug.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
-            <animation type="Visible">
-                <effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
-                <effect type="fade" start="0" end="100" time="200" />
-            </animation>
-            <animation type="Hidden">
-                <effect type="fade" end="0" start="100" time="200" />
-            </animation>
-            <include>Furniture_TopBar_Tile</include>
-            <control type="group">
-                <visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>
-                <include>Furniture_TopBar_Tile_Content</include>
-            </control>
-							<control type="multiimage">
-                <posy>42</posy>
-                <posx>62</posx>
-                <width>64</width>
-                <height>64</height> 
-                <aspectratio>keep</aspectratio>
-                <imagepath fallback="special://skin/extras/busy_spinners/8.gif">$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</imagepath>
-                <timeperimage>100</timeperimage>
-                <fadetime>0</fadetime>
-                <visible>!Skin.String(SkinHelper.SpinnerTexturePath,None)</visible>
-				            <visible>Window.IsVisible(DialogBusy.xml)</visible>
-            </control>
-        </control>
-    </include>
-    
+	</include>
+	<include name="Furniture_TopBar_Tile_Content">
+		<visible>!Window.IsVisible(DialogVolumeBar.xml) + !Control.HasFocus(9002)</visible>
+		<control type="image">
+			<posy>10</posy>
+			<posx>30</posx>
+			<width>128</width>
+			<height>128</height>    
+			<texture>$VAR[Furniture_TopBar_Tile_Icon]</texture>
+			<aspectratio>keep</aspectratio>
+			<colordiffuse>HomeBarFG</colordiffuse>
+			<visible>!Container.Scrolling</visible>
+			<visible>!Window.IsVisible(DialogBusy.xml)</visible>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" delay="2000" />
+				<effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" delay="2000" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" />
+				<effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out"/>
+			</animation>
+		</control>
+		<control type="group">
+			<visible>Container.Scrolling</visible>
+			<visible>!Window.IsVisible(DialogBusy.xml)</visible>
+			<animation type="Visible">
+				<effect type="fade" start="0" end="100" time="300" tween="sine" easing="in" />
+				<effect type="slide" start="0,-10" end="0,0" time="350" tween="sine" easing="out" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" start="100" end="0" time="250" tween="sine" easing="out" delay="2000" />
+				<effect type="slide" start="0,0" end="0,-10" time="300" tween="sine" easing="out" delay="2000" />
+			</animation>
+			<control type="label">
+				<posy>25</posy>
+				<posx>30</posx>
+				<width>128</width>
+				<height>100</height>
+				<aligny>top</aligny>
+				<align>center</align>
+				<font>Font-Header</font>
+				<label>$INFO[ListItem.SortLetter]</label>
+				<textcolor>HomeBarFG</textcolor>
+			</control>
+		</control>
+		<control type="label">
+			<posx>0</posx>
+			<posy>115</posy>
+			<width>184</width>
+			<aligny>top</aligny>
+			<font>Font-Sublabel</font>
+			<align>center</align>
+			<textcolor>HomeBarFG</textcolor>
+			<label>$VAR[Furniture_TopBar_Tile_Text]</label>
+		</control>
+	</include>
+	<include name="Furniture_TopBar_Header">
+		<!-- Nothing Playing -->
+		<control type="group">
+			<visible>![VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
+			<visible>!Skin.HasSetting(disable.mainheader)</visible>
+			<control type="label">
+				<posx>245</posx>
+				<posy>25</posy>
+				<width>1200</width>
+				<height>100</height>
+				<font>Font-Header</font>
+				<label>$VAR[Furniture_TopBar_Header_MainLabel]</label>
+				<aligny>top</aligny>
+				<textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+			</control>
+			<control type="label">
+				<posx>245</posx>
+				<posy>115</posy>
+				<width>1050</width>
+				<font>Font-Sublabel</font>
+				<aligny>top</aligny>
+				<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+				<label>$VAR[Furniture_TopBar_Header_SubLabel]</label>
+			</control>
+			<control type="label">
+				<posx>245</posx>
+				<posy>115</posy>
+				<width>1050</width>
+				<font>Font-Sublabel</font>
+				<aligny>top</aligny>
+				<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+				<label>$VAR[counter]</label>
+				<visible>Window.IsVisible(home) | Window.IsVisible(1101) | Window.IsVisible(1102) | Window.IsVisible(1103) | Window.IsVisible(1104) | Window.IsVisible(1105) | Window.IsVisible(1106) | Window.IsVisible(1107) | Window.IsVisible(1108) | Window.IsVisible(1109) | Window.IsVisible(1110) | Window.IsVisible(1111) | Window.IsVisible(1112) | Window.IsVisible(1113) | Window.IsVisible(1114) | Window.IsVisible(1115)</visible>
+			</control>
+
+		</control>
+		<!-- Something Playing -->
+		<control type="group">
+			<visible>[VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)]</visible>
+			<control type="label">
+				<posx>245</posx>
+				<posy>25</posy>
+				<width>1200</width>
+				<height>100</height>
+				<font>Font-Header</font>
+				<label>$INFO[Player.Title]</label>
+				<aligny>top</aligny>
+				<textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+			</control>
+			<control type="grouplist">
+				<posx>245</posx>
+				<posy>115</posy>
+				<width>1050</width>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<visible>!IsEmpty(Player.Duration) + Player.HasVideo</visible>
+				<control type="label">
+					<width max="400">auto</width>
+					<font>Font-Sublabel</font>
+					<aligny>top</aligny>
+					<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+					<label>[COLOR=$VAR[HighlightColor2]]$VAR[Label_HeaderDirector][/COLOR]</label>
+					<visible>!VideoPlayer.Content(livetv)</visible>
+				</control>
+				<control type="label">
+					<width max="730">auto</width>
+					<font>Font-Sublabel</font>
+					<aligny>top</aligny>
+					<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+					<label>[COLOR=$VAR[HighlightColor2]]$INFO[VideoPlayer.ChannelName][/COLOR]</label>
+					<visible>VideoPlayer.Content(livetv)</visible>
+				</control>
+				<control type="label">
+					<width>auto</width>
+					<font>Font-Sublabel</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+					<label>$INFO[Player.FinishTime,  $LOCALIZE[31071] ,]</label>
+				</control>
+				<control type="label">
+					<width>330</width>
+					<font>Font-Sublabel</font>
+					<align>right</align>
+					<aligny>top</aligny>
+					<visible>!VideoPlayer.Content(livetv)</visible>
+					<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+					<label>$INFO[Player.Time(hh:mm:ss),  •  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
+				</control>
+			</control>
+			<control type="grouplist">
+				<posx>245</posx>
+				<posy>115</posy>
+				<width>1050</width>
+				<orientation>horizontal</orientation>
+				<itemgap>0</itemgap>
+				<visible>!IsEmpty(Player.Duration) + !Player.HasVideo</visible>
+				<control type="label">
+					<width max="830">auto</width>
+					<font>Font-Sublabel</font>
+					<aligny>top</aligny>
+					<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+					<label>[COLOR=$VAR[HighlightColor2]]$INFO[MusicPlayer.Artist][/COLOR]</label>
+				</control>
+				<control type="label">
+					<width>320</width>
+					<font>Font-Sublabel</font>
+					<align>left</align>
+					<aligny>top</aligny>
+					<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+					<label>$INFO[Player.Time(hh:mm:ss),  ,]$INFO[Player.Duration(hh:mm:ss), / ,]</label>
+				</control>
+			</control>
+		</control>
+	</include>
+	<include name="Furniture_TopBar_Clock">
+		<visible>!Skin.String(HomeStyle, HomeMenuVerticaliconlist)</visible>
+		<control type="group">
+			<posx>400r</posx>
+			<visible>!Window.IsActive(DialogExtendedProgressBar.xml)</visible>
+			<visible>!Skin.HasSetting(disable.clockheader)</visible>
+			<animation effect="slide" start="0" end="92" condition="Skin.HasSetting(disable.weatherheader)">Conditional</animation>
+			<control type="image">
+				<posx>284</posx>
+				<posy>28</posy>
+				<width>100</width>
+				<height>100</height>
+				<fadetime>350</fadetime>
+				<aspectratio aligny="center" align="center">keep</aspectratio>
+				<texture colordiffuse="$VAR[Furniture_TopBar_MainLabel_Color]">$INFO[Weather.FanartCode,weather-icons/,.png]</texture>
+				<visible>!Skin.HasSetting(disable.weatherheader)</visible>
+			</control>
+			<control type="label">
+				<posx>268</posx>
+				<posy>115</posy>
+				<width>128</width>
+				<height>100</height>
+				<aligny>top</aligny>
+				<font>Font-Sublabel</font>
+				<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+				<align>center</align>
+				<aligny>top</aligny>
+				<label>$INFO[Weather.Temperature]</label>
+				<visible>!Skin.HasSetting(disable.weatherheader)</visible>
+			</control>
+			<control type="label">
+				<posx>270</posx>
+				<posy>25</posy>
+				<width>300</width>
+				<height>100</height>
+				<font>Font-Header</font>
+				<align>right</align>
+				<aligny>top</aligny>
+				<label>$INFO[System.Time(hh:mm)]</label>
+				<textcolor>$VAR[Furniture_TopBar_MainLabel_Color]</textcolor>
+				<animation effect="slide" start="0" end="-58" condition="!IsEmpty(System.Time(xx))">Conditional</animation>
+			</control>
+			<control type="label">
+				<posx>270</posx>
+				<posy>71</posy>
+				<width>100</width>
+				<height>100</height>
+				<aligny>top</aligny>
+				<font>Font-Sublabel</font>
+				<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+				<align>right</align>
+				<label>$INFO[System.Time(xx)]</label>
+				<visible>!IsEmpty(System.Time(xx))</visible>
+			</control>
+			<control type="label">
+				<posx>270</posx>
+				<posy>115</posy>
+				<width>500</width>
+				<height>100</height>
+				<aligny>top</aligny>
+				<font>Font-Sublabel</font>
+				<textcolor>$VAR[Furniture_TopBar_SubLabel_Color]</textcolor>
+				<align>right</align>
+				<label>$INFO[System.Date(DDD)]$COMMA $INFO[System.Date(dd MMM yyyy)]</label>
+			</control>
+		</control>   
+	</include>
+
+	<include name="Furniture_TopBar">
+		<!-- <include>GlobalInfoOverlay</include> -->
+		<control type="group">
+			<visible>[Window.IsVisible(home) + Skin.String(HomeStyle, HomeMenuVertical) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+			<animation type="Visible">
+				<effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" end="0" start="100" time="200" />
+			</animation>
+			<control type="image">
+				<width>100%</width>
+				<height>512</height>
+				<texture colordiffuse="7f000000">common/gradient.png</texture>
+				<visible>Skin.HasSetting(global.backpanelmode) | Window.IsVisible(weather) | Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
+			</control>
+			<control type="group">
+				<include>Furniture_TopBar_Header</include>
+			</control>
+			<include condition="Skin.String(HomeStyle, HomeMenuVertical) + !Window.IsVisible(Home.xml)">HeaderRightInfo</include>
+			<include condition="Skin.String(HomeStyle, HomeMenuVerticaliconlist) + !Window.IsVisible(Home.xml)">HeaderRightInfo</include>
+			<include condition="Skin.String(HomeStyle, HomeMenuVertical) + Window.IsVisible(Home.xml)">HeaderRightInfo2</include> <!-- תפריט מאונך מסך בית -->
+			<include condition="!Skin.String(HomeStyle, HomeMenuVertical) + !Skin.String(HomeStyle, HomeMenuVerticaliconlist)">HeaderRightInfo</include>
+		</control>
+
+		<!--test -->
+		<control type="group">
+			<visible>[Window.IsVisible(home) + !Skin.String(HomeStyle, HomeMenuVertical) + Control.HasFocus(9000) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+			<animation type="Visible">
+				<effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" end="0" start="100" time="200" />
+			</animation>
+			<control type="image">
+				<width>100%</width>
+				<height>512</height>
+				<texture colordiffuse="7f000000">common/gradient.png</texture>
+				<visible>Skin.HasSetting(global.backpanelmode) | Window.IsVisible(weather) | Window.IsVisible(home) | VideoPlayer.IsFullscreen | Window.IsVisible(visualisation)</visible>
+			</control>
+			<control type="group">
+				<include>Furniture_TopBar_Header</include>
+			</control>
+			<include condition="Skin.String(HomeStyle, HomeMenuVertical) + !Window.IsVisible(Home.xml)">HeaderRightInfo</include>
+			<include condition="Skin.String(HomeStyle, HomeMenuVerticaliconlist) + !Window.IsVisible(Home.xml)">HeaderRightInfo</include>
+			<include condition="Skin.String(HomeStyle, HomeMenuVertical) + Window.IsVisible(Home.xml)">HeaderRightInfo2</include> <!-- תפריט מאונך מסך בית -->
+			<include condition="!Skin.String(HomeStyle, HomeMenuVertical) + !Skin.String(HomeStyle, HomeMenuVerticaliconlist)">HeaderRightInfo</include>
+		</control>
+
+
+		<control type="group">
+			<visible>[Window.IsVisible(home) + ![Control.HasFocus(9001) | Control.HasFocus(9101)]] | [Window.IsVisible(DialogSeekBar.xml) + [Player.Seeking | Player.DisplayAfterSeek | Player.Paused | Player.Forwarding | Player.Rewinding | Player.ShowInfo | Window.IsVisible(DialogFullScreenInfo.xml) | Window.IsVisible(musicosd) | Window.IsVisible(videoosd)]] | Window.IsVisible(DialogBusy.xml) | Window.IsActive(DialogVolumeBar.xml) | Window.IsActive(DialogMuteBug.xml) | ![Window.IsVisible(home) | Window.IsVisible(DialogSeekBar.xml)] | Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) | Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+			<animation type="Visible">
+				<effect type="slide" start="0,-32" end="0" time="200" tween="quadratic" />
+				<effect type="fade" start="0" end="100" time="200" />
+			</animation>
+			<animation type="Hidden">
+				<effect type="fade" end="0" start="100" time="200" />
+			</animation>
+			<include>Furniture_TopBar_Tile</include>
+			<control type="group">
+				<!--<visible>!Window.IsVisible(DialogVolumeBar.xml)</visible>-->
+				<include>Furniture_TopBar_Tile_Content</include>
+			</control>
+			<control type="multiimage">
+				<posy>42</posy>
+				<posx>62</posx>
+				<width>64</width>
+				<height>64</height> 
+				<aspectratio>keep</aspectratio>
+				<imagepath fallback="special://skin/extras/busy_spinners/8.gif">$INFO[Skin.String(SkinHelper.SpinnerTexturePath)]</imagepath>
+				<timeperimage>100</timeperimage>
+				<fadetime>0</fadetime>
+				<visible>!Skin.String(SkinHelper.SpinnerTexturePath,None)</visible>
+				<visible>Window.IsVisible(DialogBusy.xml)</visible>
+			</control>
+		</control>
+	</include>
+
 </includes>

@@ -21,7 +21,7 @@
 			<posx>horzpad</posx>
 			<posy>topoffset</posy>
 			<include>DialogVisibility</include>
-			<include>DefDialogInfoSideLabel</include>
+			<!--<include>DefDialogInfoSideLabel</include>-->
 			<control type="group" description="Poster">
 				<posx>1000</posx>
 				<posy>180</posy>
@@ -32,7 +32,7 @@
 					<width>bigposterw</width>
 					<height>bigposterw</height>
 					<fadetime>200</fadetime>
-					<texture background="true">$VAR[PosterImage]</texture>
+					<texture background="true">$VAR[Image_Poster]</texture>
 					<aspectratio aligny="top">scale</aspectratio>
 				</control>
 				<control type="label">
@@ -241,11 +241,11 @@
 			<width>1</width>
 			<height>1</height>
 			<visible allowhiddenfocus="true">false</visible>
-			<onback>9000</onback>
-			<onup>9000</onup>
-			<ondown>9000</ondown>
-			<onleft>9000</onleft>
-			<onright>9000</onright>
+			<onback>9500</onback>
+			<onup>9500</onup>
+			<ondown>9500</ondown>
+			<onleft>9500</onleft>
+			<onright>9500</onright>
 		</control>
 
 
@@ -262,24 +262,37 @@
 				<bottom>33</bottom>
 				<itemgap>16</itemgap>
 				<orientation>horizontal</orientation>
-
+				<onup>9500</onup>
+				<ondown>9500</ondown>
+				<onleft>9500</onleft>
+				<onright>9500</onright>
 				<control type="button" id="12">
 					<label>518</label>
-					<onright>6</onright>
+					<onright>13</onright>
+					<include>DefInfoButtons</include>
+				</control>
+
+				<control type="radiobutton" id="13">
+					<description>Auto-update button</description>
+					<include>DefInfoButtons</include>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<radioposx>10</radioposx>  
+				</control>
+
+				<control type="button" id="9">
+					<label>24020</label>
+					<description>Addon Settings</description>
 					<include>DefInfoButtons</include>
 				</control>
 
 				<control type="button" id="6">
-					<onright>7</onright>
-
 					<label>24022</label>
 					<include>DefInfoButtons</include>
 				</control>
 
 
 				<control type="button" id="7">
-					<onright>9</onright>
-
 					<include>DefInfoButtons</include>
 					<label>24021</label>   
 				</control>
@@ -302,7 +315,6 @@
 					<label>24036</label>
 					<description>Changelog button</description>
 					<include>DefInfoButtons</include>
-
 				</control>
 			</control>
 		</control>

@@ -1,45 +1,59 @@
 <?xml version='1.0' encoding='UTF-8'?>
 <shortcuts>
     <shortcut>
-        <label>קיר סדרות</label>
+        <label>43753</label>
         <label2>Episode Hub Shortcut</label2>
 		<defaultID>tvshows</defaultID>
         <action>ActivateWindow(Videos,TvShowTitles,return)</action>
-        <icon>special://skin/extras/icons/tv.png</icon>
+        <icon>special://skin/extras/icons/infinity.png</icon>
     </shortcut>
     <shortcut>
-        <label>סדרות ג'נסיס</label>
+        <label>43754</label>
 		<label2>Episode Hub Shortcut</label2>
 		<defaultID />
-        <action>ActivateWindow(10025,"plugin://plugin.video.genesis/?action=tvNavigator",return)</action>
-		<icon>special://skin/extras/icons/ICONS/GENESIS.png</icon>
+        <action>ActivateWindow(10025,"plugin://plugin.video.sdarot.tv/?mode=2&amp;module=http%3a%2f%2fwww.sdarot.pm%2fseries%2fgenre%2f20%d7%99%d7%a9%d7%a8%d7%90%d7%9c%d7%99&amp;name=%d7%99%d7%a9%d7%a8%d7%90%d7%9c%d7%99&amp;summary&amp;url=all-heb",return)</action>
+		<icon>special://skin/extras/icons/ICONS/sdarot-tv v.2.png</icon>
     </shortcut>
     <shortcut>
-        <label>סדרות Salts</label>
+        <label>43755</label>
 		<label2>Episode Hub Shortcut</label2>
 		<defaultID />
-        <action>ActivateWindow(10025,"plugin://plugin.video.salts/?section=TV&amp;mode=browse",return)</action>
+        <action>ActivateWindow(10025,"plugin://plugin.video.exodus/?action=tvshows&amp;url=popular",return)</action>
+		<icon>special://skin/extras/icons/ICONS/exodus_icon.png</icon>
+    </shortcut>
+    <shortcut>
+        <label>43756</label>
+		<label2>Episode Hub Shortcut</label2>
+		<defaultID />
+        <action>ActivateWindow(10025,"plugin://plugin.video.salts/?section=TV&amp;mode=popular",return)</action>
 		<icon>special://skin/extras/icons/ICONS/SALTS3.png</icon>
     </shortcut>
     <shortcut>
-        <label>$LOCALIZE[31100]</label>
-		<label2>Episode Hub Shortcut</label2>
-		<defaultID>31100</defaultID>
-        <action>ActivateWindow(Videos,RecentlyAddedEpisodes,return)</action>
-		<icon>special://skin/extras/icons/recentlyadded.png</icon>
+        <label>43757</label>
+	    <label2>Episode Hub Shortcut</label2>
+		<defaultID />
+        <action>ActivateWindow(10025,"plugin://plugin.video.quasar/shows/popular",return)</action>
+		<icon>special://skin/extras/icons/ICONS/QUSAR.png</icon>
     </shortcut>
-    <shortcut>
-        <label>חיפוש בקיר</label>
+	    <shortcut>
+        <label>43792</label>
+		<label2>Movie Hub Shortcut</label2>
+		<defaultID>43792</defaultID>
+        <action>ActivateWindow(VideoLibrary,"plugin://plugin.video.meta/tv/most_popular/1",return)</action>
+		<icon>special://skin/extras/icons/ICONS/META.png</icon>
+    </shortcut>
+		    <shortcut>
+        <label>43791</label>
+		<label2>Movie Hub Shortcut</label2>
+		<defaultID>43791</defaultID>
+        <action>RunPlugin("plugin://plugin.video.meta/tv/search")</action>
+		<icon>special://skin/extras/icons/ICONS/METAs.png</icon>
+    </shortcut>
+	<shortcut>
+        <label>31343600</label>
 		<label2>Episode Hub Shortcut</label2>
 		<defaultID>137</defaultID>
         <action>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</action>
-		<icon>special://skin/extras/icons/search.png</icon>
-    </shortcut>
-    <shortcut>
-        <label>חיפוש ג'נסיס</label>
-	    <label2>Episode Hub Shortcut</label2>
-		<defaultID>31100</defaultID>
-        <action>ActivateWindow(10025,"plugin://plugin.video.genesis/?action=tvSearch",return)</action>
 		<icon>special://skin/extras/icons/search.png</icon>
     </shortcut>
     <shortcut>
@@ -47,12 +61,6 @@
         <label>653</label>
         <action>UpdateLibrary(video)</action>
         <icon>special://skin/extras/icons/update.png</icon>
-    </shortcut>
-   <shortcut>
-        <label2>Episode Hub Shortcut</label2>
-        <label>20343</label>
-        <action>ActivateWindow(Videos,TvShowTitles,return)</action>
-        <icon>special://skin/extras/icons/tv.png</icon>
     </shortcut>
     <shortcut>
         <label2>Episode Hub Shortcut</label2>

@@ -2,17 +2,31 @@
 <!-- Foundation -->
 <window type="buttonMenu" id="111">
     <defaultcontrol always="true">3110</defaultcontrol>
-    <allowoverlay>yes</allowoverlay>
+	    <onunload>ClearProperty(FO9001)</onunload>
     <zorder>5</zorder>
     <controls>
         <include>GlobalOverlay</include>
         <include>GlobalLeftHeader</include>
-        
+		
+		<control type="image">
+			<description>shutdown</description>
+			<posx>0</posx>
+			<posy>0</posy>
+			<width>1920</width>
+			<height>1080</height>
+			<texture background="true">black.png</texture>
+			<aspectratio>scale</aspectratio>
+			<animation effect="fade" start="0" end="50" time="200">WindowOpen</animation>
+			<animation effect="fade" start="80" end="0" time="200">WindowClose</animation>
+		</control>
+		
         <control type="group">      
             <animation effect="slide" start="1920" end="0" delay="0" time="200">WindowOpen</animation>
             <animation effect="slide" start="1920" end="0" delay="0" time="200">Visible</animation>
             <include>DefContextMenuBackground</include>     
             
+			
+			
             <control type="grouplist" id="3110">
                 <include>DefContextMenuGroupList</include>
                 <onleft>noop</onleft>
@@ -20,81 +34,136 @@
                 <onup>1</onup>
                 <ondown>1</ondown>
 
-                <control type="button" id="3111">
-                    <description>Exit XBMC button</description>
-                    <include>DefContextMenuButton</include>
-                    <label>13012</label>
-                    <onclick>Quit()</onclick>
-                    <visible>System.ShowExitButton</visible>
-                </control>
+  				<control type="button" id="6002">
+					<include>shutdown_buttons</include>
+					<label>13012</label>
+					<onclick>XBMC.Quit()</onclick>
+					<visible>System.ShowExitButton</visible>
+					                    <include>DefContextMenuButton</include>
 
-                <control type="button" id="3112">
-                    <description>Master mode button</description>
-                    <include>DefContextMenuButton</include>
-                    <label>31131</label>
-                    <altlabel>31132</altlabel>
-                    <onclick>xbmc.mastermode</onclick>
-                    <visible>System.HasLocks</visible>
-                </control>
+				</control>
+				<control type="button" id="6003">
+					<include>shutdown_buttons</include>
+					<label>13016</label>
+					<onclick>XBMC.Powerdown()</onclick>
+					<visible>System.CanPowerDown</visible>
+					                    <include>DefContextMenuButton</include>
 
-                <control type="button" id="3113">
-                    <description>LogOff Profile</description>
-                    <include>DefContextMenuButton</include>
-                    <label>$LOCALIZE[20126]</label>
-                    <onclick>dialog.close(all,true)</onclick>
-                    <onclick>System.LogOff</onclick>
-                    <visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
-                    <visible>System.Loggedon</visible>
-                </control>
+				</control>
+				<control type="button" id="6004">
+					<include>shutdown_buttons</include>
+					<label>13011</label>
+					<onclick>XBMC.Suspend()</onclick>
+					<visible>System.CanSuspend</visible>
+					                    <include>DefContextMenuButton</include>
 
-                <control type="button" id="3114">
-                    <description>Custom Shutdown Timer button</description>
-                    <include>DefContextMenuButton</include>
-                    <label>$LOCALIZE[31133] [B]$INFO[System.Alarmpos][/B]</label>
-                    <onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
-                    <visible>System.HasAlarm(shutdowntimer)</visible>
-                </control>
+				</control>
+				<control type="button" id="6005">
+					<include>shutdown_buttons</include>
+					<label>13010</label>
+					<onclick>XBMC.Hibernate()</onclick>
+					<visible>System.CanHibernate</visible>
+					                    <include>DefContextMenuButton</include>
 
-                <control type="button" id="3115">
-                    <description>Custom Shutdown Timer button</description>
-                    <include>DefContextMenuButton</include>
-                    <label>$LOCALIZE[31130]</label>
-                    <onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
-                    <visible>!System.HasAlarm(shutdowntimer)</visible>
-                </control>
+				</control>
+				<control type="button" id="6006">
+					<include>shutdown_buttons</include>
+					<label>13013</label>
+					<onclick>XBMC.Reset()</onclick>
+					<visible>System.CanReboot</visible>
+					                    <include>DefContextMenuButton</include>
 
-                <control type="button" id="3116">
-                    <description>Shutdown</description>
-                    <include>DefContextMenuButton</include>
-                    <label>13005</label>
-                    <onclick>ShutDown()</onclick>
-                </control>
+				</control>
+				<control type="button" id="6007">
+					<include>shutdown_buttons</include>
+					<label>$LOCALIZE[20126] $INFO[system.profilename]</label>
+					<onclick>dialog.close(all,true)</onclick>
+					<onclick>System.LogOff</onclick>
+					<visible>System.HasLoginScreen | IntegerGreaterThan(System.ProfileCount,1)</visible>
+					<visible>System.Loggedon</visible>
+					                    <include>DefContextMenuButton</include>
 
-                <control type="button" id="3117">
-                    <description>Suspend xbmc</description>
-                    <include>DefContextMenuButton</include>
-                    <label>13011</label>
-                    <onclick>XBMC.Suspend()</onclick>
-                </control>
+				</control>
+				<control type="button" id="6008">
+					<include>shutdown_buttons</include>
+					<label>20046</label>
+					<altlabel>20045</altlabel>
+					<usealttexture>!System.IsMaster</usealttexture>
+					<onclick>xbmc.mastermode</onclick>
+					<visible>System.HasLocks</visible>
+					                    <include>DefContextMenuButton</include>
 
-                <control type="button" id="3118">
-                    <description>Reboot button</description>
-                    <include>DefContextMenuButton</include>
-                    <label>13013</label>
-                    <onclick>XBMC.Reset()</onclick>
-                </control>
+				</control>
+				<control type="button" id="6009">
+					<include>shutdown_buttons</include>
+					<label>13017</label>
+					<onclick>XBMC.InhibitIdleShutdown(true)</onclick>
+					<visible>System.HasShutdown +!System.IsInhibit</visible>
+					                    <include>DefContextMenuButton</include>
 
-                
+				</control>
+				<control type="button" id="6010">
+					<include>shutdown_buttons</include>
+					<label>13018</label>
+					<onclick>XBMC.InhibitIdleShutdown(false)</onclick>
+					<visible>System.HasShutdown + System.IsInhibit</visible>
+					                    <include>DefContextMenuButton</include>
 
-                <control type="button" id="3121">
-                    <description>Reload Skin</description>
-                    <include>DefContextMenuButton</include>
-                    <label>20183</label>
-                    <onclick>ReloadSkin()</onclick>
-                </control>
+				</control>
+				<control type="button" id="6011">
+					<include>shutdown_buttons</include>
+					<label>20150</label>
+					<onclick>XBMC.AlarmClock(shutdowntimer,XBMC.Shutdown())</onclick>
+					<visible>!System.HasAlarm(shutdowntimer)</visible>
+					<visible>System.CanPowerDown | System.CanSuspend | System.CanHibernate</visible>
+					                    <include>DefContextMenuButton</include>
+
+				</control>
+				<control type="button" id="6012">
+					<include>shutdown_buttons</include>
+					<label>20151</label>
+					<onclick>XBMC.CancelAlarm(shutdowntimer)</onclick>
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+					                    <include>DefContextMenuButton</include>
+
+				</control>
+				<control type="label" id="6013">
+					<include>shutdown_buttons</include>
+					<label>$INFO[System.Alarmpos,Timer-]</label>
+					<visible>System.HasAlarm(shutdowntimer)</visible>
+					                    <include>DefContextMenuButton</include>
+
+				</control>
+				<control type="button" id="6014">
+					<include>shutdown_buttons</include>
+					<label>13014</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>XBMC.Minimize()</onclick>
+					<visible>!System.Platform.Linux</visible>
+					                    <include>DefContextMenuButton</include>
+
+				</control>
+				<control type="button" id="6016">
+					<include>shutdown_buttons</include>
+					<label>20183</label>
+					<onclick>Dialog.Close(shutdownmenu)</onclick>
+					<onclick>XBMC.ReloadSkin()</onclick>
+					                    <include>DefContextMenuButton</include>
+
+				</control>
+				<control type="button" id="6015">
+					<include>shutdown_buttons</include>
+					<label>5</label>
+					<onclick>ActivateWindow(Settings)</onclick>
+					                    <include>DefContextMenuButton</include>
+
+				</control>
+               
 
             </control>
-        </control>
+        
+		</control>
+		
     </controls>
 
 </window>

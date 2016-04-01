@@ -9,10 +9,7 @@
             <bottom>64</bottom>
             <height>504</height>
             <include>Dialog_Background</include>
-            <include name="Dialog_Top_IconHeader">
-                <param name="label" value="$ADDON[script.skin.helper.service 32011]" />
-                <param name="icon" value="special://skin/extras/icons/filebox.png" />
-            </include>
+
             <control type="panel" id="3110">
                 <onup>9000</onup>
                 <ondown>noop</ondown>
@@ -81,7 +78,7 @@
 				<control type="label" id="3016">
 					<!-- label opacity-->
 					<width>150</width>
-					<right>-20</right>
+					<right>-40</right>
 					<align>right</align>
 					<onup>3110</onup>
 					<label>$ADDON[script.skin.helper.service 32049]:</label>
@@ -109,6 +106,18 @@
 					<include>Defs_OptionButton</include>
 				</control>
 			</control>
+			
+							<!-- None \ Default -->
+				<control type="button" id="3011">
+					<width>260</width>
+                    <height>100%</height>
+					<label>571</label>
+					<align>right</align>
+                    <texturenofocus>noop</texturenofocus>
+                    <texturefocus>noop</texturefocus>
+                    <focusedcolor>$VAR[HighlightColor]</focusedcolor>
+                    <include>Defs_OptionButton</include>
+				</control>
 				
 				<!-- EDIT -->
                 <control type="button" id="3010">

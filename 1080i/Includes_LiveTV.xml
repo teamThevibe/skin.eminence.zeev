@@ -1492,7 +1492,7 @@
 	</variable>
 	<variable name="LiveTvModOptionsLabelVar">
 		<value condition="StringCompare(Skin.String(LiveTV.EpgViewChannels),1)">Icon only</value>
-		<value condition="StringCompare(Skin.String(LiveTV.EpgViewChannels),2)">Name & Icon</value>
+	<!--	<value condition="StringCompare(Skin.String(LiveTV.EpgViewChannels),2)">Name & Icon</value> -->
 		<value>Name only</value>
 	</variable>
 	

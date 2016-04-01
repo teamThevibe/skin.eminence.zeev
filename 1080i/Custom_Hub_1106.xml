@@ -4,16 +4,16 @@
     <backgroundcolor>Background</backgroundcolor>
     <defaultcontrol always="true">9501</defaultcontrol>
     <onunload>SetProperty(HubReturn,1106,home)</onunload>
-    <allowoverlay>false</allowoverlay>
     <controls>
-        <include condition="!Skin.HasSetting(skin.2) + !Skin.HasSetting(skin.3)" name="Window_Hub">
+			         <include condition="Skin.String(categories, em) + !Skin.String(categories, list)" name="Window_Hub">
             <param name="categories" value="skinshortcuts-group-x1106" />
         </include>
-		<include condition="Skin.HasSetting(skin.2) + !Skin.HasSetting(skin.3)" name="Window_Hub2">
+		<include condition="!Skin.String(categories, em) + !Skin.String(categories, list)" name="Window_Hub2">
             <param name="categories" value="skinshortcuts-group-x1106" />
         </include>
-			<include condition="Skin.HasSetting(skin.3)" name="Window_Hub3">
+			<include condition="Skin.String(categories, list)" name="Window_Hub3">
             <param name="categories" value="skinshortcuts-group-x1106" />
         </include>
+	
     </controls>
 </window>

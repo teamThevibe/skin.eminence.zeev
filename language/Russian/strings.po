@@ -2,20 +2,9 @@
 # Addon Name: Eminence
 # Addon id: skin.eminence
 # Addon Provider: jurialmunkey
+
 msgid ""
 msgstr ""
-"Project-Id-Version: XBMC Skins\n"
-"Report-Msgid-Bugs-To: alanwww1@xbmc.org\n"
-"POT-Creation-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"PO-Revision-Date: 2015-04-23 12:28+0200\n"
-"Last-Translator: Kodi Translation Team\n"
-"Language-Team: Russian (http://www.transifex.com/projects/p/xbmc-skins/language/ru/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
-"Language: ru\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
-"X-Generator: Poedit 1.7.5\n"
 
 msgctxt "#31101"
 msgid "Information"
@@ -163,7 +152,7 @@ msgid "Set weather fanart"
 msgstr "Выбрать фанарт погоды"
 
 msgctxt "#31139"
-msgid "Категории на выбор"
+msgid "Categories to choose"
 msgstr "Категории на выбор"
 
 msgctxt "#31140"
@@ -212,9 +201,7 @@ msgstr "Скрыть информацию"
 
 msgctxt "#31152"
 msgid "Posters"
-
-
-
+msgstr "Постеры"
 
 
 msgctxt "#31156"
@@ -256,7 +243,6 @@ msgstr "Настроить"
 msgctxt "#31165"
 msgid "Edit icon"
 msgstr "Редактировать значок"
-
 
 msgctxt "#31167"
 msgid "Pages"
@@ -744,7 +730,7 @@ msgstr "Задать видео при старте"
 
 msgctxt "#31288"
 msgid "Moshiko iCones"
-msgstr "Менять значек"
+msgstr "Поменять значки"
 
 msgctxt "#31289"
 msgid "KodiSrael"
@@ -848,7 +834,7 @@ msgstr "Для детей"
 
 msgctxt "#31314"
 msgid "vod"
-msgstr "Vod"
+msgstr "Архив"
 
 msgctxt "#31316"
 msgid "get graphic"
@@ -927,15 +913,15 @@ msgid "Eminence Zeev"
 msgstr "Eminence Zeev (перевод Viko Farber)"
 
 msgctxt "#313434"
-msgid "Eminence Zeev"
+msgid "Started at"
 msgstr "Начало в"
 
 msgctxt "#313436"
-msgid "Eminence Zeev"
+msgid "End at"
 msgstr "Заканчивается в"
 
 msgctxt "#313437"
-msgid "Eminence Zeev"
+msgid "More information"
 msgstr "Подробная информация"
 
 msgctxt "#3134378"
@@ -955,7 +941,7 @@ msgid "Eminence Zeev MOD"
 msgstr "Маленькие плитки - Eminence Zeev MOD"
 
 msgctxt "#3134385"
-msgid "Eminence Zeev MOD"
+msgid "Set personal settings - background changes, icons changes, changes and add categories and personal categories, change and add sub categories and large Tiles"
 msgstr "Применить персональные настройки - изменить фон, поменять значки, изменить и добавить папки и категории, добавить подкатегории и большие плитки."
 
 msgctxt "#3134384"
@@ -963,19 +949,19 @@ msgid "Eminence Zeev MOD"
 msgstr "[B]Eminence Zeev MOD -[/B]"
 
 msgctxt "#3134386"
-msgid "Eminence Zeev MOD"
+msgid "Delay subtitle"
 msgstr "Задержка субтитров"
 
 msgctxt "#31343568"
-msgid "disk"
+msgid "Discart widget"
 msgstr "Виджет диск"
 
 msgctxt "#31343569"
-msgid "Customise home menu"
+msgid "Customize home menu"
 msgstr "Настроить домашний экран"
 
 msgctxt "#31343570"
-msgid "Тип плитки"
+msgid "Tiles shape"
 msgstr "Тип плитки"
 
 msgctxt "#31343571"
@@ -995,7 +981,7 @@ msgid "Never"
 msgstr "Никогда"
 
 msgctxt "#31166"
-msgid "Individually set in customisation dialog"
+msgid "Hide"
 msgstr "Скрытый"
 
 msgctxt "#31153"
@@ -1007,7 +993,7 @@ msgid "On Up"
 msgstr "При загрузке"
 
 msgctxt "#31343574"
-msgid "Lovefilm"
+msgid "Fanart"
 msgstr "Фанарт"
 
 msgctxt "#31343575"
@@ -1040,7 +1026,7 @@ msgstr "Прозрачность плиток"
 
 
 msgctxt "#31343581"
-msgid "Большие плитки"
+msgid "Large Tiles"
 msgstr "Большие плитки"
 
 
@@ -1391,27 +1377,27 @@ msgid "Choose action"
 msgstr "Выберите действие"
 
 msgctxt "#324324236"
-msgid "set label"
+msgid "Set label"
 msgstr "Задать название"
 
 msgctxt "#324324237"
-msgid "set label"
+msgid "Set Sub-Menu"
 msgstr "Задать подкатегории"
 
 msgctxt "#324324238"
-msgid "set label"
+msgid "Set Background"
 msgstr "Задать фон"
 
 msgctxt "#324324239"
-msgid "set label"
+msgid "Set Icon"
 msgstr "Задать значек"
 
 msgctxt "#324324240"
-msgid "set label"
+msgid "Change title color"
 msgstr "Задать цвет плитки"
 
 msgctxt "#324324241"
-msgid "set label"
+msgid "Reset shortcut"
 msgstr "Сбросить ярлыки"
 
 msgctxt "#324324242"
@@ -1423,16 +1409,16 @@ msgid "Choose primary highlight color"
 msgstr "Установить цвет плиток домашнего экрана по умолчанию"
 
 msgctxt "#324324244"
-msgid "Choose secondary highlight color"
+msgid "Choose headline and notifications center color"
 msgstr "Установить цвет заголовка и центра сообщений"
 
 
 msgctxt "#324324246"
-msgid "Choose secondary highlight color"
+msgid "Choose main tile - system""
 msgstr "Изменить цвет верхней плитки - Система"
 
 msgctxt "#324324245"
-msgid "Choose secondary highlight color"
+msgid "Choose main tile - homepage"
 msgstr "Изменить цвет верхней плитки - Главная"
 
 msgctxt "#324324247"
@@ -1440,28 +1426,28 @@ msgid "Reset colors to defaults"
 msgstr "Сброс настроек цвета"
 
 msgctxt "#324324248"
-msgid "Reset colors to defaults"
+msgid "Change main titles color"
 msgstr "Изменить цвет заголовка"
 
 msgctxt "#324324249"
-msgid "Reset colors to defaults"
+msgid "Change icon color"
 msgstr "Изменить цвет значка"
 
 
 msgctxt "#324324344"
-msgid "Reset colors to defaults"
+msgid "Change OSD colors"
 msgstr "Изменить цвет кнопок OSD"
 
 msgctxt "#31343582"
-msgid "Плитки LG"
+msgid "LG Style"
 msgstr "Плитки LG"
 
 msgctxt "#31343583"
-msgid "Без плиток"
+msgid "No tiles"
 msgstr "Без плиток"
 
 msgctxt "#31343584"
-msgid "ТВ"
+msgid "Television"
 msgstr "ТВ"
 
 msgctxt "#31343586"
@@ -1469,350 +1455,648 @@ msgid "wide"
 msgstr "Широкий"
 
 msgctxt "#31343587"
-msgid "wide"
+msgid "Large List"
 msgstr "Большой список"
 
 msgctxt "#31343588"
-msgid "wide"
+msgid "List and Details"
 msgstr "Список и информация"
 
 msgctxt "#31343589"
-msgid "wide"
+msgid "Banner list"
 msgstr "Список баннер"
 
 msgctxt "#31343590"
-msgid "wide"
+msgid "Media information"
 msgstr "Данные медиа"
 
 msgctxt "#31343591"
-msgid "wide"
+msgid "Media Information 2"
 msgstr "Данные медиа 2"
 
 msgctxt "#31343592"
-msgid "wide"
+msgid "List"
 msgstr "Список"
 
 msgctxt "#31343593"
-msgid "wide"
+msgid "Wall 2"
 msgstr "Стена 2"
 
 msgctxt "#31343594"
-msgid "wide"
+msgid "Movies wall"
 msgstr "Стена фильмов"
 
 msgctxt "#31343595"
-msgid "wide"
+msgid "3D Movies"
 msgstr "Стена 3Д"
 
 msgctxt "#31343596"
-msgid "wide"
+msgid "Genesis Movies"
 msgstr "Фильмы Genesis"
 
 msgctxt "#31343597"
-msgid "wide"
+msgid "Pulsar Movies"
 msgstr "Фильмы Pulsar"
 
 msgctxt "#31343598"
-msgid "wide"
+msgid "SALTS Movies"
 msgstr "Фильмы Salts"
 
 msgctxt "#31343599"
-msgid "wide"
+msgid "Genesis Search"
 msgstr "Поиск Genesis"
 
 msgctxt "#31343600"
-msgid "wide"
+msgid "search in Movies DB"
 msgstr "Поиск на стене"
 
 msgctxt "#31343601"
-msgid "Популярные пути"
+msgid "Popular shortcuts"
 msgstr "Популярные пути"
 
 msgctxt "#31343602"
-msgid "Популярные пути"
+msgid "Posters & fanart"
 msgstr "постеры & фанарт"
 
 msgctxt "#31343603"
-msgid "Популярные пути"
+msgid "Change Display"
 msgstr "изменение отображаемого"
 
 msgctxt "#31343604"
-msgid "Популярные пути"
+msgid "Back to Homepage"
 msgstr "вернуться на главный экран"
 
 msgctxt "#31343605"
-msgid "Hub"
+msgid "Personal Hub 2"
 msgstr "Пользовательская категория 2"
 
 msgctxt "#31343606"
-msgid "Hub"
+msgid "Personal Hub 3"
 msgstr "Пользовательская категория 3"
 
 msgctxt "#31343607"
-msgid "Hub"
+msgid "Personal Hub 4"
 msgstr "Пользовательская категория 4"
 
 msgctxt "#31343608"
-msgid "Hub"
+msgid "Personal Hub 5"
 msgstr "Пользовательская категория 5"
 
 msgctxt "#31343609"
-msgid "Hub"
+msgid "Personal Hub 6"
 msgstr "Пользовательская категория 6"
 
 msgctxt "#31343610"
-msgid "Hub"
+msgid "Personal Hub 7"
 msgstr "Пользовательская категория 7"
 
 msgctxt "#31343611"
-msgid "Hub"
+msgid "Personal Hub 8"
 msgstr "Пользовательская категория 8"
 
 msgctxt "#31343612"
-msgid "Hub"
+msgid "Favorites"
 msgstr "Избранное"
 
 msgctxt "#31343613"
-msgid "Hub"
-msgstr "Стена подробнее"
+msgid "Movies wall and detail"
+msgstr "Стена и подробнее"
 
 msgctxt "#31343614"
-msgid "Hub"
+msgid "Movies wall and detail 2"
 msgstr "Стена 2"
 
 msgctxt "#31343615"
-msgid "Hub"
+msgid "Movies wall and detail 3"
 msgstr "Стена 3"
 
 msgctxt "#31343616"
-msgid "Hub"
+msgid "List and Poster"
 msgstr "Список и постер"
 
 msgctxt "#31343617"
-msgid "Hub"
+msgid "List 2"
 msgstr "Список 2"
 
 msgctxt "#31343618"
-msgid "Hub"
+msgid "Media details 2"
 msgstr "Информация о медиа 2"
 
 msgctxt "#31343619"
-msgid "Hub"
+msgid "Media details 3"
 msgstr "Информация о медиа 3"
 
 msgctxt "#31343620"
-msgid "Hub"
+msgid "Media details 4"
 msgstr "Информация о медиа 4"
 
 msgctxt "#31343621"
-msgid "Hub"
+msgid "Fanart list"
 msgstr "Список фанарт"
 
 msgctxt "#31343622"
-msgid "Hub"
+msgid "Icon lists"
 msgstr "Список иконок"
 
 msgctxt "#31343623"
-msgid "Hub"
+msgid "List and details"
 msgstr "Список и информация"
 
 msgctxt "#31343623"
-msgid "Hub"
+msgid "List and details"
 msgstr "Список и информация"
 
 msgctxt "#31343624"
-msgid "Hub"
+msgid "Fanart"
 msgstr "Фанарт"
 
 msgctxt "#31343625"
-msgid "Hub"
+msgid "Banner list"
 msgstr "Список баннер"
 
 msgctxt "#31343626"
-msgid "Hub"
+msgid "Gallery"
 msgstr "Галлерея"
 
 msgctxt "#31343627"
-msgid "Hub"
+msgid "Logos gallery"
 msgstr "Галлерея и лого"
 
 msgctxt "#31343628"
-msgid "Hub"
+msgid "Colors"
 msgstr "Цвета"
 
 msgctxt "#31343629"
-msgid "Hub"
+msgid "Backup&Restore"
 msgstr "Резервное копирование и восстановление"
 
 msgctxt "#31343630"
-msgid "Hub"
+msgid "Display config"
 msgstr "Резервное копирование и восстановление"
 
 msgctxt "#31343631"
-msgid "Hub"
+msgid "Widget Transparency"
 msgstr "Прозрачность виджета"
 
 msgctxt "#31343632"
-msgid "Hub"
+msgid "Fake CDArt"
 msgstr "Показать поддельный диск"
 
 msgctxt "#31343633"
-msgid "Hub"
+msgid "CDArt effect"
 msgstr "Вращающийся диск"
 
 msgctxt "#31343634"
-msgid "Hub"
+msgid "Movie Logo"
 msgstr "Лого фильма"
 
 msgctxt "#31343635"
-msgid "Hub"
+msgid "Set Hub and tile colors"
 msgstr "Отрегулируйте цвет категории и цвет плитки"
 
 msgctxt "#31343636"
-msgid "Hub"
+msgid "Set Hub and main tile colors"
 msgstr "Отрегулируйте цвет категории и цвет верхней плитки"
 
 msgctxt "#31343637"
-msgid "Hub"
+msgid "Set Hub style to 16:9"
 msgstr "הגדר Задать категорию в стиле 16:9"
 
 msgctxt "#31343638"
-msgid "Hub"
+msgid "Set Category with list style"
 msgstr "Установите категорию в стиле списка"
 
 msgctxt "#31343639"
-msgid "Hub"
+msgid "Cancel unmarked tiles transparency"
 msgstr "Отмена прозрачности не выбранных плиток"
 
 msgctxt "#31343640"
-msgid "Hub"
+msgid "Play videos in background"
 msgstr "Показать видео играющее в системе"
 
 msgctxt "#31343641"
-msgid "Hub"
+msgid "Play video in main menu background"
 msgstr "Просмотр видео на главной странице"
 
 msgctxt "#31343642"
-msgid "Hub"
+msgid "Darkness Fanart"
 msgstr "Затемнить фанарт"
 
 msgctxt "#31343643"
-msgid "Hub"
+msgid "Long title"
 msgstr "Полное название"
 
 msgctxt "#31343644"
-msgid "Hub"
+msgid "Show number of Movies/TVShow in title"
 msgstr "Показать название граф библиотеки"
 
 msgctxt "#31343645"
-msgid "Hub"
+msgid "Show Black clock backgroun"
 msgstr "Черный фон за часами и названием"
 
 msgctxt "#31343646"
-msgid "Hub"
+msgid "Show Clock"
 msgstr "Показать часы"
 
 msgctxt "#31343647"
-msgid "Hub"
+msgid "Change Busy animation"
 msgstr "Измененить значек ожидания"
 
 msgctxt "#31343648"
-msgid "Hub"
+msgid "Show CDArt in Movie information page"
 msgstr "Показать диск на странице о фильме"
 
 msgctxt "#31343649"
-msgid "Hub"
-msgstr "Показать информацию на стене о серии"
+msgid "Show TV Broadcast details in TVShow page"
+msgstr "Показать информацию о серии на стене"
 
 msgctxt "#31343650"
-msgid "Hub"
+msgid "Restore from Backup"
 msgstr "Восстановить из резервной копии"
 
 msgctxt "#31343651"
-msgid "Hub"
+msgid "Set Clock and Weather colors"
 msgstr "Установить цвет часов и погоды"
 
 msgctxt "#31343652"
-msgid "Hub"
+msgid "Set Title color"
 msgstr "Установить цвет названия"
 
 msgctxt "#31343653"
-msgid "Hub"
+msgid "Set secondary title color"
 msgstr "Установить цвет вторичного названия"
 
 msgctxt "#31343654"
-msgid "Hub"
+msgid "Set primary color on marked tile"
 msgstr "Установить основной цвет маркировки"
 
 msgctxt "#31343655"
-msgid "Hub"
+msgid "Set Tiles background color"
 msgstr "Установить цвет фона плитки"
 
 msgctxt "#31343656"
-msgid "Hub"
+msgid "Set notification area background color"
 msgstr "Установить цвета фона сообщений на главной"
 
 msgctxt "#31343657"
-msgid "Hub"
+msgid "Set RSS background color"
 msgstr "Установить цвет панели RSS на главной"
 
 msgctxt "#31343658"
-msgid "Hub"
-msgstr "включить / отключить просмотры (отметьте белым чтобы отменить)"
+msgid "Check/uncheck display mode (check which you like to cancel)"
+msgstr "Включить / отключить просмотры (отметьте белым чтобы отменить)"
 
 msgctxt "#31343659"
-msgid "Hub"
+msgid "Enable display mode settings"
 msgstr "Разрешить настройку отображаемого"
 
 msgctxt "#31343660"
-msgid "Hub"
+msgid "Movies Display mode:"
 msgstr "Вид фильмов:"
 
 msgctxt "#31343661"
-msgid "Hub"
+msgid "TVShows display mode:"
 msgstr "Вид сериалов:"
 
 msgctxt "#31343662"
-msgid "Hub"
+msgid "TVShows Seasons display mode:"
 msgstr "Вид сезонов:"
 
 msgctxt "#31343663"
-msgid "Hub"
+msgid "TVShows Seasons:"
 msgstr "Вид сезонов:"
 
 msgctxt "#31343664"
-msgid "Hub"
+msgid "Hub customize"
 msgstr "Редактировать категорию"
 
 msgctxt "#31343665"
-msgid "Hub"
+msgid "Set Hub Widget"
 msgstr "Настроить виджет категория"
 
 
 msgctxt "#31343666"
-msgid "Hub"
+msgid "Skin add-ons requires"
 msgstr "Дополнения используемые скином"
 
 msgctxt "#31343667"
-msgid "Hub"
+msgid "Installed"
 msgstr "Установленно"
 
 msgctxt "#31343668"
-msgid "Hub"
+msgid "not Installed"
 msgstr "Не установленно"
 
 msgctxt "#31343669"
-msgid "Hub"
+msgid "Vertical menu"
 msgstr "Вертикальное меню"
 
-msgctxt "#31343673"
-msgid "התאם את דף הבית"
-msgstr "Настроить домашний экран"
+msgctxt "#31343670"
+msgid "Set mouse cursor color to tile color"
+msgstr "Подогнать цвет указателя мышки к цвету плитки"
 
-msgctxt "#31343675"
-msgid "בית"
-msgstr "Меню"
+msgctxt "#31343671"
+msgid "Set mouse cursor color"
+msgstr "Изменить цвет указателя мышки"
 
 msgctxt "#31343672"
-msgid "מחק "
+msgid "Delete"
 msgstr "Стереть"
+
+msgctxt "#31343673"
+msgid "Customize Main-Menu"
+msgstr "Настроить главный экран"
+
+msgctxt "#31343675"
+msgid "Main"
+msgstr "Меню"
+
+msgctxt "#31343676"
+msgid "Password Protected"
+msgstr "Защищен паролем"
+
+msgctxt "#31343677"
+msgid "Password Protection for Home Menus"
+msgstr "Защитить паролем меню на главном экране"
+
+msgctxt "#31343678"
+msgid "Password Has Been Changed"
+msgstr "Пароль успешно изменен"
+
+msgctxt "#31343679"
+msgid "Correct Password! The Menu is now open for"
+msgstr "Правильный пароль! Меню открыто на -"
+
+msgctxt "#31343680"
+msgid "Unlock Menu again after:"
+msgstr "Заблокировать меню через:"
+
+msgctxt "#31343681"
+msgid "Choose Fanart For Locked Items"
+msgstr "Выбрать фон для заблокированных меню"
+
+msgctxt "#31343682"
+msgid "Incorrect password"
+msgstr "Неправильный пароль"
+
+msgctxt "#31343683"
+msgid "Press Enter and insert CODE"
+msgstr "Нажмите Enter и введите пароль"
+
+msgctxt "#31343684"
+msgid "seconds"
+msgstr "секунд"
+
+msgctxt "#31343685"
+msgid "Disable icons transparency"
+msgstr "Отменить прозрачность иконок"
+
+msgctxt "#31343686"
+msgid "Weather Fanart package"
+msgstr "Пакет фанарт погоды"
+
+
+msgctxt "#31343687"
+msgid "Weather icons package"
+msgstr "Пакет иконок для погоды"
+
+
+msgctxt "#31343692"
+msgid "Home bar style"
+msgstr "Стиль плиток"
+
+msgctxt "#31343693"
+msgid "Default"
+msgstr "По умолчанию"
+
+msgctxt "#31343694"
+msgid "Inclined with frame"
+msgstr "Скошенные в рамке"
+
+msgctxt "#31343695"
+msgid "vertical menu with icons"
+msgstr "Вертикальное меню - список иконок"
+
+msgctxt "#31343696"
+msgid "Rounded edges"
+msgstr "Округленные края"
+
+msgctxt "#31343697"
+msgid "Rounded edges with frame"
+msgstr "Округленные края с рамкой"
+
+msgctxt "#31343698"
+msgid "Square Tiles"
+msgstr "Квадратные плитки"
+
+msgctxt "#31343699"
+msgid "Square Tiles with frame"
+msgstr "Квадратные плитки с рамкой"
+
+msgctxt "#31343700"
+msgid "Circle tiles"
+msgstr "Закруглённые"
+
+msgctxt "#31343701"
+msgid "Circle tiles with frame"
+msgstr "Закруглённые с рамкой"
+
+msgctxt "#31343702"
+msgid "Sub-Menu open automatically - only at Vertical menu (icons)"
+msgstr "Автоматическое открытие подменю - только вертикальный список иконок"
+
+msgctxt "#31343703"
+msgid "Mute"
+msgstr "Без звука"
+
+msgctxt "#31343704"
+msgid "Showcase view"
+msgstr "Вид витрина"
+
+msgctxt "#31343705"
+msgid "Kids"
+msgstr "Для детей"
+
+msgctxt "#31343706"
+msgid "Live TV"
+msgstr "ТВ"
+
+msgctxt "#31343707"
+msgid "Sport"
+msgstr "Спорт"
+
+msgctxt "#31343708"
+msgid "VOD"
+msgstr "Архив"
+
+msgctxt "#31343709"
+msgid "Background Packs"
+msgstr "Пакет фонов"
+ 
+msgctxt "#31343711"
+msgid "Icon Packs"
+msgstr "Пакет значков"
+
+msgctxt "#31343712"
+msgid "Apply Packs"
+msgstr "Применить изменения"
+
+msgctxt "#31688"
+msgid "Sets a protection password for menu items."
+msgstr "Установить пароль на меню главного экрана"
+
+msgctxt "#31689"
+msgid "Sets duration white menu items will be available after entering password."
+msgstr "Установите время в течении которого будет доступно меню после ввода пароля"
+
+msgctxt "#31690"
+msgid "Password protection"
+msgstr "Задать пароль для меню"
+
+msgctxt "#31691"
+msgid "Password protection for menu items"
+msgstr "Защитить меню на главной странице"
+
+msgctxt "#31692"
+msgid "Password has been successfully set !"
+msgstr "Пароль успешно установлен!"
+
+msgctxt "#31693"
+msgid "Duration of protection for menu items"
+msgstr "Продолжительность защиты меню"
+
+msgctxt "#31694"
+msgid "Password protected content"
+msgstr "Содержимое защищенно паролем"
+
+msgctxt "#31695"
+msgid "Press [B]Enter[/B] and insert password."
+msgstr "Нажмите OK и введите пароль."
+
+msgctxt "#31696"
+msgid "Incorrect password ! Please Retry."
+msgstr "Неправильный пароль! Пожалуйста повторите попытку."
+
+msgctxt "#31697"
+msgid "Correct password ! This menu is now available for"
+msgstr "Правильный пароль! Это меню доступно в течении -"
+
+msgctxt "#31343714"
+msgid "Skin music window"
+msgstr "Окно музыки оболочки"
+
+msgctxt "#31343715"
+msgid "Fake CDArt in music window"
+msgstr "Поддельный диск при проигрывание музыки"
+
+msgctxt "#31343716"
+msgid "Animate Fanart when playing music"
+msgstr "Анимировать фанарт при воспроизведении музыки"
+
+msgctxt "#31343717"
+msgid "View album art, CD and title display"
+msgstr "Отображать обложки альбомов и название диска"
+
+msgctxt "#31343718"
+msgid "Cancel Top bar view when playing music"
+msgstr "Отменить часы при воспроизведении музыки"
+
+msgctxt "#31343719"
+msgid "View visualisation in Home screen when playing music"
+msgstr "Показать визуализацию на домашнем экране при воспроизведении музыки"
+
+msgctxt "#31343720"
+msgid "Home screen When playing music"
+msgstr "Домашний экран при воспроизведении музыки"
+
+msgctxt "#31343721"
+msgid "View Fanart in Home screen when playing music"
+msgstr "Показать фанарт на домашнем экране при воспроизведении музыки"
+
+msgctxt "#31343722"
+msgid "View Fanart in system screen when playing music"
+msgstr "Показать системный фанарт при воспроизведении музыки"
+
+msgctxt "#31343723"
+msgid "View visualisation in system screen when playing music"
+msgstr "Показать системную визуализацию при воспроизведении музыки"
+
+msgctxt "#31343724"
+msgid "System screen when playing music"
+msgstr " Экран системы при воспроизведении музыки"
+
+msgctxt "#31343725"
+msgid "Music"
+msgstr "Музыка"
+
+msgctxt "#31343726"
+msgid "Set password for main menu"
+msgstr "Задать пароль"
+
+msgctxt "#31343727"
+msgid "Duration of protection for menu items"
+msgstr "Продолжительность защиты пунктов меню"
+
+msgctxt "#31343728"
+msgid "Themes - Definitions , color design and automatic setup menus"
+msgstr "Темы - настройки, цветовой дизайн и автоматизированные конфигурации"
+
+msgctxt "#31343729"
+msgid "Color management package"
+msgstr "Управление цветовыми схемами"
+
+msgctxt "#31343730"
+msgid "Theme - The vibe team"
+msgstr "Тема - The Vibe team"
+
+msgctxt "#31343731"
+msgid "Special settings for displaying movies and Tv shows"
+msgstr "Специальные настройки для отображения фильмов и сериалов"
+
+msgctxt "#31343732"
+msgid "Automatically set backgrounds and icons packages"
+msgstr "Задать автоматически пакет иконок, фонов"
+
+msgctxt "#31343733"
+msgid "Icon Packs"
+msgstr "Пакет иконок"
+
+msgctxt "#31343734"
+msgid "Apply icons packs"
+msgstr "Применить пакет иконок"
+
+msgctxt "#31343735"
+msgid "Apply background packs"
+msgstr "Применить пакет фонов"
+
+msgctxt "#31343736"
+msgid "RSS line"
+msgstr "Полоса RSS"
+
+msgctxt "#31343737"
+msgid "startup screen (video, image, slideshow)"
+msgstr "Установки экрана при запуске (видео, изображения, слайд-шоу)"
+
+msgctxt "#31343738"
+msgid "Determination of views by content libraries"
+msgstr "Задать вид по библиотеке контента"
+
+msgctxt "#31343739"
+msgid "Backup and Restore - Skin settings , menus , colors"
+msgstr "Резервное копирование и восстановление - параметры оболочки, меню, цвета"
+
+msgctxt "#31343740"
+msgid "Backup home screen shortcuts and categories only"
+msgstr "Резервное копирование ярлыков на домашнем экране и только в категориях"
+
+msgctxt "#31343743"
+msgid "Backup colors"
+msgstr "Резервного копирования цветов системы"
+
+msgctxt "#31343744"
+msgid "Skin add-ons requires"
+msgstr "Дополнения которые используются в оболочке"
+
+msgctxt "#31343745"
+msgid "Loading"
+msgstr "Загрузка"

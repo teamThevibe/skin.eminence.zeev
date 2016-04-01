@@ -1,11 +1,248 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
+		<!-- VARS -->
+	<variable name="HighlightColor">
+		<value condition="!IsEmpty(Window(home).Property(HighlightColor)) + !StringCompare(Skin.String(HighlightColor),None)">$INFO[Window(home).Property(HighlightColor)]</value>
+		<value condition="!IsEmpty(Skin.String(HighlightColor)) + !StringCompare(Skin.String(HighlightColor),None)">$INFO[Skin.String(HighlightColor)]</value>
+		<value>Highlight</value>
+	</variable>
+	<variable name="HighlightColor2">
+		<value condition="!IsEmpty(Skin.String(HighlightColor2)) + !StringCompare(Skin.String(HighlightColor2),None)">$INFO[Skin.String(HighlightColor2)]</value>
+		<value>Highlight2</value>
+	</variable>
 
-<include name="NextAiredINFO">
+	<include name="home_fade_level">
+		<animation effect="fade" reversible="false" end="90" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),90)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="80" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),80)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="70" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),70)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="60" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),60)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="50" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),50)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="40" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),40)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="30" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),30)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="20" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),20)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="10" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),10)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="0" time="0" condition="StringCompare(Skin.String(topbar_home_opacity),0)">Conditional</animation>
+	</include>
+
+	<include name="home_fade_level2">
+		<animation effect="fade" reversible="false" end="90" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),90)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="80" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),80)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="70" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),70)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="60" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),60)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="50" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),50)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="40" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),40)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="30" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),30)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="20" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),20)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="10" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),10)">Conditional</animation>
+		<animation effect="fade" reversible="false" end="0" time="0" condition="StringCompare(Skin.String(topbar_home_opacity2),0)">Conditional</animation>
+	</include>
+
+
+	<include name="Play_Stop" condition="Window.IsVisible(Home)">
+
+		<control type="grouplist" id="9103">	
+			<include>Animation.FadeIn</include>
+			<include>Animation.FadeOut</include>  
+			<ondown condition="Window.IsActive(Custom_Hub_1101.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1102.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1103.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1104.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1105.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1106.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1107.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1108.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1109.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1110.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1111.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1112.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1113.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1114.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1115.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1116.xml)">9501</ondown>
+			<ondown condition="Window.IsActive(Custom_Hub_1117.xml)">9501</ondown>
+			<onup condition="!Window.IsActive(home)">50</onup>
+			<ondown condition="!Window.IsActive(home)">50</ondown>
+			<onleft condition="!Window.IsActive(home)">50</onleft>
+			<onright condition="!Window.IsActive(home)">50</onright>
+			<visible allowhiddenfocus="true">ControlGroup(9103).HasFocus()</visible>
+			<animation effect="slide" start="0,10" time="250" condition="!Control.HasFocus(9103)">Conditional</animation>
+			<orientation>horizontal</orientation>
+			<itemgap>8</itemgap>
+			<centertop>300</centertop>
+			<left>380</left>
+			<width>1020</width>
+			<height>300</height>
+							                <control type="button" id="18">
+				<description>Fullscreen</description>
+				<width>32</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[OSDColor]">osd/fullscreen2.png</texturefocus>
+				<texturenofocus colordiffuse="LineLabel">osd/fullscreen2.png</texturenofocus>
+                    <onclick>Action(fullscreen)</onclick>
+                </control>
+				
+			<control type="button" id="12">
+				<description>Skip Back</description>
+				<width>32</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[OSDColor]" flipx="true">osd/next.png</texturefocus>
+				<texturenofocus colordiffuse="LineLabel" flipx="true">osd/next.png</texturenofocus>
+				<onclick>PlayerControl(Previous)</onclick>
+			</control>
+
+			<control type="button" id="13">
+				<description>Rewind</description>
+				<width>32</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[OSDColor]" flipx="true">osd/ff.png</texturefocus>
+				<texturenofocus colordiffuse="LineLabel" flipx="true">osd/ff.png</texturenofocus>
+				<onclick>PlayerControl(Rewind)</onclick>
+			</control>
+
+			<control type="togglebutton" id="14">
+				<description>Play/Pause</description>
+				<width>32</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[OSDColor]">osd/pause.png</texturefocus>
+				<texturenofocus colordiffuse="LineLabel">osd/pause.png</texturenofocus>
+				<usealttexture>Player.Paused | Player.Forwarding | Player.Rewinding</usealttexture>
+				<alttexturefocus colordiffuse="$VAR[OSDColor]">osd/play.png</alttexturefocus>
+				<alttexturenofocus colordiffuse="LineLabel">osd/play.png</alttexturenofocus>
+				<onclick>PlayerControl(Play)</onclick>
+			</control>
+
+			<control type="button" id="15">
+				<description>Stop</description>
+				<width>32</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[OSDColor]">osd/stop.png</texturefocus>
+				<texturenofocus colordiffuse="LineLabel">osd/stop.png</texturenofocus>
+				<onclick>PlayerControl(Stop)</onclick>
+			</control>
+
+			<control type="button" id="16">
+				<description>Fast Forward</description>
+				<width>32</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[OSDColor]">osd/ff.png</texturefocus>
+				<texturenofocus colordiffuse="LineLabel">osd/ff.png</texturenofocus>
+				<onclick>PlayerControl(Forward)</onclick>
+			</control>
+
+			<control type="button" id="17">
+				<description>Next</description>
+				<width>32</width>
+				<height>32</height>
+				<label>-</label>
+				<font>-</font>
+				<texturefocus colordiffuse="$VAR[OSDColor]">osd/next.png</texturefocus>
+				<texturenofocus colordiffuse="LineLabel">osd/next.png</texturenofocus>
+				<onclick>PlayerControl(Next)</onclick>
+			</control>
+
+
+		</control>
+
+	</include>
+
+	<include name="muiscART">
+		<control type="image" description="Fanart Fade">
+			<include>Animation.FadeIn</include>
+			<include>Animation.FadeOut</include>             
+			<visible>!Player.HasAudio</visible>
+			<visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+			<centertop>115</centertop>
+			<centerleft>45%</centerleft>
+			<width>300</width>             
+			<height>150</height>
+			<aspectratio align="center">keep</aspectratio>
+			<aspectratio>true</aspectratio>
+			<texture background="true">$INFO[Window(Home).Property(SkinHelper.Music.ClearLogo)]</texture>
+		</control>
+	</include>
+
+	<!-- Ajout Variable -->
+	<!-- Password Protection -->
+	<variable name="passcode">
+		<value condition="[IsEmpty(Container(211).ListItem.Property(ParentalControl)) | SubString(Container(211).ListItem.Property(ParentalControl),no)]">$LOCALIZE[106]</value>
+		<value>$LOCALIZE[107]</value>
+	</variable>
+	<variable name="temp_passcode">
+		<value condition="!IsEmpty(Skin.String(temp))">$INFO[Skin.String(temp)]</value>
+		<value>$INFO[Skin.String(passcode)]</value>
+	</variable>
+	<variable name="password_time">
+		<value condition="!IsEmpty(Skin.String(password_time))">$INFO[Skin.String(password_time)]</value>
+		<value>5</value>
+	</variable>
+	<variable name="password_notification">
+		<value condition="StringCompare(Skin.String(mypassword),Skin.String(passcode))">$LOCALIZE[31697] $VAR[password_time] $LOCALIZE[12391]</value>
+		<value>$LOCALIZE[31696]</value>
+	</variable>
+
+
+	<!-- Ajout Include -->    
+	<include name="ClearLogo">
+		<control type="image" description="clearlogo">
+			<include>Animation.FadeIn</include>
+			<include>Animation.FadeOut</include>             
+			<visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+			<centertop>115</centertop>
+			<centerleft>50%</centerleft>
+			<width>400</width>             
+			<height>180</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture background="true">$VAR[ClearLogoTop]</texture>
+		</control>
+	</include> 
+	
+		<!-- Ajout Include -->    
+	<include name="ClearLogo3">
+		<control type="image" description="clearlogo">
+			<include>Animation.FadeIn</include>
+			<include>Animation.FadeOut</include>             
+			<visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+			<centertop>-180</centertop>
+			<centerleft>40%</centerleft>
+			<width>400</width>             
+			<height>180</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture background="true">$VAR[ClearLogoTop]</texture>
+		</control>
+	</include> 
+
+			<!-- Ajout Include -->    
+	<include name="ClearLogo2">
+		<control type="image" description="clearlogo">
+			<include>Animation.FadeIn</include>
+			<include>Animation.FadeOut</include>             
+			<visible>!Window.IsVisible(script-ExtendedInfo Script-DialogVideoInfo.xml) + !Window.IsVisible(script-ExtendedInfo Script-DialogInfo.xml)</visible>
+			<centertop>-100</centertop>
+			<centerleft>50%</centerleft>
+			<width>400</width>             
+			<height>180</height>
+			<aspectratio align="center">keep</aspectratio>
+			<texture background="true">$VAR[ClearLogoTop]</texture>
+		</control>
+	</include> 
+	
+	<include name="NextAiredINFO">
 		<!-- NextAired  -->
 
-	<!--<control type="image">
+		<!--<control type="image">
                   <posx>1220</posx>
 				  <posy>170</posy>
 				  <width>460</width>
@@ -13,290 +250,292 @@
 				  <texture background="true" colordiffuse="sethub">common/white.png</texture>
 					<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + !Control.IsVisible(516) + !Control.IsVisible(517) + !Control.IsVisible(500)</visible>                          
 					</control>	-->
-					<control type="group">
-					                <animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
-																					     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
-							<visible>!Window.IsVisible(2003)</visible>
+		<control type="group">
+			<animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+			<visible>!Window.IsVisible(2003)</visible>
 
-					<top>-550</top>
-					<right>-350</right>
-					<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + !Control.IsVisible(516) + !Control.IsVisible(517) + !Control.IsVisible(500)</visible>                          
-				<control type="label">
-					<right>615</right>
-					<top>774</top>
-					<width>915</width>
-					<height>32</height>
-					<align>right</align>
-					<aligny>top</aligny>
-					<font>Font-ListInfo</font>
-					<label>$LOCALIZE[3134378]: $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirDay)]  $LOCALIZE[3134380]$INFO[Window(Home).Property(NextAired.ShortTime)]</label>
-					<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + !Control.IsVisible(516) + !Control.IsVisible(517) + !Control.IsVisible(500)</visible>                          
-				</control>
-	  </control>
-</include>
+			<top>-550</top>
+			<right>-350</right>
+			<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + !Control.IsVisible(516) + !Control.IsVisible(517) + !Control.IsVisible(500)</visible>                          
+			<control type="label">
+				<right>615</right>
+				<top>774</top>
+				<width>915</width>
+				<height>32</height>
+				<align>right</align>
+				<aligny>top</aligny>
+				<font>Font-ListInfo</font>
+				<label>$LOCALIZE[3134378]: $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirDay)]  $LOCALIZE[3134380]$INFO[Window(Home).Property(NextAired.ShortTime)]</label>
+				<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + !Control.IsVisible(516) + !Control.IsVisible(517) + !Control.IsVisible(500)</visible>                          
+			</control>
+		</control>
+	</include>
 
-<include name="NextAiredINFO2">
+	<include name="NextAiredINFO2">
 		<!-- NextAired  -->
 
-					<control type="group">
-					                <animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
-												     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
-							<visible>!Window.IsVisible(2003)</visible>
+		<control type="group">
+			<animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+			<visible>!Window.IsVisible(2003)</visible>
 
-					<top>-80</top>
-					<right>-500</right>
-					<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + Control.IsVisible(517)</visible>                          
-				<control type="label">
-					<right>615</right>
-					<top>774</top>
-					<width>915</width>
-					<height>32</height>
-					<align>right</align>
-					<aligny>top</aligny>
-					<font>Font-ListInfo</font>
-					<label>$LOCALIZE[3134378]: $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirDay)]  $LOCALIZE[3134380]$INFO[Window(Home).Property(NextAired.ShortTime)]</label>
-					<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay)</visible>                          
-				</control>
-	  </control>
-</include>
+			<top>-80</top>
+			<right>-500</right>
+			<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + Control.IsVisible(517)</visible>                          
+			<control type="label">
+				<right>615</right>
+				<top>774</top>
+				<width>915</width>
+				<height>32</height>
+				<align>right</align>
+				<aligny>top</aligny>
+				<font>Font-ListInfo</font>
+				<label>$LOCALIZE[3134378]: $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirDay)]  $LOCALIZE[3134380]$INFO[Window(Home).Property(NextAired.ShortTime)]</label>
+				<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay)</visible>                          
+			</control>
+		</control>
+	</include>
 
-<include name="NextAiredINFO3">
+	<include name="NextAiredINFO3">
 		<!-- NextAired  -->
-					<control type="group">
-					<top>-150</top>
-					<right>-550</right>
-												<visible>!Window.IsVisible(2003)</visible>
+		<control type="group">
+			<top>-150</top>
+			<right>-550</right>
+			<visible>!Window.IsVisible(2003)</visible>
 
-					<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + Control.IsVisible(516)</visible>                          
-																     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+			<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + Control.IsVisible(516)</visible>                          
+			<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
 
-				<control type="image">
-                  <posx>1210</posx>
-				  <posy>770</posy>
-				  <width>800</width>
-				  <height>50</height>
-				  <texture background="true" colordiffuse="HomeWidgetBG">common/OSDflag.png</texture>
-				  				<animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
-								
-					</control>
-				
-				<control type="label">
-					<right>615</right>
-					<top>774</top>
-					<width>915</width>
-					<height>32</height>
-					<align>right</align>
-					<aligny>top</aligny>
-					<font>Font-ListInfo</font>
-					<label>$LOCALIZE[3134378]: $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirDay)]  $LOCALIZE[3134380]$INFO[Window(Home).Property(NextAired.ShortTime)]</label>
-					<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay)</visible>                          
-				</control>
-	  </control>
-</include>
+			<control type="image">
+				<posx>1210</posx>
+				<posy>770</posy>
+				<width>800</width>
+				<height>50</height>
+				<texture background="true" colordiffuse="HomeWidgetBG">common/OSDflag.png</texture>
+				<animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
 
-<include name="NextAiredINFO4">
+			</control>
+
+			<control type="label">
+				<right>615</right>
+				<top>774</top>
+				<width>915</width>
+				<height>32</height>
+				<align>right</align>
+				<aligny>top</aligny>
+				<font>Font-ListInfo</font>
+				<label>$LOCALIZE[3134378]: $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirDay)]  $LOCALIZE[3134380]$INFO[Window(Home).Property(NextAired.ShortTime)]</label>
+				<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay)</visible>                          
+			</control>
+		</control>
+	</include>
+
+	<include name="NextAiredINFO4">
 		<!-- NextAired  -->
-		
-					<control type="group">
-					                <animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
-												     	<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
-							<visible>!Window.IsVisible(2003)</visible>
 
-					<top>220</top>
-					<right>-550</right>
-					<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + Control.IsVisible(500)</visible>                          
-				<control type="label">
-					<left>250</left>
-					<top>0</top>
-					<width>915</width>
-					<height>32</height>
-					<align>right</align>
-					<aligny>top</aligny>
-					<font>Font-ListInfo</font>
-					<label>$LOCALIZE[3134378]: $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirDay)]  $LOCALIZE[3134380]$INFO[Window(Home).Property(NextAired.ShortTime)]</label>
-					<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay)</visible>                          
-				</control>
-	  </control>
-</include>
+		<control type="group">
+			<animation effect="fade" start="0" end="100" delay="450" time="250" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>			
+			<visible>!Window.IsVisible(2003)</visible>
 
-<include name="discart3">
-				<control type="image">
-						 <left>1350</left>
-           <top>350</top>					<width>300</width>
-					<aspectratio>keep</aspectratio>
-					<height>300</height>    
-					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-					<fadetime>300</fadetime>
-				</control>
-</include>
+			<top>220</top>
+			<right>-550</right>
+			<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay) + Control.IsVisible(500)</visible>                          
+			<control type="label">
+				<left>250</left>
+				<top>0</top>
+				<width>915</width>
+				<height>32</height>
+				<align>right</align>
+				<aligny>top</aligny>
+				<font>Font-ListInfo</font>
+				<label>$LOCALIZE[3134378]: $INFO[Window(Home).Property(NextAired.NextDate)] $INFO[Window(Home).Property(NextAired.AirDay)]  $LOCALIZE[3134380]$INFO[Window(Home).Property(NextAired.ShortTime)]</label>
+				<visible>Container.Content(TVShows) + !IsEmpty(Window(Home).Property(NextAired.AirDay)</visible>                          
+			</control>
+		</control>
+	</include>
+
+	<include name="discart3">
+		<control type="image">
+			<left>1350</left>
+			<top>350</top>					<width>300</width>
+			<aspectratio>keep</aspectratio>
+			<height>300</height>    
+			<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+			<fadetime>300</fadetime>
+		</control>
+	</include>
 
 
 
-<include name="discart2">
-				<control type="image">
-					<posx>280</posx>
-					<posy>520</posy>
-					<width>300</width>
-					<aspectratio>keep</aspectratio>
-					<height>300</height>    
-					<texture background="true">$INFO[ListItem.Art(discart)]</texture>
-					<fadetime>300</fadetime>
-				</control>
-</include>
+	<include name="discart2">
+		<control type="image">
+			<posx>280</posx>
+			<posy>520</posy>
+			<width>300</width>
+			<aspectratio>keep</aspectratio>
+			<height>300</height>    
+			<texture background="true">$INFO[ListItem.Art(discart)]</texture>
+			<fadetime>300</fadetime>
+		</control>
+	</include>
 
-<include name="stars">
+	<include name="stars">
 
-                        <control type="grouplist">
+		<control type="grouplist">
 
-                            <include>Animation.FadeIn</include>
-                            <include>Animation.FadeOut</include>
-                            <right>20</right>
-                            <centertop>810</centertop>
-							<centerleft>810</centerleft>
-                            <height>64</height>
-                            <orientation>horizontal</orientation>
-                            <align>left</align>
-                            <itemgap>24</itemgap>
-                            <usecontrolcoords>true</usecontrolcoords>
-                            <control type="image">
-                                <width>64</width>
-                                <height>64</height>
-                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar1].png</texture>
-                            </control>
-                            <control type="image">
-                                <posx>-48</posx>
-                                <width>64</width>
-                                <height>64</height>
-                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar2].png</texture>
-                            </control>
-                            <control type="image">
-                                <posx>-48</posx>
-                                <width>64</width>
-                                <height>64</height>
-                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar3].png</texture>
-                            </control>
-                            <control type="image">
-                                <posx>-48</posx>
-                                <width>64</width>
-                                <height>64</height>
-                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar4].png</texture>
-                            </control>
-                            <control type="image">
-                                <posx>-48</posx>
-                                <width>64</width>
-                                <height>64</height>
-                                <texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar5].png</texture>
-                            </control>
-						<control type="label">
-                            <width>auto</width>
-                            <height>64</height>
-                            <align>left</align>
-                            <aligny>center</aligny>
-                            <label>$INFO[ListItem.Rating]</label>
-                            <font>Flag</font>
-                            <textcolor>PanelFG-NF</textcolor>
-							</control>
+			<include>Animation.FadeIn</include>
+			<include>Animation.FadeOut</include>
+			<right>20</right>
+			<centertop>810</centertop>
+			<centerleft>810</centerleft>
+			<height>64</height>
+			<orientation>horizontal</orientation>
+			<align>left</align>
+			<itemgap>24</itemgap>
+			<usecontrolcoords>true</usecontrolcoords>
+			<control type="image">
+				<width>64</width>
+				<height>64</height>
+				<texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar1].png</texture>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar2].png</texture>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar3].png</texture>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar4].png</texture>
+			</control>
+			<control type="image">
+				<posx>-48</posx>
+				<width>64</width>
+				<height>64</height>
+				<texture colordiffuse="PanelFG-NF">flags/$VAR[Flagstar5].png</texture>
+			</control>
+			<control type="label">
+				<width>auto</width>
+				<height>64</height>
+				<align>left</align>
+				<aligny>center</aligny>
+				<label>$INFO[ListItem.Rating]</label>
+				<font>Flag</font>
+				<textcolor>PanelFG-NF</textcolor>
+			</control>
 
-						                        </control>
-
-</include>
-	<include name="Defs_movie">
-	
-				<control type="grouplist">     
-				<posx>-200</posx>
-				<posy>510</posy>
-				<width>900</width>
-				
-	<control type="label">
-	<right>300</right>
-					<label>$INFO[listitem.Genre]</label>
-					<aligny>top</aligny>
-					<align>center</align>
-					<height>35</height>
-					<animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-					<textcolor>HomeBarFG</textcolor>
-				</control>
-				<control type="label">
-					<right>300</right>
-					<label>$INFO[listitem.label]</label>
-					<align>center</align>
-					<aligny>top</aligny>
-					<font>Font-WidgetInfoTitle</font>
-					<height>70</height>
-					<textcolor>$VAR[HighlightColor2]</textcolor>
-				</control>
-				<control type="textbox">
-				
-					<label>$INFO[listitem.Plot]</label>
-					<align>center</align>
-               <width>600</width>
-					<aligny>top</aligny>
-					<align>justify</align>
-					<height>150</height>
-					<animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
-					<textcolor>HomeBarFG</textcolor>
-					<font>Font-ListInfo</font>
-				</control>
-						</control>
+		</control>
 
 	</include>
-			<variable name="Highlight15"><!--עכבר-->
-		<value condition="!IsEmpty(Skin.String(HighlightColor15))">$INFO[Skin.String(HighlightColor15)]</value>
-				<value condition="Skin.HasSetting(Pointer.color)">$VAR[HighlightColor]</value>
+	<include name="Defs_movie">
+
+		<control type="grouplist">     
+			<posx>-200</posx>
+			<posy>510</posy>
+			<width>900</width>
+
+			<control type="label">
+				<right>300</right>
+				<label>$INFO[listitem.Genre]</label>
+				<aligny>top</aligny>
+				<align>center</align>
+				<height>35</height>
+				<animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+				<textcolor>HomeBarFG</textcolor>
+			</control>
+			<control type="label">
+				<right>300</right>
+				<label>$INFO[listitem.label]</label>
+				<align>center</align>
+				<aligny>top</aligny>
+				<font>Font-WidgetInfoTitle</font>
+				<height>70</height>
+				<textcolor>$VAR[HighlightColor2]</textcolor>
+			</control>
+			<control type="textbox">
+
+				<label>$INFO[listitem.Plot]</label>
+				<align>center</align>
+				<width>600</width>
+				<aligny>top</aligny>
+				<align>justify</align>
+				<height>150</height>
+				<animation effect="fade" start="100" end="70" condition="true">Conditional</animation>
+				<textcolor>HomeBarFG</textcolor>
+				<font>Font-ListInfo</font>
+			</control>
+		</control>
+
+	</include>
+	<variable name="Highlight15"><!--עכבר-->
+		<value condition="!IsEmpty(Skin.String(HighlightColor15)) + !StringCompare(Skin.String(HighlightColor15),None)">$INFO[Skin.String(HighlightColor15)]</value>
+		<value condition="Skin.HasSetting(Pointer.color)">$VAR[HighlightColor]</value>
 		<value>Highlight</value>
 	</variable>
-	
-		<variable name="Highlight12">
-		<value condition="!IsEmpty(Skin.String(HighlightColor12))">$INFO[Skin.String(HighlightColor12)]</value>
+
+	<variable name="Highlight12">
+		<value condition="!IsEmpty(Skin.String(HighlightColor12)) + !StringCompare(Skin.String(HighlightColor12),None)">$INFO[Skin.String(HighlightColor12)]</value>
 		<value>White</value>
 	</variable>
-	
-	
+
+
 	<variable name="DefCOLOR2">
 		<value condition="StringCompare(Skin.String(OSDColor),OSDColor)">FFe66a4f</value>
 		<value>FFFF0000</value>
 	</variable>
-	
+
 	<variable name="clockcolor">
-		<value condition="!IsEmpty(Skin.String(clockheadercolor))">$INFO[Skin.String(clockheadercolor)]</value>
+		<value condition="!IsEmpty(Skin.String(clockheadercolor)) + !StringCompare(Skin.String(clockheadercolor),None)">$INFO[Skin.String(clockheadercolor)]</value>
 		<value>White</value>
 	</variable>
-	
-	
+
+
 	<variable name="DefOSDTagline">
 		<value condition="!IsEmpty(VideoPlayer.Tagline)">$INFO[VideoPlayer.Tagline]</value>
 		<value>$INFO[VideoPlayer.Genre]</value>
 	</variable>
 	<variable name="OSDColor">
-		<value condition="!IsEmpty(Skin.String(HighlightColor5))">$INFO[Skin.String(HighlightColor5)]</value>
+		<value condition="!IsEmpty(Skin.String(HighlightColor5)) + !StringCompare(Skin.String(HighlightColor5),None)">$INFO[Skin.String(HighlightColor5)]</value>
 		<value>FFFF0000</value>
 	</variable>
 
 	<variable name="Highlight6">
-		<value condition="!IsEmpty(Skin.String(HighlightColor6))">$INFO[Skin.String(HighlightColor6)]</value>
+		<value condition="!IsEmpty(Window(home).Property(HighlightColor)) + Skin.HasSetting(home.colortilehigh)">$INFO[Window(home).Property(HighlightColor)]</value>
+		<value condition="!IsEmpty(Skin.String(HighlightColor)) + Skin.HasSetting(home.colortilehigh)">$INFO[Skin.String(HighlightColor)]</value>
+		<value condition="!IsEmpty(Skin.String(HighlightColor6)) + !Skin.HasSetting(home.colortilehigh) + !StringCompare(Skin.String(HighlightColor6),None)">$INFO[Skin.String(HighlightColor6)]</value>
 		<value>PosterHighlight</value>
 	</variable>
-	
-		<variable name="Highlight7">
-		<value condition="!IsEmpty(Skin.String(HighlightColor7))">$INFO[Skin.String(HighlightColor7)]</value>
+
+	<variable name="Highlight7">
+		<value condition="!IsEmpty(Skin.String(HighlightColor7)) + !StringCompare(Skin.String(HighlightColor7),None)">$INFO[Skin.String(HighlightColor7)]</value>
 		<value>HomeBarBG</value>
 	</variable>
-	
+
 	<variable name="Highlight8">
-		<value condition="!IsEmpty(Skin.String(HighlightColor8))">$INFO[Skin.String(HighlightColor8)]</value>
+		<value condition="!IsEmpty(Skin.String(HighlightColor8)) + !StringCompare(Skin.String(HighlightColor8),None)">$INFO[Skin.String(HighlightColor8)]</value>
 		<value>ac181818</value>
 	</variable>
-	
-		<variable name="Highlight9">
-		<value condition="!IsEmpty(Skin.String(HighlightColor9))">$INFO[Skin.String(HighlightColor9)]</value>
+
+	<variable name="Highlight9">
+		<value condition="!IsEmpty(Skin.String(HighlightColor9)) + !StringCompare(Skin.String(HighlightColor9),None)">$INFO[Skin.String(HighlightColor9)]</value>
 		<value>LineLabel</value>
 	</variable>
-	
-		<variable name="color_picker_defaults">
+
+	<variable name="color_picker_defaults">
 		<value condition="StringCompare(Skin.String(OSDColor),OSDColor)">FFe66a4f</value>
 		<value>FFe66a4f</value>
 	</variable>
-	
+
 	<variable name="Defs_Iconcolor">
 		<value condition="!IsEmpty(Container(9000).ListItem.Property(Iconcolor))">$INFO[Container(9000).ListItem.Property(Iconcolor)]</value>
 		<value condition="!IsEmpty(Container(211).ListItem.Property(Iconcolor))">$INFO[Container(211).ListItem.Property(Iconcolor)]</value>
@@ -319,10 +558,10 @@
 		<aligny>center</aligny>
 		<align>center</align>
 		<textoffsetx>side</textoffsetx>
-		<texturenofocus>noop</texturenofocus>
-		<texturefocus>noop</texturefocus>
-		<alttexturenofocus>noop</alttexturenofocus>
-		<alttexturefocus>noop</alttexturefocus>
+		<texturenofocus>-</texturenofocus>
+		<texturefocus>-</texturefocus>
+		<alttexturenofocus>-</alttexturenofocus>
+		<alttexturefocus>-</alttexturefocus>
 	</include>
 
 	<include name="Defs_KeyboardButton">
@@ -367,8 +606,9 @@
 		<value condition="Window.IsVisible(1107) + !IsEmpty(Skin.String(Widget.1107))">$INFO[Skin.String(Widget.1107)]</value>
 		<value condition="Window.IsVisible(1108) + !IsEmpty(Skin.String(Widget.1108))">$INFO[Skin.String(Widget.1108)]</value>
 		<value condition="Window.IsVisible(1109) + !IsEmpty(Skin.String(Widget.1109))">$INFO[Skin.String(Widget.1109)]</value>
-		<value condition="Window.IsVisible(1102)">special://skin/extras/playlists/RandomEpisodes.xsp</value>
-		<value>special://skin/extras/playlists/RandomMovies.xsp</value>
+		<value condition="Window.IsVisible(1102) + IsEmpty(Skin.String(Widget.1102))">plugin://script.extendedinfo?info=populartvshows</value>
+		<value condition="Window.IsVisible(1101) + IsEmpty(Skin.String(Widget.1101))">plugin://script.extendedinfo?info=popularmovies</value>
+		<value>plugin://script.extendedinfo?info=popularmovies</value>
 	</variable>
 	<variable name="Defs_HomeTileColor">
 		<value condition="!IsEmpty(Container(9000).ListItem.Property(tilecolor))">$INFO[Container(9000).ListItem.Property(tilecolor)]</value>
@@ -397,7 +637,8 @@
 	</include>
 	<variable name="Defs_HomeWidget_Content">
 		<value condition="Player.HasVideo + Skin.HasSetting(background.showvideo)">noop</value>
-		<value condition="StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.icons.path)]$INFO[Window(weather).Property($PARAM[day].FanartCode)]</value>
+		<value condition="StringCompare(Container(9000).ListItem.Property(widget),Weather) + !IsEmpty(Skin.String(weather.fanart.path))  + Skin.HasSetting(weather.icons.multi)">$INFO[Skin.String(weather.icons.path)]$INFO[Window(weather).Property($PARAM[day].FanartCode)]$INFO[Skin.String(weather.icons.ext)]</value>
 		<value condition="!IsEmpty(Container(9000).ListItem.Property(widgetPath))">$INFO[Container(9000).ListItem.Property(widgetPath)]</value>
 		<value condition="!IsEmpty(Container(9000).ListItem.Property(Background))">noop</value>
 		<value condition="StringCompare(Skin.String(home.fallbackwidget),Weather) + !IsEmpty(Skin.String(weather.fanart.path))">$INFO[Skin.String(weather.fanart.path)]$INFO[Window(Weather).Property(Current.FanartCode)]/</value>
@@ -1274,6 +1515,29 @@
 		<alttexturefocus colordiffuse="$VAR[Highlight6]" border="5">common/box.png</alttexturefocus>
 	</include>	
 
+	<include name="DefInfoButtons3">
+		<font>Font-ListInfo</font>
+		<textcolor>white</textcolor>
+		<width>313</width>
+		<height>68</height>
+
+		<onfocus>ClearProperty(content)</onfocus>
+		<texturenofocus colordiffuse="PosterBorder" border="5">common/box.png</texturenofocus>
+		<texturefocus colordiffuse="$VAR[Highlight6]" border="5">common/box.png</texturefocus>
+		<alttexturenofocus colordiffuse="PosterBorder" border="5">common/box.png</alttexturenofocus>
+		<alttexturefocus colordiffuse="$VAR[Highlight6]" border="5">common/box.png</alttexturefocus>
+	</include>	
+
+	<include name="DefInfoButtons2">
+		<font>Font-ListInfo</font>
+		<textcolor>white</textcolor>
+		<width>313</width>
+		<height>68</height>
+		<onfocus>ClearProperty(content)</onfocus>
+		<texturefocus colordiffuse="$VAR[Highlight6]" border="5">common/box.png</texturefocus>
+		<alttexturefocus colordiffuse="$VAR[Highlight6]" border="5">common/box.png</alttexturefocus>
+	</include>	
+
 	<include name="DefOSDInfoContent">
 		<control type="label">
 			<height>50</height>
@@ -1380,19 +1644,39 @@
 			<posy>600</posy>
 			<right>-5</right>
 			<width>48</width>
-			<height>48</height>            
-			<texturenofocus flipx="false">common/menu.png</texturenofocus>
-			<texturefocus flipx="false">common/menu.png</texturefocus>
-			<animation effect="fade" end="75" condition="true">Conditional</animation>
+			<height>48</height>           
+			<texturefocus flipx="false" colordiffuse="$VAR[Highlight6]">common/menu.png</texturefocus>
+			<texturenofocus flipx="false" colordiffuse="$VAR[Highlight6]">common/menu.png</texturenofocus>
+			<animation effect="fade" end="50" condition="true">Conditional</animation>
 			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">WindowOpen</animation>
 			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">Visible</animation>
 			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">WindowClose</animation>
 			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">Hidden</animation>
 			<visible>!ControlGroup(9000).HasFocus()</visible>
 			<visible>!ControlGroup(9500).HasFocus()</visible>
+			<visible>!ControlGroup(9101).HasFocus()</visible>
+			<visible>!Window.IsVisible(106)</visible>
 			<include>DialogVisibility</include>
 			<onclick condition="!Window.IsVisible(DialogVideoInfo.xml)">SetFocus(9000)</onclick>
-			<onclick condition="Window.IsVisible(DialogVideoInfo.xml)">SetFocus(9500)</onclick>
+		</control>
+		<control type="label">
+			<posy>590</posy>
+			<right>-16</right>
+			<width>48</width>
+			<height>48</height>  
+			<label>...</label>	
+			<textcolor>$VAR[HighlightColor2]</textcolor>
+			<animation effect="fade" end="100" condition="true">Conditional</animation>
+			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">WindowOpen</animation>
+			<animation effect="fade" start="0" end="100" delay="200" time="650" reversible="false">Visible</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">WindowClose</animation>
+			<animation effect="fade" start="100" end="0" delay="0" time="0" reversible="false">Hidden</animation>
+			<visible>!ControlGroup(9000).HasFocus()</visible>
+			<visible>!ControlGroup(9500).HasFocus()</visible>
+			<visible>!ControlGroup(9101).HasFocus()</visible>
+			<visible>!Window.IsVisible(106)</visible>
+			<include>DialogVisibility</include>
+
 		</control>
 	</include>
 
@@ -1434,6 +1718,7 @@
 		</control>
 	</include>
 
+	<!--
 	<include name="DefLeftSideArrow">
 		<control type="button">
 			<posy>600</posy>
@@ -1459,7 +1744,7 @@
 			<visible>!Window.IsActive(songinformation)</visible>
 			<animation effect="slide" end="horznegpad" start="0" time="200" condition="ControlGroup(9000).HasFocus() | Window.IsActive(DialogContextMenu.xml)">Conditional</animation>
 		</control>
-	</include>
+	</include>-->
 
 	<include name="DefInformationNavLabel">
 		<control type="label" description="Navigation Label">
@@ -1485,15 +1770,15 @@
 	</include>
 
 	<include name="DefSettingsCategoryButton">
-		<align>left</align>
+		<align>right</align>
 		<focusedcolor>PanelFG</focusedcolor>
 		<height>66</height>
 		<width>385</width>  
 	</include>
 
 	<include name="DefSettingsOKCancelButton">
-			<align>right</align>
-<posx>600</posx>
+		<align>center</align>
+		<posx>600</posx>
 		<font>Font-ListInfo-Small</font>
 		<texturenofocus colordiffuse="PosterBorder" border="5">common/border-inner.png</texturenofocus>
 		<texturefocus colordiffuse="$VAR[Highlight6]" border="5">common/white.png</texturefocus>
@@ -1511,11 +1796,11 @@
 		<orientation>horizontal</orientation>
 	</include>
 
-	<include name="DefSettingsLeftGroupWidth2"><width>1053</width></include>
+	<include name="DefSettingsLeftGroupWidth2"><width>1500</width></include>
 	<include name="DefSettingsRightGroupWidth2"><width>385</width></include>
 
 	<include name="DefSettingsLeftGroup2">
-		<posx>233</posx>
+		<posx>15</posx>
 		<posy>120</posy>
 		<include>DefSettingsLeftGroupWidth2</include>
 		<height>620</height>
@@ -1525,7 +1810,7 @@
 	</include>
 
 	<include name="DefSettingsRightGroup2">
-		<posx>1295</posx>
+		<posx>1520</posx>
 		<posy>120</posy>
 		<include>DefSettingsRightGroupWidth2</include>
 		<height>700</height>
@@ -1537,20 +1822,20 @@
 	</include>
 
 	<include name="DefSettingsLeftGroupWidth"><width>385</width></include>
-	<include name="DefSettingsRightGroupWidth"><width>1053</width></include>
+	<include name="DefSettingsRightGroupWidth"><width>1475</width></include>
 
 	<include name="DefSettingsLeftGroup">
-		<posx>233</posx>
+		<posx>1500</posx>
 		<posy>120</posy>
 		<include>DefSettingsLeftGroupWidth</include>
 		<height>549</height>
 		<itemgap>3</itemgap>
 		<orientation>vertical</orientation>
-		<include>Animation.SlideOpen.Right</include>
+		<include>Animation.SlideOpen.Left</include>
 	</include>
 
 	<include name="DefSettingsRightGroup">
-		<posx>628</posx>
+		<posx>20</posx>
 		<posy>120</posy>
 		<include>DefSettingsRightGroupWidth</include>
 		<height>549</height>
@@ -1559,6 +1844,8 @@
 		<scrolltime>0</scrolltime>
 		<orientation>vertical</orientation>
 		<include>Animation.SlideOpen.Left</include>
+		<include>Animation.SlideOpen.Right</include>
+
 	</include>
 
 	<include name="DefSettingsLines">
@@ -1879,7 +2166,7 @@
 	</include>
 	<!-- מיקום כותרת ספריה -->
 	<include name="DefSideLabelCoords">
-		<posx>1542</posx>
+		<posx>2000</posx>
 		<!--מיקום מקורי <posy>210</posy> -->
 		<posy>199</posy>
 		<width>690</width>
@@ -1902,8 +2189,8 @@
 			<texture border="12" flipx="false">common/border-inner.png</texture>
 		</control>
 	</include>
-	
-		<include name="DefSidePanel2">
+
+	<include name="DefSidePanel2">
 		<control type="image">
 			<posx>438r</posx>
 			<posy>210</posy>
@@ -1999,7 +2286,7 @@
 		</control>
 	</include>
 
-	<include name="DefSideLabel">
+	<!--	<include name="DefSideLabel">
 		<control type="label">
 			<include>DefSideLabelCoords</include>
 			<label>$VAR[NavSideLabel]</label>
@@ -2008,9 +2295,9 @@
 			<visible>!Window.IsActive(DialogSongInfo.xml)</visible>
 			<visible>!Window.IsActive(DialogFileStacking.xml)</visible>
 		</control>
-	</include>
+	</include>-->
 
-
+	<!-- 9103 -->
 
 	<include name="DefMyNavViews">
 		<control type="group">
@@ -2023,57 +2310,36 @@
 			<animation effect="slide" end="-1920" start="0" delay="0" time="200" condition="Window.IsActive(musicinformation)">Conditional</animation>
 			<animation effect="slide" end="-1920" start="0" delay="0" time="200" condition="Window.IsActive(addoninformation)">Conditional</animation>
 			<animation effect="fade" end="0" start="100" delay="0" time="200" condition="Control.HasFocus(9001)">Conditional</animation>
-			<animation effect="slide" end="horznegpad" start="0" time="200" condition="ControlGroup(9000).HasFocus() | Window.IsActive(DialogContextMenu.xml) | Window.IsActive(DialogSongInfo.xml) | Window.IsActive(DialogFileStacking.xml)">Conditional</animation>
+			<animation effect="slide" end="horznegpad" start="0" time="200" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101) | Window.IsActive(DialogContextMenu.xml) | Window.IsActive(DialogSongInfo.xml) | Window.IsActive(DialogFileStacking.xml)">Conditional</animation>
 			<include>Animation.SlideOpen.Left</include>
 			<include>Animation.FadeOut</include>
-			<include>View_50_List</include>
-			<include>View_523_Poster</include>
+		<!--	<include>View_50_List</include>
+			<include>View_523_Poster</include>-->
 			<include>View_51_Poster</include>
 			<include>View_52_Wall</include>
 			<include>View_53_Wide</include>
 			<include>View_54_Lovefilm</include>
 			<include>View_55_Banner</include>            
 			<include>View_56_BigList</include>
-
-      <!--      <include>Animation_Common</include>
-            <include>Viewtype_List</include>
-            <include>Viewtype_BigIcon</include>
-            <include>Viewtype_Icon</include>
-            <include>Viewtype_IconExtra</include>
-            <include>Viewtype_BigWide</include>
-           
-            <include>Viewtype_BigWideLogo</include>
-            <include>Viewtype_Gallery</include>
-            <include>Viewtype_FanartList</include>
-            <include>Viewtype_InfoList</include>
-            <include>Viewtype_InfoList2</include>
-            <include>Viewtype_MediaInfo</include>
-            <include>Viewtype_MediaInfo2</include>
-            <include>Viewtype_MediaInfo3</include>
-            <include>Viewtype_Wide</include>
-            <include>Viewtype_Fanart</include>
-            <include>Viewtype_BigList</include>
-            <include>Viewtype_BigListInfo</include>
-            <include>Viewtype_PanelList</include>
-            <include>Viewtype_Thumbs</include>-->
-            <include>Viewtype_BigIcon</include>
-            <include>Viewtype_IconExtra</include>
-            <include>Viewtype_Icon</include>
-<include>Viewtype_Thumbs</include>
-						            <include>Viewtype_InfoList</include>
-            <include>Viewtype_InfoList2</include>
-            <include>Viewtype_MediaInfo</include>
-            <include>Viewtype_MediaInfo2</include>
-            <include>Viewtype_MediaInfo3</include>
-            <include>Viewtype_FanartList</include>
-            <include>Viewtype_PanelList</include>
-            <include>Viewtype_BigListInfo</include>
-            <include>Viewtype_Fanart</include>
-            <include>Viewtype_Gallery2</include>
-            <include>Viewtype_BigWideLogo</include>
-            <include>Viewtype_Wide22</include>
-            <include>Viewtype_BigWide</include>
-
+			<include>Viewtype_BigIcon</include>
+			<include>Viewtype_IconExtra</include>
+			<include>Viewtype_Icon</include>
+			<include>Viewtype_Thumbs</include>
+			<include>Viewtype_InfoList</include>
+			<include>Viewtype_InfoList2</include>
+			<include>Viewtype_MediaInfo</include>
+			<include>Viewtype_MediaInfo2</include>
+			<include>Viewtype_MediaInfo3</include>
+			<include>Viewtype_FanartList</include>
+			<include>Viewtype_PanelList</include>
+			<include>Viewtype_BigListInfo</include>
+			<include>Viewtype_Fanart</include>
+			<include>Viewtype_Gallery2</include>
+			<include>Viewtype_BigWideLogo</include>
+			<include>Viewtype_Wide22</include>
+			<include>Viewtype_List</include>
+			<include>View_534_ShowCase</include>
+			<include>View_535_ShowCase</include>
 			<!-- אמנימנס2 -->
 			<!--<include>View_55_Wall_Poster</include>-->
 			<include>View_516_Thumbnails</include>
@@ -2096,21 +2362,7 @@
 		</control>
 	</include>
 
-		<include name="DefMyNavBarGroupList2">
-		<posx>438r</posx>
-		<posy>280</posy>
-		<width>440</width>
-		<height>690</height>
-		<itemgap>10</itemgap>
-		<orientation>vertical</orientation>
-		<onleft>50</onleft>
-		<onback condition="!Window.IsVisible(MyPVR.xml)">50</onback>
-		<onright>50</onright>
-		<onup>9000</onup>
-		<ondown>9000</ondown>
-	</include>
-	
-	<include name="DefMyNavBarGroupList">
+	<include name="DefMyNavBarGroupList2">
 		<posx>438r</posx>
 		<posy>280</posy>
 		<width>440</width>
@@ -2124,6 +2376,21 @@
 		<ondown>9000</ondown>
 	</include>
 
+	<include name="DefMyNavBarGroupList">
+		<posx>438r</posx>
+		<posy>280</posy>
+		<width>440</width>
+		<height>690</height>
+		<itemgap>10</itemgap>
+		<orientation>vertical</orientation>
+		<onleft>50</onleft>
+		<onback condition="!Window.IsVisible(MyPVR.xml)">50</onback>
+		<onright>50</onright>
+		<onup condition="Player.HasAudio | Player.HasVideo">9103</onup>
+		<onup>9000</onup>
+		<ondown>9000</ondown>
+	</include>
+
 	<include name="DefNavMenuButton">
 		<width>440</width>
 		<height>90</height>
@@ -2132,8 +2399,8 @@
 		<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
 		<alttexturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</alttexturefocus>
 	</include>
-	
-		<include name="DefNavMenuButton2">
+
+	<include name="DefNavMenuButton2">
 		<width>440</width>
 		<height>90</height>
 		<align>right</align>
@@ -2151,8 +2418,7 @@
 			<colordiffuse>PosterBorder-NF</colordiffuse>
 			<texture border="12" flipx="false">common/border-inner.png</texture>
 		</control>
-
-		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus()</visible>
+		<visible allowhiddenfocus="true">ControlGroup(9000).HasFocus() | Control.HasFocus(9101)</visible>
 		<include>Animation.SlideOpen.Left</include>
 	</include>
 

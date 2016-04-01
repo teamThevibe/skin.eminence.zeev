@@ -4,7 +4,17 @@
     <defaultcontrol always="true">2</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
     <controls>
-        
+        		<control type="image">
+			<posy>210</posy>
+			<posx>-10</posx>
+			<width>1940</width>
+			<height>750</height>
+			<texture colordiffuse="infobg" border="5">common/white.png</texture>
+			<animation effect="fade" end="90" condition="true">Conditional</animation>
+			<bordertexture colordiffuse="PosterBorder" border="5">common/border-inner.png</bordertexture>
+			<bordersize>1</bordersize>
+		</control>
+		
         <control type="group">
             <posx>horzpad</posx>
             <posy>topoffset</posy>
@@ -34,16 +44,17 @@
 
             <control type="grouplist" id="9">
                 <include>DefSettingsLeftGroup</include>
-                <onright>2</onright>
-                <onleft>10</onleft>
+                <onright>10</onright>
+                <onleft>2</onleft>
                 <onup>10</onup>
             </control>
             
             <control type="togglebutton" id="13">
                 <description>Default Category Button</description>
-                <align>left</align>
+                <align>right</align>
                 <textcolor>Disabled</textcolor>
                 <width>393</width>
+				
                 <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
             </control>
             
@@ -51,9 +62,9 @@
                 <description>Control Area</description>
                 <pagecontrol>10</pagecontrol>
                 <include>DefSettingsRightGroup</include>
-                <onleft>9</onleft>
-                <onright>10</onright>
-                <onup>noop</onup>
+                <onleft>2</onleft>
+                <onright>9</onright>
+                <onup>-</onup>
                 <ondown>10</ondown>
             </control>
 
@@ -66,15 +77,22 @@
 
             <control type="radiobutton" id="4">
                 <description>Default Radio Button</description>
-                <align>left</align>
+                <align>right</align>
                 <font>Font-ListInfo</font>
+								<font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<radioposx>40</radioposx>      
                 <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
             </control>
 
             <control type="spincontrolex" id="5">
                 <description>Default Spin Control</description>
                 <align>left</align>
-                <font>Font-ListInfo</font>
+					<font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<radioposx>40</radioposx>      
                 <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
             </control>
 
@@ -86,12 +104,14 @@
             <control type="image" id="6">
                 <description>Default Seperator</description>
                 <height>-3</height>
-                <texture>noop</texture>
+                <texture>-</texture>
             </control>
 
             <control type="sliderex" id="8">
                 <description>Default Slider</description>
                 <font>Font-ListInfo</font>
+				                <align>right</align>
+
                 <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
             </control>
             

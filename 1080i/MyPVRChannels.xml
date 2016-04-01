@@ -4,14 +4,18 @@
     <background>0</background>
     <defaultcontrol always="true">50</defaultcontrol>
     <views>50</views>
-    <controls>
+	<controls>
         <include>GlobalBackground</include>
 		     <include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
             <include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
 			<include>PVRSideMenu</include>
-        <include>PVRBackButton</include>
-        
-        
+<control type="group">
+    			<animation effect="slide" start="10" end="-450" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
+			<animation effect="slide" start="10" end="-450" time="250" condition="Window.IsVisible(106)">Conditional</animation>
+        <include>PVR_List</include>
+
+</control>        
+        <!--
         <control type="group">
             <posy>topoffset</posy>
             <posx>horzpad</posx>
@@ -25,7 +29,7 @@
             <include>LiveTVChannelView</include>
             <include>PVRSideText</include>
             
-        </control>
+        </control>-->
         
         <include>DefFullScreenNav</include>
     </controls>

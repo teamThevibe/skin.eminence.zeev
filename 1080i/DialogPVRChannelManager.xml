@@ -10,7 +10,21 @@
             <visible>!Window.IsVisible(FileBrowser)</visible>
             <visible>!Window.IsVisible(LockSettings.xml)</visible>
             <visible>!Window.IsVisible(DialogSelect.xml)</visible>
-            <control type="group">
+							<animation effect="slide" start="1920" end="0" delay="0" time="300" tween="quadratic" easing="out">WindowOpen</animation>
+				<animation effect="slide" start="0" end="1920" time="300" tween="quadratic" easing="in">WindowClose</animation>
+				<animation effect="slide" start="1920" end="0" delay="0" time="300" tween="quadratic" easing="out">Visible</animation>
+				<animation effect="slide" start="0" end="1920" time="300" tween="quadratic" easing="in">Hidden</animation>
+            				<control type="image">
+					<posy>250</posy>
+					<posx>-10</posx>
+					<width>1940</width>
+					<height>700</height>
+					<texture colordiffuse="black" border="5">common/white.png</texture>
+					<animation effect="fade" end="90" condition="true">Conditional</animation>
+					<bordertexture colordiffuse="PosterBorder" border="5">common/border-inner.png</bordertexture>
+					<bordersize>1</bordersize>
+				</control>
+			<control type="group">
                 <posx>horzpad</posx>
                 <posy>topoffset</posy>
                 <include>Animation.SlideOpen.Left</include>
@@ -68,9 +82,8 @@
                             <top>10</top>
                             <width>20</width>
                             <height>20</height>
-                            <texture>OverlayWatched.png</texture>
-                            <visible>ListItem.Property(Changed)</visible>
-                        </control>
+                            <texture>$INFO[ListItem.Property(Icon)]</texture>
+							</control>
                     </itemlayout>
                     <focusedlayout height="138" width="bannerwborder">
                         <control type="image">
@@ -97,14 +110,14 @@
                             <height>49</height>
                             <texture>$INFO[ListItem.Property(Icon)]</texture>
                         </control>
-                        <control type="image">
+                        <!--<control type="image">
                             <left>390</left>
                             <top>10</top>
                             <width>20</width>
                             <height>20</height>
                             <texture>OverlayWatched.png</texture>
                             <visible>ListItem.Property(Changed)</visible>
-                        </control>
+                        </control>-->
                         <control type="label">
                             <left>25</left>
                             <top>69</top>

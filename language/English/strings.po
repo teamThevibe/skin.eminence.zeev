@@ -1,0 +1,2422 @@
+# Kodi Media Center language file
+# Addon Name: Eminence
+# Addon id: skin.eminence
+# Addon Provider: jurialmunkey
+
+msgid ""
+msgstr ""
+
+msgctxt "#31101"
+msgid "Information"
+msgstr "Information"
+
+msgctxt "#31102"
+msgid "Youtube"
+msgstr "Youtube"
+
+msgctxt "#31103"
+msgid "Vimeo"
+msgstr "Vimeo"
+
+msgctxt "#31104"
+msgid "Live TV"
+msgstr "Live TV"
+
+msgctxt "#31105"
+msgid "TV Guide"
+msgstr "TV Guide"
+
+msgctxt "#31106"
+msgid "Fullscreen"
+msgstr "Fullscreen"
+
+msgctxt "#31107"
+msgid "min"
+msgstr "min"
+
+msgctxt "#31108"
+msgid "Quick Nav"
+msgstr "Quick Nav"
+
+msgctxt "#31109"
+msgid "Recently Added"
+msgstr "Recently Added"
+
+msgctxt "#31110"
+msgid "In Progress"
+msgstr "In Progress"
+
+msgctxt "#31111"
+msgid "Type"
+msgstr "Type"
+
+msgctxt "#31112"
+msgid "Spotlight"
+msgstr "Spotlight"
+
+msgctxt "#31113"
+msgid "items"
+msgstr "Items"
+
+msgctxt "#31114"
+msgid "Channels"
+msgstr "Channels"
+
+msgctxt "#31115"
+msgid "Finishes at"
+msgstr "Finishes at"
+
+msgctxt "#31116"
+msgid "Close"
+msgstr "Close"
+
+msgctxt "#31118"
+msgid "Playing"
+msgstr "Playing"
+
+msgctxt "#31119"
+msgid "Info"
+msgstr "Info"
+
+msgctxt "#31120"
+msgid "Auto-Login"
+msgstr "Auto-Login"
+
+msgctxt "#31121"
+msgid "Used Memory"
+msgstr "Used Memory"
+
+msgctxt "#31122"
+msgid "No info available..."
+msgstr "No info available...‬"
+
+
+msgctxt "#31124"
+msgid "Airing"
+msgstr "Airing"
+
+msgctxt "#31125"
+msgid "End Time"
+msgstr "End Time"
+
+msgctxt "#31126"
+msgid "Channel Group"
+msgstr "Channel Group"
+
+msgctxt "#31127"
+msgid "Recording"
+msgstr "Recording"
+
+msgctxt "#31128"
+msgid "Scheduled"
+msgstr "Sceduled"
+
+msgctxt "#31129"
+msgid "Not Scheduled"
+msgstr "Not Scheduled"
+
+msgctxt "#31130"
+msgid "Shutdown Timer"
+msgstr "Shutdown Timer"
+
+msgctxt "#31131"
+msgid "Master Mode: On"
+msgstr "Master Mode: On"
+
+msgctxt "#31132"
+msgid "Master Mode: Off"
+msgstr "Master Mode: Off"
+
+msgctxt "#31133"
+msgid "Cancel Timer"
+msgstr "Cancel Timer"
+
+msgctxt "#31134"
+msgid "Mute"
+msgstr "Mute"
+
+msgctxt "#31135"
+msgid "Artwork"
+msgstr "Artwork"
+
+msgctxt "#31136"
+msgid "Changes"
+msgstr "Changes"
+
+msgctxt "#31137"
+msgid "Re-initialise skin - WARNING: Resets skin to defaults"
+msgstr "Re-initialise skin - WARNING: Resets skin to defaults"
+
+msgctxt "#31138"
+msgid "Set weather fanart"
+msgstr "Set weather fanart"
+
+msgctxt "#31139"
+msgid "Categories to choose"
+msgstr "Categories to choose"
+
+msgctxt "#31140"
+msgid "Show visualisation behind slideshow"
+msgstr "Show visualisation behind slideshow"
+
+msgctxt "#31141"
+msgid "Movies Widget"
+msgstr "Movies Widget"
+
+msgctxt "#31142"
+msgid "Tv Shows Widget"
+msgstr "TV Shows Widget"
+
+msgctxt "#31143"
+msgid "Disc Menu"
+msgstr "Disc Menu"
+
+msgctxt "#31144"
+msgid "Enable TV Tunes"
+msgstr "Enable TvTunes"
+
+msgctxt "#31145"
+msgid "Show now playing video in background"
+msgstr "Show now playing video in background"
+
+msgctxt "#31146"
+msgid "Show fanart"
+msgstr "Show fanart"
+
+msgctxt "#31147"
+msgid "Views"
+msgstr "Views"
+
+msgctxt "#31149"
+msgid "Set home background"
+msgstr "Set home background"
+
+msgctxt "#31150"
+msgid "Show info"
+msgstr "Show info"
+
+msgctxt "#31151"
+msgid "Hide info"
+msgstr "Hide info"
+
+msgctxt "#31152"
+msgid "Posters"
+msgstr "Posters"
+
+
+
+
+msgctxt "#31156"
+msgid "All Movies"
+msgstr "All Movies"
+
+msgctxt "#31157"
+msgid "All TV Shows"
+msgstr "All TV Shows"
+
+msgctxt "#31158"
+msgid "Fullscreen"
+msgstr "Fullscreen"
+
+msgctxt "#31159"
+msgid "Recently Played"
+msgstr "Recently Played"
+
+msgctxt "#31160"
+msgid "Press down for options..."
+msgstr "Press down for options..."
+
+msgctxt "#31161"
+msgid "Show PVR channel icon in header"
+msgstr "Show PVR channel icon in header"
+
+msgctxt "#31162"
+msgid "Show extended details when pressing info"
+msgstr "Show extended details when pressing inf"
+
+msgctxt "#31163"
+msgid "Custom"
+msgstr "Custom"
+
+msgctxt "#31164"
+msgid "Customise"
+msgstr "Customise"
+
+msgctxt "#31165"
+msgid "Edit icon"
+msgstr "Edit icon"
+
+
+msgctxt "#31167"
+msgid "Pages"
+msgstr "Pages "
+
+msgctxt "#31168"
+msgid "Home"
+msgstr "Home"
+
+msgctxt "#31169"
+msgid "Add item"
+msgstr "Add item"
+
+msgctxt "#31170"
+msgid "Now playing"
+msgstr "Now playing..."
+
+msgctxt "#31171"
+msgid "the items on your home menu"
+msgstr "the items on your home menu "
+
+msgctxt "#31172"
+msgid "Edit"
+msgstr "Edit"
+
+msgctxt "#31173"
+msgid "on"
+msgstr "on"
+
+msgctxt "#31174"
+msgid "Cinema Experience"
+msgstr "Cinema Experience"
+
+msgctxt "#31175"
+msgid "Television"
+msgstr "Television"
+
+msgctxt "#31176"
+msgid "Media Center"
+msgstr "Media Center"
+
+msgctxt "#31177"
+msgid "Show weather with clock"
+msgstr "Show weather with clock"
+
+msgctxt "#31178"
+msgid "Use taller tiles"
+msgstr "use taller tiles"
+
+msgctxt "#31179"
+msgid "Movies Hub"
+msgstr "Movies Hub"
+
+msgctxt "#31180"
+msgid "Default"
+msgstr "Default"
+
+msgctxt "#31181"
+msgid "Text in tiles"
+msgstr "Text in tiles"
+
+msgctxt "#31182"
+msgid "Text only"
+msgstr "Text only"
+
+msgctxt "#31183"
+msgid "Mix of in-progress tv-shows and random movies"
+msgstr "Mix of in-progress tv-shows and random movies"
+
+msgctxt "#31184"
+msgid "Quick nav mode"
+msgstr "Quick nav mode"
+
+msgctxt "#31185"
+msgid "Fanart fade amount"
+msgstr "Fanart fade amount"
+
+msgctxt "#31186"
+msgid "Custom item"
+msgstr "Custom item"
+
+msgctxt "#31187"
+msgid "Next Aired"
+msgstr "Next Aired"
+
+msgctxt "#31188"
+msgid "Show next aired in RSS feed"
+msgstr "Show next aired in RSS feed"
+
+msgctxt "#31189"
+msgid "Update next aired data on startup"
+msgstr "Update next aired data on startup"
+
+msgctxt "#31190"
+msgid "Login"
+msgstr "Login"
+
+msgctxt "#31191"
+msgid "User login"
+msgstr "User login"
+
+msgctxt "#31192"
+msgid "Select a profile"
+msgstr "Select profile"
+
+msgctxt "#31193"
+msgid "Trailers"
+msgstr "Trailers"
+
+msgctxt "#31194"
+msgid "Loading..."
+msgstr "Loading..."
+
+msgctxt "#31195"
+msgid "Enable widget carousel access on down"
+msgstr "Enable widget carousel access on down"
+
+msgctxt "#31196"
+msgid "Channel Options"
+msgstr "Channel Options"
+
+msgctxt "#31197"
+msgid "General Options"
+msgstr "General Options"
+
+msgctxt "#31198"
+msgid "Show widget info panel"
+msgstr "Show widget info panel"
+
+msgctxt "#31199"
+msgid "Skip hubs and go straight to library"
+msgstr "Skip hubs and go straight to library"
+
+msgctxt "#31200"
+msgid "Manual search..."
+msgstr "Manual search..."
+
+msgctxt "#31201"
+msgid "Set Colour"
+msgstr "set Color"
+
+msgctxt "#31202"
+msgid "Widget Carousel"
+msgstr "Widget Carousel"
+
+msgctxt "#31203"
+msgid "Reset global background path to default"
+msgstr "Reset global background path to default"
+
+msgctxt "#31204"
+msgid "Match highlight to tile color"
+msgstr "Match highlight to tile color""
+
+msgctxt "#31205"
+msgid "Don't fade unfocused tiles"
+msgstr "Don't fade unfocused tiles"
+
+msgctxt "#31206"
+msgid "Use theme colour for focused tiles"
+msgstr "Use theme colour for focused tile"
+
+msgctxt "#31207"
+msgid "Movie Set"
+msgstr "Movie Set"
+
+msgctxt "#31208"
+msgid "Home Screen"
+msgstr "Home Screen"
+
+msgctxt "#31209"
+msgid "Set global background widget"
+msgstr "Set global background widget"
+
+msgctxt "#31210"
+msgid "Set background image"
+msgstr "Set background image"
+
+msgctxt "#31211"
+msgid "Move item"
+msgstr "Move item"
+
+msgctxt "#31212"
+msgid "Swap with another tile"
+msgstr "Swap with another file"
+
+msgctxt "#31213"
+msgid "Click on a tile to see the available customisation options. Either select a preset tile option or modify an existing tile's name, colour, icon, path and background widget. You can also swap the position of tiles."
+msgstr "Click on a tile to see the available customisation options. Either select a preset tile option or modify an existing tile's name, colour, icon, path and background widget. You can also swap the position of tiles."
+
+msgctxt "#31214"
+msgid "Customise your home menu tiles"
+msgstr "Customize your home menu tiles "
+
+msgctxt "#31215"
+msgid "Choose a tile to swap with this one"
+msgstr "Choose a tile to swap with this one"
+
+msgctxt "#31216"
+msgid "Show clearart/logo with osd"
+msgstr "show clearart/logo with osd"
+
+msgctxt "#31217"
+msgid "Show power button"
+msgstr "Show power button"
+
+msgctxt "#31218"
+msgid "Change background colour based on time of day"
+msgstr "Change background color based on time"
+
+msgctxt "#31219"
+msgid "Insert item"
+msgstr "insert item"
+
+msgctxt "#31220"
+msgid "Experimental"
+msgstr "Experimental"
+
+msgctxt "#31221"
+msgid "EPG Timeline"
+msgstr "EPG Timeline"
+
+msgctxt "#31222"
+msgid " •   Customise widget item"
+msgstr "Customize widget item "
+
+msgctxt "#31223"
+msgid "Banner List"
+msgstr "Banner List"
+
+msgctxt "#31224"
+msgid "Forecast"
+msgstr "Forecast"
+
+msgctxt "#31225"
+msgid "Info List"
+msgstr "Info List"
+
+msgctxt "#31226"
+msgid "Show title"
+msgstr "Show title"
+
+msgctxt "#31227"
+msgid "Hide title"
+msgstr "Hide title"
+
+msgctxt "#31228"
+msgid "Set background overlay"
+msgstr "Set background overlay"
+
+msgctxt "#31229"
+msgid "Background image (click to reset)"
+msgstr "Background image (click to reset)"
+
+msgctxt "#31230"
+msgid "Animate fanart"
+msgstr "Animate fanart"
+
+msgctxt "#31231"
+msgid "Edit Playlist"
+msgstr "Edit Playlist"
+
+msgctxt "#31232"
+msgid "Rule"
+msgstr "Rule"
+
+msgctxt "#31233"
+msgid "Enter rule..."
+msgstr "Enter rule..."
+
+msgctxt "#31234"
+msgid "Advanced"
+msgstr "Advanced"
+
+msgctxt "#31235"
+msgid "Extras"
+msgstr "Extras"
+
+msgctxt "#31236"
+msgid "Header text"
+msgstr "Header text"
+
+msgctxt "#31237"
+msgid "Invert widget access"
+msgstr "Invert widget access"
+
+msgctxt "#31238"
+msgid "Open carousel in own window"
+msgstr "open carousel in own window"
+
+msgctxt "#31239"
+msgid "Kiosk mode"
+msgstr "Kiosk mode"
+
+msgctxt "#31240"
+msgid "Use theme colour for header"
+msgstr "Use theme color for header"
+
+msgctxt "#31241"
+msgid "3D Mode"
+msgstr " 3D Mode"
+
+msgctxt "#31242"
+msgid "Media Info"
+msgstr "Media info"
+
+msgctxt "#31243"
+msgid "Most"
+msgstr "Most"
+
+msgctxt "#31244"
+msgid "Moderate"
+msgstr "Moderate"
+
+msgctxt "#31245"
+msgid "Least"
+msgstr "Least"
+
+msgctxt "#31246"
+msgid "No description available"
+msgstr "No description available"
+
+msgctxt "#31247"
+msgid "Customise home screen tiles. From here you can create new tiles, modify existing tiles, insert tiles, delete tiles, swap tiles and set individual background widgets. To set individual background widgets you must first disable the Global Widget. To set colours for individual tiles you must first disable the Use Theme Colour For Focused Tiles option."
+msgstr "Customise home screen tiles. From here you can create new tiles, modify existing tiles, insert tiles, delete tiles, swap tiles and set individual background widgets. To set individual background widgets you must first disable the Global Widget. To set colours for individual tiles you must first disable the Use Theme Colour For Focused Tiles option."
+
+msgctxt "#31248"
+msgid "Sets the background widget for the home screen that can be accessed by pressing up. Disabling this option allows individual widgets to be set for tiles in the customisation screen."
+msgstr "Sets the background widget for the home screen that can be accessed by pressing up. Disabling this option allows individual widgets to be set for tiles in the customisation screen."
+
+msgctxt "#31249"
+msgid "Show the information panel for background widgets."
+msgstr "Show the information panel for background widgets"
+
+msgctxt "#31250"
+msgid "Focused tiles on home screen match the theme's highlight colour. Unfocused tiles are set to grey. This overrides individual tile colour settings."
+msgstr "Focused tiles on home screen match the theme's highlight colour. Unfocused tiles are set to grey. This overrides individual tile colour settings."
+
+msgctxt "#31251"
+msgid "Match the colour of the focused tile's text underline to the colour of the tile."
+msgstr "Match the colour of the focused tile's text underline to the colour of the tile."
+
+msgctxt "#31252"
+msgid "Sets the path to the background slideshow that is shown when the focused tile does not have a background widget set."
+msgstr "Sets the path to the background slideshow that is shown when the focused tile does not have a background widget set."
+
+msgctxt "#31253"
+msgid "Enables an additional widget carousel that is accessed by pressing down. Once open, pressing up will cycle through the widgets."
+msgstr "Enables an additional widget carousel that is accessed by pressing down. Once open, pressing up will cycle through the widgets."
+
+msgctxt "#31254"
+msgid "Open the widget carousel in its own window rather than above the home screen tiles."
+msgstr "Open the widget carousel in its own window rather than above the home screen tiles."
+
+msgctxt "#31255"
+msgid "Invert access to widgets so that up opens the carousel and down accesses the background widget."
+msgstr "Invert access to widgets so that up opens the carousel and down accesses the background widget."
+
+msgctxt "#31256"
+msgid "Show fanart in the background of library views."
+msgstr "Show fanart in the background of library views."
+
+msgctxt "#31257"
+msgid "Sets how much the background fanart is faded. There are three settings: Most, Moderate and Least."
+msgstr "Sets how much the background fanart is faded. There are three settings: Most, Moderate and Least.‬"
+
+msgctxt "#31258"
+msgid "Animate background fanart with a Ken Burns type effect."
+msgstr "Animate background fanart with a Ken Burns type effect.."
+
+msgctxt "#31259"
+msgid "Set the backgroud image that is displayed when no fanart is available. Click once to clear the current path and again to select a new path."
+msgstr "Set the backgroud image that is displayed when no fanart is available. Click once to clear the current path and again to select a new path"
+
+msgctxt "#31260"
+msgid "Changes the background colour based upon the time of day. This overrides the background image setting. The images for the background colour overlay can be modified in skin.eminence/extras/sunset - the number of the image matches the hour it is displayed at in 24 hour time."
+msgstr "Changes the background colour based upon the time of day. This overrides the background image setting. The images for the background colour overlay can be modified in skin.eminence/extras/sunset - the number of the image matches the hour it is displayed at in 24 hour time"
+
+msgctxt "#31261"
+msgid "Sets the image used as a background overlay. Click once to clear the current path and again to select a new path."
+msgstr "Sets the image used as a background overlay. Click once to clear the current path and again to select a new path"
+
+msgctxt "#31262"
+msgid "Sets the path to weather fanart used in the weather screen."
+msgstr "Sets the path to weather fanart used in the weather screen."
+
+msgctxt "#31263"
+msgid "Select the widget shown in the movies hub. Can choose spotlight, in progress or smart playlist."
+msgstr "Select the widget shown in the movies hub. Can choose spotlight, in progress or smart playlist."
+
+msgctxt "#31264"
+msgid "Set the smart playlist used in the movie hub widget. Smart playlists can be created by going to the movies hub and scrolling down in the right pane to the playlists option."
+msgstr "Set the smart playlist used in the movie hub widget. Smart playlists can be created by going to the movies hub and scrolling down in the right pane to the playlists option"
+
+msgctxt "#31265"
+msgid "Sets a custom item to be shown in the right pane of the hub underneath recently added."
+msgstr "Sets a custom item to be shown in the right pane of the hub underneath recently added."
+
+msgctxt "#31266"
+msgid "Select the widget shown in the tv shows hub. Can choose spotlight, in progress or smart playlist."
+msgstr "Select the widget shown in the tv shows hub. Can choose spotlight, in progress or smart playlist"
+
+msgctxt "#31267"
+msgid "Set the smart playlist used in the tv show hub widget. Smart playlists can be created by going to the tv show hub and scrolling down in the right pane to the playlists option."
+msgstr "Set the smart playlist used in the tv show hub widget. Smart playlists can be created by going to the tv show hub and scrolling down in the right pane to the playlists option."
+
+msgctxt "#31268"
+msgid "Use the Artist Slideshow addon to show a slideshow of artist images as the music visualisation."
+msgstr "Use the Artist Slideshow addon to show a slideshow of artist images as the music visualisation"
+
+msgctxt "#31269"
+msgid "Shows the extend info panel on pressing info with fullscreen video or music."
+msgstr "Shows the extend info panel on pressing info with fullscreen video or music."
+
+msgctxt "#31270"
+msgid "Show clearart or clearlogo in the bottom right of screen whenever the seekbar displays on fullscreen video."
+msgstr "Show clearart or clearlogo in the bottom right of screen whenever the seekbar displays on fullscreen video."
+
+msgctxt "#31271"
+msgid "Modify the default 'Media Center' text shown in the header."
+msgstr "Modify the default 'Media Center' text shown in the header."
+
+msgctxt "#31272"
+msgid "Matches the colour of the header tile to the theme's highlight colour."
+msgstr "Matches the colour of the header tile to the theme's highlight color"
+
+msgctxt "#31273"
+msgid "Prevents the side view menu from being accessed in library views."
+msgstr "Prevents the side view menu from being accessed in library views."
+
+msgctxt "#31274"
+msgid "Enables the TV Tunes addon in library views. Plays the tv theme song when viewing the seasons or episodes of a tv show."
+msgstr "Enables the TV Tunes addon in library views. Plays the tv theme song when viewing the seasons or episodes of a tv show."
+
+msgctxt "#31275"
+msgid "Show the RSS feed at the bottom of the screen"
+msgstr "Show the RSS feed at the bottom of the screen"
+
+msgctxt "#31276"
+msgid "Show next aired information for tv shows at the bottom of the screen. Also shows an RSS feed of upcoming tv show airdates in the tv show hub. In the Next Aired addon configuration enable the 'Show All Tv Shows for homescreen' option for best effect."
+msgstr "Show next aired information for tv shows at the bottom of the screen. Also shows an RSS feed of upcoming tv show airdates in the tv show hub. In the Next Aired addon configuration enable the 'Show All Tv Shows for homescreen' option for best effect."
+
+msgctxt "#31277"
+msgid "Resets the skin back to default settings. WARNING: this will wipe all your skin settings. All custom tiles and widgets will be reset to defaults."
+msgstr "Resets the skin back to default settings. WARNING: this will wipe all your skin settings. All custom tiles and widgets will be reset to defaults"
+
+msgctxt "#31278"
+msgid "PVR Manager"
+msgstr "PVE Manager"
+
+msgctxt "#31279"
+msgid "Alt style"
+msgstr "Alt style"
+
+msgctxt "#31280"
+msgid "Automatically start artwork downloader after library update"
+msgstr "Automatically start artwork downloader after library update"
+
+msgctxt "#31281"
+msgid "Hubs"
+msgstr "Hubs"
+
+msgctxt "#31282"
+msgid "Header"
+msgstr "Header"
+
+msgctxt "#31283"
+msgid "Set Path"
+msgstr "Set Path"
+
+msgctxt "#31284"
+msgid "Show extended info at bottom of screen"
+msgstr "Show extended info at bottom of screen"
+
+msgctxt "#31285"
+msgid "Premiere Date"
+msgstr "Premiere Date"
+
+msgctxt "#31286"
+msgid "Disable clock"
+msgstr "Disable clock"
+
+msgctxt "#31287"
+msgid "Set startup video"
+msgstr "set startup video"
+
+msgctxt "#31288"
+msgid "Changes icons"
+msgstr "Change icons"
+
+msgctxt "#31289"
+msgid "Zeev Mode"
+msgstr "‏Zeev Mode"
+
+msgctxt "#31290"
+msgid "Change background"
+msgstr "Change background"
+
+msgctxt "#31291"
+msgid "Favorites"
+msgstr "Favorites"
+
+msgctxt "#31292"
+msgid "Remove"
+msgstr "Remove/Install Mode"
+
+msgctxt "#31293"
+msgid "Custom - is an option which removes some tiles according to users who request it, the tiles are, YouTube, photos, files. It also adds the possibility of this is the recent films added."
+msgstr "Custom - is an option which removes some tiles according to users who request it, the tiles are, YouTube, photos, files. It also adds the possibility of this is the recent films added"
+
+msgctxt "#31294"
+msgid "Favorites"
+msgstr "This option add Favorite menu options"
+
+msgctxt "#31295"
+msgid "Change icon info"
+msgstr "Change icon set."
+
+msgctxt "#31296"
+msgid "Change background info"
+msgstr "Change background set."
+
+msgctxt "#31297"
+msgid "About"
+msgstr "About"
+
+msgctxt "#31300"
+msgid "Thanks"
+msgstr "Thanks"
+
+msgctxt "#31298"
+msgid "No Color"
+msgstr "No Color"
+
+msgctxt "#31299"
+msgid "No Color"
+msgstr "No Color"
+
+msgctxt "#31301"
+msgid "No Movies No TVShow"
+msgstr "Show number of Movies/TVShows at home screen"
+
+msgctxt "#31302"
+msgid "No Movies No TVShow"
+msgstr "Hide number of Movies/TVShows at home screen "
+
+msgctxt "#31303"
+msgid "Disable Title"
+msgstr "Disable Title"
+
+msgctxt "#31304"
+msgid "Background"
+msgstr "Background"
+
+msgctxt "#31305"
+msgid "Change background image"
+msgstr "Change background image"
+
+msgctxt "#31306"
+msgid "Enable Single Image"
+msgstr "Enable Single Image"
+
+msgctxt "#31307"
+msgid "Last episodes"
+msgstr "Last episodes"
+
+msgctxt "#31308"
+msgid "Enable Poster Image"
+msgstr "Enable Poster Image"
+
+msgctxt "#31309"
+msgid "Enable discart Image"
+msgstr "Enable Diacart image at home screen"
+
+msgctxt "#31310"
+msgid "Enable Movies Logo"
+msgstr "Enable Movies Logo"
+
+msgctxt "#31311"
+msgid "Enable Clearart Movies"
+msgstr "Enable Clearart Movies"
+
+msgctxt "#31312"
+msgid "Sport"
+msgstr "Sport"
+
+msgctxt "#31313"
+msgid "Kids"
+msgstr "Kids"
+
+msgctxt "#31314"
+msgid "VOD"
+msgstr "VOD"
+
+msgctxt "#31316"
+msgid "Get Graphics"
+msgstr "Get Graphics"
+
+msgctxt "#31317"
+msgid "get extra info"
+msgstr "get extra info"
+
+msgctxt "#31318"
+msgid "get extra info"
+msgstr "get extra info"
+
+msgctxt "#31319"
+msgid "get extra info"
+msgstr "ZEEV Mode"
+
+msgctxt "#31320"
+msgid "get extra info"
+msgstr "ZEEV Mode installation"
+
+msgctxt "#31321"
+msgid "ZEEV Style"
+msgstr "ZEEV Style "
+
+msgctxt "#31334"
+msgid "Favorites"
+msgstr "Favorites"
+
+msgctxt "#31335"
+msgid "Favorites category"
+msgstr "Favorites category"
+
+msgctxt "#31336"
+msgid "General Favorites"
+msgstr "General Favorites"
+
+msgctxt "#31337"
+msgid "Favorites"
+msgstr "Favorites"
+
+msgctxt "#31338"
+msgid "Favorites"
+msgstr "Category choice "
+
+msgctxt "#31339"
+msgid "Headline edit"
+msgstr "Headline edit"
+
+msgctxt "#5498233"
+msgid "channel"
+msgstr "Channel"
+
+msgctxt "#31340"
+msgid "music"
+msgstr "Music"
+
+msgctxt "#31341"
+msgid "Music Widget"
+msgstr "Music Widget"
+
+msgctxt "#31342"
+msgid "Skin Backup"
+msgstr "Skin Backup "
+
+msgctxt "#31343"
+msgid "Skin Restore"
+msgstr "Skin Restore "
+
+msgctxt "#31344"
+msgid "Eminence Zeev MOD"
+msgstr "Eminence Zeev MOD"
+
+msgctxt "#31345"
+msgid "Eminence Zeev"
+msgstr "Eminence Zeev"
+
+msgctxt "#313434"
+msgid "Started at"
+msgstr "Started at"
+
+msgctxt "#313436"
+msgid "End at"
+msgstr "End at"
+
+msgctxt "#313437"
+msgid "More information"
+msgst "More information "
+
+msgctxt "#3134378"
+msgid "Next episode"
+msgstr "Next episode"
+
+msgctxt "#3134379"
+msgid "Latest Episode"
+msgstr "Latest Episode"
+
+msgctxt "#3134380"
+msgid "in"
+msgstr "in"
+
+msgctxt "#3134381"
+msgid "Small Tiles"
+msgstr "Small Tiles"
+
+msgctxt "#3134385"
+msgid "Set personal settings - background changes, icons changes, changes and add categories and personal categories, change and add sub categories and large Tiles"
+msgstr "Set personal settings - background changes, icons changes, changes and add categories and personal categories, change and add sub categories and large Tiles"
+
+msgctxt "#3134384"
+msgid "Eminence Zeev MOD"
+msgstr "[B]Eminence Zeev MOD -[/B]"
+
+msgctxt "#3134386"
+msgid "Delay subtitle"
+msgstr "Delay subtitle"
+
+msgctxt "#31343568"
+msgid "Discart widget"
+msgstr "Discart widget"
+
+msgctxt "#31343569"
+msgid "Customize home menu"
+msgstr "Customize home menu"
+
+msgctxt "#31343570"
+msgid "Tiles shape"
+msgstr "Tiles shape"
+
+msgctxt "#31343571"
+msgid "Fallback widget"
+msgstr "Fallback widget"
+
+msgctxt "#31343572"
+msgid "Show widget information"
+msgstr "Show widget information"
+
+msgctxt "#31343573"
+msgid "Show widget posters"
+msgstr "Show widget posters"
+
+msgctxt "#31155"
+msgid "Never"
+msgstr "Never"
+
+msgctxt "#31166"
+msgid "Hide"
+msgstr "Hide"
+
+msgctxt "#31153"
+msgid "Always"
+msgstr "Always"
+
+msgctxt "#31154"
+msgid "On Up"
+msgstr "On Up"
+
+msgctxt "#31343574"
+msgid "Fanart"
+msgstr "Fanart"
+
+msgctxt "#31343575"
+msgid "Items"
+msgstr "Items"
+
+msgctxt "#31343576"
+msgid "Wall"
+msgstr "Wall"
+
+msgctxt "#31343577"
+msgid "Banner"
+msgstr "Banner"
+
+msgctxt "#31021"
+msgid "Show fanart"
+msgstr "show fanart"
+
+msgctxt "#31343578"
+msgid "Enable individual tile colors in home customisation"
+msgstr "Enable individual tile colors in home customization"
+
+msgctxt "#31343579"
+msgid "Show tile colour on unfocused tiles"
+msgstr "Show tile color on unfocused tiles "
+
+msgctxt "#31343580"
+msgid "Transparent home bar"
+msgstr "Transparent home bar"
+
+
+msgctxt "#31343581"
+msgid "Large Tiles"
+msgstr "Large Tiles"
+
+
+msgctxt "#31052"
+msgid "Rated"
+msgstr "Rates"
+
+msgctxt "#31054"
+msgid "Random movies"
+msgstr "Random movies"
+
+msgctxt "#31055"
+msgid "Random episodes"
+msgstr "Random episodes"
+
+msgctxt "#31056"
+msgid "Random albums"
+msgstr "Random albums"
+
+msgctxt "#31066"
+msgid "Cinema Exp."
+msgstr "Cinema Exp."
+
+msgctxt "#31071"
+msgid "Finishes at"
+msgstr " Finished at"
+
+msgctxt "#31072"
+msgid "Playing"
+msgstr "Playing"
+
+
+msgctxt "#31076"
+msgid "Weather Fanart"
+msgstr "Weather Fanart"
+
+msgctxt "#31077"
+msgid "Trending Movies"
+msgstr "Trending Movies"
+
+msgctxt "#31078"
+msgid "In Cinemas"
+msgstr "in Cinemas"
+
+msgctxt "#31079"
+msgid "Upcoming Films"
+msgstr "Upcoming Films"
+
+msgctxt "#31080"
+msgid "Popular Movies"
+msgstr "Popular Movies"
+
+msgctxt "#31081"
+msgid "Top Rated Movies"
+msgstr "Top Rated Movies"
+
+msgctxt "#31082"
+msgid "Popular Shows"
+msgstr "Popular Shows"
+
+msgctxt "#31083"
+msgid "Top Rated Shows"
+msgstr "Top Rates Shows"
+
+msgctxt "#31084"
+msgid "On Air Shows"
+msgstr "On Air Shows"
+
+msgctxt "#31085"
+msgid "Airing Today"
+msgstr "Airing Today"
+
+msgctxt "#31091"
+msgid "Trending Shows"
+msgstr "Trending Shows"
+
+msgctxt "#31100"
+msgid "Recently Added"
+msgstr "Recently Added"
+
+
+msgctxt "#31095"
+msgid "Spotlight"
+msgstr "Spotlight"
+
+msgctxt "#31031"
+msgid "Recent movies"
+msgstr "Recent movies"
+
+msgctxt "#31032"
+msgid "Recommended movies"
+msgstr "Recommended movies"
+
+msgctxt "#31034"
+msgid "Enable Artist Slideshow"
+msgstr "Enable Artist Slideshow"
+
+msgctxt "#31035"
+msgid "Recent episodes"
+msgstr "Recent episodes"
+
+msgctxt "#31036"
+msgid "Recommended episodes"
+msgstr "Recommended episodes "
+
+msgctxt "#31038"
+msgid "Recent albums"
+msgstr "Recent albums"
+
+msgctxt "#31039"
+msgid "Recommended albums"
+msgstr "Recommended albums "
+
+msgctxt "#31093"
+msgid "Movie Hub"
+msgstr "Movie Hub"
+
+msgctxt "#31094"
+msgid "TV Hub"
+msgstr "TV Hub"
+
+msgctxt "#31123"
+msgid "Hub"
+msgstr "Personal customized HUB"
+
+msgctxt "#32000"
+msgid "Add"
+msgstr "Add"
+
+msgctxt "#32001"
+msgid "Delete"
+msgstr "Delete"
+
+msgctxt "#32002"
+msgid "Move Up"
+msgstr "Move Up"
+
+msgctxt "#32003"
+msgid "Move Down"
+msgstr "Move Down"
+
+msgctxt "#32004"
+msgid "Video Playlist"
+msgstr "Video Playlist"
+
+msgctxt "#32005"
+msgid "Music Playlist"
+msgstr "Music Playlist"
+
+msgctxt "#32006"
+msgid "Favorite"
+msgstr "Favorite"
+
+msgctxt "#32007"
+msgid "Add-On"
+msgstr "Add-On"
+
+msgctxt "#32008"
+msgid "Mixed Playlist"
+msgstr "Mixes Plyliat"
+
+msgctxt "#32009"
+msgid "Program"
+msgstr "Program"
+
+msgctxt "#32010"
+msgid "Video Add-On"
+msgstr "Video Add-On"
+
+msgctxt "#32011"
+msgid "Music Add-On"
+msgstr "Music Add-On"
+
+msgctxt "#32012"
+msgid "Picture Add-On"
+msgstr "Picture Ads-On"
+
+msgctxt "#32013"
+msgid "<None>"
+msgstr "<None>"
+
+msgctxt "#32014"
+msgid "Videos"
+msgstr "Videos"
+
+msgctxt "#32015"
+msgid "Movies"
+msgstr "Movies"
+
+msgctxt "#32016"
+msgid "TV Shows"
+msgstr "TV Shows"
+
+msgctxt "#32017"
+msgid "Live TV"
+msgstr "Live TV"
+
+msgctxt "#32018"
+msgid "Music Videos"
+msgstr "Music Videos"
+
+msgctxt "#32019"
+msgid "Music"
+msgstr "Music"
+
+msgctxt "#32020"
+msgid "Pictures"
+msgstr "Pictues"
+
+msgctxt "#32021"
+msgid "Programs"
+msgstr "Programs"
+
+msgctxt "#32022"
+msgid "Live TV"
+msgstr "Live TV"
+
+msgctxt "#32023"
+msgid "Timers"
+msgstr "Timers"
+
+msgctxt "#32030"
+msgid "Video Library"
+msgstr "Video Library"
+
+msgctxt "#32031"
+msgid "Music Library"
+msgstr "Music Livraru "
+
+msgctxt "#32032"
+msgid "Play DVD"
+msgstr "Play DVD"
+
+msgctxt "#32033"
+msgid "Eject tray"
+msgstr "Eject tray"
+
+msgctxt "#32040"
+msgid "Play"
+msgstr "Play"
+
+msgctxt "#32041"
+msgid "Action"
+msgstr "Action"
+
+msgctxt "#32044"
+msgid "Select widget"
+msgstr "Select Widget"
+
+msgctxt "#32050"
+msgid "Default"
+msgstr "Default"
+
+msgctxt "#32051"
+msgid "Single image"
+msgstr "Single Image"
+
+msgctxt "#32052"
+msgid "Multi-image"
+msgstr "Multi-image"
+
+msgctxt "#32053"
+msgid "None"
+msgstr "None"
+
+msgctxt "#32054"
+msgid "Kodi Command"
+msgstr "Kodi Commabd"
+
+msgctxt "#32057"
+msgid "Kodi Commands"
+msgstr "Kodi Command"
+
+msgctxt "#32061"
+msgid "Display"
+msgstr "Diaply"
+
+msgctxt "#32062"
+msgid "Play"
+msgstr "Play"
+
+msgctxt "#32066"
+msgid "Last TV channel"
+msgstr "Latest TV Channel"
+
+msgctxt "#32067"
+msgid "Last radio channel"
+msgstr "Latest radio channel"
+
+msgctxt "#32068"
+msgid "Last channel"
+msgstr "Last Channel"
+
+msgctxt "#32069"
+msgid "Video Source"
+msgstr "Video Source"
+
+msgctxt "#32070"
+msgid "UPnP"
+msgstr "UPnP"
+
+msgctxt "#32073"
+msgid "Music Source"
+msgstr "Music Source"
+
+msgctxt "#32074"
+msgid "Library Sources"
+msgstr "Library Sources"
+
+msgctxt "#32075"
+msgid "Sources"
+msgstr "Sources"
+
+msgctxt "#32076"
+msgid "TV Channel"
+msgstr "TV Channel"
+
+msgctxt "#32077"
+msgid "Radio Channel"
+msgstr "Radio Channel"
+
+msgctxt "#32079"
+msgid "Files view"
+msgstr "Files view"
+
+msgctxt "#32087"
+msgid "Radio"
+msgstr "Radio"
+
+msgctxt "#32088"
+msgid "Channels"
+msgstr "Channels"
+
+msgctxt "#32089"
+msgid "Picture Source"
+msgstr "Picture Source"
+
+msgctxt "#32096"
+msgid "Browse..."
+msgstr "Browse..."
+
+msgctxt "#324324234"
+msgid "Choose shortcut"
+msgstr "Choose shortcut"
+
+msgctxt "#324324235"
+msgid "Choose action"
+msgstr "Choose action"
+
+msgctxt "#324324236"
+msgid "Set label"
+msgstr "Set label"
+
+msgctxt "#324324237"
+msgid "Set Sub-Menu"
+msgstr "Set Sub-Menu"
+
+msgctxt "#324324238"
+msgid "Set Background"
+msgstr "Set Background"
+
+msgctxt "#324324239"
+msgid "Set Icon"
+msgstr "Set Icon"
+
+msgctxt "#324324240"
+msgid "Change tile color"
+msgstr "Change tile color"
+
+msgctxt "#324324241"
+msgid "Reset shortcut"
+msgstr "Reset shortcut"
+
+msgctxt "#324324242"
+msgid "Reset colors to defaults"
+msgstr "Reset colors to default"
+
+msgctxt "#324324243"
+msgid "Choose primary highlight color"
+msgstr "Choose primary highlight color"
+
+msgctxt "#324324244"
+msgid "Choose headline and notifications center color"
+msgstr "Choose headline and notifications center color"
+
+msgctxt "#324324246"
+msgid "Choose main tile - system"
+msgstr "Choose main tile - system"
+
+msgctxt "#324324245"
+msgid "Choose main tile - homepage"
+msgstr "Choose main tile - homepage"
+
+msgctxt "#324324247"
+msgid "Reset colors to defaults"
+msgstr "Reset colors to defaults"
+
+msgctxt "#324324248"
+msgid "Change main titles color"
+msgstr "Change main titles color"
+
+msgctxt "#324324249"
+msgid "Change icon color"
+msgstr "Change icon color"
+
+
+msgctxt "#324324344"
+msgid "Change OSD colors"
+msgstr "Change OSD colors"
+
+msgctxt "#31343582"
+msgid "LG Style"
+msgstr "LG Style"
+
+msgctxt "#31343583"
+msgid "No tiles"
+msgstr "No tiles"
+
+msgctxt "#31343584"
+msgid "Television"
+msgstr "Television"
+
+msgctxt "#31343586"
+msgid "wide"
+msgstr "Wide"
+
+msgctxt "#31343587"
+msgid "Large List"
+msgstr "Large List"
+
+msgctxt "#31343588"
+msgid "List and Details"
+msgstr "List and Details"
+
+msgctxt "#31343589"
+msgid "Banner list"
+msgstr "Banner list"
+
+msgctxt "#31343590"
+msgid "Media information"
+msgstr "Media information"
+
+msgctxt "#31343591"
+msgid "Media Information 2"
+msgstr "Media Information 2"
+
+msgctxt "#31343592"
+msgid "List"
+msgstr "List"
+
+msgctxt "#31343593"
+msgid "Wall 2"
+msgstr "Wall 2"
+
+msgctxt "#31343594"
+msgid "Movies wall"
+msgstr "Movies wall"
+
+msgctxt "#31343595"
+msgid "3D Movies"
+msgstr "3D Movies"
+
+msgctxt "#31343596"
+msgid "Genesis Movies"
+msgstr "Genesis Movies"
+
+msgctxt "#31343597"
+msgid "Pulsar Movies"
+msgstr "Pulsar Movies"
+
+msgctxt "#31343598"
+msgid "SALTS Movies"
+msgstr "SALTS Movies"
+
+msgctxt "#31343599"
+msgid "Genesis Search"
+msgstr "Genesis Search"
+
+msgctxt "#31343600"
+msgid "search in Movies DB"
+msgstr "Search in Movies DB"
+
+msgctxt "#31343601"
+msgid "Popular shortcuts"
+msgstr "Popular shortcuts"
+
+msgctxt "#31343602"
+msgid "Posters & fanart"
+msgstr "Posters & fanart"
+
+msgctxt "#31343603"
+msgid "Change Display"
+msgstr "Change display"
+
+msgctxt "#31343604"
+msgid "Back to Homepage"
+msgstr "Back to Homepage"
+
+msgctxt "#31343605"
+msgid "Personal Hub 2"
+msgstr "Personal Hub 2"
+
+msgctxt "#31343606"
+msgid "Personal Hub 3"
+msgstr "Personal Hub 3"
+
+msgctxt "#31343607"
+msgid "Personal Hub 4"
+msgstr "Personal Hub 4"
+
+msgctxt "#31343608"
+msgid "Personal Hub 5"
+msgstr "Personal Hub 5"
+
+msgctxt "#31343609"
+msgid "Personal Hub 6"
+msgstr "Personal Hub 6"
+
+msgctxt "#31343610"
+msgid "Personal Hub 7"
+msgstr "Personal Hub 7"
+
+msgctxt "#31343611"
+msgid "Personal Hub 8"
+msgstr "Personal Hub 8"
+
+msgctxt "#31343612"
+msgid "Favorites"
+msgstr "Favorites"
+
+msgctxt "#31343613"
+msgid "Movies wall and detail"
+msgstr "Movies wall and detail "
+
+msgctxt "#31343614"
+msgid "Movies wall and detail 2"
+msgstr "Movies wall and detail 2"
+
+msgctxt "#31343615"
+msgid "Movies wall and detail 3"
+msgstr "Movies wall and detail 3"
+
+msgctxt "#31343616"
+msgid "List and Poster"
+msgstr "List and Poster"
+
+msgctxt "#31343617"
+msgid "List 2"
+msgstr "List 2"
+
+msgctxt "#31343618"
+msgid "Media details 2"
+msgstr "Media details 2"
+
+msgctxt "#31343619"
+msgid "Media details 3"
+msgstr "Media details 3 "
+
+msgctxt "#31343620"
+msgid "Media details 4"
+msgstr "Media details 4"
+
+msgctxt "#31343621"
+msgid "Fanart list"
+msgstr "Fanart list"
+
+msgctxt "#31343622"
+msgid "Icon lists"
+msgstr "Icon lists"
+
+msgctxt "#31343623"
+msgid "List and details"
+msgstr "List and details "
+
+msgctxt "#31343623"
+msgid "List and Details"
+msgstr "List and Details "
+
+msgctxt "#31343624"
+msgid "Fanart"
+msgstr "Fanart"
+
+msgctxt "#31343625"
+msgid "Banner list"
+msgstr "Banner list"
+
+msgctxt "#31343626"
+msgid "Gallery"
+msgstr "Gallery"
+
+msgctxt "#31343627"
+msgid "Logos gallery"
+msgstr "Logos gallery"
+
+msgctxt "#31343628"
+msgid "Colors"
+msgstr "Colors"
+
+msgctxt "#31343629"
+msgid "Backup&Restore"
+msgstr "Backup&Restore"
+
+msgctxt "#31343630"
+msgid "Display config"
+msgstr ""
+
+msgctxt "#31343631"
+msgid "Widget Transparency"
+msgstr "Widget Transparency"
+
+msgctxt "#31343632"
+msgid "Fake CDArt"
+msgstr "Fake CDArt"
+
+msgctxt "#31343633"
+msgid "CDArt effect"
+msgstr "CDArt effect"
+
+msgctxt "#31343634"
+msgid "Movie Logo"
+msgstr "Movie Logo"
+
+msgctxt "#31343635"
+msgid "Set Hub and tile colors"
+msgstr "Set Hub and tile colors"
+
+msgctxt "#31343636"
+msgid "Set Hub and main tile colors"
+msgstr "Set Hub and main tile colors"
+
+msgctxt "#31343637"
+msgid "Set Hub style to 16:9"
+msgstr "Set Hub style to 16:9"
+
+msgctxt "#31343638"
+msgid "Set Category with list style"
+msgstr "Set Category with list style"
+
+msgctxt "#31343639"
+msgid "Cancel unmarked tiles transparency"
+msgstr "Cancel unmarked tiles transparency "
+
+msgctxt "#31343640"
+msgid "Play videos in background"
+msgstr "Play video in background"
+
+msgctxt "#31343641"
+msgid "Play video in main menu background"
+msgstr "Play video in main menu background"
+
+msgctxt "#31343642"
+msgid "Darkness Fanart"
+msgstr "Darkness Fanart "
+
+msgctxt "#31343643"
+msgid "Long title"
+msgstr "Long title"
+
+msgctxt "#31343644"
+msgid "Show number of Movies/TVShow in title"
+msgstr "Show number of Movies/TVShow in title"
+
+msgctxt "#31343645"
+msgid "Show Black clock backgroun"
+msgstr "Show Black clock background"
+
+msgctxt "#31343646"
+msgid "Show Clock"
+msgstr "Show Clock"
+
+msgctxt "#31343647"
+msgid "Change Busy animation"
+msgstr "Change Busy animation"
+
+msgctxt "#31343648"
+msgid "Show CDArt in Movie information page"
+msgstr "Show CDArt in Movie information page"
+
+msgctxt "#31343649"
+msgid "Show TV Broadcast details in TVShow page"
+msgstr "Show TV Broadcast details in TVShow page"
+
+msgctxt "#31343650"
+msgid "Restore from Backup"
+msgstr "Restore from Backup"
+
+msgctxt "#31343651"
+msgid "Set Clock and Weather colors"
+msgstr "Set Clock and Weather colors"
+
+msgctxt "#31343652"
+msgid "Set Title color"
+msgstr "Set Title color"
+
+msgctxt "#31343653"
+msgid "Set secondary title color"
+msgstr "Set secondary title color"
+
+msgctxt "#31343654"
+msgid "Set primary color on marked tile"
+msgstr "Set primary color on marked tile"
+
+msgctxt "#31343655"
+msgid "Set Tiles background color"
+msgstr "Set Tiles background color"
+
+msgctxt "#31343656"
+msgid "Set notification area background color"
+msgstr "Set notification area background color"
+
+msgctxt "#31343657"
+msgid "Set RSS background color"
+msgstr "Set RSS background color"
+
+msgctxt "#31343658"
+msgid "Check/uncheck display mode (check which you like to cancel)"
+msgstr "Check/uncheck display mode (check which you like to cancel)"
+
+msgctxt "#31343659"
+msgid "Enable display mode settings"
+msgstr "Enable display mode setting"
+
+msgctxt "#31343660"
+msgid "Movies Display mode:"
+msgstr "Movies Display mode:"
+
+msgctxt "#31343661"
+msgid "TVShows display mode:"
+msgstr "TVShows display mode:"
+
+msgctxt "#31343662"
+msgid "TVShows Seasons display mode:"
+msgstr "TVShows Seasons display mode:"
+
+msgctxt "#31343663"
+msgid "TVShows episodes display mode:"
+msgstr "TVShows episodes display mode:"
+
+msgctxt "#31343664"
+msgid "Hub customize"
+msgstr "Hub customize"
+
+msgctxt "#31343665"
+msgid "Set Hub Widget"
+msgstr "Set Hub Widget"
+
+
+msgctxt "#31343666"
+msgid "Skin add-ons requires"
+msgstr "Skin add-ons requires"
+
+msgctxt "#31343667"
+msgid "Installed"
+msgstr "Installed"
+
+msgctxt "#31343668"
+msgid "not Installed"
+msgstr "not Installed"
+
+msgctxt "#31343669"
+msgid "Vertical menu"
+msgstr "Vertical menu"
+
+msgctxt "#31343670"
+msgid "Set mouse cursor color to tile color"
+msgstr "Set mouse cursor color to tile color"
+
+msgctxt "#31343671"
+msgid "Set mouse cursor color"
+msgstr "Set mouse cursor color"
+
+msgctxt "#31343672"
+msgid "Delete"
+msgstr "Delete"
+
+msgctxt "#31343673"
+msgid "Customize Main-Menu"
+msgstr "Customize Main-Menu"
+
+msgctxt "#31343675"
+msgid "Main"
+msgstr "Main"
+
+msgctxt "#31343676"
+msgid "Password Protected"
+msgstr "Password Protected"
+
+msgctxt "#31343677"
+msgid "Password Protection for Home Menus"
+msgstr "Password Protection for Home Menus"
+
+msgctxt "#31343678"
+msgid "Password Has Been Changed"
+msgstr "Password Has Been Changed"
+
+msgctxt "#31343679"
+msgid "Correct Password! The Menu is now open for"
+msgstr "Correct Password! The Menu is now open for"
+
+msgctxt "#31343680"
+msgid "Lock Menu again after:"
+msgstr "Lock Menu again after:"
+
+msgctxt "#31343681"
+msgid "Choose Fanart For Locked Items"
+msgstr "Chiose Fanart For Locked items"
+
+msgctxt "#31343682"
+msgid "Incorrect password"
+msgstr "Incorrect password"
+
+msgctxt "#31343683"
+msgid "Press Enter and insert password"
+msgstr "Press Enter and insert password"
+
+msgctxt "#31343684"
+msgid "seconds"
+msgstr "seconds"
+
+msgctxt "#31343685"
+msgid "Disable icons transparency"
+msgstr "Disable icons transparency"
+
+msgctxt "#31343686"
+msgid "Weather Fanart package"
+msgstr "Weather Fanart package"
+
+
+msgctxt "#31343687"
+msgid "Weather icons package"
+msgstr "Weather icons package""
+
+
+msgctxt "#31343692"
+msgid "Home bar style"
+msgstr "Home bar style"
+
+msgctxt "#31343693"
+msgid "Default"
+msgstr "Default"
+
+msgctxt "#31343694"
+msgid "Inclined with frame"
+msgstr "Inclined with frame"
+
+msgctxt "#31343695"
+msgid "vertical menu with icons"
+msgstr "Vertical menu with icons"
+
+msgctxt "#31343696"
+msgid "Rounded edges"
+msgstr "Rounded edges"
+
+msgctxt "#31343697"
+msgid "Rounded edges with frame"
+msgstr "Rounded edges with frame"
+
+msgctxt "#31343698"
+msgid "Square Tiles"
+msgstr "Square Tiles"
+
+msgctxt "#31343699"
+msgid "Square Tiles with frame"
+msgstr "Square Tiles with frame"
+
+msgctxt "#31343700"
+msgid "Circle tiles"
+msgstr "Circle tiles"
+
+msgctxt "#31343701"
+msgid "Circle tiles with frame"
+msgstr "Circle tiles with frame"
+
+msgctxt "#31343702"
+msgid "Sub-Menu open automatically - only at Vertical menu (icons)"
+msgstr "Sub-Menu open automatically - only at Vertical menu (icons"
+
+msgctxt "#31343704"
+msgid "Showcase view"
+msgstr "Showcase view"
+
+msgctxt "#31343705"
+msgid "Kids"
+msgstr "Kids"
+
+msgctxt "#31343706"
+msgid "Live TV"
+msgstr "Live TV"
+
+msgctxt "#31343707"
+msgid "Sport"
+msgstr "Sport"
+
+msgctxt "#31343708"
+msgid "VOD"
+msgstr "VOD"
+
+msgctxt "#31343703"
+msgid "Mute"
+msgstr "Mute"
+
+msgctxt "#31343709"
+msgid "Background Packs"
+msgstr "Background Packs"
+ 
+msgctxt "#31343711"
+msgid "Icon Packs"
+msgstr "Icon Packs"
+
+msgctxt "#31343712"
+msgid "Apply Packs"
+msgstr "Apply Packs"
+
+msgctxt "#31343713"
+msgid "Apply Packs"
+msgstr "Apply Packs"
+
+msgctxt "#31343714"
+msgid "Skin music window"
+msgstr "Skin music window"
+
+msgctxt "#31343715"
+msgid "Fake CDArt in music window"
+msgstr "Fake CDArt in music window"
+
+msgctxt "#31343716"
+msgid "Animate Fanart when playing music"
+msgstr "Animate Fanart when playing music"
+
+msgctxt "#31343717"
+msgid "View album art, CD and title display"
+msgstr "View album art, CD and title display"
+
+msgctxt "#31343718"
+msgid "Cancel Top bar view when playing music"
+msgstr "Cancel Top bar view when playing music"
+
+msgctxt "#31343719"
+msgid "View visualisation in Home screen when playing music"
+msgstr "View visualisation in Home screen when playing music"
+
+msgctxt "#31343720"
+msgid "Home screen When playing music"
+msgstr "Home screen When playing music"
+
+msgctxt "#31343721"
+msgid "View Fanart in Home screen when playing music"
+msgstr "View Fanart in Home screen when playing music"
+
+msgctxt "#31343722"
+msgid "View Fanart in system screen when playing music"
+msgstr "iew Fanart in system screen when playing music"
+
+msgctxt "#31343723"
+msgid "View visualisation in system screen when playing music"
+msgstr "View visualisation in system screen when playing music"
+
+msgctxt "#31343724"
+msgid "System screen when playing music"
+msgstr "System screen when playing music"
+
+msgctxt "#31343725"
+msgid "Music"
+msgstr "Music"
+
+msgctxt "#31343726"
+msgid "Set password for main menu"
+msgstr "Set password for main menu"
+
+msgctxt "#31343727"
+msgid "Duration of protection for menu items"
+msgstr "Duration of protection for menu items"
+
+msgctxt "#31343728"
+msgid "Themes - Definitions , color design and automatic setup menus"
+msgstr "Themes - Definitions , color design and automatic setup menus"
+
+msgctxt "#31343729"
+msgid "Color management package"
+msgstr "Color management package"
+
+msgctxt "#31343730"
+msgid "Theme - The vibe team"
+msgstr "Theme - The vibe team"
+
+msgctxt "#31343731"
+msgid "Special settings for displaying movies and Tv shows"
+msgstr "Special settings for displaying movies and Tv shows"
+
+msgctxt "#31343732"
+msgid "Automatically set backgrounds and icons packages"
+msgstr "Automatically set backgrounds and icons packages"
+
+msgctxt "#31343733"
+msgid "Icon Packs"
+msgstr "Icon Packs"
+
+msgctxt "#31343734"
+msgid "Apply icons packs"
+msgstr "Apply icons packs"
+
+msgctxt "#31343735"
+msgid "Apply background packs"
+msgstr "Apply background packs"
+
+msgctxt "#31343736"
+msgid "RSS line"
+msgstr "RSS line"
+
+msgctxt "#31343737"
+msgid "startup screen (video, image, slideshow)"
+msgstr "startup screen (video, image, slideshow)"
+
+msgctxt "#31343738"
+msgid "Determination of views by content libraries"
+msgstr "Determination of views by content libraries"
+
+msgctxt "#31343739"
+msgid "Backup and Restore - Skin settings , menus , colors"
+msgstr "Backup and Restore - Skin settings , menus , colors"
+
+msgctxt "#31343740"
+msgid "Backup home screen shortcuts and categories only"
+msgstr "Backup home screen shortcuts and categories only"
+							
+msgctxt "#31343742"
+msgid "Backup colors"
+msgstr "Backup colors"							
+
+msgctxt "#31343743"
+msgid "Backup colors"
+msgstr "Backup colors"
+
+msgctxt "#31343744"
+msgid "Skin add-ons requires"
+msgstr "Skin add-ons requires"
+
+msgctxt "#31343745"
+msgid "Loading"
+msgstr "Loading"
+
+msgctxt "#31343746"
+msgid "Weather icons"
+msgstr "Weather icons"
+
+msgctxt "#31343747"
+msgid "Weather Fanart"
+msgstr "Weather Fanart"
+
+msgctxt "#31343748"
+msgid "Animated Movie fanart image  - if available"
+msgstr "Animated Movie fanart image  - if available"
+
+msgctxt "#31343749"
+msgid "Animated Movie poster image - if available"
+msgstr "Animated Movie poster image - if available"
+
+msgctxt "#31343750"
+msgid "Rotating Fanarts Delay (seconds)"
+msgstr "Rotating Fanarts Delay (seconds"
+		
+msgctxt "#31343751"
+msgid "Kodi version:"
+msgstr "גרסת קודי"
+				
+msgctxt "#31343755"
+msgid "Eminence style"
+msgstr "Eminence style"
+
+msgctxt "#31343753"
+msgid "Eminence style 2"
+msgstr "Eminence style 2"
+
+msgctxt "#31343754"
+msgid "Eminence list"
+msgstr "Eminence list"
+
+msgctxt "#31343756"
+msgid "Eminence style"
+msgstr "Eminence style"
+
+msgctxt "#31343757"
+msgid "category style"
+msgstr "category style"
+
+msgctxt "#31343758"
+msgid "Special settings to adjust the colors of the system"
+msgstr "Special settings to adjust the colors of the system"
+
+msgctxt "#32098"
+msgid "Set system colors"
+msgstr "Set system colors"
+
+msgctxt "#32099"
+msgid "Adjust style, categories, home screen shortcuts and categories"
+msgstr "Adjust style, categories, home screen shortcuts and categories"
+
+msgctxt "#32100"
+msgid "Adjust home screen Widget"
+msgstr "Adjust home screen Widget"
+
+msgctxt "#32101"
+msgid "Set password for Home menu tiles"
+msgstr "Set password for Home menu tiles"
+
+msgctxt "#32102"
+msgid "Special settings to adjust the Top bar line"
+msgstr "Special settings to adjust the Top bar line"
+
+msgctxt "#32103"
+msgid "Hide widget of list category type"
+msgstr "Hide widget of list category type"
+
+msgctxt "#32104"
+msgid "Special settings to adjust Fanarts"
+msgstr "Special settings to adjust Fanarts"
+
+msgctxt "#32105"
+msgid "Play videos in background and Home screen"
+msgstr "Play videos in background and Home screen"
+
+msgctxt "#32106"
+msgid "Set Fanart backgroud opacity"
+msgstr "Set Fanart backgroud opacity"
+
+msgctxt "#32107"
+msgid "Set Fanart backgroud opacity"
+msgstr "Set Fanart backgroud opacity"
+
+msgctxt "#32108"
+msgid "Set Home screen Fanart backgroud opacity"
+msgstr "Set Home screen Fanart backgroud opacity"
+
+msgctxt "#32113"
+msgid "Set time to auto close the Video OSD panel (in seconds)"
+msgstr "Set time to auto close the Video OSD panel (in seconds)"
+
+msgctxt "#32111"
+msgid "Set time to auto close the Music OSD panel (in seconds)"
+msgstr "Set time to auto close the Music OSD panel (in seconds)"
+
+msgctxt "#31516"
+msgid "Movies Fanart"
+msgstr "Movies Fanart"
+
+msgctxt "#31517"
+msgid "TV-Shows Fanart"
+msgstr "TV-Shows Fanart"
+
+msgctxt "#31518"
+msgid "Music Fanart"
+msgstr "Music Fanart"
+
+msgctxt "#31519"
+msgid "Movies Fanart wall"
+msgstr "Movies Fanart wall"
+
+msgctxt "#31520"
+msgid "Movies Fanart wall BW"
+msgstr "Movies Fanart wall BW"
+
+msgctxt "#31521"
+msgid "Movies Fanart poster wall"
+msgstr "Movies Fanart poster wall"
+
+msgctxt "#31522"
+msgid "Movies Fanart poster wall BW"
+msgstr "Movies Fanart poster wall BW"
+
+msgctxt "#31523"
+msgid "Music Fanart wall"
+msgstr "Music Fanart wall"
+
+msgctxt "#31524"
+msgid "Music Fanart wall BW"
+msgstr "Music Fanart wall BW"
+
+msgctxt "#31525"
+msgid "TV-Shows Fanart wall"
+msgstr "TV-Shows Fanart wall"
+
+msgctxt "#31526"
+msgid "TV-Shows Fanart wall BW"
+msgstr "TV-Shows Fanart wall BW"
+
+msgctxt "#31527"
+msgid "TV-Shows Fanart poster wall"
+msgstr "TV-Shows Fanart poster wall"
+
+msgctxt "#31528"
+msgid "TV-Shows Fanart poster wall BW"
+msgstr "TV-Shows Fanart poster wall BW"
+
+msgctxt "#31529"
+msgid "Set icon in categories list (for list category only)"
+msgstr "Set icon in categories list (for list category only)"
+
+msgctxt "#31530"
+msgid "Thanks"
+msgstr "Thanks"
+
+msgctxt "#31690"
+msgid "Password protection"
+msgstr "Password protection"
+
+msgctxt "#31531"
+msgid "Set your Kodi based on The Vibe2 setup!.[CR]Get full skin shortcuts menus icons background and etc - all set and ready!.[CR]This option will download a new setup of skin menus colors and settings without any option to recover your .current setup. It is fully recommended to run a skin backup before apply this option in case you like to restore to your current settings."
+msgstr "Set your Kodi based on The Vibe2 setup!.[CR]Get full skin shortcuts menus icons background and etc - all set and ready!.[CR]This option will download a new setup of skin menus colors and settings without any option to recover your .current setup. It is fully recommended to run a skin backup before apply this option in case you like to restore to your current settings."
+
+msgctxt "#31532"
+msgid "Theme - by ID number"
+msgstr "Theme - by ID number"
+
+msgctxt "#31533"
+msgid "Exodus Movies"
+msgstr "Exodus Movies"
+
+msgctxt "#43750"
+msgid "Exodus Movies"
+msgstr "Exodus Movies"		
+
+msgctxt "#31534"
+msgid "SALTS Movies"
+msgstr "SALTS Movies"
+
+msgctxt "#31535"
+msgid "Quasar Movies"
+msgstr "Quasar Movies"
+
+msgctxt "#43753"
+msgid "TVShows Wall"
+msgstr "TVShows Wall"
+
+msgctxt "#43754"
+msgid "Sdartot TV IL"
+msgstr "Sdartot TV IL"
+
+msgctxt "#43755"
+msgid "Exodus TVShows"
+msgstr "Exodus TVShows"
+
+msgctxt "#43756"
+msgid "SALTS TVShows"
+msgstr "SALTS TVShows"
+
+msgctxt "#43757"
+msgid "Quasar TVShows"
+msgstr "Quasar TVShows"
+
+msgctxt "#43758"
+msgid "Kmedia TVShows"
+msgstr "Kmedia TVShows"
+
+##Music##
+
+msgctxt "#43759"
+msgid "Music Zone"
+msgstr "Music Zone"
+
+msgctxt "#43760"
+msgid "99FM Radio"
+msgstr "99FM Radio"
+
+msgctxt "#43761"
+msgid "100FM Radio"
+msgstr "100FM Radio"
+
+msgctxt "#43762"
+msgid "Kmusic"
+msgstr "Kmusic"
+
+msgctxt "#43763"
+msgid "House Mix"
+msgstr "House Mix"
+
+msgctxt "#43764"
+msgid "Worldwide Radio"
+msgstr "Worldwide Radio"
+
+##VOD##
+
+msgctxt "#43765"
+msgid "Sdarot TV"
+msgstr "Sdarot TV"
+
+msgctxt "#43766"
+msgid "Keshet VOD"
+msgstr "Keshet VOD"
+
+msgctxt "#43767"
+msgid "Reshet VOD"
+msgstr "Reshet VOD"
+
+msgctxt "#43768"
+msgid "Nana10 VOD"
+msgstr "Nana10 VOD"
+
+msgctxt "#43769"
+msgid "Channel 1 VOD"
+msgstr "Channel 1 VOD"
+
+msgctxt "#43770"
+msgid "Channel 20 VOD"
+msgstr "Channel 20 VOD"
+
+msgctxt "#43771"
+msgid "Israeli Stand Up"
+msgstr "Israeli Stand Up"
+
+msgctxt "#43772"
+msgid "Doco Tube"
+msgstr "Doco Tube"
+
+##Kids##
+
+msgctxt "#43773"
+msgid "Israeli Kids"
+msgstr "Israeli Kids"
+
+msgctxt "#43774"
+msgid "Yeladudes"
+msgstr "Yeladudes"
+
+msgctxt "#43775"
+msgid "Kids Zone"
+msgstr "Kids Zone"
+
+msgctxt "#43776"
+msgid "Luli"
+msgstr "Luli"
+
+msgctxt "#43777"
+msgid "Hop!"
+msgstr "Hop!"
+
+msgctxt "#43778"
+msgid "Kids SoungS&Stories"
+msgstr "Kids SoungS&Stories"
+
+msgctxt "#43779"
+msgid "Kids Theatre"
+msgstr "Kids Theatre"
+
+msgctxt "#43780"
+msgid "Kids TVShows"
+msgstr "Kids TVShows"
+
+msgctxt "#43781"
+msgid "Kids Movies"
+msgstr "Kids Movies"
+
+msgctxt "#43782"
+msgid "Toddlers"
+msgstr "Toddlers"
+
+msgctxt "#43783"
+msgid "Tiny"
+msgstr "Tiny"
+
+msgctxt "#43784"
+msgid "Children and Youth"
+msgstr "Children and Youth"
+
+msgctxt "#43785"
+msgid "Music wall"
+msgstr "Music wall"
+
+msgctxt "#43786"
+msgid "Music add-ons"
+msgstr "Music add-ons"
+
+msgctxt "#43788"
+msgid "Restore Kodi from backup on cloud (based on ID number)This option will restore your kodi settings colors menu structures etc based on backup that exist in the cloud server (based on the unique ID number you choose). PAY ATTENTION! This option will erase your current kodi settings and rebuild it according the backup file you choose (ID number). This option is not reversible and therefore it is fully recommended to run a backup in advanced."
+msgstr "Restore Kodi from backup on cloud (based on ID number)This option will restore your kodi settings colors menu structures etc based on backup that exist in the cloud server (based on the unique ID number you choose). PAY ATTENTION! This option will erase your current kodi settings and rebuild it according the backup file you choose (ID number). This option is not reversible and therefore it is fully recommended to run a backup in advanced."
+
+msgctxt "#43789"
+msgid "This will apply new icons and backgrounds to your skin menus.[CR]after this dialog click ok to confirm the changes and then go back to the home window to apply them.[CR]click OK to confirm."
+msgstr "This will apply new icons and backgrounds to your skin menus.[CR]after this dialog click ok to confirm the changes and then go back to the home window to apply them.[CR]click OK to confirm."
+
+msgctxt "#43790"
+msgid "Meta movies"
+msgstr "Meta movies"
+
+msgctxt "#43791"
+msgid "Meta search"
+msgstr "Meta search"
+
+msgctxt "#43792"
+msgid "Meta TV-Shows"
+msgstr "Meta TV-Shows"

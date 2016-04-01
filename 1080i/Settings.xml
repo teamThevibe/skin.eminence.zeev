@@ -1,266 +1,169 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!-- Foundation -->
 <window id="9004">
-    <defaultcontrol always="true">9001</defaultcontrol>
+    <defaultcontrol always="true">9000</defaultcontrol>
     <allowoverlay>yes</allowoverlay>
-    <background>0</background>
     
     <controls>
 
         <include>GlobalBackground</include>
         
 		
+    <!-- Settings -->
         <control type="group">
-            <posx>horzpad</posx>
-            <posy>topoffset</posy> 
-            <control type="label">
-                <include>DefSideLabelCoords</include>
-                <label>5</label>
+            <include>Animation_SlideIn</include>
+            <include>Animation_FadeOut</include>
+            <control type="group">
+                <left>side</left>
+                <right>pad</right>
+                <top>top</top>
+                <height>700</height>
+             <!--   <include name="Object_Line">
+                    <param name="width" value="1880" />
+                    <param name="label" value="$LOCALIZE[31073]" />
+                </include>-->
             </control>
-            <include>Animation.FadeIn</include>
-            <control type="grouplist" id="9900">
-                <posx>listx</posx>
-                <posy>listy</posy>
-                <orientation>vertical</orientation>
-                <itemgap>10</itemgap>
-                <onright>9100</onright>
-
-                <control type="radiobutton" id="9001">
-                    <description>Appearance</description>
-                    <label>480</label>
-                    <onclick>activatewindow(AppearanceSettings)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onright>9101</onright>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <selected>false</selected>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/eye.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/eye.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="0">WindowOpen</animation>
-                </control>
-                <control type="radiobutton" id="9007">
-                    <description>Videos</description>
-                    <label>3</label>
-                    <onclick>activatewindow(VideosSettings)</onclick>
-                    <width>bannerwborder</width>
-                    <radioposx>-10</radioposx>
-                    <height>106</height>
-                    <onright>9102</onright>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <selected>false</selected>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/film.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/film.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="25">WindowOpen</animation>
-                </control>
-                <control type="radiobutton" id="9003">
-                    <description>Music</description>
-                    <label>2</label>
-                    <onclick>activatewindow(MusicSettings)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onright>9103</onright>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <selected>false</selected>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/songs.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/songs.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="50">WindowOpen</animation>
-                </control>
-                <control type="radiobutton" id="9004">
-                    <description>Addons</description>
-                    <label>24001</label>
-                    <onclick>activatewindow(AddonBrowser)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onright>9104</onright>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <selected>false</selected>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/addons.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/addons.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="75">WindowOpen</animation>
-                </control>
-                <control type="radiobutton" id="9005">
-                    <description>Pictures</description>
-                    <label>1</label>
-                    <onclick>activatewindow(PicturesSettings)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onright>9105</onright>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <selected>false</selected>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/pictures.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/pictures.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="100">WindowOpen</animation>
-                </control>
-                <control type="radiobutton" id="9006">
-                    <description>Weather</description>
-                    <label>8</label>
-                    <onclick>activatewindow(WeatherSettings)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onright>9106</onright>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <selected>false</selected>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/sun.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/sun.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="125">WindowOpen</animation>
-                </control>
-            </control>
-            <control type="grouplist" id="9100">
-                <posx>747</posx>
-                <posy>210</posy>
-                <orientation>vertical</orientation>
-                <itemgap>10</itemgap>
-                <onleft>9900</onleft>
-                <control type="radiobutton" id="9101">
-                    <description>Network</description>
-                    <label>705</label>
-                    <onclick>activatewindow(NetworkSettings)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onleft>9001</onleft>
-                    <selected>false</selected>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/network.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/network.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="150">WindowOpen</animation>
-                </control>
-                <control type="radiobutton" id="9102">
-                    <description>System</description>
-                    <label>13000</label>
-                    <onclick>activatewindow(SystemSettings)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onleft>9002</onleft>
-                    <selected>false</selected>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/configure.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/configure.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="175">WindowOpen</animation>
-                </control>
-                <control type="radiobutton" id="9103">
-                    <description>Profiles</description>
-                    <label>13200</label>
-                    <onclick>activatewindow(Profiles)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onleft>9003</onleft>
-                    <selected>false</selected>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/actor.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/actor.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="200">WindowOpen</animation>
-                </control>
-                <control type="radiobutton" id="9104">
-                    <description>System Info</description>
-                    <label>130</label>
-                    <onclick>activatewindow(7)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onleft>9004</onleft>
-                    <selected>false</selected>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/sysinfo.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/sysinfo.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="225">WindowOpen</animation>
-                </control>
-                <control type="radiobutton" id="9105">
-                    <description>PVR Settings</description>
-                    <label>19191</label>
-                    <onclick>activatewindow(pvrsettings)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onleft>9005</onleft>
-                    <selected>false</selected>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/livetv.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/livetv.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="250">WindowOpen</animation>
+            <control type="panel" id="9000">
+                <left>side</left>
+                <right>pad</right>
+                <top>top</top>
+                <height>700</height>
+                <orientation>horizontal</orientation>
+                <itemlayout height="115" width="945">
+                    <control type="image">
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <left>0</left>
+                        <right>pad</right>
+                        <texture colordiffuse="PosterBorder">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <top>0</top>
+                        <left>20</left>
+                        <bottom>pad</bottom>
+                        <width>100</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="ListLabel">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <textcolor>ListLabel</textcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </itemlayout>
+                <focusedlayout height="115" width="945">
+                    <control type="image">
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <left>0</left>
+                        <right>pad</right>
+                        <texture colordiffuse="$VAR[Highlight6]">common/white.png</texture>
+                    </control>
+                    <control type="image">
+                        <top>0</top>
+                        <left>20</left>
+                        <bottom>pad</bottom>
+                        <width>100</width>
+                        <aspectratio>keep</aspectratio>
+                        <texture colordiffuse="Selected">$INFO[ListItem.Icon]</texture>
+                    </control>
+                    <control type="label">
+                        <left>30</left>
+                        <right>30</right>
+                        <top>0</top>
+                        <bottom>pad</bottom>
+                        <textcolor>Selected</textcolor>
+                        <align>right</align>
+                        <aligny>center</aligny>
+                        <label>$INFO[ListItem.Label]</label>
+                    </control>
+                </focusedlayout>
+                <content>
+				 <!-- Row 2 -->
+                    <item id="1">
+                        <description>System</description>
+                        <label>13000</label>
+                        <onclick>activatewindow(SystemSettings)</onclick>
+                        <icon>special://skin/extras/icons/configure.png</icon>
+                    </item>
+                    <item id="2">
+                        <description>Addons</description>
+                        <label>24001</label>
+                        <onclick>activatewindow(AddonBrowser)</onclick>
+                        <icon>special://skin/extras/icons/addons.png</icon>
+                    </item>
+                    <item id="3">
+                        <description>Profiles</description>
+                        <label>13200</label>
+                        <onclick>activatewindow(Profiles)</onclick>
+                        <icon>special://skin/extras/icons/actor.png</icon>
+                    </item>
+                    <item id="4">
+                        <description>PVR Settings</description>
+                        <label>19191</label>
+                        <onclick>activatewindow(pvrsettings)</onclick>
+                        <icon>special://skin/extras/icons/livetv.png</icon>
+                    </item>
+                    <item id="5">
+                        <description>Network</description>
+                        <label>705</label>
+                        <onclick>activatewindow(NetworkSettings)</onclick>
+                        <icon>special://skin/extras/icons/network.png</icon>
+                    </item>
+                    <item id="6">
+                        <description>System Info</description>
+                        <label>130</label>
+                        <onclick>activatewindow(7)</onclick>
+                        <icon>special://skin/extras/icons/sysinfo.png</icon>
+                    </item>            
+				
+                    <!-- Row 1 -->
+                    <item id="7">
+                        <description>Appearance</description>
+                        <label>480</label>
+                        <onclick>activatewindow(AppearanceSettings)</onclick>
+                        <icon>special://skin/extras/icons/skinsettings.png</icon>
+                    </item>
+                    <item id="8">
+                        <description>Video</description>
+                        <label>157</label>
+                        <onclick>activatewindow(VideosSettings)</onclick>
+                        <icon>special://skin/extras/icons/film.png</icon>
+                    </item>
+                    <item id="9">
+                        <description>Music</description>
+                        <label>2</label>
+                        <onclick>activatewindow(MusicSettings)</onclick>
+                        <icon>special://skin/extras/icons/songs.png</icon>
+                    </item>
+                    <item id="10">
+                        <description>Pictures</description>
+                        <label>1</label>
+                        <onclick>activatewindow(PicturesSettings)</onclick>
+                        <icon>special://skin/extras/icons/pictures.png</icon>
+                    </item>
                     
-                </control>
-                <control type="radiobutton" id="9106">
-                    <description>Skin Settings</description>
-                    <label>20077</label>
-                    <onclick>activatewindow(skinsettings)</onclick>
-                    <width>bannerwborder</width>
-                    <height>106</height>
-                    <radioposx>-10</radioposx>
-                    <onleft>9006</onleft>
-                    <selected>false</selected>
-                    <radiowidth>128</radiowidth>
-                    <radioheight>128</radioheight>
-                    <font>Font-Button</font>
-                    <align>right</align>
-                    <textureradioofffocus colordiffuse="Selected">special://skin/extras/icons/year.png</textureradioofffocus>
-                    <textureradiooffnofocus colordiffuse="PanelFG-NF">special://skin/extras/icons/year.png</textureradiooffnofocus>
-                    <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-                    <texturenofocus border="5" colordiffuse="PosterBorder-NF">common/border-inner.png</texturenofocus>
-                    <animation effect="slide" start="1920,400" end="0" time="150" delay="275">WindowOpen</animation>
-                </control>
+                    <item id="11">
+                        <description>Weather</description>
+                        <label>8</label>
+                        <onclick>activatewindow(WeatherSettings)</onclick>
+                        <icon>special://skin/extras/icons/sun.png</icon>
+                    </item>
+                    <item id="12">
+                        <description>Skin Settings</description>
+                        <label>20077</label>
+                        <onclick>activatewindow(skinsettings)</onclick>
+                        <icon>special://skin/extras/icons/paintbrush.png</icon>
+                    </item>
+
+                       
+                    
+                </content>
             </control>
         </control>
         

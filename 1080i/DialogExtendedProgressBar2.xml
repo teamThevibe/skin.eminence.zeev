@@ -3,10 +3,10 @@
     <zorder>0</zorder>
     <controls>
         <control type="group">
-			<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
 
             <control type="group">
-						<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
+			
+						<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>
                 <visible>!Window.IsVisible(home) + !Window.IsVisible(weather)</visible>
                 <visible>!Window.IsVisible(DialogKaiToast.xml)</visible>
                 <animation effect="slide" start="0,64" end="0" time="125">WindowOpen</animation>
@@ -38,7 +38,8 @@
                 </control>
             </control>
             <control type="group">
-						<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
+			
+						<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>
                 <visible>Window.IsVisible(home) | Window.IsVisible(weather)</visible>
                 <visible>!Window.IsActive(DialogKaiToast.xml)</visible>
                 <bottom>266</bottom>

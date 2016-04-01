@@ -1,0 +1,26 @@
+<settings>
+	<!-- Home Style -->
+
+	<setting id="HomeStyle" value="beveled" label="$LOCALIZE[31180]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/2.png" description=""/>
+	<setting id="HomeStyle" value="emptybeveled" label="$LOCALIZE[31343694]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/13.png" description=""/>
+	<setting id="HomeStyle" value="bigtile" label="$LOCALIZE[31343581]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/14.png" description=""/>
+	<setting id="HomeStyle" value="LGVIEW" label="$LOCALIZE[31343582]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/15.png" description=""/>
+	<setting id="HomeStyle" value="notile" label="$LOCALIZE[31343583]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/1.png" description=""/>
+	<setting id="HomeStyle" value="TileinText" label="$LOCALIZE[31181]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/2.png" description=""/>
+	<setting id="HomeStyle" value="TextOnly" label="$LOCALIZE[31182]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/3.png" description=""/>
+	<setting id="HomeStyle" value="HomeMenuVertical" label="$LOCALIZE[31343669]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/4.png" description=""/>
+	<setting id="HomeStyle" value="HomeMenuVerticaliconlist" label="$LOCALIZE[31343695]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/5.png" description=""/>
+	<setting id="HomeStyle" value="rounded" label="$LOCALIZE[31343696]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/6.png" description=""/>
+	<setting id="HomeStyle" value="emptyrounded" label="$LOCALIZE[31343697]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/7.png" description=""/>
+	<setting id="HomeStyle" value="squared" label="$LOCALIZE[31343698]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/8.png" description=""/>
+	<setting id="HomeStyle" value="emptysquared" label="$LOCALIZE[31343699]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/9.png" description=""/>
+	<setting id="HomeStyle" value="circle" label="$LOCALIZE[31343700]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/10.png" description=""/>
+	<setting id="HomeStyle" value="emptycircle" label="$LOCALIZE[31343701]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/11.png" description=""/>
+
+	<!-- categories style -->
+	<setting id="categories" value="Em2" label="$LOCALIZE[31343753]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/em2.png" description=""/>
+	<setting id="categories" value="list" label="$LOCALIZE[31343754]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/list.png" description=""/>
+	<setting id="categories" value="Em" label="$LOCALIZE[31343756]" condition="Stringcompare(Skin.CurrentColourTheme,SKINDEFAULT)" icon="special://skin/extras/viewthumbs/em.png" description=""/>
+
+</settings>
+

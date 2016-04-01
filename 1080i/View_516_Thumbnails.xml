@@ -6,34 +6,34 @@
 
 		<control type="group">
 		<include>busy</include>
-			<include>Animation_Left</include>            
+					<include>Animation_Left3</include>            
+			<include>Animation_Left2</include>            
 		<posy>100</posy>
 
-		<include name="busy">
-		    <control type="image">
-                    <posx>globalpad</posx>
-                    <posy>globalpad</posy>
-                    <height>wallposterh</height>
-                    <width>wallposterw</width>
-                    <texture background="true">special://skin/extras/backgrounds/loading/loading.jpg</texture>
-                    <aspectratio aligny="top">scale</aspectratio>
-                </control>
-			<visible>IntegerGreaterThan(Container.NumItems,0) + !Window.IsActive(mypics.xml)</visible>
-		</include>
 		
 			<!-- רקע רשימה -->
 			<control type="image">
 			<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0) + !Window.IsActive(mypics.xml) + !Window.IsActive(programs)</visible>
 			<animation effect="slide" start="10" end="-1300" time="250" condition="Window.IsVisible(106)">Conditional</animation>
-			<animation effect="slide" start="10" end="-1300" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+			<animation effect="slide" start="10" end="-1300" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 				<posx>-100</posx>
 				<width>2000</width>
-				<height>340</height>    
-				<top>500</top>
+				<height>360</height>    
+				<top>495</top>
 				<texture background="true" colordiffuse="HomeWidgetBG" border="150">common/half-tile.png</texture>
 				<animation effect="fade" start="100" end="80" condition="true">Conditional</animation>
 			</control>
 			<control type="group">
+			<control type="scrollbar" id="60">
+			<posx>450</posx>
+                <onup>50</onup>
+                <top>850</top>
+                <orientation>horizontal</orientation>
+                <width>1250</width>
+                <height>8</height>
+                <animation effect="fade" condition="!Control.HasFocus(60) + !Container.Scrolling" time="200" start="100" end="0">Conditional</animation>
+				<visible>Control.IsVisible(516)</visible>
+            </control>
 								<visible>Control.IsVisible(516) + IntegerGreaterThan(Container.NumItems,0) + !Window.IsActive(mypics.xml) + !Window.IsActive(programs)</visible>
 
 				<control type="panel" id="516">
@@ -43,27 +43,30 @@
 					<height>height</height>
 					<top>500</top>
 					<onup>9000</onup>
+                <ondown>60</ondown>
 					<onleft>516</onleft>
 					<onright>516</onright>
 					<align>right</align>
 					<aligny>right</aligny>
 					<right>120</right>
 					<itemgap>100</itemgap>
+					        <pagecontrol>60</pagecontrol>
 					<focusposition>516</focusposition>
 					<preloaditems>2</preloaditems>
-			<animation effect="slide" start="10" end="-1160" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
-			<animation effect="fade" start="100" end="70" time="250" condition="ControlGroup(9000).HasFocus()">Conditional</animation>
+			<animation effect="slide" start="10" end="-1160" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
+			<animation effect="fade" start="100" end="70" time="250" condition="ControlGroup(9000).HasFocus() | Control.HasFocus(9101)">Conditional</animation>
 			<animation effect="slide" start="10" end="-1300" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 
 					<viewtype label="31343593">list</viewtype>
 					<scrolltime tween="quadratic">400</scrolltime>
+					
    <itemlayout width="wallposterwlist" height="wallposterhlist" condition="Container.Content(movies) | Container.Content(tvshows) | Container.Content(seasons) | Container.Content(sets)">
             <control type="group">
-               <!-- <control type="image">
+               <control type="image">
                     <height>wallposterhborder</height>
                     <width>wallposterwborder</width>
                     <texture colordiffuse="PosterBorder" border="5">common/border-inner.png</texture>
-                </control>-->
+                </control>
  
             
                 <control type="image">
@@ -176,6 +179,17 @@
                     <texture background="true">$VAR[PosterImage]</texture>
                     <aspectratio aligny="top">scale</aspectratio>
                 </control>
+				
+				              <control type="image">
+                    <posx>globalpad</posx>
+                    <posy>globalpad</posy>
+                    <height>wallposterh</height>
+                    <width>wallposterw</width>
+                            <texture background="true">special://masterprofile/Thumbnails/animatedgifs/$INFO[Listitem.IMDBNumber]_poster_0_original.gif</texture>
+							<visible>!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster) + !Skin.HasSetting(showanimate.poster)</visible>
+							<aspectratio aligny="top">scale</aspectratio>
+                </control>
+				
                 <control type="group">
                     <posx>70r</posx>
                     <posy>70r</posy>
@@ -282,14 +296,12 @@
 					<aspectratio>keep</aspectratio>
 					<height>300</height>    
 					<texture background="true">$INFO[ListItem.Art(clearlogo)]</texture>
-					<include name="Animation.SlideOpen.Up">
-						<animation effect="slide" start="0,500" end="0" delay="0" time="200">WindowOpen</animation>
-						<animation effect="slide" start="0,500" end="0" delay="0" time="200">Visible</animation>
-					</include>
 					<fadetime>300</fadetime>
 				</control>
+				
 			</control>
-			<include>Furniture_Scrollbar</include>
+			
 		</control>
+
 	</include>
 </includes>

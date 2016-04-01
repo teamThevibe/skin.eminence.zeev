@@ -3,52 +3,59 @@
 <!-- music -->
 	<shortcut>
 		<action>ActivateWindow(Music,$INFO[Window(home).Property(librarynode)],return)</action>
-		<label>קיר מוזיקה</label>
+		<label>43785</label>
 		<label2>Common Shortcut</label2>
 		<defaultID>music</defaultID>		
-		<icon>special://skin/extras/icons/songs.png</icon>
+		<icon>special://skin/extras/icons/infinity.png</icon>
 	</shortcut>
 		<shortcut>
 		<action>ActivateWindow(MusicLibrary,Addons,return)</action>
 		<label2>Common Shortcut</label2>
 	    <defaultID>radio</defaultID>		
-		<label>הרחבות מוזיקה</label>
-		<icon>special://skin/extras/icons/equalizer.png</icon>
+		<label>43786</label>
+		<icon>special://skin/extras/icons/play2.png</icon>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10025,"plugin://plugin.video.htpt.music/?url=&amp;mode=101&amp;name=%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94+%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%AA&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cservice.htpt%5Cresources%5Cmedia%5Cmusic.png&amp;desc=%5BCOLOR%3DYellow%5D%D7%9B%D7%9C+%D7%94%D7%96%D7%9E%D7%A8%D7%99%D7%9D+%D7%94%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D%21%5B%2FCOLOR%5D%5BCR%5D%5BCR%5D&amp;num=1&amp;viewtype=58",return)</action>
-		<label>מוזיקה ישראלית</label>
-	    <label2>הרחבת וידאו</label2>
+		<action>ActivateWindow(10025,"plugin://plugin.video.featherence.music",return)</action>
+		<label>$LOCALIZE[43759]</label>
+	    <label2>43786</label2>
 		<defaultID />
-		<icon>special://skin/extras/icons/ICONS/KMEDIA.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 	</shortcut>	
 	<shortcut>
-		<action>ActivateWindow(10025,"plugin://plugin.video.htpt.music/?url=&amp;mode=111&amp;name=%D7%9E%D7%95%D7%96%D7%99%D7%A7%D7%94+%D7%9C%D7%95%D7%A2%D7%96%D7%99%D7%AA&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cservice.htpt%5Cresources%5Cmedia%5Cmusic.png&amp;desc=%5BCOLOR%3DYellow%5D%D7%9B%D7%9C+%D7%94%D7%96%D7%9E%D7%A8%D7%99%D7%9D+%D7%94%D7%9E%D7%95%D7%91%D7%99%D7%9C%D7%99%D7%9D+%D7%9E%D7%97%D7%95%22%D7%9C%21%5B%2FCOLOR%5D%5BCR%5D%5BCR%5D&amp;num=1&amp;viewtype=58",return)</action>
-		<label>מוזיקה לועזית</label>
-		<label2>הרחבת וידאו</label2>
+		<action>ActivateWindow(10025,"plugin://plugin.audio.99fm-playlists",return)</action>
+		<label>$LOCALIZE[43760]</label>
+	    <label2>הרחבת וידאו</label2>
 		<defaultID />
-		<icon>special://skin/extras/icons/ICONS/KMEDIA.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10501,"plugin://plugin.video.htpt.music/?url=&amp;mode=102&amp;name=%D7%A7%D7%A8%D7%99%D7%95%D7%A7%D7%99+%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cservice.htpt%5Cresources%5Cmedia%5Ckaraoke.png&amp;desc=%5BCOLOR%3DYellow%5D%D7%9B%D7%9C+%D7%A9%D7%99%D7%A8%D7%99+%D7%94%D7%A7%D7%A8%D7%99%D7%95%D7%A7%D7%99+%D7%94%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D%21%5B%2FCOLOR%5D%5BCR%5D%5BCR%5D&amp;num=1&amp;viewtype=58",return)</action>
-		<label>קריוקי ישראלי</label>
-		<label2>הרחבת וידאו</label2>		
+		<action>ActivateWindow(10025,"plugin://plugin.audio.100fm",return)</action>
+		<label>$LOCALIZE[43761]</label>
+	    <label2>הרחבת וידאו</label2>
 		<defaultID />
-		<icon>special://skin/extras/icons/ICONS/s-up.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10501,"plugin://plugin.video.htpt.music/?url=&amp;mode=104&amp;name=%D7%94%D7%95%D7%A4%D7%A2%D7%95%D7%AA+%D7%97%D7%99%D7%95%D7%AA+%D7%9E%D7%99%D7%A9%D7%A8%D7%90%D7%9C&amp;iconimage=C%3A%5CUsers%5CZEEV%5CAppData%5CRoaming%5CKodi%5Caddons%5Cservice.htpt%5Cresources%5Cmedia%5Cguitar.png&amp;desc=%5BCOLOR%3DYellow%5D%D7%9B%D7%9C+%D7%94%D7%95%D7%A4%D7%A2%D7%95%D7%AA+%D7%94%D7%96%D7%9E%D7%A8%D7%99%D7%9D+%D7%94%D7%99%D7%A9%D7%A8%D7%90%D7%9C%D7%99%D7%9D%21%5B%2FCOLOR%5D%5BCR%5D%5BCR%5D&amp;num=1&amp;viewtype=58",return)</action>
-		<label>הופעות חיות מישראל</label>
-		<label2>הרחבת מוזיקה</label2>		
+		<action>ActivateWindow(10025,"plugin://plugin.video.kmusictube",return)</action>
+		<label>$LOCALIZE[43762]</label>
+	    <label2>הרחבת וידאו</label2>
 		<defaultID />
-		<icon>special://skin/extras/icons/ICONS/liveconcert_80.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 	</shortcut>
 	<shortcut>
-		<action>ActivateWindow(10501,"plugin://plugin.video.spotitube",return)</action>
-		<label>Youtube Music</label>
-		<label2>הרחבת מוזיקה</label2>		
-		<defaultID>plugin.video.spotitube</defaultID>		
-		<icon>special://skin/extras/icons/ICONS/youtube_85.png</icon>
+		<action>ActivateWindow(10025,"plugin://plugin.audio.housemixes",return)</action>
+		<label>$LOCALIZE[43763]</label>
+	    <label2>הרחבת וידאו</label2>
+		<defaultID />
+		<icon>special://skin/extras/icons/play2.png</icon>
+	</shortcut>
+	<shortcut>
+		<action>ActivateWindow(10025,"plugin://plugin.audio.tunir",return)</action>
+		<label>$LOCALIZE[43764]</label>
+	    <label2>הרחבת וידאו</label2>
+		<defaultID />
+		<icon>special://skin/extras/icons/play2.png</icon>
 	</shortcut>
 
 	<shortcut>
@@ -57,14 +64,14 @@
 		<label2>32019</label2>
 		<defaultID>19140</defaultID>
 		<icon />
-		<thumb>special://skin/extras/icons/search.png</thumb>
+		<thumb>special://skin/extras/icons/play2.png</thumb>
 	</shortcut>
 	<shortcut>
 		<action>ActivateWindow(MusicLibrary,Artists,return)</action>
 		<label>133</label>
 		<label2>32019</label2>
 		<defaultID>133</defaultID>
-		<icon>special://skin/extras/icons/songs.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 		<thumb />
 	</shortcut>
 	<shortcut>
@@ -72,7 +79,7 @@
 		<label>132</label>
 		<label2>32019</label2>
 		<defaultID>132</defaultID>
-		<icon>special://skin/extras/icons/songs.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 		<thumb />
 	</shortcut>
 	<shortcut>
@@ -80,7 +87,7 @@
 		<label>134</label>
 		<label2>32019</label2>
 		<defaultID>134</defaultID>
-		<icon>special://skin/extras/icons/songs.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 		<thumb />
 	</shortcut>
 	<shortcut>
@@ -88,7 +95,7 @@
 		<label>744</label>
 		<label2>32019</label2>
 		<defaultID>744</defaultID>
-		<icon>special://skin/extras/icons/songs.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 		<thumb />
 	</shortcut>
 	<shortcut>
@@ -96,7 +103,7 @@
 		<label>15100</label>
 		<label2>32019</label2>
 		<defaultID>15100</defaultID>
-		<icon>special://skin/extras/icons/songs.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 		<thumb />
 	</shortcut>
 	<shortcut>
@@ -104,7 +111,7 @@
 		<label>1038</label>
 		<label2>32019</label2>
 		<defaultID>1038</defaultID>
-		<icon>special://skin/extras/icons/songs.png</icon>
+		<icon>special://skin/extras/icons/play2.png</icon>
 		<thumb />
 	</shortcut>
 </shortcuts>

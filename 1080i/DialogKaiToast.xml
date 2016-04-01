@@ -1,190 +1,369 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <window>
-    <zorder>0</zorder>
-    <controls>
-        <control type="group">
-					<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
-            <visible>!Window.IsVisible(home) + !Window.IsVisible(weather)</visible>
-            <animation effect="slide" start="0,64" end="0" time="125">WindowOpen</animation>
-            <animation effect="slide" end="0,64" start="0" time="125">WindowClose</animation>
-            <control type="image">
-                <left>0</left>
-                <posy>64r</posy>
-                <width>100%</width>
-                <height>64</height>  
-                <aspectratio>scale</aspectratio>
-                <texture colordiffuse="DialogBG">common/white.png</texture>
-                <visible>Window.IsVisible(fullscreenvideo)</visible>
-            </control>
-            <control type="image">
-                <posx>16</posx>
-                <posy>48r</posy>
-                <width>32</width>
-                <height>32</height>
-                <texture colordiffuse="LineLabel">common/info.png</texture>
-            </control>
-            <control type="label">
-                <bottom>16</bottom>
-                <left>48</left>
-                <right>side</right>
-                <height>32</height>
-                <font>Font-RSS</font>
-                <textcolor>LineLabel</textcolor>
-                <scroll>true</scroll>
-                <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
-            </control>
-        </control>
-		
+	<zorder>0</zorder>
+	<controls>
+		<control type="group">
+			<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>
+			<visible>Skin.String(HomeStyle, HomeMenuVerticaliconlist)</visible>
+			<visible>!Window.IsVisible(startup)</visible>
+			<visible>!Window.IsVisible(home) + !Window.IsVisible(weather) + !Window.IsVisible(Startup.xml)</visible>
+			<animation effect="slide" start="0,64" end="0" time="125">WindowOpen</animation>
+			<animation effect="slide" end="0,64" start="0" time="125">WindowClose</animation>
+			<control type="image">
+				<left>0</left>
+				<posy>64r</posy>
+				<width>100%</width>
+				<height>64</height>  
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="DialogBG">common/white.png</texture>
+				<visible>Window.IsVisible(fullscreenvideo)</visible>
+			</control>
+			<control type="image">
+				<posx>16</posx>
+				<posy>48r</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="LineLabel">common/info.png</texture>
+			</control>
+			<control type="label">
+				<bottom>16</bottom>
+				<left>48</left>
+				<right>side</right>
+				<height>32</height>
+				<font>Font-RSS</font>
+				<textcolor>LineLabel</textcolor>
+				<scroll>true</scroll>
+				<label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+			</control>
+		</control>
+
+		<control type="group">
+			<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>
+			<visible>Skin.String(HomeStyle, HomeMenuVerticaliconlist)</visible>
+			<visible>!Window.IsVisible(startup)</visible>
+
+			<visible>!Window.IsVisible(home) + !Window.IsVisible(weather)</visible>
+			<animation effect="slide" start="0,64" end="0" time="125">WindowOpen</animation>
+			<animation effect="slide" end="0,64" start="0" time="125">WindowClose</animation>
+			<control type="image">
+				<left>0</left>
+				<posy>64r</posy>
+				<width>100%</width>
+				<height>64</height>  
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight7]">common/white.png</texture>
+			</control>
+			<control type="image">
+				<posx>16</posx>
+				<posy>48r</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="LineLabel">common/info.png</texture>
+			</control>
+			<control type="label">
+				<bottom>16</bottom>
+				<left>48</left>
+				<right>side</right>
+				<height>32</height>
+				<font>Font-RSS</font>
+				<textcolor>LineLabel</textcolor>
+				<scroll>true</scroll>
+				<label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+			</control>
+		</control>
+
 		<!-- הודעה דף בית -->
 		<control type="group">
-					<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
-            <visible>Window.IsActive(home) | Window.IsActive(weather) </visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343583])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343582])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343581])</visible>
+			<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>
+			<visible>Window.IsActive(home) | Window.IsActive(weather) </visible>
+			<visible>!Skin.String(HomeStyle, notile)</visible>
+			<visible>!Skin.String(HomeStyle, LGVIEW)</visible>
+			<visible>!Skin.String(HomeStyle, bigtile)</visible>
+			<visible>!Skin.String(HomeStyle, HomeMenuVerticaliconlist)</visible>
+			<visible>!Window.IsVisible(startup)</visible>
 
-            <bottom>266</bottom>
-            <!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
-            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
-            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
-            <animation effect="slide" end="0,160" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-            <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_TextOnly_Animate</include>
-            <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_Icons_Animate</include>
+			<bottom>266</bottom>
+			<!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
+			<animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+			<animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+			<animation effect="slide" end="0,160" condition="Skin.String(HomeStyle, TextOnly)">Conditional</animation>
+			<include condition="Skin.String(HomeStyle, TextOnly)">Home_Dialogs_TextOnly_Animate</include>
+			<include condition="!Skin.String(HomeStyle, TextOnly)">Home_Dialogs_Icons_Animate</include>
 
-			
-            <control type="image">
-                <left>16</left>
-                <bottom>16</bottom>
-                <width>32</width>
-                <height>32</height>
-                <texture colordiffuse="LineLabel">common/info.png</texture>
-				<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343581]) | !stringcompare(Skin.String(home.style),$LOCALIZE[31343582])</visible>
-            </control>
-            <control type="label">
-                <bottom>16</bottom>
-                <left>48</left>
-                <width>1040</width>
-                <height>32</height>
-                <font>Font-RSS</font>
-                <textcolor>LineLabel</textcolor>
-                <scroll>false</scroll>
-                <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
-				<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343581]) | !stringcompare(Skin.String(home.style),$LOCALIZE[31343582])</visible>
-            </control>
 
-        </control>
-		
-        <control type="group">
-					<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
-            <visible>Window.IsActive(home) | Window.IsActive(weather)</visible>
-			<visible>stringcompare(Skin.String(home.style),$LOCALIZE[31343583])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343582])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343581])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31182])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31180])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31181])</visible>
-			
-            <bottom>185</bottom>
-            <!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
-            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
-            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
-            <animation effect="slide" end="0,160" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-            <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_TextOnly_Animate3</include>
-            <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_Icons_Animate3</include>
-         
-            <control type="image">
-                <left>16</left>
-                <bottom>16</bottom>
-                <width>32</width>
-                <height>32</height>
-                <texture colordiffuse="LineLabel">common/info.png</texture>
-				<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343581])</visible>
-            </control>
-            <control type="label">
-                <bottom>16</bottom>
-                <left>48</left>
-                <width>1040</width>
-                <height>32</height>
-                <font>Font-RSS</font>
-                <textcolor>LineLabel</textcolor>
-                <scroll>false</scroll>
-                <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
-				<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343581]) | !stringcompare(Skin.String(home.style),$LOCALIZE[31343582])</visible>
-            </control>
+			<control type="image">
+				<left>16</left>
+				<bottom>16</bottom>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="LineLabel">common/info.png</texture>
+				<visible>!Skin.String(HomeStyle, bigtile) | !Skin.String(HomeStyle, LGVIEW)</visible>
+			</control>
+			<control type="label">
+				<bottom>16</bottom>
+				<left>48</left>
+				<width>1040</width>
+				<height>32</height>
+				<font>Font-RSS</font>
+				<textcolor>LineLabel</textcolor>
+				<scroll>false</scroll>
+				<label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+				<visible>!Skin.String(HomeStyle, bigtile) | !Skin.String(HomeStyle, LGVIEW)</visible>
+			</control>
 
-        </control>
-		
-		        <control type="group">
-							<visible>!Skin.HasSetting(Home.MenuVertical)</visible>
-				            <visible>Window.IsActive(home) | Window.IsActive(weather)</visible>
+		</control>
 
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31343583])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31182])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31180])</visible>
-			<visible>!stringcompare(Skin.String(home.style),$LOCALIZE[31181])</visible>
+		<control type="group">
+			<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>
+			<visible>Window.IsActive(home) | Window.IsActive(weather)</visible>
+			<visible>Skin.String(HomeStyle, notile)</visible>
+			<visible>!Skin.String(HomeStyle, LGVIEW)</visible>
+			<visible>!Skin.String(HomeStyle, bigtile)</visible>
+			<visible>!Skin.String(HomeStyle, TextOnly)</visible>
+			<visible>!Skin.String(HomeStyle, beveled)</visible>
+			<visible>!Skin.String(HomeStyle, TileinText)</visible>
+			<visible>!Skin.String(HomeStyle, HomeMenuVerticaliconlist)</visible>
+			<visible>!Window.IsVisible(startup)</visible>
 
-            <bottom>270</bottom>
-            <!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
-            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
-            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
-            <animation effect="slide" end="0,160" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-            <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_TextOnly_Animate2</include>
-            <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_Icons_Animate2</include>
-         
-            <control type="image">
-                <left>16</left>
-                <bottom>75</bottom>
-                <width>32</width>
-                <height>32</height>
-                <texture colordiffuse="LineLabel">common/info.png</texture>
+			<bottom>185</bottom>
+			<!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
+			<animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+			<animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+			<animation effect="slide" end="0,160" condition="Skin.String(HomeStyle, TextOnly)">Conditional</animation>
+			<include condition="Skin.String(HomeStyle, TextOnly)">Home_Dialogs_TextOnly_Animate3</include>
+			<include condition="!Skin.String(HomeStyle, TextOnly)">Home_Dialogs_Icons_Animate3</include>
 
-            </control>
-            <control type="label">
-                <bottom>75</bottom>
-                <left>48</left>
-                <width>1040</width>
-                <height>32</height>
-                <font>Font-RSS</font>
-                <textcolor>LineLabel</textcolor>
-                <scroll>false</scroll>
-                <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+			<control type="image">
+				<left>16</left>
+				<bottom>16</bottom>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="LineLabel">common/info.png</texture>
+				<visible>!Skin.String(HomeStyle, bigtile)</visible>
+			</control>
+			<control type="label">
+				<bottom>16</bottom>
+				<left>48</left>
+				<width>1040</width>
+				<height>32</height>
+				<font>Font-RSS</font>
+				<textcolor>LineLabel</textcolor>
+				<scroll>false</scroll>
+				<label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+				<visible>!Skin.String(HomeStyle, bigtile) | !Skin.String(HomeStyle, LGVIEW)</visible>
+			</control>
 
-            </control>
+		</control>
 
-        </control>
-						        <control type="group">
-				            <visible>Window.IsActive(home) + Skin.HasSetting(Home.MenuVertical) | Window.IsActive(weather)</visible>
+		<control type="group">
+			<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>
+			<visible>Window.IsActive(home) | Window.IsActive(weather)</visible>
+			<visible>!Window.IsVisible(startup)</visible>
 
-            <bottom>290</bottom>
-            <!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
-            <animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
-            <animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
-            <animation effect="slide" end="0,160" condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Conditional</animation>
-            <include condition="stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_TextOnly_Animate2</include>
-            <include condition="!stringcompare(Skin.String(home.style),$LOCALIZE[31182])">Home_Dialogs_Icons_Animate2</include>
-         
-            <control type="image">
-                <left>16</left>
-                <bottom>-240</bottom>
-                <width>32</width>
-                <height>32</height>
-                <texture colordiffuse="LineLabel">common/info.png</texture>
+			<visible>!Skin.String(HomeStyle, notile)</visible>
+			<visible>!Skin.String(HomeStyle, TextOnly)</visible>
+			<visible>!Skin.String(HomeStyle, beveled)</visible>
+			<visible>!Skin.String(HomeStyle, TileinText)</visible>
+			<visible>!Skin.String(HomeStyle, emptybeveled)</visible>
+			<visible>!Skin.String(HomeStyle, rounded)</visible>
+			<visible>!Skin.String(HomeStyle, emptyrounded)</visible>
+			<visible>!Skin.String(HomeStyle, squared)</visible>
+			<visible>!Skin.String(HomeStyle, emptysquared)</visible>
+			<visible>!Skin.String(HomeStyle, circle)</visible>
+			<visible>!Skin.String(HomeStyle, emptycircle)</visible>
+			<visible>!Skin.String(HomeStyle, HomeMenuVerticaliconlist)</visible>
 
-            </control>
-            <control type="label">
-                <bottom>-240</bottom>
-                <left>48</left>
-                <width>1040</width>
-                <height>32</height>
-                <font>Font-RSS</font>
-                <textcolor>LineLabel</textcolor>
-                <scroll>false</scroll>
-                <label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
-            </control>
-			            </control>
+			<bottom>270</bottom>
+			<!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
+			<animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+			<animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+			<animation effect="slide" end="0,160" condition="Skin.String(HomeStyle, TextOnly)">Conditional</animation>
+			<include condition="Skin.String(HomeStyle, TextOnly)">Home_Dialogs_TextOnly_Animate2</include>
+			<include condition="!Skin.String(HomeStyle, TextOnly)">Home_Dialogs_Icons_Animate2</include>
+			<animation effect="slide" end="0,20" condition="Skin.String(HomeStyle, bigtile)">Conditional</animation>
 
-        <control type="label" id="401"><visible>false</visible></control>
-        <control type="label" id="402"><visible>false</visible></control>
-    </controls>
+			<control type="image">
+				<left>0</left>
+				<posy>0</posy>
+				<width>40%</width>
+				<height>64</height>  
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="$VAR[Highlight7]">common/OSDtime.png</texture>
+							<visible>!Skin.String(HomeStyle, bigtile)</visible>
+										<visible>!Skin.String(HomeStyle, LGVIEW)</visible>
+
+			</control>
+
+			<control type="image">
+				<left>16</left>
+				<bottom>75</bottom>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="LineLabel">common/info.png</texture>
+
+			</control>
+			<control type="label">
+				<bottom>75</bottom>
+				<left>48</left>
+				<width>1040</width>
+				<height>32</height>
+				<font>Font-RSS</font>
+				<textcolor>LineLabel</textcolor>
+				<scroll>false</scroll>
+				<label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+
+			</control>
+
+
+		</control>
+		<!-- הודעת שגיאה תפריט מאונך -->
+				<control type="group">
+			<visible>!Window.IsActive(home) | Window.IsActive(weather)</visible>
+			<visible>!Window.IsVisible(startup)</visible>
+
+			<!--
+			<visible>!Skin.String(HomeStyle, notile)</visible>
+			<visible>!Skin.String(HomeStyle, TextOnly)</visible>
+			<visible>!Skin.String(HomeStyle, beveled)</visible>
+			<visible>!Skin.String(HomeStyle, TileinText)</visible>
+			<visible>!Skin.String(HomeStyle, emptybeveled)</visible>
+			<visible>!Skin.String(HomeStyle, rounded)</visible>
+			<visible>!Skin.String(HomeStyle, emptyrounded)</visible>
+			<visible>!Skin.String(HomeStyle, squared)</visible>
+			<visible>!Skin.String(HomeStyle, emptysquared)</visible>
+			<visible>!Skin.String(HomeStyle, circle)</visible>
+			<visible>!Skin.String(HomeStyle, emptycircle)</visible>
+			<visible>!Skin.String(HomeStyle, HomeMenuVerticaliconlist)</visible>
+			<visible>Skin.String(HomeStyle, HomeMenuVertical)</visible>
+-->
+
+			<bottom>0</bottom>
+			<animation effect="slide" start="0,64" end="0" time="125">WindowOpen</animation>
+			<animation effect="slide" end="0,64" start="0" time="125">WindowClose</animation>
+			<control type="image">
+				<left>0</left>
+				<posy>64r</posy>
+				<width>100%</width>
+				<height>64</height>  
+				<aspectratio>scale</aspectratio>
+				<texture colordiffuse="DialogBG">common/white.png</texture>
+			</control>
+			<control type="image">
+				<posx>16</posx>
+				<posy>48r</posy>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="LineLabel">common/info.png</texture>
+			</control>
+			<control type="label">
+				<bottom>16</bottom>
+				<left>48</left>
+				<right>side</right>
+				<height>32</height>
+				<font>Font-RSS</font>
+				<textcolor>LineLabel</textcolor>
+				<scroll>true</scroll>
+				<label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+			</control>
+
+
+		</control>
+
+		<control type="group">
+			<visible>Window.IsActive(home) + Skin.String(HomeStyle, HomeMenuVerticaliconlist) | Window.IsActive(weather)</visible>
+			<visible>!Window.IsVisible(startup)</visible>
+
+			<bottom>270</bottom>
+			<!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
+			<animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+			<animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+			<animation effect="slide" end="0,160" condition="Skin.String(HomeStyle, TextOnly)">Conditional</animation>
+			<include condition="Skin.String(HomeStyle, TextOnly)">Home_Dialogs_TextOnly_Animate2</include>
+			<include condition="!Skin.String(HomeStyle, TextOnly)">Home_Dialogs_Icons_Animate2</include>
+			<animation effect="slide" end="0,0" condition="Skin.String(HomeStyle, HomeMenuVerticaliconlist)">Conditional</animation>
+
+			<control type="image">
+				<left>0</left>
+				<posy>1020</posy>
+				<width>1100</width>
+				<height>64</height>  
+				<aspectratio>scale</aspectratio>
+					<texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="$VAR[Highlight8]">common/header.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+								<animation effect="slide" end="-360,0" condition="Skin.String(HomeStyle, HomeMenuVerticaliconlist)">Conditional</animation>
+
+					</control>
+
+			<control type="image">
+				<left>16</left>
+				<bottom>-250</bottom>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="LineLabel">common/info.png</texture>
+
+			</control>
+
+			<control type="label">
+				<bottom>-250</bottom>
+				<width>650</width>
+				<left>48</left>
+				<height>32</height>
+				<font>Font-RSS</font>
+				<textcolor>LineLabel</textcolor>
+				<scroll>false</scroll>
+				<label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+			</control>
+
+		</control>		
+
+		<control type="group">
+					<visible>!Window.IsVisible(startup)</visible>
+
+			<visible>Window.IsActive(home) + Skin.String(HomeStyle, HomeMenuVertical) | Window.IsActive(weather)</visible>
+			<bottom>270</bottom>
+			<!-- <animation effect="slide" tween="quadratic" easing="in" time="200" end="0,266" start="0">Hidden</animation> -->
+			<animation effect="slide" start="-1200" end="0" time="250">WindowOpen</animation>
+			<animation effect="slide" end="-1200" start="0" time="250">WindowClose</animation>
+			<animation effect="slide" end="0,160" condition="Skin.String(HomeStyle, TextOnly)">Conditional</animation>
+			<include condition="Skin.String(HomeStyle, TextOnly)">Home_Dialogs_TextOnly_Animate2</include>
+			<include condition="!Skin.String(HomeStyle, TextOnly)">Home_Dialogs_Icons_Animate2</include>
+			<animation effect="slide" end="0,0" condition="Skin.String(HomeStyle, HomeMenuVerticaliconlist)">Conditional</animation>
+
+			<control type="image">
+				<left>0</left>
+				<posy>1020</posy>
+				<width>1100</width>
+				<height>64</height>  
+				<aspectratio>scale</aspectratio>
+					<texture align="left" flipy="true" flipx="false" border="32,0,32,64" colordiffuse="$VAR[Highlight8]">common/header.png</texture>
+					<animation effect="fade" start="100" end="60" time="200" condition="Skin.HasSetting(home.transparent)">Conditional</animation>
+								<animation effect="slide" end="-360,0" condition="Skin.String(HomeStyle, HomeMenuVertical)">Conditional</animation>
+
+					</control>
+
+			<control type="image">
+				<left>16</left>
+				<bottom>-250</bottom>
+				<width>32</width>
+				<height>32</height>
+				<texture colordiffuse="LineLabel">common/info.png</texture>
+
+			</control>
+
+			<control type="label">
+				<bottom>-250</bottom>
+				<width>650</width>
+				<left>48</left>
+				<height>32</height>
+				<font>Font-RSS</font>
+				<textcolor>LineLabel</textcolor>
+				<scroll>false</scroll>
+				<label>[COLOR=$VAR[HighlightColor2]]$INFO[Control.GetLabel(401),   ][/COLOR]$INFO[Control.GetLabel(402),   ,]</label>
+			</control>
+		</control>
+
+		<control type="label" id="401"><visible>false</visible></control>
+		<control type="label" id="402"><visible>false</visible></control>
+	</controls>
 
 </window>
