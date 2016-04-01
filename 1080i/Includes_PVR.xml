@@ -77,7 +77,7 @@
                                     <top>20</top>
                                     <height>30</height>
                                     <selectedcolor>ListLabel</selectedcolor>
-                                    <label>$INFO[ListItem.ChannelName,,.] $INFO[ListItem.ChannelNumber]</label>
+                                    <label>$INFO[ListItem.ChannelNumber,,.] $INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
                                       <right>200</right>
@@ -149,7 +149,7 @@
                                     <height>30</height>
                                     <textcolor>Selected</textcolor>
                                     <selectedcolor>Selected</selectedcolor>
-                                    <label>$INFO[ListItem.ChannelName,,.] $INFO[ListItem.ChannelNumber]</label>
+                                    <label>$INFO[ListItem.ChannelNumber,,.] $INFO[ListItem.ChannelName]</label>
                                 </control>
                                 <control type="label">
                                     <right>200</right>
