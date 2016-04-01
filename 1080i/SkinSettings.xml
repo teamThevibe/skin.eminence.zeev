@@ -1707,30 +1707,7 @@
 				<onleft>back</onleft>
 				<onup>5</onup>
 				<ondown>5</ondown>
-				
-											<control type="label" id="801">
-					<!-- string -->
-					<description>ערכות נושא - הגדרות, עיצוב ותפריטים בהגדרה אוטומטית</description>
-					<textcolor>$VAR[HighlightColor2]</textcolor>
-					<label>   $LOCALIZE[43793]</label>
-					<align>right</align>
-					<font>font-listinfo</font>
-					<visible>ControlGroup(3).HasFocus(39)</visible>
-				</control>
-				
-				
-								<control type="button" id="802">
-					<label>$LOCALIZE[43794]</label>
-					<align>right</align>
-					<font>Font-ListInfo</font>
-					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[43793],message=$LOCALIZE[43795],yesaction=RunScript(special://skin/extras/scripts/sendlog.py))</onclick>
-					<visible>ControlGroup(3).HasFocus(39)</visible>
-					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
-				</control>
-				
-				
-				
-								<control type="label" id="803">
+				<control type="label" id="803">
 					<!-- string -->
 					<description>ערכות נושא - הגדרות, עיצוב ותפריטים בהגדרה אוטומטית</description>
 					<textcolor>$VAR[HighlightColor2]</textcolor>
@@ -1884,6 +1861,26 @@
                     <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>   
                     <onclick>ReloadSkin()</onclick>                         
 			   </control>-->
+			   											<control type="label" id="831">
+					<!-- string -->
+					<description>ערכות נושא - הגדרות, עיצוב ותפריטים בהגדרה אוטומטית</description>
+					<textcolor>$VAR[HighlightColor2]</textcolor>
+					<label>   $LOCALIZE[43793]</label>
+					<align>right</align>
+					<font>font-listinfo</font>
+					<visible>ControlGroup(3).HasFocus(39)</visible>
+				</control>
+				
+				
+								<control type="button" id="832">
+					<label>$LOCALIZE[43794]</label>
+					<align>right</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(script.skin.helper.service,action=dialogyesno,header=$LOCALIZE[43793],message=$LOCALIZE[43795],yesaction=RunScript(special://skin/extras/scripts/sendlog.py))</onclick>
+					<visible>ControlGroup(3).HasFocus(39)</visible>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+				</control>
+			   
 			</control>	
 
 			<control type="grouplist" id="5">

@@ -62,7 +62,7 @@
                 <ondown>5</ondown>
                 <texturefocus>noop</texturefocus>
                 <focusedcolor>$VAR[Highlight6]</focusedcolor>
-			<include>Animation.SlideOpen.Right</include>
+			<include>Animation.SlideOpen.Left</include>
             </control>
             
             <control type="button" id="20">
@@ -125,7 +125,6 @@
 					<radiowidth>40</radiowidth>
 					<radioheight>40</radioheight>
 					<radioposx>40</radioposx>  
-            <align>right</align>
             <font>Font-ListInfo</font>
 			            <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
 

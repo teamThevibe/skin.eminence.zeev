@@ -110,8 +110,6 @@
             <control type="sliderex" id="8">
                 <description>Default Slider</description>
                 <font>Font-ListInfo</font>
-				                <align>right</align>
-
                 <texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
             </control>
             
