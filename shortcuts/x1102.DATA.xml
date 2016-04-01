@@ -74,12 +74,12 @@
         <action>ActivateWindow(Videos,special://skin/extras/playlists/RecentEpisodes.xsp,return)</action>
         <icon>special://skin/extras/icons/recent.png</icon>
     </shortcut>
-    <shortcut>
+  <!--  <shortcut>
         <label2>Episode Hub Shortcut</label2>
         <label>31102</label>
         <action>PlayMedia(special://skin/extras/playlists/RandomEpisodes.xsp)</action>
         <icon>special://skin/extras/icons/signpost.png</icon>
-    </shortcut>
+    </shortcut>-->
     <shortcut>
         <label2>Episode Hub Shortcut</label2>
         <label>137</label>

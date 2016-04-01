@@ -61,20 +61,18 @@
         <action>ActivateWindow(Videos,special://skin/extras/playlists/RecentMovies.xsp,return)</action>
         <icon>special://skin/extras/icons/recent.png</icon>
     </shortcut>
-    
-    <shortcut>
+   <!-- <shortcut>
         <label>31102</label>
         <label2>Movie Hub Shortcut</label2>
         <action>PlayMedia(special://skin/extras/playlists/RandomMovies.xsp)</action>
         <icon>special://skin/extras/icons/signpost.png</icon>
-    </shortcut>
+    </shortcut>-->
     <shortcut>
         <label>137</label>
         <label2>Movie Hub Shortcut</label2>
         <action>RunScript(script.globalsearch,tvshows=true&amp;episodes=true&amp;movies=true)</action>
         <icon>special://skin/extras/icons/search.png</icon>
     </shortcut>
-    
     <shortcut>
         <label>135</label>
         <label2>Movie Hub Shortcut</label2>
