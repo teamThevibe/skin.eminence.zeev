@@ -689,12 +689,17 @@
 	<!-- BACKGROUND -->
 	<include name="Furniture_Background">
 		<control type="videowindow">
-			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(disable.bgvideo) + !Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>
+		<!--	<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(disable.bgvideo) + !Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>-->
+					<visible>!Window.IsVisible(home)</visible>
+					             <visible>!Player.HasVideo | Player.HasVideo + !Skin.HasSetting(disable.bgvideo)</visible>
+
 			<width>100%</width>
 			<height>100%</height>
 		</control>
 		<control type="videowindow">
-			<visible>!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(background.showvideo) + Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>
+		<!--	<visible>!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(background.showvideo) + Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>-->
+				<visible>Window.IsVisible(home)</visible>
+             <visible>!Player.HasVideo | Player.HasVideo + Skin.HasSetting(background.showvideo)</visible>
 			<width>100%</width>
 			<height>100%</height>
 		</control>
@@ -709,7 +714,9 @@
 			<aspectratio>scale</aspectratio>
 			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
 			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-			<visible>!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(disable.bgvideo) + !Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>
+			<!--<visible>!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(disable.bgvideo) + !Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>-->
+			<visible>!Window.IsVisible(home)</visible>
+			<visible>!Player.HasVideo | Player.HasVideo + Skin.HasSetting(disable.bgvideo)</visible>
 			<include>Animation_FadeIn</include>
 			<include>Animation_FadeOut_Delay</include>
 		</control>
@@ -723,7 +730,9 @@
 			<aspectratio>scale</aspectratio>
 			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
 			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-			<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo) + Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>
+		<!--	<visible>!Player.HasVideo | [Player.HasVideo + !Skin.HasSetting(background.showvideo) + Window.IsVisible(home)] | Window.IsVisible(weather) | Container(9000).ListItem.Property(Background)</visible>-->
+			<visible>Window.IsVisible(home)</visible>
+            <visible>!Player.HasVideo | Player.HasVideo + !Skin.HasSetting(background.showvideo)</visible>
 			<include>Animation_FadeIn</include>
 			<include>Animation_FadeOut_Delay</include>
 		</control>
@@ -734,13 +743,11 @@
 			<randomize>true</randomize>
 			<timeperimage>5000</timeperimage>
 			<timeperimage>3000</timeperimage>
-
 			<imagepath background="true">$INFO[Container(9002).ListItem.Property(Background)]</imagepath>
 			<aspectratio>scale</aspectratio>
 			<fadetime>600</fadetime>
 			<animation effect="zoom" start="110" end="120" center="auto" time="10000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
 			<animation effect="slide" start="-20,-20" end="20,20" time="6000" tween="sine" easing="inout" pulse="true" condition="Skin.HasSetting(background.animate)">Conditional</animation>
-			<visible>!Player.HasVideo | [Player.HasVideo + Skin.HasSetting(background.showvideo)] | Window.IsVisible(weather)</visible>
 			<visible>Control.HasFocus(9002) + Container(9002).ListItem.Property(Background)</visible>
 			<include>Animation_FadeIn</include>
 			<include>Animation_FadeOut_Delay</include>
