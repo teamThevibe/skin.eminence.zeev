@@ -2457,3 +2457,15 @@ msgstr "Log ID"
 msgctxt "#43795"
 msgid "Log file Vibe server uploader With this option you will be able to upload your Log file automatically to Vibe Server and get an ID number. this option may be used in case you are facing with some errors and like to share it with others - so they will be able to help you - to find your Log file after it uploaded visit The-Vibe.co.il"
 msgstr "Загрузить лог файл на сервера Vibe. Эта функция позволяет отправить лог файл Коди (журнал ошибок) на сервера VIBE и получить уникальный номер (ID). Вы можете использовать эту опцию если Вы столкнулись с проблемой и хотите поделиться с другими пользователями Вашим журналом ошибок, другие пользователи могут помочь Вам просматрев Ваш лог событий через сервера The-Vibe.co.il."
+
+msgctxt "#43796"
+msgid "Warning Deleting 'Settings' will effect your future possibilities to get into the system and skin setting. It is not recommended to do so. To cancel the deletion choose No. Choose Yes if you anyway want to do so"
+msgstr "ПРЕДУПРЕЖДЕНИЕ - Удаление плитки "Настройки" удалит Вам опцию попасть к настройкам системы и оболочки[CR]И поэтому Вы не должны удалять эту плитку - Нажмите Нет чтобы отменить удаление или Да чтоб удалить"
+
+msgctxt "#43797"
+msgid "Warning!"
+msgstr "ПРЕДУПРЕЖДЕНИЕ!"
+
+msgctxt "#43798"
+msgid "Warning Deleting 'Power' will effect your future possibilities to get into the Power menu. It is not recommended to do so. To cancel the deletion choose No. Choose Yes if you anyway want to do so"
+msgstr "ПРЕДУПРЕЖДЕНИЕ - Удаление плитки "Вкл/выкл." удалит Вам опцию попасть в настройки выключения системы[CR]И поэтому Вы не должны удалять эту плитку - Нажмите Нет чтобы отменить удаление или Да чтоб удалить"
