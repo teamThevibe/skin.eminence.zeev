@@ -2457,3 +2457,15 @@ msgstr "Log ID"
 msgctxt "#43795"
 msgid "Log file Vibe server uploader With this option you will be able to upload your Log file automatically to Vibe Server and get an ID number. this option may be used in case you are facing with some errors and like to share it with others - so they will be able to help you - to find your Log file after it uploaded visit The-Vibe.co.il"
 msgstr "העלאת קובץ LOG לשרת VIBE. בעזרת אפשרות זו תוכל לשלוח את קובץ ה LOG (בקרת שגיאות) של הקודי שלך לשרת VIBE ולקבל מספר ייחודי (ID). אפשרות זו תשמש אותך במידה ותיתקל בבעיה ותרצה לשתף משתמשים אחרים בפירוט האירועים שקרו במערכת על מנת שיוכלו לסייע לך - והם יוכלו לצפות בקובץ האירועים שלך בשרת The-Vibe.co.il."
+
+msgctxt "#43796"
+msgid "Warning Deleting 'Settings' will effect your future possibilities to get into the system and skin setting. It is not recommended to do so. To cancel the deletion choose No. Choose Yes if you anyway want to do so"
+msgstr "אזהרה - מחיקת אריח "הגדרות" תפגע ביכולת שלכם להגיע אל הגדרות המערכת והסקין[CR]ולכן אין להסירו מרשימת דף הבית - לחץ לא לביטול פעולת המחיקה או כן כדי להסירו בכל זאת"
+
+msgctxt "#43797"
+msgid "Warning!"
+msgstr "אזהרה!"
+
+msgctxt "#43798"
+msgid "Warning Deleting 'Power' will effect your future possibilities to get into the Power menu. It is not recommended to do so. To cancel the deletion choose No. Choose Yes if you anyway want to do so"
+msgstr "אזהרה - מחיקת אריח "הפעלה" תפגע ביכולת שלכם להגיע אל תפריט הכיבוי - הפעלה של הסקין[CR]ולכן אין להסירו מרשימת דף הבית - לחץ לא לביטול פעולת המחיקה או כן כדי להסירו בכל זאת"

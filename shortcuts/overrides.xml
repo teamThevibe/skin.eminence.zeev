@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <overrides>
 
+<warn heading="43797" message="43796">ActivateWindow(Settings)</warn>
+<warn heading="43797" message="43798">ActivateWindow(shutdownmenu)</warn>
+
 	<!-- Default Widgets -->
 	<widgetdefault labelID="weather">weather</widgetdefault>
 
@@ -66,6 +69,7 @@
 	<backgrounddefault labelID="weather">special://skin/extras/backgrounds/whether.jpg</backgrounddefault>
 	<backgrounddefault labelID="1036">special://skin/extras/backgrounds/favorite.jpg</backgrounddefault>
 	<backgrounddefault labelID="1037">special://skin/extras/backgrounds/video-addon.jpg</backgrounddefault>
+
 
 
     <!-- BACKGROUND SETTINGS -->
