@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <includes>
 
 	<include name="View_516_Thumbnails">		
 
 		<control type="group">
-		<include>busy</include>
 					<include>Animation_Left3</include>            
 			<include>Animation_Left2</include>            
 		<posy>100</posy>
@@ -186,7 +184,7 @@
                     <height>wallposterh</height>
                     <width>wallposterw</width>
                             <texture background="true">special://masterprofile/Thumbnails/animatedgifs/$INFO[Listitem.IMDBNumber]_poster_0_original.gif</texture>
-							<visible>!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster) + !Skin.HasSetting(showanimate.poster)</visible>
+							<visible>!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster)) + !Skin.HasSetting(showanimate.poster)</visible>
 							<aspectratio aligny="top">scale</aspectratio>
                 </control>
 				

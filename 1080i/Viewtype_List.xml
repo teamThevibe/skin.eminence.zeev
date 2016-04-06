@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
 
-	<visible>!Window.IsActive(MyMusicNav)</visible>
 	<include name="Object_Poster">
 		<param name="label" default="$LOCALIZE[31098]" />
 		<definition>
@@ -1077,7 +1076,6 @@
 
 				</control>
 				<control type="panel" id="$PARAM[id]">
-					<visible>!Window.IsActive(MyMusicNav)</visible>
 					<top>0</top>
 					<left>0</left>
 					<width>$PARAM[width]</width>

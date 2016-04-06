@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <includes>
     <constant name="infolistw">1448</constant>
     <constant name="infolistx">0</constant>
@@ -42,9 +41,7 @@
         <description>List View (id=57)</description>
         <control type="group">
             <visible>Control.IsVisible(57) + IntegerGreaterThan(Container.NumItems,0)</visible>
-            <include>Animation.ViewChange</include>     
-            <include>DefSideLabel</include> 
-              
+            <include>Animation.ViewChange</include>                   
             <control type="group">
                 <posx>listx</posx>
                 <posy>listy</posy>

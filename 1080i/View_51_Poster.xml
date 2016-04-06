@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <includes>
     <include name="51ListEpisodeContent">
 	            <visible>Control.IsVisible(51) + IntegerGreaterThan(Container.NumItems,0)</visible>
@@ -267,7 +266,6 @@
         <control type="group">
             <visible>Control.IsVisible(51) + IntegerGreaterThan(Container.NumItems,0)</visible>
             <include>Animation.ViewChange</include>
-            <include>DefSideLabel</include>
         </control>
         <control type="group">
             <visible>Control.IsVisible(51)</visible>

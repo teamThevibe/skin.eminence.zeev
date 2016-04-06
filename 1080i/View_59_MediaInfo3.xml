@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <includes>
   
   <include name="59ListContent">
@@ -117,7 +116,6 @@
             <visible>Control.IsVisible(59)</visible>
             <include>Animation.ViewChange</include>     
             <!-- כותרת עמוד -->          
-		<include>DefSideLabel</include>
               
 			  			<!-- Flags 
 			<include name="flags_movies"><param name="posy">35</param></include>
@@ -168,7 +166,7 @@
                             <aspectratio>scale</aspectratio>
                             <texture background="true">$VAR[PosterImage]</texture>
                             <fadetime>150</fadetime>
-							<visible>IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster)</visible>
+							<visible>IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster))</visible>
                         </control>
 						
 						<control type="image">
@@ -179,7 +177,7 @@
                             <aspectratio>scale</aspectratio>
 							                            <fadetime>150</fadetime>
                             <texture background="true">$INFO[Window(Home).Property(SkinHelper.AnimatedPoster)]</texture>
-							<visible>!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster) + !Skin.HasSetting(showanimate.poster)</visible>
+							<visible>IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster)) + !Skin.HasSetting(showanimate.poster)</visible>
                         </control>
                         
                         <control type="image">

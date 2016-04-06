@@ -77,7 +77,6 @@
 		<control type="group">
 			<visible>Control.IsVisible(534) + IntegerGreaterThan(Container.NumItems,1)</visible>
 			<camera x="760" y="810" />
-			<include>ViewAnimation</include>
 			<top>-30</top>
 						<left>-200</left>
 			<control type="group" id="7007">

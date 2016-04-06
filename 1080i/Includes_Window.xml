@@ -4223,7 +4223,6 @@
 		<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
 		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
 		<include>Furniture_RSS</include>
-			<include>ClearLogo</include>
 
 		<control type="group">
 			<include>Animation.SlideOpen.Right</include>

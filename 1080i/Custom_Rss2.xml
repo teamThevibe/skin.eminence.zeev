@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+
 <window type="dialog" id="1197">
 	<visible>system.getbool(lookandfeel.enablerssfeeds) +  !Window.IsVisible(slideshow) + !Window.IsVisible(SettingsScreenCalibration.xml) + !Window.IsVisible(screensaver) + !Window.IsVisible(startup) + !Window.IsVisible(fullscreenvideo) + !Window.IsVisible(visualisation) + !Window.IsVisible(SettingsCategory.xml)</visible>
 	<visible>!Skin.String(HomeStyle, HomeMenuVertical)</visible>

@@ -119,7 +119,6 @@
 
 		<control type="group">
 			<animation effect="fade" condition="!Control.HasFocus(60)" time="200" start="100" end="0">Conditional</animation>
-			<include>Furniture_Scrollbar_Horizontal</include>
 		</control>
 
 		<control type="image">
@@ -1018,7 +1017,7 @@
 
 	</variable>
 	<variable name="ShowcaseItem0Var">
-			  	<value condition="!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster) + !Skin.HasSetting(showanimate.poster)">$INFO[Window(Home).Property(SkinHelper.AnimatedPoster)]</value>
+			  	<value condition="!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster)) + !Skin.HasSetting(showanimate.poster)">$INFO[Window(Home).Property(SkinHelper.AnimatedPoster)]</value>
 		<value condition="!IsEmpty(ListItem.Art(poster))">$INFO[ListItem.Art(poster)]</value>
 		<value condition="Container.Content(genres)">$INFO[ListItem.Label,special://skin/extras/moviegenres/,.jpg]</value>
 		<value>$INFO[ListItem.Icon]</value>

@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <includes>
 
 	<include file="Defaults.xml" />
@@ -20,17 +19,14 @@
 	<include file="Includes_Dialog.xml" />
 	<include file="Includes_Window.xml" />
 	<include file="Includes_Colors.xml" />
-    <include file="Includes_Object.xml" />
+	<include file="Includes_Object.xml" />
 	<include file="Includes_LiveTV.xml" />
-		<include file="Includes_PVR.xml" />
-	<include file="script-skinshortcuts-includes.xml"/>
+	<include file="Includes_PVR.xml" />
+	<include file="script-skinshortcuts-includes.xml" />
 
-	<include file="	View_523_Poster.xml" />
 	<include file="View_516_Thumbnails.xml" />
 	<include file="View_60_Wall.xml" />
-<!--	<include file="View_50_List.xml" /> -->
 	<include file="View_51_Poster.xml" />
-<!--	<include file="View_52_Wall.xml" />-->
 	<include file="View_53_Wide.xml" />
 	<include file="View_54_Lovefilm.xml" />
 	<include file="View_55_Banner.xml" />
@@ -43,14 +39,14 @@
 	<include file="View_519_EM.xml" />
 	<include file="Viewtype_Icon.xml" />
 	<include file="Viewtype_List.xml" />
-		<include file="Viewtype_Wide2.xml" />
-		<include file="Viewtype_Wide3.xml" />
-		<include file="Viewtype_Wide4.xml" />
-		<include file="View_534_ShowCase.xml" />
-		<include file="View_535_ShowCase.xml" />
+	<include file="Viewtype_Wide2.xml" />
+	<include file="Viewtype_Wide3.xml" />
+	<include file="Viewtype_Wide4.xml" />
+	<include file="View_534_ShowCase.xml" />
+	<include file="View_535_ShowCase.xml" />
 
 
-		<!-- VARS -->
+	<!-- VARS -->
 	<variable name="HighlightColor">
 		<value condition="!IsEmpty(Window(home).Property(HighlightColor)) + !StringCompare(Skin.String(HighlightColor),None)">$INFO[Window(home).Property(HighlightColor)]</value>
 		<value condition="!IsEmpty(Skin.String(HighlightColor)) + !StringCompare(Skin.String(HighlightColor),None)">$INFO[Skin.String(HighlightColor)]</value>

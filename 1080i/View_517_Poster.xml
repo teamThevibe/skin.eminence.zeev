@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <includes>
     
 	
@@ -151,7 +150,7 @@
                     <fadetime>100</fadetime>
                     <aspectratio align="center" aligny="center" scalediffuse="false">scale</aspectratio>
 				                            <texture background="true">special://masterprofile/Thumbnails/animatedgifs/$INFO[Listitem.IMDBNumber]_poster_0_original.gif</texture>
-							<visible>!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster) + !Skin.HasSetting(showanimate.poster)</visible>
+							<visible>!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster)) + !Skin.HasSetting(showanimate.poster)</visible>
 							</control>
 				
 
@@ -212,7 +211,6 @@
             
             <control type="group">
                 <animation effect="fade" condition="!Control.HasFocus(60)" time="200" start="100" end="0">Conditional</animation>
-                <include>Furniture_Scrollbar_Horizontal</include>
             </control>
             
 						  <control type="image">

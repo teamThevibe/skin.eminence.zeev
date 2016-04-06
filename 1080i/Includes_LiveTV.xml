@@ -1,3 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <includes>
 	<include name="FullScreenInfoBarLiveTV">
         <animation effect="slide" time="800" start="0,200" easing="out" tween="back">WindowOpen</animation>
@@ -1179,7 +1180,6 @@
 			<posx>50</posx>
 			<posy>40</posy>
 			<visible>Control.IsVisible(11)</visible>
-			<include>ViewAnimation</include>
 			<control type="image">
 				<description>background image</description>
 				<posx>140</posx>

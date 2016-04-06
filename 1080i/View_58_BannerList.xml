@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
 <includes>
     <constant name="bannerlistplot">838</constant>
     <include name="View_58_BannerList">
@@ -8,8 +7,6 @@
         <control type="group">
             <visible>Control.IsVisible(58) + IntegerGreaterThan(Container.NumItems,0)</visible>
             <include>Animation.ViewChange</include>     
-            <include>DefSideLabel</include> 
-              
             <control type="group">
                 <posx>listx</posx>
                 <posy>listy</posy>

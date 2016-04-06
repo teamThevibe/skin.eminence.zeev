@@ -18,41 +18,38 @@ import zipfile
 import sqlite3
 import json
 import uuid
+from xml.dom.minidom import parse
+import xml.etree.ElementTree
 
-MetaSettingsUrl = 'http://www.the-vibe.co.il/Wizard/wtf/?category=addonsettings&Id=102';
+MetaSettingsUrl = 'http://www.the-vibe.co.il/Wizard/wtf/?category=addonsettings&Id=102'
 QuasarSettingsUrl = 'http://www.the-vibe.co.il/Wizard/wtf/?category=addonsettings&Id=33'
 SaltsSettingsUrl = 'http://www.the-vibe.co.il/Wizard/wtf/?category=addonsettings&Id=34'
-
-Package_Definition_Url = "http://www.the-vibe.co.il/Skin/GetSkinBackupPath";
+Package_Definition_Url = "http://www.the-vibe.co.il/Skin/GetSkinBackupPath"
 BASEURL = 'http://www.the-vibe.co.il'
 APIurl = 'http://www.the-vibe.co.il/api'
 UPLOAD_URL = 'http://www.the-vibe.co.il/Files/Log'
 CUSTOM_BACKUP_URL = 'http://www.the-vibe.co.il/files/download/'
-KODI_VERSION = xbmc.getInfoLabel( "System.BuildVersion" )
-
-URL= requests.get(Package_Definition_Url).text
+KODI_VERSION = xbmc.getInfoLabel("System.BuildVersion")
+URL = requests.get(Package_Definition_Url).text
 log_path = xbmc.translatePath('special://logpath')
-NAME='emzeev.zip'
-CUSTOM_NAME='personal.zip'
+NAME = 'emzeev.zip'
+CUSTOM_NAME = 'personal.zip'
 path = xbmc.translatePath(os.path.join('special://skin/extras','back-up'))
-dialog= xbmcgui.Dialog()
-ENABLE_PVR_COMMAND='delete from disabled where addonID="pvr.iptvsimple"'
+dialog = xbmcgui.Dialog()
+ENABLE_PVR_COMMAND = 'delete from disabled where addonID="pvr.iptvsimple"'
 metasettingsPath = xbmc.translatePath(os.path.join('special://home','userdata','addon_data','plugin.video.meta','players'))
 quasarsettingsPath = xbmc.translatePath(os.path.join('special://home','userdata','addon_data','plugin.video.quasar','settings.xml'))
 saltssettingsPath = xbmc.translatePath(os.path.join('special://home','userdata','addon_data','plugin.video.salts','settings.xml'))
-USERDATA     =  xbmc.translatePath(os.path.join('special://home/userdata',''))
+USERDATA = xbmc.translatePath(os.path.join('special://home/userdata',''))
 UUID_FILE_PATH = xbmc.translatePath(os.path.join('special://skin/extras','scripts','uniq.txt'))
+XML_PATH = xbmc.translatePath(os.path.join('special://skin','addon.xml')).decode('utf-8')
 
-def getUniqId():
-    try:
-        if os.path.exists(UUID_FILE_PATH):
-            return open(UUID_FILE_PATH,'r').read()
-        else:
-            open(UUID_FILE_PATH,'w').write(str(uuid.uuid4()))
-            return open(UUID_FILE_PATH,'r').read()
-    except:
-        pass
-
+def getSkinVersion():
+    #try:
+        e = xml.etree.ElementTree.parse(XML_PATH).getroot()
+        return  e.attrib['version']
+        
+   
 def find_str(s, char):
     index = 0
 
@@ -60,7 +57,7 @@ def find_str(s, char):
         c = char[0] 
         for ch in s:
             if ch == c:
-                if s[index:index+len(char)] == char:
+                if s[index:index + len(char)] == char:
                     return index
 
             index += 1
@@ -88,7 +85,7 @@ def allWithProgress(_in, _out, dp):
     zin = zipfile.ZipFile(_in,  'r')
 
     nFiles = float(len(zin.infolist()))
-    count  = 0
+    count = 0
 
     try:
         for item in zin.infolist():
@@ -102,14 +99,14 @@ def allWithProgress(_in, _out, dp):
 
     return True
 
-def downloadMetaSettings(url, dest, dp = None):
+def downloadMetaSettings(url, dest, dp=None):
     if not dp:
         dp = xbmcgui.DialogProgress()
         dp.create("התקנת הגדרות","מוריד קובץ הגדרות, אנא המתן!",' ', ' ')
     dp.update(0)
     urllib.urlretrieve(url,dest,lambda nb, bs, fs, url=url: _pbhook(nb,bs,fs,url,dp))
  
-def download(url, dest, dp = None):
+def download(url, dest, dp=None):
     if not dp:
         dp = xbmcgui.DialogProgress()
         dp.create("The Vibe Team","Downloading & Copying File",' ', ' ')
@@ -118,7 +115,7 @@ def download(url, dest, dp = None):
  
 def _pbhook(numblocks, blocksize, filesize, url, dp):
     try:
-        percent = min((numblocks*blocksize*100)/filesize, 100)
+        percent = min((numblocks * blocksize * 100) / filesize, 100)
         dp.update(percent)
     except:
         percent = 100
@@ -165,10 +162,10 @@ def dowork():
 
 def GetUserBackup():
     keyboard = xbmcgui.Dialog()
-    userId = keyboard.numeric(0, 'נא להכניס ID');
+    userId = keyboard.numeric(0, 'נא להכניס ID')
     xbmc.log("Starting...")
     xbmc.log("Starting Download")
-    wizard(CUSTOM_NAME,CUSTOM_BACKUP_URL + userId )
+    wizard(CUSTOM_NAME,CUSTOM_BACKUP_URL + userId)
     if validateZip(CUSTOM_NAME):
         xbmc.log("Extracting...")
         xbmc.executebuiltin("XBMC.RunScript(script.skin.helper.service,action=restore,silent=special://skin/extras/back-up/" + CUSTOM_NAME + ")")
@@ -186,13 +183,6 @@ def validateZip(zipName):
     except Exception, e:
         xbmc.log(str(e))
         return False
-
-def getAddonDbName():
-	if find_str(KODI_VERSION,"16.0")>-1:
-		return 'Addons20.db'
-	else:
-		return 'Addons19.db'
-ADDON_DB = xbmc.translatePath(os.path.join(USERDATA,'Database',getAddonDbName()))
 
 def GetMetaSettings(name,url):
         path = xbmc.translatePath(os.path.join('special://home','addons','packages'))
@@ -247,16 +237,6 @@ def installQuasarSettings():
 def installSaltsSettings():
     if not os.path.exists(saltssettingsPath):
             GetSaltsSettings('SaltsSettings',SaltsSettingsUrl)
-
-def getUniqId():
-    try:
-        if os.path.exists(UUID_FILE_PATH):
-            return open(UUID_FILE_PATH,'r').read()
-        else:
-            open(UUID_FILE_PATH,'w').write(uuid.uuid4())
-            return open(UUID_FILE_PATH,'r').read()
-    except:
-        pass
             
 def SendLog():
     try:
@@ -266,33 +246,80 @@ def SendLog():
         file_content = open(logfile,'r').read()
         post_dict = {
                 'data': file_content,
-                'project': 'The-Vibe Wizard',
+                'project': 'skin.eminence.zeev',
+                'version':xbmcaddon.Addon().getAddonInfo('version'),
                 'language': 'text',
                 'expire': 1209600,
             }
         post_data = json.dumps(post_dict)
         headers = {
-            'User-Agent': '%s-%s' % ('Skin.Eminence.Zeev', '1.0.0'),
+            'User-Agent': '%s-%s' % ('skin.eminence.zeev', xbmcaddon.Addon().getAddonInfo('version')),
             'Content-Type': 'application/json',
         }
         req = urllib2.Request(UPLOAD_URL, post_data, headers)
         response = urllib2.urlopen(req).read()
         dp.update(100)
-        if response!='error':
-            xbmcgui.Dialog().ok('השליחה הצליחה','הלוג נשלח לשרת בהצלחה','על מנת לצפות בלוג עליך להכנס לאתר בכתובת http://www.the-vibe.co.il/Log','ולהכניס את ה ID הבא: '+ response)
+        if response != 'error':
+            xbmcgui.Dialog().ok('השליחה הצליחה','הלוג נשלח לשרת בהצלחה','על מנת לצפות בלוג עליך להכנס לאתר בכתובת http://www.the-vibe.co.il/Log','ולהכניס את ה ID הבא: ' + response)
     except Exception as e:
         dp.update(100)
         xbmcgui.Dialog().ok('שגיאה בשליחת לוג','אירעה שגיאה בעת שליחת הלוג','אנא נסה שוב במועד מאוחר יותר')
         xbmc.log(str(e))
 
-def registerToAnalytics():
-    UniqId=getUniqId();
-    ANALYTICS_URL='http://www.the-vibe.co.il/Service/EminenceTracking/Id=' + UniqId
-    Analyze = requests.get(ANALYTICS_URL).text
+def trackOpen():
+    try:
+        ANALYTICS_URL = 'http://www.the-vibe.co.il/Service/EminenceTracking/?Id=' + open(UUID_FILE_PATH,'r').read()
+        Analyze = requests.get(ANALYTICS_URL).text
+    except:
+        pass
 
+def platform():
+    if xbmc.getCondVisibility('system.platform.android'):
+        return 'android'
+    elif xbmc.getCondVisibility('system.platform.linux'):
+        return 'linux'
+    elif xbmc.getCondVisibility('system.platform.windows'):
+        return 'windows'
+    elif xbmc.getCondVisibility('system.platform.osx'):
+        return 'osx'
+    elif xbmc.getCondVisibility('system.platform.atv2'):
+        return 'atv2'
+    elif xbmc.getCondVisibility('system.platform.ios'):
+        return 'ios'
+    elif xbmc.getCondVisibility('system.platform.linux.raspberrypi'):
+        return 'raspberrypi'
+    elif xbmc.getCondVisibility('system.platform.darwin'):
+        return 'darwin'
+
+def getKodiVersion():
+    try:
+        return xbmc.getInfoLabel("System.BuildVersion").split(' ')[0]
+    except:
+        return 0
+skinVersion = getSkinVersion()
+def wtf2():
+    if not os.path.exists(UUID_FILE_PATH):
+        try:
+            post_dict = {
+                'kodiVersion':getKodiVersion(),
+                'platform':platform(),
+                'skinVersion':skinVersion,
+                'expire': 1209600,
+            }
+            post_data = json.dumps(post_dict)
+            headers = {
+                'User-Agent': '%s-%s' % ('skin.eminence.zeev', skinVersion),
+                'Content-Type': 'application/json',
+            }
+            req = urllib2.Request('http://www.the-vibe.co.il/service/EMregistration', post_data, headers)
+            response = urllib2.urlopen(req).read()
+            open(UUID_FILE_PATH,'w').write(response)
+        except Exception as e:
+            pass
 
 def startup():
-    registerToAnalytics()
+    wtf2()
+    trackOpen()
     installMetaSettings()
     installSaltsSettings()
-    installQuasarSettings(); 
+    installQuasarSettings() 

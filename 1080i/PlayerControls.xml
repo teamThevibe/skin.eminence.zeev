@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+
 <window type="dialog" id="400">
     <defaultcontrol always="true">403</defaultcontrol>
     <allowoverlay>yes</allowoverlay>

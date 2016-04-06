@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+
 <window type="buttonMenu" id="111">
     <defaultcontrol always="true">3700</defaultcontrol>
     <allowoverlay>yes</allowoverlay>

@@ -295,7 +295,7 @@
 					<aspectratio>scale</aspectratio>
 					<fadetime>200</fadetime>
 				                            <texture background="true">special://masterprofile/Thumbnails/animatedgifs/$INFO[Listitem.IMDBNumber]_poster_0_original.gif</texture>
-							<visible>!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster) + !Skin.HasSetting(showanimate.poster)</visible>
+							<visible>!IsEmpty(Window(Home).Property(SkinHelper.AnimatedPoster)) + !Skin.HasSetting(showanimate.poster)</visible>
 				</control>
 			</control>
 		</definition>
@@ -334,7 +334,6 @@
 						<fadetime>200</fadetime>
 						<texture background="true">$VAR[Image_Thumb]</texture>
 					</control>
-					<include>Clearlogo</include>
 					<include>Object_ExtraInfo_Content</include>
 				</control>
 			</control>

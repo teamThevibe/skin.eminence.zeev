@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+
 <window type="dialog" id="3062">
     <defaultcontrol always="true">9200</defaultcontrol>
     <onunload>ClearProperty(item,3062)</onunload>
@@ -12,7 +12,6 @@
                 <posy>40</posy>
                 <visible>!Window.IsVisible(DialogSelect.xml)</visible>
                 <visible>!Window.IsVisible(FileBrowser.xml)</visible>
-                <include>DefSideLabel</include>
                 <control type="panel" id="9200">
                     <posx>18</posx>
                     <posy>210</posy>

@@ -1693,6 +1693,7 @@
 		<texturefocus colordiffuse="sethub" border="16">common/white.png</texturefocus>
 	</include>   
 
+	
 	<include name="DefRightSideArrow">
 		<control type="button" description="Mouse Button">
 			<posy>600</posy>
@@ -2316,7 +2317,6 @@
 		<!--	<include>View_50_List</include>
 			<include>View_523_Poster</include>-->
 			<include>View_51_Poster</include>
-			<include>View_52_Wall</include>
 			<include>View_53_Wide</include>
 			<include>View_54_Lovefilm</include>
 			<include>View_55_Banner</include>            

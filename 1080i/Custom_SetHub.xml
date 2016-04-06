@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Foundation -->
+
 <window type="dialog" id="3067">
     <defaultcontrol always="true">9200</defaultcontrol>
     <onunload>ClearProperty(item,3067)</onunload>

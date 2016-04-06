@@ -56,7 +56,7 @@
         <value condition="!IsEmpty(ListItem.Art(clearlogo))">$INFO[ListItem.Art(clearlogo)]</value>
         <value condition="!IsEmpty(ListItem.Art(tvshow.clearlogo))">$INFO[ListItem.Art(tvshow.clearlogo)]</value>
         <value condition="!IsEmpty(Container(9501).ListItem.Art(clearlogo))">$INFO[Container(9500).ListItem.Art(clearlogo)]</value>
-        <value condition="!IsEmpty(Container(9501).ListItem.Art(tvshow.clearlogo)))">$INFO[Container(9500).ListItem.Art(tvshow.clearlogo)]</value>
+        <value condition="!IsEmpty(Container(9501).ListItem.Art(tvshow.clearlogo))">$INFO[Container(9500).ListItem.Art(tvshow.clearlogo)]</value>
         <value condition="!IsEmpty(Container(9001).ListItem.Art(clearlogo))">$INFO[Container(9001).ListItem.Art(clearlogo)]</value>
         <value condition="!IsEmpty(Container(9001).ListItem.Art(tvshow.clearlogo))">$INFO[Container(9001).ListItem.Art(tvshow.clearlogo)]</value>
         <value condition="substring(Container.FolderPath,video.youtube)">logos/Youtube_logo.png</value>
