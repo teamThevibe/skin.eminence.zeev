@@ -13,7 +13,7 @@
 	<onload condition="System.HasAddon(script.skin.helper.service) + IsEmpty(Skin.String(SkinHelper.AutoCloseVideoOSD))">Skin.SetString(SkinHelper.AutoCloseVideoOSD,5)</onload>
 	<onload condition="System.HasAddon(script.skin.helper.service) + IsEmpty(Skin.String(SkinHelper.RandomFanartDelay))">Skin.SetString(SkinHelper.RandomFanartDelay,10)</onload>
 	<!-- Modification Onload -->    
-	<onload condition="!IsEmpty(Skin.String(home.widgetposters)">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onload>
+	<onload condition="IsEmpty(Skin.String(home.widgetposters))">Skin.SetString(home.widgetposters,$LOCALIZE[31154])</onload>
 	<onload condition="IsEmpty(Skin.String(HomeStyle))">Skin.SetString(HomeStyle, beveled)</onload>
 	<onload condition="IsEmpty(Skin.String(categories))">Skin.SetString(categories, Em2)</onload>
 	<onload condition="!Skin.HasSetting(SkinHelper.EnablePVRThumbs)">Skin.SetBool(SkinHelper.EnablePVRThumbs)</onload>

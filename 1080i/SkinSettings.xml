@@ -1841,7 +1841,7 @@
 					<align>right</align>
 					<font>Font-ListInfo</font>
 					<onclick>Skin.ResetSettings</onclick>
-					<onclick>Skin.SetString(home.widgetposters,$LOCALIZE[31155])</onclick>
+					<onclick>ClearProperty(home.widgetposters)</onclick>
 					<onclick>RunScript(script.skinshortcuts,type=resetall)</onclick>
 					<visible>ControlGroup(3).HasFocus(39)</visible>
 					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus> 
