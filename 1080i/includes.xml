@@ -1,6 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <includes>
-
 	<include file="Defaults.xml" />
 	<include file="Dialogsubmenu.xml" />
 	<include file="Includes_Defs.xml" />
@@ -23,7 +22,6 @@
 	<include file="Includes_LiveTV.xml" />
 	<include file="Includes_PVR.xml" />
 	<include file="script-skinshortcuts-includes.xml" />
-
 	<include file="View_516_Thumbnails.xml" />
 	<include file="View_60_Wall.xml" />
 	<include file="View_51_Poster.xml" />
@@ -44,8 +42,6 @@
 	<include file="Viewtype_Wide4.xml" />
 	<include file="View_534_ShowCase.xml" />
 	<include file="View_535_ShowCase.xml" />
-
-
 	<!-- VARS -->
 	<variable name="HighlightColor">
 		<value condition="!IsEmpty(Window(home).Property(HighlightColor)) + !StringCompare(Skin.String(HighlightColor),None)">$INFO[Window(home).Property(HighlightColor)]</value>
