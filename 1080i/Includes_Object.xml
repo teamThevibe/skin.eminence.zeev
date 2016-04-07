@@ -304,7 +304,7 @@
 	<!-- Thumb Info -->
 	<include name="Object_ExtraInfo">
 		<param name="label" default="19033" />
-		<param name="left" default="1140" />
+		<param name="left" default="0" />
 		<definition>
 			<control type="group">
 				<left>$PARAM[left]</left>

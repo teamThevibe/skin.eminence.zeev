@@ -377,7 +377,7 @@
 			<animation effect="slide" start="10" end="-210" time="250" condition="Window.IsVisible(106)">Conditional</animation>
 			<include name="View_List">
 				<param name="viewlabel" value="31645" />
-				<param name="posx" value="0" />
+				<param name="posx" value="750" />
 				<param name="width" value="1130" />
 				<param name="id" value="510" />
 				<param name="condition" value="Container.Content(seasons) | Container.Content(movies) | Container.Content(tvshows) | Container.Content(episodes) | Container.Content(sets)" />
@@ -823,22 +823,20 @@
 			<visible>Container.Content(movies)</visible>
 		</control>
 		<control type="label">
-			<left>150</left>
+			<left>30</left>
 			<right>30</right>
 			<top>0</top>
-			<width>1200</width>
 			<height>100%</height>
 			<align>right</align>
 			<label>$INFO[ListItem.Label]</label>
 			<visible>!Container.Content(movies)</visible>
 		</control>
 		<control type="label">
-			<left>170</left>
-			<!-- Modification Right -->            
+			<left>30</left>
 			<right>30</right>
 			<top>0</top>
 			<height>100%</height>
-			<align>left</align>
+			<align>right</align>
 			<font>Font-ListInfo</font>
 			<label>$VAR[Label_Label3]</label>
 			<visible>!IsEmpty(ListItem.Overlay)</visible>
@@ -906,12 +904,11 @@
 			<visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
 		</control>
 		<control type="label">
-			<left>70</left>
-			<!-- Modification Right -->          
-			<right>95</right>
+			<left>30</left>
+			<right>30</right>
 			<top>0</top>
 			<height>100%</height>
-			<align>left</align>
+			<align>right</align>
 			<font>Font-ListInfo</font>
 			<label>$INFO[ListItem.Label2]</label>
 			<visible>IsEmpty(ListItem.Overlay)</visible>
@@ -947,8 +944,8 @@
 			<visible>Container.Content(movies)</visible>
 		</control>
 		<control type="label">
-			<left>30</left>
-			<right>130</right>
+				<left>30</left>
+			<right>30</right>
 			<top>0</top>
 			<height>100%</height>
 			<align>right</align>
@@ -957,10 +954,9 @@
 			<visible>Container.Content(movies)</visible>
 		</control>
 		<control type="label">
-			<left>150</left>
+				<left>30</left>
 			<right>30</right>
 			<top>0</top>
-			<width>1200</width>
 			<height>100%</height>
 			<align>right</align>
 			<label>$INFO[ListItem.Label]</label>
