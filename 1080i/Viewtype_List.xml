@@ -904,11 +904,13 @@
 			<visible>!Container.Content(seasons) + !Container.Content(sets)</visible>
 		</control>
 		<control type="label">
-			<left>30</left>
-			<right>30</right>
+			<textcolor>Selected</textcolor>
+			<left>70</left>
+			<!-- Modification Right -->          
+			<right>95</right>
 			<top>0</top>
 			<height>100%</height>
-			<align>right</align>
+			<align>left</align>
 			<font>Font-ListInfo</font>
 			<label>$INFO[ListItem.Label2]</label>
 			<visible>IsEmpty(ListItem.Overlay)</visible>
@@ -944,11 +946,12 @@
 			<visible>Container.Content(movies)</visible>
 		</control>
 		<control type="label">
-				<left>30</left>
-			<right>30</right>
+			<left>30</left>
+			<right>130</right>
 			<top>0</top>
 			<height>100%</height>
 			<align>right</align>
+
 
 			<label>$INFO[ListItem.Label]</label>
 			<visible>Container.Content(movies)</visible>
