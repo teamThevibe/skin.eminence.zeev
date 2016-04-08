@@ -832,11 +832,12 @@
 			<visible>!Container.Content(movies)</visible>
 		</control>
 		<control type="label">
-			<left>30</left>
+			<left>170</left>
+			<!-- Modification Right -->            
 			<right>30</right>
 			<top>0</top>
 			<height>100%</height>
-			<align>right</align>
+			<align>left</align>
 			<font>Font-ListInfo</font>
 			<label>$VAR[Label_Label3]</label>
 			<visible>!IsEmpty(ListItem.Overlay)</visible>
