@@ -91,7 +91,6 @@
 		<label2>Common Shortcut</label2>
 		<defaultID>10001</defaultID>
 		<icon />
-
 		<thumb>special://skin/extras/icons/adir_icons/tohnot.png</thumb>
 		<action>ActivateWindow(Programs,Addons,return)</action>
 	</shortcut>	

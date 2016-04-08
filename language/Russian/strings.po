@@ -2469,3 +2469,11 @@ msgstr "ПРЕДУПРЕЖДЕНИЕ!"
 msgctxt "#43798"
 msgid "Warning Deleting 'Power' will effect your future possibilities to get into the Power menu. It is not recommended to do so. To cancel the deletion choose No. Choose Yes if you anyway want to do so"
 msgstr "ПРЕДУПРЕЖДЕНИЕ - Удаление плитки "Вкл/выкл." удалит Вам опцию попасть в настройки выключения системы[CR]И поэтому Вы не должны удалять эту плитку - Нажмите Нет чтобы отменить удаление или Да чтоб удалить"
+
+msgctxt "#43799"
+msgid "Choose rss feeds"
+msgstr "На выбор каналы RSS"
+
+msgctxt "#43800"
+msgid "With this option you may choose one or more  news feeds (RSS) based on many sources we collected filtered and updated them on regular bases. This will save you time and effort due the fact the list will be updated by us for you"
+msgstr "Эта опция сэкономит Вам время и настроит быстро и легко источники ленты новостей (RSS), выберите из различных источников которые управляются и обновляются непосредственно у нас на сервере - Вы можете выбрать один или несколько источников из списка 25 источников, которые мы собрали для Вас"
