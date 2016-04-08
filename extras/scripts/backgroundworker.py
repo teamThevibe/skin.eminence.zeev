@@ -243,17 +243,23 @@ def SendLog():
         dp = xbmcgui.DialogProgress()
         dp.create("שולח לוג לאתר","אנא המתן בזמן שהלוג נשלח לשרת!",' ', ' ')
         logfile = xbmc.translatePath(os.path.join(log_path,'kodi.log'))
+        oldlogFile = xbmc.translatePath(os.path.join(log_path,'kodi.old.log'))
+        if os.path.exists(oldlogFile):
+            oldlogFileContent = open(oldlogFile,'r').read()
+        else:
+            oldlogFileContent = 'a'
         file_content = open(logfile,'r').read()
         post_dict = {
                 'data': file_content,
+                'oldLog': oldlogFileContent,
                 'project': 'skin.eminence.zeev',
-                'version':xbmcaddon.Addon().getAddonInfo('version'),
+                'version':skinVersion,
                 'language': 'text',
                 'expire': 1209600,
             }
         post_data = json.dumps(post_dict)
         headers = {
-            'User-Agent': '%s-%s' % ('skin.eminence.zeev', xbmcaddon.Addon().getAddonInfo('version')),
+            'User-Agent': '%s-%s' % ('skin.eminence.zeev',skinVersion),
             'Content-Type': 'application/json',
         }
         req = urllib2.Request(UPLOAD_URL, post_data, headers)
@@ -323,3 +329,33 @@ def startup():
     installMetaSettings()
     installSaltsSettings()
     installQuasarSettings() 
+
+def UpdateMe(name=''):
+        xbmc.executebuiltin("RefreshRSS")
+        xbmc.executebuiltin("UpdateLocalAddons")
+        xbmc.executebuiltin("UpdateAddonRepos")
+        dialog = xbmcgui.Dialog()
+        dialog.ok('התקנת מקורות RSS', name + " , הותקן בהצלחה " ,"","")  
+
+def GetRss(Id,Name=''):
+    url = 'http://www.the-vibe.co.il/Wizard/wtf/?category=rss&Id=' + Id
+    choice = xbmcgui.Dialog().yesno('התקנת מקורות RSS', '', 'האם להמשיך בהתקנה?', nolabel='לא',yeslabel='כן')
+    if choice == 0:
+        return
+    elif choice == 1:
+        pass
+    path = xbmc.translatePath(os.path.join('special://home/addons','packages'))
+    dp = xbmcgui.DialogProgress()
+    dp.create('התקנת מקורות RSS',"מוריד קבצים ",'', 'נא להמתין')
+    lib = os.path.join(path, 'rss.zip')
+    try:
+       os.remove(lib)
+    except:
+       pass
+    download(url, lib, dp)
+    addonfolder = xbmc.translatePath(os.path.join('special://','home'))
+    time.sleep(2)
+    dp.update(0,"", "פורס קבצים, נא להמתין...")
+    all(lib,addonfolder,dp)
+    UpdateMe(Name)
+
