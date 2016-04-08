@@ -2448,3 +2448,11 @@ msgstr "Warning!"
 msgctxt "#43798"
 msgid "Warning Deleting 'Power' will effect your future possibilities to get into the Power menu. It is not recommended to do so. To cancel the deletion choose No. Choose Yes if you anyway want to do so"
 msgstr "Warning Deleting 'Power' will effect your future possibilities to get into the Power menu. It is not recommended to do so. To cancel the deletion choose No. Choose Yes if you anyway want to do so"
+
+msgctxt "#43799"
+msgid "Choose rss feeds"
+msgstr "Choose rss feeds"
+
+msgctxt "#43800"
+msgid "With this option you may choose one or more  news feeds (RSS) based on many sources we collected filtered and updated them on regular bases. This will save you time and effort due the fact the list will be updated by us for you"
+msgstr "With this option you may choose one or more  news feeds (RSS) based on many sources we collected filtered and updated them on regular bases. This will save you time and effort due the fact the list will be updated by us for you"

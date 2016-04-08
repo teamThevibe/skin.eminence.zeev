@@ -1,0 +1,249 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<window type="dialog" id="1131">
+	<defaultcontrol>800</defaultcontrol>
+	<controls>
+		<include>Furniture_Background</include>
+		
+				<include condition="Skin.HasSetting(header.Emtopbar)">Furniture_TopBar</include>
+		<include condition="!Skin.HasSetting(header.Emtopbar)">GlobalTopBar</include>
+		<control type="image">
+
+			<posy>210</posy>
+			<posx>-10</posx>
+			<width>1940</width>
+			<height>770</height>
+			<texture colordiffuse="infobg" border="5">common/white.png</texture>
+			<animation effect="fade" end="90" condition="true">Conditional</animation>
+			<bordertexture colordiffuse="PosterBorder" border="5">common/border-inner.png</bordertexture>
+			<bordersize>1</bordersize>
+		</control>
+		<control type="group">
+			<posy>0</posy>
+			<posx>-500</posx>
+			<control type="label">
+				<description>heading label</description>
+				<posx>900</posx>
+				<posy>250</posy>
+				<width>1120</width>
+				<height>45</height>
+				<align>center</align>
+				<aligny>center</aligny>
+				<font>Font-ListHeader</font>
+				<textcolor>white</textcolor>
+				<label>$LOCALIZE[43799]</label>
+			</control>
+
+			<control type="grouplist" id="9000">
+				<right>400</right>
+				<posy>450</posy>
+				<width>1120</width>
+				<height>495</height>
+				<align>center</align>
+				<itemgap>5</itemgap>
+				<onleft>9000</onleft>
+				<onright>9000</onright>
+				<onup>9000</onup>
+				<ondown>9000</ondown>
+				<control type="button" id="800" description="Show Clearart">
+					<label>ynet - ראשי</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,8,ynet - ראשי)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+					<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="801" description="Show Clearart">
+					<label>ynet - ספורט</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,9,ynet - ספורט)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+					<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="802" description="Show Clearart">
+					<label>ynet - מחשבים</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,11,ynet - מחשבים)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="803" description="Show Clearart">
+					<label>וואלה - צבא ובטחון</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,12,וואלה - צבא ובטחון)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="804" description="Show Clearart">
+					<label>רוטר</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,13,רוטר)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="805" description="Show Clearart">
+					<label>כלכליסט ראשי</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,120,כלכליסט ראשי)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="806" description="Show Clearart">
+					<label>כלכליסט טכנולוגיות</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,121,כלכליסט טכנולוגיות)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="807" description="Show Clearart">
+					<label>חדשות מאקו</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,122,חדשות מאקו)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="808" description="Show Clearart">
+					<label>מאקו ספורט</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,123,מאקו ספורט)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="809" description="Show Clearart">
+					<label>מאקו תרבות</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,124,מאקו תרבות)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="810" description="Show Clearart">
+					<label>מאקו טכנולוגיות</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,125,מאקו טכנולוגיות)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="811" description="Show Clearart">
+					<label>One!</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,126,One!)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="812" description="Show Clearart">
+					<label>וואלה רכב</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,127,וואלה רכב)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="813" description="Show Clearart">
+					<label>וואלה כלכלה</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,128,וואלה כלכלה)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+				</control>
+				<control type="button" id="814" description="Show Clearart">
+					<label>וואלה אוכל</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,129,וואלה אוכל)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+										</control>
+				<control type="button" id="12515" description="Show Clearart">
+					<label>וואלה בריאות</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<radiowidth>40</radiowidth>
+					<radioheight>40</radioheight>
+					<radioposx>40</radioposx>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,130,וואלה בריאות)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+										</control>
+				<control type="button" id="12516" description="Show Clearart">
+					<label>וואלה כלכלה</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,131,וואלה כלכלה)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+										</control>
+				<control type="button" id="12517" description="Show Clearart">
+					<label>וואלה חדשות</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,132,וואלה חדשות)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+										</control>
+				<control type="button" id="12518" description="Show Clearart">
+					<label>וואלה ספורט</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,133,וואלה ספורט)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+										</control>
+				<control type="button" id="12519" description="Show Clearart">
+					<label>וואלה טכנולוגיות</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,134,וואלה טכנולוגיות)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+										</control>
+				<control type="button" id="12520" description="Show Clearart">
+					<label>ynet - דיגיטל</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,135,ynet - דיגיטל)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+										</control>
+				<control type="button" id="12521" description="Show Clearart">
+					<label>ynet - כלכלה</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,136,ynet - כלכלה)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+										</control>
+				<control type="button" id="12522" description="Show Clearart">
+					<label>ynet - יהדות</label>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+					<onclick>RunScript(special://skin/extras/scripts/loadrss.py,137,ynet - יהדות)</onclick>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+										<texturenofocus border="12" colordiffuse="PosterBorder">common/white.png</texturenofocus>
+										</control>
+
+			</control>
+			<control type="textbox" id="100">
+				<posx>1050</posx>
+				<posy>300</posy>
+				<width>800</width>
+				<height>120</height>
+					<align>center</align>
+					<font>Font-ListInfo</font>
+				<textcolor>white</textcolor>
+				<autoscroll time="2000" delay="8000" repeat="5000">!Skin.HasSetting(AutoScroll)</autoscroll>
+				<label>$LOCALIZE[43800]</label>
+			</control>
+		</control>
+	</controls>
+</window>

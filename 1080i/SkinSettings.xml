@@ -1745,6 +1745,15 @@
 					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
 				</control>
 
+				<control type="button" id="807">
+					<label>$LOCALIZE[43799]</label>
+					<align>right</align>
+					<font>Font-ListInfo</font>
+					<onclick>ActivateWindow(1131)</onclick>
+					<visible>ControlGroup(3).HasFocus(39)</visible>
+					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
+				</control>
+				
 				<control type="label" id="814">
 					<!-- string -->
 					<description>כותרת הגדרות</description>
@@ -1880,6 +1889,7 @@
 					<visible>ControlGroup(3).HasFocus(39)</visible>
 					<texturefocus border="12" colordiffuse="$VAR[Highlight6]">common/white.png</texturefocus>
 				</control>
+			
 			   
 			</control>	
 

@@ -2469,3 +2469,11 @@ msgstr "אזהרה!"
 msgctxt "#43798"
 msgid "Warning Deleting 'Power' will effect your future possibilities to get into the Power menu. It is not recommended to do so. To cancel the deletion choose No. Choose Yes if you anyway want to do so"
 msgstr "אזהרה - מחיקת אריח "הפעלה" תפגע ביכולת שלכם להגיע אל תפריט הכיבוי - הפעלה של הסקין[CR]ולכן אין להסירו מרשימת דף הבית - לחץ לא לביטול פעולת המחיקה או כן כדי להסירו בכל זאת"
+
+msgctxt "#43799"
+msgid "Choose rss feeds"
+msgstr "רשימת מקורות Rss לבחירה"
+
+msgctxt "#43800"
+msgid "With this option you may choose one or more  news feeds (RSS) based on many sources we collected filtered and updated them on regular bases. This will save you time and effort due the fact the list will be updated by us for you"
+msgstr "באפשרות זו תוכלו לחסוך זמן ולהגדיר בצורה קלה ופשוטה מקורות הזנת חדשות (RSS) ולבחור ממגוון המקורות שמנוהלים ומעודכנים ישירות בשרת ובאופן שוטף - תוכלו לבחור אחד או כמה מקורות מתוך רשימה של כ-25 מקורות שאספנו בשבילכם"
