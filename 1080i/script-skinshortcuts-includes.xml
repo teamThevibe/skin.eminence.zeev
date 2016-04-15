@@ -6,10 +6,10 @@
 			<label>$LOCALIZE[20342]</label>
 			<label2>Hub 1101</label2>
 			<icon>special://skin/extras/icons/addon.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/Old-Video-cam-icon2.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/movies.png</thumb>
 			<property name="labelID">20342</property>
 			<property name="defaultID">x1101</property>
-			<property name="background">special://skin/extras/backgrounds/movies.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/movies.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -27,10 +27,10 @@
 			<label>$LOCALIZE[20343]</label>
 			<label2>Hub 1102</label2>
 			<icon>special://skin/extras/icons/addon.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/tv-icon 2.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/tvshows.png</thumb>
 			<property name="labelID">tvshows</property>
 			<property name="defaultID">x1102</property>
-			<property name="background">special://skin/extras/backgrounds/tv-show.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/tvshows.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -48,10 +48,10 @@
 			<label>$LOCALIZE[2]</label>
 			<label2>Hub 1114</label2>
 			<icon>special://skin/extras/icons/songs.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/mp3player-icon2.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/music.png</thumb>
 			<property name="labelID">2</property>
 			<property name="defaultID">x1114</property>
-			<property name="background">special://skin/extras/backgrounds/music.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/music.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -69,10 +69,10 @@
 			<label>$LOCALIZE[31343584]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/addon.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/imac-icon2.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/livetv.png</thumb>
 			<property name="labelID">31343584</property>
 			<property name="defaultID">livetv</property>
-			<property name="background">special://skin/extras/backgrounds/tv.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/livetv.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -90,10 +90,10 @@
 			<label>$LOCALIZE[31314]</label>
 			<label2>Hub 1112</label2>
 			<icon>special://skin/extras/icons/addon.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/vhs-icon 2.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/vod.png</thumb>
 			<property name="labelID">31314</property>
 			<property name="defaultID">x1112</property>
-			<property name="background">special://skin/extras/backgrounds/VOD.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/vod.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -111,10 +111,10 @@
 			<label>$LOCALIZE[31313]</label>
 			<label2>Hub 1113</label2>
 			<icon>special://skin/extras/icons/addon.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/ch2.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/kids.png</thumb>
 			<property name="labelID">31313</property>
 			<property name="defaultID">x1113</property>
-			<property name="background">special://skin/extras/backgrounds/kids.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/kids.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -132,10 +132,10 @@
 			<label>$LOCALIZE[1037]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/addon.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/film-icon 2.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/addons.png</thumb>
 			<property name="labelID">1037</property>
 			<property name="defaultID">1037</property>
-			<property name="background">special://skin/extras/backgrounds/video-addon.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/addons.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -153,11 +153,10 @@
 			<label>$LOCALIZE[8]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/sun.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/sun2.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/weather.png</thumb>
 			<property name="labelID">8</property>
 			<property name="defaultID">weather</property>
-			<property name="widget">weather</property>
-			<property name="background">special://skin/extras/backgrounds/whether.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/weather.jpg</property>
 			<visible>!IsEmpty(Weather.Plugin)</visible>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
@@ -176,11 +175,10 @@
 			<label>$LOCALIZE[1036]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/favourites.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/f2.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/favorites.png</thumb>
 			<property name="labelID">1036</property>
 			<property name="defaultID">programs</property>
-			<property name="background">special://skin/extras/backgrounds/programs.jpg</property>
-			<property name="background">special://skin/extras/backgrounds/favorite.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/favorites.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -198,10 +196,10 @@
 			<label>$LOCALIZE[10001]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/addon.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/tohnot.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/software.png</thumb>
 			<property name="labelID">programs</property>
 			<property name="defaultID">10001</property>
-			<property name="background">special://skin/extras/backgrounds/programs.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/software.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -219,10 +217,10 @@
 			<label>$LOCALIZE[43787]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/addon.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/sh.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/search.png</thumb>
 			<property name="labelID">script.globalsearch</property>
 			<property name="defaultID">43787</property>
-			<property name="background">special://skin/extras/backgrounds/search.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/search.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -240,10 +238,10 @@
 			<label>$LOCALIZE[10004]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/settings.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/st.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/settings.png</thumb>
 			<property name="labelID">settings</property>
 			<property name="defaultID">settings</property>
-			<property name="background">special://skin/extras/backgrounds/setting.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/settings.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
@@ -261,10 +259,10 @@
 			<label>$LOCALIZE[33060]</label>
 			<label2>Common Shortcut</label2>
 			<icon>special://skin/extras/icons/addon.png</icon>
-			<thumb>special://skin/extras/icons/adir_icons/on off.png</thumb>
+			<thumb>resource://resource.images.skinicons.squares/power.png</thumb>
 			<property name="labelID">33060</property>
 			<property name="defaultID">power</property>
-			<property name="background">special://skin/extras/backgrounds/off.jpg</property>
+			<property name="background">resource://resource.images.skinbackgrounds.diamond/power.jpg</property>
 			<onclick condition="SubString(Container(9000).ListItem.Property(path),ActivateWindow,left) + !SubString(Container(9000).ListItem.Property(path),DialogButtonMenu) + !SubString(Container(9000).ListItem.Property(path),shutdownmenu) + !SubString(Container(9000).ListItem.Property(path),favourites)">SetProperty(FO9001,2,home)</onclick>
 			<onclick condition="SubString(Container(9000).ListItem.Property(ParentalControl),yes) + !StringCompare(Skin.String(mypassword),Skin.String(passcode))">ActivateWindow(1132)</onclick>
 			<property name="path">ActivateWindow(1132)</property>
