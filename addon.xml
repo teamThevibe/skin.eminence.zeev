@@ -1,7 +1,11 @@
 ﻿<?xml version="1.0" encoding="UTF-8"?>
 <addon
     id="skin.eminence.zeev"
+<<<<<<< HEAD
     version="2.5.4"
+=======
+    version="2.5.3"
+>>>>>>> origin/master
     name="Eminence Zeev"
     provider-name="jurialmunkey">
   <requires>
